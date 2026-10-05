@@ -1,0 +1,102 @@
+{
+  "runId": "20261004T205730Z",
+  "redactions": [
+    "Azure subscription IDs replaced with a zero UUID",
+    "Local workspace prefix replaced with <workspace>",
+    "Inherited source-snapshot metadata removed from preflight.fixture; measured fixture fields retained",
+    "Non-measurement comparison reference removed from summary"
+  ],
+  "measurementValuesChanged": false,
+  "files": [
+    {
+      "file": "results/20261004T205730Z/events.jsonl",
+      "sourceSha256": "16a0815a743127d8f1e9486c6bc33457b524494779755de6c472317785dd49b2",
+      "publishedSha256": "16a0815a743127d8f1e9486c6bc33457b524494779755de6c472317785dd49b2"
+    },
+    {
+      "file": "results/20261004T205730Z/monitoring/live-replication-events.json",
+      "sourceSha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "publishedSha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "file": "results/20261004T205730Z/monitoring/monitor-summary.json",
+      "sourceSha256": "afceef5449e2c599ccaec4ab93491c994c2adef194be33ee629dcead18dc5447",
+      "publishedSha256": "d53bed4e1b1a10006e238c5da313d947fc6d736674877b139f2beaf526a179bd"
+    },
+    {
+      "file": "results/20261004T205730Z/monitoring/primary-postgres-live.log",
+      "sourceSha256": "88b8000d788b979205dd3fe61a805be952a5a5f043cb9f924de25d6d73c61960",
+      "publishedSha256": "88b8000d788b979205dd3fe61a805be952a5a5f043cb9f924de25d6d73c61960"
+    },
+    {
+      "file": "results/20261004T205730Z/monitoring/replica-postgres-live.log",
+      "sourceSha256": "3b0764dc13ccdc19ef1fffa3a6446205c128ea978fabcc69a3493248caf72a19",
+      "publishedSha256": "3b0764dc13ccdc19ef1fffa3a6446205c128ea978fabcc69a3493248caf72a19"
+    },
+    {
+      "file": "results/20261004T205730Z/preflight.json",
+      "sourceSha256": "93baff4d668c29ae0740adf25aad6b7dcd6a16e55b1d604d781cb2760190c0e2",
+      "publishedSha256": "e21e67f5227b71a542593d31def28f6e1620f658473b77c6686f6a6e9c4e1792"
+    },
+    {
+      "file": "results/20261004T205730Z/raw/primary-postgres.log",
+      "sourceSha256": "1192a8aedb219f1e45539eb70381c95edc38abfc53ba50ef30f96f770e71830c",
+      "publishedSha256": "1192a8aedb219f1e45539eb70381c95edc38abfc53ba50ef30f96f770e71830c"
+    },
+    {
+      "file": "results/20261004T205730Z/raw/replica-postgres.log",
+      "sourceSha256": "f7f6bf86a7a2f08845424bedac77ae5356286a42b62188bc142140badfb49285",
+      "publishedSha256": "f7f6bf86a7a2f08845424bedac77ae5356286a42b62188bc142140badfb49285"
+    },
+    {
+      "file": "results/20261004T205730Z/replication-events.json",
+      "sourceSha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "publishedSha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "file": "results/20261004T205730Z/samples.jsonl.gz",
+      "sourceSha256": "6b783d5736d059ad643997131b85f869c2e82dfe6b9dc90074a986165ed71717",
+      "publishedSha256": "293ca65f0d638a71b5572fad1b245ffc0075f4391aebbe2c5efc4c76fd8f570f"
+    },
+    {
+      "file": "results/20261004T205730Z/summary.json",
+      "sourceSha256": "931cca8266c2f45b6cf81af63c6bd1b3bf1b4aaf867f8de19a7a7df2c66c08fc",
+      "publishedSha256": "a4eb69af10d358dbd449feb1af27b7de91924a17be858f26a8953e139ca2a96e"
+    },
+    {
+      "file": "results/20261004T205730Z/timing.json",
+      "sourceSha256": "c4b140b72455da6e2839bb6b0d4ad8ec85553c525a69dcd14c6d68e9ae085812",
+      "publishedSha256": "c4b140b72455da6e2839bb6b0d4ad8ec85553c525a69dcd14c6d68e9ae085812"
+    },
+    {
+      "file": "results/20261004T205730Z/vacuum-process.json",
+      "sourceSha256": "de7cca5320d1da8c24fe3ddf7f69e3ff5f5c7658882f711eb0f7b7f9c14622da",
+      "publishedSha256": "de7cca5320d1da8c24fe3ddf7f69e3ff5f5c7658882f711eb0f7b7f9c14622da"
+    },
+    {
+      "file": "results/20261004T205730Z/vacuum.log",
+      "sourceSha256": "3e9abb17a1baa6015eae0e06bbae54ae3b93fd88c6d8d61e6e0f4addec58a3ce",
+      "publishedSha256": "3e9abb17a1baa6015eae0e06bbae54ae3b93fd88c6d8d61e6e0f4addec58a3ce"
+    }
+  ],
+  "graphs": {
+    "generator": "plot.py",
+    "matplotlibVersion": "3.11.2",
+    "command": "python plot.py results/20261004T205730Z",
+    "referenceOverlays": false,
+    "files": [
+      {
+        "file": "results/20261004T205730Z/await.png",
+        "sha256": "7a2294f16f143a00a844d588f5dfee68edb2ebbfe6b0394e3baa1efaf6b4d884"
+      },
+      {
+        "file": "results/20261004T205730Z/iops.png",
+        "sha256": "c85959ef535ac583f3a94b55f498b2b6aead9a760de3fc00414c97415a9667b8"
+      },
+      {
+        "file": "results/20261004T205730Z/throughput.png",
+        "sha256": "daeade44013676676689f10e6392b3fc3556b5c6971b3b1829057af9d409a72d"
+      }
+    ]
+  }
+}
