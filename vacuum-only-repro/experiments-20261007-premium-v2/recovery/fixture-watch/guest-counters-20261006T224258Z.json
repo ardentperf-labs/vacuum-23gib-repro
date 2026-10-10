@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-06T22:43:24Z",
+  "source": "read-only guest block counters and pg wait events",
+  "requestedDelaySeconds": 10,
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "sampleIntervalSeconds": 11,
+      "samples": [
+        {
+          "observedAtUtc": "2026-10-06T22:42:58Z",
+          "mount": "/dev/sdb 8:16 /var/lib/postgresql/data",
+          "sameDataAndWalDevice": true,
+          "device": "sdb",
+          "majorMinor": "8:16",
+          "readsCompleted": 873987,
+          "sectorsRead": 368275996,
+          "readMs": 17629729,
+          "writesCompleted": 601112,
+          "sectorsWritten": 757075928,
+          "writeMs": 86405126,
+          "ioInProgress": 10,
+          "ioMs": 6141615,
+          "weightedIoMs": 104034855,
+          "activePgWaitEvents": [
+            {
+              "phase": "fixture-index",
+              "state": "active",
+              "waitEventType": "LWLock",
+              "waitEvent": "WALWrite",
+              "queryElapsedSeconds": 2580
+            }
+          ]
+        },
+        {
+          "observedAtUtc": "2026-10-06T22:43:09Z",
+          "mount": "/dev/sdb 8:16 /var/lib/postgresql/data",
+          "sameDataAndWalDevice": true,
+          "device": "sdb",
+          "majorMinor": "8:16",
+          "readsCompleted": 875391,
+          "sectorsRead": 368883740,
+          "readMs": 17675237,
+          "writesCompleted": 601547,
+          "sectorsWritten": 757546168,
+          "writeMs": 86447273,
+          "ioInProgress": 3,
+          "ioMs": 6152778,
+          "weightedIoMs": 104122510,
+          "activePgWaitEvents": [
+            {
+              "phase": "fixture-index",
+              "state": "active",
+              "waitEventType": "IO",
+              "waitEvent": "DataFileRead",
+              "queryElapsedSeconds": 2591
+            }
+          ]
+        }
+      ]
+    },
+    "100gib": {
+      "sampleIntervalSeconds": 12,
+      "samples": [
+        {
+          "observedAtUtc": "2026-10-06T22:43:10Z",
+          "mount": "/dev/sdb 8:16 /var/lib/postgresql/data",
+          "sameDataAndWalDevice": true,
+          "device": "sdb",
+          "majorMinor": "8:16",
+          "readsCompleted": 632314,
+          "sectorsRead": 301630946,
+          "readMs": 10571184,
+          "writesCompleted": 640921,
+          "sectorsWritten": 819114016,
+          "writeMs": 91478939,
+          "ioInProgress": 9,
+          "ioMs": 5816692,
+          "weightedIoMs": 102050123,
+          "activePgWaitEvents": [
+            {
+              "phase": "fixture-insert",
+              "state": "active",
+              "waitEventType": "LWLock",
+              "waitEvent": "WALWrite",
+              "queryElapsedSeconds": 6053
+            }
+          ]
+        },
+        {
+          "observedAtUtc": "2026-10-06T22:43:22Z",
+          "mount": "/dev/sdb 8:16 /var/lib/postgresql/data",
+          "sameDataAndWalDevice": true,
+          "device": "sdb",
+          "majorMinor": "8:16",
+          "readsCompleted": 633220,
+          "sectorsRead": 302096866,
+          "readMs": 10596923,
+          "writesCompleted": 641507,
+          "sectorsWritten": 819780224,
+          "writeMs": 91645902,
+          "ioInProgress": 0,
+          "ioMs": 5828178,
+          "weightedIoMs": 102242826,
+          "activePgWaitEvents": [
+            {
+              "phase": "fixture-insert",
+              "state": "active",
+              "waitEventType": "IO",
+              "waitEvent": "DataFileRead",
+              "queryElapsedSeconds": 6065
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

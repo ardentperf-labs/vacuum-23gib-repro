@@ -1,0 +1,19 @@
+{
+  "provisionExitCode": 0,
+  "ownerToken": "804391dc0a7b56b597915163951aed1a",
+  "resourceGroup": "rg-vacuum-only-804391dc0a7b56b597915163951aed1a",
+  "nodeResourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+  "location": "eastus",
+  "vmSize": "Standard_D2s_v4",
+  "nodes": 2,
+  "operator": "1.30.1",
+  "storageClass": "512Gi Standard_LRS cachingModeNone",
+  "scriptHashes": {
+    "01-provision.sh": "b4321d09efc91ef88466efe713fdbf90b30f424a03583393b6e7a82cd12b9396",
+    "02-prepare.sh": "9d026c3d92d15016e31254fe227689e24c656b8579a48188ba417939505864ce",
+    "03-test.py": "2157309342ded221a3d7bb73a5aa5483192ed80535f4d75932c8f5cdffb38d7b",
+    "04-teardown.sh": "a72d4270b3b3a393ad328ef51b1f61d5f5b7030a09fe5bcdf95913ef697d1ac8",
+    "plot.py": "736e0d6fa615c7b5290634802840115a87d92386604d8ccdf558e9f3bdb370b1"
+  },
+  "firstAttemptFailure": "Unsupported storage --no-wait and client apply annotation limit; failed stack fully cleaned before this fresh successful run"
+}

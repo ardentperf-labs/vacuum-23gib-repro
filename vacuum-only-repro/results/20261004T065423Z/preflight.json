@@ -1,0 +1,5237 @@
+{
+  "expectedHeapBytes": 118128640000,
+  "expectedSystemIdentifier": "7692518806614212629",
+  "jobs": 0,
+  "podCount": 2,
+  "pods": {
+    "primary": {
+      "claims": [
+        {
+          "claim": "hdd-pg-1",
+          "path": "/var/lib/postgresql/data"
+        },
+        {
+          "claim": "hdd-pg-1-wal",
+          "path": "/var/lib/postgresql/wal"
+        }
+      ],
+      "name": "hdd-pg-1",
+      "node": "aks-nodepool1-12183397-vmss000000",
+      "uid": "6d7ad02d-8693-4df1-b727-7fb7a0d6e92e"
+    },
+    "replica": {
+      "claims": [
+        {
+          "claim": "hdd-pg-2",
+          "path": "/var/lib/postgresql/data"
+        },
+        {
+          "claim": "hdd-pg-2-wal",
+          "path": "/var/lib/postgresql/wal"
+        }
+      ],
+      "name": "hdd-pg-2",
+      "node": "aks-nodepool1-12183397-vmss000001",
+      "uid": "2fcd5940-b4c2-4247-a908-1dd8b05839ff"
+    }
+  },
+  "preparedDeadTuplesEstimate": 36050000,
+  "preparedSource": "/workspace/vacuum-only-repro/snapshot.json",
+  "sql": {
+    "primary": {
+      "appSessions": 0,
+      "capturedAt": "2026-10-04T06:54:25.633458+00:00",
+      "recovery": false,
+      "settings": {
+        "DateStyle": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "ISO, MDY",
+          "source": "configuration file",
+          "unit": null
+        },
+        "IntervalStyle": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "postgres",
+          "source": "default",
+          "unit": null
+        },
+        "TimeZone": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "Etc/UTC",
+          "source": "configuration file",
+          "unit": null
+        },
+        "allow_in_place_tablespaces": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "allow_system_table_mods": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "application_name": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "psql",
+          "source": "client",
+          "unit": null
+        },
+        "archive_cleanup_command": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "archive_command": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "/controller/manager wal-archive --log-destination /controller/log/postgres.json %p",
+          "source": "configuration file",
+          "unit": null
+        },
+        "archive_library": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "archive_mode": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "archive_timeout": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "300",
+          "source": "configuration file",
+          "unit": "s"
+        },
+        "array_nulls": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "authentication_timeout": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "60",
+          "source": "default",
+          "unit": "s"
+        },
+        "autovacuum": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_analyze_scale_factor": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0.1",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_analyze_threshold": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "50",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_freeze_max_age": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "200000000",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_max_workers": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "3",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_multixact_freeze_max_age": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "400000000",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_naptime": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "60",
+          "source": "default",
+          "unit": "s"
+        },
+        "autovacuum_vacuum_cost_delay": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": "ms"
+        },
+        "autovacuum_vacuum_cost_limit": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_vacuum_insert_scale_factor": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0.2",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_vacuum_insert_threshold": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "1000",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_vacuum_scale_factor": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0.2",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_vacuum_threshold": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "50",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_work_mem": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "kB"
+        },
+        "backend_flush_after": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "backslash_quote": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "safe_encoding",
+          "source": "default",
+          "unit": null
+        },
+        "backtrace_functions": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "bgwriter_delay": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "200",
+          "source": "default",
+          "unit": "ms"
+        },
+        "bgwriter_flush_after": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "64",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "bgwriter_lru_maxpages": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "100",
+          "source": "default",
+          "unit": null
+        },
+        "bgwriter_lru_multiplier": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "block_size": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "8192",
+          "source": "default",
+          "unit": null
+        },
+        "bonjour": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "bonjour_name": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "bytea_output": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "hex",
+          "source": "default",
+          "unit": null
+        },
+        "check_function_bodies": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "checkpoint_completion_target": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0.9",
+          "source": "default",
+          "unit": null
+        },
+        "checkpoint_flush_after": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "32",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "checkpoint_timeout": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "300",
+          "source": "default",
+          "unit": "s"
+        },
+        "checkpoint_warning": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "30",
+          "source": "default",
+          "unit": "s"
+        },
+        "client_connection_check_interval": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "client_encoding": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "UTF8",
+          "source": "default",
+          "unit": null
+        },
+        "client_min_messages": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "notice",
+          "source": "default",
+          "unit": null
+        },
+        "cluster_name": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "hdd-pg",
+          "source": "configuration file",
+          "unit": null
+        },
+        "commit_delay": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "commit_siblings": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "5",
+          "source": "default",
+          "unit": null
+        },
+        "compute_query_id": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "auto",
+          "source": "default",
+          "unit": null
+        },
+        "config_file": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "/var/lib/postgresql/data/pgdata/postgresql.conf",
+          "source": "override",
+          "unit": null
+        },
+        "constraint_exclusion": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "partition",
+          "source": "default",
+          "unit": null
+        },
+        "cpu_index_tuple_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0.005",
+          "source": "default",
+          "unit": null
+        },
+        "cpu_operator_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0.0025",
+          "source": "default",
+          "unit": null
+        },
+        "cpu_tuple_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0.01",
+          "source": "default",
+          "unit": null
+        },
+        "createrole_self_grant": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "cursor_tuple_fraction": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0.1",
+          "source": "default",
+          "unit": null
+        },
+        "data_checksums": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "data_directory": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "/var/lib/postgresql/data/pgdata",
+          "source": "override",
+          "unit": null
+        },
+        "data_directory_mode": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "0700",
+          "source": "default",
+          "unit": null
+        },
+        "data_sync_retry": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "db_user_namespace": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "deadlock_timeout": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "1000",
+          "source": "default",
+          "unit": "ms"
+        },
+        "debug_assertions": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "debug_discard_caches": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "debug_io_direct": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "debug_logical_replication_streaming": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "buffered",
+          "source": "default",
+          "unit": null
+        },
+        "debug_parallel_query": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "debug_pretty_print": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "debug_print_parse": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "debug_print_plan": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "debug_print_rewritten": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "default_statistics_target": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "100",
+          "source": "default",
+          "unit": null
+        },
+        "default_table_access_method": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "heap",
+          "source": "default",
+          "unit": null
+        },
+        "default_tablespace": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "default_text_search_config": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "pg_catalog.english",
+          "source": "configuration file",
+          "unit": null
+        },
+        "default_toast_compression": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "pglz",
+          "source": "default",
+          "unit": null
+        },
+        "default_transaction_deferrable": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "default_transaction_isolation": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "read committed",
+          "source": "default",
+          "unit": null
+        },
+        "default_transaction_read_only": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "dynamic_library_path": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "$libdir",
+          "source": "default",
+          "unit": null
+        },
+        "dynamic_shared_memory_type": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "posix",
+          "source": "configuration file",
+          "unit": null
+        },
+        "effective_cache_size": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "524288",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "effective_io_concurrency": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1",
+          "source": "default",
+          "unit": null
+        },
+        "enable_async_append": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_bitmapscan": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_gathermerge": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_hashagg": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_hashjoin": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_incremental_sort": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_indexonlyscan": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_indexscan": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_material": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_memoize": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_mergejoin": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_nestloop": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_parallel_append": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_parallel_hash": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_partition_pruning": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_partitionwise_aggregate": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "enable_partitionwise_join": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "enable_presorted_aggregate": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_seqscan": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_sort": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_tidscan": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "escape_string_warning": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "event_source": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "PostgreSQL",
+          "source": "default",
+          "unit": null
+        },
+        "exit_on_error": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "extension_destdir": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "external_pid_file": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "extra_float_digits": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1",
+          "source": "default",
+          "unit": null
+        },
+        "file_extend_method": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "posix_fallocate",
+          "source": "default",
+          "unit": null
+        },
+        "from_collapse_limit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "8",
+          "source": "default",
+          "unit": null
+        },
+        "fsync": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "full_page_writes": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "geqo": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "geqo_effort": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "5",
+          "source": "default",
+          "unit": null
+        },
+        "geqo_generations": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "geqo_pool_size": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "geqo_seed": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "geqo_selection_bias": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "geqo_threshold": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "12",
+          "source": "default",
+          "unit": null
+        },
+        "gin_fuzzy_search_limit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "gin_pending_list_limit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "4096",
+          "source": "default",
+          "unit": "kB"
+        },
+        "gss_accept_delegation": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "hash_mem_multiplier": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "hba_file": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "/var/lib/postgresql/data/pgdata/pg_hba.conf",
+          "source": "override",
+          "unit": null
+        },
+        "hot_standby": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "hot_standby_feedback": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "huge_page_size": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "kB"
+        },
+        "huge_pages": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "try",
+          "source": "default",
+          "unit": null
+        },
+        "icu_validation_level": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "warning",
+          "source": "default",
+          "unit": null
+        },
+        "ident_file": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "/var/lib/postgresql/data/pgdata/pg_ident.conf",
+          "source": "override",
+          "unit": null
+        },
+        "idle_in_transaction_session_timeout": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "idle_session_timeout": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "ignore_checksum_failure": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "ignore_invalid_pages": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "ignore_system_indexes": {
+          "context": "backend",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "in_hot_standby": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "integer_datetimes": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "jit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "jit_above_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "100000",
+          "source": "default",
+          "unit": null
+        },
+        "jit_debugging_support": {
+          "context": "superuser-backend",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "jit_dump_bitcode": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "jit_expressions": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "jit_inline_above_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "500000",
+          "source": "default",
+          "unit": null
+        },
+        "jit_optimize_above_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "500000",
+          "source": "default",
+          "unit": null
+        },
+        "jit_profiling_support": {
+          "context": "superuser-backend",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "jit_provider": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "llvmjit",
+          "source": "default",
+          "unit": null
+        },
+        "jit_tuple_deforming": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "join_collapse_limit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "8",
+          "source": "default",
+          "unit": null
+        },
+        "krb_caseins_users": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "krb_server_keyfile": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "FILE:/etc/postgresql-common/krb5.keytab",
+          "source": "default",
+          "unit": null
+        },
+        "lc_messages": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "C",
+          "source": "configuration file",
+          "unit": null
+        },
+        "lc_monetary": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "C",
+          "source": "configuration file",
+          "unit": null
+        },
+        "lc_numeric": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "C",
+          "source": "configuration file",
+          "unit": null
+        },
+        "lc_time": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "C",
+          "source": "configuration file",
+          "unit": null
+        },
+        "listen_addresses": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "*",
+          "source": "configuration file",
+          "unit": null
+        },
+        "lo_compat_privileges": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "local_preload_libraries": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "lock_timeout": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "log_autovacuum_min_duration": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "600000",
+          "source": "default",
+          "unit": "ms"
+        },
+        "log_checkpoints": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "log_connections": {
+          "context": "superuser-backend",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_destination": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "csvlog",
+          "source": "configuration file",
+          "unit": null
+        },
+        "log_directory": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "/controller/log",
+          "source": "configuration file",
+          "unit": null
+        },
+        "log_disconnections": {
+          "context": "superuser-backend",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_duration": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_error_verbosity": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "default",
+          "source": "default",
+          "unit": null
+        },
+        "log_executor_stats": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_file_mode": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0600",
+          "source": "default",
+          "unit": null
+        },
+        "log_filename": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "postgres",
+          "source": "configuration file",
+          "unit": null
+        },
+        "log_hostname": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_line_prefix": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "%m [%p] ",
+          "source": "default",
+          "unit": null
+        },
+        "log_lock_waits": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_min_duration_sample": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "ms"
+        },
+        "log_min_duration_statement": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "ms"
+        },
+        "log_min_error_statement": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "error",
+          "source": "default",
+          "unit": null
+        },
+        "log_min_messages": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "warning",
+          "source": "default",
+          "unit": null
+        },
+        "log_parameter_max_length": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "B"
+        },
+        "log_parameter_max_length_on_error": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "B"
+        },
+        "log_parser_stats": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_planner_stats": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_recovery_conflict_waits": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_replication_commands": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_rotation_age": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "configuration file",
+          "unit": "min"
+        },
+        "log_rotation_size": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "configuration file",
+          "unit": "kB"
+        },
+        "log_startup_progress_interval": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "10000",
+          "source": "default",
+          "unit": "ms"
+        },
+        "log_statement": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "none",
+          "source": "default",
+          "unit": null
+        },
+        "log_statement_sample_rate": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "1",
+          "source": "default",
+          "unit": null
+        },
+        "log_statement_stats": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_temp_files": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "kB"
+        },
+        "log_timezone": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "Etc/UTC",
+          "source": "configuration file",
+          "unit": null
+        },
+        "log_transaction_sample_rate": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "log_truncate_on_rotation": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "configuration file",
+          "unit": null
+        },
+        "logging_collector": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "logical_decoding_work_mem": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "65536",
+          "source": "default",
+          "unit": "kB"
+        },
+        "maintenance_io_concurrency": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "10",
+          "source": "default",
+          "unit": null
+        },
+        "maintenance_work_mem": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "65536",
+          "source": "default",
+          "unit": "kB"
+        },
+        "max_connections": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "100",
+          "source": "configuration file",
+          "unit": null
+        },
+        "max_files_per_process": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "1000",
+          "source": "default",
+          "unit": null
+        },
+        "max_function_args": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "100",
+          "source": "default",
+          "unit": null
+        },
+        "max_identifier_length": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "63",
+          "source": "default",
+          "unit": null
+        },
+        "max_index_keys": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "32",
+          "source": "default",
+          "unit": null
+        },
+        "max_locks_per_transaction": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "64",
+          "source": "default",
+          "unit": null
+        },
+        "max_logical_replication_workers": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "4",
+          "source": "default",
+          "unit": null
+        },
+        "max_parallel_apply_workers_per_subscription": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "max_parallel_maintenance_workers": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "max_parallel_workers": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "32",
+          "source": "configuration file",
+          "unit": null
+        },
+        "max_parallel_workers_per_gather": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "max_pred_locks_per_page": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "max_pred_locks_per_relation": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "-2",
+          "source": "default",
+          "unit": null
+        },
+        "max_pred_locks_per_transaction": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "64",
+          "source": "default",
+          "unit": null
+        },
+        "max_prepared_transactions": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "max_replication_slots": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "32",
+          "source": "configuration file",
+          "unit": null
+        },
+        "max_slot_wal_keep_size": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "MB"
+        },
+        "max_stack_depth": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "2048",
+          "source": "default",
+          "unit": "kB"
+        },
+        "max_standby_archive_delay": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "30000",
+          "source": "default",
+          "unit": "ms"
+        },
+        "max_standby_streaming_delay": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "30000",
+          "source": "default",
+          "unit": "ms"
+        },
+        "max_sync_workers_per_subscription": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "max_wal_senders": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "10",
+          "source": "default",
+          "unit": null
+        },
+        "max_wal_size": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "1024",
+          "source": "configuration file",
+          "unit": "MB"
+        },
+        "max_worker_processes": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "32",
+          "source": "configuration file",
+          "unit": null
+        },
+        "min_dynamic_shared_memory": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "MB"
+        },
+        "min_parallel_index_scan_size": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "64",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "min_parallel_table_scan_size": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1024",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "min_wal_size": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "80",
+          "source": "configuration file",
+          "unit": "MB"
+        },
+        "old_snapshot_threshold": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "min"
+        },
+        "output_plugin_libraries": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "pgoutput, test_decoding",
+          "source": "default",
+          "unit": null
+        },
+        "parallel_leader_participation": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "parallel_setup_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1000",
+          "source": "default",
+          "unit": null
+        },
+        "parallel_tuple_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0.1",
+          "source": "default",
+          "unit": null
+        },
+        "password_encryption": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "scram-sha-256",
+          "source": "default",
+          "unit": null
+        },
+        "plan_cache_mode": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "auto",
+          "source": "default",
+          "unit": null
+        },
+        "port": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "5432",
+          "source": "configuration file",
+          "unit": null
+        },
+        "post_auth_delay": {
+          "context": "backend",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "s"
+        },
+        "pre_auth_delay": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "s"
+        },
+        "primary_conninfo": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "host=hdd-pg-rw user=streaming_replica port=5432 sslkey=/controller/certificates/streaming_replica.key sslcert=/controller/certificates/streaming_replica.crt sslrootcert=/controller/certificates/server-ca.crt application_name=hdd-pg-1-initdb sslmode=verify-ca dbname=postgres tcp_user_timeout='5000'",
+          "source": "configuration file",
+          "unit": null
+        },
+        "primary_slot_name": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "quote_all_identifiers": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "random_page_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "4",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_end_command": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_init_sync_method": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "fsync",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_min_apply_delay": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "recovery_prefetch": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "try",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_target": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_target_action": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "pause",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_target_inclusive": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_target_lsn": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_target_name": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_target_time": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_target_timeline": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "latest",
+          "source": "configuration file",
+          "unit": null
+        },
+        "recovery_target_xid": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "recursive_worktable_factor": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "10",
+          "source": "default",
+          "unit": null
+        },
+        "remove_temp_files_after_crash": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "reserved_connections": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "restart_after_crash": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "configuration file",
+          "unit": null
+        },
+        "restore_command": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "/controller/manager wal-restore --log-destination /controller/log/postgres.json %f %p",
+          "source": "configuration file",
+          "unit": null
+        },
+        "restrict_nonsystem_relation_kind": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "row_security": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "scram_iterations": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "4096",
+          "source": "default",
+          "unit": null
+        },
+        "search_path": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "\"$user\", public",
+          "source": "default",
+          "unit": null
+        },
+        "segment_size": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "131072",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "send_abort_for_crash": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "send_abort_for_kill": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "seq_page_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1",
+          "source": "default",
+          "unit": null
+        },
+        "server_encoding": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "UTF8",
+          "source": "default",
+          "unit": null
+        },
+        "server_version": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "16.15 (Debian 16.15-1.pgdg13+2)",
+          "source": "default",
+          "unit": null
+        },
+        "server_version_num": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "160015",
+          "source": "default",
+          "unit": null
+        },
+        "session_preload_libraries": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "session_replication_role": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "origin",
+          "source": "default",
+          "unit": null
+        },
+        "shared_buffers": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "32768",
+          "source": "configuration file",
+          "unit": "8kB"
+        },
+        "shared_memory_size": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "280",
+          "source": "default",
+          "unit": "MB"
+        },
+        "shared_memory_size_in_huge_pages": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "140",
+          "source": "default",
+          "unit": null
+        },
+        "shared_memory_type": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "mmap",
+          "source": "configuration file",
+          "unit": null
+        },
+        "shared_preload_libraries": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "configuration file",
+          "unit": null
+        },
+        "ssl": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "ssl_ca_file": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "/controller/certificates/client-ca.crt",
+          "source": "configuration file",
+          "unit": null
+        },
+        "ssl_cert_file": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "/controller/certificates/server.crt",
+          "source": "configuration file",
+          "unit": null
+        },
+        "ssl_ciphers": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "HIGH:MEDIUM:+3DES:!aNULL",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_crl_dir": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_crl_file": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_dh_params_file": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_ecdh_curve": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "prime256v1",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_key_file": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "/controller/certificates/server.key",
+          "source": "configuration file",
+          "unit": null
+        },
+        "ssl_library": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "OpenSSL",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_max_protocol_version": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "TLSv1.3",
+          "source": "configuration file",
+          "unit": null
+        },
+        "ssl_min_protocol_version": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "TLSv1.3",
+          "source": "configuration file",
+          "unit": null
+        },
+        "ssl_passphrase_command": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_passphrase_command_supports_reload": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_prefer_server_ciphers": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "standard_conforming_strings": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "statement_timeout": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "stats_fetch_consistency": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "cache",
+          "source": "default",
+          "unit": null
+        },
+        "superuser_reserved_connections": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "3",
+          "source": "default",
+          "unit": null
+        },
+        "synchronize_seqscans": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "synchronous_commit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "synchronous_standby_names": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "ANY 1 (\"hdd-pg-2\")",
+          "source": "configuration file",
+          "unit": null
+        },
+        "syslog_facility": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "local0",
+          "source": "default",
+          "unit": null
+        },
+        "syslog_ident": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "postgres",
+          "source": "default",
+          "unit": null
+        },
+        "syslog_sequence_numbers": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "syslog_split_messages": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "tcp_keepalives_count": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "tcp_keepalives_idle": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "s"
+        },
+        "tcp_keepalives_interval": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "s"
+        },
+        "tcp_user_timeout": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "temp_buffers": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1024",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "temp_file_limit": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "kB"
+        },
+        "temp_tablespaces": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "timezone_abbreviations": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "Default",
+          "source": "default",
+          "unit": null
+        },
+        "trace_notify": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "trace_recovery_messages": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "log",
+          "source": "default",
+          "unit": null
+        },
+        "trace_sort": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "track_activities": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "track_activity_query_size": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "1024",
+          "source": "default",
+          "unit": "B"
+        },
+        "track_commit_timestamp": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "track_counts": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "track_functions": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "none",
+          "source": "default",
+          "unit": null
+        },
+        "track_io_timing": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "track_wal_io_timing": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "transaction_deferrable": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "override",
+          "unit": null
+        },
+        "transaction_isolation": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "read committed",
+          "source": "override",
+          "unit": null
+        },
+        "transaction_read_only": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "override",
+          "unit": null
+        },
+        "transform_null_equals": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "unix_socket_directories": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "/controller/run",
+          "source": "configuration file",
+          "unit": null
+        },
+        "unix_socket_group": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "unix_socket_permissions": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "0777",
+          "source": "default",
+          "unit": null
+        },
+        "update_process_title": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_buffer_usage_limit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "256",
+          "source": "default",
+          "unit": "kB"
+        },
+        "vacuum_cost_delay": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "vacuum_cost_limit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "200",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_cost_page_dirty": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "20",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_cost_page_hit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_cost_page_miss": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_failsafe_age": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1600000000",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_freeze_min_age": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "50000000",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_freeze_table_age": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "150000000",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_multixact_failsafe_age": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1600000000",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_multixact_freeze_min_age": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "5000000",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_multixact_freeze_table_age": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "150000000",
+          "source": "default",
+          "unit": null
+        },
+        "wal_block_size": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "8192",
+          "source": "default",
+          "unit": null
+        },
+        "wal_buffers": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "1024",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "wal_compression": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "wal_consistency_checking": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "wal_decode_buffer_size": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "524288",
+          "source": "default",
+          "unit": "B"
+        },
+        "wal_init_zero": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "wal_keep_size": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "512",
+          "source": "configuration file",
+          "unit": "MB"
+        },
+        "wal_level": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "logical",
+          "source": "configuration file",
+          "unit": null
+        },
+        "wal_log_hints": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "wal_receiver_create_temp_slot": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "wal_receiver_status_interval": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "10",
+          "source": "default",
+          "unit": "s"
+        },
+        "wal_receiver_timeout": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "5000",
+          "source": "configuration file",
+          "unit": "ms"
+        },
+        "wal_recycle": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "wal_retrieve_retry_interval": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "5000",
+          "source": "default",
+          "unit": "ms"
+        },
+        "wal_segment_size": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "16777216",
+          "source": "default",
+          "unit": "B"
+        },
+        "wal_sender_timeout": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "5000",
+          "source": "configuration file",
+          "unit": "ms"
+        },
+        "wal_skip_threshold": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "2048",
+          "source": "default",
+          "unit": "kB"
+        },
+        "wal_sync_method": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "fdatasync",
+          "source": "default",
+          "unit": null
+        },
+        "wal_writer_delay": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "200",
+          "source": "default",
+          "unit": "ms"
+        },
+        "wal_writer_flush_after": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "128",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "work_mem": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "4096",
+          "source": "default",
+          "unit": "kB"
+        },
+        "xmlbinary": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "base64",
+          "source": "default",
+          "unit": null
+        },
+        "xmloption": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "content",
+          "source": "default",
+          "unit": null
+        },
+        "zero_damaged_pages": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        }
+      },
+      "systemIdentifier": "7692518806614212629",
+      "table": {
+        "deadEstimate": 0,
+        "heapBytes": 118128640000,
+        "lastAutovacuum": null,
+        "lastVacuum": null,
+        "liveEstimate": 0,
+        "oid": "16430",
+        "relTablespaceOid": "0",
+        "relfilenode": "16430",
+        "reloptions": [
+          "autovacuum_enabled=false"
+        ],
+        "tablespaceOverrides": null,
+        "totalBytes": 119777173504
+      },
+      "version": "16.15 (Debian 16.15-1.pgdg13+2)",
+      "versionNum": "160015"
+    },
+    "replica": {
+      "appSessions": 0,
+      "capturedAt": "2026-10-04T06:54:26.579096+00:00",
+      "recovery": true,
+      "settings": {
+        "DateStyle": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "ISO, MDY",
+          "source": "configuration file",
+          "unit": null
+        },
+        "IntervalStyle": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "postgres",
+          "source": "default",
+          "unit": null
+        },
+        "TimeZone": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "Etc/UTC",
+          "source": "configuration file",
+          "unit": null
+        },
+        "allow_in_place_tablespaces": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "allow_system_table_mods": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "application_name": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "psql",
+          "source": "client",
+          "unit": null
+        },
+        "archive_cleanup_command": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "archive_command": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "/controller/manager wal-archive --log-destination /controller/log/postgres.json %p",
+          "source": "configuration file",
+          "unit": null
+        },
+        "archive_library": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "archive_mode": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "archive_timeout": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "300",
+          "source": "configuration file",
+          "unit": "s"
+        },
+        "array_nulls": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "authentication_timeout": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "60",
+          "source": "default",
+          "unit": "s"
+        },
+        "autovacuum": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_analyze_scale_factor": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0.1",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_analyze_threshold": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "50",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_freeze_max_age": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "200000000",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_max_workers": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "3",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_multixact_freeze_max_age": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "400000000",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_naptime": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "60",
+          "source": "default",
+          "unit": "s"
+        },
+        "autovacuum_vacuum_cost_delay": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": "ms"
+        },
+        "autovacuum_vacuum_cost_limit": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_vacuum_insert_scale_factor": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0.2",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_vacuum_insert_threshold": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "1000",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_vacuum_scale_factor": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0.2",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_vacuum_threshold": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "50",
+          "source": "default",
+          "unit": null
+        },
+        "autovacuum_work_mem": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "kB"
+        },
+        "backend_flush_after": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "backslash_quote": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "safe_encoding",
+          "source": "default",
+          "unit": null
+        },
+        "backtrace_functions": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "bgwriter_delay": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "200",
+          "source": "default",
+          "unit": "ms"
+        },
+        "bgwriter_flush_after": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "64",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "bgwriter_lru_maxpages": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "100",
+          "source": "default",
+          "unit": null
+        },
+        "bgwriter_lru_multiplier": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "block_size": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "8192",
+          "source": "default",
+          "unit": null
+        },
+        "bonjour": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "bonjour_name": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "bytea_output": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "hex",
+          "source": "default",
+          "unit": null
+        },
+        "check_function_bodies": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "checkpoint_completion_target": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0.9",
+          "source": "default",
+          "unit": null
+        },
+        "checkpoint_flush_after": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "32",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "checkpoint_timeout": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "300",
+          "source": "default",
+          "unit": "s"
+        },
+        "checkpoint_warning": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "30",
+          "source": "default",
+          "unit": "s"
+        },
+        "client_connection_check_interval": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "client_encoding": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "UTF8",
+          "source": "default",
+          "unit": null
+        },
+        "client_min_messages": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "notice",
+          "source": "default",
+          "unit": null
+        },
+        "cluster_name": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "hdd-pg",
+          "source": "configuration file",
+          "unit": null
+        },
+        "commit_delay": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "commit_siblings": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "5",
+          "source": "default",
+          "unit": null
+        },
+        "compute_query_id": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "auto",
+          "source": "default",
+          "unit": null
+        },
+        "config_file": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "/var/lib/postgresql/data/pgdata/postgresql.conf",
+          "source": "override",
+          "unit": null
+        },
+        "constraint_exclusion": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "partition",
+          "source": "default",
+          "unit": null
+        },
+        "cpu_index_tuple_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0.005",
+          "source": "default",
+          "unit": null
+        },
+        "cpu_operator_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0.0025",
+          "source": "default",
+          "unit": null
+        },
+        "cpu_tuple_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0.01",
+          "source": "default",
+          "unit": null
+        },
+        "createrole_self_grant": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "cursor_tuple_fraction": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0.1",
+          "source": "default",
+          "unit": null
+        },
+        "data_checksums": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "data_directory": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "/var/lib/postgresql/data/pgdata",
+          "source": "override",
+          "unit": null
+        },
+        "data_directory_mode": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "0700",
+          "source": "default",
+          "unit": null
+        },
+        "data_sync_retry": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "db_user_namespace": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "deadlock_timeout": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "1000",
+          "source": "default",
+          "unit": "ms"
+        },
+        "debug_assertions": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "debug_discard_caches": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "debug_io_direct": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "debug_logical_replication_streaming": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "buffered",
+          "source": "default",
+          "unit": null
+        },
+        "debug_parallel_query": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "debug_pretty_print": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "debug_print_parse": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "debug_print_plan": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "debug_print_rewritten": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "default_statistics_target": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "100",
+          "source": "default",
+          "unit": null
+        },
+        "default_table_access_method": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "heap",
+          "source": "default",
+          "unit": null
+        },
+        "default_tablespace": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "default_text_search_config": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "pg_catalog.english",
+          "source": "configuration file",
+          "unit": null
+        },
+        "default_toast_compression": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "pglz",
+          "source": "default",
+          "unit": null
+        },
+        "default_transaction_deferrable": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "default_transaction_isolation": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "read committed",
+          "source": "default",
+          "unit": null
+        },
+        "default_transaction_read_only": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "dynamic_library_path": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "$libdir",
+          "source": "default",
+          "unit": null
+        },
+        "dynamic_shared_memory_type": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "posix",
+          "source": "configuration file",
+          "unit": null
+        },
+        "effective_cache_size": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "524288",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "effective_io_concurrency": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1",
+          "source": "default",
+          "unit": null
+        },
+        "enable_async_append": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_bitmapscan": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_gathermerge": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_hashagg": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_hashjoin": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_incremental_sort": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_indexonlyscan": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_indexscan": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_material": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_memoize": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_mergejoin": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_nestloop": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_parallel_append": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_parallel_hash": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_partition_pruning": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_partitionwise_aggregate": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "enable_partitionwise_join": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "enable_presorted_aggregate": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_seqscan": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_sort": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "enable_tidscan": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "escape_string_warning": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "event_source": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "PostgreSQL",
+          "source": "default",
+          "unit": null
+        },
+        "exit_on_error": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "extension_destdir": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "external_pid_file": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "extra_float_digits": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1",
+          "source": "default",
+          "unit": null
+        },
+        "file_extend_method": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "posix_fallocate",
+          "source": "default",
+          "unit": null
+        },
+        "from_collapse_limit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "8",
+          "source": "default",
+          "unit": null
+        },
+        "fsync": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "full_page_writes": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "geqo": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "geqo_effort": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "5",
+          "source": "default",
+          "unit": null
+        },
+        "geqo_generations": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "geqo_pool_size": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "geqo_seed": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "geqo_selection_bias": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "geqo_threshold": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "12",
+          "source": "default",
+          "unit": null
+        },
+        "gin_fuzzy_search_limit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "gin_pending_list_limit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "4096",
+          "source": "default",
+          "unit": "kB"
+        },
+        "gss_accept_delegation": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "hash_mem_multiplier": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "hba_file": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "/var/lib/postgresql/data/pgdata/pg_hba.conf",
+          "source": "override",
+          "unit": null
+        },
+        "hot_standby": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "hot_standby_feedback": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "huge_page_size": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "kB"
+        },
+        "huge_pages": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "try",
+          "source": "default",
+          "unit": null
+        },
+        "icu_validation_level": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "warning",
+          "source": "default",
+          "unit": null
+        },
+        "ident_file": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "/var/lib/postgresql/data/pgdata/pg_ident.conf",
+          "source": "override",
+          "unit": null
+        },
+        "idle_in_transaction_session_timeout": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "idle_session_timeout": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "ignore_checksum_failure": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "ignore_invalid_pages": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "ignore_system_indexes": {
+          "context": "backend",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "in_hot_standby": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "override",
+          "unit": null
+        },
+        "integer_datetimes": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "jit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "jit_above_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "100000",
+          "source": "default",
+          "unit": null
+        },
+        "jit_debugging_support": {
+          "context": "superuser-backend",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "jit_dump_bitcode": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "jit_expressions": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "jit_inline_above_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "500000",
+          "source": "default",
+          "unit": null
+        },
+        "jit_optimize_above_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "500000",
+          "source": "default",
+          "unit": null
+        },
+        "jit_profiling_support": {
+          "context": "superuser-backend",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "jit_provider": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "llvmjit",
+          "source": "default",
+          "unit": null
+        },
+        "jit_tuple_deforming": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "join_collapse_limit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "8",
+          "source": "default",
+          "unit": null
+        },
+        "krb_caseins_users": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "krb_server_keyfile": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "FILE:/etc/postgresql-common/krb5.keytab",
+          "source": "default",
+          "unit": null
+        },
+        "lc_messages": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "C",
+          "source": "configuration file",
+          "unit": null
+        },
+        "lc_monetary": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "C",
+          "source": "configuration file",
+          "unit": null
+        },
+        "lc_numeric": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "C",
+          "source": "configuration file",
+          "unit": null
+        },
+        "lc_time": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "C",
+          "source": "configuration file",
+          "unit": null
+        },
+        "listen_addresses": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "*",
+          "source": "configuration file",
+          "unit": null
+        },
+        "lo_compat_privileges": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "local_preload_libraries": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "lock_timeout": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "log_autovacuum_min_duration": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "600000",
+          "source": "default",
+          "unit": "ms"
+        },
+        "log_checkpoints": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "log_connections": {
+          "context": "superuser-backend",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_destination": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "csvlog",
+          "source": "configuration file",
+          "unit": null
+        },
+        "log_directory": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "/controller/log",
+          "source": "configuration file",
+          "unit": null
+        },
+        "log_disconnections": {
+          "context": "superuser-backend",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_duration": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_error_verbosity": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "default",
+          "source": "default",
+          "unit": null
+        },
+        "log_executor_stats": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_file_mode": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0600",
+          "source": "default",
+          "unit": null
+        },
+        "log_filename": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "postgres",
+          "source": "configuration file",
+          "unit": null
+        },
+        "log_hostname": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_line_prefix": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "%m [%p] ",
+          "source": "default",
+          "unit": null
+        },
+        "log_lock_waits": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_min_duration_sample": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "ms"
+        },
+        "log_min_duration_statement": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "ms"
+        },
+        "log_min_error_statement": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "error",
+          "source": "default",
+          "unit": null
+        },
+        "log_min_messages": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "warning",
+          "source": "default",
+          "unit": null
+        },
+        "log_parameter_max_length": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "B"
+        },
+        "log_parameter_max_length_on_error": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "B"
+        },
+        "log_parser_stats": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_planner_stats": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_recovery_conflict_waits": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_replication_commands": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_rotation_age": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "configuration file",
+          "unit": "min"
+        },
+        "log_rotation_size": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "configuration file",
+          "unit": "kB"
+        },
+        "log_startup_progress_interval": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "10000",
+          "source": "default",
+          "unit": "ms"
+        },
+        "log_statement": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "none",
+          "source": "default",
+          "unit": null
+        },
+        "log_statement_sample_rate": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "1",
+          "source": "default",
+          "unit": null
+        },
+        "log_statement_stats": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "log_temp_files": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "kB"
+        },
+        "log_timezone": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "Etc/UTC",
+          "source": "configuration file",
+          "unit": null
+        },
+        "log_transaction_sample_rate": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "log_truncate_on_rotation": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "configuration file",
+          "unit": null
+        },
+        "logging_collector": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "logical_decoding_work_mem": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "65536",
+          "source": "default",
+          "unit": "kB"
+        },
+        "maintenance_io_concurrency": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "10",
+          "source": "default",
+          "unit": null
+        },
+        "maintenance_work_mem": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "65536",
+          "source": "default",
+          "unit": "kB"
+        },
+        "max_connections": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "100",
+          "source": "configuration file",
+          "unit": null
+        },
+        "max_files_per_process": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "1000",
+          "source": "default",
+          "unit": null
+        },
+        "max_function_args": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "100",
+          "source": "default",
+          "unit": null
+        },
+        "max_identifier_length": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "63",
+          "source": "default",
+          "unit": null
+        },
+        "max_index_keys": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "32",
+          "source": "default",
+          "unit": null
+        },
+        "max_locks_per_transaction": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "64",
+          "source": "default",
+          "unit": null
+        },
+        "max_logical_replication_workers": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "4",
+          "source": "default",
+          "unit": null
+        },
+        "max_parallel_apply_workers_per_subscription": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "max_parallel_maintenance_workers": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "max_parallel_workers": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "32",
+          "source": "configuration file",
+          "unit": null
+        },
+        "max_parallel_workers_per_gather": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "max_pred_locks_per_page": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "max_pred_locks_per_relation": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "-2",
+          "source": "default",
+          "unit": null
+        },
+        "max_pred_locks_per_transaction": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "64",
+          "source": "default",
+          "unit": null
+        },
+        "max_prepared_transactions": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "max_replication_slots": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "32",
+          "source": "configuration file",
+          "unit": null
+        },
+        "max_slot_wal_keep_size": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "MB"
+        },
+        "max_stack_depth": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "2048",
+          "source": "default",
+          "unit": "kB"
+        },
+        "max_standby_archive_delay": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "30000",
+          "source": "default",
+          "unit": "ms"
+        },
+        "max_standby_streaming_delay": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "30000",
+          "source": "default",
+          "unit": "ms"
+        },
+        "max_sync_workers_per_subscription": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "max_wal_senders": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "10",
+          "source": "default",
+          "unit": null
+        },
+        "max_wal_size": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "1024",
+          "source": "configuration file",
+          "unit": "MB"
+        },
+        "max_worker_processes": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "32",
+          "source": "configuration file",
+          "unit": null
+        },
+        "min_dynamic_shared_memory": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "MB"
+        },
+        "min_parallel_index_scan_size": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "64",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "min_parallel_table_scan_size": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1024",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "min_wal_size": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "80",
+          "source": "configuration file",
+          "unit": "MB"
+        },
+        "old_snapshot_threshold": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "min"
+        },
+        "output_plugin_libraries": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "pgoutput, test_decoding",
+          "source": "default",
+          "unit": null
+        },
+        "parallel_leader_participation": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "parallel_setup_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1000",
+          "source": "default",
+          "unit": null
+        },
+        "parallel_tuple_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0.1",
+          "source": "default",
+          "unit": null
+        },
+        "password_encryption": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "scram-sha-256",
+          "source": "default",
+          "unit": null
+        },
+        "plan_cache_mode": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "auto",
+          "source": "default",
+          "unit": null
+        },
+        "port": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "5432",
+          "source": "configuration file",
+          "unit": null
+        },
+        "post_auth_delay": {
+          "context": "backend",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "s"
+        },
+        "pre_auth_delay": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "s"
+        },
+        "primary_conninfo": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "host=hdd-pg-rw user=streaming_replica port=5432 sslkey=/controller/certificates/streaming_replica.key sslcert=/controller/certificates/streaming_replica.crt sslrootcert=/controller/certificates/server-ca.crt application_name=hdd-pg-2 sslmode=verify-ca dbname=postgres tcp_user_timeout='5000'",
+          "source": "configuration file",
+          "unit": null
+        },
+        "primary_slot_name": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "_cnpg_hdd_pg_2",
+          "source": "configuration file",
+          "unit": null
+        },
+        "quote_all_identifiers": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "random_page_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "4",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_end_command": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_init_sync_method": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "fsync",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_min_apply_delay": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "recovery_prefetch": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "try",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_target": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_target_action": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "pause",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_target_inclusive": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_target_lsn": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_target_name": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_target_time": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "recovery_target_timeline": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "latest",
+          "source": "configuration file",
+          "unit": null
+        },
+        "recovery_target_xid": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "recursive_worktable_factor": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "10",
+          "source": "default",
+          "unit": null
+        },
+        "remove_temp_files_after_crash": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "reserved_connections": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "restart_after_crash": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "configuration file",
+          "unit": null
+        },
+        "restore_command": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "/controller/manager wal-restore --log-destination /controller/log/postgres.json %f %p",
+          "source": "configuration file",
+          "unit": null
+        },
+        "restrict_nonsystem_relation_kind": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "row_security": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "scram_iterations": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "4096",
+          "source": "default",
+          "unit": null
+        },
+        "search_path": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "\"$user\", public",
+          "source": "default",
+          "unit": null
+        },
+        "segment_size": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "131072",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "send_abort_for_crash": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "send_abort_for_kill": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "seq_page_cost": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1",
+          "source": "default",
+          "unit": null
+        },
+        "server_encoding": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "UTF8",
+          "source": "default",
+          "unit": null
+        },
+        "server_version": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "16.15 (Debian 16.15-1.pgdg13+2)",
+          "source": "default",
+          "unit": null
+        },
+        "server_version_num": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "160015",
+          "source": "default",
+          "unit": null
+        },
+        "session_preload_libraries": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "session_replication_role": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "origin",
+          "source": "default",
+          "unit": null
+        },
+        "shared_buffers": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "32768",
+          "source": "configuration file",
+          "unit": "8kB"
+        },
+        "shared_memory_size": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "280",
+          "source": "default",
+          "unit": "MB"
+        },
+        "shared_memory_size_in_huge_pages": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "140",
+          "source": "default",
+          "unit": null
+        },
+        "shared_memory_type": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "mmap",
+          "source": "configuration file",
+          "unit": null
+        },
+        "shared_preload_libraries": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "configuration file",
+          "unit": null
+        },
+        "ssl": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "ssl_ca_file": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "/controller/certificates/client-ca.crt",
+          "source": "configuration file",
+          "unit": null
+        },
+        "ssl_cert_file": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "/controller/certificates/server.crt",
+          "source": "configuration file",
+          "unit": null
+        },
+        "ssl_ciphers": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "HIGH:MEDIUM:+3DES:!aNULL",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_crl_dir": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_crl_file": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_dh_params_file": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_ecdh_curve": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "prime256v1",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_key_file": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "/controller/certificates/server.key",
+          "source": "configuration file",
+          "unit": null
+        },
+        "ssl_library": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "OpenSSL",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_max_protocol_version": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "TLSv1.3",
+          "source": "configuration file",
+          "unit": null
+        },
+        "ssl_min_protocol_version": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "TLSv1.3",
+          "source": "configuration file",
+          "unit": null
+        },
+        "ssl_passphrase_command": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_passphrase_command_supports_reload": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "ssl_prefer_server_ciphers": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "standard_conforming_strings": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "statement_timeout": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "stats_fetch_consistency": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "cache",
+          "source": "default",
+          "unit": null
+        },
+        "superuser_reserved_connections": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "3",
+          "source": "default",
+          "unit": null
+        },
+        "synchronize_seqscans": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "synchronous_commit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "synchronous_standby_names": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "ANY 1 (\"hdd-pg-2\")",
+          "source": "configuration file",
+          "unit": null
+        },
+        "syslog_facility": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "local0",
+          "source": "default",
+          "unit": null
+        },
+        "syslog_ident": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "postgres",
+          "source": "default",
+          "unit": null
+        },
+        "syslog_sequence_numbers": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "syslog_split_messages": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "tcp_keepalives_count": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": null
+        },
+        "tcp_keepalives_idle": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "s"
+        },
+        "tcp_keepalives_interval": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "s"
+        },
+        "tcp_user_timeout": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "temp_buffers": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1024",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "temp_file_limit": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "-1",
+          "source": "default",
+          "unit": "kB"
+        },
+        "temp_tablespaces": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "timezone_abbreviations": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "Default",
+          "source": "default",
+          "unit": null
+        },
+        "trace_notify": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "trace_recovery_messages": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "log",
+          "source": "default",
+          "unit": null
+        },
+        "trace_sort": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "track_activities": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "track_activity_query_size": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "1024",
+          "source": "default",
+          "unit": "B"
+        },
+        "track_commit_timestamp": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "track_counts": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "track_functions": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "none",
+          "source": "default",
+          "unit": null
+        },
+        "track_io_timing": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "track_wal_io_timing": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "transaction_deferrable": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "override",
+          "unit": null
+        },
+        "transaction_isolation": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "read committed",
+          "source": "override",
+          "unit": null
+        },
+        "transaction_read_only": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "override",
+          "unit": null
+        },
+        "transform_null_equals": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "unix_socket_directories": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "/controller/run",
+          "source": "configuration file",
+          "unit": null
+        },
+        "unix_socket_group": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "unix_socket_permissions": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "0777",
+          "source": "default",
+          "unit": null
+        },
+        "update_process_title": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_buffer_usage_limit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "256",
+          "source": "default",
+          "unit": "kB"
+        },
+        "vacuum_cost_delay": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms"
+        },
+        "vacuum_cost_limit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "200",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_cost_page_dirty": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "20",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_cost_page_hit": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_cost_page_miss": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "2",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_failsafe_age": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1600000000",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_freeze_min_age": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "50000000",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_freeze_table_age": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "150000000",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_multixact_failsafe_age": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "1600000000",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_multixact_freeze_min_age": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "5000000",
+          "source": "default",
+          "unit": null
+        },
+        "vacuum_multixact_freeze_table_age": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "150000000",
+          "source": "default",
+          "unit": null
+        },
+        "wal_block_size": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "8192",
+          "source": "default",
+          "unit": null
+        },
+        "wal_buffers": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "1024",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "wal_compression": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "wal_consistency_checking": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "",
+          "source": "default",
+          "unit": null
+        },
+        "wal_decode_buffer_size": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "524288",
+          "source": "default",
+          "unit": "B"
+        },
+        "wal_init_zero": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "wal_keep_size": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "512",
+          "source": "configuration file",
+          "unit": "MB"
+        },
+        "wal_level": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "logical",
+          "source": "configuration file",
+          "unit": null
+        },
+        "wal_log_hints": {
+          "context": "postmaster",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null
+        },
+        "wal_receiver_create_temp_slot": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        },
+        "wal_receiver_status_interval": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "10",
+          "source": "default",
+          "unit": "s"
+        },
+        "wal_receiver_timeout": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "5000",
+          "source": "configuration file",
+          "unit": "ms"
+        },
+        "wal_recycle": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null
+        },
+        "wal_retrieve_retry_interval": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "5000",
+          "source": "default",
+          "unit": "ms"
+        },
+        "wal_segment_size": {
+          "context": "internal",
+          "pendingRestart": false,
+          "setting": "16777216",
+          "source": "default",
+          "unit": "B"
+        },
+        "wal_sender_timeout": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "5000",
+          "source": "configuration file",
+          "unit": "ms"
+        },
+        "wal_skip_threshold": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "2048",
+          "source": "default",
+          "unit": "kB"
+        },
+        "wal_sync_method": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "fdatasync",
+          "source": "default",
+          "unit": null
+        },
+        "wal_writer_delay": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "200",
+          "source": "default",
+          "unit": "ms"
+        },
+        "wal_writer_flush_after": {
+          "context": "sighup",
+          "pendingRestart": false,
+          "setting": "128",
+          "source": "default",
+          "unit": "8kB"
+        },
+        "work_mem": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "4096",
+          "source": "default",
+          "unit": "kB"
+        },
+        "xmlbinary": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "base64",
+          "source": "default",
+          "unit": null
+        },
+        "xmloption": {
+          "context": "user",
+          "pendingRestart": false,
+          "setting": "content",
+          "source": "default",
+          "unit": null
+        },
+        "zero_damaged_pages": {
+          "context": "superuser",
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null
+        }
+      },
+      "systemIdentifier": "7692518806614212629",
+      "table": {
+        "deadEstimate": 0,
+        "heapBytes": 118128640000,
+        "lastAutovacuum": null,
+        "lastVacuum": null,
+        "liveEstimate": 0,
+        "oid": "16430",
+        "relTablespaceOid": "0",
+        "relfilenode": "16430",
+        "reloptions": [
+          "autovacuum_enabled=false"
+        ],
+        "tablespaceOverrides": null,
+        "totalBytes": 119777173504
+      },
+      "version": "16.15 (Debian 16.15-1.pgdg13+2)",
+      "versionNum": "160015"
+    }
+  },
+  "storage": {
+    "claims": {
+      "hdd-pg-1": {
+        "capacity": "512Gi",
+        "mountPath": "/var/lib/postgresql/data",
+        "phase": "Bound",
+        "pv": "pvc-8ad55f69-784c-4dc9-8107-e61c894762c2",
+        "requested": "512Gi",
+        "role": "primary",
+        "storageClass": "azure-standard-hdd"
+      },
+      "hdd-pg-1-wal": {
+        "capacity": "512Gi",
+        "mountPath": "/var/lib/postgresql/wal",
+        "phase": "Bound",
+        "pv": "pvc-5448bf15-ea38-499b-a302-0bcc98354623",
+        "requested": "512Gi",
+        "role": "primary",
+        "storageClass": "azure-standard-hdd"
+      },
+      "hdd-pg-2": {
+        "capacity": "512Gi",
+        "mountPath": "/var/lib/postgresql/data",
+        "phase": "Bound",
+        "pv": "pvc-c59f3e95-c9bd-4e63-b72a-2644d3c2b464",
+        "requested": "512Gi",
+        "role": "replica",
+        "storageClass": "azure-standard-hdd"
+      },
+      "hdd-pg-2-wal": {
+        "capacity": "512Gi",
+        "mountPath": "/var/lib/postgresql/wal",
+        "phase": "Bound",
+        "pv": "pvc-6df4c1f7-1eda-44d7-b34d-3931bdff27cc",
+        "requested": "512Gi",
+        "role": "replica",
+        "storageClass": "azure-standard-hdd"
+      }
+    },
+    "storageClass": {
+      "name": "azure-standard-hdd",
+      "parameters": {
+        "cachingMode": "None",
+        "kind": "Managed",
+        "skuName": "Standard_LRS"
+      },
+      "provisioner": "disk.csi.azure.com"
+    }
+  }
+}

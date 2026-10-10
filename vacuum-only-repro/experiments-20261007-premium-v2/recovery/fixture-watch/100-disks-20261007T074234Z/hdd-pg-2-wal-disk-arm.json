@@ -1,0 +1,47 @@
+{
+  "name": "pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc",
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc",
+  "type": "Microsoft.Compute/disks",
+  "location": "eastus",
+  "tags": {
+    "k8s-azure-created-by": "kubernetes-azure-dd",
+    "kubernetes.io-created-for-pv-name": "pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc",
+    "kubernetes.io-created-for-pvc-name": "hdd-pg-2-wal",
+    "kubernetes.io-created-for-pvc-namespace": "repro"
+  },
+  "zones": [
+    "1"
+  ],
+  "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/virtualMachines/aks-nodepool1-15388874-vmss_0",
+  "sku": {
+    "name": "PremiumV2_LRS",
+    "tier": "Premium"
+  },
+  "properties": {
+    "creationData": {
+      "createOption": "Copy",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "sourceUniqueId": "5d6164bd-68b6-455a-ada8-cfb4c9f95022",
+      "logicalSectorSize": 512
+    },
+    "diskSizeGB": 512,
+    "diskIOPSReadWrite": 3000,
+    "diskMBpsReadWrite": 125,
+    "readOnly": false,
+    "diskIOPSReadOnly": 3000,
+    "diskMBpsReadOnly": 125,
+    "encryption": {
+      "type": "EncryptionAtRestWithPlatformKey"
+    },
+    "maxShares": 1,
+    "networkAccessPolicy": "DenyAll",
+    "publicNetworkAccess": "Disabled",
+    "timeCreated": "2026-10-07T07:30:01.8331525+00:00",
+    "provisioningState": "Succeeded",
+    "diskState": "Attached",
+    "LastOwnershipUpdateTime": "2026-10-07T07:30:15.4798313+00:00",
+    "diskSizeBytes": 549755813888,
+    "uniqueId": "d72d595b-525f-4f1f-8e86-2ff40a9f8d3a",
+    "completionPercent": 89.0
+  }
+}

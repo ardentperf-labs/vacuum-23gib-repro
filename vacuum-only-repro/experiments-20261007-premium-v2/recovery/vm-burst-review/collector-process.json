@@ -1,0 +1,14 @@
+{
+  "pid": 353025,
+  "startedAtUtc": "2026-10-07T08:35:41.225826+00:00",
+  "status": "waiting-for-new-measurement-gate",
+  "collectorSha256": "f4ebcf494ada72555007788631dacccbfff4f78941c949386c22e966f07d5d36",
+  "readOnlyCloudOperations": true,
+  "supplementaryOnly": true,
+  "gateWrites": false,
+  "command": [
+    "bash",
+    "-c",
+    "while [ ! -f measurement-gate.json ]; do sleep 5; done; exec python3 -B recovery/vm-burst-review/collect_vmss_metrics.py --until-test-receipts --output-dir recovery/vm-burst-review/collected-retry-2"
+  ]
+}

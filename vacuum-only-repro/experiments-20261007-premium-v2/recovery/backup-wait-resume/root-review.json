@@ -1,0 +1,64 @@
+{
+  "reviewedAtUtc": "2026-10-07T07:14:21.019308+00:00",
+  "filesSha256": {
+    "resume_after_backup.py": "9278b938a3adb8cb5f18c4d2a65f8aff2792f5c4029e77902d3af6b170de56a2",
+    "finalize_continuation.py": "873da9c7c32ef6980d4bf2856109fbd7ef53706d624fff634bffd735615af280",
+    "capture_prebackup_tmp.py": "1a1437306ed4bfdf8edb872b7f5e1ade475eb54fa305a67b1048eb986dad214e",
+    "bind_terminal_process.py": "1a7e1b48ffe91a64ec7cdd90f8c520bb4ee5eb14edf60aa1e13e02e3e260dc3d"
+  },
+  "rootFocusedTestsPassed": 17,
+  "independentReviewer": "/root/audit_measurement_cleanup",
+  "independentReviewPassed": true,
+  "originalFinalizerSha256": "78fc66344fd105ef96ac4299a9ddbf52ec5f74cff081b2b74898b099b0c6d2e1",
+  "captureOnlyApprovedAtBackupBoundary": true,
+  "continuationNotInvoked": false,
+  "continuationExecutionApproved": true,
+  "requiredBeforeContinuation": [
+    "Actual original 100 GiB preparation terminal failure/stoppage with original child absent",
+    "Verified original running Backup-boundary capture and separate terminal receipt binding",
+    "Exact existing Backup UID, paired snapshot lineage and inherited retention protection validated by read-only live preflight",
+    "Root-reviewed wrapper and fresh durable process receipt before original tail continuation"
+  ],
+  "scope": "Continue existing owned Backup/seed/image tail only; never rebuild fixture or create another Backup; all snapshots preserved.",
+  "integrationDraft": {
+    "path": "recovery/backup-wait-resume/continue-100-02.sh",
+    "sha256": "4dbe252d0c48f17a3ba1086d2d351b6fcba2162f4ff3085f9708fe08d27abe98",
+    "shellAndThreeEmbeddedPythonBlocksParse": true,
+    "unsetBackupUIDRejectsBeforeMutation": true,
+    "independentReviewer": "/root/audit_measurement_cleanup",
+    "independentReviewPassed": true,
+    "requiresFreshRunPhaseSupervisor": true,
+    "originalFailurePreservedSeparately": true,
+    "actualUIDBindingAndDeploymentDeferred": false,
+    "priorUnexecutedDraftSha256": "a23091ccfc3eefefe35aab9ae5d1817142314f5c587a61142090ebf4c7a950b7",
+    "originalDeleteProofHelperSha256": "271343456b365e88fef64fe0990420107fe76dd052f05b9eec3a84d831756525",
+    "originalDeleteProofFocusedTestsPassed": 6,
+    "originalDeleteProofIndependentReviewPassed": true,
+    "backupUID": "597e0f7d-c87e-4455-b01a-42120f969859",
+    "priorUnboundSha256": "ced80657fd52c6a02fbacab4240385e5bc9cb6c0b21ee913ad0dc3196ef11788",
+    "actualUIDBindingIndependentReviewPassed": true
+  },
+  "actualOriginalTerminalReceiptSha256": "8996c771a22b946b2d37a5f5590b730937a841de41d503b4fdb702c9a358b568",
+  "actualReadOnlyPreflight": {
+    "path": "recovery/backup-wait-resume/read-only-preflight-100gib/resume-progress.json",
+    "sha256": "94329a30c36ff7cde7c2b5e92213682577a9dd48137e971ce5eaff3d7b890515",
+    "phase": "read-only-preflight-complete",
+    "backupUID": "597e0f7d-c87e-4455-b01a-42120f969859"
+  },
+  "actualSnapshotAudit": {
+    "path": "preflight/snapshot-audit-100gib-continuation-preflight.json",
+    "sha256": "2b1646e8d5913350f30ecc536a67cc76cfd9270dd87d692f81b31ffe2a121a6b",
+    "snapshotCount": 42,
+    "allSnapshotsProtected": true,
+    "allPriorPreserved": true,
+    "pairedSnapshotsAvailable100": true
+  },
+  "firstContinuationExecution": {
+    "supervisorPid": 305462,
+    "startedAtUtc": "2026-10-07T07:14:21.115045+00:00",
+    "terminalAtUtc": "2026-10-07T07:14:42.020471+00:00",
+    "exitCode": 2,
+    "reason": "CNPG-generated VSS missing custom owner label; stopped before replica tail",
+    "replacementReview": "recovery/backup-wait-resume/root-review-v2.json"
+  }
+}

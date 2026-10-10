@@ -1,0 +1,16 @@
+{
+  "definition": "Estimated total replica DATA completed reads / estimated total primary DATA completed reads; averages multiplied by wall-clock window durations. Replica interval includes replay concurrent with primary VACUUM and its later tail.",
+  "primary": {
+    "averageReadIops": 243.8116505547938,
+    "durationSeconds": 1545.340077,
+    "estimatedReadOperations": 376771.91484184214,
+    "window": "primary VACUUM"
+  },
+  "ratio": 0.0008917477727123105,
+  "replica": {
+    "averageReadIops": 0.21562847672757232,
+    "durationSeconds": 1558.168573,
+    "estimatedReadOperations": 335.98551588076504,
+    "window": "VACUUM start through verified full replica catchup"
+  }
+}

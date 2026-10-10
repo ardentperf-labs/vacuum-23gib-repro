@@ -1,0 +1,160 @@
+2026-10-09T09:54:57.428127+00:00 Verified fixture manifest is available; attaching the data disk
+{
+  "subscription": "00000000-0000-0000-0000-000000000000",
+  "token": "756be87f1141784f272b05b2",
+  "rg": "rg-fio-hdd-756be87f1141784f272b05b2",
+  "location": "westus2",
+  "vm": "fio-vm",
+  "disk": "fio-data",
+  "source": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-keeper-westus2-168d63b3cf97eb87fa9f88d9/providers/Microsoft.Compute/snapshots/prepared-full",
+  "ip": "20.109.154.143",
+  "vm_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-756be87f1141784f272b05b2/providers/Microsoft.Compute/virtualMachines/fio-vm",
+  "vm_size": "Standard_E2bs_v5",
+  "disk_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-756be87f1141784f272b05b2/providers/Microsoft.Compute/disks/fio-data"
+}
+status: done
+fio-3.28
+2026-10-09T09:55:41.307140+00:00 Main read-only sweep launched
+2026-10-09T09:56:11.682034+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T09:56:42.263528+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T09:57:12.632407+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T09:57:43.244665+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T09:58:14.038543+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T09:58:44.648250+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T09:59:15.027705+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T09:59:45.655063+00:00 {'complete': False, 'running': 2, 'completed': [1], 'errors': [], 'tail': ['{"threads": 1, "iops": 16.19856, "mean_ms": 61.723243929698}']}
+2026-10-09T10:00:16.026077+00:00 {'complete': False, 'running': 2, 'completed': [1], 'errors': [], 'tail': ['{"threads": 1, "iops": 16.19856, "mean_ms": 61.723243929698}']}
+2026-10-09T10:00:46.638393+00:00 {'complete': False, 'running': 2, 'completed': [1], 'errors': [], 'tail': ['{"threads": 1, "iops": 16.19856, "mean_ms": 61.723243929698}']}
+2026-10-09T10:01:17.005567+00:00 {'complete': False, 'running': 2, 'completed': [1], 'errors': [], 'tail': ['{"threads": 1, "iops": 16.19856, "mean_ms": 61.723243929698}']}
+2026-10-09T10:01:47.618867+00:00 {'complete': False, 'running': 2, 'completed': [1], 'errors': [], 'tail': ['{"threads": 1, "iops": 16.19856, "mean_ms": 61.723243929698}']}
+2026-10-09T10:02:17.989378+00:00 {'complete': False, 'running': 2, 'completed': [1], 'errors': [], 'tail': ['{"threads": 1, "iops": 16.19856, "mean_ms": 61.723243929698}']}
+2026-10-09T10:02:48.602255+00:00 {'complete': False, 'running': 2, 'completed': [1], 'errors': [], 'tail': ['{"threads": 1, "iops": 16.19856, "mean_ms": 61.723243929698}']}
+2026-10-09T10:03:19.400244+00:00 {'complete': False, 'running': 2, 'completed': [1], 'errors': [], 'tail': ['{"threads": 1, "iops": 16.19856, "mean_ms": 61.723243929698}']}
+2026-10-09T10:03:50.024761+00:00 {'complete': False, 'running': 2, 'completed': [2, 1], 'errors': [], 'tail': ['{"threads": 2, "iops": 33.630668, "mean_ms": 59.458362972915005}']}
+2026-10-09T10:04:20.399403+00:00 {'complete': False, 'running': 2, 'completed': [2, 1], 'errors': [], 'tail': ['{"threads": 2, "iops": 33.630668, "mean_ms": 59.458362972915005}']}
+2026-10-09T10:04:50.755739+00:00 {'complete': False, 'running': 2, 'completed': [2, 1], 'errors': [], 'tail': ['{"threads": 2, "iops": 33.630668, "mean_ms": 59.458362972915005}']}
+2026-10-09T10:05:21.178348+00:00 {'complete': False, 'running': 2, 'completed': [2, 1], 'errors': [], 'tail': ['{"threads": 2, "iops": 33.630668, "mean_ms": 59.458362972915005}']}
+2026-10-09T10:05:51.557825+00:00 {'complete': False, 'running': 2, 'completed': [2, 1], 'errors': [], 'tail': ['{"threads": 2, "iops": 33.630668, "mean_ms": 59.458362972915005}']}
+2026-10-09T10:06:21.936647+00:00 {'complete': False, 'running': 2, 'completed': [2, 1], 'errors': [], 'tail': ['{"threads": 2, "iops": 33.630668, "mean_ms": 59.458362972915005}']}
+2026-10-09T10:06:52.311487+00:00 {'complete': False, 'running': 2, 'completed': [2, 1], 'errors': [], 'tail': ['{"threads": 2, "iops": 33.630668, "mean_ms": 59.458362972915005}']}
+2026-10-09T10:07:22.664519+00:00 {'complete': False, 'running': 2, 'completed': [2, 1], 'errors': [], 'tail': ['{"threads": 2, "iops": 33.630668, "mean_ms": 59.458362972915005}']}
+2026-10-09T10:07:53.019220+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1], 'errors': [], 'tail': ['{"threads": 4, "iops": 75.480494, "mean_ms": 52.956530782059}']}
+2026-10-09T10:08:23.790521+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1], 'errors': [], 'tail': ['{"threads": 4, "iops": 75.480494, "mean_ms": 52.956530782059}']}
+2026-10-09T10:08:54.167424+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1], 'errors': [], 'tail': ['{"threads": 4, "iops": 75.480494, "mean_ms": 52.956530782059}']}
+2026-10-09T10:09:24.547377+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1], 'errors': [], 'tail': ['{"threads": 4, "iops": 75.480494, "mean_ms": 52.956530782059}']}
+2026-10-09T10:09:54.898906+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1], 'errors': [], 'tail': ['{"threads": 4, "iops": 75.480494, "mean_ms": 52.956530782059}']}
+2026-10-09T10:10:25.275009+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1], 'errors': [], 'tail': ['{"threads": 4, "iops": 75.480494, "mean_ms": 52.956530782059}']}
+2026-10-09T10:10:55.630656+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1], 'errors': [], 'tail': ['{"threads": 4, "iops": 75.480494, "mean_ms": 52.956530782059}']}
+2026-10-09T10:11:26.009512+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1], 'errors': [], 'tail': ['{"threads": 4, "iops": 75.480494, "mean_ms": 52.956530782059}']}
+2026-10-09T10:11:56.370877+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 8], 'errors': [], 'tail': ['{"threads": 8, "iops": 97.256622, "mean_ms": 82.231673318735}']}
+2026-10-09T10:12:26.733717+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 8], 'errors': [], 'tail': ['{"threads": 8, "iops": 97.256622, "mean_ms": 82.231673318735}']}
+2026-10-09T10:12:57.105403+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 8], 'errors': [], 'tail': ['{"threads": 8, "iops": 97.256622, "mean_ms": 82.231673318735}']}
+2026-10-09T10:13:27.872147+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 8], 'errors': [], 'tail': ['{"threads": 8, "iops": 97.256622, "mean_ms": 82.231673318735}']}
+2026-10-09T10:13:58.227911+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 8], 'errors': [], 'tail': ['{"threads": 8, "iops": 97.256622, "mean_ms": 82.231673318735}']}
+2026-10-09T10:14:28.600294+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 8], 'errors': [], 'tail': ['{"threads": 8, "iops": 97.256622, "mean_ms": 82.231673318735}']}
+2026-10-09T10:14:58.950164+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 8], 'errors': [], 'tail': ['{"threads": 8, "iops": 97.256622, "mean_ms": 82.231673318735}']}
+2026-10-09T10:15:29.325080+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 8], 'errors': [], 'tail': ['{"threads": 8, "iops": 97.256622, "mean_ms": 82.231673318735}']}
+2026-10-09T10:15:59.700899+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 16, 8], 'errors': [], 'tail': ['{"threads": 16, "iops": 97.241188, "mean_ms": 164.45742233925102}']}
+2026-10-09T10:16:30.075415+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 16, 8], 'errors': [], 'tail': ['{"threads": 16, "iops": 97.241188, "mean_ms": 164.45742233925102}']}
+2026-10-09T10:17:00.453044+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 16, 8], 'errors': [], 'tail': ['{"threads": 16, "iops": 97.241188, "mean_ms": 164.45742233925102}']}
+2026-10-09T10:17:30.830039+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 16, 8], 'errors': [], 'tail': ['{"threads": 16, "iops": 97.241188, "mean_ms": 164.45742233925102}']}
+2026-10-09T10:18:01.216851+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 16, 8], 'errors': [], 'tail': ['{"threads": 16, "iops": 97.241188, "mean_ms": 164.45742233925102}']}
+2026-10-09T10:18:32.006126+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 16, 8], 'errors': [], 'tail': ['{"threads": 16, "iops": 97.241188, "mean_ms": 164.45742233925102}']}
+2026-10-09T10:19:02.362122+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 16, 8], 'errors': [], 'tail': ['{"threads": 16, "iops": 97.241188, "mean_ms": 164.45742233925102}']}
+2026-10-09T10:19:32.742327+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 16, 8], 'errors': [], 'tail': ['{"threads": 32, "iops": 97.159617, "mean_ms": 328.935740249486}']}
+2026-10-09T10:20:03.115661+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 16, 8], 'errors': [], 'tail': ['{"threads": 32, "iops": 97.159617, "mean_ms": 328.935740249486}']}
+2026-10-09T10:20:33.491989+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 16, 8], 'errors': [], 'tail': ['{"threads": 32, "iops": 97.159617, "mean_ms": 328.935740249486}']}
+2026-10-09T10:21:03.873923+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 16, 8], 'errors': [], 'tail': ['{"threads": 32, "iops": 97.159617, "mean_ms": 328.935740249486}']}
+2026-10-09T10:21:34.245926+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 16, 8], 'errors': [], 'tail': ['{"threads": 32, "iops": 97.159617, "mean_ms": 328.935740249486}']}
+2026-10-09T10:22:04.622867+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 16, 8], 'errors': [], 'tail': ['{"threads": 32, "iops": 97.159617, "mean_ms": 328.935740249486}']}
+2026-10-09T10:22:34.978679+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 16, 8], 'errors': [], 'tail': ['{"threads": 32, "iops": 97.159617, "mean_ms": 328.935740249486}']}
+2026-10-09T10:23:05.351844+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 16, 8], 'errors': [], 'tail': ['{"threads": 32, "iops": 97.159617, "mean_ms": 328.935740249486}']}
+2026-10-09T10:23:36.140235+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 64, "iops": 97.116667, "mean_ms": 657.8145158576799}']}
+2026-10-09T10:24:06.511934+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 64, "iops": 97.116667, "mean_ms": 657.8145158576799}']}
+2026-10-09T10:24:36.892131+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 64, "iops": 97.116667, "mean_ms": 657.8145158576799}']}
+2026-10-09T10:25:07.268304+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 64, "iops": 97.116667, "mean_ms": 657.8145158576799}']}
+2026-10-09T10:25:37.645235+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 64, "iops": 97.116667, "mean_ms": 657.8145158576799}']}
+2026-10-09T10:26:08.021847+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 64, "iops": 97.116667, "mean_ms": 657.8145158576799}']}
+2026-10-09T10:26:38.393295+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 64, "iops": 97.116667, "mean_ms": 657.8145158576799}']}
+2026-10-09T10:27:08.768864+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 64, "iops": 97.116667, "mean_ms": 657.8145158576799}']}
+2026-10-09T10:27:39.140251+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 128, "iops": 96.890586, "mean_ms": 1315.4304538167642}']}
+2026-10-09T10:28:09.509940+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 128, "iops": 96.890586, "mean_ms": 1315.4304538167642}']}
+2026-10-09T10:28:40.273586+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 128, "iops": 96.890586, "mean_ms": 1315.4304538167642}']}
+2026-10-09T10:29:10.643053+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 128, "iops": 96.890586, "mean_ms": 1315.4304538167642}']}
+2026-10-09T10:29:41.027512+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 128, "iops": 96.890586, "mean_ms": 1315.4304538167642}']}
+2026-10-09T10:30:11.400851+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 128, "iops": 96.890586, "mean_ms": 1315.4304538167642}']}
+2026-10-09T10:30:41.780866+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 128, "iops": 96.890586, "mean_ms": 1315.4304538167642}']}
+2026-10-09T10:31:12.151320+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8], 'errors': [], 'tail': ['{"threads": 128, "iops": 96.890586, "mean_ms": 1315.4304538167642}']}
+2026-10-09T10:31:42.522602+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 144, "iops": 96.43235, "mean_ms": 1486.8544020330871}']}
+2026-10-09T10:32:12.890340+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 144, "iops": 96.43235, "mean_ms": 1486.8544020330871}']}
+2026-10-09T10:32:43.266223+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 144, "iops": 96.43235, "mean_ms": 1486.8544020330871}']}
+2026-10-09T10:33:13.642526+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 144, "iops": 96.43235, "mean_ms": 1486.8544020330871}']}
+2026-10-09T10:33:44.408467+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 144, "iops": 96.43235, "mean_ms": 1486.8544020330871}']}
+2026-10-09T10:34:15.007715+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 144, "iops": 96.43235, "mean_ms": 1486.8544020330871}']}
+2026-10-09T10:34:45.381783+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 144, "iops": 96.43235, "mean_ms": 1486.8544020330871}']}
+2026-10-09T10:35:15.777517+00:00 {'complete': False, 'running': 2, 'completed': [4, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 144, "iops": 96.43235, "mean_ms": 1486.8544020330871}']}
+2026-10-09T10:35:46.148318+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 160, "iops": 96.958311, "mean_ms": 1644.530661323825}']}
+2026-10-09T10:36:16.530805+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 160, "iops": 96.958311, "mean_ms": 1644.530661323825}']}
+2026-10-09T10:36:46.910480+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 160, "iops": 96.958311, "mean_ms": 1644.530661323825}']}
+2026-10-09T10:37:17.266174+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 160, "iops": 96.958311, "mean_ms": 1644.530661323825}']}
+2026-10-09T10:37:47.657470+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 160, "iops": 96.958311, "mean_ms": 1644.530661323825}']}
+2026-10-09T10:38:18.031645+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 160, "iops": 96.958311, "mean_ms": 1644.530661323825}']}
+2026-10-09T10:38:48.744103+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 160, "iops": 96.958311, "mean_ms": 1644.530661323825}']}
+2026-10-09T10:39:19.115708+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 160, "iops": 96.958311, "mean_ms": 1644.530661323825}']}
+2026-10-09T10:39:49.495570+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 256, "iops": 96.922343, "mean_ms": 2631.5189310574624}']}
+2026-10-09T10:40:19.854867+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 256, "iops": 96.922343, "mean_ms": 2631.5189310574624}']}
+2026-10-09T10:40:50.235071+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 256, "iops": 96.922343, "mean_ms": 2631.5189310574624}']}
+2026-10-09T10:41:20.610374+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 256, "iops": 96.922343, "mean_ms": 2631.5189310574624}']}
+2026-10-09T10:41:50.999509+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 256, "iops": 96.922343, "mean_ms": 2631.5189310574624}']}
+2026-10-09T10:42:21.373624+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 256, "iops": 96.922343, "mean_ms": 2631.5189310574624}']}
+2026-10-09T10:42:51.751093+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 256, "iops": 96.922343, "mean_ms": 2631.5189310574624}']}
+2026-10-09T10:43:22.107763+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 256, "iops": 96.922343, "mean_ms": 2631.5189310574624}']}
+2026-10-09T10:43:52.876912+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 512, "iops": 95.305192, "mean_ms": 5237.22368624599}']}
+2026-10-09T10:44:23.252324+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 512, "iops": 95.305192, "mean_ms": 5237.22368624599}']}
+2026-10-09T10:44:53.606035+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 512, "iops": 95.305192, "mean_ms": 5237.22368624599}']}
+2026-10-09T10:45:23.977076+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 512, "iops": 95.305192, "mean_ms": 5237.22368624599}']}
+2026-10-09T10:45:54.321811+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 512, "iops": 95.305192, "mean_ms": 5237.22368624599}']}
+2026-10-09T10:46:24.689883+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 512, "iops": 95.305192, "mean_ms": 5237.22368624599}']}
+2026-10-09T10:46:55.060554+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 512, "iops": 95.305192, "mean_ms": 5237.22368624599}']}
+2026-10-09T10:47:25.427752+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 512, "iops": 95.305192, "mean_ms": 5237.22368624599}']}
+2026-10-09T10:47:55.804070+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 512, "iops": 95.305192, "mean_ms": 5237.22368624599}']}
+2026-10-09T10:48:26.172107+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 512, "iops": 95.305192, "mean_ms": 5237.22368624599}']}
+2026-10-09T10:48:56.857743+00:00 {'complete': False, 'running': 2, 'completed': [4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 512, "iops": 95.305192, "mean_ms": 5237.22368624599}']}
+2026-10-09T10:49:27.239810+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:49:57.594386+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:50:27.965415+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:50:58.338234+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:51:28.693885+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:51:59.065999+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:52:29.440014+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:52:59.800235+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:53:30.177778+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:54:00.846668+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:54:31.216088+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:55:01.594586+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:55:31.972289+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:56:02.355028+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:56:32.738384+00:00 {'complete': False, 'running': 2, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144], 'errors': [], 'tail': ['{"threads": 768, "iops": 125.360268, "mean_ms": 5855.303519799398}']}
+2026-10-09T10:57:03.169683+00:00 {'complete': True, 'running': 0, 'completed': [768, 4, 160, 2, 128, 1, 32, 256, 512, 64, 16, 8, 144, 1024], 'errors': [], 'tail': ['{"threads": 1024, "iops": 171.780158, "mean_ms": 5530.950220087995}']}
+Collected 14 attempt records, 2026-10-09T09:56:00.004639+00:00 through 2026-10-09T10:56:46.678777+00:00
+2026-10-09T10:57:12.860438+00:00 Single-thread repeat launched
+2026-10-09T10:57:43.220740+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T10:58:13.599420+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T10:58:43.963213+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T10:59:14.330924+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T10:59:44.717920+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T11:00:15.089491+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T11:00:45.466049+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T11:01:16.129765+00:00 {'complete': False, 'running': 2, 'completed': [], 'errors': [], 'tail': []}
+2026-10-09T11:01:46.591321+00:00 {'complete': True, 'running': 0, 'completed': [1], 'errors': [], 'tail': ['{"threads": 1, "iops": 37.976371, "mean_ms": 26.32417804812}']}
+2026-10-09T11:01:47.871312+00:00 Waiting four minutes for final Azure metric ingestion
+Collected 15 attempt records, 2026-10-09T09:56:00.004639+00:00 through 2026-10-09T11:01:30.354177+00:00
+matplotlib is unavailable; CSV and report were written, graphs were skipped. Install matplotlib to create them.
+Wrote /workspace/fio-hdd-westus2-1m-repro/artifacts/analysis/summary.csv
+Wrote /workspace/fio-hdd-westus2-1m-repro/artifacts/analysis/report.md
+Wrote /workspace/fio-hdd-westus2-1m-repro/artifacts/analysis/azure-minute-points.csv (1235 Azure minute points)
+matplotlib is unavailable; CSV and report were written, graphs were skipped. Install matplotlib to create them.
+Wrote /workspace/fio-hdd-westus2-1m-repro/artifacts/single-validation/analysis/summary.csv
+Wrote /workspace/fio-hdd-westus2-1m-repro/artifacts/single-validation/analysis/report.md
+Wrote /workspace/fio-hdd-westus2-1m-repro/artifacts/single-validation/analysis/azure-minute-points.csv (1235 Azure minute points)
+2026-10-09T11:05:58.618611+00:00 Collection and analysis complete; resources retained for verification

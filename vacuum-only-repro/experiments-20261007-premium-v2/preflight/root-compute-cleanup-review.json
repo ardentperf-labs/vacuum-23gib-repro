@@ -1,0 +1,18 @@
+{
+  "reviewedAtUtc": "2026-10-07T12:17:43.934694+00:00",
+  "allThreeActualMeasurementsVerifiedComplete": true,
+  "allNineLinearFiguresVisuallyReviewed": true,
+  "snapshotAudit": "preflight/snapshot-audit-root-cleanup-review-20261007T121611Z.json",
+  "snapshotAuditSha256": "cb641a1a447bd19ca961674649f5587e535c7afa4d38e91989e3abd64d50e36b",
+  "all42SnapshotsProtectedAndIdentitiesPreserved": true,
+  "walRetentionReceipt": "preflight/root-wal-retention-review.json",
+  "walRetentionReceiptSha256": "fab7e6ae9c5ff0e9673a34eef638946ec69a3ffad337c697607daff6995bf5de",
+  "sourceHashes": {
+    "post-measurement-cleanup-v2.py": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603",
+    "recovery/wal-cleanup-guard/verify_wal_retention.py": "8acfa114c4ac9927ac47c31bf17108fadc65963713d9fd3c393064436a27a7fb"
+  },
+  "scope": "Only three owned experiment stacks and two verified owned shared watchers; preserve ALL snapshots and their groups/locks. User AGENTS authorize this ordinary-resource cleanup.",
+  "retryReviewedAtUtc": "2026-10-07T12:29:03.692677+00:00",
+  "retryCorrectionReview": "recovery/cleanup-cli-correction/root-review.json",
+  "correctedTeardownSha256": "b8286fa5de3ec9ba0e3a2a7f67e8122303026626bd955e1f4783a015543431ca"
+}

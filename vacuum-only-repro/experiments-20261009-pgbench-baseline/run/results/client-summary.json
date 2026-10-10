@@ -1,0 +1,143 @@
+{
+  "commitLogReconciliation": {
+    "difference": 0,
+    "explainedByInFlightGracefulDrain": false,
+    "pgbenchCompletedTransactions": 13176,
+    "possibleInflightAtStopRequest": 0,
+    "serverCommittedUpdates": 13176
+  },
+  "committedTransactions": 13176,
+  "committedUpdateCountSource": "sum(update_count) from the ten logged client rows after all pgbench sessions drained",
+  "completedTransactions": 13176,
+  "executionMs": {
+    "count": 13176,
+    "max": 1548.026,
+    "mean": 39.175369990892534,
+    "p50": 4.308,
+    "p95": 250.86,
+    "p99": 543.541
+  },
+  "executionSource": "pgbench logged latency minus schedule_lag; log rows are completion records",
+  "failedTransactions": 0,
+  "inFlightActiveSessionsAtStopRequest": 0,
+  "latencyMs": {
+    "count": 13176,
+    "max": 3561.564,
+    "mean": 44.63926062537948,
+    "p50": 4.476,
+    "p95": 273.631,
+    "p99": 600.039
+  },
+  "latencySource": "pgbench per-transaction completion logs; latency includes Poisson schedule lag",
+  "loggedCompletedTransactions": 13176,
+  "malformedLogRows": [],
+  "pendingTransactionsAtStopRequest": 0,
+  "pgbenchExitCode": 0,
+  "progressOutput": "client/raw/pgbench.out",
+  "rawTransactionLogs": [
+    "client/raw/pgbench-log.1307.7",
+    "client/raw/pgbench-log.1307.3",
+    "client/raw/pgbench-log.1307.6",
+    "client/raw/pgbench-log.1307.9",
+    "client/raw/pgbench-log.1307.5",
+    "client/raw/pgbench-log.1307",
+    "client/raw/pgbench-log.1307.2",
+    "client/raw/pgbench-log.1307.1",
+    "client/raw/pgbench-log.1307.4",
+    "client/raw/pgbench-log.1307.8"
+  ],
+  "reportedFailedTransactions": 0,
+  "scheduleLagMs": {
+    "count": 13176,
+    "max": 2611.632,
+    "mean": 5.463890634486946,
+    "p50": 0.093,
+    "p95": 1.085,
+    "p99": 127.377
+  },
+  "transactionLogRows": 13176,
+  "unfinishedAtStopSemantics": "pgbench transaction logs record completed transactions; one-second pg_stat_activity samples preserve pending states, waits, and ages through graceful stop and session drain",
+  "validationErrors": [],
+  "waitEventsAtStopRequest": [
+    {
+      "pid": 1320,
+      "queryAgeSeconds": 1.661279,
+      "state": "idle",
+      "waitEvent": "ClientRead",
+      "waitEventType": "Client",
+      "xactAgeSeconds": null
+    },
+    {
+      "pid": 1321,
+      "queryAgeSeconds": 0.686488,
+      "state": "idle",
+      "waitEvent": "ClientRead",
+      "waitEventType": "Client",
+      "xactAgeSeconds": null
+    },
+    {
+      "pid": 1322,
+      "queryAgeSeconds": 0.455593,
+      "state": "idle",
+      "waitEvent": "ClientRead",
+      "waitEventType": "Client",
+      "xactAgeSeconds": null
+    },
+    {
+      "pid": 1323,
+      "queryAgeSeconds": 2.892503,
+      "state": "idle",
+      "waitEvent": "ClientRead",
+      "waitEventType": "Client",
+      "xactAgeSeconds": null
+    },
+    {
+      "pid": 1324,
+      "queryAgeSeconds": 1.560032,
+      "state": "idle",
+      "waitEvent": "ClientRead",
+      "waitEventType": "Client",
+      "xactAgeSeconds": null
+    },
+    {
+      "pid": 1325,
+      "queryAgeSeconds": 1.132507,
+      "state": "idle",
+      "waitEvent": "ClientRead",
+      "waitEventType": "Client",
+      "xactAgeSeconds": null
+    },
+    {
+      "pid": 1326,
+      "queryAgeSeconds": 3.092731,
+      "state": "idle",
+      "waitEvent": "ClientRead",
+      "waitEventType": "Client",
+      "xactAgeSeconds": null
+    },
+    {
+      "pid": 1327,
+      "queryAgeSeconds": 0.634671,
+      "state": "idle",
+      "waitEvent": "ClientRead",
+      "waitEventType": "Client",
+      "xactAgeSeconds": null
+    },
+    {
+      "pid": 1328,
+      "queryAgeSeconds": 0.633627,
+      "state": "idle",
+      "waitEvent": "ClientRead",
+      "waitEventType": "Client",
+      "xactAgeSeconds": null
+    },
+    {
+      "pid": 1329,
+      "queryAgeSeconds": 3.0451,
+      "state": "idle",
+      "waitEvent": "ClientRead",
+      "waitEventType": "Client",
+      "xactAgeSeconds": null
+    }
+  ]
+}

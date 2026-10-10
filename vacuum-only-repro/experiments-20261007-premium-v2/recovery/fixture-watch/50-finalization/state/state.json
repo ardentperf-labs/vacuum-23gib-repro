@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "resourceGroup": "rg-vacuum-only-5c241a190a85f40b788038945c9744f6",
+  "clusterName": "aks-vacuum-only-5c241a190a85",
+  "nodeResourceGroup": "rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6",
+  "requestedNodeResourceGroup": "rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6",
+  "snapshotResourceGroup": "rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6",
+  "snapshotResourceGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6",
+  "availabilityZone": "1",
+  "location": "westus3",
+  "ownerToken": "5c241a190a85f40b788038945c9744f6",
+  "kubeconfigPath": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/50gib/.state/kubeconfig",
+  "status": "ready",
+  "networkWatcherBaseline": {
+    "location": "westus3",
+    "ids": [
+      "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-pv2-watcher-westus3-b17207790a71/providers/Microsoft.Network/networkWatchers/pv2-watcher-westus3-b17207790a71"
+    ]
+  },
+  "snapshotRoleAssignment": {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Authorization/roleAssignments/c5366d0c-8ef4-4782-a78b-35d8c2e63bac",
+    "principalId": "b8bb3633-875a-4471-8396-d087cd84e709",
+    "role": "Disk Snapshot Contributor",
+    "scope": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6"
+  },
+  "snapshotSourceCopyId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/snapshots/keeper-pv2-5c241a19-4b554415",
+  "snapshotSourceStagingDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/restore-stage-5c241a19-4b554415",
+  "snapshotSourceStageReceiptPath": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/50gib/.state/source-stage/receipt-4b554415.json"
+}

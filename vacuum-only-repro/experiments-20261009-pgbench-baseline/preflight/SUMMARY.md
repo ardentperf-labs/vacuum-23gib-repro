@@ -1,0 +1,19 @@
+# Read-only Azure preflight: 2026-10-09 pgbench baseline
+
+This preflight covers the authorized fresh 23-GiB baseline with tiny `pgbench` at 5 TPS and `synchronous_commit=on`. Azure checks completed at **2026-10-09T04:05:12.743205Z** against **Ardentperf Labs** (`00000000-0000-0000-0000-000000000000`) in `AzureCloud`. The broker selected the requested enabled subscription. This agent made no Azure changes and left the 2026-10-07 archive untouched.
+
+The requested placement is EastUS zone 1 with two `Standard_D2s_v4` nodes, AKS 1.35.8, four 512-GiB `PremiumV2_LRS` disks, and CNPG 1.30.1. Live SKU data lists D2s_v4 and PremiumV2 in zone 1 with no restrictions. PremiumV2 supports a 1-GiB minimum and starts at 3,000 IOPS / 125 MB/s. AKS 1.35 is the EastUS default, with patch 1.35.8 available.
+
+The two nodes need 4 vCPUs. DSv4 quota is **0/10** and regional vCPU quota is **0/24**. PremiumV2 disk quota is **0/1000 disks** and **0/102400 GiB**; the four requested disks total 2,048 GiB. AKS managed-cluster quota is **2/10**. Standard IPv4 and load-balancer quota also have headroom. Compute, Network, Container Service, and Storage providers are registered.
+
+The subscription already contains 13 resource groups and two Succeeded EastUS AKS clusters, each with two D2s_v4 nodes and Kubernetes 1.35. Both carry the `managed-by=vacuum-only-repro` tag. They remain unrelated pre-existing resources and were not adopted or changed. No EastUS Network Watcher is present; the new provisioning stack should create and track its own watcher if needed.
+
+The snapshot inventory has 42 snapshots and 45 `CanNotDelete` locks. All 42 snapshots have a direct retention lock, and 3 extra locks protect snapshot resource groups. There are no unguarded snapshots. The retained primary keeper is a 512-GiB EastUS Standard_LRS snapshot in `Succeeded` / `Available` state with a direct lock. The existing EastUS incremental base `keeper-base-16244c2c` is also 512 GiB, `Succeeded` / `Available`, and directly locked; its resource group remains outside the new stack's ownership.
+
+Neither snapshot response reports `creationData.logicalSectorSize`. Keep the explicit 512-byte request and verify the created disk reports 512 before attaching it. The CNPG 1.30.1 release manifest fetched successfully (1,293,413 bytes; SHA-256 `37237f145d8138256ea25ae830f87759255665ff08f8d552fdd8224a5ec032fb`).
+
+The evidence supports the requested Azure capacity and version choices for root review. It records the existing resources as read-only inventory and preserves every snapshot.
+
+Evidence: [`summary.json`](summary.json), [`all-snapshots-before.json`](all-snapshots-before.json) (the retention-audit list with only snapshot ID and unique ID), [`all-snapshots.json`](all-snapshots.json) (complete sanitized snapshot inventory), [`locks.json`](locks.json), [`source-snapshot-guards.json`](source-snapshot-guards.json), [`compute-quota.json`](compute-quota.json), [`premiumv2-usage.json`](premiumv2-usage.json), [`aks-quota.json`](aks-quota.json), [`network-quotas.json`](network-quotas.json), [`d2sv4-sku.json`](d2sv4-sku.json), [`premiumv2-sku.json`](premiumv2-sku.json), [`aks-versions.json`](aks-versions.json), [`eastus-network-watchers.json`](eastus-network-watchers.json), [`resource-provider-states.json`](resource-provider-states.json), [`resource-groups.json`](resource-groups.json), [`aks-inventory.json`](aks-inventory.json), [`incremental-base-detail.json`](incremental-base-detail.json), [`retained-keeper-detail.json`](retained-keeper-detail.json), and [`cnpg-source.json`](cnpg-source.json).
+
+`all-snapshots-before.json` contains only `id` and `uniqueId` for before/after retention comparison. `all-snapshots.json` and `locks.json` retain the complete sanitized inventory. Ownership-token tag values and credential values were excluded from saved outputs.

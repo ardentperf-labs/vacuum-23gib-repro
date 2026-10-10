@@ -1,0 +1,6 @@
+Cleanup refused: Transport group unexpectedly disappeared before deletion
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', 'fio-hdd-westus2-fixture/cleanup.py', '--execute']' returned non-zero exit status 2.

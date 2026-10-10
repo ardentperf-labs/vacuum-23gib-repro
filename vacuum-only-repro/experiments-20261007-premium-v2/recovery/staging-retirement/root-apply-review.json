@@ -1,0 +1,36 @@
+{
+  "reviewedAtUtc": "2026-10-07T08:28:11.994813+00:00",
+  "rootReviewedPlanSha256": "c5e1ebd091de957e4726f085638e967e772af3b0e7d75d7a42a20a66cfda7a30",
+  "deleteOnly": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/restore-stage-5c241a19-4b554415",
+      "location": "westus3",
+      "restoreSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/snapshots/keeper-pv2-5c241a19-4b554415",
+      "restoreSnapshotUniqueId": "737fc1c3-dfd9-4db1-b1c9-1d09a45d95cc",
+      "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-16244c2c",
+      "sourceSnapshotUniqueId": "5ba409da-55b4-4e77-a47f-346ccc7b44ff",
+      "sourceStageReceiptPath": "50gib/.state/source-stage/receipt-4b554415.json",
+      "sourceStageReceiptSha256": "4282a52fcf2a4564a682c5a5760a3f1086eac98583f7ed600b9a6a9092d8b325",
+      "stack": "50gib",
+      "uniqueId": "060b2754-8d81-4a12-84d4-e5d258d79004",
+      "zone": "1"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/restore-stage-f1b90aec-ef6f2376",
+      "location": "eastus",
+      "restoreSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376",
+      "restoreSnapshotUniqueId": "1f260967-6558-4934-a4b6-6574a2ef4db2",
+      "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c",
+      "sourceSnapshotUniqueId": "5ba7640c-4e34-4227-be0d-d428baeaf2cf",
+      "sourceStageReceiptPath": "100gib/.state/source-stage/receipt-ef6f2376.json",
+      "sourceStageReceiptSha256": "eaed6a8aa16c64c56c331024344bfdc2bfa0cec61c87bed947072aebe2a4d3cd",
+      "stack": "100gib",
+      "uniqueId": "2efcf9d2-d963-4f88-baef-7684c3213f0b",
+      "zone": "1"
+    }
+  ],
+  "all12MeasuredReady": true,
+  "all42SnapshotsProtectedAndPriorPreserved": true,
+  "authorizationBasis": "User requested hydration-free tests; persistent instructions authorize removal of owned ordinary test disks and require preserving ALL snapshots.",
+  "applyAuthorized": true
+}

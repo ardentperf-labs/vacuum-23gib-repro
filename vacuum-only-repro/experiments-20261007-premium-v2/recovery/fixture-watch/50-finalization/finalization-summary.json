@@ -1,0 +1,285 @@
+{
+  "capturedAtUtc": "2026-10-07T02:33:47Z",
+  "owner": {
+    "subscriptionId": "00000000-0000-0000-0000-000000000000",
+    "ownerToken": "5c241a190a85f40b788038945c9744f6",
+    "resourceGroup": "rg-vacuum-only-5c241a190a85f40b788038945c9744f6",
+    "nodeResourceGroup": "rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6",
+    "snapshotResourceGroup": "rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6",
+    "location": "westus3",
+    "availabilityZone": "1"
+  },
+  "source": {
+    "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-16244c2c",
+    "sourceSnapshotUniqueId": "5ba409da-55b4-4e77-a47f-346ccc7b44ff",
+    "ownedCopySnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/snapshots/keeper-pv2-5c241a19-4b554415",
+    "ownedCopySnapshotUniqueId": "737fc1c3-dfd9-4db1-b1c9-1d09a45d95cc",
+    "stageDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/restore-stage-5c241a19-4b554415",
+    "stageDiskUniqueId": "060b2754-8d81-4a12-84d4-e5d258d79004",
+    "receiptStatus": "ready",
+    "retentionLocked": true,
+    "retentionLockId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/snapshots/keeper-pv2-5c241a19-4b554415/providers/Microsoft.Authorization/locks/preserve-keeper-pv2-5c241a19-4b554415",
+    "sourceSizeGiB": 512,
+    "sourceIncremental": true,
+    "sourceLogicalSectorSizeBytes": 512
+  },
+  "prepareProcess": {
+    "status": "running",
+    "phase": "prepare",
+    "supervisorPid": 126516,
+    "childPid": 126519,
+    "scriptSha256": "7b24d869c7ef362653f38201402f5e4f297c874f66253658f884ced15055b20f",
+    "sourceStageHelperSha256": "0eacb0a81b30703a3b788aa745d3eca8c079e3e4e0cfca9921f500b6f5c8918b",
+    "startedAtUtc": "2026-10-06T20:53:32.307852+00:00"
+  },
+  "cluster": {
+    "uid": "8932221b-bcc5-485d-bcb3-4a80a548fc9c",
+    "imageName": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+    "phase": "Cluster in healthy state",
+    "currentPrimary": "hdd-pg-1",
+    "readyInstances": 2,
+    "conditions": [
+      {
+        "lastTransitionTime": "2026-10-06T20:54:07Z",
+        "message": "Cluster has been bootstrapped",
+        "reason": "BootstrapCompleted",
+        "status": "True",
+        "type": "Initialized"
+      },
+      {
+        "lastTransitionTime": "2026-10-07T01:13:26Z",
+        "message": "A single, unique system ID was found across reporting instances.",
+        "reason": "Unique",
+        "status": "True",
+        "type": "ConsistentSystemID"
+      },
+      {
+        "lastTransitionTime": "2026-10-07T02:26:06Z",
+        "message": "Cluster is Ready",
+        "reason": "ClusterIsReady",
+        "status": "True",
+        "type": "Ready"
+      },
+      {
+        "lastTransitionTime": "2026-10-06T21:01:47Z",
+        "message": "Continuous archiving is working",
+        "reason": "ContinuousArchivingSuccess",
+        "status": "True",
+        "type": "ContinuousArchiving"
+      },
+      {
+        "lastTransitionTime": "2026-10-07T02:13:31Z",
+        "message": "Backup was successful",
+        "reason": "LastBackupSucceeded",
+        "status": "True",
+        "type": "LastBackupSucceeded"
+      }
+    ]
+  },
+  "pods": [
+    {
+      "name": "hdd-pg-1",
+      "created": "2026-10-07T02:25:38Z",
+      "phase": "Running",
+      "ready": true,
+      "restarts": 0,
+      "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+      "imageID": "ghcr.io/cloudnative-pg/postgresql@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+      "role": "primary"
+    },
+    {
+      "name": "hdd-pg-2",
+      "created": "2026-10-07T02:25:14Z",
+      "phase": "Running",
+      "ready": true,
+      "restarts": 0,
+      "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+      "imageID": "ghcr.io/cloudnative-pg/postgresql@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+      "role": "replica"
+    }
+  ],
+  "pvcs": [
+    {
+      "name": "hdd-pg-1",
+      "created": "2026-10-06T20:54:07Z",
+      "phase": "Bound",
+      "volumeName": "pvc-8c6afc42-60ef-409d-b8a4-f53c3c3145d2",
+      "dataSource": "vacuum-data-5c241a19"
+    },
+    {
+      "name": "hdd-pg-1-wal",
+      "created": "2026-10-07T00:24:45Z",
+      "phase": "Bound",
+      "volumeName": "pvc-d1307045-4698-46ba-b0bf-7c380fa13fb2",
+      "dataSource": null
+    },
+    {
+      "name": "hdd-pg-2",
+      "created": "2026-10-07T02:13:41Z",
+      "phase": "Bound",
+      "volumeName": "pvc-96bd9d47-717d-4913-913f-0c7ec271f76d",
+      "dataSource": "vacuum-backup-5c241a19"
+    },
+    {
+      "name": "hdd-pg-2-wal",
+      "created": "2026-10-07T02:13:41Z",
+      "phase": "Bound",
+      "volumeName": "pvc-b2505bd1-4201-4657-8456-15a2dde19fb0",
+      "dataSource": "vacuum-backup-5c241a19-wal"
+    }
+  ],
+  "pvs": [
+    {
+      "name": "pvc-8c6afc42-60ef-409d-b8a4-f53c3c3145d2",
+      "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-8c6afc42-60ef-409d-b8a4-f53c3c3145d2",
+      "claim": "hdd-pg-1"
+    },
+    {
+      "name": "pvc-96bd9d47-717d-4913-913f-0c7ec271f76d",
+      "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-96bd9d47-717d-4913-913f-0c7ec271f76d",
+      "claim": "hdd-pg-2"
+    },
+    {
+      "name": "pvc-b2505bd1-4201-4657-8456-15a2dde19fb0",
+      "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-b2505bd1-4201-4657-8456-15a2dde19fb0",
+      "claim": "hdd-pg-2-wal"
+    },
+    {
+      "name": "pvc-d1307045-4698-46ba-b0bf-7c380fa13fb2",
+      "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-d1307045-4698-46ba-b0bf-7c380fa13fb2",
+      "claim": "hdd-pg-1-wal"
+    }
+  ],
+  "backup": [
+    {
+      "name": "vacuum-backup-5c241a19",
+      "uid": "2c03990e-e53e-4c59-a60c-7cd0cac1f72d",
+      "phase": "completed",
+      "startedAt": "2026-10-07T01:13:41Z",
+      "stoppedAt": "2026-10-07T02:13:31Z",
+      "terminatedAt": "2026-10-07T02:13:31Z",
+      "method": "volumeSnapshot",
+      "snapshots": [
+        {
+          "name": "vacuum-backup-5c241a19",
+          "type": "PG_DATA"
+        },
+        {
+          "name": "vacuum-backup-5c241a19-wal",
+          "type": "PG_WAL"
+        }
+      ]
+    }
+  ],
+  "volumeSnapshots": [
+    {
+      "name": "vacuum-backup-5c241a19",
+      "readyToUse": true,
+      "boundContent": "snapcontent-5915d49f-e4ce-41da-b157-40e0043dcdb2",
+      "created": "2026-10-07T01:13:52Z",
+      "restoreSize": "512Gi"
+    },
+    {
+      "name": "vacuum-backup-5c241a19-wal",
+      "readyToUse": true,
+      "boundContent": "snapcontent-f60780dd-a9b5-4401-a1c7-30a64acd114e",
+      "created": "2026-10-07T01:13:52Z",
+      "restoreSize": "512Gi"
+    },
+    {
+      "name": "vacuum-data-5c241a19",
+      "readyToUse": true,
+      "boundContent": "vacuum-content-5c241a19",
+      "created": "2026-10-06T20:54:05Z",
+      "restoreSize": null
+    }
+  ],
+  "volumeSnapshotContents": [
+    {
+      "name": "snapcontent-5915d49f-e4ce-41da-b157-40e0043dcdb2",
+      "snapshotRef": "vacuum-backup-5c241a19",
+      "snapshotRefUID": "5915d49f-e4ce-41da-b157-40e0043dcdb2",
+      "snapshotHandle": null,
+      "readyToUse": true
+    },
+    {
+      "name": "snapcontent-f60780dd-a9b5-4401-a1c7-30a64acd114e",
+      "snapshotRef": "vacuum-backup-5c241a19-wal",
+      "snapshotRefUID": "f60780dd-a9b5-4401-a1c7-30a64acd114e",
+      "snapshotHandle": null,
+      "readyToUse": true
+    },
+    {
+      "name": "vacuum-content-5c241a19",
+      "snapshotRef": "vacuum-data-5c241a19",
+      "snapshotRefUID": "104c3f2e-7c05-4bbc-b9ec-4557b33eed6a",
+      "snapshotHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/snapshots/keeper-pv2-5c241a19-4b554415",
+      "readyToUse": true
+    }
+  ],
+  "seedCompletionEvents": [
+    {
+      "time": "2026-10-07T02:24:47Z",
+      "type": "Normal",
+      "reason": "Completed",
+      "message": "Job completed",
+      "jobUID": "bc0de226-e948-4186-90c8-573c8b0be2ed"
+    }
+  ],
+  "database": {
+    "primary": {
+      "pod": "psql",
+      "systemIdentifier": "7692518806614212629",
+      "inRecovery": false,
+      "walLevel": "logical",
+      "fullPageWrites": "on",
+      "recoveryPrefetch": "try",
+      "vacuumCostDelay": "0",
+      "autovacuum": "on",
+      "sharedBuffers": "256MB",
+      "maintenanceIoConcurrency": "10",
+      "checkpointTimeout": "5min",
+      "maxWalSize": "1GB",
+      "archiveMode": "on",
+      "trackIoTiming": "on",
+      "trackWalIoTiming": "on",
+      "tableExists": true,
+      "stageTableExists": false,
+      "heapBytes": 53687091200,
+      "totalBytes": 54436372480,
+      "hasIndex": true,
+      "liveTuplesEstimate": 16384000,
+      "deadTuplesEstimate": 16384000,
+      "minId": 4,
+      "maxId": 65535998,
+      "currentWaits": null
+    },
+    "replica": {
+      "pod": "psql",
+      "systemIdentifier": "7692518806614212629",
+      "inRecovery": true,
+      "walLevel": "logical",
+      "fullPageWrites": "on",
+      "recoveryPrefetch": "try",
+      "vacuumCostDelay": "0",
+      "autovacuum": "on",
+      "sharedBuffers": "256MB",
+      "maintenanceIoConcurrency": "10",
+      "checkpointTimeout": "5min",
+      "maxWalSize": "1GB",
+      "archiveMode": "on",
+      "trackIoTiming": "on",
+      "trackWalIoTiming": "on",
+      "tableExists": true,
+      "stageTableExists": false,
+      "heapBytes": 53687091200,
+      "totalBytes": 54436372480,
+      "hasIndex": true,
+      "liveTuplesEstimate": 0,
+      "deadTuplesEstimate": 0,
+      "minId": 4,
+      "maxId": 65535998,
+      "currentWaits": null
+    }
+  }
+}

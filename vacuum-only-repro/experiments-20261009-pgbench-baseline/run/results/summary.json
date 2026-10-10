@@ -1,0 +1,402 @@
+{
+  "coverage": {
+    "maxIntervalSeconds": 12.5,
+    "valid": true,
+    "windows": {
+      "replayDrain": {
+        "series": {
+          "primary_data": {
+            "coverage": 0.9999993517270174,
+            "coveredSeconds": 1378.051932811737,
+            "rejectedIntervals": 0
+          },
+          "primary_wal": {
+            "coverage": 0.9999993517270174,
+            "coveredSeconds": 1378.051932811737,
+            "rejectedIntervals": 0
+          },
+          "replica_data": {
+            "coverage": 0.9999971825125373,
+            "coveredSeconds": 1378.0489435195923,
+            "rejectedIntervals": 0
+          },
+          "replica_wal": {
+            "coverage": 0.9999971825125373,
+            "coveredSeconds": 1378.0489435195923,
+            "rejectedIntervals": 0
+          }
+        },
+        "valid": true
+      },
+      "vacuum": {
+        "series": {
+          "primary_data": {
+            "coverage": 1,
+            "coveredSeconds": 942.7965698242188,
+            "rejectedIntervals": 0
+          },
+          "primary_wal": {
+            "coverage": 1,
+            "coveredSeconds": 942.7965698242188,
+            "rejectedIntervals": 0
+          },
+          "replica_data": {
+            "coverage": 1,
+            "coveredSeconds": 942.7965698242188,
+            "rejectedIntervals": 0
+          },
+          "replica_wal": {
+            "coverage": 1,
+            "coveredSeconds": 942.7965698242188,
+            "rejectedIntervals": 0
+          }
+        },
+        "valid": true
+      },
+      "vacuumAndReplay": {
+        "series": {
+          "primary_data": {
+            "coverage": 0.99999961507437,
+            "coveredSeconds": 2320.848502635956,
+            "rejectedIntervals": 0
+          },
+          "primary_wal": {
+            "coverage": 0.99999961507437,
+            "coveredSeconds": 2320.848502635956,
+            "rejectedIntervals": 0
+          },
+          "replica_data": {
+            "coverage": 0.9999983270579438,
+            "coveredSeconds": 2320.845513343811,
+            "rejectedIntervals": 0
+          },
+          "replica_wal": {
+            "coverage": 0.9999983270579438,
+            "coveredSeconds": 2320.845513343811,
+            "rejectedIntervals": 0
+          }
+        },
+        "valid": true
+      }
+    }
+  },
+  "maximumAllowedSampleGapSeconds": 12.5,
+  "maximumSampleGapSeconds": 8.12580943107605,
+  "sampleCount": 466,
+  "status": {
+    "clientPostRecoveryHealthy": true,
+    "error": null,
+    "finalReplayCaughtUp": true,
+    "finalReplayDrainSeconds": 11.21504164399812,
+    "replayCaughtUp": true,
+    "replayDrainSeconds": 1372.4563279659487,
+    "replicaLagBytesAtObservationEnd": 0,
+    "testComplete": true,
+    "vacuumComplete": true,
+    "vacuumExitCode": 0,
+    "vacuumTargetReachedWithClient": true,
+    "vacuumWindowCoverageValid": true
+  },
+  "topology": {
+    "primary_data": {
+      "attachmentDevicePath": "",
+      "claim": "hdd-pg-1",
+      "device": "sdc",
+      "expectedMount": "/var/lib/postgresql/data",
+      "filesystem": "ext4",
+      "lun": 1,
+      "lunPath": "",
+      "lunPathVisible": false,
+      "majorMinor": "8:32",
+      "mount": "/var/lib/postgresql/data",
+      "mountMajorMinor": "8:32",
+      "node": "aks-nodepool1-16953089-vmss000000",
+      "path": "/var/lib/postgresql/data/pgdata",
+      "pv": "restore-data-5203346e",
+      "queue": {
+        "maxHwSectorsKb": 2048,
+        "maxSectorsKb": 1280,
+        "nrRequests": 316
+      },
+      "source": "/dev/sdc",
+      "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:1"
+    },
+    "primary_wal": {
+      "attachmentDevicePath": "",
+      "claim": "hdd-pg-1-wal",
+      "device": "sdb",
+      "expectedMount": "/var/lib/postgresql/wal",
+      "filesystem": "ext4",
+      "lun": 0,
+      "lunPath": "",
+      "lunPathVisible": false,
+      "majorMinor": "8:16",
+      "mount": "/var/lib/postgresql/wal",
+      "mountMajorMinor": "8:16",
+      "node": "aks-nodepool1-16953089-vmss000000",
+      "path": "/var/lib/postgresql/wal/pg_wal",
+      "pv": "restore-wal-5203346e",
+      "queue": {
+        "maxHwSectorsKb": 2048,
+        "maxSectorsKb": 1280,
+        "nrRequests": 316
+      },
+      "source": "/dev/sdb",
+      "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0"
+    },
+    "replica_data": {
+      "attachmentDevicePath": "",
+      "claim": "hdd-pg-2",
+      "device": "sdb",
+      "expectedMount": "/var/lib/postgresql/data",
+      "filesystem": "ext4",
+      "lun": 1,
+      "lunPath": "",
+      "lunPathVisible": false,
+      "majorMinor": "8:16",
+      "mount": "/var/lib/postgresql/data",
+      "mountMajorMinor": "8:16",
+      "node": "aks-nodepool1-16953089-vmss000001",
+      "path": "/var/lib/postgresql/data/pgdata",
+      "pv": "pvc-61ddcbe2-22de-4d38-9ca2-b693d893a664",
+      "queue": {
+        "maxHwSectorsKb": 2048,
+        "maxSectorsKb": 1280,
+        "nrRequests": 316
+      },
+      "source": "/dev/sdb",
+      "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:1"
+    },
+    "replica_wal": {
+      "attachmentDevicePath": "",
+      "claim": "hdd-pg-2-wal",
+      "device": "sdc",
+      "expectedMount": "/var/lib/postgresql/wal",
+      "filesystem": "ext4",
+      "lun": 0,
+      "lunPath": "",
+      "lunPathVisible": false,
+      "majorMinor": "8:32",
+      "mount": "/var/lib/postgresql/wal",
+      "mountMajorMinor": "8:32",
+      "node": "aks-nodepool1-16953089-vmss000001",
+      "path": "/var/lib/postgresql/wal/pg_wal",
+      "pv": "pvc-d20dc696-488b-43ba-addc-fa60e66fb832",
+      "queue": {
+        "maxHwSectorsKb": 2048,
+        "maxSectorsKb": 1280,
+        "nrRequests": 316
+      },
+      "source": "/dev/sdc",
+      "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0"
+    }
+  },
+  "units": {
+    "await": "ms per completed operation",
+    "throughput": "decimal MB/s"
+  },
+  "vacuumDataReadAmplification": {
+    "basis": "full VACUUM command window, including any final replication wait",
+    "primaryReadIops": 403.9627058902794,
+    "ratio": 7.496585664987216,
+    "replicaReadIops": 3028.3410301665153
+  },
+  "walCounterDeltaFromBeforeVacuum": {
+    "walBytes": 36933223760,
+    "walFpi": 6071423,
+    "walRecords": 15124917
+  },
+  "walDeltaVacuumMarkers": {
+    "walBytes": 36933212244,
+    "walFpi": 6071422,
+    "walRecords": 15124851
+  },
+  "windows": {
+    "replayDrain": {
+      "primary_data": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 0.9999993517270174,
+        "coveredSeconds": 1378.051932811737,
+        "maxIntervalReadAwaitMs": 2.569204152249135,
+        "maxIntervalWriteAwaitMs": 277.90579710144925,
+        "operationWeightedAwaitMs": 71.27775061238836,
+        "readAwaitMs": 2.569204152249135,
+        "readIops": 0.2745089421571035,
+        "readMBps": 0.035649733529040724,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 123.33195313302306,
+        "writeIops": 0.3623359785110207,
+        "writeMBps": 0.2389973635336854
+      },
+      "primary_wal": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 0.9999993517270174,
+        "coveredSeconds": 1378.051932811737,
+        "maxIntervalReadAwaitMs": null,
+        "maxIntervalWriteAwaitMs": 37.27272727272727,
+        "operationWeightedAwaitMs": 1.2166876196942524,
+        "readAwaitMs": null,
+        "readIops": 0.0,
+        "readMBps": 0.0,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 1.2166876196942524,
+        "writeIops": 5.744483619658608,
+        "writeMBps": 0.10971238655110813
+      },
+      "replica_data": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 0.9999971825125373,
+        "coveredSeconds": 1378.0489435195923,
+        "maxIntervalReadAwaitMs": 69.84904065040651,
+        "maxIntervalWriteAwaitMs": 303.6418511066398,
+        "operationWeightedAwaitMs": 53.86387224085257,
+        "readAwaitMs": 53.29886189903056,
+        "readIops": 2301.7352473583555,
+        "readMBps": 18.860016392672712,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 97.84042576846983,
+        "writeIops": 29.57267258510841,
+        "writeMBps": 19.257909430803608
+      },
+      "replica_wal": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 0.9999971825125373,
+        "coveredSeconds": 1378.0489435195923,
+        "maxIntervalReadAwaitMs": 15.144628099173554,
+        "maxIntervalWriteAwaitMs": 123.31914893617021,
+        "operationWeightedAwaitMs": 3.90464706854827,
+        "readAwaitMs": 3.662670006275261,
+        "readIops": 78.59201449178569,
+        "readMBps": 10.051830910383249,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 6.4010635064072545,
+        "writeIops": 7.617905609189973,
+        "writeMBps": 0.1909529500870349
+      }
+    },
+    "vacuum": {
+      "primary_data": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 1,
+        "coveredSeconds": 942.7965698242188,
+        "maxIntervalReadAwaitMs": 3.673202614379085,
+        "maxIntervalWriteAwaitMs": 458.80555555555554,
+        "operationWeightedAwaitMs": 14.18090182326107,
+        "readAwaitMs": 1.966285479058166,
+        "readIops": 403.9627058902794,
+        "readMBps": 52.666359033276464,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 103.65268309041221,
+        "writeIops": 55.14866698677663,
+        "writeMBps": 52.4354791201575
+      },
+      "primary_wal": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 1,
+        "coveredSeconds": 942.7965698242188,
+        "maxIntervalReadAwaitMs": 5.0,
+        "maxIntervalWriteAwaitMs": 8.353271028037383,
+        "operationWeightedAwaitMs": 2.367320649007407,
+        "readAwaitMs": 1.1452618351446828,
+        "readIops": 0.029207236756621034,
+        "readMBps": 0.0014925016465719685,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 2.3674836024755415,
+        "writeIops": 219.03775056469303,
+        "writeMBps": 41.769625171553244
+      },
+      "replica_data": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 1,
+        "coveredSeconds": 942.7965698242188,
+        "maxIntervalReadAwaitMs": 71.56013698630137,
+        "maxIntervalWriteAwaitMs": 152.66006600660066,
+        "operationWeightedAwaitMs": 56.68173309060491,
+        "readAwaitMs": 56.33985577760769,
+        "readIops": 3028.3410301665153,
+        "readMBps": 24.816094565981043,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 83.9581337834539,
+        "writeIops": 37.95666099391156,
+        "writeMBps": 24.530109865373213
+      },
+      "replica_wal": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 1,
+        "coveredSeconds": 942.7965698242188,
+        "maxIntervalReadAwaitMs": 27.11111111111111,
+        "maxIntervalWriteAwaitMs": 49.576190476190476,
+        "operationWeightedAwaitMs": 4.299668806764299,
+        "readAwaitMs": 2.8956360635361786,
+        "readIops": 177.51499351058115,
+        "readMBps": 22.70180521554889,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 5.375641063063647,
+        "writeIops": 231.63874518474836,
+        "writeMBps": 79.40790272093795
+      }
+    },
+    "vacuumAndReplay": {
+      "primary_data": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 0.99999961507437,
+        "coveredSeconds": 2320.848502635956,
+        "maxIntervalReadAwaitMs": 3.673202614379085,
+        "maxIntervalWriteAwaitMs": 458.80555555555554,
+        "operationWeightedAwaitMs": 14.29643207604783,
+        "readAwaitMs": 1.9668837396496726,
+        "readIops": 164.2644664637028,
+        "readMBps": 21.415783826237114,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 103.83987290813259,
+        "writeIops": 22.618146682734807,
+        "writeMBps": 21.44273552272212
+      },
+      "primary_wal": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 0.99999961507437,
+        "coveredSeconds": 2320.848502635956,
+        "maxIntervalReadAwaitMs": 5.0,
+        "maxIntervalWriteAwaitMs": 37.27272727272727,
+        "operationWeightedAwaitMs": 2.324846589129521,
+        "readAwaitMs": 1.1452618351446828,
+        "readIops": 0.011864834174618021,
+        "readMBps": 0.0006062978394526296,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 2.324998072075638,
+        "writeIops": 92.39044961614005,
+        "writeMBps": 17.033187929339274
+      },
+      "replica_data": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 0.9999983270579438,
+        "coveredSeconds": 2320.845513343811,
+        "maxIntervalReadAwaitMs": 71.56013698630137,
+        "maxIntervalWriteAwaitMs": 303.6418511066398,
+        "operationWeightedAwaitMs": 55.19852795270727,
+        "readAwaitMs": 54.73943786917031,
+        "readIops": 2596.904157011021,
+        "readMBps": 21.279552737989174,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 91.34974783767541,
+        "writeIops": 32.97849837912138,
+        "writeMBps": 21.39963427054809
+      },
+      "replica_wal": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 0.9999983270579438,
+        "coveredSeconds": 2320.845513343811,
+        "maxIntervalReadAwaitMs": 27.11111111111111,
+        "maxIntervalWriteAwaitMs": 123.31914893617021,
+        "operationWeightedAwaitMs": 4.206656916256948,
+        "readAwaitMs": 3.196990316780747,
+        "readIops": 118.77747481626069,
+        "readMBps": 15.190627230389705,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 5.422672007788789,
+        "writeIops": 98.62184271169795,
+        "writeMBps": 32.371237284605655
+      }
+    }
+  }
+}

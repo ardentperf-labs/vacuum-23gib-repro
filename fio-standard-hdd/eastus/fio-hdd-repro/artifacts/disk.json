@@ -1,0 +1,32 @@
+{
+  "creationData": {
+    "createOption": "Copy",
+    "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+    "sourceUniqueId": "c05eba46-c2d2-4600-9a5c-fbd1c2671f22"
+  },
+  "diskIOPSReadWrite": 500,
+  "diskMBpsReadWrite": 60,
+  "diskSizeBytes": 549755813888,
+  "diskSizeGB": 512,
+  "diskState": "Unattached",
+  "encryption": {
+    "type": "EncryptionAtRestWithPlatformKey"
+  },
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-a3c5da827f4d7716747185a4/providers/Microsoft.Compute/disks/fio-data",
+  "location": "eastus",
+  "name": "fio-data",
+  "networkAccessPolicy": "DenyAll",
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": "Disabled",
+  "resourceGroup": "rg-fio-hdd-a3c5da827f4d7716747185a4",
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "tags": {
+    "reprotoken": "a3c5da827f4d7716747185a4"
+  },
+  "timeCreated": "2026-10-09T04:28:05.5843253+00:00",
+  "type": "Microsoft.Compute/disks",
+  "uniqueId": "3e4e0ffa-64c9-4589-b539-1b391e0a8041"
+}

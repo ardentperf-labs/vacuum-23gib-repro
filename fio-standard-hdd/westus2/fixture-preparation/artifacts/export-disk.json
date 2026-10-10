@@ -1,0 +1,32 @@
+{
+  "creationData": {
+    "createOption": "Copy",
+    "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+    "sourceUniqueId": "c05eba46-c2d2-4600-9a5c-fbd1c2671f22"
+  },
+  "diskIOPSReadWrite": 500,
+  "diskMBpsReadWrite": 60,
+  "diskSizeBytes": 549755813888,
+  "diskSizeGB": 512,
+  "diskState": "ActiveSAS",
+  "encryption": {
+    "type": "EncryptionAtRestWithPlatformKey"
+  },
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-transport-168d63b3cf97eb87fa9f88d9/providers/Microsoft.Compute/disks/fixture-export",
+  "location": "eastus",
+  "name": "fixture-export",
+  "networkAccessPolicy": "AllowAll",
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": "Enabled",
+  "resourceGroup": "rg-fio-hdd-transport-168d63b3cf97eb87fa9f88d9",
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "tags": {
+    "reprotoken": "168d63b3cf97eb87fa9f88d9"
+  },
+  "timeCreated": "2026-10-09T08:28:16.3989353+00:00",
+  "type": "Microsoft.Compute/disks",
+  "uniqueId": "338341e4-77f2-481e-9f39-df3c0a2b698f"
+}

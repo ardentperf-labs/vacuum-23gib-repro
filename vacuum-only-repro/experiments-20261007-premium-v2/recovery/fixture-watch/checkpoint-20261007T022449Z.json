@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-07T02:24:49Z",
+  "checkpoint": "20261007T022449Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "supervisorPid": 126516,
+      "childPid": 126519,
+      "activeFixturePhase": "replica-instance-startup",
+      "clusterPhase": "Waiting for the instances to become active",
+      "clusterInstances": 2,
+      "clusterReadyInstances": 1,
+      "snapshotRecoveryJob": {
+        "name": "hdd-pg-2-snapshot-recovery",
+        "status": "Complete",
+        "completion": "1/1",
+        "durationSeconds": 660
+      },
+      "snapshotRecoveryPod": {
+        "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+        "phase": "Succeeded",
+        "ready": false,
+        "restartCount": 0
+      },
+      "replicaPod": {
+        "name": "hdd-pg-2",
+        "phase": "Pending",
+        "initState": "Init:0/1",
+        "ready": false
+      },
+      "replicaDisks": {
+        "data": {
+          "name": "pvc-96bd9d47-717d-4913-913f-0c7ec271f76d",
+          "provisioningState": "Succeeded",
+          "diskState": "Attached",
+          "completionPercent": 0.0
+        },
+        "wal": {
+          "name": "pvc-b2505bd1-4201-4657-8456-15a2dde19fb0",
+          "provisioningState": "Succeeded",
+          "diskState": "Attached",
+          "completionPercent": 84.0
+        }
+      },
+      "backup": "vacuum-backup-5c241a19",
+      "backupPhase": "completed"
+    },
+    "100gib": {
+      "processStatus": "running",
+      "supervisorPid": 126517,
+      "childPid": 126518,
+      "assignedTargetHeapBytes": 107374182400,
+      "activeFixturePhase": "create-index",
+      "indexPhase": "building index: scanning table",
+      "indexBlocksDone": 11371278,
+      "indexBlocksTotal": 13107200,
+      "indexScanFraction": 0.8678947448730469,
+      "activeWaits": [
+        {
+          "type": "IO",
+          "event": "DataFileRead"
+        }
+      ],
+      "stageRelationBytes": 107374182400,
+      "pod": "hdd-pg-1",
+      "podReady": true
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "captureKind": "initial-read-only-remote-psql-long-capture",
+  "capturedAtUtc": "2026-10-07T05:11:36.534300Z",
+  "childPid": 126518,
+  "clusterName": "aks-vacuum-only-f1b90aec9e24",
+  "expectedSqlExactIgnoringOneTerminalNewline": true,
+  "initialObservedState": "status file absent; psql_long still running; out currently contains CREATE INDEX output only",
+  "localProvenanceFiles": {
+    "02-prepare.sh": {
+      "bytes": 45550,
+      "path": "02-prepare.sh",
+      "sha256": "7b24d869c7ef362653f38201402f5e4f297c874f66253658f884ced15055b20f"
+    },
+    "prepare-process.json": {
+      "bytes": 626,
+      "path": "prepare-process.json",
+      "sha256": "68472626da0721b22247773d4782d1940e5b992b1d3c5af3ba422249aeb4205e"
+    },
+    "seed-path": {
+      "bytes": 77,
+      "path": "seed-path",
+      "sha256": "b0fdb21b8b59c8965adaf224a243d816093d95ef2fd968035eecc5de33ce3391"
+    },
+    "stage-allowlisted-source.sh": {
+      "bytes": 20120,
+      "path": "stage-allowlisted-source.sh",
+      "sha256": "0eacb0a81b30703a3b788aa745d3eca8c079e3e4e0cfca9921f500b6f5c8918b"
+    }
+  },
+  "namespace": "repro",
+  "originalPrepareScriptSha256": "7b24d869c7ef362653f38201402f5e4f297c874f66253658f884ced15055b20f",
+  "podName": "hdd-pg-1",
+  "podUid": "405550c1-241d-4bb2-81ea-30ec649ea373",
+  "processReceiptSha256": "68472626da0721b22247773d4782d1940e5b992b1d3c5af3ba422249aeb4205e",
+  "processReceiptStatus": "running",
+  "remoteFiles": {
+    "out": {
+      "bytes": 13,
+      "path": "out",
+      "sha256": "073bf29e5e659431aa78d08858d230cc8626d6dd05a13fe935d22d29d7931c2a"
+    },
+    "q.sql": {
+      "bytes": 140,
+      "path": "q.sql",
+      "sha256": "01d89421727f9a76a3de0e6cfa4ea4ef3d1d6afa1651e7f5f2528a5e056f3584"
+    }
+  },
+  "remoteSeedPath": "/controller/tmp/seed-f1b90aec9e24f6a2008d6991738742cf-20261006T205332Z-24491",
+  "remoteStatusPresent": false,
+  "remoteStatusValue": null,
+  "seedPathFileSha256": "b0fdb21b8b59c8965adaf224a243d816093d95ef2fd968035eecc5de33ce3391",
+  "sourceHelperSha256": "0eacb0a81b30703a3b788aa745d3eca8c079e3e4e0cfca9921f500b6f5c8918b",
+  "stack": "100gib",
+  "supervisorPid": 126517,
+  "version": 1
+}

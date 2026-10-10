@@ -1,0 +1,17 @@
+WARNING: option '--subscription' will be ignored due to use of '--ids'.
+WARNING: option '--subscription' will be ignored due to use of '--ids'.
+Validated paired retained source: Backup UID a39e0d48-4401-4b49-9164-c317aed17764; DATA and WAL IDs, labels, LSNs, backup label, and archive SHA-256s match.
+Rendered retained source VolumeSnapshot imports to /workspace/vacuum-only-repro/experiments-20261009-pgbench-baseline/run/.state/.prepare.0eWJ45/source-snapshots.json
+Alive[################################################################]  100.0000%Finished[#############################################################]  100.0000%
+Alive[################################################################]  100.0000%Finished[#############################################################]  100.0000%
+Warning: Native support for Barman Cloud backups and recovery is deprecated and will be completely removed in CloudNativePG 1.31.0. Found usage in: spec.externalClusters.0.barmanObjectStore. Please migrate existing clusters to the new Barman Cloud Plugin to ensure a smooth transition.
+Warning: Native support for Barman Cloud backups and recovery is deprecated and will be completely removed in CloudNativePG 1.31.0. Found usage in: spec.externalClusters.0.barmanObjectStore. Please migrate existing clusters to the new Barman Cloud Plugin to ensure a smooth transition.
+Waiting for paired retained-source recovery through its pinned end LSN 4E/50000138.
+Waiting for hdd-pg-1 PremiumV2 copy hydration.
+WARNING: option '--subscription' will be ignored due to use of '--ids'.
+Waiting for hdd-pg-1-wal PremiumV2 copy hydration.
+WARNING: option '--subscription' will be ignored due to use of '--ids'.
+WARNING: option '--subscription' will be ignored due to use of '--ids'.
+WARNING: option '--subscription' will be ignored due to use of '--ids'.
+Warning: Native support for Barman Cloud backups and recovery is deprecated and will be completely removed in CloudNativePG 1.31.0. Found usage in: spec.externalClusters.0.barmanObjectStore. Please migrate existing clusters to the new Barman Cloud Plugin to ensure a smooth transition.
+Preparation stopped; preserve all snapshots and inspect /workspace/vacuum-only-repro/experiments-20261009-pgbench-baseline/run/.state before retrying.

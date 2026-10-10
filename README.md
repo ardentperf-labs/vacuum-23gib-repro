@@ -1,5 +1,19 @@
 # PostgreSQL VACUUM on Azure Standard HDD
 
+The later [VACUUM and prefetch investigation archives](vacuum-only-repro/INDEX.md)
+contain the five original experiments, the Premium SSD v2 baseline/50/100-GiB
+runs, and the snapshot baseline with a tiny pgbench client. Their reports,
+graphs, raw measurements and timelines are now inside this GitHub checkout.
+Read the [prefetch read investigation](PREFETCH-READS-INVESTIGATION.md) for the
+read-operation amplification analysis and measured client impact. The
+[regional fio comparisons](fio-standard-hdd/REPORT.md) provide the separate
+Standard HDD read-scaling measurements.
+
+Published captures anonymize Azure subscription identifiers and source-host
+workspace paths. Measurements are unchanged; the [redaction manifest](PUBLICATION-REDACTIONS.json)
+maps original and published file hashes. Original captures and private
+snapshot/WAL retention evidence remain local.
+
 A standalone reproduction and dataset for one **23-GiB VACUUM-only run** on
 PostgreSQL 16.15 / CloudNativePG 1.30.1. Two AKS `Standard_D2s_v4` workers each
 have separate 512-GiB Standard HDD DATA and WAL disks. No client workload runs.

@@ -1,0 +1,96 @@
+{
+  "allSnapshotsPreserved": true,
+  "completedAtUtc": "2026-10-06T06:09:41Z",
+  "finalSourcePairProof": {
+    "path": ".state/source-pair-restore-proof.json",
+    "systemIdentifier": "7692518806614212629",
+    "verifiedBeforeTuning": true
+  },
+  "historicalAttempts": [
+    {
+      "executionReceiptPath": ".state/prepare-failure.json",
+      "explanation": "Primary/WAL PVC source JSON was not passed to jq; restore had succeeded but the script stopped before any tuning or VACUUM.",
+      "name": "original_02_prepare",
+      "sha256": "2007e0d27f8b506514c508b0a6d1f8d008f51480b9f7b9ed0bcc277b04f716d8",
+      "sourceAvailable": true,
+      "sourcePath": "02-prepare.sh",
+      "sourceSha256VerifiedAgainstRecordedFailureHash": true,
+      "status": "failed_before_tuning_or_vacuum"
+    },
+    {
+      "executionReceiptPath": ".state/continuation-launch.json",
+      "explanation": "Azure ScopeLocked prevented deletion of the exact DATA snapshot role assignment; no PostgreSQL tuning, seed, or VACUUM occurred.",
+      "name": "first_post_restore_continuation",
+      "sha256": "38eab7574954981d3e152b93ae07a5e20d7ce72cd90770af9e2ffb5ff2561321",
+      "sourceAvailable": false,
+      "status": "failed_before_tuning_or_vacuum"
+    }
+  ],
+  "noVacuumLaunchedDuringPreparation": true,
+  "replicaSeedProof": {
+    "completedEventUid": "b5a9adb4-e280-4459-84f3-4bc670fc1823",
+    "path": ".state/seed-paired-snapshot-proof.json",
+    "recoveryJobUid": "b5a9adb4-e280-4459-84f3-4bc670fc1823"
+  },
+  "scriptSources": [
+    {
+      "path": "01-provision.sh",
+      "role": "successful_stack_provision",
+      "sha256": "38ad456b74e208652dd6d7b0d93b1d2c30351d636cadbae7b25fb87273f86b4b"
+    },
+    {
+      "path": ".state/remove-source-snapshot-role-grants-with-lock-restore.sh",
+      "role": "successful_narrow_source_grant_cleanup_with_lock_restoration",
+      "sha256": "073f5698f27b0b95fcb835c52e1a6dda26f105a4d1222c104c39bc150e47e502"
+    },
+    {
+      "path": ".state/remove-source-snapshot-role-grants-with-lock-restore-v2.sh",
+      "role": "successful_idempotent_exact_grant_lock_snapshot_postverification",
+      "sha256": "44b6880723afc47abd542cb4718f4c6d0dcb67533e997f5a078cf6e8d64d5f09"
+    },
+    {
+      "path": ".state/continue-after-source-pair-restore-v2.sh",
+      "role": "successful_source_restore_continuation_and_replica_seed",
+      "sha256": "33dc25abae50c1aba96e4280563b559bfa01ba2729fe47406274ec584c4255c8"
+    }
+  ],
+  "snapshotRecoveryJobEvidence": {
+    "completedEventUid": "b5a9adb4-e280-4459-84f3-4bc670fc1823",
+    "eventEvidencePath": ".state/snapshot-recovery-job.json",
+    "name": "hdd-pg-2-snapshot-recovery",
+    "uid": "b5a9adb4-e280-4459-84f3-4bc670fc1823"
+  },
+  "stages": [
+    {
+      "executionReceiptPath": ".state/source-pair-restore-proof.json",
+      "exitCode": 0,
+      "name": "source_pair_restore_and_fixture_proof",
+      "status": "completed"
+    },
+    {
+      "executionReceiptPath": ".state/source-snapshot-lock-role-removal.json",
+      "exitCode": 0,
+      "name": "source_snapshot_grant_removal_and_lock_restoration",
+      "status": "completed"
+    },
+    {
+      "executionReceiptPath": ".state/seed-paired-snapshot-proof.json",
+      "exitCode": 0,
+      "name": "backup_and_paired_replica_seed",
+      "status": "completed"
+    },
+    {
+      "executionReceiptPath": ".state/snapshot-recovery-job.json",
+      "exitCode": 0,
+      "name": "exact_snapshot_recovery_job_completion",
+      "status": "completed"
+    },
+    {
+      "executionReceiptPath": ".state/prepare.json",
+      "exitCode": 0,
+      "name": "final_role_defaults_fixture_and_replay_gate",
+      "status": "completed"
+    }
+  ],
+  "status": "completed"
+}

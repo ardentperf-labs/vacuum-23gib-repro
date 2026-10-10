@@ -1,0 +1,2672 @@
+{
+  "synced_at_utc": "2026-10-09T11:25:45.099228+00:00",
+  "scope": "West US 2 run and fixture-preparation source files; runtime state mapped to artifacts",
+  "source_roots": [
+    "fio-hdd-westus2-4k-repro",
+    "fio-hdd-westus2-1m-repro",
+    "fio-hdd-westus2-fixture"
+  ],
+  "archive_root": "fio-standard-hdd/westus2",
+  "files": [
+    {
+      "source": "fio-hdd-westus2-4k-repro/analyze.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/analyze.py",
+      "source_sha256": "8e812b8436b0c32d9e032a2d5e058dfef905f5e41bc6f953165536f5242cc3c0",
+      "archive_sha256": "8e812b8436b0c32d9e032a2d5e058dfef905f5e41bc6f953165536f5242cc3c0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/state.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/infrastructure-state.json",
+      "source_sha256": "8d2be8475371ee86a4cfc27c26f58fcfa68ab0e1ee4b527a261dcbebabf8c4d3",
+      "archive_sha256": "8d2be8475371ee86a4cfc27c26f58fcfa68ab0e1ee4b527a261dcbebabf8c4d3",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/cloud-init.yml",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/cloud-init.yml",
+      "source_sha256": "22fde8a6c9e583b8681854fbd86fe5f6766247ba42cf6dc1f601efcdc66574b5",
+      "archive_sha256": "22fde8a6c9e583b8681854fbd86fe5f6766247ba42cf6dc1f601efcdc66574b5",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/requirements.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/requirements.txt",
+      "source_sha256": "de950d3b75e4ad1a760c121533e06390c84574f7dd0b53c0eaa742ab6d5c2f38",
+      "archive_sha256": "de950d3b75e4ad1a760c121533e06390c84574f7dd0b53c0eaa742ab6d5c2f38",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/collect.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/collect.py",
+      "source_sha256": "625fd4c2f183d12d51b74580ab8b4228dd6f8da67f1e5ad6705076cd647c170f",
+      "archive_sha256": "625fd4c2f183d12d51b74580ab8b4228dd6f8da67f1e5ad6705076cd647c170f",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/.gitignore",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/.gitignore",
+      "source_sha256": "8703757d0b46c0ffcb02ead43f20a7825e7ba37ee9686d4c87db3b9f60b43aee",
+      "archive_sha256": "8703757d0b46c0ffcb02ead43f20a7825e7ba37ee9686d4c87db3b9f60b43aee",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/guest-test.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/guest-test.py",
+      "source_sha256": "ba19b15d055ca1e895e6771f1b6d86da243d7821b822bbc6fd65013d7e173c97",
+      "archive_sha256": "ba19b15d055ca1e895e6771f1b6d86da243d7821b822bbc6fd65013d7e173c97",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/provision.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/provision.py",
+      "source_sha256": "c65784e8c954e35c7ba0c763e928057f2d071807d9fa7482af95392b8e289e93",
+      "archive_sha256": "c65784e8c954e35c7ba0c763e928057f2d071807d9fa7482af95392b8e289e93",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/poll.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/poll.py",
+      "source_sha256": "321747e99e002ab90bad634fa9e238e56dd0d098378c87c72b59f0ea1d4b89ea",
+      "archive_sha256": "321747e99e002ab90bad634fa9e238e56dd0d098378c87c72b59f0ea1d4b89ea",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/teardown.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/teardown.py",
+      "source_sha256": "02508775ea2530d51d69b3958cac704439cbeeb7954110ec3bec442edf2ad2f7",
+      "archive_sha256": "02508775ea2530d51d69b3958cac704439cbeeb7954110ec3bec442edf2ad2f7",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/REPORT.md",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/REPORT.md",
+      "source_sha256": "0b9784dba2685837b3a52980e9e40117a734cffc82e8b619764a7180b0c379fa",
+      "archive_sha256": "0b9784dba2685837b3a52980e9e40117a734cffc82e8b619764a7180b0c379fa",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/README.md",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/README.md",
+      "source_sha256": "2e0f817ce06bffd3661e204b8810a85e7f7804423ee4821a7f67b471753e1c0e",
+      "archive_sha256": "2e0f817ce06bffd3661e204b8810a85e7f7804423ee4821a7f67b471753e1c0e",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/run.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/run.py",
+      "source_sha256": "a7fb4ae8b99e6e1dc9156053d6179ef72b41ec50a938365d577d37c354957708",
+      "archive_sha256": "a7fb4ae8b99e6e1dc9156053d6179ef72b41ec50a938365d577d37c354957708",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/regional-validation.md",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/regional-validation.md",
+      "source_sha256": "70de5387458fb1a659457ac76b253bf5385264f8446c5bf8dea8f2f3251cae17",
+      "archive_sha256": "70de5387458fb1a659457ac76b253bf5385264f8446c5bf8dea8f2f3251cae17",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/resources-before-cleanup.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/resources-before-cleanup.json",
+      "source_sha256": "4a88fbab94bec82187c26fc0873bbf843fe43bc648be68e058a0a6395d88ddd5",
+      "archive_sha256": "4a88fbab94bec82187c26fc0873bbf843fe43bc648be68e058a0a6395d88ddd5",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/validation.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/validation.json",
+      "source_sha256": "2b34ba523d540012a8b58c981a7943b1f0171d6b6da10e8bc98fc842b4b1a74b",
+      "archive_sha256": "2b34ba523d540012a8b58c981a7943b1f0171d6b6da10e8bc98fc842b4b1a74b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/host-metrics.json.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/host-metrics.json.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/provision-vm-d4sv3.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/provision-vm-d4sv3.log",
+      "source_sha256": "bc90b32b739721f60639deffa5c5c36339a845e6978345db1790aa01becf7d0e",
+      "archive_sha256": "bc90b32b739721f60639deffa5c5c36339a845e6978345db1790aa01becf7d0e",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/disk-definitions.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/disk-definitions.json",
+      "source_sha256": "eaf4c4c3090921d7667836628256bfb599405c08677ed4c60c3204c068653175",
+      "archive_sha256": "eaf4c4c3090921d7667836628256bfb599405c08677ed4c60c3204c068653175",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/provision-vm.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/provision-vm.log",
+      "source_sha256": "06b8b8e0eca367daf38c29ae8c0c24f7520a2cb5044657aaf0a0423b3846e930",
+      "archive_sha256": "06b8b8e0eca367daf38c29ae8c0c24f7520a2cb5044657aaf0a0423b3846e930",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/disk-metrics.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/disk-metrics.json",
+      "source_sha256": "a49fb4d5aa688261cd0c8ec7db3d5a561fc2bc4783a6529590819e8e5b1f36c3",
+      "archive_sha256": "a49fb4d5aa688261cd0c8ec7db3d5a561fc2bc4783a6529590819e8e5b1f36c3",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/analysis-progress.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/analysis-progress.log",
+      "source_sha256": "7281117eadd1cf3a4dbfabd1bd5f9d940503358973d353cdce141ed1a0c5a4f5",
+      "archive_sha256": "7281117eadd1cf3a4dbfabd1bd5f9d940503358973d353cdce141ed1a0c5a4f5",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/disk.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/disk.json",
+      "source_sha256": "142cde8b325801e7fc5c920ff0ad03524580754e1bf052fe57440664bdeb2c1f",
+      "archive_sha256": "142cde8b325801e7fc5c920ff0ad03524580754e1bf052fe57440664bdeb2c1f",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/unused-nvme-vm.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/unused-nvme-vm.json",
+      "source_sha256": "c2b3c1ab5da6f31200c0838c0f02c82f2e40a153d9de480e71becf6ff7283a79",
+      "archive_sha256": "c2b3c1ab5da6f31200c0838c0f02c82f2e40a153d9de480e71becf6ff7283a79",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/guest.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/guest.txt",
+      "source_sha256": "3f2bd5b9150f35de2575f25bbf1566071c5155520dd8442b24af999ead3d5bde",
+      "archive_sha256": "3f2bd5b9150f35de2575f25bbf1566071c5155520dd8442b24af999ead3d5bde",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/provision-vm-zone3.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/provision-vm-zone3.log",
+      "source_sha256": "bd1edd543fd5ea7725f46313e989f7805ad7572d6ccb5b09e94e1800e04aad8c",
+      "archive_sha256": "bd1edd543fd5ea7725f46313e989f7805ad7572d6ccb5b09e94e1800e04aad8c",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/final-analysis.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/final-analysis.log",
+      "source_sha256": "313fdba9b09d2071bf1b53b10a650c906332e9deaccbbafbe77fa6f25de73dff",
+      "archive_sha256": "313fdba9b09d2071bf1b53b10a650c906332e9deaccbbafbe77fa6f25de73dff",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/provision-vm-e4sv3.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/provision-vm-e4sv3.log",
+      "source_sha256": "5dd02e59b394f9bdc22cbb64b7361a519d20e6ab445a64bb70b1cfc7a12f0977",
+      "archive_sha256": "5dd02e59b394f9bdc22cbb64b7361a519d20e6ab445a64bb70b1cfc7a12f0977",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/queue-topology-command.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/queue-topology-command.py",
+      "source_sha256": "ffa3cb4bc7efda1c332f47823bffb37aca72dc71b2874a0b9989ed8ba3edc9f1",
+      "archive_sha256": "ffa3cb4bc7efda1c332f47823bffb37aca72dc71b2874a0b9989ed8ba3edc9f1",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/vm-metrics.json.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/vm-metrics.json.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/config.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/config.json",
+      "source_sha256": "d42b7d5381bd056b68ef7a2f19415e62be743ded64f1219d96e832739a2c39a6",
+      "archive_sha256": "d42b7d5381bd056b68ef7a2f19415e62be743ded64f1219d96e832739a2c39a6",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/guest-test.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/guest-test.log",
+      "source_sha256": "e92db754a3a328e9697283c5248a02a030ec54f291f6ccee2901010059f65094",
+      "archive_sha256": "e92db754a3a328e9697283c5248a02a030ec54f291f6ccee2901010059f65094",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/provision-vm-d4sv6.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/provision-vm-d4sv6.log",
+      "source_sha256": "f57bec6fc08793394023cb792d6bcb6e855c4cee1a323df72fa48f519ef535c1",
+      "archive_sha256": "f57bec6fc08793394023cb792d6bcb6e855c4cee1a323df72fa48f519ef535c1",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/provision-vm-e4dsv4.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/provision-vm-e4dsv4.log",
+      "source_sha256": "15709745226e35d1d2e4d40511b7729b5411111f2d4d75595cb4f0f4fab98abf",
+      "archive_sha256": "15709745226e35d1d2e4d40511b7729b5411111f2d4d75595cb4f0f4fab98abf",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/snapshots-before.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/snapshots-before.json",
+      "source_sha256": "3b9ce471366b9e8d42dbabc15e61b0c15f724a0914973fe6e6fc730a3e6f6f64",
+      "archive_sha256": "3b9ce471366b9e8d42dbabc15e61b0c15f724a0914973fe6e6fc730a3e6f6f64",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/vm-metrics.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/vm-metrics.json",
+      "source_sha256": "c30025cc6cfe681acfef1e084928df77428c44f78e70380258a3a45488dd9089",
+      "archive_sha256": "c30025cc6cfe681acfef1e084928df77428c44f78e70380258a3a45488dd9089",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/provision-vm-zone2.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/provision-vm-zone2.log",
+      "source_sha256": "618eb5d7a7650418fed1d92fb65ffca3f4f2a11a6720a7ec8810cb5c418b8e44",
+      "archive_sha256": "618eb5d7a7650418fed1d92fb65ffca3f4f2a11a6720a7ec8810cb5c418b8e44",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/vm-definitions.json.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/vm-definitions.json.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/controller-complete.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/controller-complete.json",
+      "source_sha256": "ac65b2f014fdfca8ea5b50e228006785c8ef0b6a82e8115687288528f2967335",
+      "archive_sha256": "ac65b2f014fdfca8ea5b50e228006785c8ef0b6a82e8115687288528f2967335",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/collect-progress.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/collect-progress.log",
+      "source_sha256": "d0952179da662b65b44c0a0dcd2b41a3a4563f441c8809e0541e6b1517b90b6f",
+      "archive_sha256": "d0952179da662b65b44c0a0dcd2b41a3a4563f441c8809e0541e6b1517b90b6f",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/provision-vm-d4ds.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/provision-vm-d4ds.log",
+      "source_sha256": "31a6f07dbf3dc97a93164c82667a7366de6e030f92f949b24371a65a1eff6258",
+      "archive_sha256": "31a6f07dbf3dc97a93164c82667a7366de6e030f92f949b24371a65a1eff6258",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/provision-vm-f4sv2.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/provision-vm-f4sv2.log",
+      "source_sha256": "b40d7e4dd6711c396f15eff28719f40196ead137d3cd313f78c84b7289b0c5cd",
+      "archive_sha256": "b40d7e4dd6711c396f15eff28719f40196ead137d3cd313f78c84b7289b0c5cd",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/vm-definitions.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/vm-definitions.json",
+      "source_sha256": "eaf2a29df74e0fca5f4b053440e7daf3a6df46d431c5f93d6215fe4bf4428156",
+      "archive_sha256": "eaf2a29df74e0fca5f4b053440e7daf3a6df46d431c5f93d6215fe4bf4428156",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/teardown.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/teardown.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/host-metrics.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/host-metrics.json",
+      "source_sha256": "07982ca6dce5709dee33a0814a6ad898053fafc1424d8c0b72e5723e102945b9",
+      "archive_sha256": "07982ca6dce5709dee33a0814a6ad898053fafc1424d8c0b72e5723e102945b9",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/provision-vm-zone1.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/provision-vm-zone1.log",
+      "source_sha256": "89270fe32dac342853de6285f375557002b9864b7822d194d1580b3f6d79f82f",
+      "archive_sha256": "89270fe32dac342853de6285f375557002b9864b7822d194d1580b3f6d79f82f",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/disk-definitions.json.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/disk-definitions.json.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/final-collection-retry.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/final-collection-retry.log",
+      "source_sha256": "cbf698134e6e414bfd0cfb49e13d0e2def8adc7dee923520207fe1084cfccbb6",
+      "archive_sha256": "cbf698134e6e414bfd0cfb49e13d0e2def8adc7dee923520207fe1084cfccbb6",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/provision-vm-d4v4.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/provision-vm-d4v4.log",
+      "source_sha256": "71acc2ba39daa0a606b3d83467b28522df25b8b69d291f9a9d2dec1603dc4bd1",
+      "archive_sha256": "71acc2ba39daa0a606b3d83467b28522df25b8b69d291f9a9d2dec1603dc4bd1",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/complete.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/complete.json",
+      "source_sha256": "e851478a913e1daec4ba44a134b6bf0805c8bbeb9a728112b4ba342bf91430c6",
+      "archive_sha256": "e851478a913e1daec4ba44a134b6bf0805c8bbeb9a728112b4ba342bf91430c6",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/queue-topology.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/queue-topology.json",
+      "source_sha256": "70f27895027a950b5614efc25cd56a1e2eb980dd877fd8793b0a0a2bfc496248",
+      "archive_sha256": "70f27895027a950b5614efc25cd56a1e2eb980dd877fd8793b0a0a2bfc496248",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/provision-vm-d3sv2.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/provision-vm-d3sv2.log",
+      "source_sha256": "ff2ad2fc7f63eac62764dc80919fbc63a5b1068989425208c4b0d250b781774b",
+      "archive_sha256": "ff2ad2fc7f63eac62764dc80919fbc63a5b1068989425208c4b0d250b781774b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/cleanup.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/cleanup.json",
+      "source_sha256": "87344dd22ace6e1bd51fd277d744527c7ecde6f000fa72920c31594f2b3357b0",
+      "archive_sha256": "87344dd22ace6e1bd51fd277d744527c7ecde6f000fa72920c31594f2b3357b0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/disk-metrics.json.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/disk-metrics.json.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/vm.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/vm.json",
+      "source_sha256": "cc746d846bc485bce416c30be47884c0fe60871346fb765d8760c77d6253dca0",
+      "archive_sha256": "cc746d846bc485bce416c30be47884c0fe60871346fb765d8760c77d6253dca0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/provision-vm-d4asv4.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/provision-vm-d4asv4.log",
+      "source_sha256": "e2b8a76d28a44f8e943a2398adc3d6ff46f0329c11a78e31cf254ebc22e4a602",
+      "archive_sha256": "e2b8a76d28a44f8e943a2398adc3d6ff46f0329c11a78e31cf254ebc22e4a602",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/vm-initialization.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/vm-initialization.txt",
+      "source_sha256": "cc8d41d25db6a744ba3b9f19df49e5396682fb23fa6fc2d92de08831b9db79f8",
+      "archive_sha256": "cc8d41d25db6a744ba3b9f19df49e5396682fb23fa6fc2d92de08831b9db79f8",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/provision-vm-e2bsv5.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/provision-vm-e2bsv5.log",
+      "source_sha256": "6123a93bc0de6c1557bf6882877f0036eeee3a8e1ebcff57f4df2ed7d7f78270",
+      "archive_sha256": "6123a93bc0de6c1557bf6882877f0036eeee3a8e1ebcff57f4df2ed7d7f78270",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/controller.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/controller.log",
+      "source_sha256": "47697881bae49145970c4a4483027aaa0ae6e4a1d0f338a6866ec89c92ef666b",
+      "archive_sha256": "47697881bae49145970c4a4483027aaa0ae6e4a1d0f338a6866ec89c92ef666b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-512/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-512/vmstat.txt",
+      "source_sha256": "ff8a35395902cbe58ae6ced85862f33c58b65d9ca9b29a22fd68a3717fecf5a5",
+      "archive_sha256": "ff8a35395902cbe58ae6ced85862f33c58b65d9ca9b29a22fd68a3717fecf5a5",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-512/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-512/fio.json",
+      "source_sha256": "22ae1f61067e3566a6b832f44e382b9f9af27eabbd8230b616ea41ce003c528c",
+      "archive_sha256": "22ae1f61067e3566a6b832f44e382b9f9af27eabbd8230b616ea41ce003c528c",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-512/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-512/iostat.json",
+      "source_sha256": "6e43488960c696d3b092dae1ad51e8dad0d863087501d1ed0c75d8fd518ed9b7",
+      "archive_sha256": "6e43488960c696d3b092dae1ad51e8dad0d863087501d1ed0c75d8fd518ed9b7",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-512/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-512/meta.json",
+      "source_sha256": "1f6c79b5f96681defc868bb2114954236931c58783c61e8589dfec5f07732056",
+      "archive_sha256": "1f6c79b5f96681defc868bb2114954236931c58783c61e8589dfec5f07732056",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-512/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-512/command.json",
+      "source_sha256": "339485fcd32249831cf621dfbb7a10defd8c0102d3bc069edc1866d1a3ccc507",
+      "archive_sha256": "339485fcd32249831cf621dfbb7a10defd8c0102d3bc069edc1866d1a3ccc507",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-512/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-512/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-3072/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-3072/vmstat.txt",
+      "source_sha256": "af05f0ed5d634895781464c246d8738b03aa1919abe67b71d2165155722c11f4",
+      "archive_sha256": "af05f0ed5d634895781464c246d8738b03aa1919abe67b71d2165155722c11f4",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-3072/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-3072/fio.json",
+      "source_sha256": "7f86eda73b2cc97307188afbeae91215a24913c1eff24d9c6da4ee35bcc31831",
+      "archive_sha256": "7f86eda73b2cc97307188afbeae91215a24913c1eff24d9c6da4ee35bcc31831",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-3072/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-3072/iostat.json",
+      "source_sha256": "b035fbbfcaf67655bc0c9a00fc54062fd3125ad0519e8212f7e75e76995f81bf",
+      "archive_sha256": "b035fbbfcaf67655bc0c9a00fc54062fd3125ad0519e8212f7e75e76995f81bf",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-3072/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-3072/meta.json",
+      "source_sha256": "18d63ccc642708e0db3a58f5c4f83e911eddf7a081d6805a7948d3e6d0aaf726",
+      "archive_sha256": "18d63ccc642708e0db3a58f5c4f83e911eddf7a081d6805a7948d3e6d0aaf726",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-3072/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-3072/command.json",
+      "source_sha256": "31da2a4d5ff483eb9f91e909daceff99dccef25a90151c1c6ad5b3e0c4876e46",
+      "archive_sha256": "31da2a4d5ff483eb9f91e909daceff99dccef25a90151c1c6ad5b3e0c4876e46",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-3072/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-3072/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-8/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-8/vmstat.txt",
+      "source_sha256": "787e54c71e255166aa6063f94f8467907661e5226946e11023fe0f6f63c2db88",
+      "archive_sha256": "787e54c71e255166aa6063f94f8467907661e5226946e11023fe0f6f63c2db88",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-8/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-8/fio.json",
+      "source_sha256": "3fd7d667d29fff6efece34049c4eed8865652b1cd3c64b152470643a96927e75",
+      "archive_sha256": "3fd7d667d29fff6efece34049c4eed8865652b1cd3c64b152470643a96927e75",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-8/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-8/iostat.json",
+      "source_sha256": "39184ecd803f72d316e95f0dbab8190da48962748ae25509f0bb3122a70d71d6",
+      "archive_sha256": "39184ecd803f72d316e95f0dbab8190da48962748ae25509f0bb3122a70d71d6",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-8/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-8/meta.json",
+      "source_sha256": "8b1213fc9e72f147ba16c8676d9bdb819cd27fdb5e7f917669a6f99e94bdf2c5",
+      "archive_sha256": "8b1213fc9e72f147ba16c8676d9bdb819cd27fdb5e7f917669a6f99e94bdf2c5",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-8/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-8/command.json",
+      "source_sha256": "f6b0fff503d92f133c5308ff2e5984b7f07348bb8898bcf239a6a6ecfc05148d",
+      "archive_sha256": "f6b0fff503d92f133c5308ff2e5984b7f07348bb8898bcf239a6a6ecfc05148d",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-8/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-8/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/analysis/iops-low-threads.png",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/analysis/iops-low-threads.png",
+      "source_sha256": "494d91fe3c5168b47a97c9cfd1e6c1209f266a889e45fdc07df0432815d2bb9e",
+      "archive_sha256": "494d91fe3c5168b47a97c9cfd1e6c1209f266a889e45fdc07df0432815d2bb9e",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/analysis/iops.png",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/analysis/iops.png",
+      "source_sha256": "8130c34f7c8a75de8bca6b0e7419e5d92482e4d53b9224ad0b6777e06def63d4",
+      "archive_sha256": "8130c34f7c8a75de8bca6b0e7419e5d92482e4d53b9224ad0b6777e06def63d4",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/analysis/throughput.png",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/analysis/throughput.png",
+      "source_sha256": "fac1007c3bbcad223fd3f7bdfe3ace1dbd61e897efb0df82b47fb6e97f0819ab",
+      "archive_sha256": "fac1007c3bbcad223fd3f7bdfe3ace1dbd61e897efb0df82b47fb6e97f0819ab",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/analysis/summary.csv",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/analysis/summary.csv",
+      "source_sha256": "28786aee8dca1c9c27319ab08f8e2c5eb227cebf71711412f12d3e2a9b5960c9",
+      "archive_sha256": "28786aee8dca1c9c27319ab08f8e2c5eb227cebf71711412f12d3e2a9b5960c9",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/analysis/latency.png",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/analysis/latency.png",
+      "source_sha256": "6b42c716f98675449ac5d723061b5bb0838113faf09037378d2b7fdf2cdc68ad",
+      "archive_sha256": "6b42c716f98675449ac5d723061b5bb0838113faf09037378d2b7fdf2cdc68ad",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/analysis/azure-minute-points.csv",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/analysis/azure-minute-points.csv",
+      "source_sha256": "1cd28a2b788d4003882ae2b65e47e3ddbefe3754030093c17442cd603019fbd7",
+      "archive_sha256": "1cd28a2b788d4003882ae2b65e47e3ddbefe3754030093c17442cd603019fbd7",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/analysis/report.md",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/analysis/report.md",
+      "source_sha256": "25c3c1390777f9a0863c06f089ae2bdb735ee9bd815e192c0d9e1e4fdbfe312a",
+      "archive_sha256": "25c3c1390777f9a0863c06f089ae2bdb735ee9bd815e192c0d9e1e4fdbfe312a",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-768/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-768/vmstat.txt",
+      "source_sha256": "e604a0efa38f35bb3907ce4077199710bef30ceb1fafc4f204d3389dc93b8840",
+      "archive_sha256": "e604a0efa38f35bb3907ce4077199710bef30ceb1fafc4f204d3389dc93b8840",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-768/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-768/fio.json",
+      "source_sha256": "652c0a2e3a9f53b2eae99f139d883c72e67825c00ae254f0180d02625c4b1f15",
+      "archive_sha256": "652c0a2e3a9f53b2eae99f139d883c72e67825c00ae254f0180d02625c4b1f15",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-768/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-768/iostat.json",
+      "source_sha256": "701d20a218d0c79f78e1283cef80ee7b2f3e77be55690900a0db8d24e817f147",
+      "archive_sha256": "701d20a218d0c79f78e1283cef80ee7b2f3e77be55690900a0db8d24e817f147",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-768/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-768/meta.json",
+      "source_sha256": "05e9fc8be19b5ed85804f07145d79daa3574a323419ea9fa45926b1691f46d60",
+      "archive_sha256": "05e9fc8be19b5ed85804f07145d79daa3574a323419ea9fa45926b1691f46d60",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-768/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-768/command.json",
+      "source_sha256": "b5d141946a96b851ab15721e611b34df4db55d01183303eacc2e0bfb7e49d1a9",
+      "archive_sha256": "b5d141946a96b851ab15721e611b34df4db55d01183303eacc2e0bfb7e49d1a9",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-768/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-768/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-2/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-2/vmstat.txt",
+      "source_sha256": "ec4f7df7a7a07ffb559658210ef59c4042bc4db27fa73cf6193b873b6ce4a1da",
+      "archive_sha256": "ec4f7df7a7a07ffb559658210ef59c4042bc4db27fa73cf6193b873b6ce4a1da",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-2/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-2/fio.json",
+      "source_sha256": "8e6ad941ab11a1833f3c02dbf9e344f6a0b0555c343015b7580d22705ca50d11",
+      "archive_sha256": "8e6ad941ab11a1833f3c02dbf9e344f6a0b0555c343015b7580d22705ca50d11",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-2/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-2/iostat.json",
+      "source_sha256": "d375980e137e9e136fdff281b6b130488bee543a5705be010dc78dd1d80258f6",
+      "archive_sha256": "d375980e137e9e136fdff281b6b130488bee543a5705be010dc78dd1d80258f6",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-2/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-2/meta.json",
+      "source_sha256": "690f13ddf52c08270fb87578182289b527a22c19cdfa9308ebdab360e525ccea",
+      "archive_sha256": "690f13ddf52c08270fb87578182289b527a22c19cdfa9308ebdab360e525ccea",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-2/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-2/command.json",
+      "source_sha256": "d1b534ec718b7e03debd59bdfd493db51cfdfcb153519cf4f1c058eb704b1b3f",
+      "archive_sha256": "d1b534ec718b7e03debd59bdfd493db51cfdfcb153519cf4f1c058eb704b1b3f",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-2/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-2/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-128/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-128/vmstat.txt",
+      "source_sha256": "54de380677d452d29ce4fd3fac715a0cbaf0d550621acb47ab08a63920da8bf3",
+      "archive_sha256": "54de380677d452d29ce4fd3fac715a0cbaf0d550621acb47ab08a63920da8bf3",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-128/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-128/fio.json",
+      "source_sha256": "c47f0336b2d69d8261483f23a0e57fa7f5765393277f088592159a4f7de9a691",
+      "archive_sha256": "c47f0336b2d69d8261483f23a0e57fa7f5765393277f088592159a4f7de9a691",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-128/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-128/iostat.json",
+      "source_sha256": "78166d7053501673e76f301579a65c7e1b54af23be6f444aae90a905730bbdf8",
+      "archive_sha256": "78166d7053501673e76f301579a65c7e1b54af23be6f444aae90a905730bbdf8",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-128/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-128/meta.json",
+      "source_sha256": "1322404a45434392af6dab893e850c30760cfd53f5c11171c2b58b23350bd58d",
+      "archive_sha256": "1322404a45434392af6dab893e850c30760cfd53f5c11171c2b58b23350bd58d",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-128/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-128/command.json",
+      "source_sha256": "385e30d1191a94bc108e2a43babc2b9edb8f2e558f7944c3f1e762c3824841d6",
+      "archive_sha256": "385e30d1191a94bc108e2a43babc2b9edb8f2e558f7944c3f1e762c3824841d6",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-128/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-128/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/disk-metrics.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/disk-metrics.json",
+      "source_sha256": "a49fb4d5aa688261cd0c8ec7db3d5a561fc2bc4783a6529590819e8e5b1f36c3",
+      "archive_sha256": "a49fb4d5aa688261cd0c8ec7db3d5a561fc2bc4783a6529590819e8e5b1f36c3",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/guest.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/guest.txt",
+      "source_sha256": "60092aa250a8a13831b6cdcccb3d654eb90a48f7c78d7000fce647fdb34c56e6",
+      "archive_sha256": "60092aa250a8a13831b6cdcccb3d654eb90a48f7c78d7000fce647fdb34c56e6",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/final-analysis.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/final-analysis.log",
+      "source_sha256": "781e4359a1432881574bba616faf4d218cf801a6d004cd54d60b1fafb5187610",
+      "archive_sha256": "781e4359a1432881574bba616faf4d218cf801a6d004cd54d60b1fafb5187610",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/config.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/config.json",
+      "source_sha256": "c71be3e813cdc359bc65eb829d5d637318b6073603bf45b50c07880cd3170639",
+      "archive_sha256": "c71be3e813cdc359bc65eb829d5d637318b6073603bf45b50c07880cd3170639",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/vm-metrics.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/vm-metrics.json",
+      "source_sha256": "c30025cc6cfe681acfef1e084928df77428c44f78e70380258a3a45488dd9089",
+      "archive_sha256": "c30025cc6cfe681acfef1e084928df77428c44f78e70380258a3a45488dd9089",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/repeat-test.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/repeat-test.log",
+      "source_sha256": "0ab76c5d77c80243f39f1b429d0fbff139b63057e76c56158a2f7c8dde2bc570",
+      "archive_sha256": "0ab76c5d77c80243f39f1b429d0fbff139b63057e76c56158a2f7c8dde2bc570",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/host-metrics.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/host-metrics.json",
+      "source_sha256": "07982ca6dce5709dee33a0814a6ad898053fafc1424d8c0b72e5723e102945b9",
+      "archive_sha256": "07982ca6dce5709dee33a0814a6ad898053fafc1424d8c0b72e5723e102945b9",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/complete.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/complete.json",
+      "source_sha256": "490f9f87a7b10cf47b1e690f20690c1aa2c85802b179635a6ef6fbd5bc196319",
+      "archive_sha256": "490f9f87a7b10cf47b1e690f20690c1aa2c85802b179635a6ef6fbd5bc196319",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/analysis/iops-low-threads.png",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/analysis/iops-low-threads.png",
+      "source_sha256": "484a837edbc0012c8fd2f06d793a58688aeb082f5184dc984af7e1c84a50aad0",
+      "archive_sha256": "484a837edbc0012c8fd2f06d793a58688aeb082f5184dc984af7e1c84a50aad0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/analysis/iops.png",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/analysis/iops.png",
+      "source_sha256": "69f646dc3a657e283f51415a85e1612982e3da18f054d656566b8d571ce80fe1",
+      "archive_sha256": "69f646dc3a657e283f51415a85e1612982e3da18f054d656566b8d571ce80fe1",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/analysis/throughput.png",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/analysis/throughput.png",
+      "source_sha256": "46171442580e2dbe09966ba5a73ee3e189ad22ab41fda95126749e3c41d7b0ea",
+      "archive_sha256": "46171442580e2dbe09966ba5a73ee3e189ad22ab41fda95126749e3c41d7b0ea",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/analysis/summary.csv",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/analysis/summary.csv",
+      "source_sha256": "4a8bd3757ce3760fe452cce199de4e74daa3431c0858bc02d85bda4117adfd11",
+      "archive_sha256": "4a8bd3757ce3760fe452cce199de4e74daa3431c0858bc02d85bda4117adfd11",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/analysis/latency.png",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/analysis/latency.png",
+      "source_sha256": "a587b4c9f32588e972a5e2d9b39b5664d075c3926cf22d9daa385709a91e2e30",
+      "archive_sha256": "a587b4c9f32588e972a5e2d9b39b5664d075c3926cf22d9daa385709a91e2e30",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/analysis/azure-minute-points.csv",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/analysis/azure-minute-points.csv",
+      "source_sha256": "1cd28a2b788d4003882ae2b65e47e3ddbefe3754030093c17442cd603019fbd7",
+      "archive_sha256": "1cd28a2b788d4003882ae2b65e47e3ddbefe3754030093c17442cd603019fbd7",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/analysis/report.md",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/analysis/report.md",
+      "source_sha256": "ac25b425bdbabc93efda7d56fdc8549da2bcd922216d688d019e01f56a9f12ae",
+      "archive_sha256": "ac25b425bdbabc93efda7d56fdc8549da2bcd922216d688d019e01f56a9f12ae",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/run-1/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/run-1/vmstat.txt",
+      "source_sha256": "ca22b9b29ba53a0dcafbad565fdf4c0e2fdf55df10ee5bee56d1a6ff1e93a934",
+      "archive_sha256": "ca22b9b29ba53a0dcafbad565fdf4c0e2fdf55df10ee5bee56d1a6ff1e93a934",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/run-1/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/run-1/fio.json",
+      "source_sha256": "8a83c1d97dcb3d7ca4ef99f57eb86b0458871f22cdb11a63ee39e6c303573e55",
+      "archive_sha256": "8a83c1d97dcb3d7ca4ef99f57eb86b0458871f22cdb11a63ee39e6c303573e55",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/run-1/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/run-1/iostat.json",
+      "source_sha256": "5440d16da91911528bb6c0035577fcc6c19e4d552a602756e54a222f589a03f2",
+      "archive_sha256": "5440d16da91911528bb6c0035577fcc6c19e4d552a602756e54a222f589a03f2",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/run-1/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/run-1/meta.json",
+      "source_sha256": "ac5149fe95796cca34adf4fa48e88ccf82f35f8ad29e8c65375b8f3de030bf97",
+      "archive_sha256": "ac5149fe95796cca34adf4fa48e88ccf82f35f8ad29e8c65375b8f3de030bf97",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/run-1/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/run-1/command.json",
+      "source_sha256": "6e5d45b7216a332e6abc7e1a3d3a2c2c24b4026fe57a7c4908d1356174157384",
+      "archive_sha256": "6e5d45b7216a332e6abc7e1a3d3a2c2c24b4026fe57a7c4908d1356174157384",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/single-validation/run-1/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/single-validation/run-1/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1536/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1536/vmstat.txt",
+      "source_sha256": "946b55514a5d3ca02c8e7a628648f20624498256a9b0e289374a72eb814af832",
+      "archive_sha256": "946b55514a5d3ca02c8e7a628648f20624498256a9b0e289374a72eb814af832",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1536/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1536/fio.json",
+      "source_sha256": "fc4500df8cb22cad944355409c264ee62f164b3ebf33266e27a4a94a892380f9",
+      "archive_sha256": "fc4500df8cb22cad944355409c264ee62f164b3ebf33266e27a4a94a892380f9",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1536/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1536/iostat.json",
+      "source_sha256": "e5f8ec12f6ccf01695dd70877e15cb8f4f933a885900e93382333fc8e8552d64",
+      "archive_sha256": "e5f8ec12f6ccf01695dd70877e15cb8f4f933a885900e93382333fc8e8552d64",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1536/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1536/meta.json",
+      "source_sha256": "19d0964e016cb5840ad6ea7b03fa997d64cb96984fb7147d09e0aa58232ef892",
+      "archive_sha256": "19d0964e016cb5840ad6ea7b03fa997d64cb96984fb7147d09e0aa58232ef892",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1536/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1536/command.json",
+      "source_sha256": "4e263d8a8149796aad9e66f032e69d531ca2cdbdeb801e80292c65640a427801",
+      "archive_sha256": "4e263d8a8149796aad9e66f032e69d531ca2cdbdeb801e80292c65640a427801",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1536/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1536/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-64/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-64/vmstat.txt",
+      "source_sha256": "bf54ee787668dec3425a6c820fd9a2de4b7e9c7a63d36d6d1ead280af24528c0",
+      "archive_sha256": "bf54ee787668dec3425a6c820fd9a2de4b7e9c7a63d36d6d1ead280af24528c0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-64/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-64/fio.json",
+      "source_sha256": "7da7ee3f5d2a965966460b2a9189db0b7b997798f784f3a3501f22381e99324b",
+      "archive_sha256": "7da7ee3f5d2a965966460b2a9189db0b7b997798f784f3a3501f22381e99324b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-64/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-64/iostat.json",
+      "source_sha256": "10a24e6854a48530dd7a74627ac1cfb93d8db2a3a5f46eb5f79c0c5394e0cd04",
+      "archive_sha256": "10a24e6854a48530dd7a74627ac1cfb93d8db2a3a5f46eb5f79c0c5394e0cd04",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-64/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-64/meta.json",
+      "source_sha256": "d3cc4ba0d675706151d96920027bfd3ce9dde62ea3178e9c5bf33fef06bf92ef",
+      "archive_sha256": "d3cc4ba0d675706151d96920027bfd3ce9dde62ea3178e9c5bf33fef06bf92ef",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-64/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-64/command.json",
+      "source_sha256": "1fb3e797a85297d85526ccbf0c80b1db7b48beaa0ac57e5d239b4a3a877998a4",
+      "archive_sha256": "1fb3e797a85297d85526ccbf0c80b1db7b48beaa0ac57e5d239b4a3a877998a4",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-64/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-64/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-2048/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-2048/vmstat.txt",
+      "source_sha256": "5b86933948919fc59d46ee665e9b367293f7cb734a45a860ea2b63fb2b51cdc8",
+      "archive_sha256": "5b86933948919fc59d46ee665e9b367293f7cb734a45a860ea2b63fb2b51cdc8",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-2048/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-2048/fio.json",
+      "source_sha256": "1b7cb8980b4ff91e1ff38964a119331b9c1df3b94b8dd182b85ea6dc178e22a6",
+      "archive_sha256": "1b7cb8980b4ff91e1ff38964a119331b9c1df3b94b8dd182b85ea6dc178e22a6",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-2048/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-2048/iostat.json",
+      "source_sha256": "2dae4c14e20b2ea04e24762e82c5596cb521ddb226b4def2ab3d7e19664bdf58",
+      "archive_sha256": "2dae4c14e20b2ea04e24762e82c5596cb521ddb226b4def2ab3d7e19664bdf58",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-2048/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-2048/meta.json",
+      "source_sha256": "65b22274fbf3aab70c665ec99a269fdc81925eae8e12487fee290024b0e7d1c9",
+      "archive_sha256": "65b22274fbf3aab70c665ec99a269fdc81925eae8e12487fee290024b0e7d1c9",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-2048/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-2048/command.json",
+      "source_sha256": "2129afa50169bba5854b59b8cb02088e9dd0f3489fe53b7bd528842dd357d5cb",
+      "archive_sha256": "2129afa50169bba5854b59b8cb02088e9dd0f3489fe53b7bd528842dd357d5cb",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-2048/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-2048/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-4/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-4/vmstat.txt",
+      "source_sha256": "4961be7c86274610e2f02483f390e10bd6aecca3949b32e4e5f2590a9fb830fa",
+      "archive_sha256": "4961be7c86274610e2f02483f390e10bd6aecca3949b32e4e5f2590a9fb830fa",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-4/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-4/fio.json",
+      "source_sha256": "c4d03e3e40e57230fb972f3e19ea9736265662286fdd398c6678d616fb8cfae0",
+      "archive_sha256": "c4d03e3e40e57230fb972f3e19ea9736265662286fdd398c6678d616fb8cfae0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-4/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-4/iostat.json",
+      "source_sha256": "cc6097e265626e18d021a9d439d40227d711d4a4203d9c41c8e573cffa788bf7",
+      "archive_sha256": "cc6097e265626e18d021a9d439d40227d711d4a4203d9c41c8e573cffa788bf7",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-4/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-4/meta.json",
+      "source_sha256": "edd3e788e4566b4b2e61f17955eea67ba6df5ec56f29526d2b0f53a52c2e7b77",
+      "archive_sha256": "edd3e788e4566b4b2e61f17955eea67ba6df5ec56f29526d2b0f53a52c2e7b77",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-4/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-4/command.json",
+      "source_sha256": "1acf609865c8782df98a4554b3d8c796d7423bcf88b4ac1b2562df204f7fa3f0",
+      "archive_sha256": "1acf609865c8782df98a4554b3d8c796d7423bcf88b4ac1b2562df204f7fa3f0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-4/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-4/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-32/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-32/vmstat.txt",
+      "source_sha256": "e53efa2735da0c32603ec551faf52e92cb11bd11dbe0c56e8ed258582d850ce0",
+      "archive_sha256": "e53efa2735da0c32603ec551faf52e92cb11bd11dbe0c56e8ed258582d850ce0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-32/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-32/fio.json",
+      "source_sha256": "ddabe39bc8417829e3a1ccbdf8c800d0b2193afa3bea9b2bc3388dd051144766",
+      "archive_sha256": "ddabe39bc8417829e3a1ccbdf8c800d0b2193afa3bea9b2bc3388dd051144766",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-32/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-32/iostat.json",
+      "source_sha256": "025f208aede3d0a40f77b2f9730859a56a9059f8935d437869763d6b91f4c497",
+      "archive_sha256": "025f208aede3d0a40f77b2f9730859a56a9059f8935d437869763d6b91f4c497",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-32/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-32/meta.json",
+      "source_sha256": "444e83fbf3a38f861e78c5152301da0007776e60bd58f0d755e53f4d7dfa7b77",
+      "archive_sha256": "444e83fbf3a38f861e78c5152301da0007776e60bd58f0d755e53f4d7dfa7b77",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-32/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-32/command.json",
+      "source_sha256": "8f8d7e7feee0dde5544d1b5f65fb5631ec05ab8d3d5c2b037fedc18433b5179f",
+      "archive_sha256": "8f8d7e7feee0dde5544d1b5f65fb5631ec05ab8d3d5c2b037fedc18433b5179f",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-32/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-32/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1024/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1024/vmstat.txt",
+      "source_sha256": "4d5fc2d5c4c223e6ae00c7d589663ad656bc2d870a1c5d16d583d0cd467a42ef",
+      "archive_sha256": "4d5fc2d5c4c223e6ae00c7d589663ad656bc2d870a1c5d16d583d0cd467a42ef",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1024/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1024/fio.json",
+      "source_sha256": "4c620cc4e0df3af998caf4e9badc2cbf8f7e97b7a1be079000ddd20f351c1530",
+      "archive_sha256": "4c620cc4e0df3af998caf4e9badc2cbf8f7e97b7a1be079000ddd20f351c1530",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1024/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1024/iostat.json",
+      "source_sha256": "9c209c6fead646df6301321977e4ede4f1dd2788cb234e9f24912109df49d8d5",
+      "archive_sha256": "9c209c6fead646df6301321977e4ede4f1dd2788cb234e9f24912109df49d8d5",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1024/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1024/meta.json",
+      "source_sha256": "5ff681aa1a05e2be5296b8afc3af028e3d7d20b65e9c0ee29bd6d8dba0a63fae",
+      "archive_sha256": "5ff681aa1a05e2be5296b8afc3af028e3d7d20b65e9c0ee29bd6d8dba0a63fae",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1024/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1024/command.json",
+      "source_sha256": "87b254e7cab6d174595f8313dc2f71b0905c2c24eac8f2e1a91c070ba4ab1887",
+      "archive_sha256": "87b254e7cab6d174595f8313dc2f71b0905c2c24eac8f2e1a91c070ba4ab1887",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1024/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1024/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1/vmstat.txt",
+      "source_sha256": "47ac88f7cbe3db213d781d6d226b5ef21191ce4004c12e3ae452f3d70d06aadb",
+      "archive_sha256": "47ac88f7cbe3db213d781d6d226b5ef21191ce4004c12e3ae452f3d70d06aadb",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1/fio.json",
+      "source_sha256": "450ec6fae4d64bdfacaf0198f0358e8362f89f4d18d3d379085999476e04fde9",
+      "archive_sha256": "450ec6fae4d64bdfacaf0198f0358e8362f89f4d18d3d379085999476e04fde9",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1/iostat.json",
+      "source_sha256": "1e9861ad4211fac51328782b8e6dfe8f7fb527d0472982d795f67a7586672f7b",
+      "archive_sha256": "1e9861ad4211fac51328782b8e6dfe8f7fb527d0472982d795f67a7586672f7b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1/meta.json",
+      "source_sha256": "335b9942895b7842a21afa587a02114484101f259b3dbf65278aaf3a515d366b",
+      "archive_sha256": "335b9942895b7842a21afa587a02114484101f259b3dbf65278aaf3a515d366b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1/command.json",
+      "source_sha256": "6c46a298c1f337a509dcd901f7856aaa93043586f5f39da5fc2612539c38a519",
+      "archive_sha256": "6c46a298c1f337a509dcd901f7856aaa93043586f5f39da5fc2612539c38a519",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-1/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-1/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-16/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-16/vmstat.txt",
+      "source_sha256": "e946cca78db594e87bb0dd7c3b68cbfde857699068d98080f7beff33e67d26e7",
+      "archive_sha256": "e946cca78db594e87bb0dd7c3b68cbfde857699068d98080f7beff33e67d26e7",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-16/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-16/fio.json",
+      "source_sha256": "a6727e1b186cac65793441b19084689747d8aac128ad48eaa57aa32f9ccd2e40",
+      "archive_sha256": "a6727e1b186cac65793441b19084689747d8aac128ad48eaa57aa32f9ccd2e40",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-16/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-16/iostat.json",
+      "source_sha256": "9770cb8fa7018ccb35eeb9e5bbd6c787626e3fb7e9ea2ec531b4c584e8f9dd14",
+      "archive_sha256": "9770cb8fa7018ccb35eeb9e5bbd6c787626e3fb7e9ea2ec531b4c584e8f9dd14",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-16/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-16/meta.json",
+      "source_sha256": "b9848d3997321a1bd2f8de0bfb287bbbf87b83dab8535faa97b4cb2b3e6449d8",
+      "archive_sha256": "b9848d3997321a1bd2f8de0bfb287bbbf87b83dab8535faa97b4cb2b3e6449d8",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-16/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-16/command.json",
+      "source_sha256": "89af285a2165e37bd02f7adf085dfdba43b063aa5e666824c7c7349232744dfa",
+      "archive_sha256": "89af285a2165e37bd02f7adf085dfdba43b063aa5e666824c7c7349232744dfa",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-16/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-16/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-256/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-256/vmstat.txt",
+      "source_sha256": "025fe1fa65ffd2f4f896fe8a45d6ee69e0f5ac0403fd8d02e368da87bdd0bae0",
+      "archive_sha256": "025fe1fa65ffd2f4f896fe8a45d6ee69e0f5ac0403fd8d02e368da87bdd0bae0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-256/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-256/fio.json",
+      "source_sha256": "e4bf3ea4616e1a5a73b3bc822d2a492b8200523a5ea135971eee66f43402b765",
+      "archive_sha256": "e4bf3ea4616e1a5a73b3bc822d2a492b8200523a5ea135971eee66f43402b765",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-256/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-256/iostat.json",
+      "source_sha256": "7e460411f57100b2b05a7ac207ad55aefe993fe3a510b3440ecd016f14230926",
+      "archive_sha256": "7e460411f57100b2b05a7ac207ad55aefe993fe3a510b3440ecd016f14230926",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-256/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-256/meta.json",
+      "source_sha256": "1a3772e4d24f19598fe1d509ed67bea3bb3a5fa232b96e0bcdd709b20cfdb25e",
+      "archive_sha256": "1a3772e4d24f19598fe1d509ed67bea3bb3a5fa232b96e0bcdd709b20cfdb25e",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-256/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-256/command.json",
+      "source_sha256": "a8defd4abc811048c9eb8ef8d21037825698fc5346a83ea5b1a3ceb10aa64973",
+      "archive_sha256": "a8defd4abc811048c9eb8ef8d21037825698fc5346a83ea5b1a3ceb10aa64973",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-4k-repro/artifacts/run-256/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-repro/artifacts/run-256/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/analyze.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/analyze.py",
+      "source_sha256": "30e1a584f4532782683344f2950523f110ab66708d403e97310aa83d12853ac0",
+      "archive_sha256": "30e1a584f4532782683344f2950523f110ab66708d403e97310aa83d12853ac0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/state.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/infrastructure-state.json",
+      "source_sha256": "a627c8f5bf129bdf7ea83da871e7e831db96a4921b33bb7ac58117649f36e26d",
+      "archive_sha256": "a627c8f5bf129bdf7ea83da871e7e831db96a4921b33bb7ac58117649f36e26d",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/cloud-init.yml",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/cloud-init.yml",
+      "source_sha256": "22fde8a6c9e583b8681854fbd86fe5f6766247ba42cf6dc1f601efcdc66574b5",
+      "archive_sha256": "22fde8a6c9e583b8681854fbd86fe5f6766247ba42cf6dc1f601efcdc66574b5",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/requirements.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/requirements.txt",
+      "source_sha256": "de950d3b75e4ad1a760c121533e06390c84574f7dd0b53c0eaa742ab6d5c2f38",
+      "archive_sha256": "de950d3b75e4ad1a760c121533e06390c84574f7dd0b53c0eaa742ab6d5c2f38",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/collect.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/collect.py",
+      "source_sha256": "625fd4c2f183d12d51b74580ab8b4228dd6f8da67f1e5ad6705076cd647c170f",
+      "archive_sha256": "625fd4c2f183d12d51b74580ab8b4228dd6f8da67f1e5ad6705076cd647c170f",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/.gitignore",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/.gitignore",
+      "source_sha256": "8703757d0b46c0ffcb02ead43f20a7825e7ba37ee9686d4c87db3b9f60b43aee",
+      "archive_sha256": "8703757d0b46c0ffcb02ead43f20a7825e7ba37ee9686d4c87db3b9f60b43aee",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/guest-test.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/guest-test.py",
+      "source_sha256": "d05f5c4117241e296227337ae258d4f9c33e8e5326bf7b43702b43cc3b0277ce",
+      "archive_sha256": "d05f5c4117241e296227337ae258d4f9c33e8e5326bf7b43702b43cc3b0277ce",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/provision.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/provision.py",
+      "source_sha256": "c65784e8c954e35c7ba0c763e928057f2d071807d9fa7482af95392b8e289e93",
+      "archive_sha256": "c65784e8c954e35c7ba0c763e928057f2d071807d9fa7482af95392b8e289e93",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/poll.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/poll.py",
+      "source_sha256": "321747e99e002ab90bad634fa9e238e56dd0d098378c87c72b59f0ea1d4b89ea",
+      "archive_sha256": "321747e99e002ab90bad634fa9e238e56dd0d098378c87c72b59f0ea1d4b89ea",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/teardown.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/teardown.py",
+      "source_sha256": "02508775ea2530d51d69b3958cac704439cbeeb7954110ec3bec442edf2ad2f7",
+      "archive_sha256": "02508775ea2530d51d69b3958cac704439cbeeb7954110ec3bec442edf2ad2f7",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/REPORT.md",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/REPORT.md",
+      "source_sha256": "ef64bc8f2a58a08fc904e9383941013a591914f6465d46d39098a805748ce787",
+      "archive_sha256": "ef64bc8f2a58a08fc904e9383941013a591914f6465d46d39098a805748ce787",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/README.md",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/README.md",
+      "source_sha256": "2c59ca15984fb6c1d0308ac1f291e45403dcca5160fce4587406e7273655d8f9",
+      "archive_sha256": "2c59ca15984fb6c1d0308ac1f291e45403dcca5160fce4587406e7273655d8f9",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/run.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/run.py",
+      "source_sha256": "a7fb4ae8b99e6e1dc9156053d6179ef72b41ec50a938365d577d37c354957708",
+      "archive_sha256": "a7fb4ae8b99e6e1dc9156053d6179ef72b41ec50a938365d577d37c354957708",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/regional-validation.md",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/regional-validation.md",
+      "source_sha256": "70de5387458fb1a659457ac76b253bf5385264f8446c5bf8dea8f2f3251cae17",
+      "archive_sha256": "70de5387458fb1a659457ac76b253bf5385264f8446c5bf8dea8f2f3251cae17",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/resources-before-cleanup.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/resources-before-cleanup.json",
+      "source_sha256": "78ae220131cbc86eb4a49bc47cf81397facc0a76d2f81b13d3ba2deb84890fb5",
+      "archive_sha256": "78ae220131cbc86eb4a49bc47cf81397facc0a76d2f81b13d3ba2deb84890fb5",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/validation.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/validation.json",
+      "source_sha256": "b9360fdf7dca3034b370c0fd94f7c72a6f9f51f90f6b24e682cc211a88e49ebc",
+      "archive_sha256": "b9360fdf7dca3034b370c0fd94f7c72a6f9f51f90f6b24e682cc211a88e49ebc",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/host-metrics.json.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/host-metrics.json.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/provision-vm-d4sv3.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/provision-vm-d4sv3.log",
+      "source_sha256": "d5b7788f37f3f0322d2161b00e05a9f9d86b0b3540137fd6582fa781735caa48",
+      "archive_sha256": "d5b7788f37f3f0322d2161b00e05a9f9d86b0b3540137fd6582fa781735caa48",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/disk-definitions.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/disk-definitions.json",
+      "source_sha256": "6981031c81bc3e342c5db6719867e236d35ca67dfc39b07f9f0082fb41518dfd",
+      "archive_sha256": "6981031c81bc3e342c5db6719867e236d35ca67dfc39b07f9f0082fb41518dfd",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/provision-vm.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/provision-vm.log",
+      "source_sha256": "d7c6570194bcb8ce47567d51bcd52bc0b131da23e6824b0e6d792aaedc238741",
+      "archive_sha256": "d7c6570194bcb8ce47567d51bcd52bc0b131da23e6824b0e6d792aaedc238741",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/disk-metrics.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/disk-metrics.json",
+      "source_sha256": "303bd0e9388627bb746e08befbe75f578f6240bd60a40114249be297cf929c41",
+      "archive_sha256": "303bd0e9388627bb746e08befbe75f578f6240bd60a40114249be297cf929c41",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/analysis-progress.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/analysis-progress.log",
+      "source_sha256": "c6fe39264d2ed42e200471aa41cc29187096d63379a38a2c8b2a252a4895b38d",
+      "archive_sha256": "c6fe39264d2ed42e200471aa41cc29187096d63379a38a2c8b2a252a4895b38d",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/disk.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/disk.json",
+      "source_sha256": "7307e4fe66e3aa8cfc5c0fbce4bad6dc5b5bbe832ac189c3b808a08e4018d729",
+      "archive_sha256": "7307e4fe66e3aa8cfc5c0fbce4bad6dc5b5bbe832ac189c3b808a08e4018d729",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/unused-nvme-vm.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/unused-nvme-vm.json",
+      "source_sha256": "9dc2f8f05710c59cd212462368b396e33c20b3152e11f25ccf3bb06fe7accbd5",
+      "archive_sha256": "9dc2f8f05710c59cd212462368b396e33c20b3152e11f25ccf3bb06fe7accbd5",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/guest.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/guest.txt",
+      "source_sha256": "0d4fedef684c1f9ea6e2369a0a49eeeedbceb6510e4b286a7f27c99c7aa628a1",
+      "archive_sha256": "0d4fedef684c1f9ea6e2369a0a49eeeedbceb6510e4b286a7f27c99c7aa628a1",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/provision-vm-zone3.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/provision-vm-zone3.log",
+      "source_sha256": "a99e9e354e760bf8f2dc39e9bb3ad4cf38e366ad047e63bef195bd32b9d3b759",
+      "archive_sha256": "a99e9e354e760bf8f2dc39e9bb3ad4cf38e366ad047e63bef195bd32b9d3b759",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/final-analysis.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/final-analysis.log",
+      "source_sha256": "a7c3d87018c6e9a8037e7db5fd3198310b9319f1d0e8722b6035d570923c9067",
+      "archive_sha256": "a7c3d87018c6e9a8037e7db5fd3198310b9319f1d0e8722b6035d570923c9067",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/provision-vm-e4sv3.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/provision-vm-e4sv3.log",
+      "source_sha256": "70f184c1568a8f61fed4103b3400b11e28672a5ab669052a43a86caa03640872",
+      "archive_sha256": "70f184c1568a8f61fed4103b3400b11e28672a5ab669052a43a86caa03640872",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/queue-topology-command.py",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/queue-topology-command.py",
+      "source_sha256": "ffa3cb4bc7efda1c332f47823bffb37aca72dc71b2874a0b9989ed8ba3edc9f1",
+      "archive_sha256": "ffa3cb4bc7efda1c332f47823bffb37aca72dc71b2874a0b9989ed8ba3edc9f1",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/vm-metrics.json.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/vm-metrics.json.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/config.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/config.json",
+      "source_sha256": "34b24707f77c8f7357877a605e93473dbe5ec3d2ce90532a4aebaca2229c27b7",
+      "archive_sha256": "34b24707f77c8f7357877a605e93473dbe5ec3d2ce90532a4aebaca2229c27b7",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/guest-test.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/guest-test.log",
+      "source_sha256": "fb116102e783214fe24ef4428639ddddcd276bec084ccc7c32c813e757ae53ab",
+      "archive_sha256": "fb116102e783214fe24ef4428639ddddcd276bec084ccc7c32c813e757ae53ab",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/provision-vm-d4sv6.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/provision-vm-d4sv6.log",
+      "source_sha256": "f57bec6fc08793394023cb792d6bcb6e855c4cee1a323df72fa48f519ef535c1",
+      "archive_sha256": "f57bec6fc08793394023cb792d6bcb6e855c4cee1a323df72fa48f519ef535c1",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/provision-vm-e4dsv4.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/provision-vm-e4dsv4.log",
+      "source_sha256": "f8baef113ec2cf69c010d2cb2c6f4cd1b37f623d0c996971e03750338f16b3c4",
+      "archive_sha256": "f8baef113ec2cf69c010d2cb2c6f4cd1b37f623d0c996971e03750338f16b3c4",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/snapshots-before.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/snapshots-before.json",
+      "source_sha256": "3b9ce471366b9e8d42dbabc15e61b0c15f724a0914973fe6e6fc730a3e6f6f64",
+      "archive_sha256": "3b9ce471366b9e8d42dbabc15e61b0c15f724a0914973fe6e6fc730a3e6f6f64",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/vm-metrics.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/vm-metrics.json",
+      "source_sha256": "a2afe629da8d894ed68d66ac55d45776de3e2f41f6dd6ca9a90e83fb98f175f8",
+      "archive_sha256": "a2afe629da8d894ed68d66ac55d45776de3e2f41f6dd6ca9a90e83fb98f175f8",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/provision-vm-zone2.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/provision-vm-zone2.log",
+      "source_sha256": "b6f48fbd9abbb3976aa1f4a37672627b94033490a9e6c3e7fd5f677591ef9281",
+      "archive_sha256": "b6f48fbd9abbb3976aa1f4a37672627b94033490a9e6c3e7fd5f677591ef9281",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/vm-definitions.json.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/vm-definitions.json.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/controller-complete.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/controller-complete.json",
+      "source_sha256": "72c51f0a5a779edf0bc2403e2a2190e57ec3d54b5efb1ac36127b119fea3a0fb",
+      "archive_sha256": "72c51f0a5a779edf0bc2403e2a2190e57ec3d54b5efb1ac36127b119fea3a0fb",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/collect-progress.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/collect-progress.log",
+      "source_sha256": "a655e4d19f7bc6e2c69bc80a2eb5a917726359288a16ec0c44cea55f652d2e97",
+      "archive_sha256": "a655e4d19f7bc6e2c69bc80a2eb5a917726359288a16ec0c44cea55f652d2e97",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/provision-vm-d4ds.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/provision-vm-d4ds.log",
+      "source_sha256": "f73af1c0be8a30e482ff0873da54434307c229eee2f88fc8bd1d05826bda6817",
+      "archive_sha256": "f73af1c0be8a30e482ff0873da54434307c229eee2f88fc8bd1d05826bda6817",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/provision-vm-f4sv2.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/provision-vm-f4sv2.log",
+      "source_sha256": "4d1380c04b5ec8db9ec0ed209054abc7f87df33d839e5e7955280146a96d43c1",
+      "archive_sha256": "4d1380c04b5ec8db9ec0ed209054abc7f87df33d839e5e7955280146a96d43c1",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/vm-definitions.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/vm-definitions.json",
+      "source_sha256": "6ab0089480bf960ca09d7acf81195bac21c95f90bcafe5df117b61d65608aaae",
+      "archive_sha256": "6ab0089480bf960ca09d7acf81195bac21c95f90bcafe5df117b61d65608aaae",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/teardown.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/teardown.log",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/host-metrics.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/host-metrics.json",
+      "source_sha256": "7a6280238b6f57a5222b30e747ac3b974ff82a9cf4780cc3ddcda6b3ca379612",
+      "archive_sha256": "7a6280238b6f57a5222b30e747ac3b974ff82a9cf4780cc3ddcda6b3ca379612",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/provision-vm-zone1.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/provision-vm-zone1.log",
+      "source_sha256": "dee23dab0e4c13e1b44abc7aa23a49281547cc76fee8f562790a081b22e0bad8",
+      "archive_sha256": "dee23dab0e4c13e1b44abc7aa23a49281547cc76fee8f562790a081b22e0bad8",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/disk-definitions.json.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/disk-definitions.json.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/provision-vm-d4v4.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/provision-vm-d4v4.log",
+      "source_sha256": "90356cd9ff5bf8f9728ffbe66f79a017be3199b83ccd2a6165a5a20f4b6ae3b2",
+      "archive_sha256": "90356cd9ff5bf8f9728ffbe66f79a017be3199b83ccd2a6165a5a20f4b6ae3b2",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/complete.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/complete.json",
+      "source_sha256": "646c13c051b150bd55d02db3b76b77222e308b479e5dc5a1074dbf23e26671cd",
+      "archive_sha256": "646c13c051b150bd55d02db3b76b77222e308b479e5dc5a1074dbf23e26671cd",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/queue-topology.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/queue-topology.json",
+      "source_sha256": "70f27895027a950b5614efc25cd56a1e2eb980dd877fd8793b0a0a2bfc496248",
+      "archive_sha256": "70f27895027a950b5614efc25cd56a1e2eb980dd877fd8793b0a0a2bfc496248",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/provision-vm-d3sv2.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/provision-vm-d3sv2.log",
+      "source_sha256": "cccbdf1165811d758ff5c4f6eb7f2dbb214bd33c4279e2cb8f477ec780e1627b",
+      "archive_sha256": "cccbdf1165811d758ff5c4f6eb7f2dbb214bd33c4279e2cb8f477ec780e1627b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/cleanup.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/cleanup.json",
+      "source_sha256": "ba22d116f5f1fa7f15fadbae82b70ebbc02a3d6c1e772080a0b3a83af3bb1f5a",
+      "archive_sha256": "ba22d116f5f1fa7f15fadbae82b70ebbc02a3d6c1e772080a0b3a83af3bb1f5a",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/disk-metrics.json.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/disk-metrics.json.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/vm.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/vm.json",
+      "source_sha256": "8560e551f4ee15de36c3a6a16cb2dbee60af0abd4e643832b7735c645a1b3cbb",
+      "archive_sha256": "8560e551f4ee15de36c3a6a16cb2dbee60af0abd4e643832b7735c645a1b3cbb",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/provision-vm-d4asv4.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/provision-vm-d4asv4.log",
+      "source_sha256": "952a2b8ede28946a167a7e2881d06dd1777847d69578c8e0c74c822718a3f24e",
+      "archive_sha256": "952a2b8ede28946a167a7e2881d06dd1777847d69578c8e0c74c822718a3f24e",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/vm-initialization.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/vm-initialization.txt",
+      "source_sha256": "e5a761f68681a5e3a35882b942014e49a8c52905597bbbbbfd1a500b7770a104",
+      "archive_sha256": "e5a761f68681a5e3a35882b942014e49a8c52905597bbbbbfd1a500b7770a104",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/provision-vm-e2bsv5.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/provision-vm-e2bsv5.log",
+      "source_sha256": "6123a93bc0de6c1557bf6882877f0036eeee3a8e1ebcff57f4df2ed7d7f78270",
+      "archive_sha256": "6123a93bc0de6c1557bf6882877f0036eeee3a8e1ebcff57f4df2ed7d7f78270",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/controller.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/controller.log",
+      "source_sha256": "95b0aae9771621d886175e1b83d2b0f35144bcfbabffcf0ea63533cd343e507b",
+      "archive_sha256": "95b0aae9771621d886175e1b83d2b0f35144bcfbabffcf0ea63533cd343e507b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-512/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-512/vmstat.txt",
+      "source_sha256": "1ad66961b4c5edebf4e6d9e6f37cd691c18d194c2c34600d99735d8c80dd96b8",
+      "archive_sha256": "1ad66961b4c5edebf4e6d9e6f37cd691c18d194c2c34600d99735d8c80dd96b8",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-512/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-512/fio.json",
+      "source_sha256": "d5586d28484309a43287de7774525d8689e843aecd106b8bd77e6ffb20201d9b",
+      "archive_sha256": "d5586d28484309a43287de7774525d8689e843aecd106b8bd77e6ffb20201d9b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-512/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-512/iostat.json",
+      "source_sha256": "b558ebf1474544c1100d0b446c9068bab903d9383de5e485484daa455d6ef339",
+      "archive_sha256": "b558ebf1474544c1100d0b446c9068bab903d9383de5e485484daa455d6ef339",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-512/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-512/meta.json",
+      "source_sha256": "bbd4cc49408825a963fe4979bb7f55533f77dfed5490768ce3be231a4e2b5809",
+      "archive_sha256": "bbd4cc49408825a963fe4979bb7f55533f77dfed5490768ce3be231a4e2b5809",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-512/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-512/command.json",
+      "source_sha256": "d07b8ed426282e1f7a4916331774e1938ec957ce33a15e603ff5ee228e2de58d",
+      "archive_sha256": "d07b8ed426282e1f7a4916331774e1938ec957ce33a15e603ff5ee228e2de58d",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-512/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-512/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-144/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-144/vmstat.txt",
+      "source_sha256": "240a8c4870a96a0d14215e6e59018d019c559c90d5b08c9efd0197fc04ad8ee6",
+      "archive_sha256": "240a8c4870a96a0d14215e6e59018d019c559c90d5b08c9efd0197fc04ad8ee6",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-144/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-144/fio.json",
+      "source_sha256": "43007d42a5cc864fa331834cf94758e77e6fb77c35efee40e6f5fdbe090d2456",
+      "archive_sha256": "43007d42a5cc864fa331834cf94758e77e6fb77c35efee40e6f5fdbe090d2456",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-144/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-144/iostat.json",
+      "source_sha256": "2ece0987b0437bf668658317dfb060217890308ae387c90d196498482ea4dc09",
+      "archive_sha256": "2ece0987b0437bf668658317dfb060217890308ae387c90d196498482ea4dc09",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-144/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-144/meta.json",
+      "source_sha256": "10f0d1762d8fa88142fabfdcf84da57a01d30fb62b26e1e7446f05ce146754f6",
+      "archive_sha256": "10f0d1762d8fa88142fabfdcf84da57a01d30fb62b26e1e7446f05ce146754f6",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-144/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-144/command.json",
+      "source_sha256": "6c7a691807d2871056bad1c640baa9ec4625a55e3ca75da37ecc254fbc51e69c",
+      "archive_sha256": "6c7a691807d2871056bad1c640baa9ec4625a55e3ca75da37ecc254fbc51e69c",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-144/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-144/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-160/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-160/vmstat.txt",
+      "source_sha256": "a6cdd6c517d6147229c9898c96fb0052b4dfe36f036c1811c8212b35e236da6f",
+      "archive_sha256": "a6cdd6c517d6147229c9898c96fb0052b4dfe36f036c1811c8212b35e236da6f",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-160/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-160/fio.json",
+      "source_sha256": "0defceac2cf444aa5b24045a08272b6e535578075600a1ca7b435b2d6f364938",
+      "archive_sha256": "0defceac2cf444aa5b24045a08272b6e535578075600a1ca7b435b2d6f364938",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-160/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-160/iostat.json",
+      "source_sha256": "9d740365e0bccf533ab0ed36d7bf55bddd04d898ab729b278be5ad76dd31b8a3",
+      "archive_sha256": "9d740365e0bccf533ab0ed36d7bf55bddd04d898ab729b278be5ad76dd31b8a3",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-160/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-160/meta.json",
+      "source_sha256": "fbb3ecf2f2d8d93166fe0dcbe73743b4b2380def7c138295ab173978aa62ee9d",
+      "archive_sha256": "fbb3ecf2f2d8d93166fe0dcbe73743b4b2380def7c138295ab173978aa62ee9d",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-160/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-160/command.json",
+      "source_sha256": "f6da1d82e8ae0dd379de725358b505c5c7e414d9eb62796b89a658047aeb7b44",
+      "archive_sha256": "f6da1d82e8ae0dd379de725358b505c5c7e414d9eb62796b89a658047aeb7b44",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-160/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-160/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-8/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-8/vmstat.txt",
+      "source_sha256": "262c1f62b2228d05df3833eb0708e418ff931b0565c8884710356a991fdf4217",
+      "archive_sha256": "262c1f62b2228d05df3833eb0708e418ff931b0565c8884710356a991fdf4217",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-8/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-8/fio.json",
+      "source_sha256": "abcb9f72b362ff0feb24ad48e40e6f786e5709eb629569fb5d8cab3503135c11",
+      "archive_sha256": "abcb9f72b362ff0feb24ad48e40e6f786e5709eb629569fb5d8cab3503135c11",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-8/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-8/iostat.json",
+      "source_sha256": "ef3a30e2ae96447a54ec5d548cfb3aa9ea0c3b171691990271d11f70b91de903",
+      "archive_sha256": "ef3a30e2ae96447a54ec5d548cfb3aa9ea0c3b171691990271d11f70b91de903",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-8/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-8/meta.json",
+      "source_sha256": "d9ab8314453e9d53b98f6a87e16d2895cbb6684a90eff3319155713b739d1bfa",
+      "archive_sha256": "d9ab8314453e9d53b98f6a87e16d2895cbb6684a90eff3319155713b739d1bfa",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-8/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-8/command.json",
+      "source_sha256": "82c4aab2b55b7087d8363071d60f82a6711d18a6c68d7dccfb270fe79f8fa22c",
+      "archive_sha256": "82c4aab2b55b7087d8363071d60f82a6711d18a6c68d7dccfb270fe79f8fa22c",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-8/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-8/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/analysis/throughput.png",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/analysis/throughput.png",
+      "source_sha256": "5598203e234865c12e7a7464b6e6bd42816feb6438088991553dd403cac9ccf6",
+      "archive_sha256": "5598203e234865c12e7a7464b6e6bd42816feb6438088991553dd403cac9ccf6",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/analysis/summary.csv",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/analysis/summary.csv",
+      "source_sha256": "019c71f84d21ca6fe30b2e85364567fa574882c0384258a0955fd4db9e2719b9",
+      "archive_sha256": "019c71f84d21ca6fe30b2e85364567fa574882c0384258a0955fd4db9e2719b9",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/analysis/throughput-low-threads.png",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/analysis/throughput-low-threads.png",
+      "source_sha256": "b83a50b151c9d38630c783657fc90fbe6bf9b0235828d671bd7a2c6190ff3e57",
+      "archive_sha256": "b83a50b151c9d38630c783657fc90fbe6bf9b0235828d671bd7a2c6190ff3e57",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/analysis/latency.png",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/analysis/latency.png",
+      "source_sha256": "12974fdc0cae76a65474433aa1a1981ab6d6fe6b8d30bd1684c19ab6ca4094fd",
+      "archive_sha256": "12974fdc0cae76a65474433aa1a1981ab6d6fe6b8d30bd1684c19ab6ca4094fd",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/analysis/azure-minute-points.csv",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/analysis/azure-minute-points.csv",
+      "source_sha256": "44efa73a5505425b0a796b4b94a460762df268641df1ff9745195206bc2a5a38",
+      "archive_sha256": "44efa73a5505425b0a796b4b94a460762df268641df1ff9745195206bc2a5a38",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/analysis/report.md",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/analysis/report.md",
+      "source_sha256": "9037391ec65916e54eb50b66af4f3c0a3fe63ae2e3653013407e6518a8d96686",
+      "archive_sha256": "9037391ec65916e54eb50b66af4f3c0a3fe63ae2e3653013407e6518a8d96686",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-768/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-768/vmstat.txt",
+      "source_sha256": "1f2f4e7ba120a03a40b86a69d42fe32ba600cd13a17ffe76867dccdf06dd0ce8",
+      "archive_sha256": "1f2f4e7ba120a03a40b86a69d42fe32ba600cd13a17ffe76867dccdf06dd0ce8",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-768/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-768/fio.json",
+      "source_sha256": "9668157a276a76d29bfc1f892148bb3bac808e5bc8f53dffc30050ade6549276",
+      "archive_sha256": "9668157a276a76d29bfc1f892148bb3bac808e5bc8f53dffc30050ade6549276",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-768/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-768/iostat.json",
+      "source_sha256": "89ae5274cafb1c065676388c8f6aac53ac0868903e4888fc47a275eb4883c8a2",
+      "archive_sha256": "89ae5274cafb1c065676388c8f6aac53ac0868903e4888fc47a275eb4883c8a2",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-768/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-768/meta.json",
+      "source_sha256": "0623081b4dd59ef23905b29eb60a9035d7a26ed9e22ce419759eb8d31c912f85",
+      "archive_sha256": "0623081b4dd59ef23905b29eb60a9035d7a26ed9e22ce419759eb8d31c912f85",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-768/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-768/command.json",
+      "source_sha256": "18d757d21029a02f13d6661ff97d9b3b27e3d80daf4af29e6b51f1dc9ae7149b",
+      "archive_sha256": "18d757d21029a02f13d6661ff97d9b3b27e3d80daf4af29e6b51f1dc9ae7149b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-768/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-768/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-2/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-2/vmstat.txt",
+      "source_sha256": "c77f65f27b000088bff3baef80deeae6d8868eb03e093c0fc875a8a026b0478c",
+      "archive_sha256": "c77f65f27b000088bff3baef80deeae6d8868eb03e093c0fc875a8a026b0478c",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-2/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-2/fio.json",
+      "source_sha256": "08d8e7ef313294c5db2d82f07b20493372ce225066d87437f4c563502e6af87b",
+      "archive_sha256": "08d8e7ef313294c5db2d82f07b20493372ce225066d87437f4c563502e6af87b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-2/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-2/iostat.json",
+      "source_sha256": "a79ce2ff4638800e3360822c474ffd87cdf2e9c5c0cc27bd90d3c1cf7dfcd3a1",
+      "archive_sha256": "a79ce2ff4638800e3360822c474ffd87cdf2e9c5c0cc27bd90d3c1cf7dfcd3a1",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-2/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-2/meta.json",
+      "source_sha256": "38410cf78bad12f133b0a3e69f7de4f876d6cbe58809702b6dcc2278aba86fa8",
+      "archive_sha256": "38410cf78bad12f133b0a3e69f7de4f876d6cbe58809702b6dcc2278aba86fa8",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-2/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-2/command.json",
+      "source_sha256": "e22bc0fc52b122aaaaecd43e1918cb5cbd7105328cdacc5fb9cd4abe68433e33",
+      "archive_sha256": "e22bc0fc52b122aaaaecd43e1918cb5cbd7105328cdacc5fb9cd4abe68433e33",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-2/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-2/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-128/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-128/vmstat.txt",
+      "source_sha256": "76024600cf3633935a38065a4c5bf30663e3c7974bbf24da6bca27ccbc3e2694",
+      "archive_sha256": "76024600cf3633935a38065a4c5bf30663e3c7974bbf24da6bca27ccbc3e2694",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-128/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-128/fio.json",
+      "source_sha256": "8d0f3d0b6792faac2aedfa58f1f9a1ecdaaafba905c92a62f7411cc2ec071bd0",
+      "archive_sha256": "8d0f3d0b6792faac2aedfa58f1f9a1ecdaaafba905c92a62f7411cc2ec071bd0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-128/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-128/iostat.json",
+      "source_sha256": "f306241c773d842b7fb28a654be9a432bdea24340f35f721b1dd9b35e538a556",
+      "archive_sha256": "f306241c773d842b7fb28a654be9a432bdea24340f35f721b1dd9b35e538a556",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-128/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-128/meta.json",
+      "source_sha256": "00eeaf9bc206ea99b41bc97cda82689d87b8d6fb16bf2da247e0f8f6a23fda51",
+      "archive_sha256": "00eeaf9bc206ea99b41bc97cda82689d87b8d6fb16bf2da247e0f8f6a23fda51",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-128/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-128/command.json",
+      "source_sha256": "4f286a96d02bfd7533f650de32064c08d57df2efa4d9e9de1a7062766d56ee5f",
+      "archive_sha256": "4f286a96d02bfd7533f650de32064c08d57df2efa4d9e9de1a7062766d56ee5f",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-128/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-128/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/disk-metrics.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/disk-metrics.json",
+      "source_sha256": "303bd0e9388627bb746e08befbe75f578f6240bd60a40114249be297cf929c41",
+      "archive_sha256": "303bd0e9388627bb746e08befbe75f578f6240bd60a40114249be297cf929c41",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/guest.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/guest.txt",
+      "source_sha256": "60d8a3d3aa2ce46a576d87e557a8cd9d975c91b8622687790c62f8895f938466",
+      "archive_sha256": "60d8a3d3aa2ce46a576d87e557a8cd9d975c91b8622687790c62f8895f938466",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/final-analysis.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/final-analysis.log",
+      "source_sha256": "6541f7d43e782c56ad649ef38c22d19c0ce3a7ba3bfcc5ffce6f45c4357b0882",
+      "archive_sha256": "6541f7d43e782c56ad649ef38c22d19c0ce3a7ba3bfcc5ffce6f45c4357b0882",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/config.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/config.json",
+      "source_sha256": "1d4aeb25045ac49c415b87feda472f8e1865fa39a4a2462ee7eac68592110226",
+      "archive_sha256": "1d4aeb25045ac49c415b87feda472f8e1865fa39a4a2462ee7eac68592110226",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/vm-metrics.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/vm-metrics.json",
+      "source_sha256": "a2afe629da8d894ed68d66ac55d45776de3e2f41f6dd6ca9a90e83fb98f175f8",
+      "archive_sha256": "a2afe629da8d894ed68d66ac55d45776de3e2f41f6dd6ca9a90e83fb98f175f8",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/repeat-test.log",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/repeat-test.log",
+      "source_sha256": "69dd9b3454a6fd4ae10c745c4080ff5f749f8faf61724183ff5476181a562b4b",
+      "archive_sha256": "69dd9b3454a6fd4ae10c745c4080ff5f749f8faf61724183ff5476181a562b4b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/host-metrics.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/host-metrics.json",
+      "source_sha256": "7a6280238b6f57a5222b30e747ac3b974ff82a9cf4780cc3ddcda6b3ca379612",
+      "archive_sha256": "7a6280238b6f57a5222b30e747ac3b974ff82a9cf4780cc3ddcda6b3ca379612",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/complete.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/complete.json",
+      "source_sha256": "4e42e84992f07e35f28e6188f2a2f82c8c1fa09efc77b2606d1a99d595ed55e0",
+      "archive_sha256": "4e42e84992f07e35f28e6188f2a2f82c8c1fa09efc77b2606d1a99d595ed55e0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/analysis/throughput.png",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/analysis/throughput.png",
+      "source_sha256": "5a6069d3325c571c33047ba81810a6762cf24e26c1b0397d3a0f519b8d9c5632",
+      "archive_sha256": "5a6069d3325c571c33047ba81810a6762cf24e26c1b0397d3a0f519b8d9c5632",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/analysis/summary.csv",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/analysis/summary.csv",
+      "source_sha256": "b1906d69b06f21496b79772c557f7db97c64fcc3a1298eab154de3a3013b9a80",
+      "archive_sha256": "b1906d69b06f21496b79772c557f7db97c64fcc3a1298eab154de3a3013b9a80",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/analysis/throughput-low-threads.png",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/analysis/throughput-low-threads.png",
+      "source_sha256": "26b4186487d450482ada2e552cb20856fd45346c820be147e1da0dec78b3ff85",
+      "archive_sha256": "26b4186487d450482ada2e552cb20856fd45346c820be147e1da0dec78b3ff85",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/analysis/latency.png",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/analysis/latency.png",
+      "source_sha256": "dc84be0e20da8f47ab56890c106ce605fa4a95f5e91a63ae474b8b4d1a4daa2f",
+      "archive_sha256": "dc84be0e20da8f47ab56890c106ce605fa4a95f5e91a63ae474b8b4d1a4daa2f",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/analysis/azure-minute-points.csv",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/analysis/azure-minute-points.csv",
+      "source_sha256": "44efa73a5505425b0a796b4b94a460762df268641df1ff9745195206bc2a5a38",
+      "archive_sha256": "44efa73a5505425b0a796b4b94a460762df268641df1ff9745195206bc2a5a38",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/analysis/report.md",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/analysis/report.md",
+      "source_sha256": "86b7f3016486c0fea3ae4d5ed0d0eee8eb24ff70cb0f4b071a4ec76a447e0d72",
+      "archive_sha256": "86b7f3016486c0fea3ae4d5ed0d0eee8eb24ff70cb0f4b071a4ec76a447e0d72",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/run-1/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/run-1/vmstat.txt",
+      "source_sha256": "acd5a7d7bf5e835bac72fba34ec01ecea2c74f1e78090a06cbfacd0ac5f5d1a0",
+      "archive_sha256": "acd5a7d7bf5e835bac72fba34ec01ecea2c74f1e78090a06cbfacd0ac5f5d1a0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/run-1/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/run-1/fio.json",
+      "source_sha256": "a81d28cac0271ce40ed4b67eb0c08a9b9ea8831b917d300ef050671fa587ab0f",
+      "archive_sha256": "a81d28cac0271ce40ed4b67eb0c08a9b9ea8831b917d300ef050671fa587ab0f",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/run-1/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/run-1/iostat.json",
+      "source_sha256": "6f04be7ff7795502a3c740d82918f0d879e26acd34d5a781eabd8faf5eaa9cc4",
+      "archive_sha256": "6f04be7ff7795502a3c740d82918f0d879e26acd34d5a781eabd8faf5eaa9cc4",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/run-1/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/run-1/meta.json",
+      "source_sha256": "f47f446649f0e111e59fb1b07cc2d554ffb16f1c2ee8151bc0bc92a4d0d8bc46",
+      "archive_sha256": "f47f446649f0e111e59fb1b07cc2d554ffb16f1c2ee8151bc0bc92a4d0d8bc46",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/run-1/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/run-1/command.json",
+      "source_sha256": "1f6546ec0338914b4b16d2351a3d967c47579f0490a39a12fe3c555285790aa0",
+      "archive_sha256": "1f6546ec0338914b4b16d2351a3d967c47579f0490a39a12fe3c555285790aa0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/single-validation/run-1/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/single-validation/run-1/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-64/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-64/vmstat.txt",
+      "source_sha256": "cc27673dca0242bd9f9d3469c9d561d0e7f950e700093c52521efd798d070e30",
+      "archive_sha256": "cc27673dca0242bd9f9d3469c9d561d0e7f950e700093c52521efd798d070e30",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-64/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-64/fio.json",
+      "source_sha256": "53aea8cee3bf176922022e4bc33b24fbe33e24dd02049afe7803ed2e8b3e938a",
+      "archive_sha256": "53aea8cee3bf176922022e4bc33b24fbe33e24dd02049afe7803ed2e8b3e938a",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-64/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-64/iostat.json",
+      "source_sha256": "438979237a8ec5b5af4508826aef5fd74ab0305e5e53c4fa57fc3d4d0202dab0",
+      "archive_sha256": "438979237a8ec5b5af4508826aef5fd74ab0305e5e53c4fa57fc3d4d0202dab0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-64/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-64/meta.json",
+      "source_sha256": "bcbd74a77005cb6a984c18274ab5812a449097b84ee9b854f5c1ed35e1931f5a",
+      "archive_sha256": "bcbd74a77005cb6a984c18274ab5812a449097b84ee9b854f5c1ed35e1931f5a",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-64/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-64/command.json",
+      "source_sha256": "ef6c95d4490a07d6051aac12d5d4dc75789e21e18479800ec6e80f93c3b57bb7",
+      "archive_sha256": "ef6c95d4490a07d6051aac12d5d4dc75789e21e18479800ec6e80f93c3b57bb7",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-64/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-64/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-4/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-4/vmstat.txt",
+      "source_sha256": "dac23d2b2f66aef2aa308deb5668bc4fa385e36fbc52c0fd9858021ad3a91aaa",
+      "archive_sha256": "dac23d2b2f66aef2aa308deb5668bc4fa385e36fbc52c0fd9858021ad3a91aaa",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-4/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-4/fio.json",
+      "source_sha256": "8d66bddb09d9a9ecccf0051ab5d65bf0a867407769c4b56bf5406d1e0d7bcdb5",
+      "archive_sha256": "8d66bddb09d9a9ecccf0051ab5d65bf0a867407769c4b56bf5406d1e0d7bcdb5",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-4/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-4/iostat.json",
+      "source_sha256": "094c8001184c7f53adad76ddab560cb244c824b19d0eca02157ab8ad8ea383de",
+      "archive_sha256": "094c8001184c7f53adad76ddab560cb244c824b19d0eca02157ab8ad8ea383de",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-4/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-4/meta.json",
+      "source_sha256": "e113ce8bcd063628ad56347560db2699a4de341b9288e6674e232f2598281f63",
+      "archive_sha256": "e113ce8bcd063628ad56347560db2699a4de341b9288e6674e232f2598281f63",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-4/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-4/command.json",
+      "source_sha256": "0612e904d7e59393660658c3008bc9f7d7ce1d23c02031469aeb2dad01adb890",
+      "archive_sha256": "0612e904d7e59393660658c3008bc9f7d7ce1d23c02031469aeb2dad01adb890",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-4/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-4/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-32/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-32/vmstat.txt",
+      "source_sha256": "c61dcf32a02039b04a6c45f683ec8a6c820a219d4745d99b9ca68d18d01ef261",
+      "archive_sha256": "c61dcf32a02039b04a6c45f683ec8a6c820a219d4745d99b9ca68d18d01ef261",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-32/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-32/fio.json",
+      "source_sha256": "27829aac30d5cd9e179d0c7f95b493c7874c7e917ad7dfa502993a2d7366e3ee",
+      "archive_sha256": "27829aac30d5cd9e179d0c7f95b493c7874c7e917ad7dfa502993a2d7366e3ee",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-32/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-32/iostat.json",
+      "source_sha256": "853dc86e738bce51f4524ee7340c740bb7a558e0bdb4b24fa31903b5bea064e4",
+      "archive_sha256": "853dc86e738bce51f4524ee7340c740bb7a558e0bdb4b24fa31903b5bea064e4",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-32/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-32/meta.json",
+      "source_sha256": "cd1e788e9dddf6c2f3e81813dcfa9a292adefaa9f7bb8aa9bc9000f61422b1d0",
+      "archive_sha256": "cd1e788e9dddf6c2f3e81813dcfa9a292adefaa9f7bb8aa9bc9000f61422b1d0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-32/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-32/command.json",
+      "source_sha256": "f61ebcffecdc84843377ab5f9c3376c66f1d13c5db6a9039f70f531cc5898110",
+      "archive_sha256": "f61ebcffecdc84843377ab5f9c3376c66f1d13c5db6a9039f70f531cc5898110",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-32/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-32/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-1024/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-1024/vmstat.txt",
+      "source_sha256": "58c9a4fe980f9c92a3349673519aadcdd22fe804ad04eb2b28995423180fb162",
+      "archive_sha256": "58c9a4fe980f9c92a3349673519aadcdd22fe804ad04eb2b28995423180fb162",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-1024/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-1024/fio.json",
+      "source_sha256": "5923d9e95df119a17939d16cb652007056c793ee6eab8de496d27d7b4a3117b3",
+      "archive_sha256": "5923d9e95df119a17939d16cb652007056c793ee6eab8de496d27d7b4a3117b3",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-1024/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-1024/iostat.json",
+      "source_sha256": "a994611f8f413361c02fe056a06c9e9bb731caf1faad5b21f66c245cffa86362",
+      "archive_sha256": "a994611f8f413361c02fe056a06c9e9bb731caf1faad5b21f66c245cffa86362",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-1024/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-1024/meta.json",
+      "source_sha256": "e604e746d41e6707cfc7f20618a2cb2791f9229ff3aafb026ff100439c1694fd",
+      "archive_sha256": "e604e746d41e6707cfc7f20618a2cb2791f9229ff3aafb026ff100439c1694fd",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-1024/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-1024/command.json",
+      "source_sha256": "12ae2492714b2eeb6e9201b3cbac62cd476416feaab02b2df04f94e3aa6d2ec7",
+      "archive_sha256": "12ae2492714b2eeb6e9201b3cbac62cd476416feaab02b2df04f94e3aa6d2ec7",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-1024/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-1024/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-1/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-1/vmstat.txt",
+      "source_sha256": "010d9c671417749ac2503755da5d345b4cbfcc21be51dc58524e0fc1be1fa352",
+      "archive_sha256": "010d9c671417749ac2503755da5d345b4cbfcc21be51dc58524e0fc1be1fa352",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-1/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-1/fio.json",
+      "source_sha256": "960ff69f3188f2bfe4f58699c53ef94b9a95a74dbf74091fdd620711384c368b",
+      "archive_sha256": "960ff69f3188f2bfe4f58699c53ef94b9a95a74dbf74091fdd620711384c368b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-1/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-1/iostat.json",
+      "source_sha256": "d8a26a88c480c8101a03cb56094a079aae1e07661471f53c10b01d98019a35e0",
+      "archive_sha256": "d8a26a88c480c8101a03cb56094a079aae1e07661471f53c10b01d98019a35e0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-1/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-1/meta.json",
+      "source_sha256": "ac7264854c777c4da0ecdec83c033bf1617c3037cb8634b750cb5628fda311a9",
+      "archive_sha256": "ac7264854c777c4da0ecdec83c033bf1617c3037cb8634b750cb5628fda311a9",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-1/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-1/command.json",
+      "source_sha256": "f2d92a74b8dfdc8183d93f0f00f845361213df5557bf39ce3efe568f0d798042",
+      "archive_sha256": "f2d92a74b8dfdc8183d93f0f00f845361213df5557bf39ce3efe568f0d798042",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-1/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-1/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-16/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-16/vmstat.txt",
+      "source_sha256": "3b5e7d61611f6ba9677e96861b7cb6c4940b0e814ccd3e37109334b75516e0a9",
+      "archive_sha256": "3b5e7d61611f6ba9677e96861b7cb6c4940b0e814ccd3e37109334b75516e0a9",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-16/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-16/fio.json",
+      "source_sha256": "db022a8f484dbf274267e6ef5a8ab6383f8b198423b75108273448efdee2be19",
+      "archive_sha256": "db022a8f484dbf274267e6ef5a8ab6383f8b198423b75108273448efdee2be19",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-16/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-16/iostat.json",
+      "source_sha256": "159da1de2c5562f39414396cc5e917959eadb8833803fc9c38767581aab4a5cd",
+      "archive_sha256": "159da1de2c5562f39414396cc5e917959eadb8833803fc9c38767581aab4a5cd",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-16/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-16/meta.json",
+      "source_sha256": "cec870cdfe20c637c392de22d2d52886559b1fa6a88eaa0aa55967d0bdd4d427",
+      "archive_sha256": "cec870cdfe20c637c392de22d2d52886559b1fa6a88eaa0aa55967d0bdd4d427",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-16/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-16/command.json",
+      "source_sha256": "b1f98b286941d64cae4825e5ac8e5dacaea2741224734b53c1a1b9117ddbea4e",
+      "archive_sha256": "b1f98b286941d64cae4825e5ac8e5dacaea2741224734b53c1a1b9117ddbea4e",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-16/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-16/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-256/vmstat.txt",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-256/vmstat.txt",
+      "source_sha256": "ee0057ee268076211b2a8f5a6f5144b3900f6a18627a62bfcbbb576d57c962bb",
+      "archive_sha256": "ee0057ee268076211b2a8f5a6f5144b3900f6a18627a62bfcbbb576d57c962bb",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-256/fio.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-256/fio.json",
+      "source_sha256": "888b1773ebecfce9e7d613763069d001b7d433f9ffc6824b469027b994774884",
+      "archive_sha256": "888b1773ebecfce9e7d613763069d001b7d433f9ffc6824b469027b994774884",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-256/iostat.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-256/iostat.json",
+      "source_sha256": "fa3de13edf4d4b3c85f292862d5b30cdd13db5717a78479f0c121dc823132512",
+      "archive_sha256": "fa3de13edf4d4b3c85f292862d5b30cdd13db5717a78479f0c121dc823132512",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-256/meta.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-256/meta.json",
+      "source_sha256": "b1421e654ce22520a1767348fcfddec25ede3fce423da1dee2c64f48d7b6367e",
+      "archive_sha256": "b1421e654ce22520a1767348fcfddec25ede3fce423da1dee2c64f48d7b6367e",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-256/command.json",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-256/command.json",
+      "source_sha256": "25d912c4e1945be728100c0b2314df4d99ea6cc39f87875300186a893383275c",
+      "archive_sha256": "25d912c4e1945be728100c0b2314df4d99ea6cc39f87875300186a893383275c",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-1m-repro/artifacts/run-256/fio.stderr",
+      "archive": "fio-standard-hdd/westus2/fio-hdd-1m-repro/artifacts/run-256/fio.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/cleanup.py",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/cleanup.py",
+      "source_sha256": "f1de65a0ce3797b2a5484438501abadac6f2e43a3eae304552674c1c7c1fbd17",
+      "archive_sha256": "302d482de227db248b4c223f8f894a5e8ebfed91ad46a01554a6a5067ff3d58b",
+      "identical": false
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/state.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/infrastructure-state.json",
+      "source_sha256": "49590ad904048df333432679680dfd891613e3e0765b425c7b91e4ac526f12b4",
+      "archive_sha256": "49590ad904048df333432679680dfd891613e3e0765b425c7b91e4ac526f12b4",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/fast-copy.py",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/fast-copy.py",
+      "source_sha256": "93634787204ef88a380be84183ee781e0fd6dc854f204add895687427a17714b",
+      "archive_sha256": "93634787204ef88a380be84183ee781e0fd6dc854f204add895687427a17714b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/prepare.py",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/prepare.py",
+      "source_sha256": "6de9402111df0aeba770d8151e24a3e21771e9d2ad72c5a49d708ee22be7ef5a",
+      "archive_sha256": "6de9402111df0aeba770d8151e24a3e21771e9d2ad72c5a49d708ee22be7ef5a",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/README.md",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/README.md",
+      "source_sha256": "2f523b0faa93c72d92eda5f09d39d5ab82ad4a239fd9150c31a6806c6f21c701",
+      "archive_sha256": "1f9c5197e6ec3efb4ca95197f25857161ec87b5ae1df1be95f623b29ca0ddd43",
+      "identical": false
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/fast-copy-complete.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/fast-copy-complete.json",
+      "source_sha256": "2bc9529b7e9b8870e2adb2b1f8a10e4e6629a5be5c17e548dfbb2aec574b312b",
+      "archive_sha256": "2bc9529b7e9b8870e2adb2b1f8a10e4e6629a5be5c17e548dfbb2aec574b312b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/import-fast.log",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/import-fast.log",
+      "source_sha256": "1ac35216ff457121250311d9df679b8be31bb865621ff9b10a6efe611c4b37a7",
+      "archive_sha256": "1ac35216ff457121250311d9df679b8be31bb865621ff9b10a6efe611c4b37a7",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/source-snapshot.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/source-snapshot.json",
+      "source_sha256": "44ace71c2cae44e1be30c1195d73b8dd588aae3338d9fc1e8c9a0bd7f073b327",
+      "archive_sha256": "44ace71c2cae44e1be30c1195d73b8dd588aae3338d9fc1e8c9a0bd7f073b327",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/fast-copy-fourth-attempt.log",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/fast-copy-fourth-attempt.log",
+      "source_sha256": "b345f7a8cfd50428a6d3b91db3923caecc7fc4c66d31ddd48d9ac7af051a400f",
+      "archive_sha256": "b345f7a8cfd50428a6d3b91db3923caecc7fc4c66d31ddd48d9ac7af051a400f",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/fixture-manifest.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/fixture-manifest.json",
+      "source_sha256": "2d00af352ceffe2eee177c49878dd4d39e97561fc8b1edb45a23a3a60e443648",
+      "archive_sha256": "2d00af352ceffe2eee177c49878dd4d39e97561fc8b1edb45a23a3a60e443648",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/dsv5-quota-response.stderr",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/dsv5-quota-response.stderr",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/transport-cleanup.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/transport-cleanup.json",
+      "source_sha256": "19efc50de0e8e231a4a51b23a5a0afadca5d3809a8b4cfbbf7a72e19b93f0d80",
+      "archive_sha256": "19efc50de0e8e231a4a51b23a5a0afadca5d3809a8b4cfbbf7a72e19b93f0d80",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/fast-copy-second-attempt.log",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/fast-copy-second-attempt.log",
+      "source_sha256": "10c3cc3c8b6eb5c77c6fcbca06a9185025acbe5d0da1523d622c2d78bdfd4415",
+      "archive_sha256": "10c3cc3c8b6eb5c77c6fcbca06a9185025acbe5d0da1523d622c2d78bdfd4415",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/adopted-fast-copy.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/adopted-fast-copy.json",
+      "source_sha256": "7b0a093bb3e45c44427af1804b397e78b371bfcf04bb81ef4f4f3d2c496762e1",
+      "archive_sha256": "7b0a093bb3e45c44427af1804b397e78b371bfcf04bb81ef4f4f3d2c496762e1",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/dsv5-quota-request.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/dsv5-quota-request.json",
+      "source_sha256": "955b443500e8de0b14808f9355c58720b02f9944146c10471bc7c04fdda527be",
+      "archive_sha256": "955b443500e8de0b14808f9355c58720b02f9944146c10471bc7c04fdda527be",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/snapshots-before.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/snapshots-before.json",
+      "source_sha256": "3b9ce471366b9e8d42dbabc15e61b0c15f724a0914973fe6e6fc730a3e6f6f64",
+      "archive_sha256": "3b9ce471366b9e8d42dbabc15e61b0c15f724a0914973fe6e6fc730a3e6f6f64",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/export-disk.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/export-disk.json",
+      "source_sha256": "a3c93f41d0521887927e647d0a4ec4b1bb1c4c54ac2b1f4e7a5c76fc0dbd07ea",
+      "archive_sha256": "a3c93f41d0521887927e647d0a4ec4b1bb1c4c54ac2b1f4e7a5c76fc0dbd07ea",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/dsv5-quota-response.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/dsv5-quota-response.json",
+      "source_sha256": "69fced5ecbebc2607ac55ad0986ae2e24fb7d96d06b20432311b56689237dc07",
+      "archive_sha256": "69fced5ecbebc2607ac55ad0986ae2e24fb7d96d06b20432311b56689237dc07",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/fast-copy.log",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/fast-copy.log",
+      "source_sha256": "93dc883923d50d63821e3615ee5d0fe8669a1006ee0669fd8027901638f7d3f0",
+      "archive_sha256": "93dc883923d50d63821e3615ee5d0fe8669a1006ee0669fd8027901638f7d3f0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/storage-account.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/storage-account.json",
+      "source_sha256": "f08b6d6bb04b9b28900be70a74ab8f26bcf2613d93a8e576fb32461c785313fd",
+      "archive_sha256": "f08b6d6bb04b9b28900be70a74ab8f26bcf2613d93a8e576fb32461c785313fd",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/final-cleanup-retry.log",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/final-cleanup-retry.log",
+      "source_sha256": "2394f492a6a5d1005de8e577cb7ac64e7176254d6fe98e1c28628390f7ddf5d0",
+      "archive_sha256": "2394f492a6a5d1005de8e577cb7ac64e7176254d6fe98e1c28628390f7ddf5d0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/final-cleanup.log",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/final-cleanup.log",
+      "source_sha256": "386452b79db9ffe05c36d9cf7843a6d0a9797f352efa23ce1d95852b183891e0",
+      "archive_sha256": "386452b79db9ffe05c36d9cf7843a6d0a9797f352efa23ce1d95852b183891e0",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/prepare-first-attempt.log",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/prepare-first-attempt.log",
+      "source_sha256": "7b1a44fec613a7c0f594c5bfbed02b6e6083f8ea106fe71cbed0a410b2b81a96",
+      "archive_sha256": "7b1a44fec613a7c0f594c5bfbed02b6e6083f8ea106fe71cbed0a410b2b81a96",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/dsv5-quota-before.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/dsv5-quota-before.json",
+      "source_sha256": "efddef9a64d5944f83089315cdccbd65b550ffbf3b62f792461a29d623a3feb1",
+      "archive_sha256": "efddef9a64d5944f83089315cdccbd65b550ffbf3b62f792461a29d623a3feb1",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/fast-copy-first-attempt.log",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/fast-copy-first-attempt.log",
+      "source_sha256": "a2e10c9483ee9fa0ee8ec0ba2ddec26a097e7601d92f13d804889a4646ff231d",
+      "archive_sha256": "a2e10c9483ee9fa0ee8ec0ba2ddec26a097e7601d92f13d804889a4646ff231d",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/fast-copy-fifth-attempt.log",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/fast-copy-fifth-attempt.log",
+      "source_sha256": "8c30322f86ef8741e6310921d84cfbc8dacceebfd09dd98cb0f9f402a3613a9b",
+      "archive_sha256": "8c30322f86ef8741e6310921d84cfbc8dacceebfd09dd98cb0f9f402a3613a9b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/dsv5-quota-status.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/dsv5-quota-status.json",
+      "source_sha256": "3805f4357202ed6dbeba15e55af7da78985884456414d5f5d12502ef6ea1d748",
+      "archive_sha256": "3805f4357202ed6dbeba15e55af7da78985884456414d5f5d12502ef6ea1d748",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/copy-progress.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/copy-progress.json",
+      "source_sha256": "57e46bdc57b2b360bdffc360d09d4aac0fa7b65eff51f0d22aaf1fcf7b577fc8",
+      "archive_sha256": "57e46bdc57b2b360bdffc360d09d4aac0fa7b65eff51f0d22aaf1fcf7b577fc8",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/complete.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/complete.json",
+      "source_sha256": "3a88e42a9dabffa53237fa7b367cf4689b184abfd2d95e69ccb7d20259ff713b",
+      "archive_sha256": "3a88e42a9dabffa53237fa7b367cf4689b184abfd2d95e69ccb7d20259ff713b",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/prepare.log",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/prepare.log",
+      "source_sha256": "f305c134d23eed2a6656695e805cc1afcfece21f5352c762be14e0b56176b69f",
+      "archive_sha256": "f305c134d23eed2a6656695e805cc1afcfece21f5352c762be14e0b56176b69f",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/fast-copy-third-attempt.log",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/fast-copy-third-attempt.log",
+      "source_sha256": "aa59be88f0bb01c9ca6770fafe868f703452553c3c390ee270ef8ac2431b4d31",
+      "archive_sha256": "aa59be88f0bb01c9ca6770fafe868f703452553c3c390ee270ef8ac2431b4d31",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/copy-start.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/copy-start.json",
+      "source_sha256": "bf307649a7fe9dc364c33ca4ea518e2bbc85e8bfd98eb618edd4cde12acc39d9",
+      "archive_sha256": "bf307649a7fe9dc364c33ca4ea518e2bbc85e8bfd98eb618edd4cde12acc39d9",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/snapshots-after-copy.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/snapshots-after-copy.json",
+      "source_sha256": "5445b9d66b220bc4c146287ee4fd75373f34ee6869b1badaa31ebd7f0b780cef",
+      "archive_sha256": "5445b9d66b220bc4c146287ee4fd75373f34ee6869b1badaa31ebd7f0b780cef",
+      "identical": true
+    },
+    {
+      "source": "fio-hdd-westus2-fixture/artifacts/retained-regional-snapshot.json",
+      "archive": "fio-standard-hdd/westus2/fixture-preparation/artifacts/retained-regional-snapshot.json",
+      "source_sha256": "df157598678c6f4275eed1320c209af4b806a2bf98ad16b768d959dde5d5da3f",
+      "archive_sha256": "df157598678c6f4275eed1320c209af4b806a2bf98ad16b768d959dde5d5da3f",
+      "identical": true
+    },
+    {
+      "source": ".state/fio-hdd-westus2-fixture.json",
+      "archive": "fio-standard-hdd/westus2/fixture.json",
+      "source_sha256": "2d00af352ceffe2eee177c49878dd4d39e97561fc8b1edb45a23a3a60e443648",
+      "archive_sha256": "2d00af352ceffe2eee177c49878dd4d39e97561fc8b1edb45a23a3a60e443648",
+      "identical": true
+    }
+  ]
+}

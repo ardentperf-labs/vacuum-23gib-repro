@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "apiVersion": "snapshot.storage.k8s.io/v1",
+      "deletionPolicy": "Retain",
+      "driver": "disk.csi.azure.com",
+      "kind": "VolumeSnapshotClass",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"snapshot.storage.k8s.io/v1\",\"deletionPolicy\":\"Retain\",\"driver\":\"disk.csi.azure.com\",\"kind\":\"VolumeSnapshotClass\",\"metadata\":{\"annotations\":{},\"labels\":{\"repro.stack.token\":\"5c241a190a85f40b788038945c9744f6\"},\"name\":\"vacuum-backup-snap-5c241a19\"},\"parameters\":{\"incremental\":\"true\",\"resourceGroup\":\"rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6\",\"tags\":\"reprotoken=5c241a190a85f40b788038945c9744f6,reproPurpose=premiumv2-vacuum-backup\"}}\n"
+        },
+        "creationTimestamp": "2026-10-06T20:54:05Z",
+        "generation": 1,
+        "labels": {
+          "repro.stack.token": "5c241a190a85f40b788038945c9744f6"
+        },
+        "name": "vacuum-backup-snap-5c241a19",
+        "resourceVersion": "89658",
+        "uid": "e247937b-cde5-45e6-bf0e-369fe334206e"
+      },
+      "parameters": {
+        "incremental": "true",
+        "resourceGroup": "rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6",
+        "tags": "reprotoken=5c241a190a85f40b788038945c9744f6,reproPurpose=premiumv2-vacuum-backup"
+      }
+    }
+  ]
+}

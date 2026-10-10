@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-06T22:54:37Z",
+  "checkpoint": "20261006T225437Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "supervisorPid": 126516,
+      "childPid": 126519,
+      "fixtureHeapBytes": 53687091200,
+      "fixtureHeapGiB": 50,
+      "activeFixturePhase": "create-index",
+      "indexPhase": "building index: scanning table",
+      "indexBlocksDone": 5212862,
+      "indexBlocksTotal": 6553600,
+      "indexScanFraction": 0.7954196166992188,
+      "indexElapsedSeconds": 3228,
+      "activeWait": {
+        "type": "IO",
+        "event": "DataFileRead"
+      },
+      "tableTargetBytes": 118128640000,
+      "activeQuery": "CREATE INDEX vacuum_target_stage_id_idx ON public.vacuum_target_stage(id);",
+      "pod": "hdd-pg-1",
+      "podReady": true,
+      "logTail": "owned stage and snapshot revalidated; CREATE TABLE and ALTER TABLE recorded; no new error in current attempt"
+    },
+    "100gib": {
+      "processStatus": "running",
+      "supervisorPid": 126517,
+      "childPid": 126518,
+      "fixtureHeapBytes": 76690710528,
+      "fixtureHeapGiB": 71.42378997802734,
+      "activeFixturePhase": "insert",
+      "insertElapsedSeconds": 6690,
+      "activeWait": {
+        "type": "IO",
+        "event": "DataFileRead"
+      },
+      "tableTargetBytes": 118128640000,
+      "activeQuery": "INSERT INTO public.vacuum_target_stage SELECT ...",
+      "pod": "hdd-pg-1",
+      "podReady": true,
+      "logTail": "owned stage and snapshot revalidated; CREATE TABLE and ALTER TABLE recorded; no new error in current attempt"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "scriptSha256": "777265eb38fec481d896823326dcd05e37093b89841ff035862a4f84b14765c9",
+  "arms": {
+    "off": {
+      "endpoint": "0/1AA5308",
+      "prefetch": {
+        "hit": 0,
+        "io_depth": 0,
+        "prefetch": 0,
+        "skip_fpw": 0,
+        "skip_new": 0,
+        "skip_rep": 0,
+        "skip_init": 0,
+        "stats_reset": "2026-10-06T04:25:52.746974+00:00",
+        "wal_distance": 0,
+        "block_distance": 1
+      },
+      "startup_reads_after_exit": 1,
+      "startup_hits_after_exit": 1602
+    },
+    "try": {
+      "endpoint": "0/1AA5308",
+      "prefetch": {
+        "hit": 201,
+        "io_depth": 0,
+        "prefetch": 200,
+        "skip_fpw": 206,
+        "skip_new": 0,
+        "skip_rep": 402,
+        "skip_init": 0,
+        "stats_reset": "2026-10-06T04:25:52.855083+00:00",
+        "wal_distance": 392,
+        "block_distance": 1
+      },
+      "startup_reads_after_exit": 1,
+      "startup_hits_after_exit": 1401
+    }
+  }
+}

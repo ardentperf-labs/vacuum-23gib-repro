@@ -1,0 +1,13 @@
+2026-10-07T07:14:39.588644+00:00 waiting-for-preparation
+2026-10-07T07:14:49.590333+00:00 failed
+Comparison pending completed measurements
+Traceback (most recent call last):
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 154, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 82, in main
+    evidence = verify_preparations()
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 45, in verify_preparations
+    raise RuntimeError(f'{name} preparation failed; preserving its resources for diagnosis')
+RuntimeError: 100gib preparation failed; preserving its resources for diagnosis

@@ -1,0 +1,23 @@
+{
+  "status": 202,
+  "location": "https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/eastus/providers/Microsoft.Quota/operationsStatus/6502198f-4712-46ea-88f8-84222ae3f573?api-version=2025-09-01",
+  "retryAfter": "30",
+  "body": {
+    "properties": {
+      "limit": {
+        "limitObjectType": "LimitValue",
+        "limitType": "Independent",
+        "value": 12
+      },
+      "name": {
+        "value": "STANDARDDSV4FAMILY"
+      },
+      "properties": {},
+      "provisioningState": "InProgress",
+      "isQuotaApplicable": true
+    },
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/eastus/providers/Microsoft.Quota/quotaRequests/6502198f-4712-46ea-88f8-84222ae3f573",
+    "type": "Microsoft.Quota/Quotas",
+    "name": "6502198f-4712-46ea-88f8-84222ae3f573"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "completionPercent": 100.0,
+  "creationData": {
+    "createOption": "Copy",
+    "logicalSectorSize": 512,
+    "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+    "sourceUniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18"
+  },
+  "diskSizeBytes": 549755813888,
+  "diskSizeGB": 512,
+  "diskState": "Unattached",
+  "encryption": {
+    "type": "EncryptionAtRestWithPlatformKey"
+  },
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+  "incremental": true,
+  "incrementalSnapshotFamilyId": "ecb0eb33-8bd2-43c5-a72a-7c3fb16dfd9e",
+  "location": "eastus",
+  "name": "snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+  "networkAccessPolicy": "DenyAll",
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": "Disabled",
+  "resourceGroup": "rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf",
+  "sku": {
+    "name": "Standard_ZRS",
+    "tier": "Standard"
+  },
+  "snapshotAccessState": "Available",
+  "tags": {
+    "k8s-azure-created-by": "kubernetes-azure-dd",
+    "reproPurpose": "premiumv2-vacuum-backup",
+    "reprotoken": "f1b90aec9e24f6a2008d6991738742cf",
+    "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632"
+  },
+  "timeCreated": "2026-10-07T06:11:47.4172433+00:00",
+  "type": "Microsoft.Compute/snapshots",
+  "uniqueId": "5d6164bd-68b6-455a-ada8-cfb4c9f95022"
+}

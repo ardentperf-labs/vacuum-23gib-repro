@@ -1,0 +1,44 @@
+{
+  "reviewedAtUtc": "2026-10-07T12:43:36.397445+00:00",
+  "sources": {
+    "recovery/timelines/build_timelines.py": "7cb28bcaf51fd1c4189307dfb4962ec2e6d9473afb4232fc146cc2a32f456c37",
+    "recovery/timelines/publish_run_reports.py": "1ea512c32d4cc451a8217e5a0e4203de69910294b9be2a97ebf597f06d8ce881",
+    "recovery/timelines/test_publish_run_reports.py": "8222bbff82f33e18b127f3856f34538514ed83e0dbfa90a90111902b796572d0"
+  },
+  "review": "Completion, actual artifact schemas, per-run endpoint totals, phase-window rate attribution, evidence timeline precision, full embedded timeline, actual event/counter start distinctions and cleanup journal schema reviewed. Only standalone reports/timeline outputs written; frozen measurement scripts unchanged.",
+  "checks": "All three actual measured experiments and guarded cleanup complete; seven focused publisher tests passed. Final timelines regenerated with 74/75/97 events, all three report completion dry runs passed, all authored measured-detail and supplement links preserved.",
+  "finalPublicationCommand": "python3 recovery/timelines/publish_run_reports.py --write --require-complete",
+  "cleanupJournalCandidateSha256": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603",
+  "phaseRateCorrectionReview": {
+    "basis": "Phase table headings report IOPS and byte-rate ratios; calculate directly from rates rather than totals weighted by possibly unequal role coverage. Whole-observation totals and replay-drain share are unchanged.",
+    "checks": "Root reviewed two-site reporting change and unequal-coverage integration test; six focused tests passed.",
+    "previousPublisherSha256": "ebdc62eed5dbb66db2a7bbad8381ffc47eb4d3af97d4aef798c7851f708945fe"
+  },
+  "pairedAzureSnapshotCreationReview": {
+    "previousBuilderSha256": "19954d5b6f6c93e670b67d6cf75d075d4472adbe7ef0cae733f037b3ce507ad3",
+    "scope": "Add exact ARM paired DATA/WAL resource creation timestamps using retained raw metadata, prepared Backup pair, and VSS/VSC/ARM/source lineage bindings. Resource creation is explicitly separate from copy completion and CSI readiness.",
+    "checks": "Root reviewed complete new provenance helper and call site; regeneration passed with exactly six new matching ARM events and root verified all cited evidence hashes. Immutable preparation/state evidence survives teardown; no runtime or cloud actions changed."
+  },
+  "historicalFixtureTimestampReview": {
+    "previousBuilderSha256": "47649ef069422b0555c1cc3992194971440442cb0189a1cd5ba4f454bd2b4c61",
+    "scope": "Clarify inherited createdAtUtc alongside both originalKeeperSnapshotId and selected snapshotId; do not imply it independently establishes creation time of a later selected keeper/copy. Actual allowlisted source and paired ARM creation milestones remain unchanged.",
+    "checks": "Root reviewed narrow prose-only edit and regenerated all three timelines; no event timestamps or source metadata changed."
+  },
+  "heapStartWordingReview": {
+    "previousPublisherSha256": "cebcc04574d5f1ef29298968b7d7f5b627b5386e1cdc80a45ad903b7f677f1ee",
+    "scope": "Label timing.heapWorkStart as VACUUM command start and heap-work lower bound; first persisted progress observation remains separately timestamped and labelled. No measurement timestamps changed.",
+    "checks": "Root reviewed event extractor and display mapping; all seven focused publisher tests passed, including distinct lower-bound and first-progress values."
+  },
+  "cleanupAttemptAttributionReview": {
+    "previousBuilderSha256": "fb6615ab3bf76ba032740b4ee4f3c8577015fa1bbc9baf3ea68427269c3bf902",
+    "scope": "Exact run-specific receipt/journal identity, PID, command, source hashes, launch timestamps and exit fields are bound. Process event IDs include runID. Failed attempts never link a later current canonical teardown receipt; current completion requires matching canonical status/time; historical completion is explicitly receipt-only.",
+    "checks": "Root reviewed full new helper and cleanup event handling; all three actual timeline builds passed read-only with failed and active retry. Exact failedattempt attribution and omission of current canonical failed-event evidence verified."
+  },
+  "finalPublicationComplete": true,
+  "finalTimelineEventCounts": {
+    "baseline-23gib": 74,
+    "50gib": 75,
+    "100gib": 97
+  },
+  "finalResourceAbsenceReceipt": "preflight/root-final-resource-absence.json"
+}

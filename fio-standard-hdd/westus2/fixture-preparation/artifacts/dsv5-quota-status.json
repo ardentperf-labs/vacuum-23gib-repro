@@ -1,0 +1,29 @@
+{
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus2/providers/Microsoft.Quota/quotaRequests/a8a6e241-9cf3-40cc-961c-6e006bfdfb56",
+  "name": "a8a6e241-9cf3-40cc-961c-6e006bfdfb56",
+  "properties": {
+    "error": {
+      "code": "QuotaNotAvailableForResource",
+      "message": "Request failed."
+    },
+    "message": "Request failed.",
+    "provisioningState": "Failed",
+    "requestSubmitTime": "2026-10-09T08:58:44Z",
+    "value": [
+      {
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 8
+        },
+        "message": "Request failed.",
+        "name": {
+          "value": "STANDARDDSV5FAMILY"
+        },
+        "provisioningState": "Failed",
+        "subRequestId": "a8a6e241-9cf3-40cc-961c-6e006bfdfb56"
+      }
+    ]
+  },
+  "type": "Microsoft.Quota/QuotaRequests"
+}

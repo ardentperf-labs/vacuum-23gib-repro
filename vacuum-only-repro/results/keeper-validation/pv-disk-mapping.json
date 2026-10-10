@@ -1,0 +1,70 @@
+[
+  {
+    "claim": "hdd-pg-1",
+    "pv": "pvc-a4df978d-287f-4c4c-bb19-43073674f0a8",
+    "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-b198f3c57285598156bcdc3f198be3d0/providers/Microsoft.Compute/disks/pvc-a4df978d-287f-4c4c-bb19-43073674f0a8",
+    "diskName": "pvc-a4df978d-287f-4c4c-bb19-43073674f0a8",
+    "location": "eastus",
+    "diskSizeGB": 512,
+    "sku": "Standard_LRS",
+    "provisioningState": "Succeeded",
+    "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-b198f3c57285598156bcdc3f198be3d0/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-29994440-vmss/virtualMachines/aks-nodepool1-29994440-vmss_1",
+    "ownerTags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "kubernetes.io-created-for-pv-name": "pvc-a4df978d-287f-4c4c-bb19-43073674f0a8",
+      "kubernetes.io-created-for-pvc-name": "hdd-pg-1",
+      "kubernetes.io-created-for-pvc-namespace": "repro"
+    }
+  },
+  {
+    "claim": "hdd-pg-1-wal",
+    "pv": "pvc-baafd714-80fe-4a2a-ac25-0ebecff1a7f2",
+    "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-b198f3c57285598156bcdc3f198be3d0/providers/Microsoft.Compute/disks/pvc-baafd714-80fe-4a2a-ac25-0ebecff1a7f2",
+    "diskName": "pvc-baafd714-80fe-4a2a-ac25-0ebecff1a7f2",
+    "location": "eastus",
+    "diskSizeGB": 512,
+    "sku": "Standard_LRS",
+    "provisioningState": "Succeeded",
+    "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-b198f3c57285598156bcdc3f198be3d0/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-29994440-vmss/virtualMachines/aks-nodepool1-29994440-vmss_1",
+    "ownerTags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "kubernetes.io-created-for-pv-name": "pvc-baafd714-80fe-4a2a-ac25-0ebecff1a7f2",
+      "kubernetes.io-created-for-pvc-name": "hdd-pg-1-wal",
+      "kubernetes.io-created-for-pvc-namespace": "repro"
+    }
+  },
+  {
+    "claim": "hdd-pg-2",
+    "pv": "pvc-56ff1454-33de-47d2-abd2-fa20bf6d408b",
+    "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-b198f3c57285598156bcdc3f198be3d0/providers/Microsoft.Compute/disks/pvc-56ff1454-33de-47d2-abd2-fa20bf6d408b",
+    "diskName": "pvc-56ff1454-33de-47d2-abd2-fa20bf6d408b",
+    "location": "eastus",
+    "diskSizeGB": 512,
+    "sku": "Standard_LRS",
+    "provisioningState": "Succeeded",
+    "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-b198f3c57285598156bcdc3f198be3d0/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-29994440-vmss/virtualMachines/aks-nodepool1-29994440-vmss_0",
+    "ownerTags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "kubernetes.io-created-for-pv-name": "pvc-56ff1454-33de-47d2-abd2-fa20bf6d408b",
+      "kubernetes.io-created-for-pvc-name": "hdd-pg-2",
+      "kubernetes.io-created-for-pvc-namespace": "repro"
+    }
+  },
+  {
+    "claim": "hdd-pg-2-wal",
+    "pv": "pvc-cbbe19d1-e729-40df-ac09-f091783dbd9c",
+    "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-b198f3c57285598156bcdc3f198be3d0/providers/Microsoft.Compute/disks/pvc-cbbe19d1-e729-40df-ac09-f091783dbd9c",
+    "diskName": "pvc-cbbe19d1-e729-40df-ac09-f091783dbd9c",
+    "location": "eastus",
+    "diskSizeGB": 512,
+    "sku": "Standard_LRS",
+    "provisioningState": "Succeeded",
+    "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-b198f3c57285598156bcdc3f198be3d0/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-29994440-vmss/virtualMachines/aks-nodepool1-29994440-vmss_0",
+    "ownerTags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "kubernetes.io-created-for-pv-name": "pvc-cbbe19d1-e729-40df-ac09-f091783dbd9c",
+      "kubernetes.io-created-for-pvc-name": "hdd-pg-2-wal",
+      "kubernetes.io-created-for-pvc-namespace": "repro"
+    }
+  }
+]

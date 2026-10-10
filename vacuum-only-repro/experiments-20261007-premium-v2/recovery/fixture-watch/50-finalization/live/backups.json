@@ -1,0 +1,71 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "postgresql.cnpg.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"postgresql.cnpg.io/v1\",\"kind\":\"Backup\",\"metadata\":{\"annotations\":{},\"labels\":{\"repro.stack.token\":\"5c241a190a85f40b788038945c9744f6\"},\"name\":\"vacuum-backup-5c241a19\",\"namespace\":\"repro\"},\"spec\":{\"cluster\":{\"name\":\"hdd-pg\"},\"method\":\"volumeSnapshot\",\"online\":true,\"onlineConfiguration\":{\"immediateCheckpoint\":false,\"waitForArchive\":true}}}\n"
+                },
+                "creationTimestamp": "2026-10-07T01:13:41Z",
+                "generation": 1,
+                "labels": {
+                    "repro.stack.token": "5c241a190a85f40b788038945c9744f6"
+                },
+                "name": "vacuum-backup-5c241a19",
+                "namespace": "repro",
+                "resourceVersion": "189940",
+                "uid": "2c03990e-e53e-4c59-a60c-7cd0cac1f72d"
+            },
+            "spec": {
+                "cluster": {
+                    "name": "hdd-pg"
+                },
+                "method": "volumeSnapshot",
+                "online": true,
+                "onlineConfiguration": {
+                    "immediateCheckpoint": false,
+                    "waitForArchive": true
+                }
+            },
+            "status": {
+                "backupId": "vacuum-backup-5c241a19",
+                "backupLabelFile": "U1RBUlQgV0FMIExPQ0FUSU9OOiA2OS83MDAwMDI4IChmaWxlIDAwMDAwMDAxMDAwMDAwNjkwMDAwMDAwNykKQ0hFQ0tQT0lOVCBMT0NBVElPTjogNjkvNzAwMDA2MApCQUNLVVAgTUVUSE9EOiBzdHJlYW1lZApCQUNLVVAgRlJPTTogcHJpbWFyeQpTVEFSVCBUSU1FOiAyMDI2LTEwLTA3IDAxOjEzOjQ2IFVUQwpMQUJFTDogdmFjdXVtLWJhY2t1cC01YzI0MWExOQpTVEFSVCBUSU1FTElORTogMQo=",
+                "backupName": "vacuum-backup-5c241a19",
+                "beginLSN": "69/7000028",
+                "beginWal": "000000010000006900000007",
+                "endLSN": "69/7000100",
+                "endWal": "000000010000006900000007",
+                "instanceID": {
+                    "ContainerID": "containerd://dacc3e847dbb55d22d85f5bad7191dd20c1024772bf9aaf333d7088e705a5a9f",
+                    "podName": "hdd-pg-1"
+                },
+                "majorVersion": 16,
+                "method": "volumeSnapshot",
+                "online": true,
+                "phase": "completed",
+                "reconciliationStartedAt": "2026-10-07T01:13:41Z",
+                "reconciliationTerminatedAt": "2026-10-07T02:13:31Z",
+                "snapshotBackupStatus": {
+                    "elements": [
+                        {
+                            "name": "vacuum-backup-5c241a19",
+                            "type": "PG_DATA"
+                        },
+                        {
+                            "name": "vacuum-backup-5c241a19-wal",
+                            "type": "PG_WAL"
+                        }
+                    ]
+                },
+                "startedAt": "2026-10-07T01:13:41Z",
+                "stoppedAt": "2026-10-07T02:13:31Z"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

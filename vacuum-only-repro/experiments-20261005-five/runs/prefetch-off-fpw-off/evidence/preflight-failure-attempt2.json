@@ -1,0 +1,5 @@
+{
+  "error": "kubectl --kubeconfig ${PROJECT_ROOT}/experiments/20261005-four/prefetch-off-fpw-off/.state/kubeconfig exec -i -c postgres -n repro hdd-pg-1 -- psql -X -A -t -v ON_ERROR_STOP=1 -U postgres -d repro failed (3): ERROR:  column \"data_checksum_version\" does not exist\nLINE 10:  'dataChecksumVersion',(SELECT data_checksum_version FROM pg...\n                                        ^\ncommand terminated with exit code 3\n",
+  "phase": "failed",
+  "updatedAt": "2026-10-06T06:16:13.452Z"
+}

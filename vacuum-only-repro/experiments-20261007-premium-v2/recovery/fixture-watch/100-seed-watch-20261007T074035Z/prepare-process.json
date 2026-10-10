@@ -1,0 +1,20 @@
+{
+  "phase": "prepare",
+  "stack": "100gib",
+  "status": "running",
+  "supervisorPid": 310018,
+  "startedAtUtc": "2026-10-07T07:28:35.929126+00:00",
+  "command": [
+    "bash",
+    "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/100gib/02-prepare.sh"
+  ],
+  "environment": {
+    "TEST_HEAP_GIB": "100",
+    "SOURCE_MANIFEST": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/100gib/source-manifest.json"
+  },
+  "scriptSha256": {
+    "02-prepare.sh": "dc727aec14699aa80a2d80a1a4357b6b423996c913f104f0504c68e33ea16111"
+  },
+  "sourceStageHelperSha256": "0eacb0a81b30703a3b788aa745d3eca8c079e3e4e0cfca9921f500b6f5c8918b",
+  "childPid": 310020
+}

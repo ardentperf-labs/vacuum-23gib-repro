@@ -1,0 +1,28 @@
+{
+    "allowVolumeExpansion": true,
+    "apiVersion": "storage.k8s.io/v1",
+    "kind": "StorageClass",
+    "metadata": {
+        "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"allowVolumeExpansion\":true,\"apiVersion\":\"storage.k8s.io/v1\",\"kind\":\"StorageClass\",\"metadata\":{\"annotations\":{},\"labels\":{\"app.kubernetes.io/part-of\":\"vacuum-only-repro\"},\"name\":\"azure-premiumv2\"},\"parameters\":{\"DiskIOPSReadWrite\":\"3000\",\"DiskMBpsReadWrite\":\"125\",\"LogicalSectorSize\":\"512\",\"cachingMode\":\"None\",\"kind\":\"Managed\",\"skuName\":\"PremiumV2_LRS\"},\"provisioner\":\"disk.csi.azure.com\",\"reclaimPolicy\":\"Delete\",\"volumeBindingMode\":\"WaitForFirstConsumer\"}\n"
+        },
+        "creationTimestamp": "2026-10-09T04:13:30Z",
+        "labels": {
+            "app.kubernetes.io/part-of": "vacuum-only-repro"
+        },
+        "name": "azure-premiumv2",
+        "resourceVersion": "1747",
+        "uid": "98dd3170-3af4-443e-bfcd-2b02df238e92"
+    },
+    "parameters": {
+        "DiskIOPSReadWrite": "3000",
+        "DiskMBpsReadWrite": "125",
+        "LogicalSectorSize": "512",
+        "cachingMode": "None",
+        "kind": "Managed",
+        "skuName": "PremiumV2_LRS"
+    },
+    "provisioner": "disk.csi.azure.com",
+    "reclaimPolicy": "Delete",
+    "volumeBindingMode": "WaitForFirstConsumer"
+}

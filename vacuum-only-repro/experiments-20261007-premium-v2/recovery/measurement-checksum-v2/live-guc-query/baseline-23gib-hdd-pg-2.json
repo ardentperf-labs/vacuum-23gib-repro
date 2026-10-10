@@ -1,0 +1,203 @@
+{
+  "verifiedAtUtc": "2026-10-07T08:31:54.868314+00:00",
+  "querySha256": "15ca4bb8e9bd0ce27e03839bcc8e47ecfd3bdd0b7f123de71715bebb31fdffad",
+  "collectorSha256": "59e3eb442dc2fa0d52df6eb97b8addd728f21b5742635d842afbf857f5c5a8a3",
+  "metadata": {
+    "version": "16.15 (Debian 16.15-1.pgdg13+2)",
+    "recovery": true,
+    "systemId": "7692518806614212629",
+    "dataChecksumVersion": 0,
+    "appSessions": 0,
+    "settings": {
+      "autovacuum": {
+        "value": "on",
+        "setting": "on",
+        "unit": null,
+        "source": "default",
+        "pendingRestart": false
+      },
+      "checkpoint_completion_target": {
+        "value": "0.9",
+        "setting": "0.9",
+        "unit": null,
+        "source": "default",
+        "pendingRestart": false
+      },
+      "checkpoint_timeout": {
+        "value": "5min",
+        "setting": "300",
+        "unit": "s",
+        "source": "default",
+        "pendingRestart": false
+      },
+      "full_page_writes": {
+        "value": "on",
+        "setting": "on",
+        "unit": null,
+        "source": "configuration file",
+        "pendingRestart": false
+      },
+      "maintenance_io_concurrency": {
+        "value": "10",
+        "setting": "10",
+        "unit": null,
+        "source": "default",
+        "pendingRestart": false
+      },
+      "maintenance_work_mem": {
+        "value": "64MB",
+        "setting": "65536",
+        "unit": "kB",
+        "source": "default",
+        "pendingRestart": false
+      },
+      "max_replication_slots": {
+        "value": "32",
+        "setting": "32",
+        "unit": null,
+        "source": "configuration file",
+        "pendingRestart": false
+      },
+      "max_wal_senders": {
+        "value": "10",
+        "setting": "10",
+        "unit": null,
+        "source": "default",
+        "pendingRestart": false
+      },
+      "max_wal_size": {
+        "value": "1GB",
+        "setting": "1024",
+        "unit": "MB",
+        "source": "configuration file",
+        "pendingRestart": false
+      },
+      "recovery_prefetch": {
+        "value": "try",
+        "setting": "try",
+        "unit": null,
+        "source": "default",
+        "pendingRestart": false
+      },
+      "shared_buffers": {
+        "value": "256MB",
+        "setting": "32768",
+        "unit": "8kB",
+        "source": "configuration file",
+        "pendingRestart": false
+      },
+      "statement_timeout": {
+        "value": "0",
+        "setting": "0",
+        "unit": "ms",
+        "source": "default",
+        "pendingRestart": false
+      },
+      "synchronous_commit": {
+        "value": "on",
+        "setting": "on",
+        "unit": null,
+        "source": "default",
+        "pendingRestart": false
+      },
+      "synchronous_standby_names": {
+        "value": "ANY 1 (\"hdd-pg-2\")",
+        "setting": "ANY 1 (\"hdd-pg-2\")",
+        "unit": null,
+        "source": "configuration file",
+        "pendingRestart": false
+      },
+      "track_io_timing": {
+        "value": "on",
+        "setting": "on",
+        "unit": null,
+        "source": "configuration file",
+        "pendingRestart": false
+      },
+      "track_wal_io_timing": {
+        "value": "on",
+        "setting": "on",
+        "unit": null,
+        "source": "configuration file",
+        "pendingRestart": false
+      },
+      "vacuum_cost_delay": {
+        "value": "0",
+        "setting": "0",
+        "unit": "ms",
+        "source": "default",
+        "pendingRestart": false
+      },
+      "wal_buffers": {
+        "value": "8MB",
+        "setting": "1024",
+        "unit": "8kB",
+        "source": "default",
+        "pendingRestart": false
+      },
+      "wal_compression": {
+        "value": "off",
+        "setting": "off",
+        "unit": null,
+        "source": "default",
+        "pendingRestart": false
+      },
+      "wal_level": {
+        "value": "logical",
+        "setting": "logical",
+        "unit": null,
+        "source": "configuration file",
+        "pendingRestart": false
+      },
+      "wal_log_hints": {
+        "value": "on",
+        "setting": "on",
+        "unit": null,
+        "source": "configuration file",
+        "pendingRestart": false
+      },
+      "wal_receiver_timeout": {
+        "value": "5s",
+        "setting": "5000",
+        "unit": "ms",
+        "source": "configuration file",
+        "pendingRestart": false
+      },
+      "wal_sender_timeout": {
+        "value": "5s",
+        "setting": "5000",
+        "unit": "ms",
+        "source": "configuration file",
+        "pendingRestart": false
+      },
+      "wal_writer_delay": {
+        "value": "200ms",
+        "setting": "200",
+        "unit": "ms",
+        "source": "default",
+        "pendingRestart": false
+      },
+      "wal_writer_flush_after": {
+        "value": "1MB",
+        "setting": "128",
+        "unit": "8kB",
+        "source": "default",
+        "pendingRestart": false
+      }
+    },
+    "defaultTablespaceIoConcurrencyOverride": false,
+    "table": {
+      "oid": "24578",
+      "relfilenode": "24578",
+      "heapBytes": 24696061952,
+      "totalBytes": 25040748544,
+      "tablespaceOid": "0",
+      "reloptions": [
+        "autovacuum_enabled=false"
+      ],
+      "tablespaceOverrides": null,
+      "liveEstimate": 0,
+      "deadEstimate": 0
+    }
+  }
+}

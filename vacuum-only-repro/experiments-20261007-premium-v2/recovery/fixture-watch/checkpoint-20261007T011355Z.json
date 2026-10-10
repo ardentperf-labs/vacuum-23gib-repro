@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-07T01:13:55Z",
+  "checkpoint": "20261007T011355Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "walMigrationEvidence": "wal-migration-20261007T011216Z.json",
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "supervisorPid": 126516,
+      "childPid": 126519,
+      "activeFixturePhase": "cnpg-volume-snapshot-backup",
+      "clusterPhase": "Cluster in healthy state",
+      "clusterReadyInstances": 1,
+      "pod": "hdd-pg-1",
+      "podPhase": "Running",
+      "podReady": true,
+      "podRestarts": 0,
+      "walMigration": "completed; source pg_wal aggregate 30 apparent bytes / 0 allocated, destination 45080379730 apparent / 45080666112 allocated",
+      "walArchiveCount": 10042,
+      "walArchiveFailures": 0,
+      "backup": "vacuum-backup-5c241a19",
+      "backupPhase": "started"
+    },
+    "100gib": {
+      "processStatus": "running",
+      "supervisorPid": 126517,
+      "childPid": 126518,
+      "assignedTargetHeapBytes": 107374182400,
+      "activeFixturePhase": "create-index",
+      "indexPhase": "building index: scanning table",
+      "indexBlocksDone": 5032814,
+      "indexBlocksTotal": 13107200,
+      "indexScanFraction": 0.3841868591308594,
+      "activeWaits": [
+        {
+          "type": "IO",
+          "event": "DataFileRead"
+        }
+      ],
+      "stageRelationBytes": 107374182400,
+      "pod": "hdd-pg-1",
+      "podReady": true
+    }
+  }
+}

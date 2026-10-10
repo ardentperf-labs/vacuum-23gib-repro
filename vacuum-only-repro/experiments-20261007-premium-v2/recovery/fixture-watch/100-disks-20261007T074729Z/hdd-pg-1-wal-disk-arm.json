@@ -1,0 +1,44 @@
+{
+  "name": "pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+  "type": "Microsoft.Compute/disks",
+  "location": "eastus",
+  "tags": {
+    "k8s-azure-created-by": "kubernetes-azure-dd",
+    "kubernetes.io-created-for-pv-name": "pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+    "kubernetes.io-created-for-pvc-name": "hdd-pg-1-wal",
+    "kubernetes.io-created-for-pvc-namespace": "repro"
+  },
+  "zones": [
+    "1"
+  ],
+  "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/virtualMachines/aks-nodepool1-15388874-vmss_1",
+  "sku": {
+    "name": "PremiumV2_LRS",
+    "tier": "Premium"
+  },
+  "properties": {
+    "creationData": {
+      "createOption": "Empty",
+      "logicalSectorSize": 512
+    },
+    "diskSizeGB": 512,
+    "diskIOPSReadWrite": 3000,
+    "diskMBpsReadWrite": 125,
+    "readOnly": false,
+    "diskIOPSReadOnly": 3000,
+    "diskMBpsReadOnly": 125,
+    "encryption": {
+      "type": "EncryptionAtRestWithPlatformKey"
+    },
+    "maxShares": 1,
+    "networkAccessPolicy": "DenyAll",
+    "publicNetworkAccess": "Disabled",
+    "timeCreated": "2026-10-07T05:44:19.2029565+00:00",
+    "provisioningState": "Succeeded",
+    "diskState": "Attached",
+    "LastOwnershipUpdateTime": "2026-10-07T05:44:43.3829081+00:00",
+    "diskSizeBytes": 549755813888,
+    "uniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18"
+  }
+}

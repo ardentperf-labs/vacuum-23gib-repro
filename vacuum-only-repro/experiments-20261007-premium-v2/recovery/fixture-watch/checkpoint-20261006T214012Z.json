@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-06T21:40:12Z",
+  "checkpoint": "20261006T214012Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "fixtureBuildTable": "public.vacuum_target_stage",
+      "fixtureHeapBytes": 34839756800,
+      "fixtureHeapGiB": 32.447052001953125,
+      "activeFixturePhase": "insert",
+      "insertElapsedSeconds": 2301
+    },
+    "100gib": {
+      "processStatus": "running",
+      "fixtureBuildTable": "public.vacuum_target_stage",
+      "fixtureHeapBytes": 34552791040,
+      "fixtureHeapGiB": 32.17979431152344,
+      "activeFixturePhase": "insert",
+      "insertElapsedSeconds": 2268
+    }
+  }
+}

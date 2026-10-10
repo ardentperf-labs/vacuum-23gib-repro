@@ -1,0 +1,40 @@
+{
+  "stack": "100gib",
+  "backupName": "vacuum-backup-f1b90aec",
+  "backupUid": "597e0f7d-c87e-4455-b01a-42120f969859",
+  "walRange": {
+    "beginLsn": "9A/80000028",
+    "endLsn": "9A/80000138",
+    "beginWal": "000000010000009A00000080",
+    "endWal": "000000010000009A00000080",
+    "segments": [
+      "000000010000009A00000080"
+    ]
+  },
+  "archive": {
+    "host": "cnpgwalf1b90aec9e24f6a20.blob.core.windows.net",
+    "container": "wal-f1b90aec9e24",
+    "prefix": "cnpg-vacuum-only/<owner-scope>/",
+    "serverName": "hdd-pg"
+  },
+  "objectsToExport": [
+    {
+      "kind": "wal",
+      "basename": "000000010000009A00000080",
+      "prefix": "cnpg-vacuum-only/<owner-scope>/hdd-pg/wals/000000010000009A/"
+    },
+    {
+      "kind": "backup-history",
+      "basename": "000000010000009A00000080.00000028.backup",
+      "prefix": "cnpg-vacuum-only/<owner-scope>/hdd-pg/wals/000000010000009A/"
+    }
+  ],
+  "snapshotUids": [
+    "604b8cee-1a94-4df6-b846-be245038a795",
+    "ebeff553-ca6f-487c-8517-e803b02337ca"
+  ],
+  "ownershipVerifiedLive": true,
+  "liveContainerVerified": false,
+  "archivePrefix": "cnpg-vacuum-only/<owner-scope>/hdd-pg/wals/",
+  "planOnly": true
+}

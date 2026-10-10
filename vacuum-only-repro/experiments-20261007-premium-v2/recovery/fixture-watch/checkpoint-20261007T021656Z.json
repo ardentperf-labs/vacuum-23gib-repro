@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-07T02:16:56Z",
+  "checkpoint": "20261007T021656Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "supervisorPid": 126516,
+      "childPid": 126519,
+      "activeFixturePhase": "replica-snapshot-recovery-job-disk-hydration",
+      "clusterPhase": "Creating a new replica",
+      "clusterInstances": 2,
+      "clusterReadyInstances": 1,
+      "snapshotRecoveryJob": {
+        "name": "hdd-pg-2-snapshot-recovery",
+        "status": "Running",
+        "ageSeconds": 195,
+        "completion": "0/1"
+      },
+      "snapshotRecoveryPod": {
+        "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+        "phase": "Pending",
+        "ready": false,
+        "initState": "PodInitializing",
+        "readyToStartContainers": false,
+        "restartCount": 0
+      },
+      "replicaDisks": {
+        "data": {
+          "name": "pvc-96bd9d47-717d-4913-913f-0c7ec271f76d",
+          "sku": "PremiumV2_LRS",
+          "provisioningState": "Succeeded",
+          "diskState": "Attached",
+          "completionPercent": 0.0,
+          "sourceSnapshot": "snapshot-5915d49f-e4ce-41da-b157-40e0043dcdb2"
+        },
+        "wal": {
+          "name": "pvc-b2505bd1-4201-4657-8456-15a2dde19fb0",
+          "sku": "PremiumV2_LRS",
+          "provisioningState": "Succeeded",
+          "diskState": "Attached",
+          "completionPercent": 60.0,
+          "sourceSnapshot": "snapshot-f60780dd-a9b5-4401-a1c7-30a64acd114e"
+        }
+      },
+      "archiveFailures": 0,
+      "backup": "vacuum-backup-5c241a19",
+      "backupPhase": "completed"
+    },
+    "100gib": {
+      "processStatus": "running",
+      "supervisorPid": 126517,
+      "childPid": 126518,
+      "assignedTargetHeapBytes": 107374182400,
+      "activeFixturePhase": "create-index",
+      "indexPhase": "building index: scanning table",
+      "indexBlocksDone": 10669518,
+      "indexBlocksTotal": 13107200,
+      "indexScanFraction": 0.8141716003417969,
+      "activeWaits": [
+        {
+          "type": "IO",
+          "event": "DataFileRead"
+        }
+      ],
+      "stageRelationBytes": 107374182400,
+      "pod": "hdd-pg-1",
+      "podReady": true
+    }
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "primary": {
+    "epoch": 1791122261.6732159,
+    "ts": "2026-10-04T13:57:41.673971818Z",
+    "pod": "hdd-pg-1",
+    "role": "primary",
+    "replayLsn": "",
+    "flushLsn": "37/8F000FE0",
+    "appSessions": 0,
+    "vacuumProgress": null,
+    "senders": [
+      {
+        "state": "streaming",
+        "syncState": "quorum",
+        "sentLsn": "37/8F000FE0",
+        "writeLsn": "37/8F000FE0",
+        "flushLsn": "37/8F000FE0",
+        "replayLsn": "37/8F000FE0",
+        "writeLag": null,
+        "flushLag": null,
+        "replayLag": null
+      }
+    ],
+    "receiver": null,
+    "walStats": {
+      "walBytes": "54325",
+      "walRecords": 58,
+      "walFpi": 11,
+      "statsReset": "2026-10-04T13:42:21.736132+00:00"
+    },
+    "devices": {
+      "data": {
+        "path": "/var/lib/postgresql/data/pgdata",
+        "claim": "hdd-pg-1",
+        "pv": "pvc-b10487ad-93ff-4649-985d-7ee7a4488187",
+        "node": "aks-nodepool1-37028789-vmss000000",
+        "majorMinor": "8:16",
+        "mountMajorMinor": "8:16",
+        "source": "/dev/sdb",
+        "mount": "/var/lib/postgresql/data",
+        "expectedMount": "/var/lib/postgresql/data",
+        "filesystem": "ext4",
+        "lun": 0,
+        "attachmentDevicePath": "",
+        "lunPath": "",
+        "lunPathVisible": false,
+        "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/VMBUS:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0",
+        "device": "sdb",
+        "queue": {
+          "maxSectorsKb": 1280,
+          "maxHwSectorsKb": 2048,
+          "nrRequests": 316
+        }
+      },
+      "wal": {
+        "path": "/var/lib/postgresql/wal/pg_wal",
+        "claim": "hdd-pg-1-wal",
+        "pv": "pvc-a13e4b08-de7f-4b92-b504-85856421e5fe",
+        "node": "aks-nodepool1-37028789-vmss000000",
+        "majorMinor": "8:32",
+        "mountMajorMinor": "8:32",
+        "source": "/dev/sdc",
+        "mount": "/var/lib/postgresql/wal",
+        "expectedMount": "/var/lib/postgresql/wal",
+        "filesystem": "ext4",
+        "lun": 1,
+        "attachmentDevicePath": "",
+        "lunPath": "",
+        "lunPathVisible": false,
+        "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/VMBUS:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:1",
+        "device": "sdc",
+        "queue": {
+          "maxSectorsKb": 1280,
+          "maxHwSectorsKb": 2048,
+          "nrRequests": 316
+        }
+      }
+    },
+    "disks": {
+      "7:0": {
+        "name": "loop0",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "7:1": {
+        "name": "loop1",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "7:2": {
+        "name": "loop2",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "7:3": {
+        "name": "loop3",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "7:4": {
+        "name": "loop4",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "7:5": {
+        "name": "loop5",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "7:6": {
+        "name": "loop6",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "7:7": {
+        "name": "loop7",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "8:0": {
+        "name": "sda",
+        "r": 21621,
+        "rs": 2355188,
+        "rm": 159807,
+        "w": 40619,
+        "ws": 17284932,
+        "wm": 1224246
+      },
+      "8:1": {
+        "name": "sda1",
+        "r": 20883,
+        "rs": 2318502,
+        "rm": 159014,
+        "w": 40592,
+        "ws": 17284568,
+        "wm": 1224207
+      },
+      "8:14": {
+        "name": "sda14",
+        "r": 200,
+        "rs": 2096,
+        "rm": 107,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "8:15": {
+        "name": "sda15",
+        "r": 176,
+        "rs": 16766,
+        "rm": 219,
+        "w": 2,
+        "ws": 2,
+        "wm": 2
+      },
+      "259:0": {
+        "name": "sda16",
+        "r": 195,
+        "rs": 13440,
+        "rm": 296,
+        "w": 20,
+        "ws": 258,
+        "wm": 30
+      },
+      "11:0": {
+        "name": "sr0",
+        "r": 76,
+        "rs": 544,
+        "rm": 12,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "8:16": {
+        "name": "sdb",
+        "r": 48717,
+        "rs": 7915656,
+        "rm": 802240,
+        "w": 3147,
+        "ws": 119208,
+        "wm": 116690
+      },
+      "8:32": {
+        "name": "sdc",
+        "r": 2223,
+        "rs": 53180,
+        "rm": 13571,
+        "w": 13684,
+        "ws": 26295896,
+        "wm": 1034211
+      }
+    }
+  },
+  "replica": {
+    "epoch": 1791122261.7353058,
+    "ts": "2026-10-04T13:57:41.736072368Z",
+    "pod": "hdd-pg-2",
+    "role": "replica",
+    "replayLsn": "37/8F000FE0",
+    "flushLsn": "",
+    "appSessions": 0,
+    "vacuumProgress": null,
+    "senders": [],
+    "receiver": {
+      "status": "streaming",
+      "writtenLsn": "37/8F000FE0",
+      "flushedLsn": "37/8F000FE0",
+      "latestEndLsn": "37/8F000FE0",
+      "lastMsgReceiptTime": "2026-10-04T13:57:41.160372+00:00"
+    },
+    "walStats": {
+      "walBytes": "0",
+      "walRecords": 0,
+      "walFpi": 0,
+      "statsReset": "2026-10-04T13:51:05.198757+00:00"
+    },
+    "devices": {
+      "data": {
+        "path": "/var/lib/postgresql/data/pgdata",
+        "claim": "hdd-pg-2",
+        "pv": "pvc-3b7742d3-59d4-4a51-b9cb-c1818ec7dbaf",
+        "node": "aks-nodepool1-37028789-vmss000001",
+        "majorMinor": "8:16",
+        "mountMajorMinor": "8:16",
+        "source": "/dev/sdb",
+        "mount": "/var/lib/postgresql/data",
+        "expectedMount": "/var/lib/postgresql/data",
+        "filesystem": "ext4",
+        "lun": 0,
+        "attachmentDevicePath": "",
+        "lunPath": "",
+        "lunPathVisible": false,
+        "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0",
+        "device": "sdb",
+        "queue": {
+          "maxSectorsKb": 1280,
+          "maxHwSectorsKb": 2048,
+          "nrRequests": 316
+        }
+      },
+      "wal": {
+        "path": "/var/lib/postgresql/wal/pg_wal",
+        "claim": "hdd-pg-2-wal",
+        "pv": "pvc-620fb663-31c7-4cd8-a241-f60774c157b4",
+        "node": "aks-nodepool1-37028789-vmss000001",
+        "majorMinor": "8:32",
+        "mountMajorMinor": "8:32",
+        "source": "/dev/sdc",
+        "mount": "/var/lib/postgresql/wal",
+        "expectedMount": "/var/lib/postgresql/wal",
+        "filesystem": "ext4",
+        "lun": 1,
+        "attachmentDevicePath": "",
+        "lunPath": "",
+        "lunPathVisible": false,
+        "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:1",
+        "device": "sdc",
+        "queue": {
+          "maxSectorsKb": 1280,
+          "maxHwSectorsKb": 2048,
+          "nrRequests": 316
+        }
+      }
+    },
+    "disks": {
+      "7:0": {
+        "name": "loop0",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "7:1": {
+        "name": "loop1",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "7:2": {
+        "name": "loop2",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "7:3": {
+        "name": "loop3",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "7:4": {
+        "name": "loop4",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "7:5": {
+        "name": "loop5",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "7:6": {
+        "name": "loop6",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "7:7": {
+        "name": "loop7",
+        "r": 0,
+        "rs": 0,
+        "rm": 0,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "8:0": {
+        "name": "sda",
+        "r": 18807,
+        "rs": 2156402,
+        "rm": 208048,
+        "w": 38446,
+        "ws": 16551444,
+        "wm": 1347068
+      },
+      "8:1": {
+        "name": "sda1",
+        "r": 18059,
+        "rs": 2119614,
+        "rm": 207272,
+        "w": 38419,
+        "ws": 16551080,
+        "wm": 1346801
+      },
+      "8:14": {
+        "name": "sda14",
+        "r": 200,
+        "rs": 2096,
+        "rm": 157,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "8:15": {
+        "name": "sda15",
+        "r": 208,
+        "rs": 18766,
+        "rm": 312,
+        "w": 2,
+        "ws": 2,
+        "wm": 41
+      },
+      "259:0": {
+        "name": "sda16",
+        "r": 173,
+        "rs": 11542,
+        "rm": 110,
+        "w": 20,
+        "ws": 258,
+        "wm": 204
+      },
+      "11:0": {
+        "name": "sr0",
+        "r": 76,
+        "rs": 544,
+        "rm": 11,
+        "w": 0,
+        "ws": 0,
+        "wm": 0
+      },
+      "8:16": {
+        "name": "sdb",
+        "r": 1727,
+        "rs": 43050,
+        "rm": 57248,
+        "w": 228,
+        "ws": 6520,
+        "wm": 1481
+      },
+      "8:32": {
+        "name": "sdc",
+        "r": 1058,
+        "rs": 16130,
+        "rm": 14819,
+        "w": 3273,
+        "ws": 6375800,
+        "wm": 42712
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "caching": "None",
+  "client": {
+    "connections": 10,
+    "latencyLimit": null,
+    "postRecoverySeconds": 300,
+    "synchronousCommit": "on",
+    "targetTps": 5,
+    "tool": "pgbench",
+    "warmupSeconds": 300
+  },
+  "cnpgVersion": "1.30.1",
+  "diskIops": 3000,
+  "diskMBps": 125,
+  "diskSizeGiB": 512,
+  "diskSku": "PremiumV2_LRS",
+  "experimentName": "20261009-pgbench-baseline",
+  "fixture": {
+    "deadEstimate": 7536640,
+    "doNotRebuildOrRerunFixtureDML": true,
+    "heapBytes": 24696061952,
+    "liveEstimate": 7536640,
+    "source": "retained paired CNPG volumeSnapshot backup",
+    "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/snapshots/snapshot-53ea286c-28a7-4225-b58f-ddd91ed93f57",
+    "systemIdentifier": "7692518806614212629",
+    "tableBytes": 25040748544,
+    "walSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/snapshots/snapshot-caf74210-9ce8-4f42-8c47-9ee8076a0201"
+  },
+  "location": "eastus",
+  "logicalSectorSizeBytes": 512,
+  "name": "baseline-23gib",
+  "nodeCount": 2,
+  "nodeVmSize": "Standard_D2s_v4",
+  "postgresImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+  "postgresMajorVersion": 16,
+  "recoveryImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+  "snapshotRetention": "preserve-all",
+  "targetHeapBytes": 24696061952,
+  "targetHeapGiB": 23,
+  "zone": "1"
+}

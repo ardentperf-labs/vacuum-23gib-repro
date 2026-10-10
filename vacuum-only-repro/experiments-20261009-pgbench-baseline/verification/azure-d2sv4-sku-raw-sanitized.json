@@ -1,0 +1,167 @@
+{
+  "evidenceClass": "sanitized_fields_from_filtered_raw_azure_cli_response",
+  "privateRawResponsePath": "../.state/azure-evidence-requery-20261009/standard-d2sv4-eastus-correct-subscription.raw.json",
+  "privateRawResponseSha256": "31fe11d48a5ee386d55c6458389d2d03726cceb82b152cd7b17ff79465e38b69",
+  "query": {
+    "filter": "exact name == Standard_D2s_v4",
+    "format": "json; filtered to matching SKU object; all returned capability fields retained",
+    "location": "eastus",
+    "operation": "az vm list-skus",
+    "size": "Standard_D2s_v4",
+    "subscription": "verified broker subscription from run state (ID omitted)"
+  },
+  "rawResponse": [
+    {
+      "capabilities": [
+        {
+          "name": "MaxResourceVolumeMB",
+          "value": "0"
+        },
+        {
+          "name": "OSVhdSizeMB",
+          "value": "1047552"
+        },
+        {
+          "name": "vCPUs",
+          "value": "2"
+        },
+        {
+          "name": "MemoryPreservingMaintenanceSupported",
+          "value": "True"
+        },
+        {
+          "name": "HyperVGenerations",
+          "value": "V1,V2"
+        },
+        {
+          "name": "SupportedCapacityReservationTypes",
+          "value": "Open,Targeted"
+        },
+        {
+          "name": "MemoryGB",
+          "value": "8"
+        },
+        {
+          "name": "MaxDataDiskCount",
+          "value": "4"
+        },
+        {
+          "name": "CpuArchitectureType",
+          "value": "x64"
+        },
+        {
+          "name": "LowPriorityCapable",
+          "value": "True"
+        },
+        {
+          "name": "PremiumIO",
+          "value": "True"
+        },
+        {
+          "name": "VMDeploymentTypes",
+          "value": "IaaS"
+        },
+        {
+          "name": "vCPUsConstraintsAllowed",
+          "value": "1, 2"
+        },
+        {
+          "name": "vCPUsAvailable",
+          "value": "2"
+        },
+        {
+          "name": "ACUs",
+          "value": "195"
+        },
+        {
+          "name": "vCPUsPerCore",
+          "value": "2"
+        },
+        {
+          "name": "CombinedTempDiskAndCachedIOPS",
+          "value": "19000"
+        },
+        {
+          "name": "CombinedTempDiskAndCachedReadBytesPerSecond",
+          "value": "120586240"
+        },
+        {
+          "name": "CombinedTempDiskAndCachedWriteBytesPerSecond",
+          "value": "120586240"
+        },
+        {
+          "name": "CachedDiskBytes",
+          "value": "53687091200"
+        },
+        {
+          "name": "UncachedDiskIOPS",
+          "value": "3200"
+        },
+        {
+          "name": "UncachedDiskBytesPerSecond",
+          "value": "48000000"
+        },
+        {
+          "name": "EphemeralOSDiskSupported",
+          "value": "False"
+        },
+        {
+          "name": "EncryptionAtHostSupported",
+          "value": "True"
+        },
+        {
+          "name": "CapacityReservationSupported",
+          "value": "True"
+        },
+        {
+          "name": "AcceleratedNetworkingEnabled",
+          "value": "True"
+        },
+        {
+          "name": "RdmaEnabled",
+          "value": "False"
+        },
+        {
+          "name": "MaxNetworkInterfaces",
+          "value": "2"
+        }
+      ],
+      "family": "standardDSv4Family",
+      "locationInfo": [
+        {
+          "location": "eastus",
+          "zoneDetails": [
+            {
+              "capabilities": [
+                {
+                  "name": "UltraSSDAvailable",
+                  "value": "True"
+                }
+              ],
+              "name": [
+                "2",
+                "1",
+                "3"
+              ]
+            }
+          ],
+          "zones": [
+            "2",
+            "1",
+            "3"
+          ]
+        }
+      ],
+      "locations": [
+        "eastus"
+      ],
+      "name": "Standard_D2s_v4",
+      "resourceType": "virtualMachines",
+      "restrictions": [],
+      "size": "D2s_v4",
+      "tier": "Standard"
+    }
+  ],
+  "rawResponseCapturedAtUtc": "2026-10-09T09:06:01.374406Z",
+  "sanitization": "The filtered SKU object has no subscription/resource IDs; all returned SKU and capability fields are retained."
+}

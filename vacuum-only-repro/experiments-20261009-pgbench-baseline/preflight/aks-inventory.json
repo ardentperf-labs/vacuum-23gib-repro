@@ -1,0 +1,42 @@
+[
+  {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-only-c370be15909de6a69298cb6713d85226/providers/Microsoft.ContainerService/managedClusters/aks-vacuum-only-c370be15909d",
+    "name": "aks-vacuum-only-c370be15909d",
+    "resourceGroup": "rg-vacuum-only-c370be15909de6a69298cb6713d85226",
+    "location": "eastus",
+    "provisioningState": "Succeeded",
+    "kubernetesVersion": "1.35",
+    "nodeResourceGroup": "rg-vacuum-nodes-c370be15909de6a69298cb6713d85226",
+    "managedBy": "vacuum-only-repro",
+    "reproPurpose": null,
+    "pools": [
+      {
+        "name": "nodepool1",
+        "count": 2,
+        "vmSize": "Standard_D2s_v4",
+        "availabilityZones": null,
+        "mode": "System"
+      }
+    ]
+  },
+  {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-only-0aaf271768f70a4fd06a9cb05e75a4ea/providers/Microsoft.ContainerService/managedClusters/aks-vacuum-only-0aaf271768f7",
+    "name": "aks-vacuum-only-0aaf271768f7",
+    "resourceGroup": "rg-vacuum-only-0aaf271768f70a4fd06a9cb05e75a4ea",
+    "location": "eastus",
+    "provisioningState": "Succeeded",
+    "kubernetesVersion": "1.35",
+    "nodeResourceGroup": "rg-vacuum-nodes-0aaf271768f70a4fd06a9cb05e75a4ea",
+    "managedBy": "vacuum-only-repro",
+    "reproPurpose": null,
+    "pools": [
+      {
+        "name": "nodepool1",
+        "count": 2,
+        "vmSize": "Standard_D2s_v4",
+        "availabilityZones": null,
+        "mode": "System"
+      }
+    ]
+  }
+]

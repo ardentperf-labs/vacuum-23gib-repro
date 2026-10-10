@@ -1,0 +1,103 @@
+{
+  "blockBytes": 1048576,
+  "capturedAtHost": "2026-10-06T01:30:19.345Z",
+  "claim": "hdd-pg-2",
+  "expectedProcesses": 5,
+  "ioDepthPerProcess": 32,
+  "mountReadOnly": true,
+  "node": "aks-nodepool1-35454189-vmss000001",
+  "pod": "read-pressure-16244c2c-full-3e4d",
+  "podUid": "e5691921-d57d-49c0-b003-8c72151697c5",
+  "projectedNodeHeadroom": {
+    "allocatableCpuCores": 1.9,
+    "allocatableMemoryBytes": 6070644736.0,
+    "calculation": "sum of active pod requests using max(sum of regular containers, max init container) plus pod overhead; node allocatable already excludes node reservations",
+    "estimatedAvailableCpuRequestCores": 0.13299999999999979,
+    "estimatedAvailableMemoryRequestBytes": 2987831296.0,
+    "plannedReaderRequestCpuCores": 0.025,
+    "plannedReaderRequestMemoryBytes": 402653184.0,
+    "scheduledContainerCpuRequestsCores": 1.7670000000000001,
+    "scheduledContainerMemoryRequestsBytes": 3082813440.0,
+    "scheduledPods": [
+      {
+        "cpuRequestCores": 0.065,
+        "memoryRequestBytes": 314572800.0,
+        "name": "azure-cns-8zznb",
+        "namespace": "kube-system"
+      },
+      {
+        "cpuRequestCores": 0.05,
+        "memoryRequestBytes": 37748736.0,
+        "name": "azure-ip-masq-agent-f24rl",
+        "namespace": "kube-system"
+      },
+      {
+        "cpuRequestCores": 0.05,
+        "memoryRequestBytes": 52428800.0,
+        "name": "cloud-node-manager-96sqm",
+        "namespace": "kube-system"
+      },
+      {
+        "cpuRequestCores": 0.1,
+        "memoryRequestBytes": 73400320.0,
+        "name": "coredns-5d474ff6db-bc8rm",
+        "namespace": "kube-system"
+      },
+      {
+        "cpuRequestCores": 0.03,
+        "memoryRequestBytes": 62914560.0,
+        "name": "csi-azuredisk-node-4lrnv",
+        "namespace": "kube-system"
+      },
+      {
+        "cpuRequestCores": 0.04,
+        "memoryRequestBytes": 83886080.0,
+        "name": "csi-azurefile-node-ppvzq",
+        "namespace": "kube-system"
+      },
+      {
+        "cpuRequestCores": 0.02,
+        "memoryRequestBytes": 20971520.0,
+        "name": "konnectivity-agent-768666d585-jxqnj",
+        "namespace": "kube-system"
+      },
+      {
+        "cpuRequestCores": 0.1,
+        "memoryRequestBytes": 0.0,
+        "name": "kube-proxy-2p9pf",
+        "namespace": "kube-system"
+      },
+      {
+        "cpuRequestCores": 0.156,
+        "memoryRequestBytes": 144703488.0,
+        "name": "metrics-server-85768b658b-c9d6m",
+        "namespace": "kube-system"
+      },
+      {
+        "cpuRequestCores": 0.156,
+        "memoryRequestBytes": 144703488.0,
+        "name": "metrics-server-85768b658b-qwbrc",
+        "namespace": "kube-system"
+      },
+      {
+        "cpuRequestCores": 1.0,
+        "memoryRequestBytes": 2147483648.0,
+        "name": "hdd-pg-2",
+        "namespace": "repro"
+      }
+    ]
+  },
+  "readerImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+  "resources": {
+    "limits": {
+      "cpu": "500m",
+      "memory": "1Gi"
+    },
+    "requests": {
+      "cpu": "25m",
+      "memory": "384Mi"
+    }
+  },
+  "target": "/mnt/data/.repro-read-pressure-aux-16244c2c1353a0fc1b108ec455fd70c8/pressure",
+  "targetKind": "token-owned generated auxiliary files outside PGDATA"
+}

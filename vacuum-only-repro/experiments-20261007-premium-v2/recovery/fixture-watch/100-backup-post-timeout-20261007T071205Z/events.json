@@ -1,0 +1,226 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T06:11:46Z",
+            "involvedObject": {
+                "apiVersion": "snapshot.storage.k8s.io/v1",
+                "kind": "VolumeSnapshot",
+                "name": "vacuum-backup-f1b90aec-wal",
+                "namespace": "repro",
+                "resourceVersion": "264736",
+                "uid": "ebeff553-ca6f-487c-8517-e803b02337ca"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T06:11:46Z",
+            "message": "Waiting for a snapshot repro/vacuum-backup-f1b90aec-wal to be created by the CSI driver.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T06:11:46Z",
+                "name": "vacuum-backup-f1b90aec-wal.18dc2a85facf7116",
+                "namespace": "repro",
+                "resourceVersion": "264742",
+                "uid": "40eb2cc2-3e17-4260-bdea-28fc244cfbc4"
+            },
+            "reason": "CreatingSnapshot",
+            "reportingComponent": "snapshot-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "snapshot-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T06:12:01Z",
+            "involvedObject": {
+                "apiVersion": "snapshot.storage.k8s.io/v1",
+                "kind": "VolumeSnapshot",
+                "name": "vacuum-backup-f1b90aec-wal",
+                "namespace": "repro",
+                "resourceVersion": "264745",
+                "uid": "ebeff553-ca6f-487c-8517-e803b02337ca"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T06:12:01Z",
+            "message": "Snapshot repro/vacuum-backup-f1b90aec-wal was successfully created by the CSI driver.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T06:12:01Z",
+                "name": "vacuum-backup-f1b90aec-wal.18dc2a896ca56a6c",
+                "namespace": "repro",
+                "resourceVersion": "264835",
+                "uid": "a6a4ac2d-95d6-4b30-9011-8d6a08193e35"
+            },
+            "reason": "SnapshotCreated",
+            "reportingComponent": "snapshot-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "snapshot-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T06:28:19Z",
+            "involvedObject": {
+                "apiVersion": "snapshot.storage.k8s.io/v1",
+                "kind": "VolumeSnapshot",
+                "name": "vacuum-backup-f1b90aec-wal",
+                "namespace": "repro",
+                "resourceVersion": "264837",
+                "uid": "ebeff553-ca6f-487c-8517-e803b02337ca"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T06:28:19Z",
+            "message": "Snapshot repro/vacuum-backup-f1b90aec-wal is ready to use.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T06:28:19Z",
+                "name": "vacuum-backup-f1b90aec-wal.18dc2b6d3a7df686",
+                "namespace": "repro",
+                "resourceVersion": "270048",
+                "uid": "087b5134-9609-411b-a194-77ba8a83e164"
+            },
+            "reason": "SnapshotReady",
+            "reportingComponent": "snapshot-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "snapshot-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T06:11:46Z",
+            "involvedObject": {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "kind": "Backup",
+                "name": "vacuum-backup-f1b90aec",
+                "namespace": "repro",
+                "resourceVersion": "264673",
+                "uid": "597e0f7d-c87e-4455-b01a-42120f969859"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T06:11:46Z",
+            "message": "Creating VolumeSnapshot for PVC hdd-pg-1",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T06:11:46Z",
+                "name": "vacuum-backup-f1b90aec.18dc2a85efe31063",
+                "namespace": "repro",
+                "resourceVersion": "264728",
+                "uid": "2c39fd98-aaee-47f0-8996-d3de324304ff"
+            },
+            "reason": "CreateSnapshot",
+            "reportingComponent": "cloudnative-pg-backup",
+            "reportingInstance": "",
+            "source": {
+                "component": "cloudnative-pg-backup"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T06:11:46Z",
+            "involvedObject": {
+                "apiVersion": "snapshot.storage.k8s.io/v1",
+                "kind": "VolumeSnapshot",
+                "name": "vacuum-backup-f1b90aec",
+                "namespace": "repro",
+                "resourceVersion": "264729",
+                "uid": "604b8cee-1a94-4df6-b846-be245038a795"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T06:11:46Z",
+            "message": "Waiting for a snapshot repro/vacuum-backup-f1b90aec to be created by the CSI driver.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T06:11:46Z",
+                "name": "vacuum-backup-f1b90aec.18dc2a85f4c35e64",
+                "namespace": "repro",
+                "resourceVersion": "264733",
+                "uid": "c05484cd-b997-402a-8a04-32c8782d63e4"
+            },
+            "reason": "CreatingSnapshot",
+            "reportingComponent": "snapshot-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "snapshot-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T06:11:46Z",
+            "involvedObject": {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "kind": "Backup",
+                "name": "vacuum-backup-f1b90aec",
+                "namespace": "repro",
+                "resourceVersion": "264673",
+                "uid": "597e0f7d-c87e-4455-b01a-42120f969859"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T06:11:46Z",
+            "message": "Creating VolumeSnapshot for PVC hdd-pg-1-wal",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T06:11:46Z",
+                "name": "vacuum-backup-f1b90aec.18dc2a85f74768fd",
+                "namespace": "repro",
+                "resourceVersion": "264738",
+                "uid": "44ad7c92-a0b8-470a-9ee8-40580f91c447"
+            },
+            "reason": "CreateSnapshot",
+            "reportingComponent": "cloudnative-pg-backup",
+            "reportingInstance": "",
+            "source": {
+                "component": "cloudnative-pg-backup"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T06:11:58Z",
+            "involvedObject": {
+                "apiVersion": "snapshot.storage.k8s.io/v1",
+                "kind": "VolumeSnapshot",
+                "name": "vacuum-backup-f1b90aec",
+                "namespace": "repro",
+                "resourceVersion": "264735",
+                "uid": "604b8cee-1a94-4df6-b846-be245038a795"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T06:11:58Z",
+            "message": "Snapshot repro/vacuum-backup-f1b90aec was successfully created by the CSI driver.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T06:11:58Z",
+                "name": "vacuum-backup-f1b90aec.18dc2a88c5251cab",
+                "namespace": "repro",
+                "resourceVersion": "264813",
+                "uid": "08ce5da6-4de8-4e97-a98f-a3bc13c86108"
+            },
+            "reason": "SnapshotCreated",
+            "reportingComponent": "snapshot-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "snapshot-controller"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

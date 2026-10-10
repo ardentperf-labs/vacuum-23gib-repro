@@ -1,0 +1,28 @@
+{
+  "clusterName": "aks-vacuum-only-16244c2c1353",
+  "kubeconfigPath": "[REDACTED]",
+  "location": "westus3",
+  "networkWatcherBaseline": {
+    "ids": [
+      "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-watcher-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Network/networkWatchers/vacuum-watcher-35e99cb5febd"
+    ],
+    "location": "westus3"
+  },
+  "nodeResourceGroup": "rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8",
+  "ownerToken": "[REDACTED]",
+  "requestedNodeResourceGroup": "rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8",
+  "resourceGroup": "rg-vacuum-only-16244c2c1353a0fc1b108ec455fd70c8",
+  "snapshotRetention": {
+    "location": "westus3",
+    "previousKubeletContributorRemoved": true,
+    "previousKubeletPrincipalObjectId": "[REDACTED]",
+    "principalKind": "aksSystemAssignedControlPlane",
+    "principalObjectId": "[REDACTED]",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "resourceGroupId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "role": "Disk Snapshot Contributor"
+  },
+  "status": "ready",
+  "subscriptionId": "[REDACTED]",
+  "version": 1
+}

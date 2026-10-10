@@ -1,0 +1,299 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "cnpg.io/nodeSerial": "1",
+                    "cnpg.io/operatorVersion": "1.30.1",
+                    "cnpg.io/pvcStatus": "ready",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "disk.csi.azure.com",
+                    "volume.kubernetes.io/selected-node": "aks-nodepool1-30685692-vmss000001",
+                    "volume.kubernetes.io/storage-provisioner": "disk.csi.azure.com"
+                },
+                "creationTimestamp": "2026-10-06T20:54:07Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/component": "database",
+                    "app.kubernetes.io/managed-by": "cloudnative-pg",
+                    "app.kubernetes.io/name": "postgresql",
+                    "cnpg.io/cluster": "hdd-pg",
+                    "cnpg.io/instanceName": "hdd-pg-1",
+                    "cnpg.io/instanceRole": "primary",
+                    "cnpg.io/pvcRole": "PG_DATA",
+                    "role": "primary"
+                },
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "postgresql.cnpg.io/v1",
+                        "controller": true,
+                        "kind": "Cluster",
+                        "name": "hdd-pg",
+                        "uid": "8932221b-bcc5-485d-bcb3-4a80a548fc9c"
+                    }
+                ],
+                "resourceVersion": "189937",
+                "uid": "8c6afc42-60ef-409d-b8a4-f53c3c3145d2"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "dataSource": {
+                    "apiGroup": "snapshot.storage.k8s.io",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-data-5c241a19"
+                },
+                "dataSourceRef": {
+                    "apiGroup": "snapshot.storage.k8s.io",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-data-5c241a19"
+                },
+                "resources": {
+                    "requests": {
+                        "storage": "512Gi"
+                    }
+                },
+                "storageClassName": "azure-premiumv2",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-8c6afc42-60ef-409d-b8a4-f53c3c3145d2"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "512Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "cnpg.io/nodeSerial": "1",
+                    "cnpg.io/operatorVersion": "1.30.1",
+                    "cnpg.io/pvcStatus": "ready",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "disk.csi.azure.com",
+                    "volume.kubernetes.io/selected-node": "aks-nodepool1-30685692-vmss000001",
+                    "volume.kubernetes.io/storage-provisioner": "disk.csi.azure.com"
+                },
+                "creationTimestamp": "2026-10-07T00:24:45Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/component": "database",
+                    "app.kubernetes.io/managed-by": "cloudnative-pg",
+                    "app.kubernetes.io/name": "postgresql",
+                    "cnpg.io/cluster": "hdd-pg",
+                    "cnpg.io/instanceName": "hdd-pg-1",
+                    "cnpg.io/instanceRole": "primary",
+                    "cnpg.io/pvcRole": "PG_WAL",
+                    "role": "primary"
+                },
+                "name": "hdd-pg-1-wal",
+                "namespace": "repro",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "postgresql.cnpg.io/v1",
+                        "controller": true,
+                        "kind": "Cluster",
+                        "name": "hdd-pg",
+                        "uid": "8932221b-bcc5-485d-bcb3-4a80a548fc9c"
+                    }
+                ],
+                "resourceVersion": "176467",
+                "uid": "d1307045-4698-46ba-b0bf-7c380fa13fb2"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "512Gi"
+                    }
+                },
+                "storageClassName": "azure-premiumv2",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-d1307045-4698-46ba-b0bf-7c380fa13fb2"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "512Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "cnpg.io/nodeSerial": "2",
+                    "cnpg.io/operatorVersion": "1.30.1",
+                    "cnpg.io/pvcStatus": "ready",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "disk.csi.azure.com",
+                    "volume.kubernetes.io/selected-node": "aks-nodepool1-30685692-vmss000000",
+                    "volume.kubernetes.io/storage-provisioner": "disk.csi.azure.com"
+                },
+                "creationTimestamp": "2026-10-07T02:13:41Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/component": "database",
+                    "app.kubernetes.io/managed-by": "cloudnative-pg",
+                    "app.kubernetes.io/name": "postgresql",
+                    "cnpg.io/cluster": "hdd-pg",
+                    "cnpg.io/instanceName": "hdd-pg-2",
+                    "cnpg.io/instanceRole": "replica",
+                    "cnpg.io/pvcRole": "PG_DATA",
+                    "role": "replica"
+                },
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "postgresql.cnpg.io/v1",
+                        "controller": true,
+                        "kind": "Cluster",
+                        "name": "hdd-pg",
+                        "uid": "8932221b-bcc5-485d-bcb3-4a80a548fc9c"
+                    }
+                ],
+                "resourceVersion": "193588",
+                "uid": "96bd9d47-717d-4913-913f-0c7ec271f76d"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "dataSource": {
+                    "apiGroup": "snapshot.storage.k8s.io",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-backup-5c241a19"
+                },
+                "dataSourceRef": {
+                    "apiGroup": "snapshot.storage.k8s.io",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-backup-5c241a19"
+                },
+                "resources": {
+                    "requests": {
+                        "storage": "512Gi"
+                    }
+                },
+                "storageClassName": "azure-premiumv2",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-96bd9d47-717d-4913-913f-0c7ec271f76d"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "512Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "cnpg.io/nodeSerial": "2",
+                    "cnpg.io/operatorVersion": "1.30.1",
+                    "cnpg.io/pvcStatus": "ready",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "disk.csi.azure.com",
+                    "volume.kubernetes.io/selected-node": "aks-nodepool1-30685692-vmss000000",
+                    "volume.kubernetes.io/storage-provisioner": "disk.csi.azure.com"
+                },
+                "creationTimestamp": "2026-10-07T02:13:41Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/component": "database",
+                    "app.kubernetes.io/managed-by": "cloudnative-pg",
+                    "app.kubernetes.io/name": "postgresql",
+                    "cnpg.io/cluster": "hdd-pg",
+                    "cnpg.io/instanceName": "hdd-pg-2",
+                    "cnpg.io/instanceRole": "replica",
+                    "cnpg.io/pvcRole": "PG_WAL",
+                    "role": "replica"
+                },
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "postgresql.cnpg.io/v1",
+                        "controller": true,
+                        "kind": "Cluster",
+                        "name": "hdd-pg",
+                        "uid": "8932221b-bcc5-485d-bcb3-4a80a548fc9c"
+                    }
+                ],
+                "resourceVersion": "190101",
+                "uid": "b2505bd1-4201-4657-8456-15a2dde19fb0"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "dataSource": {
+                    "apiGroup": "snapshot.storage.k8s.io",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-backup-5c241a19-wal"
+                },
+                "dataSourceRef": {
+                    "apiGroup": "snapshot.storage.k8s.io",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-backup-5c241a19-wal"
+                },
+                "resources": {
+                    "requests": {
+                        "storage": "512Gi"
+                    }
+                },
+                "storageClassName": "azure-premiumv2",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-b2505bd1-4201-4657-8456-15a2dde19fb0"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "512Gi"
+                },
+                "phase": "Bound"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

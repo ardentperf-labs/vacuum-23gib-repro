@@ -1,0 +1,651 @@
+{
+  "generatedUtc": "2026-10-04T09:07:54.348625Z",
+  "stackOwnerToken": "f30e5bb26a0d09aa1f040cade3281cef",
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "resourceGroup": "rg-vacuum-only-nodes-f30e5bb26a0d09aa1f040cade3281cef",
+  "location": "eastus2",
+  "vmss": "aks-nodepool1-12183397-vmss",
+  "window": {
+    "requestedStartUtc": "2026-10-04T06:54:32Z",
+    "requestedEndUtc": "2026-10-04T08:49:17Z",
+    "namespace": "Microsoft.Compute/virtualMachineScaleSets",
+    "interval": "PT1M",
+    "returnedFirstBucketUtc": "2026-10-04T06:54:00Z",
+    "returnedLastBucketUtc": "2026-10-04T08:48:00Z",
+    "note": "The raw query covers the requested interval, but Azure timestamps on minute boundaries. Statistics exclude the 06:54 bucket because it begins 32 seconds before the requested start. The final returned point is 08:48; no distinct 08:49 point was returned.",
+    "statsExcludeFirstPartialBucket": true,
+    "analysisPointStartUtc": "2026-10-04T06:55:00Z",
+    "analysisPointEndUtc": "2026-10-04T08:48:00Z"
+  },
+  "metricSources": {
+    "rawVmssMetrics": "azure-vmss-metrics-f30-20261004T065432Z-084917Z.json",
+    "rawLatencyMetrics": "azure-vmss-latency-f30-20261004T065432Z-084917Z.json",
+    "metricDefinitions": "azure-vmss-metric-definitions-f30-20261004.json",
+    "azureCrossCheck": "results/20261004T065423Z/azure-cross-check.json",
+    "pvArtifacts": "artifacts/prepare-20261004T060431Z/*-pv.json",
+    "latencySupportDocumentation": "https://learn.microsoft.com/en-us/azure/virtual-machines/disks-metrics"
+  },
+  "mapping": [
+    {
+      "role": "primary DATA",
+      "pvName": "pvc-8ad55f69-784c-4dc9-8107-e61c894762c2",
+      "persistentVolumeFile": "artifacts/prepare-20261004T060431Z/hdd-pg-1-pv.json",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-nodes-f30e5bb26a0d09aa1f040cade3281cef/providers/Microsoft.Compute/disks/pvc-8ad55f69-784c-4dc9-8107-e61c894762c2",
+      "vmss": "aks-nodepool1-12183397-vmss",
+      "vmName": "aks-nodepool1-12183397-vmss_0",
+      "instanceId": "0",
+      "lun": 0,
+      "caching": "None",
+      "managedDiskSku": "Standard_LRS",
+      "managedDiskApiProperties": {
+        "sku": "Standard_LRS",
+        "sizeGiB": 512,
+        "nominalIops": 500,
+        "nominalMBps": 60,
+        "state": "Attached"
+      },
+      "roleKey": "primary-data"
+    },
+    {
+      "role": "primary WAL",
+      "pvName": "pvc-5448bf15-ea38-499b-a302-0bcc98354623",
+      "persistentVolumeFile": "artifacts/prepare-20261004T060431Z/hdd-pg-1-wal-pv.json",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-nodes-f30e5bb26a0d09aa1f040cade3281cef/providers/Microsoft.Compute/disks/pvc-5448bf15-ea38-499b-a302-0bcc98354623",
+      "vmss": "aks-nodepool1-12183397-vmss",
+      "vmName": "aks-nodepool1-12183397-vmss_0",
+      "instanceId": "0",
+      "lun": 1,
+      "caching": "None",
+      "managedDiskSku": "Standard_LRS",
+      "managedDiskApiProperties": {
+        "sku": "Standard_LRS",
+        "sizeGiB": 512,
+        "nominalIops": 500,
+        "nominalMBps": 60,
+        "state": "Attached"
+      },
+      "roleKey": "primary-wal"
+    },
+    {
+      "role": "replica DATA",
+      "pvName": "pvc-c59f3e95-c9bd-4e63-b72a-2644d3c2b464",
+      "persistentVolumeFile": "artifacts/prepare-20261004T060431Z/hdd-pg-2-pv.json",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-nodes-f30e5bb26a0d09aa1f040cade3281cef/providers/Microsoft.Compute/disks/pvc-c59f3e95-c9bd-4e63-b72a-2644d3c2b464",
+      "vmss": "aks-nodepool1-12183397-vmss",
+      "vmName": "aks-nodepool1-12183397-vmss_1",
+      "instanceId": "1",
+      "lun": 1,
+      "caching": "None",
+      "managedDiskSku": "Standard_LRS",
+      "managedDiskApiProperties": {
+        "sku": "Standard_LRS",
+        "sizeGiB": 512,
+        "nominalIops": 500,
+        "nominalMBps": 60,
+        "state": "Attached"
+      },
+      "roleKey": "replica-data"
+    },
+    {
+      "role": "replica WAL",
+      "pvName": "pvc-6df4c1f7-1eda-44d7-b34d-3931bdff27cc",
+      "persistentVolumeFile": "artifacts/prepare-20261004T060431Z/hdd-pg-2-wal-pv.json",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-nodes-f30e5bb26a0d09aa1f040cade3281cef/providers/Microsoft.Compute/disks/pvc-6df4c1f7-1eda-44d7-b34d-3931bdff27cc",
+      "vmss": "aks-nodepool1-12183397-vmss",
+      "vmName": "aks-nodepool1-12183397-vmss_1",
+      "instanceId": "1",
+      "lun": 0,
+      "caching": "None",
+      "managedDiskSku": "Standard_LRS",
+      "managedDiskApiProperties": {
+        "sku": "Standard_LRS",
+        "sizeGiB": 512,
+        "nominalIops": 500,
+        "nominalMBps": 60,
+        "state": "Attached"
+      },
+      "roleKey": "replica-wal"
+    }
+  ],
+  "stats": {
+    "Data Disk IOPS Consumed Percentage": {
+      "primary DATA": {
+        "points": 108,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 52.01851851851852,
+        "p95MinuteAverageNearestRank": 68.0,
+        "peakMinuteAverage": 75.0,
+        "peakAzureMaximum": 75.0,
+        "uniqueObservedValues": null
+      },
+      "primary WAL": {
+        "points": 107,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 47.88317757009346,
+        "p95MinuteAverageNearestRank": 60.0,
+        "peakMinuteAverage": 69.0,
+        "peakAzureMaximum": 69.0,
+        "uniqueObservedValues": null
+      },
+      "replica DATA": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 96.28070175438596,
+        "p95MinuteAverageNearestRank": 100.0,
+        "peakMinuteAverage": 100.0,
+        "peakAzureMaximum": 100.0,
+        "uniqueObservedValues": null
+      },
+      "replica WAL": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 13.464912280701755,
+        "p95MinuteAverageNearestRank": 59.0,
+        "peakMinuteAverage": 75.0,
+        "peakAzureMaximum": 75.0,
+        "uniqueObservedValues": null
+      }
+    },
+    "Data Disk Bandwidth Consumed Percentage": {
+      "primary DATA": {
+        "points": 106,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 66.96698113207547,
+        "p95MinuteAverageNearestRank": 82.0,
+        "peakMinuteAverage": 91.0,
+        "peakAzureMaximum": 94.0,
+        "uniqueObservedValues": null
+      },
+      "primary WAL": {
+        "points": 106,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 45.985849056603776,
+        "p95MinuteAverageNearestRank": 60.0,
+        "peakMinuteAverage": 73.0,
+        "peakAzureMaximum": 73.0,
+        "uniqueObservedValues": null
+      },
+      "replica DATA": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 7.7631578947368425,
+        "p95MinuteAverageNearestRank": 9.0,
+        "peakMinuteAverage": 9.0,
+        "peakAzureMaximum": 9.0,
+        "uniqueObservedValues": null
+      },
+      "replica WAL": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 16.859649122807017,
+        "p95MinuteAverageNearestRank": 75.0,
+        "peakMinuteAverage": 96.0,
+        "peakAzureMaximum": 96.0,
+        "uniqueObservedValues": null
+      }
+    },
+    "Data Disk Target IOPS": {
+      "primary DATA": {
+        "points": 22,
+        "firstPointUtc": "2026-10-04T06:58:00Z",
+        "lastPointUtc": "2026-10-04T08:44:00Z",
+        "averageOfMinuteAverages": 550.0,
+        "p95MinuteAverageNearestRank": 550.0,
+        "peakMinuteAverage": 550.0,
+        "peakAzureMaximum": 550.0,
+        "uniqueObservedValues": [
+          550.0
+        ]
+      },
+      "primary WAL": {
+        "points": 22,
+        "firstPointUtc": "2026-10-04T06:58:00Z",
+        "lastPointUtc": "2026-10-04T08:44:00Z",
+        "averageOfMinuteAverages": 550.0,
+        "p95MinuteAverageNearestRank": 550.0,
+        "peakMinuteAverage": 550.0,
+        "peakAzureMaximum": 550.0,
+        "uniqueObservedValues": [
+          550.0
+        ]
+      },
+      "replica DATA": {
+        "points": 23,
+        "firstPointUtc": "2026-10-04T06:57:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 550.0,
+        "p95MinuteAverageNearestRank": 550.0,
+        "peakMinuteAverage": 550.0,
+        "peakAzureMaximum": 550.0,
+        "uniqueObservedValues": [
+          550.0
+        ]
+      },
+      "replica WAL": {
+        "points": 23,
+        "firstPointUtc": "2026-10-04T06:57:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 550.0,
+        "p95MinuteAverageNearestRank": 550.0,
+        "peakMinuteAverage": 550.0,
+        "peakAzureMaximum": 550.0,
+        "uniqueObservedValues": [
+          550.0
+        ]
+      }
+    },
+    "Data Disk Target Bandwidth": {
+      "primary DATA": {
+        "points": 22,
+        "firstPointUtc": "2026-10-04T06:58:00Z",
+        "lastPointUtc": "2026-10-04T08:44:00Z",
+        "averageOfMinuteAverages": 100000000.0,
+        "p95MinuteAverageNearestRank": 100000000.0,
+        "peakMinuteAverage": 100000000.0,
+        "peakAzureMaximum": 100000000.0,
+        "uniqueObservedValues": [
+          100000000.0
+        ]
+      },
+      "primary WAL": {
+        "points": 22,
+        "firstPointUtc": "2026-10-04T06:58:00Z",
+        "lastPointUtc": "2026-10-04T08:44:00Z",
+        "averageOfMinuteAverages": 100000000.0,
+        "p95MinuteAverageNearestRank": 100000000.0,
+        "peakMinuteAverage": 100000000.0,
+        "peakAzureMaximum": 100000000.0,
+        "uniqueObservedValues": [
+          100000000.0
+        ]
+      },
+      "replica DATA": {
+        "points": 23,
+        "firstPointUtc": "2026-10-04T06:57:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 100000000.0,
+        "p95MinuteAverageNearestRank": 100000000.0,
+        "peakMinuteAverage": 100000000.0,
+        "peakAzureMaximum": 100000000.0,
+        "uniqueObservedValues": [
+          100000000.0
+        ]
+      },
+      "replica WAL": {
+        "points": 23,
+        "firstPointUtc": "2026-10-04T06:57:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 100000000.0,
+        "p95MinuteAverageNearestRank": 100000000.0,
+        "peakMinuteAverage": 100000000.0,
+        "peakAzureMaximum": 100000000.0,
+        "uniqueObservedValues": [
+          100000000.0
+        ]
+      }
+    },
+    "Data Disk Read Operations/Sec": {
+      "primary DATA": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 145.26622807017543,
+        "p95MinuteAverageNearestRank": 193.73,
+        "peakMinuteAverage": 201.74,
+        "peakAzureMaximum": 201.74,
+        "uniqueObservedValues": null
+      },
+      "primary WAL": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 2.939473684210526,
+        "p95MinuteAverageNearestRank": 2.38,
+        "peakMinuteAverage": 145.01,
+        "peakAzureMaximum": 145.01,
+        "uniqueObservedValues": null
+      },
+      "replica DATA": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 521.0354385964912,
+        "p95MinuteAverageNearestRank": 539.96,
+        "peakMinuteAverage": 546.95,
+        "peakAzureMaximum": 546.95,
+        "uniqueObservedValues": null
+      },
+      "replica WAL": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 16.75201754385965,
+        "p95MinuteAverageNearestRank": 19.36,
+        "peakMinuteAverage": 19.71,
+        "peakAzureMaximum": 19.71,
+        "uniqueObservedValues": null
+      }
+    },
+    "Data Disk Write Operations/Sec": {
+      "primary DATA": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 148.17877192982456,
+        "p95MinuteAverageNearestRank": 206.65,
+        "peakMinuteAverage": 218.33,
+        "peakAzureMaximum": 218.33,
+        "uniqueObservedValues": null
+      },
+      "primary WAL": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 267.69921052631577,
+        "p95MinuteAverageNearestRank": 338.11,
+        "peakMinuteAverage": 341.99,
+        "peakAzureMaximum": 341.99,
+        "uniqueObservedValues": null
+      },
+      "replica DATA": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 22.94526315789474,
+        "p95MinuteAverageNearestRank": 26.85,
+        "peakMinuteAverage": 29.57,
+        "peakAzureMaximum": 29.57,
+        "uniqueObservedValues": null
+      },
+      "replica WAL": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 61.28236842105263,
+        "p95MinuteAverageNearestRank": 325.62,
+        "peakMinuteAverage": 395.52,
+        "peakAzureMaximum": 395.52,
+        "uniqueObservedValues": null
+      }
+    },
+    "Data Disk Read Bytes/sec": {
+      "primary DATA": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 34863600.333333336,
+        "p95MinuteAverageNearestRank": 45621273.0,
+        "peakMinuteAverage": 47914928.0,
+        "peakAzureMaximum": 47914928.0,
+        "uniqueObservedValues": null
+      },
+      "primary WAL": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 652957.8947368421,
+        "p95MinuteAverageNearestRank": 565510.0,
+        "peakMinuteAverage": 34891550.0,
+        "peakAzureMaximum": 34891550.0,
+        "uniqueObservedValues": null
+      },
+      "replica DATA": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 4277939.359649123,
+        "p95MinuteAverageNearestRank": 4444940.0,
+        "peakMinuteAverage": 4480749.0,
+        "peakAzureMaximum": 4480749.0,
+        "uniqueObservedValues": null
+      },
+      "replica WAL": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 4015195.8947368423,
+        "p95MinuteAverageNearestRank": 4473544.0,
+        "peakMinuteAverage": 4474741.0,
+        "peakAzureMaximum": 4474741.0,
+        "uniqueObservedValues": null
+      }
+    },
+    "Data Disk Write Bytes/sec": {
+      "primary DATA": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 34231078.96982456,
+        "p95MinuteAverageNearestRank": 45908443.75,
+        "peakMinuteAverage": 48629649.49,
+        "peakAzureMaximum": 48629649.49,
+        "uniqueObservedValues": null
+      },
+      "primary WAL": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 46018775.03263158,
+        "p95MinuteAverageNearestRank": 61585046.12,
+        "peakMinuteAverage": 62679956.79,
+        "peakAzureMaximum": 62679956.79,
+        "uniqueObservedValues": null
+      },
+      "replica DATA": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 4229856.873596491,
+        "p95MinuteAverageNearestRank": 4939428.56,
+        "peakMinuteAverage": 5378603.01,
+        "peakAzureMaximum": 5378603.01,
+        "uniqueObservedValues": null
+      },
+      "replica WAL": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 13572283.880701752,
+        "p95MinuteAverageNearestRank": 74557814.47,
+        "peakMinuteAverage": 91363976.47,
+        "peakAzureMaximum": 91363976.47,
+        "uniqueObservedValues": null
+      }
+    },
+    "Data Disk Latency": {
+      "primary DATA": {
+        "points": 113,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 98.38608061946903,
+        "p95MinuteAverageNearestRank": 109.83909,
+        "peakMinuteAverage": 140.85666,
+        "peakAzureMaximum": 140.85666,
+        "uniqueObservedValues": null
+      },
+      "primary WAL": {
+        "points": 113,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 15.146394778761062,
+        "p95MinuteAverageNearestRank": 19.69173,
+        "peakMinuteAverage": 21.26755,
+        "peakAzureMaximum": 21.26755,
+        "uniqueObservedValues": null
+      },
+      "replica DATA": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 116.14761885964913,
+        "p95MinuteAverageNearestRank": 129.22509,
+        "peakMinuteAverage": 132.4242,
+        "peakAzureMaximum": 132.4242,
+        "uniqueObservedValues": null
+      },
+      "replica WAL": {
+        "points": 114,
+        "firstPointUtc": "2026-10-04T06:55:00Z",
+        "lastPointUtc": "2026-10-04T08:48:00Z",
+        "averageOfMinuteAverages": 20.206851754385966,
+        "p95MinuteAverageNearestRank": 41.38293,
+        "peakMinuteAverage": 98.61236,
+        "peakAzureMaximum": 98.61236,
+        "uniqueObservedValues": null
+      }
+    }
+  },
+  "managedDiskCrossCheckOverlap": {
+    "windowStart": "2026-10-04T06:54:00Z",
+    "windowEnd": "2026-10-04T07:43:00Z",
+    "note": "Existing azure-cross-check.json contains 50 PT1M points per disk and ends at 07:43; it does not cover the last 66 minutes of the requested VAC window.",
+    "byRole": {
+      "primary-data": {
+        "Composite Disk Read Bytes/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 33491856.69387755,
+          "max": 46534836.0
+        },
+        "Composite Disk Read Operations/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 141.91836734693877,
+          "max": 201.0
+        },
+        "Composite Disk Write Bytes/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 33451779.244897958,
+          "max": 48629649.0
+        },
+        "Composite Disk Write Operations/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 147.53061224489795,
+          "max": 218.0
+        }
+      },
+      "primary-wal": {
+        "Composite Disk Read Bytes/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 1519125.142857143,
+          "max": 34891550.0
+        },
+        "Composite Disk Read Operations/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 6.714285714285714,
+          "max": 145.0
+        },
+        "Composite Disk Write Bytes/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 40036339.89795918,
+          "max": 62220118.0
+        },
+        "Composite Disk Write Operations/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 245.40816326530611,
+          "max": 340.0
+        }
+      },
+      "replica-data": {
+        "Composite Disk Read Bytes/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 4153464.6938775512,
+          "max": 4480749.0
+        },
+        "Composite Disk Read Operations/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 505.3061224489796,
+          "max": 546.0
+        },
+        "Composite Disk Write Bytes/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 4049158.551020408,
+          "max": 4914180.0
+        },
+        "Composite Disk Write Operations/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 21.448979591836736,
+          "max": 26.0
+        }
+      },
+      "replica-wal": {
+        "Composite Disk Read Bytes/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 3735570.9591836734,
+          "max": 4473544.0
+        },
+        "Composite Disk Read Operations/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 15.63265306122449,
+          "max": 19.0
+        },
+        "Composite Disk Write Bytes/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 31554355.85714286,
+          "max": 91363976.0
+        },
+        "Composite Disk Write Operations/sec": {
+          "points": 49,
+          "firstPointUtc": "2026-10-04T06:55:00Z",
+          "lastPointUtc": "2026-10-04T07:43:00Z",
+          "average": 140.77551020408163,
+          "max": 395.0
+        }
+      }
+    }
+  },
+  "interpretation": {
+    "targetMetricSemantics": "Azure VMSS Data Disk Target IOPS/Bandwidth definitions describe baseline performance available without bursting. These are the observed per-LUN Azure Monitor target values; do not substitute the Managed Disk SKU API values for them.",
+    "consumed": "Azure VMSS consumed-percentage metrics were returned for all four LUNs. Replica DATA LUN 1 averaged 95.4% IOPS consumed and reached 100% in one-minute buckets while averaging 7.7% bandwidth consumed. This shows IOPS pressure without matching bandwidth saturation.",
+    "latency": "Azure returned non-null Data Disk Latency values per VMName/LUN, but current Microsoft documentation labels this metric Preview and explicitly limits it to disks attached through SCSI; NVMe-controller disks are excluded. The guest device mapping for this run identifies NVMe disks, so runtime values conflict with the documented support boundary. Preserve the values as unverified extra telemetry only; do not use them as a validated NVMe latency measurement or cross-check. No read/write latency split is available.",
+    "topology": "Primary and replica each use distinct DATA and WAL managed disks. VMSS LUN mappings match the PV volumeHandle IDs; caching=None for all four.",
+    "crossCheck": "The first 50 one-minute Azure Managed Disk Read Operations/sec points broadly agree with VMSS per-LUN Read Operations/sec for each mapped volume. This is a telemetry cross-check, not independent proof of causation."
+  },
+  "latencyValidation": {
+    "metric": "Data Disk Latency",
+    "unit": "milliseconds",
+    "runtimeObservation": "Azure returned non-null values for all four mapped LUNs across the queried interval.",
+    "microsoftDocumentationStatus": "Preview; available only for disks attached to VMs using the SCSI disk controller; not available for disks attached using the NVMe disk controller.",
+    "runController": "NVMe per guest device mapping.",
+    "validationStatus": "documentation-runtime contradiction; unverified for this NVMe-backed run",
+    "handling": "Retain raw series as unverified extra telemetry. Do not cite as validated NVMe latency evidence or a latency cross-check.",
+    "source": "https://learn.microsoft.com/en-us/azure/virtual-machines/disks-metrics",
+    "sourceCheckedUtc": "2026-10-04"
+  }
+}

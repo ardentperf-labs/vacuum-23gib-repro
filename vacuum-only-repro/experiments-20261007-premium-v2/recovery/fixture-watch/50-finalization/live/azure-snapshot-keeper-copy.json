@@ -1,0 +1,29 @@
+{
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/snapshots/keeper-pv2-5c241a19-4b554415",
+  "name": "keeper-pv2-5c241a19-4b554415",
+  "location": "westus3",
+  "zone": null,
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "uniqueId": "737fc1c3-dfd9-4db1-b1c9-1d09a45d95cc",
+  "provisioningState": "Succeeded",
+  "snapshotAccessState": "Available",
+  "diskSizeGB": 512,
+  "diskSizeBytes": 549755813888,
+  "incremental": true,
+  "incrementalSnapshotFamilyId": "8fe8b7a7-9d6c-46e9-b623-3973efc7ecbf",
+  "completionPercent": null,
+  "creationData": {
+    "createOption": "Copy",
+    "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/restore-stage-5c241a19-4b554415",
+    "sourceUniqueId": "060b2754-8d81-4a12-84d4-e5d258d79004"
+  },
+  "tags": {
+    "reproPurpose": "premiumv2-keeper-copy",
+    "reprotoken": "5c241a190a85f40b788038945c9744f6",
+    "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/restore-stage-5c241a19-4b554415",
+    "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-16244c2c"
+  }
+}

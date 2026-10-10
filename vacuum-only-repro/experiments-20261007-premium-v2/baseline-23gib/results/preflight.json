@@ -1,0 +1,709 @@
+{
+  "clientCreated": false,
+  "completedCnpgBootstrapJobs": [],
+  "fixture": {
+    "consistency": "online primary disk snapshot after checkpoint; crash-consistent",
+    "createdAtUtc": "2026-10-04T14:10:10.0747777+00:00",
+    "diskSizeGiB": 512,
+    "heapBytes": 24696061952,
+    "keeperOwnerToken": "93494924de3e081fc5803031e15d5587",
+    "location": "eastus",
+    "originalKeeperSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-amplification-prepared-05d212886d",
+    "preparedDeadTuplesEstimate": 36050000,
+    "preparedLiveTuplesEstimate": 36050000,
+    "resourceGroup": "rg-az-hdd-repro-snapshot-keeper",
+    "snapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+    "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MC_rg-az-hdd-repro-14495d19_aks-az-hdd-14495d19_eastus2/providers/Microsoft.Compute/disks/pvc-6bf816df-2a57-4c62-b8b2-0dd9de7d9ca9",
+    "sourceNodeResourceGroup": "MC_rg-az-hdd-repro-14495d19_aks-az-hdd-14495d19_eastus2",
+    "sourceOwnerToken": "804391dc0a7b56b597915163951aed1a",
+    "sourceSetId": "scsi-prepared",
+    "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/snapshots/vacuum-copy-804391dc",
+    "sourceTopology": "combined PGDATA/pg_wal",
+    "subscriptionId": "00000000-0000-0000-0000-000000000000",
+    "systemIdentifier": "7692518806614212629",
+    "tableBytes": 25040748544
+  },
+  "pods": {
+    "primary": {
+      "claims": [
+        {
+          "claim": "hdd-pg-1",
+          "path": "/var/lib/postgresql/data"
+        },
+        {
+          "claim": "hdd-pg-1-wal",
+          "path": "/var/lib/postgresql/wal"
+        }
+      ],
+      "name": "hdd-pg-1",
+      "node": "aks-nodepool1-34976006-vmss000001",
+      "uid": "dfb5fe5b-af61-4f19-a7d4-14c3f48e1744",
+      "zone": "eastus-1"
+    },
+    "replica": {
+      "claims": [
+        {
+          "claim": "hdd-pg-2",
+          "path": "/var/lib/postgresql/data"
+        },
+        {
+          "claim": "hdd-pg-2-wal",
+          "path": "/var/lib/postgresql/wal"
+        }
+      ],
+      "name": "hdd-pg-2",
+      "node": "aks-nodepool1-34976006-vmss000000",
+      "uid": "fcfade41-7407-4831-80e2-6222b0d6e6a2",
+      "zone": "eastus-1"
+    }
+  },
+  "prepare": {
+    "availabilityZone": "1",
+    "backup": "vacuum-backup-4b116309",
+    "clientCreated": false,
+    "cluster": "repro/hdd-pg",
+    "estimatedVacuumMinutes": 54.5,
+    "finalAudit": {
+      "allFourPremiumV2DisksHydrated": true,
+      "archiveSecretAbsent": true,
+      "ownedRetentionSnapshotsReady": true,
+      "receipt": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/baseline-23gib/.state/recovery/baseline-finalize-audit.json",
+      "verifiedAtUtc": "2026-10-06T21:24:21Z"
+    },
+    "fixtureTargetHeapBytes": 24696061952,
+    "fixtureTargetHeapGiB": 23,
+    "heapBytes": 24696061952,
+    "instances": 2,
+    "measurementImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+    "preparedDeadTuplesEstimate": 7536640,
+    "preparedLiveTuplesEstimate": 7536640,
+    "replicaCaughtUpToLsn": "4E/55000000",
+    "replicaSnapshots": {
+      "data": "vacuum-backup-4b116309",
+      "wal": "vacuum-backup-4b116309-wal"
+    },
+    "restoreCopySnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/snapshots/keeper-pv2-4b116309",
+    "retainedSnapshotResourceGroup": "rg-vacuum-pv2-snap-4b1163091c697351e7725163a5a28e2e",
+    "sourceKind": "incremental_copy",
+    "sourceSnapshotHeapBytes": 118128640000,
+    "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c",
+    "sourceSnapshotTableBytes": 119777173504,
+    "status": "complete",
+    "storage": "four separate 512-GiB PremiumV2_LRS data/WAL disks at 3000 IOPS / 125 MB/s",
+    "systemIdentifier": "7692518806614212629",
+    "tableBytes": 25040748544,
+    "version": 1
+  },
+  "sql": {
+    "primary": {
+      "appSessions": 0,
+      "dataChecksumVersion": 0,
+      "defaultTablespaceIoConcurrencyOverride": false,
+      "recovery": false,
+      "settings": {
+        "autovacuum": {
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null,
+          "value": "on"
+        },
+        "checkpoint_completion_target": {
+          "pendingRestart": false,
+          "setting": "0.9",
+          "source": "default",
+          "unit": null,
+          "value": "0.9"
+        },
+        "checkpoint_timeout": {
+          "pendingRestart": false,
+          "setting": "300",
+          "source": "default",
+          "unit": "s",
+          "value": "5min"
+        },
+        "full_page_writes": {
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null,
+          "value": "on"
+        },
+        "maintenance_io_concurrency": {
+          "pendingRestart": false,
+          "setting": "10",
+          "source": "default",
+          "unit": null,
+          "value": "10"
+        },
+        "maintenance_work_mem": {
+          "pendingRestart": false,
+          "setting": "65536",
+          "source": "default",
+          "unit": "kB",
+          "value": "64MB"
+        },
+        "max_replication_slots": {
+          "pendingRestart": false,
+          "setting": "32",
+          "source": "configuration file",
+          "unit": null,
+          "value": "32"
+        },
+        "max_wal_senders": {
+          "pendingRestart": false,
+          "setting": "10",
+          "source": "default",
+          "unit": null,
+          "value": "10"
+        },
+        "max_wal_size": {
+          "pendingRestart": false,
+          "setting": "1024",
+          "source": "configuration file",
+          "unit": "MB",
+          "value": "1GB"
+        },
+        "recovery_prefetch": {
+          "pendingRestart": false,
+          "setting": "try",
+          "source": "default",
+          "unit": null,
+          "value": "try"
+        },
+        "shared_buffers": {
+          "pendingRestart": false,
+          "setting": "32768",
+          "source": "configuration file",
+          "unit": "8kB",
+          "value": "256MB"
+        },
+        "statement_timeout": {
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms",
+          "value": "0"
+        },
+        "synchronous_commit": {
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null,
+          "value": "on"
+        },
+        "synchronous_standby_names": {
+          "pendingRestart": false,
+          "setting": "ANY 1 (\"hdd-pg-2\")",
+          "source": "configuration file",
+          "unit": null,
+          "value": "ANY 1 (\"hdd-pg-2\")"
+        },
+        "track_io_timing": {
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null,
+          "value": "on"
+        },
+        "track_wal_io_timing": {
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null,
+          "value": "on"
+        },
+        "vacuum_cost_delay": {
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms",
+          "value": "0"
+        },
+        "wal_buffers": {
+          "pendingRestart": false,
+          "setting": "1024",
+          "source": "default",
+          "unit": "8kB",
+          "value": "8MB"
+        },
+        "wal_compression": {
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null,
+          "value": "off"
+        },
+        "wal_level": {
+          "pendingRestart": false,
+          "setting": "logical",
+          "source": "configuration file",
+          "unit": null,
+          "value": "logical"
+        },
+        "wal_log_hints": {
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null,
+          "value": "on"
+        },
+        "wal_receiver_timeout": {
+          "pendingRestart": false,
+          "setting": "5000",
+          "source": "configuration file",
+          "unit": "ms",
+          "value": "5s"
+        },
+        "wal_sender_timeout": {
+          "pendingRestart": false,
+          "setting": "5000",
+          "source": "configuration file",
+          "unit": "ms",
+          "value": "5s"
+        },
+        "wal_writer_delay": {
+          "pendingRestart": false,
+          "setting": "200",
+          "source": "default",
+          "unit": "ms",
+          "value": "200ms"
+        },
+        "wal_writer_flush_after": {
+          "pendingRestart": false,
+          "setting": "128",
+          "source": "default",
+          "unit": "8kB",
+          "value": "1MB"
+        }
+      },
+      "systemId": "7692518806614212629",
+      "table": {
+        "deadEstimate": 7536640,
+        "heapBytes": 24696061952,
+        "liveEstimate": 7536640,
+        "oid": "24578",
+        "relfilenode": "24578",
+        "reloptions": [
+          "autovacuum_enabled=false"
+        ],
+        "tablespaceOid": "0",
+        "tablespaceOverrides": null,
+        "totalBytes": 25040748544
+      },
+      "version": "16.15 (Debian 16.15-1.pgdg13+2)"
+    },
+    "replica": {
+      "appSessions": 0,
+      "dataChecksumVersion": 0,
+      "defaultTablespaceIoConcurrencyOverride": false,
+      "recovery": true,
+      "settings": {
+        "autovacuum": {
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null,
+          "value": "on"
+        },
+        "checkpoint_completion_target": {
+          "pendingRestart": false,
+          "setting": "0.9",
+          "source": "default",
+          "unit": null,
+          "value": "0.9"
+        },
+        "checkpoint_timeout": {
+          "pendingRestart": false,
+          "setting": "300",
+          "source": "default",
+          "unit": "s",
+          "value": "5min"
+        },
+        "full_page_writes": {
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null,
+          "value": "on"
+        },
+        "maintenance_io_concurrency": {
+          "pendingRestart": false,
+          "setting": "10",
+          "source": "default",
+          "unit": null,
+          "value": "10"
+        },
+        "maintenance_work_mem": {
+          "pendingRestart": false,
+          "setting": "65536",
+          "source": "default",
+          "unit": "kB",
+          "value": "64MB"
+        },
+        "max_replication_slots": {
+          "pendingRestart": false,
+          "setting": "32",
+          "source": "configuration file",
+          "unit": null,
+          "value": "32"
+        },
+        "max_wal_senders": {
+          "pendingRestart": false,
+          "setting": "10",
+          "source": "default",
+          "unit": null,
+          "value": "10"
+        },
+        "max_wal_size": {
+          "pendingRestart": false,
+          "setting": "1024",
+          "source": "configuration file",
+          "unit": "MB",
+          "value": "1GB"
+        },
+        "recovery_prefetch": {
+          "pendingRestart": false,
+          "setting": "try",
+          "source": "default",
+          "unit": null,
+          "value": "try"
+        },
+        "shared_buffers": {
+          "pendingRestart": false,
+          "setting": "32768",
+          "source": "configuration file",
+          "unit": "8kB",
+          "value": "256MB"
+        },
+        "statement_timeout": {
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms",
+          "value": "0"
+        },
+        "synchronous_commit": {
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "default",
+          "unit": null,
+          "value": "on"
+        },
+        "synchronous_standby_names": {
+          "pendingRestart": false,
+          "setting": "ANY 1 (\"hdd-pg-2\")",
+          "source": "configuration file",
+          "unit": null,
+          "value": "ANY 1 (\"hdd-pg-2\")"
+        },
+        "track_io_timing": {
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null,
+          "value": "on"
+        },
+        "track_wal_io_timing": {
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null,
+          "value": "on"
+        },
+        "vacuum_cost_delay": {
+          "pendingRestart": false,
+          "setting": "0",
+          "source": "default",
+          "unit": "ms",
+          "value": "0"
+        },
+        "wal_buffers": {
+          "pendingRestart": false,
+          "setting": "1024",
+          "source": "default",
+          "unit": "8kB",
+          "value": "8MB"
+        },
+        "wal_compression": {
+          "pendingRestart": false,
+          "setting": "off",
+          "source": "default",
+          "unit": null,
+          "value": "off"
+        },
+        "wal_level": {
+          "pendingRestart": false,
+          "setting": "logical",
+          "source": "configuration file",
+          "unit": null,
+          "value": "logical"
+        },
+        "wal_log_hints": {
+          "pendingRestart": false,
+          "setting": "on",
+          "source": "configuration file",
+          "unit": null,
+          "value": "on"
+        },
+        "wal_receiver_timeout": {
+          "pendingRestart": false,
+          "setting": "5000",
+          "source": "configuration file",
+          "unit": "ms",
+          "value": "5s"
+        },
+        "wal_sender_timeout": {
+          "pendingRestart": false,
+          "setting": "5000",
+          "source": "configuration file",
+          "unit": "ms",
+          "value": "5s"
+        },
+        "wal_writer_delay": {
+          "pendingRestart": false,
+          "setting": "200",
+          "source": "default",
+          "unit": "ms",
+          "value": "200ms"
+        },
+        "wal_writer_flush_after": {
+          "pendingRestart": false,
+          "setting": "128",
+          "source": "default",
+          "unit": "8kB",
+          "value": "1MB"
+        }
+      },
+      "systemId": "7692518806614212629",
+      "table": {
+        "deadEstimate": 0,
+        "heapBytes": 24696061952,
+        "liveEstimate": 0,
+        "oid": "24578",
+        "relfilenode": "24578",
+        "reloptions": [
+          "autovacuum_enabled=false"
+        ],
+        "tablespaceOid": "0",
+        "tablespaceOverrides": null,
+        "totalBytes": 25040748544
+      },
+      "version": "16.15 (Debian 16.15-1.pgdg13+2)"
+    }
+  },
+  "storage": {
+    "claims": {
+      "hdd-pg-1": {
+        "attachmentDevicePath": "",
+        "azureDisk": {
+          "completionPercent": 100.0,
+          "createOption": "Copy",
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-4a55da2c-5dbc-42be-bdcd-e5f4d6352742",
+          "iops": 3000,
+          "logicalSectorSize": 512,
+          "sizeGiB": 512,
+          "sku": "PremiumV2_LRS",
+          "throughputMBps": 125,
+          "zones": [
+            "1"
+          ]
+        },
+        "claim": "hdd-pg-1",
+        "lun": "1",
+        "node": "aks-nodepool1-34976006-vmss000001",
+        "path": "/var/lib/postgresql/data",
+        "pv": "pvc-4a55da2c-5dbc-42be-bdcd-e5f4d6352742",
+        "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-4a55da2c-5dbc-42be-bdcd-e5f4d6352742"
+      },
+      "hdd-pg-1-wal": {
+        "attachmentDevicePath": "",
+        "azureDisk": {
+          "completionPercent": null,
+          "createOption": "Empty",
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-9c7f12e9-c595-4e56-bbaa-7fc9dcbf7460",
+          "iops": 3000,
+          "logicalSectorSize": 512,
+          "sizeGiB": 512,
+          "sku": "PremiumV2_LRS",
+          "throughputMBps": 125,
+          "zones": [
+            "1"
+          ]
+        },
+        "claim": "hdd-pg-1-wal",
+        "lun": "0",
+        "node": "aks-nodepool1-34976006-vmss000001",
+        "path": "/var/lib/postgresql/wal",
+        "pv": "pvc-9c7f12e9-c595-4e56-bbaa-7fc9dcbf7460",
+        "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-9c7f12e9-c595-4e56-bbaa-7fc9dcbf7460"
+      },
+      "hdd-pg-2": {
+        "attachmentDevicePath": "",
+        "azureDisk": {
+          "completionPercent": 100.0,
+          "createOption": "Copy",
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-1b8dc8b3-93f5-40a2-8f17-d99854e6a82a",
+          "iops": 3000,
+          "logicalSectorSize": 512,
+          "sizeGiB": 512,
+          "sku": "PremiumV2_LRS",
+          "throughputMBps": 125,
+          "zones": [
+            "1"
+          ]
+        },
+        "claim": "hdd-pg-2",
+        "lun": "1",
+        "node": "aks-nodepool1-34976006-vmss000000",
+        "path": "/var/lib/postgresql/data",
+        "pv": "pvc-1b8dc8b3-93f5-40a2-8f17-d99854e6a82a",
+        "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-1b8dc8b3-93f5-40a2-8f17-d99854e6a82a"
+      },
+      "hdd-pg-2-wal": {
+        "attachmentDevicePath": "",
+        "azureDisk": {
+          "completionPercent": 100.0,
+          "createOption": "Copy",
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-4928871f-3702-4af2-86fe-0a6d5a211e39",
+          "iops": 3000,
+          "logicalSectorSize": 512,
+          "sizeGiB": 512,
+          "sku": "PremiumV2_LRS",
+          "throughputMBps": 125,
+          "zones": [
+            "1"
+          ]
+        },
+        "claim": "hdd-pg-2-wal",
+        "lun": "0",
+        "node": "aks-nodepool1-34976006-vmss000000",
+        "path": "/var/lib/postgresql/wal",
+        "pv": "pvc-4928871f-3702-4af2-86fe-0a6d5a211e39",
+        "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-4928871f-3702-4af2-86fe-0a6d5a211e39"
+      }
+    },
+    "roles": {
+      "primary": {
+        "data": {
+          "attachmentDevicePath": "",
+          "azureDisk": {
+            "completionPercent": 100.0,
+            "createOption": "Copy",
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-4a55da2c-5dbc-42be-bdcd-e5f4d6352742",
+            "iops": 3000,
+            "logicalSectorSize": 512,
+            "sizeGiB": 512,
+            "sku": "PremiumV2_LRS",
+            "throughputMBps": 125,
+            "zones": [
+              "1"
+            ]
+          },
+          "claim": "hdd-pg-1",
+          "lun": "1",
+          "node": "aks-nodepool1-34976006-vmss000001",
+          "path": "/var/lib/postgresql/data",
+          "pv": "pvc-4a55da2c-5dbc-42be-bdcd-e5f4d6352742",
+          "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-4a55da2c-5dbc-42be-bdcd-e5f4d6352742"
+        },
+        "wal": {
+          "attachmentDevicePath": "",
+          "azureDisk": {
+            "completionPercent": null,
+            "createOption": "Empty",
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-9c7f12e9-c595-4e56-bbaa-7fc9dcbf7460",
+            "iops": 3000,
+            "logicalSectorSize": 512,
+            "sizeGiB": 512,
+            "sku": "PremiumV2_LRS",
+            "throughputMBps": 125,
+            "zones": [
+              "1"
+            ]
+          },
+          "claim": "hdd-pg-1-wal",
+          "lun": "0",
+          "node": "aks-nodepool1-34976006-vmss000001",
+          "path": "/var/lib/postgresql/wal",
+          "pv": "pvc-9c7f12e9-c595-4e56-bbaa-7fc9dcbf7460",
+          "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-9c7f12e9-c595-4e56-bbaa-7fc9dcbf7460"
+        }
+      },
+      "replica": {
+        "data": {
+          "attachmentDevicePath": "",
+          "azureDisk": {
+            "completionPercent": 100.0,
+            "createOption": "Copy",
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-1b8dc8b3-93f5-40a2-8f17-d99854e6a82a",
+            "iops": 3000,
+            "logicalSectorSize": 512,
+            "sizeGiB": 512,
+            "sku": "PremiumV2_LRS",
+            "throughputMBps": 125,
+            "zones": [
+              "1"
+            ]
+          },
+          "claim": "hdd-pg-2",
+          "lun": "1",
+          "node": "aks-nodepool1-34976006-vmss000000",
+          "path": "/var/lib/postgresql/data",
+          "pv": "pvc-1b8dc8b3-93f5-40a2-8f17-d99854e6a82a",
+          "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-1b8dc8b3-93f5-40a2-8f17-d99854e6a82a"
+        },
+        "wal": {
+          "attachmentDevicePath": "",
+          "azureDisk": {
+            "completionPercent": 100.0,
+            "createOption": "Copy",
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-4928871f-3702-4af2-86fe-0a6d5a211e39",
+            "iops": 3000,
+            "logicalSectorSize": 512,
+            "sizeGiB": 512,
+            "sku": "PremiumV2_LRS",
+            "throughputMBps": 125,
+            "zones": [
+              "1"
+            ]
+          },
+          "claim": "hdd-pg-2-wal",
+          "lun": "0",
+          "node": "aks-nodepool1-34976006-vmss000000",
+          "path": "/var/lib/postgresql/wal",
+          "pv": "pvc-4928871f-3702-4af2-86fe-0a6d5a211e39",
+          "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-4928871f-3702-4af2-86fe-0a6d5a211e39"
+        }
+      }
+    },
+    "storageClass": {
+      "allowVolumeExpansion": true,
+      "apiVersion": "storage.k8s.io/v1",
+      "kind": "StorageClass",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"allowVolumeExpansion\":true,\"apiVersion\":\"storage.k8s.io/v1\",\"kind\":\"StorageClass\",\"metadata\":{\"annotations\":{},\"labels\":{\"app.kubernetes.io/part-of\":\"vacuum-only-repro\"},\"name\":\"azure-premiumv2\"},\"parameters\":{\"DiskIOPSReadWrite\":\"3000\",\"DiskMBpsReadWrite\":\"125\",\"LogicalSectorSize\":\"512\",\"cachingMode\":\"None\",\"kind\":\"Managed\",\"skuName\":\"PremiumV2_LRS\"},\"provisioner\":\"disk.csi.azure.com\",\"reclaimPolicy\":\"Delete\",\"volumeBindingMode\":\"WaitForFirstConsumer\"}\n"
+        },
+        "creationTimestamp": "2026-10-06T15:50:49Z",
+        "labels": {
+          "app.kubernetes.io/part-of": "vacuum-only-repro"
+        },
+        "name": "azure-premiumv2",
+        "resourceVersion": "1856",
+        "uid": "a30c9bb5-aaa0-4b0c-9a74-0c56096107a7"
+      },
+      "parameters": {
+        "DiskIOPSReadWrite": "3000",
+        "DiskMBpsReadWrite": "125",
+        "LogicalSectorSize": "512",
+        "cachingMode": "None",
+        "kind": "Managed",
+        "skuName": "PremiumV2_LRS"
+      },
+      "provisioner": "disk.csi.azure.com",
+      "reclaimPolicy": "Delete",
+      "volumeBindingMode": "WaitForFirstConsumer"
+    }
+  }
+}

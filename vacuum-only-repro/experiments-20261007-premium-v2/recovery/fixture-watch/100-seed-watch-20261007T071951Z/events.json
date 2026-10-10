@@ -1,0 +1,71 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T06:28:19Z",
+            "involvedObject": {
+                "apiVersion": "snapshot.storage.k8s.io/v1",
+                "kind": "VolumeSnapshot",
+                "name": "vacuum-backup-f1b90aec-wal",
+                "namespace": "repro",
+                "resourceVersion": "264837",
+                "uid": "ebeff553-ca6f-487c-8517-e803b02337ca"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T06:28:19Z",
+            "message": "Snapshot repro/vacuum-backup-f1b90aec-wal is ready to use.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T06:28:19Z",
+                "name": "vacuum-backup-f1b90aec-wal.18dc2b6d3a7df686",
+                "namespace": "repro",
+                "resourceVersion": "270048",
+                "uid": "087b5134-9609-411b-a194-77ba8a83e164"
+            },
+            "reason": "SnapshotReady",
+            "reportingComponent": "snapshot-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "snapshot-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:13:20Z",
+            "involvedObject": {
+                "apiVersion": "snapshot.storage.k8s.io/v1",
+                "kind": "VolumeSnapshot",
+                "name": "vacuum-backup-f1b90aec",
+                "namespace": "repro",
+                "resourceVersion": "264816",
+                "uid": "604b8cee-1a94-4df6-b846-be245038a795"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:13:20Z",
+            "message": "Snapshot repro/vacuum-backup-f1b90aec is ready to use.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:13:20Z",
+                "name": "vacuum-backup-f1b90aec.18dc2de1e555388c",
+                "namespace": "repro",
+                "resourceVersion": "284285",
+                "uid": "498be183-fefc-42fc-8b17-9d9ab6deae83"
+            },
+            "reason": "SnapshotReady",
+            "reportingComponent": "snapshot-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "snapshot-controller"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

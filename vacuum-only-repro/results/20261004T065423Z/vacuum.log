@@ -1,0 +1,30 @@
+VACUUM_START|2026-10-04T06:54:32.350072Z|37/8F000110|52382|76|10
+psql:/controller/tmp/vacuum-1efe552df0ce4946b6067442b39f96fd/vacuum.sql:2: INFO:  vacuuming "repro.public.vacuum_target"
+psql:/controller/tmp/vacuum-1efe552df0ce4946b6067442b39f96fd/vacuum.sql:2: INFO:  finished vacuuming "repro.public.vacuum_target": index scans: 4
+pages: 0 removed, 14420000 remain, 14420000 scanned (100.00% of total)
+tuples: 36050000 removed, 36050000 remain, 0 are dead but not yet removable
+removable cutoff: 1480, which was 0 XIDs old when operation ended
+new relfrozenxid: 1480, which is 732 XIDs ahead of previous value
+frozen: 14420000 pages from table (100.00% of total) had 36050000 tuples frozen
+index scan needed: 14420000 pages from table (100.00% of total) had 36050000 dead item identifiers removed
+index "vacuum_target_id_idx": pages: 197690 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+I/O timings: read: 2535945.469 ms, write: 170605.919 ms
+avg read rate: 33.628 MB/s, avg write rate: 32.954 MB/s
+buffer usage: 14421439 hits, 29634253 misses, 29040999 dirtied
+WAL usage: 72300552 records, 29041105 full page images, 176652456185 bytes
+system usage: CPU: user: 117.93 s, system: 575.16 s, elapsed: 6884.76 s
+psql:/controller/tmp/vacuum-1efe552df0ce4946b6067442b39f96fd/vacuum.sql:2: INFO:  vacuuming "repro.pg_toast.pg_toast_16430"
+psql:/controller/tmp/vacuum-1efe552df0ce4946b6067442b39f96fd/vacuum.sql:2: INFO:  finished vacuuming "repro.pg_toast.pg_toast_16430": index scans: 0
+pages: 0 removed, 0 remain, 0 scanned (100.00% of total)
+tuples: 0 removed, 0 remain, 0 are dead but not yet removable
+removable cutoff: 1480, which was 0 XIDs old when operation ended
+new relfrozenxid: 1480, which is 732 XIDs ahead of previous value
+frozen: 0 pages from table (100.00% of total) had 0 tuples frozen
+index scan not needed: 0 pages from table (100.00% of total) had 0 dead item identifiers removed
+I/O timings: read: 17.271 ms, write: 0.000 ms
+avg read rate: 0.448 MB/s, avg write rate: 0.000 MB/s
+buffer usage: 32 hits, 1 misses, 0 dirtied
+WAL usage: 1 records, 0 full page images, 188 bytes
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.01 s
+VACUUM
+VACUUM_COMPLETE|2026-10-04T08:49:17.136219Z|60/E002C000|176652581903|72301679|29041115

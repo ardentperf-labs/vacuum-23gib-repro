@@ -1,0 +1,66 @@
+{
+  "addedFunctions": [
+    "cluster_spec_defaulting",
+    "recovery_prefetch_counter_delta",
+    "recovery_prefetch_stats",
+    "whole_timeline_data_read_metrics"
+  ],
+  "addedGlobals": [],
+  "baselineSha256": "dab1764f2bcffa03740dde4440cc0bef7e4754e09e591fb2b5b4aa6234a37eb2",
+  "changedFunctions": [
+    "run"
+  ],
+  "changedGlobals": [
+    "GUC_SQL"
+  ],
+  "currentSha256": "e1132c857d956df47ac2f57821c65dbc8280a6ba48dc658928f2a09ad9cc84cb",
+  "globalChangeExplanation": {
+    "GUC_SQL": "Adds sourceFile and wal_log_hints to settings, plus pg_control_init().data_page_checksum_version for provenance; executed read-only on both live roles with PostgreSQL 16.15 and succeeded."
+  },
+  "immutableAsRunCopy": ".state/03-test-as-run-e1132c857d95.py",
+  "interpretation": "No shared collector helper or plot implementation changed. Only run() orchestration and GUC_SQL metadata changed for treatment/default/image gates, the exact 23-GiB FREEZE SQL assertion, pre/post recovery-prefetch statistics, and treatment report fields. All newly added SQL passed read-only on both roles.",
+  "plotsByteIdentical": true,
+  "readOnlySqlPreflightPassed": true,
+  "readOnlySqlPreflightPath": ".state/collector-sql-preflight-proof.json",
+  "removedFunctions": [],
+  "removedGlobals": [],
+  "sharedFunctions": 28,
+  "sharedGlobals": 6,
+  "unchangedFunctions": [
+    "append",
+    "attachment_lun",
+    "both",
+    "cancel_owned",
+    "capture_replication_logs",
+    "check_pods",
+    "cmd",
+    "event",
+    "fetch_log",
+    "launch_vacuum",
+    "lsn",
+    "main",
+    "measurement_complete",
+    "minimum_fixture_heap",
+    "next_catchup_streak",
+    "parse_replication_log",
+    "parse_sample",
+    "pod_claims",
+    "remote_status",
+    "replica_reached_target",
+    "same_map",
+    "sample",
+    "save",
+    "sql",
+    "stamp",
+    "storage",
+    "vacuum_spec"
+  ],
+  "unchangedGlobals": [
+    "GIB",
+    "HERE",
+    "REMOTE",
+    "STATE",
+    "WAL_SQL"
+  ],
+  "verifiedAtUtc": "2026-10-06T06:18:02.633666+00:00"
+}

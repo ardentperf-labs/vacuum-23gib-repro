@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "verifiedAtUtc": "2026-10-07T12:39:44.324726+00:00",
+  "retentionAuditCheckedAtUtc": "2026-10-07T12:39:44.281672+00:00",
+  "stacks": [
+    {
+      "stack": "baseline-23gib",
+      "backup": "vacuum-backup-4b116309",
+      "walSegmentCount": 1,
+      "exportedObjectCount": 2,
+      "pairedSnapshotsVerified": 2
+    },
+    {
+      "stack": "50gib",
+      "backup": "vacuum-backup-5c241a19",
+      "walSegmentCount": 1,
+      "exportedObjectCount": 2,
+      "pairedSnapshotsVerified": 2
+    },
+    {
+      "stack": "100gib",
+      "backup": "vacuum-backup-f1b90aec",
+      "walSegmentCount": 1,
+      "exportedObjectCount": 2,
+      "pairedSnapshotsVerified": 2
+    }
+  ],
+  "cloudCalls": 0,
+  "credentialsRead": false,
+  "resourcesChanged": false
+}

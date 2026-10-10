@@ -1,0 +1,7 @@
+Gather
+  Workers Planned: 2
+  ->  Parallel Bitmap Heap Scan on vacuum_target
+        Recheck Cond: ((id >= 1) AND (id <= 1000))
+        ->  Bitmap Index Scan on vacuum_target_id_idx
+              Index Cond: ((id >= 1) AND (id <= 1000))
+{"boundedRange" : "IDs 1..1000", "oddRows" : 250, "evenRows" : 250, "firstIds" : [2, 5, 7, 8, 10, 13, 15, 16, 18], "lastIds" : [999, 997, 996, 994, 991, 989, 988, 986, 983, 981], "pgStatDeadEstimate" : 0}

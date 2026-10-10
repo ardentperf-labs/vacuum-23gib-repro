@@ -1,0 +1,104 @@
+{
+  "analysisSourceSha256": "aee8da47eecbf35d9218c2671112581cacce06a6870895ebf449aa360f8ceb9d",
+  "coverage": {
+    "maxIntervalSeconds": 12.5,
+    "valid": true,
+    "windows": {
+      "replayDrain": {
+        "series": {
+          "primary_data": {
+            "coverage": 1,
+            "coveredSeconds": 8698.599453926086,
+            "rejectedIntervals": 0
+          },
+          "primary_wal": {
+            "coverage": 1,
+            "coveredSeconds": 8698.599453926086,
+            "rejectedIntervals": 0
+          },
+          "replica_data": {
+            "coverage": 0.999999902890456,
+            "coveredSeconds": 8698.59860920906,
+            "rejectedIntervals": 0
+          },
+          "replica_wal": {
+            "coverage": 0.999999902890456,
+            "coveredSeconds": 8698.59860920906,
+            "rejectedIntervals": 0
+          }
+        },
+        "valid": true
+      },
+      "vacuum": {
+        "series": {
+          "primary_data": {
+            "coverage": 1,
+            "coveredSeconds": 2080.018634080887,
+            "rejectedIntervals": 0
+          },
+          "primary_wal": {
+            "coverage": 1,
+            "coveredSeconds": 2080.018634080887,
+            "rejectedIntervals": 0
+          },
+          "replica_data": {
+            "coverage": 1,
+            "coveredSeconds": 2080.018634080887,
+            "rejectedIntervals": 0
+          },
+          "replica_wal": {
+            "coverage": 1,
+            "coveredSeconds": 2080.018634080887,
+            "rejectedIntervals": 0
+          }
+        },
+        "valid": true
+      },
+      "vacuumAndReplay": {
+        "series": {
+          "primary_data": {
+            "coverage": 1,
+            "coveredSeconds": 10778.618088006973,
+            "rejectedIntervals": 0
+          },
+          "primary_wal": {
+            "coverage": 1,
+            "coveredSeconds": 10778.618088006973,
+            "rejectedIntervals": 0
+          },
+          "replica_data": {
+            "coverage": 0.9999999216303037,
+            "coveredSeconds": 10778.617243289948,
+            "rejectedIntervals": 0
+          },
+          "replica_wal": {
+            "coverage": 0.9999999216303037,
+            "coveredSeconds": 10778.617243289948,
+            "rejectedIntervals": 0
+          }
+        },
+        "valid": true
+      }
+    }
+  },
+  "estimatedObservedDataReads": {
+    "observedRatio": 2.095867931508117,
+    "primaryVacuum": 374599.5242810055,
+    "replicaVacuumStartThroughLastObservation": 785111.1300987557,
+    "scope": "Partial observed replica interval. Includes external reader operations. Not a completed replay amplification."
+  },
+  "latencyWithinUserRange": true,
+  "overallReplicaDataReadAwaitMs": 2651.8532310815212,
+  "rawSamplesSha256": "72bbca6f1825deab40c6e482b244d20137c7d0de7e2af93bbf104c664caa462a",
+  "replayCaughtUp": false,
+  "sampleCount": 2158,
+  "status": "passed-independent-partial-coverage-and-read-metric-check",
+  "timingUsed": {
+    "observationEnd": "2026-10-06T04:29:59.557093725Z",
+    "replayCaughtUp": false,
+    "testComplete": false,
+    "vacuumComplete": "2026-10-06T02:05:00.957639Z",
+    "vacuumStart": "2026-10-06T01:30:20.939005Z"
+  },
+  "userTerminatedEarly": true
+}

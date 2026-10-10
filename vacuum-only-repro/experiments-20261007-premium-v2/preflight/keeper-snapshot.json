@@ -1,0 +1,17 @@
+{
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+  "name": "azhr-keep-scsi-prepared-7a297601434285b1",
+  "resourceGroup": "rg-az-hdd-repro-snapshot-keeper",
+  "location": "eastus",
+  "sku": "Standard_LRS",
+  "diskSizeGB": 512,
+  "diskSizeBytes": 549755813888,
+  "incremental": false,
+  "provisioningState": "Succeeded",
+  "creationData": {
+    "createOption": "Copy",
+    "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/snapshots/vacuum-copy-804391dc",
+    "sourceUniqueId": "da0d6fc8-415f-4f28-aeef-2fa8b068f345"
+  },
+  "logicalSectorSize": "not exposed for this Standard_LRS full snapshot; verify on restored disk before any PremiumV2 conversion"
+}

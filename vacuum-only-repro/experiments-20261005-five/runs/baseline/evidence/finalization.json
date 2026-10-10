@@ -1,0 +1,15 @@
+{
+  "cleanup": {
+    "allSnapshotsPreserved": true,
+    "cleanupComplete": false,
+    "completedAtUtc": "2026-10-05T09:30:51.301784+00:00",
+    "remainingNonSnapshotResources": [
+      "AKS control plane blocked by preservation of incremental snapshots in node RG",
+      "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-only-0aaf271768f70a4fd06a9cb05e75a4ea/providers/Microsoft.ContainerService/managedClusters/aks-vacuum-only-0aaf271768f7"
+    ],
+    "snapshotCount": 3
+  },
+  "finishedAtUtc": "2026-10-05T09:30:51.305261+00:00",
+  "result": "${PROJECT_ROOT}/experiments/20261005-four/baseline/results/20261005T062051Z",
+  "status": "finished"
+}

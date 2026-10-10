@@ -1,0 +1,35 @@
+[
+  {
+    "changedTime": "2026-10-04T18:32:22.057891+00:00",
+    "createdTime": "2026-10-04T14:10:10.038372+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+    "identity": null,
+    "kind": null,
+    "location": "eastus",
+    "managedBy": null,
+    "name": "azhr-keep-scsi-prepared-7a297601434285b1",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "rg-az-hdd-repro-snapshot-keeper",
+    "sku": {
+      "capacity": null,
+      "family": null,
+      "model": null,
+      "name": "Standard_LRS",
+      "size": null,
+      "tier": "Standard"
+    },
+    "tags": {
+      "candidateSourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/snapshots/vacuum-copy-804391dc",
+      "candidateToken": "2e23e93101111749a496b2a58ac1f2ad",
+      "createdBy": "parallel-keeper-validation-20261004",
+      "reproPurpose": "retained-primary-pg-snapshot",
+      "reproSourceSetId": "scsi-prepared",
+      "reproSourceToken": "804391dc0a7b56b597915163951aed1a",
+      "reprotoken": "93494924de3e081fc5803031e15d5587"
+    },
+    "type": "Microsoft.Compute/snapshots"
+  }
+]

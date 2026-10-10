@@ -1,0 +1,18 @@
+{
+  "authorized": true,
+  "approvedAtUtc": "2026-10-07T12:17:43.934694+00:00",
+  "stacks": [
+    "baseline-23gib",
+    "50gib",
+    "100gib"
+  ],
+  "teardownScriptSha256": "b8286fa5de3ec9ba0e3a2a7f67e8122303026626bd955e1f4783a015543431ca",
+  "basis": "All three measured processes exit0, valid full phase coverage, stable zero-lag replay, all nine linear plots reviewed, all required backup WAL exports verified, and fresh 42-snapshot identity/protection audit passed. User AGENTS authorize removal of these owned test resources while preserving ALL snapshots.",
+  "reason": "Idempotent retry of unchanged reviewed cleanup sources after all three compute teardowns succeeded and fresh shared-watcher inspection found EastUS group404 and WestUS3 groupempty. No cleanup guard relaxed or scope expanded.",
+  "reviewedAtUtc": "2026-10-07T12:39:42.720764+00:00",
+  "postCleanupScriptSha256": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603",
+  "walRetentionVerifierSha256": "8acfa114c4ac9927ac47c31bf17108fadc65963713d9fd3c393064436a27a7fb",
+  "rootReviewReceipt": "preflight/root-compute-cleanup-review.json",
+  "retryCorrectionReview": "recovery/cleanup-cli-correction/root-review.json",
+  "sharedWatcherRetryInspection": "preflight/shared-watcher-cleanup-failure-inspection.json"
+}

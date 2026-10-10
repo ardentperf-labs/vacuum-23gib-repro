@@ -1,0 +1,598 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:37:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "hdd-pg-1-snapshot-recovery-vrjbj",
+                "namespace": "repro",
+                "resourceVersion": "5796",
+                "uid": "fa29cbf2-a08e-49ad-aa29-20c8093745af"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:37:03Z",
+            "message": "running PreBind plugin \"VolumeBinding\": binding volumes: context deadline exceeded",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:37:03Z",
+                "name": "hdd-pg-1-snapshot-recovery-vrjbj.18dcc283ec632a26",
+                "namespace": "repro",
+                "resourceVersion": "8743",
+                "uid": "489e515f-e679-41d4-89b8-b51462f784b8"
+            },
+            "reason": "FailedScheduling",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:03Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "hdd-pg-1-snapshot-recovery",
+                "namespace": "repro",
+                "resourceVersion": "5794",
+                "uid": "9e47e356-7e8b-489a-9b20-550f6d178619"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:27:03Z",
+            "message": "Created pod: hdd-pg-1-snapshot-recovery-vrjbj",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:03Z",
+                "name": "hdd-pg-1-snapshot-recovery.18dcc1f837252622",
+                "namespace": "repro",
+                "resourceVersion": "5797",
+                "uid": "328020e3-593e-418d-a83d-3200701da76e"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-1-wal",
+                "namespace": "repro",
+                "resourceVersion": "5785",
+                "uid": "fe368400-7be4-4d6a-8b6d-505e5fcf0eaf"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:27:03Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:03Z",
+                "name": "hdd-pg-1-wal.18dcc1f82aaeb330",
+                "namespace": "repro",
+                "resourceVersion": "5790",
+                "uid": "5e0ed92e-3ba5-4bd5-a98d-84a4f3cfc381"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 11,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-1-wal",
+                "namespace": "repro",
+                "resourceVersion": "5805",
+                "uid": "fe368400-7be4-4d6a-8b6d-505e5fcf0eaf"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:40:55Z",
+            "message": "External provisioner is provisioning volume for claim \"repro/hdd-pg-1-wal\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:03Z",
+                "name": "hdd-pg-1-wal.18dcc1f83a6b4150",
+                "namespace": "repro",
+                "resourceVersion": "9856",
+                "uid": "a837b430-8bd8-493f-ba78-cc0f00863888"
+            },
+            "reason": "Provisioning",
+            "reportingComponent": "disk.csi.azure.com_csi-azuredisk-controller-6b69dfff67-xzxmj_f0f9ea08-7aba-42eb-b047-7a5319959333",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com_csi-azuredisk-controller-6b69dfff67-xzxmj_f0f9ea08-7aba-42eb-b047-7a5319959333"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 42,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-1-wal",
+                "namespace": "repro",
+                "resourceVersion": "5805",
+                "uid": "fe368400-7be4-4d6a-8b6d-505e5fcf0eaf"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:37:08Z",
+            "message": "Waiting for a volume to be created either by the external provisioner 'disk.csi.azure.com' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:03Z",
+                "name": "hdd-pg-1-wal.18dcc1f83ab2aaf8",
+                "namespace": "repro",
+                "resourceVersion": "8768",
+                "uid": "201349c9-6d2a-4447-9b7a-7067512fafc4"
+            },
+            "reason": "ExternalProvisioning",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 11,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:04Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-1-wal",
+                "namespace": "repro",
+                "resourceVersion": "5805",
+                "uid": "fe368400-7be4-4d6a-8b6d-505e5fcf0eaf"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:40:56Z",
+            "message": "rpc error: code = NotFound desc = GET http://localhost:7788/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/snapshots/snapshot-caf74210-9ce8-4f42-8c47-9ee8076a0201\n--------------------------------------------------------------------------------\nRESPONSE 403: 403 Forbidden\nERROR CODE: AuthorizationFailed\n--------------------------------------------------------------------------------\n{\n  \"error\": {\n    \"code\": \"AuthorizationFailed\",\n    \"message\": \"The client '1718d739-9566-4ce2-a5a4-f818e2aba9df' with object id '740c22e3-3468-4f38-a608-31bfab5a9c2e' does not have authorization to perform action 'Microsoft.Compute/snapshots/read' over scope '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/snapshots/snapshot-caf74210-9ce8-4f42-8c47-9ee8076a0201' or the scope is invalid. If access was recently granted, please refresh your credentials.\"\n  }\n}\n--------------------------------------------------------------------------------\n",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:04Z",
+                "name": "hdd-pg-1-wal.18dcc1f8512a9734",
+                "namespace": "repro",
+                "resourceVersion": "9857",
+                "uid": "310a21be-5ef5-44c4-9a70-57dcc58813b3"
+            },
+            "reason": "ProvisioningFailed",
+            "reportingComponent": "disk.csi.azure.com_csi-azuredisk-controller-6b69dfff67-xzxmj_f0f9ea08-7aba-42eb-b047-7a5319959333",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com_csi-azuredisk-controller-6b69dfff67-xzxmj_f0f9ea08-7aba-42eb-b047-7a5319959333"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "5783",
+                "uid": "e36b44ed-2d86-4eb4-b332-14a83cf09513"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:27:03Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:03Z",
+                "name": "hdd-pg-1.18dcc1f8295d25ef",
+                "namespace": "repro",
+                "resourceVersion": "5787",
+                "uid": "5b044c6d-57e9-415a-a71f-1f183a9f806e"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 42,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "5803",
+                "uid": "e36b44ed-2d86-4eb4-b332-14a83cf09513"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:37:08Z",
+            "message": "Waiting for a volume to be created either by the external provisioner 'disk.csi.azure.com' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:03Z",
+                "name": "hdd-pg-1.18dcc1f83986fae6",
+                "namespace": "repro",
+                "resourceVersion": "8769",
+                "uid": "8f266204-93f9-4983-bd7c-fc7279741fad"
+            },
+            "reason": "ExternalProvisioning",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 11,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:03Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "5803",
+                "uid": "e36b44ed-2d86-4eb4-b332-14a83cf09513"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:40:55Z",
+            "message": "External provisioner is provisioning volume for claim \"repro/hdd-pg-1\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:03Z",
+                "name": "hdd-pg-1.18dcc1f83a732ea7",
+                "namespace": "repro",
+                "resourceVersion": "9855",
+                "uid": "f22274ec-dc00-48c6-b86f-df7b17369e31"
+            },
+            "reason": "Provisioning",
+            "reportingComponent": "disk.csi.azure.com_csi-azuredisk-controller-6b69dfff67-xzxmj_f0f9ea08-7aba-42eb-b047-7a5319959333",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com_csi-azuredisk-controller-6b69dfff67-xzxmj_f0f9ea08-7aba-42eb-b047-7a5319959333"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 11,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:04Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "5803",
+                "uid": "e36b44ed-2d86-4eb4-b332-14a83cf09513"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:40:56Z",
+            "message": "rpc error: code = NotFound desc = GET http://localhost:7788/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/snapshots/snapshot-53ea286c-28a7-4225-b58f-ddd91ed93f57\n--------------------------------------------------------------------------------\nRESPONSE 403: 403 Forbidden\nERROR CODE: AuthorizationFailed\n--------------------------------------------------------------------------------\n{\n  \"error\": {\n    \"code\": \"AuthorizationFailed\",\n    \"message\": \"The client '1718d739-9566-4ce2-a5a4-f818e2aba9df' with object id '740c22e3-3468-4f38-a608-31bfab5a9c2e' does not have authorization to perform action 'Microsoft.Compute/snapshots/read' over scope '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/snapshots/snapshot-53ea286c-28a7-4225-b58f-ddd91ed93f57' or the scope is invalid. If access was recently granted, please refresh your credentials.\"\n  }\n}\n--------------------------------------------------------------------------------\n",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:04Z",
+                "name": "hdd-pg-1.18dcc1f84ea33429",
+                "namespace": "repro",
+                "resourceVersion": "9858",
+                "uid": "71e62719-5192-4d15-bdd6-4159f65c0481"
+            },
+            "reason": "ProvisioningFailed",
+            "reportingComponent": "disk.csi.azure.com_csi-azuredisk-controller-6b69dfff67-xzxmj_f0f9ea08-7aba-42eb-b047-7a5319959333",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com_csi-azuredisk-controller-6b69dfff67-xzxmj_f0f9ea08-7aba-42eb-b047-7a5319959333"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:02Z",
+            "involvedObject": {
+                "apiVersion": "policy/v1",
+                "kind": "PodDisruptionBudget",
+                "name": "hdd-pg-primary",
+                "namespace": "repro",
+                "resourceVersion": "5764",
+                "uid": "4f94bb75-2c83-4d20-b19e-5c141c6698b0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:27:02Z",
+            "message": "No matching pods found",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:02Z",
+                "name": "hdd-pg-primary.18dcc1f80dda2557",
+                "namespace": "repro",
+                "resourceVersion": "5770",
+                "uid": "bad57c44-ded2-4e62-a54e-a5364c3ee432"
+            },
+            "reason": "NoPods",
+            "reportingComponent": "controllermanager",
+            "reportingInstance": "",
+            "source": {
+                "component": "controllermanager"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:02Z",
+            "involvedObject": {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "kind": "Cluster",
+                "name": "hdd-pg",
+                "namespace": "repro",
+                "resourceVersion": "5746",
+                "uid": "50806bb5-b859-4d7f-9145-d25f3d86bee9"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:27:02Z",
+            "message": "Creating PodDisruptionBudget hdd-pg-primary",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:02Z",
+                "name": "hdd-pg.18dcc1f80d40656d",
+                "namespace": "repro",
+                "resourceVersion": "5763",
+                "uid": "9d742e00-dc37-4d10-8fa0-b6b7ed83b600"
+            },
+            "reason": "CreatingPodDisruptionBudget",
+            "reportingComponent": "cloudnative-pg",
+            "reportingInstance": "",
+            "source": {
+                "component": "cloudnative-pg"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:02Z",
+            "involvedObject": {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "kind": "Cluster",
+                "name": "hdd-pg",
+                "namespace": "repro",
+                "resourceVersion": "5746",
+                "uid": "50806bb5-b859-4d7f-9145-d25f3d86bee9"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:27:02Z",
+            "message": "Creating ServiceAccount",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:02Z",
+                "name": "hdd-pg.18dcc1f80e4910ab",
+                "namespace": "repro",
+                "resourceVersion": "5769",
+                "uid": "f8965835-53d6-478c-88e3-44297aec67d6"
+            },
+            "reason": "CreatingServiceAccount",
+            "reportingComponent": "cloudnative-pg",
+            "reportingInstance": "",
+            "source": {
+                "component": "cloudnative-pg"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:02Z",
+            "involvedObject": {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "kind": "Cluster",
+                "name": "hdd-pg",
+                "namespace": "repro",
+                "resourceVersion": "5746",
+                "uid": "50806bb5-b859-4d7f-9145-d25f3d86bee9"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:27:02Z",
+            "message": "Creating Cluster Role",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:02Z",
+                "name": "hdd-pg.18dcc1f80edeb474",
+                "namespace": "repro",
+                "resourceVersion": "5771",
+                "uid": "f43f51d2-b602-44c8-9425-adeeddd56405"
+            },
+            "reason": "CreatingRole",
+            "reportingComponent": "cloudnative-pg",
+            "reportingInstance": "",
+            "source": {
+                "component": "cloudnative-pg"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:03Z",
+            "involvedObject": {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "kind": "Cluster",
+                "name": "hdd-pg",
+                "namespace": "repro",
+                "resourceVersion": "5782",
+                "uid": "50806bb5-b859-4d7f-9145-d25f3d86bee9"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:27:03Z",
+            "message": "Primary instance (from volumeSnapshots)",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:03Z",
+                "name": "hdd-pg.18dcc1f82b455b2a",
+                "namespace": "repro",
+                "resourceVersion": "5786",
+                "uid": "6eee1622-c235-4f34-8f42-a210d5d31c77"
+            },
+            "reason": "CreatingInstance",
+            "reportingComponent": "cloudnative-pg",
+            "reportingInstance": "",
+            "source": {
+                "component": "cloudnative-pg"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:26:34Z",
+            "involvedObject": {
+                "apiVersion": "snapshot.storage.k8s.io/v1",
+                "kind": "VolumeSnapshot",
+                "name": "source-data-5203346e",
+                "namespace": "repro",
+                "resourceVersion": "5599",
+                "uid": "043ecc19-d06e-4e0f-ac30-ab3d299322d4"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:26:34Z",
+            "message": "Snapshot repro/source-data-5203346e was successfully created by the CSI driver.",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:26:34Z",
+                "name": "source-data-5203346e.18dcc1f162327e77",
+                "namespace": "repro",
+                "resourceVersion": "5603",
+                "uid": "7284bcbd-6f61-46e6-9043-c10d52fdcb9d"
+            },
+            "reason": "SnapshotCreated",
+            "reportingComponent": "snapshot-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "snapshot-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:26:34Z",
+            "involvedObject": {
+                "apiVersion": "snapshot.storage.k8s.io/v1",
+                "kind": "VolumeSnapshot",
+                "name": "source-data-5203346e",
+                "namespace": "repro",
+                "resourceVersion": "5599",
+                "uid": "043ecc19-d06e-4e0f-ac30-ab3d299322d4"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:26:34Z",
+            "message": "Snapshot repro/source-data-5203346e is ready to use.",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:26:34Z",
+                "name": "source-data-5203346e.18dcc1f1623693cd",
+                "namespace": "repro",
+                "resourceVersion": "5605",
+                "uid": "c50af85d-8a7f-4518-bad3-f4c0c65cf35a"
+            },
+            "reason": "SnapshotReady",
+            "reportingComponent": "snapshot-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "snapshot-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:26:34Z",
+            "involvedObject": {
+                "apiVersion": "snapshot.storage.k8s.io/v1",
+                "kind": "VolumeSnapshot",
+                "name": "source-wal-5203346e",
+                "namespace": "repro",
+                "resourceVersion": "5608",
+                "uid": "1843ea70-9eac-4192-a2b7-2f3a1d904ab4"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:26:34Z",
+            "message": "Snapshot repro/source-wal-5203346e was successfully created by the CSI driver.",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:26:34Z",
+                "name": "source-wal-5203346e.18dcc1f17fc19741",
+                "namespace": "repro",
+                "resourceVersion": "5612",
+                "uid": "0921213c-98f4-4e95-b938-617e9400092a"
+            },
+            "reason": "SnapshotCreated",
+            "reportingComponent": "snapshot-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "snapshot-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:26:34Z",
+            "involvedObject": {
+                "apiVersion": "snapshot.storage.k8s.io/v1",
+                "kind": "VolumeSnapshot",
+                "name": "source-wal-5203346e",
+                "namespace": "repro",
+                "resourceVersion": "5608",
+                "uid": "1843ea70-9eac-4192-a2b7-2f3a1d904ab4"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:26:34Z",
+            "message": "Snapshot repro/source-wal-5203346e is ready to use.",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:26:34Z",
+                "name": "source-wal-5203346e.18dcc1f17fc21cda",
+                "namespace": "repro",
+                "resourceVersion": "5614",
+                "uid": "86b72fc7-38fe-4cfe-a33d-66701fe6b7c9"
+            },
+            "reason": "SnapshotReady",
+            "reportingComponent": "snapshot-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "snapshot-controller"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

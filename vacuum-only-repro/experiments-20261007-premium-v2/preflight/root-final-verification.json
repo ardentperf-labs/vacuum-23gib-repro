@@ -1,0 +1,44 @@
+{
+  "verifiedAtUtc": "2026-10-07T12:42:41.865782+00:00",
+  "allThreeMeasuredExperimentsComplete": true,
+  "allNineLinearFiguresRootVisuallyReviewed": true,
+  "measurementScriptsUnchangedFromMeasuredRuntime": true,
+  "allEightOwnedResourceGroupsAbsent": true,
+  "all42SnapshotIdentitiesEqualBeforeAndAfterCleanup": true,
+  "allSnapshotsProtected": true,
+  "allRequiredBackupWalExportsVerified": true,
+  "retainedScopeLockedRoleAssignments": "Three verified retained role assignments remain under the locked snapshot groups; their corresponding AKS principals were deleted. No snapshot locks removed.",
+  "artifacts": {
+    "cleanup-state.json": "30a03d9eca34530ca792426c99f50db0bca8bea0c7ab64bb1fe9544b3f527ad2",
+    "preflight/root-final-resource-absence.json": "19367748fb7abdd3db4bd0d58cd684acdd89ed72ce9a215d4bf289c7a5f21bc7",
+    "preflight/snapshot-audit-before-compute-cleanup.json": "9fe1292228a90353114c27cab218f20263f92006e3a560427686d2c550ca8b8b",
+    "preflight/snapshot-audit-after-shared-cleanup.json": "300be77da98e29bdee0fedff936df529ca455f0e74f5a15a5e3766b4e345a335",
+    "preflight/wal-retention-before-cleanup.json": "5b1697b9f6bb555e60f03281d4b96febab926ff2c14d821fd04855a50bf56f41",
+    "recovery/timelines/root-review.json": "4694f82c91bf6ee9adcafb5b20a7aeb0a23595a0443ede9fff0b3426d3afab1e",
+    "recovery/vm-burst-review/root-final-review.json": "0ae5007a6c9ec3f0e65562cf1d424e0ff7d1af20fe8b8fba39fa4999d3d4468f"
+  },
+  "finalReportsAndTimelines": {
+    "REPORT.md": "c1348ff6563430d44e1f66d7dad010ebc7ac0bc63cf59b772669aa188e21c03d",
+    "comparison.json": "ab5405531a59d9af02efc3d8b2ac5a9bb3c3830fadaf30fa1a131ce3db83241a",
+    "baseline-23gib/results/REPORT.md": "3011d6f87ecb1048200599af770ece224b6eb144c03c72e0e24c88f036423709",
+    "50gib/results/REPORT.md": "001f5fdf8b38f7d5c588471f59c1053fe6c9a3d8e95abd9e06bfa73bf63b57ee",
+    "100gib/results/REPORT.md": "2bb7a7d70c9e37c57a84e03564cfe5302ec9d5f788d5142a02affc1f29a879cd",
+    "recovery/timelines/baseline-23gib/timeline.json": "de76dbcaa2df692a7e43cab6372d5f234361df825a8a3cf6e18ce016fb83a9f1",
+    "recovery/timelines/50gib/timeline.json": "0b4d989b6d69fcfdf32436175b3b289bd568f99cbc80522fb62240c0ab90b2d7",
+    "recovery/timelines/100gib/timeline.json": "4b035e413ab484be1b6e9b82812451a512dbecf3a05835e99f8144398f9d41b8"
+  },
+  "allThreeFinalReportsContainFullEndToEndTimeline": true,
+  "finalTimelineEventCounts": {
+    "baseline-23gib": 74,
+    "50gib": 75,
+    "100gib": 97
+  },
+  "relocation": {
+    "movedAtUtc": "2026-10-07T20:25:27.903188+00:00",
+    "currentArchiveRoot": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2",
+    "originalPathCompatibilitySymlink": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2",
+    "measurementRuntimeAndRawEvidenceUnchanged": true,
+    "originalReceiptArchivedAs": "relocation/original-navigation/preflight/root-final-verification.json",
+    "note": "Only main comparison navigation link changed; its current digest is refreshed here. Original measurement-era receipt is preserved in the relocation archive."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-06T22:50:13Z",
+  "checkpoint": "20261006T225013Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "guestCounterEvidence": "guest-counters-20261006T224258Z.json",
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "fixtureHeapBytes": 53687091200,
+      "fixtureHeapGiB": 50,
+      "activeFixturePhase": "create-index",
+      "indexPhase": "building index: scanning table",
+      "indexBlocksDone": 4885582,
+      "indexBlocksTotal": 6553600,
+      "indexScanFraction": 0.7454806518554687,
+      "indexElapsedSeconds": 3002,
+      "activeWait": {
+        "type": "IO",
+        "event": "DataFileRead"
+      }
+    },
+    "100gib": {
+      "processStatus": "running",
+      "fixtureHeapBytes": 75338604544,
+      "fixtureHeapGiB": 70.16454315185547,
+      "activeFixturePhase": "insert",
+      "insertElapsedSeconds": 6464,
+      "activeWait": {
+        "type": "IO",
+        "event": "DataFileRead"
+      }
+    }
+  }
+}

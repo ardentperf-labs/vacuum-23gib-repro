@@ -1,0 +1,70 @@
+{
+  "requestedAtUtc": "2026-10-06T15:23:40Z",
+  "workspace": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2",
+  "sourceWorkspace": "/workspace",
+  "runs": [
+    {
+      "name": "baseline-23gib",
+      "targetHeapGiB": 23
+    },
+    {
+      "name": "50gib",
+      "targetHeapGiB": 50
+    },
+    {
+      "name": "100gib",
+      "targetHeapGiB": 100
+    }
+  ],
+  "sizeConvention": "GiB, explicitly confirmed by the user; matching historical experiments",
+  "parallelStacks": 3,
+  "databaseDiskSku": "PremiumV2_LRS",
+  "databaseDiskGiB": 512,
+  "databaseDiskIopsReadWrite": 3000,
+  "databaseDiskMBpsReadWrite": 125,
+  "databaseDiskHostCaching": "None",
+  "databaseDiskLogicalSectorSize": 512,
+  "databaseDisksPerStack": 4,
+  "nodesPerStack": 2,
+  "nodeVmSize": "Standard_D2s_v4",
+  "workload": "VACUUM (VERBOSE, FREEZE) public.vacuum_target",
+  "applicationWorkload": false,
+  "postgresVersion": "16.15",
+  "cloudNativePgVersion": "1.30.1",
+  "requiredSettings": {
+    "wal_level": "logical",
+    "full_page_writes": "on",
+    "recovery_prefetch": "try",
+    "vacuum_cost_delay": "0",
+    "shared_buffers": "256MB",
+    "maintenance_io_concurrency": "10",
+    "maintenance_work_mem": "64MB",
+    "max_wal_size": "1GB",
+    "checkpoint_timeout": "5min",
+    "synchronous_commit": "on",
+    "synchronous_standby_names": "ANY 1 (\"hdd-pg-2\")"
+  },
+  "sourcePolicy": "Reuse verified retained source; restore separate new disks; no old snapshot deletion or mutation",
+  "snapshotPolicy": "Preserve every snapshot, including new staging and backup snapshots, in separately owned retained resource groups",
+  "measurement": "5-second raw guest disk counters, full VACUUM and 3 healthy catch-up samples, continuous PostgreSQL logs and recovery-prefetch stats",
+  "graphs": "Separate await/IOPS/throughput figures, linear axes, primary/replica DATA/WAL reads and writes",
+  "placement": {
+    "baseline-23gib": {
+      "location": "eastus",
+      "zone": "1"
+    },
+    "50gib": {
+      "location": "westus3",
+      "zone": "1"
+    },
+    "100gib": {
+      "location": "eastus",
+      "zone": "1"
+    }
+  },
+  "status": "parallel-preparation",
+  "placementLimitation": "EastUS DSv4 quota10; request12denied. 50GiB regionalconfound.",
+  "snapshotCopyCoordination": "50/100 repair uses new owned staging disk -> new-family incremental Copy snapshot; baseline resumes verified paired backup. All earlier attempts/snapshots preserved.",
+  "updatedAtUtc": "2026-10-06T21:08:32.713853+00:00",
+  "hydrationPolicy": "Before measurement: explicit100percent on every measured Copy/CopyStart disk; live ARM audit across all owned node disks and retained snapshots must prove no active copy; exact pinned terminal failed snapshots remain preserved."
+}

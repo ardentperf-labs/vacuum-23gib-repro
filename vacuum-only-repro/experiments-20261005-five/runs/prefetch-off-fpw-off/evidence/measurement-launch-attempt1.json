@@ -1,0 +1,76 @@
+{
+  "allSnapshotsPreserved": true,
+  "args": [
+    "${PROJECT_ROOT}/vacuum-only-repro/.venv/bin/python",
+    "03-test.py",
+    "--kubeconfig",
+    ".state/kubeconfig",
+    "--interval",
+    "5",
+    "--safety-hours",
+    "24",
+    "--catchup-hours",
+    "336",
+    "--out",
+    "results/full-fpw-off-prefetch-off-23gib-20261006T061100Z"
+  ],
+  "catchupHours": 336,
+  "createdAtUtc": "2026-10-06T06:12:54.240945+00:00",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exitCode": 2,
+  "failureReason": "prepared measurement image must be pinned by digest",
+  "finishedAtUtc": "2026-10-06T06:12:54.886Z",
+  "logPath": ".state/measurement.log",
+  "outputPath": "results/full-fpw-off-prefetch-off-23gib-20261006T061100Z",
+  "pid": "[REDACTED]",
+  "preflightPassed": false,
+  "preparationRecoveryJobUid": "b5a9adb4-e280-4459-84f3-4bc670fc1823",
+  "prepareEvidencePath": ".state/prepare.json",
+  "prepareRecoveryAuditPath": ".state/prepare-recovery-audit.json",
+  "pythonExecutable": "${PROJECT_ROOT}/vacuum-only-repro/.venv/bin/python",
+  "resultDirectoryWasEmpty": true,
+  "sourceMap": [
+    {
+      "path": "01-provision.sh",
+      "role": "preparation",
+      "sha256": "38ad456b74e208652dd6d7b0d93b1d2c30351d636cadbae7b25fb87273f86b4b"
+    },
+    {
+      "path": "02-prepare.sh",
+      "role": "failed_initial_prepare",
+      "sha256": "2007e0d27f8b506514c508b0a6d1f8d008f51480b9f7b9ed0bcc277b04f716d8"
+    },
+    {
+      "path": ".state/continue-after-source-pair-restore-v2.sh",
+      "role": "preparation",
+      "sha256": "33dc25abae50c1aba96e4280563b559bfa01ba2729fe47406274ec584c4255c8"
+    },
+    {
+      "path": ".state/remove-source-snapshot-role-grants-with-lock-restore.sh",
+      "role": "preparation",
+      "sha256": "073f5698f27b0b95fcb835c52e1a6dda26f105a4d1222c104c39bc150e47e502"
+    },
+    {
+      "path": ".state/remove-source-snapshot-role-grants-with-lock-restore-v2.sh",
+      "role": "preparation",
+      "sha256": "44b6880723afc47abd542cb4718f4c6d0dcb67533e997f5a078cf6e8d64d5f09"
+    },
+    {
+      "path": "03-test.py",
+      "role": "measurement",
+      "sha256": "2994c86f76b17c0baee369fc39e8b03aa0ce97c287835c96f768f7ddb3b7ecc8"
+    },
+    {
+      "path": "plot.py",
+      "role": "measurement",
+      "sha256": "d0ac35439ba17dcfe6f50e9484dd12274575755451258d82d7b12210c91317ec"
+    }
+  ],
+  "startedAtUtc": "2026-10-06T06:12:54.241746+00:00",
+  "status": "failed_preflight",
+  "testStatePath": ".state/preflight-failure-attempt1.json",
+  "vacuumLaunched": false,
+  "workingDirectory": "."
+}

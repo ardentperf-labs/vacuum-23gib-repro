@@ -1,0 +1,102 @@
+{
+  "evidenceClass": "transcribed_cli_projection_not_raw_response",
+  "recordedUtc": "2026-10-09",
+  "limitations": [
+    "The original unprojected Azure CLI stdout/ARM JSON was not persisted during the read-only queries.",
+    "This file transcribes the JMESPath-projected JSON values returned in the tool output; it is not a raw Azure response capture.",
+    "The live SKU query time and complete unfiltered SKU object were not retained.",
+    "Azure Monitor datapoints are averages at PT1M grain; null indicates the projected datapoint had no average value."
+  ],
+  "sku": {
+    "command": "az vm list-skus --location eastus --size Standard_D2s_v4 --all --query \"[?name=='Standard_D2s_v4'].{name:name,capabilities:capabilities,restrictions:restrictions,locationInfo:locationInfo}\" -o json",
+    "location": "eastus",
+    "name": "Standard_D2s_v4",
+    "restricted": false,
+    "capabilities": {
+      "vCPUs": "2",
+      "MemoryGB": "8",
+      "MaxDataDiskCount": "4",
+      "UncachedDiskIOPS": "3200",
+      "UncachedDiskBytesPerSecond": "48000000"
+    },
+    "capabilityUnits": {
+      "UncachedDiskBytesPerSecond": "bytes per second"
+    }
+  },
+  "azureMonitor": {
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "resourceName": "aks-nodepool1-16953089-vmss",
+    "dimension": "VMName",
+    "dimensionValues": {
+      "primary": "aks-nodepool1-16953089-vmss_0",
+      "replica": "aks-nodepool1-16953089-vmss_1"
+    },
+    "startTimeUtc": "2026-10-09T08:40:00Z",
+    "endTimeUtc": "2026-10-09T08:53:00Z",
+    "interval": "PT1M",
+    "aggregation": "Average",
+    "filter": "VMName eq '*'",
+    "commandShape": "az monitor metrics list on VMSS parent, metric list, VMName filter, PT1M, Average, then JMESPath projection value[].{metric:name.localizedValue,series:timeseries[].{dims:metadatavalues,data:data[].{time:timeStamp,average:average}}}",
+    "timeUtc": [
+      "2026-10-09T08:40:00Z", "2026-10-09T08:41:00Z", "2026-10-09T08:42:00Z",
+      "2026-10-09T08:43:00Z", "2026-10-09T08:44:00Z", "2026-10-09T08:45:00Z",
+      "2026-10-09T08:46:00Z", "2026-10-09T08:47:00Z", "2026-10-09T08:48:00Z",
+      "2026-10-09T08:49:00Z", "2026-10-09T08:50:00Z", "2026-10-09T08:51:00Z",
+      "2026-10-09T08:52:00Z"
+    ],
+    "metrics": {
+      "VM Uncached IOPS Consumed Percentage": {
+        "unit": "Percent",
+        "series": {
+          "aks-nodepool1-16953089-vmss_0": [0, 0, 0, 16, 20, 20, 18, 20, 20, 20, 20, 21, 21],
+          "aks-nodepool1-16953089-vmss_1": [0, 0, 2, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100]
+        }
+      },
+      "VM Uncached Bandwidth Consumed Percentage": {
+        "unit": "Percent",
+        "series": {
+          "aks-nodepool1-16953089-vmss_0": [0, 0, 0, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100],
+          "aks-nodepool1-16953089-vmss_1": [0, 0, 3, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100]
+        }
+      },
+      "VM Uncached Used Burst IO Credits Percentage": {
+        "unit": "Percent",
+        "series": {
+          "aks-nodepool1-16953089-vmss_0": [null, null, null, 0, null, 0, null, null, 0, null, null, null, null],
+          "aks-nodepool1-16953089-vmss_1": [0, null, null, null, null, 0, null, null, null, null, 0, null, null]
+        }
+      },
+      "VM Uncached Used Burst BPS Credits Percentage": {
+        "unit": "Percent",
+        "series": {
+          "aks-nodepool1-16953089-vmss_0": [null, null, null, 0, null, 0, null, null, null, null, null, null, null],
+          "aks-nodepool1-16953089-vmss_1": [0, null, null, null, null, 0, null, null, null, null, null, null, null]
+        }
+      },
+      "Data Disk IOPS Consumed Percentage": {
+        "unit": "Percent",
+        "metadataDimensionsReturned": ["VMName"],
+        "series": {
+          "aks-nodepool1-16953089-vmss_0": [0, 0, 12, 12, 11.5, 11, 11.5, 12, 11, 12.5, 12, 12.5, 13.5],
+          "aks-nodepool1-16953089-vmss_1": [0, 17, 55.5, null, 58, 58.5, 59, 58, 58.5, 58.5, null, 57.5, null]
+        }
+      },
+      "Data Disk Bandwidth Consumed Percentage": {
+        "unit": "Percent",
+        "metadataDimensionsReturned": ["VMName"],
+        "series": {
+          "aks-nodepool1-16953089-vmss_0": [0, 0, 88.5, 75.5, 73, 72, 75, 76.5, 70.5, 75, 73, 64, 65],
+          "aks-nodepool1-16953089-vmss_1": [0, 7, 76, null, 73, 73.5, 75.5, 73, 76, null, 77.5, 67.75, null]
+        }
+      },
+      "Data Disk Used Burst IO Credits Percentage": {
+        "unit": "Percent",
+        "series": {}
+      },
+      "Data Disk Used Burst BPS Credits Percentage": {
+        "unit": "Percent",
+        "series": {}
+      }
+    }
+  }
+}

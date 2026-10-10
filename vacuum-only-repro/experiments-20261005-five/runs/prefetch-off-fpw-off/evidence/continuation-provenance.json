@@ -1,0 +1,150 @@
+{
+  "continuationLaunchReceiptSha256": "85d9e78a7a6693f6f002b74a5f47870dd1e8cdbe94b57c1681c924ede9f974d4",
+  "historicalInitialLaunch": {
+    "executionLogSha256": "28cce320d6da5423ababd8c96a8278e77a7435138f9d1698d87af3f7ebff1dfa",
+    "historicalOutcome": "failed before PostgreSQL tuning or VACUUM; retained as a failed setup attempt",
+    "latestObservedStage": {
+      "exitCode": 1,
+      "status": "failed",
+      "step": "before_exact_source_grant_removal",
+      "timeUtc": "2026-10-06T05:45:46Z"
+    },
+    "launchReceiptSha256": "cf111093ddfb0aaf5bda4d65f3e1738bb13b90a1b34ceb42eafee7b1845c52c0",
+    "launchedAtUtc": "2026-10-06T05:45:28.839099Z",
+    "scriptSha256": "38eab7574954981d3e152b93ae07a5e20d7ce72cd90770af9e2ffb5ff2561321",
+    "scriptSourceAvailable": false
+  },
+  "historicalSetupAttempts": [
+    {
+      "archiveReceiptPath": "runs/prefetch-off-fpw-off/evidence/continuation-chain/historical-attempt-01.json",
+      "explanation": "Primary/WAL PVC source JSON was not passed to jq; restore had succeeded but the script stopped before any tuning or VACUUM.",
+      "name": "original_02_prepare",
+      "receiptSha256": "609e7c35360389804385096a690b29206b3d84a6344c9f694b519c645a0b35c1",
+      "sha256": "2007e0d27f8b506514c508b0a6d1f8d008f51480b9f7b9ed0bcc277b04f716d8",
+      "sourceArchivePath": "runs/prefetch-off-fpw-off/source/as-run/02-prepare.sh",
+      "sourceAvailable": true,
+      "sourcePath": "02-prepare.sh",
+      "status": "failed_before_tuning_or_vacuum"
+    },
+    {
+      "archiveReceiptPath": "runs/prefetch-off-fpw-off/evidence/continuation-chain/historical-attempt-02.json",
+      "explanation": "Azure ScopeLocked prevented deletion of the exact DATA snapshot role assignment; no PostgreSQL tuning, seed, or VACUUM occurred.",
+      "name": "first_post_restore_continuation",
+      "receiptSha256": "cf111093ddfb0aaf5bda4d65f3e1738bb13b90a1b34ceb42eafee7b1845c52c0",
+      "sha256": "38eab7574954981d3e152b93ae07a5e20d7ce72cd90770af9e2ffb5ff2561321",
+      "sourceAvailable": false,
+      "sourcePath": null,
+      "status": "failed_before_tuning_or_vacuum"
+    }
+  ],
+  "preparationAuditSha256": "d7d7e31f1630effc085a51d2f9e06f6b08a1a694be2da7489757cc0e43ddf547",
+  "proofReferences": {
+    "finalSourcePairProof": {
+      "archivePath": "runs/prefetch-off-fpw-off/evidence/continuation-chain/finalSourcePairProof.json",
+      "sha256": "59eff6f82d926c97db94281ee0fa329ea41375e0910b5ba4e8a6bba9f65dbdbb"
+    },
+    "replicaSeedProof": {
+      "archivePath": "runs/prefetch-off-fpw-off/evidence/continuation-chain/replicaSeedProof.json",
+      "sha256": "da929069bcb450dcffe386fafe52dc6c5c36a6946ba285abb88d66c42145de46"
+    }
+  },
+  "schemaVersion": 1,
+  "scriptSources": [
+    {
+      "archivePath": "runs/prefetch-off-fpw-off/source/as-run/continuation-chain/script-01.sh",
+      "asRunBytesVerified": true,
+      "path": "01-provision.sh",
+      "role": "successful_stack_provision",
+      "sha256": "38ad456b74e208652dd6d7b0d93b1d2c30351d636cadbae7b25fb87273f86b4b",
+      "sourceAvailable": true
+    },
+    {
+      "archivePath": "runs/prefetch-off-fpw-off/source/as-run/continuation-chain/script-02.sh",
+      "asRunBytesVerified": true,
+      "path": ".state/remove-source-snapshot-role-grants-with-lock-restore.sh",
+      "role": "successful_narrow_source_grant_cleanup_with_lock_restoration",
+      "sha256": "073f5698f27b0b95fcb835c52e1a6dda26f105a4d1222c104c39bc150e47e502",
+      "sourceAvailable": true
+    },
+    {
+      "archivePath": "runs/prefetch-off-fpw-off/source/as-run/continuation-chain/script-03.sh",
+      "asRunBytesVerified": true,
+      "path": ".state/remove-source-snapshot-role-grants-with-lock-restore-v2.sh",
+      "role": "successful_idempotent_exact_grant_lock_snapshot_postverification",
+      "sha256": "44b6880723afc47abd542cb4718f4c6d0dcb67533e997f5a078cf6e8d64d5f09",
+      "sourceAvailable": true
+    },
+    {
+      "archivePath": "runs/prefetch-off-fpw-off/source/as-run/continuation-chain/script-04.sh",
+      "asRunBytesVerified": true,
+      "path": ".state/continue-after-source-pair-restore-v2.sh",
+      "role": "successful_source_restore_continuation_and_replica_seed",
+      "sha256": "33dc25abae50c1aba96e4280563b559bfa01ba2729fe47406274ec584c4255c8",
+      "sourceAvailable": true
+    },
+    {
+      "archivePath": "runs/prefetch-off-fpw-off/source/as-run/continuation-chain/script-05.sh",
+      "asRunBytesVerified": true,
+      "path": "02-prepare.sh",
+      "role": "historical_original_02_prepare",
+      "sha256": "2007e0d27f8b506514c508b0a6d1f8d008f51480b9f7b9ed0bcc277b04f716d8",
+      "sourceAvailable": true
+    }
+  ],
+  "snapshotRecoveryJobEvidence": {
+    "archiveEventEvidencePath": "runs/prefetch-off-fpw-off/evidence/continuation-chain/snapshot-recovery-completed-event.json",
+    "completedEventUid": "b5a9adb4-e280-4459-84f3-4bc670fc1823",
+    "eventEvidenceSha256": "00192be4ea52358d8b17a4ebae36367a0c2f139584984f9d4a84bb2cd8ed8c10",
+    "name": "hdd-pg-2-snapshot-recovery",
+    "uid": "b5a9adb4-e280-4459-84f3-4bc670fc1823"
+  },
+  "sourceGrantLockAudit": {
+    "archivePath": "runs/prefetch-off-fpw-off/evidence/root-source-pair-grant-lock-fresh-audit.json",
+    "sha256": "901fc62a1e69915a787ee54fb262c38f3f5b4a49e991b144bfc373dd8cb9526f"
+  },
+  "status": "completed",
+  "successfulContinuationLaunch": {
+    "helperPath": ".state/remove-source-snapshot-role-grants-with-lock-restore-v2.sh",
+    "helperSha256": "44b6880723afc47abd542cb4718f4c6d0dcb67533e997f5a078cf6e8d64d5f09",
+    "scriptPath": ".state/continue-after-source-pair-restore-v2.sh",
+    "scriptSha256": "33dc25abae50c1aba96e4280563b559bfa01ba2729fe47406274ec584c4255c8",
+    "startedAtUtc": "2026-10-06T06:05:01.877910+00:00"
+  },
+  "successfulStages": [
+    {
+      "archiveReceiptPath": "runs/prefetch-off-fpw-off/evidence/continuation-chain/stage-01.json",
+      "exitCode": 0,
+      "name": "source_pair_restore_and_fixture_proof",
+      "receiptSha256": "59eff6f82d926c97db94281ee0fa329ea41375e0910b5ba4e8a6bba9f65dbdbb",
+      "status": "completed"
+    },
+    {
+      "archiveReceiptPath": "runs/prefetch-off-fpw-off/evidence/continuation-chain/stage-02.json",
+      "exitCode": 0,
+      "name": "source_snapshot_grant_removal_and_lock_restoration",
+      "receiptSha256": "fd69deca07525174c6004951a5851ae6ead687d082c6c0bfb6c8756b608d2d2d",
+      "status": "completed"
+    },
+    {
+      "archiveReceiptPath": "runs/prefetch-off-fpw-off/evidence/continuation-chain/stage-03.json",
+      "exitCode": 0,
+      "name": "backup_and_paired_replica_seed",
+      "receiptSha256": "da929069bcb450dcffe386fafe52dc6c5c36a6946ba285abb88d66c42145de46",
+      "status": "completed"
+    },
+    {
+      "archiveReceiptPath": "runs/prefetch-off-fpw-off/evidence/continuation-chain/stage-04.json",
+      "exitCode": 0,
+      "name": "exact_snapshot_recovery_job_completion",
+      "receiptSha256": "00192be4ea52358d8b17a4ebae36367a0c2f139584984f9d4a84bb2cd8ed8c10",
+      "status": "completed"
+    },
+    {
+      "archiveReceiptPath": "runs/prefetch-off-fpw-off/evidence/continuation-chain/stage-05.json",
+      "exitCode": 0,
+      "name": "final_role_defaults_fixture_and_replay_gate",
+      "receiptSha256": "1d0a56985fcd1534129dde96c65f7a3be7e85f2e897ba14ba981b615caaefb2a",
+      "status": "completed"
+    }
+  ]
+}

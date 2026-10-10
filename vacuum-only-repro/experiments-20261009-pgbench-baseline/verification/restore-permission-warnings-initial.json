@@ -1,0 +1,71 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 7,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:04Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-1-wal",
+                "namespace": "repro",
+                "resourceVersion": "5805",
+                "uid": "fe368400-7be4-4d6a-8b6d-505e5fcf0eaf"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:28:08Z",
+            "message": "rpc error: code = NotFound desc = GET http://localhost:7788/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/snapshots/snapshot-caf74210-9ce8-4f42-8c47-9ee8076a0201\n--------------------------------------------------------------------------------\nRESPONSE 403: 403 Forbidden\nERROR CODE: AuthorizationFailed\n--------------------------------------------------------------------------------\n{\n  \"error\": {\n    \"code\": \"AuthorizationFailed\",\n    \"message\": \"The client '1718d739-9566-4ce2-a5a4-f818e2aba9df' with object id '740c22e3-3468-4f38-a608-31bfab5a9c2e' does not have authorization to perform action 'Microsoft.Compute/snapshots/read' over scope '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/snapshots/snapshot-caf74210-9ce8-4f42-8c47-9ee8076a0201' or the scope is invalid. If access was recently granted, please refresh your credentials.\"\n  }\n}\n--------------------------------------------------------------------------------\n",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:04Z",
+                "name": "hdd-pg-1-wal.18dcc1f8512a9734",
+                "namespace": "repro",
+                "resourceVersion": "6148",
+                "uid": "310a21be-5ef5-44c4-9a70-57dcc58813b3"
+            },
+            "reason": "ProvisioningFailed",
+            "reportingComponent": "disk.csi.azure.com_csi-azuredisk-controller-6b69dfff67-xzxmj_f0f9ea08-7aba-42eb-b047-7a5319959333",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com_csi-azuredisk-controller-6b69dfff67-xzxmj_f0f9ea08-7aba-42eb-b047-7a5319959333"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 7,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-09T04:27:04Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "5803",
+                "uid": "e36b44ed-2d86-4eb4-b332-14a83cf09513"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-09T04:28:08Z",
+            "message": "rpc error: code = NotFound desc = GET http://localhost:7788/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/snapshots/snapshot-53ea286c-28a7-4225-b58f-ddd91ed93f57\n--------------------------------------------------------------------------------\nRESPONSE 403: 403 Forbidden\nERROR CODE: AuthorizationFailed\n--------------------------------------------------------------------------------\n{\n  \"error\": {\n    \"code\": \"AuthorizationFailed\",\n    \"message\": \"The client '1718d739-9566-4ce2-a5a4-f818e2aba9df' with object id '740c22e3-3468-4f38-a608-31bfab5a9c2e' does not have authorization to perform action 'Microsoft.Compute/snapshots/read' over scope '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/snapshots/snapshot-53ea286c-28a7-4225-b58f-ddd91ed93f57' or the scope is invalid. If access was recently granted, please refresh your credentials.\"\n  }\n}\n--------------------------------------------------------------------------------\n",
+            "metadata": {
+                "creationTimestamp": "2026-10-09T04:27:04Z",
+                "name": "hdd-pg-1.18dcc1f84ea33429",
+                "namespace": "repro",
+                "resourceVersion": "6146",
+                "uid": "71e62719-5192-4d15-bdd6-4159f65c0481"
+            },
+            "reason": "ProvisioningFailed",
+            "reportingComponent": "disk.csi.azure.com_csi-azuredisk-controller-6b69dfff67-xzxmj_f0f9ea08-7aba-42eb-b047-7a5319959333",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com_csi-azuredisk-controller-6b69dfff67-xzxmj_f0f9ea08-7aba-42eb-b047-7a5319959333"
+            },
+            "type": "Warning"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

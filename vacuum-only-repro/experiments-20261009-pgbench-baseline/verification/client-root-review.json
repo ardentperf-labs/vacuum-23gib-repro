@@ -1,0 +1,17 @@
+{
+  "reviewedAtUtc": "2026-10-09T04:22:18.278740+00:00",
+  "checks": [
+    "8 client lifecycle/authentication/signal/log/quorum tests passed under pinned existing Python environment",
+    "Both cleanup helper self-tests passed after state-schema migration",
+    "01 shell syntax and actual live provisioning succeeded",
+    "Fresh pre-restore audit preserves42 identical snapshots and all protection locks"
+  ],
+  "scriptSha256": {
+    "run/03-test.py": "e31de9d43277bb8860be7a64699f71cad2b4bb4b126f594e6fca4f27ff428ecb",
+    "client/setup.sql": "7cfbe84544bf3f1c868b485db765b84aeab5e3e6e0192e312cf65033a46bcb89",
+    "client/transaction.sql": "79ff03323d1ef045c3db1bf7273a5d8074724ec9632842a03afc42704d12f53d",
+    "run/plot.py": "4635b63dbbfd7c90e2bf53c072f1e53a3d6c4665b14c49312ef3b43fa747bac2",
+    "run-phase.py": "8495bcf807edd861bd3fdedb447838b9bc9203911ea7b1c215f874ac35d70c4d",
+    "retention-audit.py": "7357f056b8bb648787eaa36a36b06caeb37e285152b5ec631ecaf04598dbe31a"
+  }
+}

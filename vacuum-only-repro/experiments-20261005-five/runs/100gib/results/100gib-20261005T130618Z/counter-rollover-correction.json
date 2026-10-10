@@ -1,0 +1,46 @@
+{
+  "correctedCoverageValid": true,
+  "correction": "Unwrap only the two validated unsigned 32-bit replica DATA read-time-ms counter rollovers; all other counters and timestamps unchanged.",
+  "events": [
+    {
+      "afterReadMs": 746023,
+      "afterTime": "2026-10-05T19:16:49.750639493Z",
+      "beforeReadMs": 4294833901,
+      "beforeTime": "2026-10-05T19:16:44.857071449Z",
+      "correctedDeltaReadMs": 879418,
+      "correctedReadAwaitMs": 333.99848082035703,
+      "deltaReadOps": 2633,
+      "device": "data",
+      "majorMinor": "8:16",
+      "rawDeltaReadMs": -4294087878,
+      "role": "replica",
+      "rowIndex": 4445,
+      "seconds": 4.893460750579834
+    },
+    {
+      "afterReadMs": 101766,
+      "afterTime": "2026-10-06T01:56:14.684461741Z",
+      "beforeReadMs": 4294226385,
+      "beforeTime": "2026-10-06T01:56:09.823599665Z",
+      "correctedDeltaReadMs": 842677,
+      "correctedReadAwaitMs": 318.47203325774757,
+      "deltaReadOps": 2646,
+      "device": "data",
+      "majorMinor": "8:16",
+      "rawDeltaReadMs": -4294124619,
+      "role": "replica",
+      "rowIndex": 9238,
+      "seconds": 4.860885858535767
+    }
+  ],
+  "measurementRerun": false,
+  "originalCoverageValid": false,
+  "rawSamplesModified": false,
+  "reference": "https://www.kernel.org/doc/html/v6.7/admin-guide/iostats.html",
+  "sourceSha256": {
+    "100gib/plot.py": "d0ac35439ba17dcfe6f50e9484dd12274575755451258d82d7b12210c91317ec",
+    "100gib/results/100gib-20261005T130618Z/samples.jsonl": "acf37b109194529e8c68b66555eaf60aed5404e8e0d71d1b39c7d72a4852875d",
+    "correct-100gib-counter-rollover.py": "641d191be717071dc45731d4d2a1cc34d1fd1e7335fd8980bf386c301ad8e2e8"
+  },
+  "status": "passed-offline-counter-analysis"
+}

@@ -1,0 +1,18 @@
+{"checkedAtUtc": "2026-10-07T12:17:45.535646+00:00", "preservedPriorSnapshots": true, "allSnapshotsProtected": true, "priorSnapshotCount": 32, "currentSnapshotCount": 42, "missing": [], "changedIdentities": [], "unprotected": []}
+keeper-pv2-4b116309 Succeeded Available 100.0
+snapshot-53ea286c-28a7-4225-b58f-ddd91ed93f57 Succeeded Available 100.0
+snapshot-caf74210-9ce8-4f42-8c47-9ee8076a0201 Succeeded Available 100.0
+keeper-pv2-f1b90aec Failed Unknown 0.0
+keeper-pv2-f1b90aec-ef6f2376 Succeeded Available None
+snapshot-604b8cee-1a94-4df6-b846-be245038a795 Succeeded Available 100.0
+snapshot-ebeff553-ca6f-487c-8517-e803b02337ca Succeeded Available 100.0
+keeper-pv2-5c241a19-4b554415 Succeeded Available None
+snapshot-5915d49f-e4ce-41da-b157-40e0043dcdb2 Succeeded Available 100.0
+snapshot-f60780dd-a9b5-4401-a1c7-30a64acd114e Succeeded Available 100.0
+Traceback (most recent call last):
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/post-measurement-cleanup-v2.py", line 274, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/post-measurement-cleanup-v2.py", line 193, in main
+    raise RuntimeError('Compute cleanup did not complete: ' + json.dumps(codes))
+RuntimeError: Compute cleanup did not complete: {"baseline-23gib": 1, "50gib": 1, "100gib": 1}

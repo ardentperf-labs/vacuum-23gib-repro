@@ -1,0 +1,22 @@
+{
+  "phase": "prepare",
+  "stack": "50gib",
+  "status": "failed",
+  "supervisorPid": 126516,
+  "startedAtUtc": "2026-10-06T20:53:32.307852+00:00",
+  "command": [
+    "bash",
+    "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/50gib/02-prepare.sh"
+  ],
+  "environment": {
+    "TEST_HEAP_GIB": "50",
+    "SOURCE_MANIFEST": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/50gib/source-manifest.json"
+  },
+  "scriptSha256": {
+    "02-prepare.sh": "7b24d869c7ef362653f38201402f5e4f297c874f66253658f884ced15055b20f"
+  },
+  "sourceStageHelperSha256": "0eacb0a81b30703a3b788aa745d3eca8c079e3e4e0cfca9921f500b6f5c8918b",
+  "childPid": 126519,
+  "finishedAtUtc": "2026-10-07T02:37:02.576274+00:00",
+  "exitCode": -15
+}

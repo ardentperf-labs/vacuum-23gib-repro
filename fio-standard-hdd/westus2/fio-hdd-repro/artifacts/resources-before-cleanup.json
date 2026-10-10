@@ -1,0 +1,190 @@
+[
+  {
+    "changedTime": "2026-10-09T08:48:08.934482+00:00",
+    "createdTime": "2026-10-09T08:48:06.020631+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Network/publicIPAddresses/fio-vmPublicIP",
+    "identity": null,
+    "kind": null,
+    "location": "westus2",
+    "managedBy": null,
+    "name": "fio-vmPublicIP",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa",
+    "sku": {
+      "capacity": null,
+      "family": null,
+      "model": null,
+      "name": "Standard",
+      "size": null,
+      "tier": null
+    },
+    "tags": {
+      "reprotoken": "e2883f380ab57959f76530aa"
+    },
+    "type": "Microsoft.Network/publicIPAddresses"
+  },
+  {
+    "changedTime": "2026-10-09T08:48:10.827407+00:00",
+    "createdTime": "2026-10-09T08:48:06.039417+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Network/virtualNetworks/fio-vmVNET",
+    "identity": null,
+    "kind": null,
+    "location": "westus2",
+    "managedBy": null,
+    "name": "fio-vmVNET",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa",
+    "sku": null,
+    "tags": {
+      "reprotoken": "e2883f380ab57959f76530aa"
+    },
+    "type": "Microsoft.Network/virtualNetworks"
+  },
+  {
+    "changedTime": "2026-10-09T08:48:07.058695+00:00",
+    "createdTime": "2026-10-09T08:48:06.041374+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Network/networkSecurityGroups/fio-vmNSG",
+    "identity": null,
+    "kind": null,
+    "location": "westus2",
+    "managedBy": null,
+    "name": "fio-vmNSG",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa",
+    "sku": null,
+    "tags": {
+      "reprotoken": "e2883f380ab57959f76530aa"
+    },
+    "type": "Microsoft.Network/networkSecurityGroups"
+  },
+  {
+    "changedTime": "2026-10-09T08:48:16.236976+00:00",
+    "createdTime": "2026-10-09T08:48:12.744129+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Network/networkInterfaces/fio-vmVMNic",
+    "identity": null,
+    "kind": null,
+    "location": "westus2",
+    "managedBy": null,
+    "name": "fio-vmVMNic",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa",
+    "sku": null,
+    "tags": {
+      "reprotoken": "e2883f380ab57959f76530aa"
+    },
+    "type": "Microsoft.Network/networkInterfaces"
+  },
+  {
+    "changedTime": "2026-10-09T09:55:19.192052+00:00",
+    "createdTime": "2026-10-09T09:02:42.847099+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/virtualMachines/fio-vm",
+    "identity": null,
+    "kind": null,
+    "location": "westus2",
+    "managedBy": null,
+    "name": "fio-vm",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa",
+    "sku": null,
+    "tags": {
+      "reprotoken": "e2883f380ab57959f76530aa"
+    },
+    "type": "Microsoft.Compute/virtualMachines"
+  },
+  {
+    "changedTime": "2026-10-09T09:00:20.348808+00:00",
+    "createdTime": "2026-10-09T08:50:19.426560+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-FIO-HDD-E2883F380AB57959F76530AA/providers/Microsoft.Compute/disks/fio-vm_OsDisk_1_842b7c3ce9e846239ae9626795e3c3a9",
+    "identity": null,
+    "kind": null,
+    "location": "westus2",
+    "managedBy": null,
+    "name": "fio-vm_OsDisk_1_842b7c3ce9e846239ae9626795e3c3a9",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "RG-FIO-HDD-E2883F380AB57959F76530AA",
+    "sku": {
+      "capacity": null,
+      "family": null,
+      "model": null,
+      "name": "StandardSSD_LRS",
+      "size": null,
+      "tier": "Standard"
+    },
+    "tags": {
+      "reprotoken": "e2883f380ab57959f76530aa"
+    },
+    "type": "Microsoft.Compute/disks"
+  },
+  {
+    "changedTime": "2026-10-09T09:12:47.691210+00:00",
+    "createdTime": "2026-10-09T09:02:47.528020+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-FIO-HDD-E2883F380AB57959F76530AA/providers/Microsoft.Compute/disks/fio-vm_OsDisk_1_284e7c595d2f4df7938659ac90c73531",
+    "identity": null,
+    "kind": null,
+    "location": "westus2",
+    "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/virtualMachines/fio-vm",
+    "name": "fio-vm_OsDisk_1_284e7c595d2f4df7938659ac90c73531",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "RG-FIO-HDD-E2883F380AB57959F76530AA",
+    "sku": {
+      "capacity": null,
+      "family": null,
+      "model": null,
+      "name": "StandardSSD_LRS",
+      "size": null,
+      "tier": "Standard"
+    },
+    "tags": {
+      "reprotoken": "e2883f380ab57959f76530aa"
+    },
+    "type": "Microsoft.Compute/disks"
+  },
+  {
+    "changedTime": "2026-10-09T10:05:04.884704+00:00",
+    "createdTime": "2026-10-09T09:55:02.059430+00:00",
+    "extendedLocation": null,
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/disks/fio-data",
+    "identity": null,
+    "kind": null,
+    "location": "westus2",
+    "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/virtualMachines/fio-vm",
+    "name": "fio-data",
+    "plan": null,
+    "properties": null,
+    "provisioningState": "Succeeded",
+    "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa",
+    "sku": {
+      "capacity": null,
+      "family": null,
+      "model": null,
+      "name": "Standard_LRS",
+      "size": null,
+      "tier": "Standard"
+    },
+    "tags": {
+      "reprotoken": "e2883f380ab57959f76530aa"
+    },
+    "type": "Microsoft.Compute/disks"
+  }
+]

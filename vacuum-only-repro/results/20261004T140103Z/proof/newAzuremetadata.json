@@ -1,0 +1,38 @@
+{
+  "creationData": {
+    "createOption": "Copy",
+    "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/snapshots/vacuum-copy-804391dc",
+    "sourceUniqueId": "da0d6fc8-415f-4f28-aeef-2fa8b068f345"
+  },
+  "diskSizeBytes": 549755813888,
+  "diskSizeGB": 512,
+  "diskState": "Unattached",
+  "encryption": {
+    "type": "EncryptionAtRestWithPlatformKey"
+  },
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+  "incremental": false,
+  "location": "eastus",
+  "name": "azhr-keep-scsi-prepared-7a297601434285b1",
+  "networkAccessPolicy": "DenyAll",
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": "Disabled",
+  "resourceGroup": "rg-az-hdd-repro-snapshot-keeper",
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "snapshotAccessState": "Available",
+  "tags": {
+    "candidateSourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/snapshots/vacuum-copy-804391dc",
+    "candidateToken": "2e23e93101111749a496b2a58ac1f2ad",
+    "createdBy": "parallel-keeper-validation-20261004",
+    "reproPurpose": "retained-primary-pg-snapshot",
+    "reproSourceSetId": "scsi-prepared",
+    "reproSourceToken": "804391dc0a7b56b597915163951aed1a",
+    "reprotoken": "93494924de3e081fc5803031e15d5587"
+  },
+  "timeCreated": "2026-10-04T14:10:10.0747777+00:00",
+  "type": "Microsoft.Compute/snapshots",
+  "uniqueId": "c05eba46-c2d2-4600-9a5c-fbd1c2671f22"
+}

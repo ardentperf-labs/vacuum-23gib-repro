@@ -1,0 +1,189 @@
+{
+  "backup": {
+    "createdAt": "2026-10-07T06:11:36Z",
+    "name": "vacuum-backup-f1b90aec",
+    "pair": {
+      "data": "vacuum-backup-f1b90aec",
+      "wal": "vacuum-backup-f1b90aec-wal"
+    },
+    "phase": "completed",
+    "uid": "597e0f7d-c87e-4455-b01a-42120f969859"
+  },
+  "backupName": "vacuum-backup-f1b90aec",
+  "backupPhase": "completed",
+  "backupUID": "597e0f7d-c87e-4455-b01a-42120f969859",
+  "clusterPreflight": {
+    "archiveDestination": "https://cnpgwalf1b90aec9e24f6a20.blob.core.windows.net/wal-f1b90aec9e24/cnpg-vacuum-only/f1b90aec9e24f6a2008d6991738742cf/",
+    "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+    "instances": 1,
+    "primary": "hdd-pg-1",
+    "readyInstances": 1,
+    "replicaPVCsAbsent": true,
+    "replicaSeedJobsAbsent": true
+  },
+  "controlFlowInputHashes": {
+    "backup.yaml": "50920a82cb9cc09556ed6daa0ba4ea6788e80aaa5d9c00a1c0b4912b885fd960",
+    "captureReceiptSha256": "92fdfa006e10260090957b52c48fb77b59778046285c2445689d179872e67364",
+    "cluster.yaml": "ba32ef063d01899010d9be5a3d324f2ad863a55028c12e1f713b5cf574af2aea",
+    "seed-path": "5897829c2962a99fc4aace13eafdb5316d425814a0bd8220fd910f1cfdf02d0e",
+    "terminalProcessBindingSha256": "fe72639e5955a1f368e6b9b5f204684b71cc4a931e528ac444b8fb7807f9267d"
+  },
+  "fixtureAndArchiver": {
+    "archiver": {
+      "archiveMode": "on",
+      "archivedCount": 22300,
+      "failedCount": 0,
+      "inRecovery": false,
+      "lastArchivedWal": "000000010000009A00000082"
+    },
+    "controlFlowInference": "The exact frozen original script writes captured backup.yaml only after its fixture count/heap/payload guards and archiver/WAL checks; this inference is bound to the old process/script hashes and the live Backup UID/spec. Raw DML output is unavailable.",
+    "expectedTupleEstimate": 32768000,
+    "fixture": {
+      "appSessions": 0,
+      "deadEstimate": 32768000,
+      "hasIndex": true,
+      "heapBytes": 107374182400,
+      "inRecovery": false,
+      "liveEstimate": 32768000,
+      "maxId": 131071998,
+      "minId": 4,
+      "payloadBytes": 1536,
+      "payloadStoragePlain": true,
+      "stageTableAbsent": true,
+      "systemIdentifier": "7692518806614212629",
+      "tableAutovacuumDisabled": true,
+      "totalBytes": 108872679424
+    },
+    "sourceHeapBytes": 118128640000,
+    "sourceLiveTuplesEstimate": 36050000,
+    "tupleCountsAreEstimates": true
+  },
+  "limitations": [
+    "Original INSERT/DELETE output was command-substituted and removed; no raw transcript is reconstructed."
+  ],
+  "localEvidenceHashes": {
+    "runConfig": "d75a03ab4649cd94bb482c26efc261cfcb57f8145ede44a722e306306839e146",
+    "sourceManifest": "939861f7eae1ec48978ff21cd31b9aaab07045302832aae53a3b24afa4c07560",
+    "sourceMetadata": "5f835144db8603f2533407111c51d147118cca31bfbcf9c852cdf6e2f0bfe59b",
+    "sourceSnapshotRecord": "04f2efb7bf0aa2a04a5b5c6297a3e4c3d6e534d25415b0990cf8c13379454afd",
+    "stageReceipt": "eaed6a8aa16c64c56c331024344bfdc2bfa0cec61c87bed947072aebe2a4d3cd",
+    "state": "ab77283ff7bf5fb74a0ed0001fd6618a19b21a4f2e42e87d29dc94faf762cea6"
+  },
+  "originalProcessReceiptSha256": "8996c771a22b946b2d37a5f5590b730937a841de41d503b4fdb702c9a358b568",
+  "originalRunningProcessReceiptSha256": "68472626da0721b22247773d4782d1940e5b992b1d3c5af3ba422249aeb4205e",
+  "originalScriptSha256": "7b24d869c7ef362653f38201402f5e4f297c874f66253658f884ced15055b20f",
+  "ownerPreflight": {
+    "archiveSecretPresent": true,
+    "blobAccountId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Storage/storageAccounts/cnpgwalf1b90aec9e24f6a20",
+    "clusterName": "aks-vacuum-only-f1b90aec9e24",
+    "container": "wal-f1b90aec9e24",
+    "nodeResourceGroup": "rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf",
+    "resourceGroup": "rg-vacuum-only-f1b90aec9e24f6a2008d6991738742cf",
+    "snapshotResourceGroup": "rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf",
+    "subscriptionId": "00000000-0000-0000-0000-000000000000"
+  },
+  "pairedSnapshots": {
+    "vacuum-backup-f1b90aec": {
+      "completionPercent": 100.0,
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+      "provisioningState": "Succeeded",
+      "readyToUse": true,
+      "snapshotAccessState": "Available",
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourceDiskUniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+      "sourcePV": "pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourcePVC": "hdd-pg-1",
+      "sourcePVCUID": "a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourceUniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+      "type": "data",
+      "uniqueId": "b530378c-e2ce-43e0-a464-209842f00958",
+      "volumeSnapshotContent": "snapcontent-604b8cee-1a94-4df6-b846-be245038a795",
+      "volumeSnapshotContentUID": "46dcf188-df95-4561-a4ef-23bd0d7fb416",
+      "volumeSnapshotUID": "604b8cee-1a94-4df6-b846-be245038a795"
+    },
+    "vacuum-backup-f1b90aec-wal": {
+      "completionPercent": 100.0,
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "provisioningState": "Succeeded",
+      "readyToUse": true,
+      "snapshotAccessState": "Available",
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourceDiskUniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18",
+      "sourcePV": "pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourcePVC": "hdd-pg-1-wal",
+      "sourcePVCUID": "316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourceUniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18",
+      "type": "wal",
+      "uniqueId": "5d6164bd-68b6-455a-ada8-cfb4c9f95022",
+      "volumeSnapshotContent": "snapcontent-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "volumeSnapshotContentUID": "61bc9a55-1e2a-40cc-905c-d74058149dae",
+      "volumeSnapshotUID": "ebeff553-ca6f-487c-8517-e803b02337ca"
+    }
+  },
+  "phase": "backup-and-copy-100-complete",
+  "pinnedSnapshotIdentity": {
+    "vacuum-backup-f1b90aec": {
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourceDiskUniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+      "sourcePV": "pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourcePVC": "hdd-pg-1",
+      "sourcePVCUID": "a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourceUniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+      "uniqueId": "b530378c-e2ce-43e0-a464-209842f00958",
+      "volumeSnapshotContent": "snapcontent-604b8cee-1a94-4df6-b846-be245038a795",
+      "volumeSnapshotContentUID": "46dcf188-df95-4561-a4ef-23bd0d7fb416",
+      "volumeSnapshotUID": "604b8cee-1a94-4df6-b846-be245038a795"
+    },
+    "vacuum-backup-f1b90aec-wal": {
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourceDiskUniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18",
+      "sourcePV": "pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourcePVC": "hdd-pg-1-wal",
+      "sourcePVCUID": "316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourceUniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18",
+      "uniqueId": "5d6164bd-68b6-455a-ada8-cfb4c9f95022",
+      "volumeSnapshotContent": "snapcontent-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "volumeSnapshotContentUID": "61bc9a55-1e2a-40cc-905c-d74058149dae",
+      "volumeSnapshotUID": "ebeff553-ca6f-487c-8517-e803b02337ca"
+    }
+  },
+  "resumerScriptSha256": "9af2aa9ee75bafe1e888bcce12b471f1ade14239ff6e1992ef77870719016f1b",
+  "retentionLocks": [
+    {
+      "completionPercent": 100.0,
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+      "uniqueId": "b530378c-e2ce-43e0-a464-209842f00958"
+    },
+    {
+      "completionPercent": 100.0,
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "uniqueId": "5d6164bd-68b6-455a-ada8-cfb4c9f95022"
+    }
+  ],
+  "seed": {
+    "completed": true,
+    "completedEventTimestamp": "2026-10-07T07:38:43Z",
+    "eventsSha256": "019369eb0df1fb5beee4999d43c5d64c2ee2e3ba702e51beaca8eb8caab5828c",
+    "jobUID": "aecfcd65-ba99-4667-9ef6-1bb75558bb26"
+  },
+  "sourceLineage": {
+    "keeperAndRestoreCopyDirectLocksVerified": true,
+    "restoreCopySnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376",
+    "restoreCopyUniqueId": "1f260967-6558-4934-a4b6-6574a2ef4db2",
+    "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c",
+    "sourceSnapshotOwnerToken": "16244c2c1353a0fc1b108ec455fd70c8",
+    "sourceSnapshotUniqueId": "5ba7640c-4e34-4227-be0d-d428baeaf2cf",
+    "stackOwnerToken": "f1b90aec9e24f6a2008d6991738742cf",
+    "stagingDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/restore-stage-f1b90aec-ef6f2376",
+    "stagingDiskUniqueId": "2efcf9d2-d963-4f88-baef-7684c3213f0b"
+  },
+  "stack": "100gib",
+  "terminalProcessBindingSha256": "fe72639e5955a1f368e6b9b5f204684b71cc4a931e528ac444b8fb7807f9267d",
+  "version": 1
+}

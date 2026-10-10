@@ -1,0 +1,47 @@
+{
+  "name": "pvc-33bde4d4-2c77-4dae-afe6-6e8895633723",
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-33bde4d4-2c77-4dae-afe6-6e8895633723",
+  "type": "Microsoft.Compute/disks",
+  "location": "eastus",
+  "tags": {
+    "k8s-azure-created-by": "kubernetes-azure-dd",
+    "kubernetes.io-created-for-pv-name": "pvc-33bde4d4-2c77-4dae-afe6-6e8895633723",
+    "kubernetes.io-created-for-pvc-name": "hdd-pg-2",
+    "kubernetes.io-created-for-pvc-namespace": "repro"
+  },
+  "zones": [
+    "1"
+  ],
+  "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/virtualMachines/aks-nodepool1-15388874-vmss_0",
+  "sku": {
+    "name": "PremiumV2_LRS",
+    "tier": "Premium"
+  },
+  "properties": {
+    "creationData": {
+      "createOption": "Copy",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+      "sourceUniqueId": "b530378c-e2ce-43e0-a464-209842f00958",
+      "logicalSectorSize": 512
+    },
+    "diskSizeGB": 512,
+    "diskIOPSReadWrite": 3000,
+    "diskMBpsReadWrite": 125,
+    "readOnly": false,
+    "diskIOPSReadOnly": 3000,
+    "diskMBpsReadOnly": 125,
+    "encryption": {
+      "type": "EncryptionAtRestWithPlatformKey"
+    },
+    "maxShares": 1,
+    "networkAccessPolicy": "DenyAll",
+    "publicNetworkAccess": "Disabled",
+    "timeCreated": "2026-10-07T07:30:00.2148543+00:00",
+    "provisioningState": "Succeeded",
+    "diskState": "Attached",
+    "LastOwnershipUpdateTime": "2026-10-07T07:30:15.479286+00:00",
+    "diskSizeBytes": 549755813888,
+    "uniqueId": "10e1034f-e5cc-416b-9562-78df54c71f22",
+    "completionPercent": 36.0
+  }
+}

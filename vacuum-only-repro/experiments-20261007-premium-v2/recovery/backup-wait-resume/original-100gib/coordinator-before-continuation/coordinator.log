@@ -1,0 +1,207 @@
+2026-10-06T15:54:15.870815+00:00 waiting-for-preparation
+2026-10-06T16:07:17.651930+00:00 waiting-for-preparation
+2026-10-06T16:12:17.670005+00:00 waiting-for-preparation
+2026-10-06T16:13:08.067589+00:00 waiting-for-preparation
+2026-10-06T16:18:08.085710+00:00 waiting-for-preparation
+2026-10-06T16:23:08.119925+00:00 waiting-for-preparation
+2026-10-06T16:28:08.169993+00:00 waiting-for-preparation
+2026-10-06T16:33:08.212688+00:00 waiting-for-preparation
+2026-10-06T16:38:08.247816+00:00 waiting-for-preparation
+2026-10-06T16:43:08.290873+00:00 waiting-for-preparation
+2026-10-06T16:48:08.327105+00:00 waiting-for-preparation
+2026-10-06T16:53:08.369898+00:00 waiting-for-preparation
+2026-10-06T16:58:08.405093+00:00 waiting-for-preparation
+2026-10-06T17:03:08.447939+00:00 waiting-for-preparation
+2026-10-06T17:08:08.490494+00:00 waiting-for-preparation
+2026-10-06T17:13:08.524206+00:00 waiting-for-preparation
+2026-10-06T17:18:08.567089+00:00 waiting-for-preparation
+2026-10-06T17:23:08.612016+00:00 waiting-for-preparation
+2026-10-06T17:28:08.649126+00:00 waiting-for-preparation
+2026-10-06T17:33:08.691110+00:00 waiting-for-preparation
+2026-10-06T17:38:08.734207+00:00 waiting-for-preparation
+2026-10-06T17:43:08.776935+00:00 waiting-for-preparation
+2026-10-06T17:48:08.821747+00:00 waiting-for-preparation
+2026-10-06T17:53:08.870354+00:00 waiting-for-preparation
+2026-10-06T17:58:08.919645+00:00 waiting-for-preparation
+2026-10-06T18:03:08.967441+00:00 waiting-for-preparation
+2026-10-06T18:08:09.011530+00:00 waiting-for-preparation
+2026-10-06T18:13:09.055310+00:00 waiting-for-preparation
+2026-10-06T18:18:09.097284+00:00 waiting-for-preparation
+2026-10-06T18:23:09.139780+00:00 waiting-for-preparation
+2026-10-06T18:28:09.176430+00:00 waiting-for-preparation
+2026-10-06T18:33:09.220518+00:00 waiting-for-preparation
+2026-10-06T18:38:09.263176+00:00 waiting-for-preparation
+2026-10-06T18:43:09.305497+00:00 waiting-for-preparation
+2026-10-06T18:48:09.352963+00:00 waiting-for-preparation
+2026-10-06T18:53:09.397862+00:00 waiting-for-preparation
+2026-10-06T18:58:09.439985+00:00 waiting-for-preparation
+2026-10-06T19:03:09.483296+00:00 waiting-for-preparation
+2026-10-06T19:03:39.510352+00:00 failed
+Comparison pending completed measurements
+Traceback (most recent call last):
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 136, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 77, in main
+    evidence = verify_preparations()
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 44, in verify_preparations
+    raise RuntimeError(f'{name} preparation failed; preserving its resources for diagnosis')
+RuntimeError: baseline-23gib preparation failed; preserving its resources for diagnosis
+2026-10-06T20:52:41.110433+00:00 waiting-for-preparation
+2026-10-06T20:52:51.111594+00:00 failed
+Comparison pending completed measurements
+Traceback (most recent call last):
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 154, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 82, in main
+    evidence = verify_preparations()
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 45, in verify_preparations
+    raise RuntimeError(f'{name} preparation failed; preserving its resources for diagnosis')
+RuntimeError: 50gib preparation failed; preserving its resources for diagnosis
+2026-10-06T20:57:39.669718+00:00 waiting-for-preparation
+2026-10-06T21:02:39.685642+00:00 waiting-for-preparation
+2026-10-06T21:07:39.718442+00:00 waiting-for-preparation
+2026-10-06T21:12:39.762232+00:00 waiting-for-preparation
+2026-10-06T21:17:39.798375+00:00 waiting-for-preparation
+2026-10-06T21:22:39.847168+00:00 waiting-for-preparation
+2026-10-06T21:27:39.893110+00:00 waiting-for-preparation
+2026-10-06T21:32:39.943041+00:00 waiting-for-preparation
+2026-10-06T21:37:39.992065+00:00 waiting-for-preparation
+2026-10-06T21:42:40.042205+00:00 waiting-for-preparation
+2026-10-06T21:47:40.092877+00:00 waiting-for-preparation
+2026-10-06T21:52:40.140752+00:00 waiting-for-preparation
+2026-10-06T21:57:40.179329+00:00 waiting-for-preparation
+2026-10-06T22:02:40.233459+00:00 waiting-for-preparation
+2026-10-06T22:07:40.279890+00:00 waiting-for-preparation
+2026-10-06T22:12:40.332571+00:00 waiting-for-preparation
+2026-10-06T22:17:40.382084+00:00 waiting-for-preparation
+2026-10-06T22:22:40.430341+00:00 waiting-for-preparation
+2026-10-06T22:27:40.478784+00:00 waiting-for-preparation
+2026-10-06T22:32:40.528150+00:00 waiting-for-preparation
+2026-10-06T22:37:40.576130+00:00 waiting-for-preparation
+2026-10-06T22:42:40.617030+00:00 waiting-for-preparation
+2026-10-06T22:47:40.664624+00:00 waiting-for-preparation
+2026-10-06T22:52:40.701770+00:00 waiting-for-preparation
+2026-10-06T22:57:40.748578+00:00 waiting-for-preparation
+2026-10-06T23:02:40.789871+00:00 waiting-for-preparation
+2026-10-06T23:07:40.840807+00:00 waiting-for-preparation
+2026-10-06T23:12:40.889911+00:00 waiting-for-preparation
+2026-10-06T23:17:40.937193+00:00 waiting-for-preparation
+2026-10-06T23:22:40.986498+00:00 waiting-for-preparation
+2026-10-06T23:27:41.040204+00:00 waiting-for-preparation
+2026-10-06T23:32:41.086083+00:00 waiting-for-preparation
+2026-10-06T23:37:41.133298+00:00 waiting-for-preparation
+2026-10-06T23:42:41.177109+00:00 waiting-for-preparation
+2026-10-06T23:47:41.225874+00:00 waiting-for-preparation
+2026-10-06T23:52:41.278935+00:00 waiting-for-preparation
+2026-10-06T23:57:41.329200+00:00 waiting-for-preparation
+2026-10-07T00:02:41.377396+00:00 waiting-for-preparation
+2026-10-07T00:07:41.432242+00:00 waiting-for-preparation
+2026-10-07T00:12:41.484445+00:00 waiting-for-preparation
+2026-10-07T00:17:41.532536+00:00 waiting-for-preparation
+2026-10-07T00:22:41.581269+00:00 waiting-for-preparation
+2026-10-07T00:27:41.618378+00:00 waiting-for-preparation
+2026-10-07T00:32:41.663057+00:00 waiting-for-preparation
+2026-10-07T00:37:41.710820+00:00 waiting-for-preparation
+2026-10-07T00:42:41.754827+00:00 waiting-for-preparation
+2026-10-07T00:47:41.800123+00:00 waiting-for-preparation
+2026-10-07T00:52:41.843792+00:00 waiting-for-preparation
+2026-10-07T00:57:41.879355+00:00 waiting-for-preparation
+2026-10-07T01:02:41.925421+00:00 waiting-for-preparation
+2026-10-07T01:07:41.976001+00:00 waiting-for-preparation
+2026-10-07T01:12:42.025296+00:00 waiting-for-preparation
+2026-10-07T01:17:42.072646+00:00 waiting-for-preparation
+2026-10-07T01:22:42.125561+00:00 waiting-for-preparation
+2026-10-07T01:27:42.176503+00:00 waiting-for-preparation
+2026-10-07T01:32:42.217841+00:00 waiting-for-preparation
+2026-10-07T01:37:42.259050+00:00 waiting-for-preparation
+2026-10-07T01:42:42.312316+00:00 waiting-for-preparation
+2026-10-07T01:47:42.362032+00:00 waiting-for-preparation
+2026-10-07T01:52:42.403848+00:00 waiting-for-preparation
+2026-10-07T01:57:42.457025+00:00 waiting-for-preparation
+2026-10-07T02:02:42.509832+00:00 waiting-for-preparation
+2026-10-07T02:07:42.564181+00:00 waiting-for-preparation
+2026-10-07T02:12:42.606053+00:00 waiting-for-preparation
+2026-10-07T02:17:42.655627+00:00 waiting-for-preparation
+2026-10-07T02:22:42.709111+00:00 waiting-for-preparation
+2026-10-07T02:27:42.748714+00:00 waiting-for-preparation
+2026-10-07T02:32:42.787840+00:00 waiting-for-preparation
+2026-10-07T02:37:02.838058+00:00 failed
+Comparison pending completed measurements
+Traceback (most recent call last):
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 154, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 82, in main
+    evidence = verify_preparations()
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 45, in verify_preparations
+    raise RuntimeError(f'{name} preparation failed; preserving its resources for diagnosis')
+RuntimeError: 50gib preparation failed; preserving its resources for diagnosis
+2026-10-07T02:54:19.887229+00:00 waiting-for-preparation
+2026-10-07T02:59:19.908936+00:00 waiting-for-preparation
+2026-10-07T03:04:19.957765+00:00 waiting-for-preparation
+2026-10-07T03:09:20.010903+00:00 waiting-for-preparation
+2026-10-07T03:14:20.065232+00:00 waiting-for-preparation
+2026-10-07T03:19:20.109531+00:00 waiting-for-preparation
+2026-10-07T03:24:20.164433+00:00 waiting-for-preparation
+2026-10-07T03:29:20.218218+00:00 waiting-for-preparation
+2026-10-07T03:34:20.270453+00:00 waiting-for-preparation
+2026-10-07T03:39:20.326932+00:00 waiting-for-preparation
+2026-10-07T03:44:20.379469+00:00 waiting-for-preparation
+2026-10-07T03:49:20.439014+00:00 waiting-for-preparation
+2026-10-07T03:54:20.484375+00:00 waiting-for-preparation
+2026-10-07T03:59:20.536158+00:00 waiting-for-preparation
+2026-10-07T04:04:20.580685+00:00 waiting-for-preparation
+2026-10-07T04:09:20.635236+00:00 waiting-for-preparation
+2026-10-07T04:14:20.689785+00:00 waiting-for-preparation
+2026-10-07T04:19:20.734213+00:00 waiting-for-preparation
+2026-10-07T04:24:20.779150+00:00 waiting-for-preparation
+2026-10-07T04:29:20.822338+00:00 waiting-for-preparation
+2026-10-07T04:34:20.874384+00:00 waiting-for-preparation
+2026-10-07T04:39:20.929921+00:00 waiting-for-preparation
+2026-10-07T04:44:20.982593+00:00 waiting-for-preparation
+2026-10-07T04:49:21.029497+00:00 waiting-for-preparation
+2026-10-07T04:54:21.082089+00:00 waiting-for-preparation
+2026-10-07T04:59:21.130538+00:00 waiting-for-preparation
+2026-10-07T05:04:21.184436+00:00 waiting-for-preparation
+2026-10-07T05:09:21.241455+00:00 waiting-for-preparation
+2026-10-07T05:14:21.293720+00:00 waiting-for-preparation
+2026-10-07T05:19:21.347918+00:00 waiting-for-preparation
+2026-10-07T05:24:21.401549+00:00 waiting-for-preparation
+2026-10-07T05:29:21.453843+00:00 waiting-for-preparation
+2026-10-07T05:34:21.505840+00:00 waiting-for-preparation
+2026-10-07T05:39:21.551905+00:00 waiting-for-preparation
+2026-10-07T05:44:21.597237+00:00 waiting-for-preparation
+2026-10-07T05:49:21.656859+00:00 waiting-for-preparation
+2026-10-07T05:54:21.709456+00:00 waiting-for-preparation
+2026-10-07T05:59:21.766618+00:00 waiting-for-preparation
+2026-10-07T06:04:21.815281+00:00 waiting-for-preparation
+2026-10-07T06:09:21.864624+00:00 waiting-for-preparation
+2026-10-07T06:14:21.904365+00:00 waiting-for-preparation
+2026-10-07T06:19:21.947652+00:00 waiting-for-preparation
+2026-10-07T06:24:21.995589+00:00 waiting-for-preparation
+2026-10-07T06:29:22.036292+00:00 waiting-for-preparation
+2026-10-07T06:34:22.085237+00:00 waiting-for-preparation
+2026-10-07T06:39:22.125804+00:00 waiting-for-preparation
+2026-10-07T06:44:22.167303+00:00 waiting-for-preparation
+2026-10-07T06:49:22.207133+00:00 waiting-for-preparation
+2026-10-07T06:54:22.247354+00:00 waiting-for-preparation
+2026-10-07T06:59:22.297055+00:00 waiting-for-preparation
+2026-10-07T07:04:22.348555+00:00 waiting-for-preparation
+2026-10-07T07:09:22.400849+00:00 waiting-for-preparation
+2026-10-07T07:11:42.439686+00:00 failed
+Comparison pending completed measurements
+Traceback (most recent call last):
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 154, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 82, in main
+    evidence = verify_preparations()
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/coordinate-measurements.py", line 45, in verify_preparations
+    raise RuntimeError(f'{name} preparation failed; preserving its resources for diagnosis')
+RuntimeError: 100gib preparation failed; preserving its resources for diagnosis

@@ -1,0 +1,54 @@
+{
+  "createdAtUtc": "2026-10-04T00:15:03Z",
+  "keeperOwnerToken": "93494924de3e081fc5803031e15d5587",
+  "keeperResourceGroup": "rg-az-hdd-repro-snapshot-keeper",
+  "keeperResourceGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper",
+  "keeperResourceGroupLocation": "eastus2",
+  "location": "eastus",
+  "pendingSource": null,
+  "retainedSnapshot": {
+    "createdAtUtc": "2026-10-04T14:10:10.0747777+00:00",
+    "diskSizeGiB": 512,
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+    "immediateCopySource": {
+      "ownerToken": "804391dc0a7b56b597915163951aed1a",
+      "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+      "snapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/snapshots/vacuum-copy-804391dc",
+      "sourceSetId": "scsi-prepared"
+    },
+    "incremental": false,
+    "location": "eastus",
+    "name": "azhr-keep-scsi-prepared-7a297601434285b1",
+    "originalPreparation": {
+      "createdAtUtc": "2026-10-04T00:15:28Z",
+      "snapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-amplification-prepared-05d212886d",
+      "sourceCreatedAtUtc": "2026-10-04T00:12:24Z",
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MC_rg-az-hdd-repro-14495d19_aks-az-hdd-14495d19_eastus2/providers/Microsoft.Compute/disks/pvc-6bf816df-2a57-4c62-b8b2-0dd9de7d9ca9",
+      "sourceNodeResourceGroup": "MC_rg-az-hdd-repro-14495d19_aks-az-hdd-14495d19_eastus2",
+      "sourceOwnerToken": "5c0442481960e3f07737ba8c53bbe089",
+      "sourceResourceGroup": "rg-az-hdd-repro-14495d19",
+      "sourceSetId": "amplification-prepared",
+      "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-14495d19/providers/Microsoft.Compute/snapshots/azhr-amplification-prepared-primary",
+      "systemIdentifier": "7692518806614212629"
+    },
+    "resourceGroup": "rg-az-hdd-repro-snapshot-keeper",
+    "sku": "Standard_LRS",
+    "sourceCreatedAtUtc": "2026-10-04T00:15:28Z",
+    "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MC_rg-az-hdd-repro-14495d19_aks-az-hdd-14495d19_eastus2/providers/Microsoft.Compute/disks/pvc-6bf816df-2a57-4c62-b8b2-0dd9de7d9ca9",
+    "sourceNodeResourceGroup": "MC_rg-az-hdd-repro-14495d19_aks-az-hdd-14495d19_eastus2",
+    "sourceOwnerToken": "804391dc0a7b56b597915163951aed1a",
+    "sourcePostgresSystemIdentifier": {
+      "match": true,
+      "primary": "7692518806614212629",
+      "standby": "7692518806614212629"
+    },
+    "sourceResourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+    "sourceSetId": "scsi-prepared",
+    "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/snapshots/vacuum-copy-804391dc",
+    "subscriptionId": "00000000-0000-0000-0000-000000000000"
+  },
+  "status": "retained",
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "updatedAtUtc": "2026-10-04T18:32:02Z",
+  "version": 1
+}

@@ -1,0 +1,36 @@
+{
+  "observedAtUtc": "2026-10-07T12:32:09.019422+00:00",
+  "stacks": [
+    {
+      "name": "baseline-23gib",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.ContainerService/managedClusters/aks-vacuum-only-4b1163091c69",
+      "present": true,
+      "provisioningState": "Deleting",
+      "powerState": {
+        "code": "Running"
+      },
+      "ownerVerified": true
+    },
+    {
+      "name": "50gib",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-5c241a190a85f40b788038945c9744f6/providers/Microsoft.ContainerService/managedClusters/aks-vacuum-only-5c241a190a85",
+      "present": true,
+      "provisioningState": "Deleting",
+      "powerState": {
+        "code": "Running"
+      },
+      "ownerVerified": true
+    },
+    {
+      "name": "100gib",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.ContainerService/managedClusters/aks-vacuum-only-f1b90aec9e24",
+      "present": true,
+      "provisioningState": "Deleting",
+      "powerState": {
+        "code": "Running"
+      },
+      "ownerVerified": true
+    }
+  ],
+  "purpose": "Read-only owned cluster cleanup progress; snapshot audit remains a separate evidence stream."
+}

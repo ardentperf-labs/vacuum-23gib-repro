@@ -1,0 +1,94 @@
+{
+  "auditPassed": true,
+  "cleanupPassed": true,
+  "controllerExitUtc": "2026-10-06T04:30:07.773Z",
+  "controllerPid": 978222,
+  "coverageValid": true,
+  "extrapolationPath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/replay-extrapolation.json",
+  "graphs": {
+    "allExist": true,
+    "await": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/await.png",
+    "iops": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/iops.png",
+    "linearYAxes": true,
+    "throughput": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/throughput.png"
+  },
+  "lastSampleUtc": "2026-10-06T04:29:59.557093725Z",
+  "measurementComplete": false,
+  "metricAuditSourcePath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/root-user-terminated-metric-audit.json",
+  "monitoringFlushed": true,
+  "originalControllerTestState": {
+    "error": "controller exited before terminal test state",
+    "output": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z",
+    "phase": "failed",
+    "runId": "read-pressure-aux-latencycap5-full-20261006T0130Z",
+    "updatedAt": "2026-10-06T04:30:07.773Z"
+  },
+  "originalControllerTestStatePreserved": true,
+  "overallReadLatencyWithinUserLimit": true,
+  "overallReplicaDataReadAwaitMs": 2651.8532310815212,
+  "partialObservedAmplification": {
+    "estimatedPrimaryVacuumOperations": 374599.5242810055,
+    "estimatedReplicaOperationsThroughLastSample": 785111.1300987557,
+    "interpretation": "Partial observed ratio includes external readers and stops before catch-up.",
+    "partialObservedRatio": 2.095867931508117,
+    "primaryVacuumAverageIops": 180.09431172549688,
+    "primaryVacuumElapsedSeconds": 2080.018634080887,
+    "replicaWholeObservedAverageIops": 72.83968350008838,
+    "replicaWholeObservedElapsedSeconds": 10778.618088006973
+  },
+  "progressAuditSourcePath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/root-user-terminated-progress-audit.json",
+  "progressPath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/replay-progress.json",
+  "queueCleanupEvidencePath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/full-aux-pressure-controller-20261006T013000Z/cleanup-summary.json",
+  "queueRestored": true,
+  "queueTreatmentRowsForAllRawSamples": 2158,
+  "queueTreatmentSamplesPath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/full-aux-pressure-controller-20261006T013000Z/replica-data-queue-sysfs.jsonl",
+  "rawCounterRolloverAudit": {
+    "detected": false,
+    "events": []
+  },
+  "rawSampleCount": 2158,
+  "rawSamplesPath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/samples.jsonl",
+  "rawSamplesSha256": "72bbca6f1825deab40c6e482b244d20137c7d0de7e2af93bbf104c664caa462a",
+  "readerExitCounts": {
+    "allErrorsZero": true,
+    "exit": 5,
+    "readBytes": 669698228224,
+    "readOps": 638674,
+    "ready": 5
+  },
+  "readerExitEvidencePath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/read-pressure-logs/read-pressure-16244c2c-full-3e4d.jsonl",
+  "readersStopped": true,
+  "replayCaughtUp": false,
+  "reportPath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/REPORT.md",
+  "runId": "read-pressure-aux-latencycap5-full-20261006T0130Z",
+  "sampleCount": 2158,
+  "schemaVersion": 1,
+  "signalSentUtc": "2026-10-06T04:30:00.114632+00:00",
+  "snapshotAndCleanupState": "Snapshots remain preserved; root owns Azure stack teardown. Run-local readers and queue treatment are stopped/restored.",
+  "snapshotEvidence": {
+    "freshBackupName": "pressure-reset-1006005558",
+    "freshDataSnapshotId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/snapshots/snapshot-4d712e3d-bc99-42ab-8874-3bc99089aa5a",
+    "freshWalSnapshotId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/snapshots/snapshot-d370b592-1c96-438d-a161-4a6557e656ae",
+    "preparedSourceSnapshotId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1"
+  },
+  "snapshotsPreserved": true,
+  "status": "passed-partial-audit-user-terminated-incomplete",
+  "summaryJsonPath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/partial-summary.json",
+  "summaryPath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/SUMMARY.md",
+  "sustainedAtLeast1500msDuringReplayDrain": {
+    "longestContinuousRun": {
+      "end": "2026-10-06T04:29:59.556248Z",
+      "intervals": 1740,
+      "operationWeightedReadAwaitMs": 3104.691325809549,
+      "readOps": 534217,
+      "seconds": 8697.74858546257,
+      "start": "2026-10-06T02:05:01.807663Z"
+    },
+    "minimumSeconds": 60,
+    "reached": true,
+    "thresholdMs": 1500
+  },
+  "terminationRequestPath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/user-three-hour-termination-request.json",
+  "timingPath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/partial-timing.json",
+  "userTerminated": true
+}

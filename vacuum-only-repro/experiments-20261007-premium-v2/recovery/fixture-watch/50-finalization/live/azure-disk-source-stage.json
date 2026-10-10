@@ -1,0 +1,29 @@
+{
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/restore-stage-5c241a19-4b554415",
+  "name": "restore-stage-5c241a19-4b554415",
+  "location": "westus3",
+  "zone": null,
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "uniqueId": "060b2754-8d81-4a12-84d4-e5d258d79004",
+  "provisioningState": "Succeeded",
+  "diskState": "Unattached",
+  "diskSizeGB": 512,
+  "diskSizeBytes": 549755813888,
+  "diskIOPSReadWrite": 500,
+  "diskMBpsReadWrite": 60,
+  "logicalSectorSize": null,
+  "completionPercent": null,
+  "creationData": {
+    "createOption": "Copy",
+    "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-16244c2c",
+    "sourceUniqueId": "5ba409da-55b4-4e77-a47f-346ccc7b44ff"
+  },
+  "tags": {
+    "reproPurpose": "premiumv2-source-stage",
+    "reprotoken": "5c241a190a85f40b788038945c9744f6",
+    "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-16244c2c"
+  }
+}

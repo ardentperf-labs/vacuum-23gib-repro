@@ -1,0 +1,64 @@
+{
+  "changedFunctions": [
+    "run"
+  ],
+  "changedSharedGlobalConstants": [
+    "GUC_SQL"
+  ],
+  "historicalPeerReviewedCollectorSha256": [
+    "2994c86f76b17c0baee369fc39e8b03aa0ce97c287835c96f768f7ddb3b7ecc8"
+  ],
+  "interpretation": "All 27 shared helpers and all shared globals except metadata-only GUC_SQL match baseline AST. Only run() changes for treatment/configuration preflight/postflight and fixture guards. GUC_SQL adds role setting sources, wal_log_hints and the actual PostgreSQL 16 data_page_checksum_version field. Plots are byte-identical. Prior hashes preserved as historical.",
+  "newFunctions": [
+    "cluster_spec_defaulting",
+    "recovery_prefetch_counter_delta",
+    "recovery_prefetch_stats",
+    "whole_timeline_data_read_metrics"
+  ],
+  "plotsByteIdentical": true,
+  "previousPeerReviewedCollectorSha256": "354d3c109b6ea648bfb2d936bd0fb2b01164a66f6d9a879b68242e68b418b99e",
+  "sha256": {
+    "baselineCollector": "dab1764f2bcffa03740dde4440cc0bef7e4754e09e591fb2b5b4aa6234a37eb2",
+    "baselinePlot": "d0ac35439ba17dcfe6f50e9484dd12274575755451258d82d7b12210c91317ec",
+    "fifthCollector": "e1132c857d956df47ac2f57821c65dbc8280a6ba48dc658928f2a09ad9cc84cb",
+    "fifthPlot": "d0ac35439ba17dcfe6f50e9484dd12274575755451258d82d7b12210c91317ec"
+  },
+  "sharedFunctionCount": 28,
+  "unchangedFunctions": [
+    "append",
+    "attachment_lun",
+    "both",
+    "cancel_owned",
+    "capture_replication_logs",
+    "check_pods",
+    "cmd",
+    "event",
+    "fetch_log",
+    "launch_vacuum",
+    "lsn",
+    "main",
+    "measurement_complete",
+    "minimum_fixture_heap",
+    "next_catchup_streak",
+    "parse_replication_log",
+    "parse_sample",
+    "pod_claims",
+    "remote_status",
+    "replica_reached_target",
+    "same_map",
+    "sample",
+    "save",
+    "sql",
+    "stamp",
+    "storage",
+    "vacuum_spec"
+  ],
+  "unchangedSharedGlobalConstants": [
+    "GIB",
+    "HERE",
+    "REMOTE",
+    "STATE",
+    "WAL_SQL"
+  ],
+  "verifiedAtUtc": "2026-10-06T06:18:33.370833+00:00"
+}

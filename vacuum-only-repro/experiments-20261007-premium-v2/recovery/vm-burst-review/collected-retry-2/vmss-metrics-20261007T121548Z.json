@@ -1,0 +1,1404 @@
+{
+  "aggregation": "Average",
+  "capturedAtUtc": "2026-10-07T12:15:48Z",
+  "collectionStatus": "sampled",
+  "interval": "PT5M",
+  "limitations": [
+    "VMSS metrics are host-level scale-set aggregates and do not attribute activity to a specific VM.",
+    "VM uncached utilization percentages are supplemental host telemetry; they are not converted to a Premium SSD v2 IOPS or MB/s limit.",
+    "Burst-credit metrics are recorded as reported; their presence does not prove D2s_v4/Premium SSD v2 burst eligibility.",
+    "Each polling sample queries a rolling window, so adjacent five-minute samples overlap."
+  ],
+  "measurementGateTouched": false,
+  "metricNamespace": "microsoft.compute/virtualmachinescalesets",
+  "metrics": [
+    "VM Remote Used Burst IO Credits Percentage",
+    "VM Remote Used Burst BPS Credits Percentage",
+    "VM Uncached IOPS Consumed Percentage",
+    "VM Uncached Bandwidth Consumed Percentage"
+  ],
+  "metricsApiVersion": "2023-10-01",
+  "scope": "one aggregate time series per metric on each exact parent VMSS",
+  "stacks": [
+    {
+      "httpStatus": 200,
+      "metricSummaries": [
+        {
+          "first": [
+            "2026-10-07T11:45:00Z",
+            0.0
+          ],
+          "last": [
+            "2026-10-07T12:10:00Z",
+            0.0
+          ],
+          "maximumOfAverages": 0.0,
+          "minimumOfAverages": 0.0,
+          "name": "VM Remote Used Burst IO Credits Percentage",
+          "pointCount": 6,
+          "seriesCount": 1,
+          "unit": "Percent"
+        },
+        {
+          "first": [
+            "2026-10-07T11:45:00Z",
+            0.0
+          ],
+          "last": [
+            "2026-10-07T12:10:00Z",
+            0.0
+          ],
+          "maximumOfAverages": 0.0,
+          "minimumOfAverages": 0.0,
+          "name": "VM Remote Used Burst BPS Credits Percentage",
+          "pointCount": 6,
+          "seriesCount": 1,
+          "unit": "Percent"
+        },
+        {
+          "first": [
+            "2026-10-07T11:45:00Z",
+            0.0
+          ],
+          "last": [
+            "2026-10-07T12:10:00Z",
+            0.0
+          ],
+          "maximumOfAverages": 0.0,
+          "minimumOfAverages": 0.0,
+          "name": "VM Uncached IOPS Consumed Percentage",
+          "pointCount": 6,
+          "seriesCount": 1,
+          "unit": "Percent"
+        },
+        {
+          "first": [
+            "2026-10-07T11:45:00Z",
+            0.0
+          ],
+          "last": [
+            "2026-10-07T12:10:00Z",
+            0.0
+          ],
+          "maximumOfAverages": 0.0,
+          "minimumOfAverages": 0.0,
+          "name": "VM Uncached Bandwidth Consumed Percentage",
+          "pointCount": 6,
+          "seriesCount": 1,
+          "unit": "Percent"
+        }
+      ],
+      "rawResponses": {
+        "metrics": {
+          "cost": 116,
+          "interval": "PT5M",
+          "namespace": "microsoft.compute/virtualmachinescalesets",
+          "resourceregion": "eastus",
+          "timespan": "2026-10-07T11:45:46Z/2026-10-07T12:15:46Z",
+          "value": [
+            {
+              "displayDescription": "Percentage of Uncached Burst IO Credits used by the VM.",
+              "errorCode": "Success",
+              "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-34976006-vmss/providers/Microsoft.Insights/metrics/VM Remote Used Burst IO Credits Percentage",
+              "name": {
+                "localizedValue": "VM Uncached Used Burst IO Credits Percentage",
+                "value": "VM Remote Used Burst IO Credits Percentage"
+              },
+              "timeseries": [
+                {
+                  "data": [
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:45:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:50:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:55:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:00:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:05:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:10:00Z"
+                    }
+                  ],
+                  "metadatavalues": []
+                }
+              ],
+              "type": "Microsoft.Insights/metrics",
+              "unit": "Percent"
+            },
+            {
+              "displayDescription": "Percentage of Uncached Burst BPS Credits used by the VM.",
+              "errorCode": "Success",
+              "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-34976006-vmss/providers/Microsoft.Insights/metrics/VM Remote Used Burst BPS Credits Percentage",
+              "name": {
+                "localizedValue": "VM Uncached Used Burst BPS Credits Percentage",
+                "value": "VM Remote Used Burst BPS Credits Percentage"
+              },
+              "timeseries": [
+                {
+                  "data": [
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:45:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:50:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:55:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:00:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:05:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:10:00Z"
+                    }
+                  ],
+                  "metadatavalues": []
+                }
+              ],
+              "type": "Microsoft.Insights/metrics",
+              "unit": "Percent"
+            },
+            {
+              "displayDescription": "Percentage of uncached disk IOPS consumed by the VM. Only available on VM series that support premium storage.",
+              "errorCode": "Success",
+              "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-34976006-vmss/providers/Microsoft.Insights/metrics/VM Uncached IOPS Consumed Percentage",
+              "name": {
+                "localizedValue": "VM Uncached IOPS Consumed Percentage",
+                "value": "VM Uncached IOPS Consumed Percentage"
+              },
+              "timeseries": [
+                {
+                  "data": [
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:45:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:50:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:55:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:00:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:05:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:10:00Z"
+                    }
+                  ],
+                  "metadatavalues": []
+                }
+              ],
+              "type": "Microsoft.Insights/metrics",
+              "unit": "Percent"
+            },
+            {
+              "displayDescription": "Percentage of uncached disk bandwidth consumed by the VM. Only available on VM series that support premium storage.",
+              "errorCode": "Success",
+              "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-34976006-vmss/providers/Microsoft.Insights/metrics/VM Uncached Bandwidth Consumed Percentage",
+              "name": {
+                "localizedValue": "VM Uncached Bandwidth Consumed Percentage",
+                "value": "VM Uncached Bandwidth Consumed Percentage"
+              },
+              "timeseries": [
+                {
+                  "data": [
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:45:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:50:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:55:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:00:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:05:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:10:00Z"
+                    }
+                  ],
+                  "metadatavalues": []
+                }
+              ],
+              "type": "Microsoft.Insights/metrics",
+              "unit": "Percent"
+            }
+          ]
+        },
+        "resourceGroup": {
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e",
+          "location": "eastus",
+          "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-only-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.ContainerService/managedClusters/aks-vacuum-only-4b1163091c69",
+          "name": "rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e",
+          "properties": {
+            "provisioningState": "Succeeded"
+          },
+          "tags": {
+            "aks-managed-cluster-name": "aks-vacuum-only-4b1163091c69",
+            "aks-managed-cluster-rg": "rg-vacuum-only-4b1163091c697351e7725163a5a28e2e",
+            "managed-by": "vacuum-only-repro",
+            "reprotoken": "4b1163091c697351e7725163a5a28e2e"
+          },
+          "type": "Microsoft.Resources/resourceGroups"
+        },
+        "vmScaleSetPages": [
+          {
+            "value": [
+              {
+                "etag": "\"5\"",
+                "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-34976006-vmss",
+                "identity": {
+                  "type": "UserAssigned",
+                  "userAssignedIdentities": {
+                    "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.ManagedIdentity/userAssignedIdentities/aks-vacuum-only-4b1163091c69-agentpool": {
+                      "clientId": "fb65ad7e-e24a-4547-883a-62f1869192ed",
+                      "principalId": "cfcc345d-7782-418a-9667-af3469ea29c7"
+                    }
+                  }
+                },
+                "location": "eastus",
+                "name": "aks-nodepool1-34976006-vmss",
+                "properties": {
+                  "doNotRunExtensionsOnOverprovisionedVMs": false,
+                  "orchestrationMode": "Uniform",
+                  "overprovision": false,
+                  "platformFaultDomainCount": 1,
+                  "provisioningState": "Succeeded",
+                  "singlePlacementGroup": false,
+                  "timeCreated": "2026-10-06T15:48:21.1844166+00:00",
+                  "uniqueId": "0981c841-79a8-4fd0-9c7c-3a3fb2de14ef",
+                  "upgradePolicy": {
+                    "mode": "Manual"
+                  },
+                  "virtualMachineProfile": {
+                    "extensionProfile": {
+                      "extensions": [
+                        {
+                          "name": "vmssCSE",
+                          "properties": {
+                            "autoUpgradeMinorVersion": true,
+                            "publisher": "Microsoft.Azure.Extensions",
+                            "settings": {},
+                            "type": "CustomScript",
+                            "typeHandlerVersion": "2.0"
+                          }
+                        },
+                        {
+                          "name": "aks-nodepool1-34976006-vmss-AKSLinuxBilling",
+                          "properties": {
+                            "autoUpgradeMinorVersion": true,
+                            "publisher": "Microsoft.AKS",
+                            "settings": {},
+                            "type": "Compute.AKS.Linux.Billing",
+                            "typeHandlerVersion": "1.0"
+                          }
+                        },
+                        {
+                          "name": "AKSLinuxExtension",
+                          "properties": {
+                            "autoUpgradeMinorVersion": false,
+                            "publisher": "Microsoft.AKS",
+                            "settings": {
+                              "disable-uu": "true",
+                              "enable-uu": "false",
+                              "node-exporter-tls": "false"
+                            },
+                            "suppressFailures": true,
+                            "type": "Compute.AKS.Linux.AKSNode",
+                            "typeHandlerVersion": "1.501"
+                          }
+                        }
+                      ],
+                      "extensionsTimeBudget": "PT16M"
+                    },
+                    "networkProfile": {
+                      "networkInterfaceConfigurations": [
+                        {
+                          "name": "aks-nodepool1-34976006-vmss",
+                          "properties": {
+                            "disableTcpStateTracking": false,
+                            "dnsSettings": {
+                              "dnsServers": []
+                            },
+                            "enableAcceleratedNetworking": true,
+                            "enableIPForwarding": true,
+                            "ipConfigurations": [
+                              {
+                                "name": "ipconfig1",
+                                "properties": {
+                                  "loadBalancerBackendAddressPools": [
+                                    {
+                                      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/aksOutboundBackendPool"
+                                    },
+                                    {
+                                      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/kubernetes"
+                                    }
+                                  ],
+                                  "primary": true,
+                                  "privateIPAddressVersion": "IPv4",
+                                  "subnet": {
+                                    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Network/virtualNetworks/aks-vnet-16351314/subnets/aks-subnet"
+                                  }
+                                }
+                              }
+                            ],
+                            "primary": true
+                          }
+                        }
+                      ]
+                    },
+                    "osProfile": {
+                      "adminUsername": "azureuser",
+                      "allowExtensionOperations": true,
+                      "computerNamePrefix": "aks-nodepool1-34976006-vmss",
+                      "linuxConfiguration": {
+                        "disablePasswordAuthentication": true,
+                        "provisionVMAgent": true,
+                        "ssh": {
+                          "publicKeys": [
+                            {
+                              "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDQN1NsAy0n631N2qsCT2ddQJ4PzMMncJcfjouprrOsF309O6s1s9LCSoRh1knQo9jUbW59HyPVyADlxg9I521Eqm1fw4gBVP9kMybM1NRkbmXEBmoOwOtH7SJehDcxb8oOdTFG74ClkoPV08fhiPTTHbc2F2cvm6P8FUe0Q0BvdTHQ1bdT5xvgAy2XXjLRc3vHYHrKgqu4dmlzNPpPuEH6buOtUSxWu34XX878ZFMZ2HD51YEshLiKUxtOkxf3AMbTVELGVQR7RXBRYBnlCKSj0c13/N+87n4wR63F/MYnzPpKcFMLVuQq96HqdIzU40Co4FwnKmODShTSV6IHRyvypKh1Sl2qtcy6+dyc1a1VCw0U7lagqIdoKfDOIfDyHxETJ3PUy3xo7RAXNFORkIfs9pZ7puvtRhv7lpMrRe4BbvzIGShvBDM8zi9Gi++5/G9wISTMTYnPgnbFtGgzvmh29G0fL10wz22Wyx0apyjUnW0qt4odFreEb7UOoC+Q52i3dnnaxMMzs57zwmSbDTAvTmRs5M17ZfAsVcb0xRXxLb/0cblg+U+Sx7qN5/G218vy+0ZBgZ/sgGRqWlsir5e+4CRbAVMUP3p0aEkIaku0UmQDmMgPoMZ8Y3AgujFF4mwv5KnfBZbWvlV9O6lPwhsSRwTC/L43DktYIesROIUd/w== vacuum-only-repro\n",
+                              "path": "/home/azureuser/.ssh/authorized_keys"
+                            }
+                          ]
+                        }
+                      },
+                      "requireGuestProvisionSignal": true,
+                      "secrets": []
+                    },
+                    "storageProfile": {
+                      "diskControllerType": "SCSI",
+                      "imageReference": {
+                        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/AKS-Ubuntu/providers/Microsoft.Compute/galleries/AKSUbuntu/images/2404gen2containerd/versions/202609.15.0"
+                      },
+                      "osDisk": {
+                        "caching": "ReadOnly",
+                        "createOption": "FromImage",
+                        "diskSizeGB": 128,
+                        "managedDisk": {
+                          "storageAccountType": "Premium_LRS"
+                        },
+                        "osType": "Linux"
+                      }
+                    },
+                    "timeCreated": "2026-10-06T15:50:15.661985+00:00"
+                  }
+                },
+                "sku": {
+                  "capacity": 2,
+                  "name": "Standard_D2s_v4",
+                  "tier": "Standard"
+                },
+                "tags": {
+                  "aks-managed-azure-cni-overlay": "true",
+                  "aks-managed-bootstrap-profile-acr-name": "",
+                  "aks-managed-consolidated-additional-properties": "08e3eafe-c19d-11f1-8881-2af542090441",
+                  "aks-managed-coordination": "true",
+                  "aks-managed-createOperationID": "c4bf1e28-78f7-4a27-a7e7-52d02433eb81",
+                  "aks-managed-creationSource": "vmssclient-aks-nodepool1-34976006-vmss",
+                  "aks-managed-enable-imds-restriction": "false",
+                  "aks-managed-kubeletIdentityClientID": "fb65ad7e-e24a-4547-883a-62f1869192ed",
+                  "aks-managed-networkisolated-outbound-type": "",
+                  "aks-managed-orchestrator": "Kubernetes:1.35.8",
+                  "aks-managed-poolName": "nodepool1",
+                  "aks-managed-resourceNameSuffix": "16351314",
+                  "aks-managed-saip-default-client-id": "",
+                  "aks-managed-ssh-access": "LocalUser",
+                  "compute.aks.billing": "linux"
+                },
+                "type": "Microsoft.Compute/virtualMachineScaleSets",
+                "zones": [
+                  "1"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scopeCheck": {
+        "capacityMatches": true,
+        "expectedCapacity": 2,
+        "expectedVmSize": "Standard_D2s_v4",
+        "expectedVmssName": "aks-nodepool1-34976006-vmss",
+        "liveCapacity": 2,
+        "liveOwnerTagMatches": true,
+        "liveVmSize": "Standard_D2s_v4",
+        "liveVmssName": "aks-nodepool1-34976006-vmss",
+        "nodeResourceGroup": "rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e",
+        "subscriptionId": "00000000-0000-0000-0000-000000000000",
+        "vmSizeMatches": true,
+        "vmssNameMatches": true
+      },
+      "stack": "baseline-23gib"
+    },
+    {
+      "httpStatus": 200,
+      "metricSummaries": [
+        {
+          "first": [
+            "2026-10-07T11:45:00Z",
+            0.0
+          ],
+          "last": [
+            "2026-10-07T12:10:00Z",
+            0.0
+          ],
+          "maximumOfAverages": 0.0,
+          "minimumOfAverages": 0.0,
+          "name": "VM Remote Used Burst IO Credits Percentage",
+          "pointCount": 6,
+          "seriesCount": 1,
+          "unit": "Percent"
+        },
+        {
+          "first": [
+            "2026-10-07T11:45:00Z",
+            0.0
+          ],
+          "last": [
+            "2026-10-07T12:10:00Z",
+            0.0
+          ],
+          "maximumOfAverages": 0.0,
+          "minimumOfAverages": 0.0,
+          "name": "VM Remote Used Burst BPS Credits Percentage",
+          "pointCount": 6,
+          "seriesCount": 1,
+          "unit": "Percent"
+        },
+        {
+          "first": [
+            "2026-10-07T11:45:00Z",
+            0.0
+          ],
+          "last": [
+            "2026-10-07T12:10:00Z",
+            0.0
+          ],
+          "maximumOfAverages": 0.0,
+          "minimumOfAverages": 0.0,
+          "name": "VM Uncached IOPS Consumed Percentage",
+          "pointCount": 6,
+          "seriesCount": 1,
+          "unit": "Percent"
+        },
+        {
+          "first": [
+            "2026-10-07T11:45:00Z",
+            0.0
+          ],
+          "last": [
+            "2026-10-07T12:10:00Z",
+            0.0
+          ],
+          "maximumOfAverages": 0.0,
+          "minimumOfAverages": 0.0,
+          "name": "VM Uncached Bandwidth Consumed Percentage",
+          "pointCount": 6,
+          "seriesCount": 1,
+          "unit": "Percent"
+        }
+      ],
+      "rawResponses": {
+        "metrics": {
+          "cost": 116,
+          "interval": "PT5M",
+          "namespace": "microsoft.compute/virtualmachinescalesets",
+          "resourceregion": "westus3",
+          "timespan": "2026-10-07T11:45:46Z/2026-10-07T12:15:46Z",
+          "value": [
+            {
+              "displayDescription": "Percentage of Uncached Burst IO Credits used by the VM.",
+              "errorCode": "Success",
+              "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-30685692-vmss/providers/Microsoft.Insights/metrics/VM Remote Used Burst IO Credits Percentage",
+              "name": {
+                "localizedValue": "VM Uncached Used Burst IO Credits Percentage",
+                "value": "VM Remote Used Burst IO Credits Percentage"
+              },
+              "timeseries": [
+                {
+                  "data": [
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:45:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:50:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:55:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:00:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:05:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:10:00Z"
+                    }
+                  ],
+                  "metadatavalues": []
+                }
+              ],
+              "type": "Microsoft.Insights/metrics",
+              "unit": "Percent"
+            },
+            {
+              "displayDescription": "Percentage of Uncached Burst BPS Credits used by the VM.",
+              "errorCode": "Success",
+              "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-30685692-vmss/providers/Microsoft.Insights/metrics/VM Remote Used Burst BPS Credits Percentage",
+              "name": {
+                "localizedValue": "VM Uncached Used Burst BPS Credits Percentage",
+                "value": "VM Remote Used Burst BPS Credits Percentage"
+              },
+              "timeseries": [
+                {
+                  "data": [
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:45:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:50:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:55:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:00:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:05:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:10:00Z"
+                    }
+                  ],
+                  "metadatavalues": []
+                }
+              ],
+              "type": "Microsoft.Insights/metrics",
+              "unit": "Percent"
+            },
+            {
+              "displayDescription": "Percentage of uncached disk IOPS consumed by the VM. Only available on VM series that support premium storage.",
+              "errorCode": "Success",
+              "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-30685692-vmss/providers/Microsoft.Insights/metrics/VM Uncached IOPS Consumed Percentage",
+              "name": {
+                "localizedValue": "VM Uncached IOPS Consumed Percentage",
+                "value": "VM Uncached IOPS Consumed Percentage"
+              },
+              "timeseries": [
+                {
+                  "data": [
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:45:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:50:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:55:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:00:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:05:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:10:00Z"
+                    }
+                  ],
+                  "metadatavalues": []
+                }
+              ],
+              "type": "Microsoft.Insights/metrics",
+              "unit": "Percent"
+            },
+            {
+              "displayDescription": "Percentage of uncached disk bandwidth consumed by the VM. Only available on VM series that support premium storage.",
+              "errorCode": "Success",
+              "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-30685692-vmss/providers/Microsoft.Insights/metrics/VM Uncached Bandwidth Consumed Percentage",
+              "name": {
+                "localizedValue": "VM Uncached Bandwidth Consumed Percentage",
+                "value": "VM Uncached Bandwidth Consumed Percentage"
+              },
+              "timeseries": [
+                {
+                  "data": [
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:45:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:50:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:55:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:00:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:05:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:10:00Z"
+                    }
+                  ],
+                  "metadatavalues": []
+                }
+              ],
+              "type": "Microsoft.Insights/metrics",
+              "unit": "Percent"
+            }
+          ]
+        },
+        "resourceGroup": {
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6",
+          "location": "westus3",
+          "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-only-5c241a190a85f40b788038945c9744f6/providers/Microsoft.ContainerService/managedClusters/aks-vacuum-only-5c241a190a85",
+          "name": "rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6",
+          "properties": {
+            "provisioningState": "Succeeded"
+          },
+          "tags": {
+            "aks-managed-cluster-name": "aks-vacuum-only-5c241a190a85",
+            "aks-managed-cluster-rg": "rg-vacuum-only-5c241a190a85f40b788038945c9744f6",
+            "managed-by": "vacuum-only-repro",
+            "reprotoken": "5c241a190a85f40b788038945c9744f6"
+          },
+          "type": "Microsoft.Resources/resourceGroups"
+        },
+        "vmScaleSetPages": [
+          {
+            "value": [
+              {
+                "etag": "\"5\"",
+                "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-30685692-vmss",
+                "identity": {
+                  "type": "UserAssigned",
+                  "userAssignedIdentities": {
+                    "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.ManagedIdentity/userAssignedIdentities/aks-vacuum-only-5c241a190a85-agentpool": {
+                      "clientId": "98ad0540-8196-4fb9-9d19-2448dab74d63",
+                      "principalId": "342d8eb5-2433-4e49-a446-ade4190a99c1"
+                    }
+                  }
+                },
+                "location": "westus3",
+                "name": "aks-nodepool1-30685692-vmss",
+                "properties": {
+                  "doNotRunExtensionsOnOverprovisionedVMs": false,
+                  "orchestrationMode": "Uniform",
+                  "overprovision": false,
+                  "platformFaultDomainCount": 1,
+                  "provisioningState": "Succeeded",
+                  "singlePlacementGroup": false,
+                  "timeCreated": "2026-10-06T15:42:58.3601487+00:00",
+                  "uniqueId": "cb6a656d-7abd-4414-8bcd-15551fb8da4d",
+                  "upgradePolicy": {
+                    "mode": "Manual"
+                  },
+                  "virtualMachineProfile": {
+                    "extensionProfile": {
+                      "extensions": [
+                        {
+                          "name": "vmssCSE",
+                          "properties": {
+                            "autoUpgradeMinorVersion": true,
+                            "publisher": "Microsoft.Azure.Extensions",
+                            "settings": {},
+                            "type": "CustomScript",
+                            "typeHandlerVersion": "2.0"
+                          }
+                        },
+                        {
+                          "name": "aks-nodepool1-30685692-vmss-AKSLinuxBilling",
+                          "properties": {
+                            "autoUpgradeMinorVersion": true,
+                            "publisher": "Microsoft.AKS",
+                            "settings": {},
+                            "type": "Compute.AKS.Linux.Billing",
+                            "typeHandlerVersion": "1.0"
+                          }
+                        },
+                        {
+                          "name": "AKSLinuxExtension",
+                          "properties": {
+                            "autoUpgradeMinorVersion": false,
+                            "publisher": "Microsoft.AKS",
+                            "settings": {
+                              "disable-uu": "true",
+                              "enable-uu": "false",
+                              "node-exporter-tls": "false"
+                            },
+                            "suppressFailures": true,
+                            "type": "Compute.AKS.Linux.AKSNode",
+                            "typeHandlerVersion": "1.501"
+                          }
+                        }
+                      ],
+                      "extensionsTimeBudget": "PT16M"
+                    },
+                    "networkProfile": {
+                      "networkInterfaceConfigurations": [
+                        {
+                          "name": "aks-nodepool1-30685692-vmss",
+                          "properties": {
+                            "disableTcpStateTracking": false,
+                            "dnsSettings": {
+                              "dnsServers": []
+                            },
+                            "enableAcceleratedNetworking": true,
+                            "enableIPForwarding": true,
+                            "ipConfigurations": [
+                              {
+                                "name": "ipconfig1",
+                                "properties": {
+                                  "loadBalancerBackendAddressPools": [
+                                    {
+                                      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/kubernetes"
+                                    },
+                                    {
+                                      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/aksOutboundBackendPool"
+                                    }
+                                  ],
+                                  "primary": true,
+                                  "privateIPAddressVersion": "IPv4",
+                                  "subnet": {
+                                    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Network/virtualNetworks/aks-vnet-10130120/subnets/aks-subnet"
+                                  }
+                                }
+                              }
+                            ],
+                            "primary": true
+                          }
+                        }
+                      ]
+                    },
+                    "osProfile": {
+                      "adminUsername": "azureuser",
+                      "allowExtensionOperations": true,
+                      "computerNamePrefix": "aks-nodepool1-30685692-vmss",
+                      "linuxConfiguration": {
+                        "disablePasswordAuthentication": true,
+                        "provisionVMAgent": true,
+                        "ssh": {
+                          "publicKeys": [
+                            {
+                              "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCnKxLurwbpuk5YwyqIZftwCNqr/NSZhA2jUK1DKA2YbN+4sMn1sdLOd4g7I3aBtxTIuPLZTMGF42S0JILdm30CHTAL3tMGrTk6n63A0+BHVRemQ4sB7wY0NFoY+wkJbXjK8hA2Vid8SbN053sm0isNjfduCs7/7+i8SJvVOxs5grp5Yure9ZzuYc/rWKH3/4AexDAAXrQtX1ygAYcoiFR22tYBkQVs2OmH9E+lE+WfjH7BOsOBhcFQh9sPjoYH1hrK8kgPdaFYfHZNDO5db0LZodlngAr3dPuiuoIffvt64a+b/7J/EFt/BvxZ7DyhbXso21RjBySv7vW3tJITjKURynkNQlBw8NvFFTcroUqQB6hZXp10ee/UDw9pr3YpHaUpFURDfJBOh3wRkVR4t0YQplEt4KhJt+XuCmSmn3QaQ78M8pnerWbon1a7iQTob52qyQtEbfhwBLKrB7UqqfLy79f0Hmr2hveXrCoAbfm3/wUFMXcMZxFPNco8kgQ/dQiaj/tRMzYwyQlCqySqYUWZ7AEUbYkhj7TKt/Zh37nA8LHtU3NbqWwsYpygbtzAyFwmRRS5uZoe6sZuHzpRBaKbo0PcGFgYAvEOL2gsLnl/yuZ9PEr6zQccN2iLUT2rcf4WM6NuqBhe+fiw+dblwZkAgCBqBo6W6M7GHUBrvz9CVw== vacuum-only-repro\n",
+                              "path": "/home/azureuser/.ssh/authorized_keys"
+                            }
+                          ]
+                        }
+                      },
+                      "requireGuestProvisionSignal": true,
+                      "secrets": []
+                    },
+                    "storageProfile": {
+                      "diskControllerType": "SCSI",
+                      "imageReference": {
+                        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/AKS-Ubuntu/providers/Microsoft.Compute/galleries/AKSUbuntu/images/2404gen2containerd/versions/202609.15.0"
+                      },
+                      "osDisk": {
+                        "caching": "ReadOnly",
+                        "createOption": "FromImage",
+                        "diskSizeGB": 128,
+                        "managedDisk": {
+                          "storageAccountType": "Premium_LRS"
+                        },
+                        "osType": "Linux"
+                      }
+                    },
+                    "timeCreated": "2026-10-06T15:45:47.5448867+00:00"
+                  }
+                },
+                "sku": {
+                  "capacity": 2,
+                  "name": "Standard_D2s_v4",
+                  "tier": "Standard"
+                },
+                "tags": {
+                  "aks-managed-azure-cni-overlay": "true",
+                  "aks-managed-bootstrap-profile-acr-name": "",
+                  "aks-managed-consolidated-additional-properties": "5745d9b5-c19c-11f1-9edf-b6afc223a7d9",
+                  "aks-managed-coordination": "true",
+                  "aks-managed-createOperationID": "bf4a1407-bf61-4faa-a5ca-a0b772cc1937",
+                  "aks-managed-creationSource": "vmssclient-aks-nodepool1-30685692-vmss",
+                  "aks-managed-enable-imds-restriction": "false",
+                  "aks-managed-kubeletIdentityClientID": "98ad0540-8196-4fb9-9d19-2448dab74d63",
+                  "aks-managed-networkisolated-outbound-type": "",
+                  "aks-managed-orchestrator": "Kubernetes:1.35.8",
+                  "aks-managed-poolName": "nodepool1",
+                  "aks-managed-resourceNameSuffix": "10130120",
+                  "aks-managed-saip-default-client-id": "",
+                  "aks-managed-ssh-access": "LocalUser",
+                  "compute.aks.billing": "linux"
+                },
+                "type": "Microsoft.Compute/virtualMachineScaleSets",
+                "zones": [
+                  "1"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scopeCheck": {
+        "capacityMatches": true,
+        "expectedCapacity": 2,
+        "expectedVmSize": "Standard_D2s_v4",
+        "expectedVmssName": "aks-nodepool1-30685692-vmss",
+        "liveCapacity": 2,
+        "liveOwnerTagMatches": true,
+        "liveVmSize": "Standard_D2s_v4",
+        "liveVmssName": "aks-nodepool1-30685692-vmss",
+        "nodeResourceGroup": "rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6",
+        "subscriptionId": "00000000-0000-0000-0000-000000000000",
+        "vmSizeMatches": true,
+        "vmssNameMatches": true
+      },
+      "stack": "50gib"
+    },
+    {
+      "httpStatus": 200,
+      "metricSummaries": [
+        {
+          "first": [
+            "2026-10-07T11:45:00Z",
+            0.0
+          ],
+          "last": [
+            "2026-10-07T12:10:00Z",
+            0.0
+          ],
+          "maximumOfAverages": 0.0,
+          "minimumOfAverages": 0.0,
+          "name": "VM Remote Used Burst IO Credits Percentage",
+          "pointCount": 6,
+          "seriesCount": 1,
+          "unit": "Percent"
+        },
+        {
+          "first": [
+            "2026-10-07T11:45:00Z",
+            0.0
+          ],
+          "last": [
+            "2026-10-07T12:10:00Z",
+            0.0
+          ],
+          "maximumOfAverages": 0.0,
+          "minimumOfAverages": 0.0,
+          "name": "VM Remote Used Burst BPS Credits Percentage",
+          "pointCount": 6,
+          "seriesCount": 1,
+          "unit": "Percent"
+        },
+        {
+          "first": [
+            "2026-10-07T11:45:00Z",
+            35.9
+          ],
+          "last": [
+            "2026-10-07T12:10:00Z",
+            35.8
+          ],
+          "maximumOfAverages": 38.7,
+          "minimumOfAverages": 35.8,
+          "name": "VM Uncached IOPS Consumed Percentage",
+          "pointCount": 6,
+          "seriesCount": 1,
+          "unit": "Percent"
+        },
+        {
+          "first": [
+            "2026-10-07T11:45:00Z",
+            49.9
+          ],
+          "last": [
+            "2026-10-07T12:10:00Z",
+            46.9
+          ],
+          "maximumOfAverages": 49.9,
+          "minimumOfAverages": 46.9,
+          "name": "VM Uncached Bandwidth Consumed Percentage",
+          "pointCount": 6,
+          "seriesCount": 1,
+          "unit": "Percent"
+        }
+      ],
+      "rawResponses": {
+        "metrics": {
+          "cost": 116,
+          "interval": "PT5M",
+          "namespace": "microsoft.compute/virtualmachinescalesets",
+          "resourceregion": "eastus",
+          "timespan": "2026-10-07T11:45:46Z/2026-10-07T12:15:46Z",
+          "value": [
+            {
+              "displayDescription": "Percentage of Uncached Burst IO Credits used by the VM.",
+              "errorCode": "Success",
+              "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/providers/Microsoft.Insights/metrics/VM Remote Used Burst IO Credits Percentage",
+              "name": {
+                "localizedValue": "VM Uncached Used Burst IO Credits Percentage",
+                "value": "VM Remote Used Burst IO Credits Percentage"
+              },
+              "timeseries": [
+                {
+                  "data": [
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:45:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:50:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:55:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:00:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:05:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:10:00Z"
+                    }
+                  ],
+                  "metadatavalues": []
+                }
+              ],
+              "type": "Microsoft.Insights/metrics",
+              "unit": "Percent"
+            },
+            {
+              "displayDescription": "Percentage of Uncached Burst BPS Credits used by the VM.",
+              "errorCode": "Success",
+              "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/providers/Microsoft.Insights/metrics/VM Remote Used Burst BPS Credits Percentage",
+              "name": {
+                "localizedValue": "VM Uncached Used Burst BPS Credits Percentage",
+                "value": "VM Remote Used Burst BPS Credits Percentage"
+              },
+              "timeseries": [
+                {
+                  "data": [
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:45:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:50:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T11:55:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:00:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:05:00Z"
+                    },
+                    {
+                      "average": 0,
+                      "timeStamp": "2026-10-07T12:10:00Z"
+                    }
+                  ],
+                  "metadatavalues": []
+                }
+              ],
+              "type": "Microsoft.Insights/metrics",
+              "unit": "Percent"
+            },
+            {
+              "displayDescription": "Percentage of uncached disk IOPS consumed by the VM. Only available on VM series that support premium storage.",
+              "errorCode": "Success",
+              "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/providers/Microsoft.Insights/metrics/VM Uncached IOPS Consumed Percentage",
+              "name": {
+                "localizedValue": "VM Uncached IOPS Consumed Percentage",
+                "value": "VM Uncached IOPS Consumed Percentage"
+              },
+              "timeseries": [
+                {
+                  "data": [
+                    {
+                      "average": 35.9,
+                      "timeStamp": "2026-10-07T11:45:00Z"
+                    },
+                    {
+                      "average": 38.7,
+                      "timeStamp": "2026-10-07T11:50:00Z"
+                    },
+                    {
+                      "average": 37.1,
+                      "timeStamp": "2026-10-07T11:55:00Z"
+                    },
+                    {
+                      "average": 38.3,
+                      "timeStamp": "2026-10-07T12:00:00Z"
+                    },
+                    {
+                      "average": 37.9,
+                      "timeStamp": "2026-10-07T12:05:00Z"
+                    },
+                    {
+                      "average": 35.8,
+                      "timeStamp": "2026-10-07T12:10:00Z"
+                    }
+                  ],
+                  "metadatavalues": []
+                }
+              ],
+              "type": "Microsoft.Insights/metrics",
+              "unit": "Percent"
+            },
+            {
+              "displayDescription": "Percentage of uncached disk bandwidth consumed by the VM. Only available on VM series that support premium storage.",
+              "errorCode": "Success",
+              "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/providers/Microsoft.Insights/metrics/VM Uncached Bandwidth Consumed Percentage",
+              "name": {
+                "localizedValue": "VM Uncached Bandwidth Consumed Percentage",
+                "value": "VM Uncached Bandwidth Consumed Percentage"
+              },
+              "timeseries": [
+                {
+                  "data": [
+                    {
+                      "average": 49.9,
+                      "timeStamp": "2026-10-07T11:45:00Z"
+                    },
+                    {
+                      "average": 49.8,
+                      "timeStamp": "2026-10-07T11:50:00Z"
+                    },
+                    {
+                      "average": 49.8,
+                      "timeStamp": "2026-10-07T11:55:00Z"
+                    },
+                    {
+                      "average": 49.9,
+                      "timeStamp": "2026-10-07T12:00:00Z"
+                    },
+                    {
+                      "average": 49.6,
+                      "timeStamp": "2026-10-07T12:05:00Z"
+                    },
+                    {
+                      "average": 46.9,
+                      "timeStamp": "2026-10-07T12:10:00Z"
+                    }
+                  ],
+                  "metadatavalues": []
+                }
+              ],
+              "type": "Microsoft.Insights/metrics",
+              "unit": "Percent"
+            }
+          ]
+        },
+        "resourceGroup": {
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf",
+          "location": "eastus",
+          "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-only-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.ContainerService/managedClusters/aks-vacuum-only-f1b90aec9e24",
+          "name": "rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf",
+          "properties": {
+            "provisioningState": "Succeeded"
+          },
+          "tags": {
+            "aks-managed-cluster-name": "aks-vacuum-only-f1b90aec9e24",
+            "aks-managed-cluster-rg": "rg-vacuum-only-f1b90aec9e24f6a2008d6991738742cf",
+            "managed-by": "vacuum-only-repro",
+            "reprotoken": "f1b90aec9e24f6a2008d6991738742cf"
+          },
+          "type": "Microsoft.Resources/resourceGroups"
+        },
+        "vmScaleSetPages": [
+          {
+            "value": [
+              {
+                "etag": "\"5\"",
+                "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss",
+                "identity": {
+                  "type": "UserAssigned",
+                  "userAssignedIdentities": {
+                    "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.ManagedIdentity/userAssignedIdentities/aks-vacuum-only-f1b90aec9e24-agentpool": {
+                      "clientId": "1dc13198-2b99-4b9a-b08a-5ac5d150e588",
+                      "principalId": "3790f373-966c-4b9d-abe0-b2c575fb8ff1"
+                    }
+                  }
+                },
+                "location": "eastus",
+                "name": "aks-nodepool1-15388874-vmss",
+                "properties": {
+                  "doNotRunExtensionsOnOverprovisionedVMs": false,
+                  "orchestrationMode": "Uniform",
+                  "overprovision": false,
+                  "platformFaultDomainCount": 1,
+                  "provisioningState": "Succeeded",
+                  "singlePlacementGroup": false,
+                  "timeCreated": "2026-10-06T15:43:16.2894164+00:00",
+                  "uniqueId": "3752d676-6dc2-482a-b2f4-c2283953c381",
+                  "upgradePolicy": {
+                    "mode": "Manual"
+                  },
+                  "virtualMachineProfile": {
+                    "extensionProfile": {
+                      "extensions": [
+                        {
+                          "name": "vmssCSE",
+                          "properties": {
+                            "autoUpgradeMinorVersion": true,
+                            "publisher": "Microsoft.Azure.Extensions",
+                            "settings": {},
+                            "type": "CustomScript",
+                            "typeHandlerVersion": "2.0"
+                          }
+                        },
+                        {
+                          "name": "aks-nodepool1-15388874-vmss-AKSLinuxBilling",
+                          "properties": {
+                            "autoUpgradeMinorVersion": true,
+                            "publisher": "Microsoft.AKS",
+                            "settings": {},
+                            "type": "Compute.AKS.Linux.Billing",
+                            "typeHandlerVersion": "1.0"
+                          }
+                        },
+                        {
+                          "name": "AKSLinuxExtension",
+                          "properties": {
+                            "autoUpgradeMinorVersion": false,
+                            "publisher": "Microsoft.AKS",
+                            "settings": {
+                              "disable-uu": "true",
+                              "enable-uu": "false",
+                              "node-exporter-tls": "false"
+                            },
+                            "suppressFailures": true,
+                            "type": "Compute.AKS.Linux.AKSNode",
+                            "typeHandlerVersion": "1.501"
+                          }
+                        }
+                      ],
+                      "extensionsTimeBudget": "PT16M"
+                    },
+                    "networkProfile": {
+                      "networkInterfaceConfigurations": [
+                        {
+                          "name": "aks-nodepool1-15388874-vmss",
+                          "properties": {
+                            "disableTcpStateTracking": false,
+                            "dnsSettings": {
+                              "dnsServers": []
+                            },
+                            "enableAcceleratedNetworking": true,
+                            "enableIPForwarding": true,
+                            "ipConfigurations": [
+                              {
+                                "name": "ipconfig1",
+                                "properties": {
+                                  "loadBalancerBackendAddressPools": [
+                                    {
+                                      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/kubernetes"
+                                    },
+                                    {
+                                      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/aksOutboundBackendPool"
+                                    }
+                                  ],
+                                  "primary": true,
+                                  "privateIPAddressVersion": "IPv4",
+                                  "subnet": {
+                                    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Network/virtualNetworks/aks-vnet-40973771/subnets/aks-subnet"
+                                  }
+                                }
+                              }
+                            ],
+                            "primary": true
+                          }
+                        }
+                      ]
+                    },
+                    "osProfile": {
+                      "adminUsername": "azureuser",
+                      "allowExtensionOperations": true,
+                      "computerNamePrefix": "aks-nodepool1-15388874-vmss",
+                      "linuxConfiguration": {
+                        "disablePasswordAuthentication": true,
+                        "provisionVMAgent": true,
+                        "ssh": {
+                          "publicKeys": [
+                            {
+                              "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDJvrpMWQqH6FcGwk4gU91Iup2Eylx9SOMdYk35JHD4BNrV+g9CH7rIbgCsCeD79qIXQjPoylTae6Ce8qVoVuZZ2L0vN3M8X2c0Uvh+b6W+X0/hSqgVMH0Hp75kaenb50nXDESP30CkZ1O1SQwMrWuidj+rBAOda5ZyjqX4P31lVdoNaPX7BgBllrRP0D5GJ3YPYkLKHXueR2Pg7vNwjKvtphjynelh1gNVrY9HfzxQZ52uoftm1MUa5F22QmF2IqGuW3kmcxwCa+nmAQYYp8xLENTCxJg3imTcby+p29w4F0nfuW9/pCw4i+3VIxrVlHe3YlQ24iMDc28UHfojQw7X188oKjPUgk2Lk/Gv7PXjc2Obz8JFlT6kcV1Ea66+8AxOzqazdCB6BKAXghP6fF0gVCYxZAtrq6huG7mBR1g4TPJMyTEFpKO2s2BNLa1gN36vuLg1bE6OuOxLi+8UcffzaRaS98dmRknOxosha0guGbQ3T/7mOTDhSV+sBFtG8lsSNv+cbc/VjsVz2Ter7BzT11h6zKhXn8nfr9UXhBTzKnDK6aS+bcwMQMybFIBj7HbDKf39bXI9lpNjF1ouQyVNUQORi3qMhpD6SotkducBpYJgUwlaYKZgUtsKMZ6XHozfH1ogP/kf3ei8UkRMkwpxZGIBCEK1CWgC8aw9pUxAjQ== vacuum-only-repro\n",
+                              "path": "/home/azureuser/.ssh/authorized_keys"
+                            }
+                          ]
+                        }
+                      },
+                      "requireGuestProvisionSignal": true,
+                      "secrets": []
+                    },
+                    "storageProfile": {
+                      "diskControllerType": "SCSI",
+                      "imageReference": {
+                        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/AKS-Ubuntu/providers/Microsoft.Compute/galleries/AKSUbuntu/images/2404gen2containerd/versions/202609.15.0"
+                      },
+                      "osDisk": {
+                        "caching": "ReadOnly",
+                        "createOption": "FromImage",
+                        "diskSizeGB": 128,
+                        "managedDisk": {
+                          "storageAccountType": "Premium_LRS"
+                        },
+                        "osType": "Linux"
+                      }
+                    },
+                    "timeCreated": "2026-10-06T15:46:08.1612031+00:00"
+                  }
+                },
+                "sku": {
+                  "capacity": 2,
+                  "name": "Standard_D2s_v4",
+                  "tier": "Standard"
+                },
+                "tags": {
+                  "aks-managed-azure-cni-overlay": "true",
+                  "aks-managed-bootstrap-profile-acr-name": "",
+                  "aks-managed-consolidated-additional-properties": "52362d17-c19c-11f1-81b6-aaac2b614c65",
+                  "aks-managed-coordination": "true",
+                  "aks-managed-createOperationID": "20b71071-19ec-4521-b53f-386a9b4cd641",
+                  "aks-managed-creationSource": "vmssclient-aks-nodepool1-15388874-vmss",
+                  "aks-managed-enable-imds-restriction": "false",
+                  "aks-managed-kubeletIdentityClientID": "1dc13198-2b99-4b9a-b08a-5ac5d150e588",
+                  "aks-managed-networkisolated-outbound-type": "",
+                  "aks-managed-orchestrator": "Kubernetes:1.35.8",
+                  "aks-managed-poolName": "nodepool1",
+                  "aks-managed-resourceNameSuffix": "40973771",
+                  "aks-managed-saip-default-client-id": "",
+                  "aks-managed-ssh-access": "LocalUser",
+                  "compute.aks.billing": "linux"
+                },
+                "type": "Microsoft.Compute/virtualMachineScaleSets",
+                "zones": [
+                  "1"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "scopeCheck": {
+        "capacityMatches": true,
+        "expectedCapacity": 2,
+        "expectedVmSize": "Standard_D2s_v4",
+        "expectedVmssName": "aks-nodepool1-15388874-vmss",
+        "liveCapacity": 2,
+        "liveOwnerTagMatches": true,
+        "liveVmSize": "Standard_D2s_v4",
+        "liveVmssName": "aks-nodepool1-15388874-vmss",
+        "nodeResourceGroup": "rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf",
+        "subscriptionId": "00000000-0000-0000-0000-000000000000",
+        "vmSizeMatches": true,
+        "vmssNameMatches": true
+      },
+      "stack": "100gib"
+    }
+  ],
+  "testReceipts": {
+    "100gib": {
+      "exitCode": 0,
+      "finishedAtUtc": "2026-10-07T12:12:20.645378+00:00",
+      "status": "complete",
+      "terminal": true
+    },
+    "50gib": {
+      "exitCode": 0,
+      "finishedAtUtc": "2026-10-07T09:48:07.495116+00:00",
+      "status": "complete",
+      "terminal": true
+    },
+    "baseline-23gib": {
+      "exitCode": 0,
+      "finishedAtUtc": "2026-10-07T09:09:03.833844+00:00",
+      "status": "complete",
+      "terminal": true
+    }
+  },
+  "timespan": {
+    "endUtc": "2026-10-07T12:15:46Z",
+    "startUtc": "2026-10-07T11:45:46Z"
+  }
+}

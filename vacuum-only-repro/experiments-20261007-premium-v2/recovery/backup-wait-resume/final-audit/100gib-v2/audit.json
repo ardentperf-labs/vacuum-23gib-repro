@@ -1,0 +1,411 @@
+{
+  "backupSnapshotIdentities": {
+    "vacuum-backup-f1b90aec": {
+      "completionPercent": 100.0,
+      "content": "snapcontent-604b8cee-1a94-4df6-b846-be245038a795",
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourceDiskUniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+      "sourcePVC": "hdd-pg-1",
+      "uniqueId": "b530378c-e2ce-43e0-a464-209842f00958",
+      "volumeSnapshotUID": "604b8cee-1a94-4df6-b846-be245038a795"
+    },
+    "vacuum-backup-f1b90aec-wal": {
+      "completionPercent": 100.0,
+      "content": "snapcontent-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourceDiskUniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18",
+      "sourcePVC": "hdd-pg-1-wal",
+      "uniqueId": "5d6164bd-68b6-455a-ada8-cfb4c9f95022",
+      "volumeSnapshotUID": "ebeff553-ca6f-487c-8517-e803b02337ca"
+    }
+  },
+  "backupTimeoutContinuation": {
+    "backupUID": "597e0f7d-c87e-4455-b01a-42120f969859",
+    "continuationEvidencePath": "recovery/backup-wait-resume/results/100gib-v2/continuation-evidence.json",
+    "continuationEvidenceSha256": "610ea3060d2825a68d618e3f000630a9833a07d4bfe44a3a3e7c43177f0b9d98",
+    "originalProcessTerminalStatus": "failed",
+    "pairedSnapshotJournalPath": "recovery/backup-wait-resume/results/100gib-v2/output-snapshots.jsonl",
+    "pairedSnapshotJournalSha256": "62a865eec4debe958d031aff527f620a14341ee5fbfdb45d288d09c032da6c81",
+    "resumeProgressPath": "recovery/backup-wait-resume/results/100gib-v2/resume-progress.json",
+    "resumeProgressSha256": "433ed84a1e4ff734be2f0380c2bc3cd9f936f162f384906ab2c9d81fcf34fc15"
+  },
+  "checks": {
+    "backupAndReplicaSeed": {
+      "backup": "vacuum-backup-f1b90aec",
+      "backupUID": "597e0f7d-c87e-4455-b01a-42120f969859",
+      "dataVolumeSnapshot": "vacuum-backup-f1b90aec",
+      "phase": "completed",
+      "pvcNames": [
+        "hdd-pg-1",
+        "hdd-pg-1-wal",
+        "hdd-pg-2",
+        "hdd-pg-2-wal"
+      ],
+      "seedJob": {
+        "archivedAttemptScriptSha256": "7b24d869c7ef362653f38201402f5e4f297c874f66253658f884ced15055b20f",
+        "archivedEventEvidence": {},
+        "archivedScriptCheckedRestoreSnapshotCommand": true,
+        "archivedScriptPinnedSystemImage": true,
+        "eventTimestamp": "2026-10-07T07:38:43Z",
+        "message": "Job completed",
+        "reason": "Completed",
+        "replicaPVCs": [
+          {
+            "creationTimestamp": "2026-10-07T07:29:59Z",
+            "name": "hdd-pg-2",
+            "uid": "33bde4d4-2c77-4dae-afe6-6e8895633723"
+          },
+          {
+            "creationTimestamp": "2026-10-07T07:29:59Z",
+            "name": "hdd-pg-2-wal",
+            "uid": "e5d5f186-de82-4348-9a5a-c6ab8c7439dc"
+          }
+        ],
+        "replicaPod": {
+          "creationTimestamp": "2026-10-07T07:39:15Z",
+          "name": "hdd-pg-2",
+          "uid": "fbdd3bfb-cd94-43ff-b067-c142ee030385"
+        },
+        "source": "live-completed-event-after-job-gc",
+        "uid": "aecfcd65-ba99-4667-9ef6-1bb75558bb26"
+      },
+      "walVolumeSnapshot": "vacuum-backup-f1b90aec-wal"
+    },
+    "cluster": {
+      "backupWriterRemoved": true,
+      "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+      "primary": "hdd-pg-1",
+      "readyInstances": 2,
+      "restoreCopySnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376",
+      "sourceVolumeSnapshot": "vacuum-data-f1b90aec",
+      "sourceVolumeSnapshotContent": "vacuum-content-f1b90aec",
+      "sourceVolumeSnapshotUID": "54bbd81a-6dcf-4115-bfae-970daeb17380",
+      "synchronous": {
+        "dataDurability": "preferred",
+        "method": "any",
+        "number": 1
+      }
+    },
+    "continuationFinalizationCapture": {
+      "continuationEvidencePath": "recovery/backup-wait-resume/results/100gib-v2/continuation-evidence.json",
+      "continuationEvidenceSha256": "610ea3060d2825a68d618e3f000630a9833a07d4bfe44a3a3e7c43177f0b9d98",
+      "fileSha256": {
+        "backup.yaml": "50920a82cb9cc09556ed6daa0ba4ea6788e80aaa5d9c00a1c0b4912b885fd960",
+        "cluster.yaml": "ba32ef063d01899010d9be5a3d324f2ad863a55028c12e1f713b5cf574af2aea",
+        "hdd-pg-1-config.json": "ad3ba3bacbb8dd47a878f2fa6f9e659f2676903b704e1fdd5f208bcdf2a915c5",
+        "hdd-pg-1-disk.json": "f1cdfe7d2cb03ef75128a8efd3e0ef02417fb99e49b2a6e354da1774a3a39dbd",
+        "hdd-pg-1-pv.json": "2100e7ef9e5c1f3070296f09af7a01fb04e76d6b2b6cccdbfe90516e2415ba8b",
+        "hdd-pg-2-config.json": "d09343ed74c42fa0de91cf0dac23983f2c5742c0624b239770f23bbd1171f5bc",
+        "pods-final.json": "6da292d7a88ce659b7a9ba32ce3b480c2c7a597d2f45f9869dd86468f2f67d5a",
+        "pvcs-final.json": "9ef1b7b9a7032b50257103ee33fe6ad4a57918920e2e126665f02023c326370f",
+        "seed-path": "5897829c2962a99fc4aace13eafdb5316d425814a0bd8220fd910f1cfdf02d0e"
+      },
+      "meaning": "This final control capture was generated by the pinned Backup-timeout continuation. The original 02 process did not execute the replica, image, default, or final hydration gates.",
+      "path": "recovery/backup-wait-resume/results/100gib-v2/control",
+      "producer": "backup-timeout-resumer-continuation",
+      "progressReceiptPath": "recovery/backup-wait-resume/results/100gib-v2/resume-progress.json",
+      "progressReceiptSha256": "433ed84a1e4ff734be2f0380c2bc3cd9f936f162f384906ab2c9d81fcf34fc15",
+      "resumerScriptSha256": "9af2aa9ee75bafe1e888bcce12b471f1ade14239ff6e1992ef77870719016f1b"
+    },
+    "continuationSeedEventEvidence": {
+      "completedEvent": {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-10-07T07:38:43Z",
+        "involvedObject": {
+          "apiVersion": "batch/v1",
+          "kind": "Job",
+          "name": "hdd-pg-2-snapshot-recovery",
+          "namespace": "repro",
+          "resourceVersion": "292373",
+          "uid": "aecfcd65-ba99-4667-9ef6-1bb75558bb26"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-10-07T07:38:43Z",
+        "message": "Job completed",
+        "metadata": {
+          "creationTimestamp": "2026-10-07T07:38:43Z",
+          "name": "hdd-pg-2-snapshot-recovery.18dc2f44abb9a56e",
+          "namespace": "repro",
+          "resourceVersion": "292376",
+          "uid": "a493c888-6237-48bb-928a-d31c41aba2a2"
+        },
+        "reason": "Completed",
+        "reportingComponent": "job-controller",
+        "reportingInstance": "",
+        "source": {
+          "component": "job-controller"
+        },
+        "type": "Normal"
+      },
+      "jobUID": "aecfcd65-ba99-4667-9ef6-1bb75558bb26",
+      "path": "recovery/backup-wait-resume/results/100gib-v2/seed-events.json",
+      "sha256": "0cb3025d85df2c744fb562c12ba8e8fbfe726929c10da4b592cbfaf159bd98a9"
+    },
+    "continuationSnapshotJournal": {
+      "path": "recovery/backup-wait-resume/results/100gib-v2/output-snapshots.jsonl",
+      "records": 2,
+      "sha256": "62a865eec4debe958d031aff527f620a14341ee5fbfdb45d288d09c032da6c81"
+    },
+    "frozenPreparation": {
+      "originalChildPidAbsent": true,
+      "originalPrepareScriptPath": "recovery/backup-wait-resume/original-100gib/original-02-prepare.sh",
+      "originalPrepareScriptSha256": "7b24d869c7ef362653f38201402f5e4f297c874f66253658f884ced15055b20f",
+      "originalProcessReceiptPath": "recovery/backup-wait-resume/original-100gib/original-process-terminal.json",
+      "originalProcessReceiptSha256": "8996c771a22b946b2d37a5f5590b730937a841de41d503b4fdb702c9a358b568",
+      "originalProcessStatus": "failed",
+      "scriptSha256": "7b24d869c7ef362653f38201402f5e4f297c874f66253658f884ced15055b20f",
+      "sourceManifestPath": "100gib/source-manifest.json",
+      "sourceManifestSha256": "939861f7eae1ec48978ff21cd31b9aaab07045302832aae53a3b24afa4c07560",
+      "stageHelperSha256": "0eacb0a81b30703a3b788aa745d3eca8c079e3e4e0cfca9921f500b6f5c8918b",
+      "stageHydrationScope": "Standard-origin stage/copy readiness is recorded; this receipt does not claim Standard copy progress is observable.",
+      "stageReceiptPath": "100gib/.state/source-stage/receipt-ef6f2376.json",
+      "stageReceiptSha256": "eaed6a8aa16c64c56c331024344bfdc2bfa0cec61c87bed947072aebe2a4d3cd",
+      "stageSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376",
+      "stageSnapshotUniqueId": "1f260967-6558-4934-a4b6-6574a2ef4db2",
+      "stagingDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/restore-stage-f1b90aec-ef6f2376",
+      "stagingDiskUniqueId": "2efcf9d2-d963-4f88-baef-7684c3213f0b"
+    },
+    "hydratedPremiumV2Disks": [
+      {
+        "claim": "hdd-pg-1",
+        "completionPercent": 100.0,
+        "createOption": "Copy",
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+        "iops": 3000,
+        "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/virtualMachines/aks-nodepool1-15388874-vmss_1",
+        "provisioningState": "Succeeded",
+        "pv": "pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+        "sector": "512",
+        "sectorEvidence": "ARM",
+        "sizeGiB": 512,
+        "sku": "PremiumV2_LRS",
+        "source": "ARM",
+        "throughputMBps": 125,
+        "uniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+        "zone": [
+          "1"
+        ]
+      },
+      {
+        "claim": "hdd-pg-1-wal",
+        "completionPercent": null,
+        "createOption": "Empty",
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+        "iops": 3000,
+        "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/virtualMachines/aks-nodepool1-15388874-vmss_1",
+        "provisioningState": "Succeeded",
+        "pv": "pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+        "sector": "512",
+        "sectorEvidence": "ARM",
+        "sizeGiB": 512,
+        "sku": "PremiumV2_LRS",
+        "source": "ARM",
+        "throughputMBps": 125,
+        "uniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18",
+        "zone": [
+          "1"
+        ]
+      },
+      {
+        "claim": "hdd-pg-2",
+        "completionPercent": 100.0,
+        "createOption": "Copy",
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-33bde4d4-2c77-4dae-afe6-6e8895633723",
+        "iops": 3000,
+        "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/virtualMachines/aks-nodepool1-15388874-vmss_0",
+        "provisioningState": "Succeeded",
+        "pv": "pvc-33bde4d4-2c77-4dae-afe6-6e8895633723",
+        "sector": "512",
+        "sectorEvidence": "ARM",
+        "sizeGiB": 512,
+        "sku": "PremiumV2_LRS",
+        "source": "ARM",
+        "throughputMBps": 125,
+        "uniqueId": "10e1034f-e5cc-416b-9562-78df54c71f22",
+        "zone": [
+          "1"
+        ]
+      },
+      {
+        "claim": "hdd-pg-2-wal",
+        "completionPercent": 100.0,
+        "createOption": "Copy",
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc",
+        "iops": 3000,
+        "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/virtualMachines/aks-nodepool1-15388874-vmss_0",
+        "provisioningState": "Succeeded",
+        "pv": "pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc",
+        "sector": "512",
+        "sectorEvidence": "ARM",
+        "sizeGiB": 512,
+        "sku": "PremiumV2_LRS",
+        "source": "ARM",
+        "throughputMBps": 125,
+        "uniqueId": "d72d595b-525f-4f1f-8e86-2ff40a9f8d3a",
+        "zone": [
+          "1"
+        ]
+      }
+    ],
+    "originalPreBackupCapture": {
+      "captureReceiptPath": "recovery/backup-wait-resume/original-100gib/prebackup-capture.json",
+      "captureReceiptSha256": "92fdfa006e10260090957b52c48fb77b59778046285c2445689d179872e67364",
+      "fileSha256": {
+        "backup.yaml": "50920a82cb9cc09556ed6daa0ba4ea6788e80aaa5d9c00a1c0b4912b885fd960",
+        "cluster.yaml": "ba32ef063d01899010d9be5a3d324f2ad863a55028c12e1f713b5cf574af2aea",
+        "seed-path": "5897829c2962a99fc4aace13eafdb5316d425814a0bd8220fd910f1cfdf02d0e"
+      },
+      "meaning": "The original attempt reached this captured pre-Backup request boundary. The existing owner-bound Backup matched that request; this local receipt chain is corroborating evidence, not a signed attestation that a particular process issued the apply call.",
+      "path": "recovery/backup-wait-resume/original-100gib/prebackup-tmp"
+    },
+    "ownerPreflight": {
+      "archiveSecretAbsent": true,
+      "clusterName": "aks-vacuum-only-f1b90aec9e24",
+      "namespace": "repro",
+      "nodeResourceGroup": "rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf",
+      "resourceGroup": "rg-vacuum-only-f1b90aec9e24f6a2008d6991738742cf",
+      "snapshotResourceGroup": "rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf",
+      "storageClass": "azure-premiumv2",
+      "subscriptionId": "00000000-0000-0000-0000-000000000000"
+    },
+    "pairedBackupSnapshots": {
+      "vacuum-backup-f1b90aec": {
+        "completionPercent": 100.0,
+        "content": "snapcontent-604b8cee-1a94-4df6-b846-be245038a795",
+        "createOption": "Copy",
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+        "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+        "sourceDiskUniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+        "sourcePVC": "hdd-pg-1",
+        "uniqueId": "b530378c-e2ce-43e0-a464-209842f00958",
+        "volumeSnapshotUID": "604b8cee-1a94-4df6-b846-be245038a795"
+      },
+      "vacuum-backup-f1b90aec-wal": {
+        "completionPercent": 100.0,
+        "content": "snapcontent-ebeff553-ca6f-487c-8517-e803b02337ca",
+        "createOption": "Copy",
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+        "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+        "sourceDiskUniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18",
+        "sourcePVC": "hdd-pg-1-wal",
+        "uniqueId": "5d6164bd-68b6-455a-ada8-cfb4c9f95022",
+        "volumeSnapshotUID": "ebeff553-ca6f-487c-8517-e803b02337ca"
+      }
+    },
+    "postgres": {
+      "configs": {
+        "hdd-pg-1": {
+          "heapBytes": 107374182400,
+          "inRecovery": false,
+          "selectedDefaults": {
+            "archiveMode": "on",
+            "autovacuum": "on",
+            "checkpointTimeout": "5min",
+            "fullPageWrites": "on",
+            "maintenanceIoConcurrency": "10",
+            "maxWalSize": "1GB",
+            "recoveryPrefetch": "try",
+            "sharedBuffers": "256MB",
+            "trackIoTiming": "on",
+            "trackWalIoTiming": "on",
+            "vacuumCostDelay": "0",
+            "walLevel": "logical"
+          },
+          "separateDataWalMounts": true,
+          "systemIdentifier": "7692518806614212629"
+        },
+        "hdd-pg-2": {
+          "heapBytes": 107374182400,
+          "inRecovery": true,
+          "selectedDefaults": {
+            "archiveMode": "on",
+            "autovacuum": "on",
+            "checkpointTimeout": "5min",
+            "fullPageWrites": "on",
+            "maintenanceIoConcurrency": "10",
+            "maxWalSize": "1GB",
+            "recoveryPrefetch": "try",
+            "sharedBuffers": "256MB",
+            "trackIoTiming": "on",
+            "trackWalIoTiming": "on",
+            "vacuumCostDelay": "0",
+            "walLevel": "logical"
+          },
+          "separateDataWalMounts": true,
+          "systemIdentifier": "7692518806614212629"
+        }
+      },
+      "fixtureLiveSQL": {
+        "heapBytes": 107374182400,
+        "maxId": 131071998,
+        "minId": 4,
+        "preparedDeadTuplesEstimate": 32768000,
+        "preparedLiveTuplesEstimate": 32768000,
+        "scriptDerivedTupleEstimate": 32768000,
+        "totalBytes": 108872679424
+      },
+      "indexBackedMinMaxProbes": true,
+      "primaryFlushLsn": "9A/86000000",
+      "rawInsertDeleteOutputCaptured": false,
+      "replicaCaughtUp": true,
+      "temporaryStageTableAbsent": true,
+      "tupleCountsAreEstimates": true
+    },
+    "retentionLocks": {
+      "directCanNotDeleteSnapshotIds": [
+        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376",
+        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca"
+      ]
+    },
+    "sourceSnapshots": {
+      "restoreCopy": {
+        "accessState": "Available",
+        "completionPercent": null,
+        "createOption": "Copy",
+        "hydrationNote": "Standard-origin copy progress is recorded as returned; Available/Succeeded is not described as measured full hydration.",
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376",
+        "sourceStagingDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/restore-stage-f1b90aec-ef6f2376",
+        "sourceStagingDiskUniqueId": "2efcf9d2-d963-4f88-baef-7684c3213f0b",
+        "uniqueId": "1f260967-6558-4934-a4b6-6574a2ef4db2"
+      },
+      "source": {
+        "accessState": "Available",
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c",
+        "uniqueId": "5ba7640c-4e34-4227-be0d-d428baeaf2cf"
+      }
+    }
+  },
+  "continuationReceiptChain": {
+    "adapterScriptSha256": "b1ebd23b9493170ebd3aa6760d3f9598719da4c14e0d11861d6aa414ed477168",
+    "continuationEvidencePath": "recovery/backup-wait-resume/results/100gib-v2/continuation-evidence.json",
+    "continuationEvidenceSha256": "610ea3060d2825a68d618e3f000630a9833a07d4bfe44a3a3e7c43177f0b9d98",
+    "frozenFinalizerSha256": "78fc66344fd105ef96ac4299a9ddbf52ec5f74cff081b2b74898b099b0c6d2e1",
+    "resumeProgressPath": "recovery/backup-wait-resume/results/100gib-v2/resume-progress.json",
+    "resumeProgressSha256": "433ed84a1e4ff734be2f0380c2bc3cd9f936f162f384906ab2c9d81fcf34fc15"
+  },
+  "executionAttribution": "The original preparation attempt reached the captured pre-Backup request boundary; the existing owner-bound Backup matched that request. The pinned continuation completed the Backup wait, replica seed, image/default tail, and final captures.",
+  "fourHydratedPremiumV2Disks": 4,
+  "globalCloudQuiescenceClaim": false,
+  "limitations": [
+    "The frozen original script and captured pre-Backup TMP indicate the attempt reached the request boundary after its fixture equality guards; raw INSERT/DELETE output is unavailable, and this is corroborating control-flow evidence.",
+    "Original 02 did not reach the final four-disk hydration loop; later tail/final-capture evidence is attributed to the pinned continuation.",
+    "The local receipt chain is recorded corroborating evidence, not a signed execution attestation."
+  ],
+  "mode": "read-only numeric hydration finalizer",
+  "prepareReceipt": "recovery/backup-wait-resume/final-audit/100gib-v2/prepare.json",
+  "restoreCopySnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376",
+  "sourceKind": "incremental_copy",
+  "stack": "100gib",
+  "status": "complete",
+  "systemIdentifier": "7692518806614212629",
+  "targetHeapGiB": 100,
+  "verifiedAtUtc": "2026-10-07T08:25:17.413339+00:00",
+  "version": 1
+}

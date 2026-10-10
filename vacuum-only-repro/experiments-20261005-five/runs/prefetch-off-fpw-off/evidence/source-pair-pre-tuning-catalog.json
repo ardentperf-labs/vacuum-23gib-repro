@@ -1,0 +1,18 @@
+{
+  "attributes": [
+    {
+      "compression": "",
+      "name": "id",
+      "storage": "p",
+      "type": "bigint"
+    },
+    {
+      "compression": "",
+      "name": "payload",
+      "storage": "p",
+      "type": "bytea"
+    }
+  ],
+  "indexDefinition": "CREATE INDEX vacuum_target_id_idx ON public.vacuum_target USING btree (id)",
+  "payloadPlain": true
+}

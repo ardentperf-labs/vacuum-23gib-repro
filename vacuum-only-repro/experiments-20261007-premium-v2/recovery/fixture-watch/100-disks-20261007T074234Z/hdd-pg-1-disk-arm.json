@@ -1,0 +1,47 @@
+{
+  "name": "pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+  "type": "Microsoft.Compute/disks",
+  "location": "eastus",
+  "tags": {
+    "k8s-azure-created-by": "kubernetes-azure-dd",
+    "kubernetes.io-created-for-pv-name": "pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+    "kubernetes.io-created-for-pvc-name": "hdd-pg-1",
+    "kubernetes.io-created-for-pvc-namespace": "repro"
+  },
+  "zones": [
+    "1"
+  ],
+  "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/virtualMachines/aks-nodepool1-15388874-vmss_1",
+  "sku": {
+    "name": "PremiumV2_LRS",
+    "tier": "Premium"
+  },
+  "properties": {
+    "creationData": {
+      "createOption": "Copy",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376",
+      "sourceUniqueId": "1f260967-6558-4934-a4b6-6574a2ef4db2",
+      "logicalSectorSize": 512
+    },
+    "diskSizeGB": 512,
+    "diskIOPSReadWrite": 3000,
+    "diskMBpsReadWrite": 125,
+    "readOnly": false,
+    "diskIOPSReadOnly": 3000,
+    "diskMBpsReadOnly": 125,
+    "encryption": {
+      "type": "EncryptionAtRestWithPlatformKey"
+    },
+    "maxShares": 1,
+    "networkAccessPolicy": "DenyAll",
+    "publicNetworkAccess": "Disabled",
+    "timeCreated": "2026-10-06T20:54:12.0108941+00:00",
+    "provisioningState": "Succeeded",
+    "diskState": "Attached",
+    "LastOwnershipUpdateTime": "2026-10-07T05:44:43.3834546+00:00",
+    "diskSizeBytes": 549755813888,
+    "uniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+    "completionPercent": 100.0
+  }
+}

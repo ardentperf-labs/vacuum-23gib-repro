@@ -1,0 +1,220 @@
+{
+  "backup": {
+    "createdAt": "2026-10-07T06:11:36Z",
+    "name": "vacuum-backup-f1b90aec",
+    "pair": {
+      "data": "vacuum-backup-f1b90aec",
+      "wal": "vacuum-backup-f1b90aec-wal"
+    },
+    "phase": "completed",
+    "uid": "597e0f7d-c87e-4455-b01a-42120f969859"
+  },
+  "captureHelperPath": "recovery/backup-wait-resume/capture_prebackup_tmp.py",
+  "captureHelperSha256": "1a1437306ed4bfdf8edb872b7f5e1ade475eb54fa305a67b1048eb986dad214e",
+  "executionAttribution": "Original 02 reached only the captured pre-Backup control-flow boundary. Seed, archive removal, image switch, and final captures were performed by this pinned resumer continuation.",
+  "finalControlFileSha256": {
+    "backup.yaml": "50920a82cb9cc09556ed6daa0ba4ea6788e80aaa5d9c00a1c0b4912b885fd960",
+    "cluster.yaml": "ba32ef063d01899010d9be5a3d324f2ad863a55028c12e1f713b5cf574af2aea",
+    "hdd-pg-1-config.json": "ad3ba3bacbb8dd47a878f2fa6f9e659f2676903b704e1fdd5f208bcdf2a915c5",
+    "hdd-pg-1-disk.json": "f1cdfe7d2cb03ef75128a8efd3e0ef02417fb99e49b2a6e354da1774a3a39dbd",
+    "hdd-pg-1-pv.json": "2100e7ef9e5c1f3070296f09af7a01fb04e76d6b2b6cccdbfe90516e2415ba8b",
+    "hdd-pg-2-config.json": "d09343ed74c42fa0de91cf0dac23983f2c5742c0624b239770f23bbd1171f5bc",
+    "pods-final.json": "6da292d7a88ce659b7a9ba32ce3b480c2c7a597d2f45f9869dd86468f2f67d5a",
+    "pvcs-final.json": "9ef1b7b9a7032b50257103ee33fe6ad4a57918920e2e126665f02023c326370f",
+    "seed-path": "5897829c2962a99fc4aace13eafdb5316d425814a0bd8220fd910f1cfdf02d0e"
+  },
+  "finalControlPath": "recovery/backup-wait-resume/results/100gib-v2/control",
+  "inputHashes": {
+    "backup.yaml": "50920a82cb9cc09556ed6daa0ba4ea6788e80aaa5d9c00a1c0b4912b885fd960",
+    "captureReceiptSha256": "92fdfa006e10260090957b52c48fb77b59778046285c2445689d179872e67364",
+    "cluster.yaml": "ba32ef063d01899010d9be5a3d324f2ad863a55028c12e1f713b5cf574af2aea",
+    "seed-path": "5897829c2962a99fc4aace13eafdb5316d425814a0bd8220fd910f1cfdf02d0e",
+    "terminalProcessBindingSha256": "fe72639e5955a1f368e6b9b5f204684b71cc4a931e528ac444b8fb7807f9267d"
+  },
+  "keeperSnapshotOwnerToken": "16244c2c1353a0fc1b108ec455fd70c8",
+  "limits": [
+    "No fixture SQL/DML or Backup request was rerun.",
+    "The original raw INSERT/DELETE output was not preserved and is not reconstructed."
+  ],
+  "localEvidenceHashes": {
+    "runConfig": "d75a03ab4649cd94bb482c26efc261cfcb57f8145ede44a722e306306839e146",
+    "sourceManifest": "939861f7eae1ec48978ff21cd31b9aaab07045302832aae53a3b24afa4c07560",
+    "sourceMetadata": "5f835144db8603f2533407111c51d147118cca31bfbcf9c852cdf6e2f0bfe59b",
+    "sourceSnapshotRecord": "04f2efb7bf0aa2a04a5b5c6297a3e4c3d6e534d25415b0990cf8c13379454afd",
+    "stageReceipt": "eaed6a8aa16c64c56c331024344bfdc2bfa0cec61c87bed947072aebe2a4d3cd",
+    "state": "ab77283ff7bf5fb74a0ed0001fd6618a19b21a4f2e42e87d29dc94faf762cea6"
+  },
+  "originalProcessReceiptPath": "recovery/backup-wait-resume/original-100gib/original-process-terminal.json",
+  "originalProcessReceiptSha256": "8996c771a22b946b2d37a5f5590b730937a841de41d503b4fdb702c9a358b568",
+  "originalRunningProcessReceiptPath": "recovery/backup-wait-resume/original-100gib/original-process-running.json",
+  "originalRunningProcessReceiptSha256": "68472626da0721b22247773d4782d1940e5b992b1d3c5af3ba422249aeb4205e",
+  "originalScriptPath": "recovery/backup-wait-resume/original-100gib/original-02-prepare.sh",
+  "originalScriptSha256": "7b24d869c7ef362653f38201402f5e4f297c874f66253658f884ced15055b20f",
+  "originalTempPath": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/100gib/.state/.prepare.HPy2Kn",
+  "pairedSnapshots": {
+    "vacuum-backup-f1b90aec": {
+      "completionPercent": 100.0,
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+      "provisioningState": "Succeeded",
+      "readyToUse": true,
+      "snapshotAccessState": "Available",
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourceDiskUniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+      "sourcePV": "pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourcePVC": "hdd-pg-1",
+      "sourcePVCUID": "a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourceUniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+      "type": "data",
+      "uniqueId": "b530378c-e2ce-43e0-a464-209842f00958",
+      "volumeSnapshotContent": "snapcontent-604b8cee-1a94-4df6-b846-be245038a795",
+      "volumeSnapshotContentUID": "46dcf188-df95-4561-a4ef-23bd0d7fb416",
+      "volumeSnapshotUID": "604b8cee-1a94-4df6-b846-be245038a795"
+    },
+    "vacuum-backup-f1b90aec-wal": {
+      "completionPercent": 100.0,
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "provisioningState": "Succeeded",
+      "readyToUse": true,
+      "snapshotAccessState": "Available",
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourceDiskUniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18",
+      "sourcePV": "pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourcePVC": "hdd-pg-1-wal",
+      "sourcePVCUID": "316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourceUniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18",
+      "type": "wal",
+      "uniqueId": "5d6164bd-68b6-455a-ada8-cfb4c9f95022",
+      "volumeSnapshotContent": "snapcontent-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "volumeSnapshotContentUID": "61bc9a55-1e2a-40cc-905c-d74058149dae",
+      "volumeSnapshotUID": "ebeff553-ca6f-487c-8517-e803b02337ca"
+    }
+  },
+  "phase": "tail-complete-awaiting-frozen-finalizer",
+  "pinnedSnapshotIdentity": {
+    "vacuum-backup-f1b90aec": {
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourceDiskUniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+      "sourcePV": "pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourcePVC": "hdd-pg-1",
+      "sourcePVCUID": "a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourceUniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+      "uniqueId": "b530378c-e2ce-43e0-a464-209842f00958",
+      "volumeSnapshotContent": "snapcontent-604b8cee-1a94-4df6-b846-be245038a795",
+      "volumeSnapshotContentUID": "46dcf188-df95-4561-a4ef-23bd0d7fb416",
+      "volumeSnapshotUID": "604b8cee-1a94-4df6-b846-be245038a795"
+    },
+    "vacuum-backup-f1b90aec-wal": {
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourceDiskUniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18",
+      "sourcePV": "pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourcePVC": "hdd-pg-1-wal",
+      "sourcePVCUID": "316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourceUniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18",
+      "uniqueId": "5d6164bd-68b6-455a-ada8-cfb4c9f95022",
+      "volumeSnapshotContent": "snapcontent-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "volumeSnapshotContentUID": "61bc9a55-1e2a-40cc-905c-d74058149dae",
+      "volumeSnapshotUID": "ebeff553-ca6f-487c-8517-e803b02337ca"
+    }
+  },
+  "preBackupCaptureFileSha256": {
+    "backup.yaml": "50920a82cb9cc09556ed6daa0ba4ea6788e80aaa5d9c00a1c0b4912b885fd960",
+    "captureReceiptSha256": "92fdfa006e10260090957b52c48fb77b59778046285c2445689d179872e67364",
+    "cluster.yaml": "ba32ef063d01899010d9be5a3d324f2ad863a55028c12e1f713b5cf574af2aea",
+    "seed-path": "5897829c2962a99fc4aace13eafdb5316d425814a0bd8220fd910f1cfdf02d0e",
+    "terminalProcessBindingSha256": "fe72639e5955a1f368e6b9b5f204684b71cc4a931e528ac444b8fb7807f9267d"
+  },
+  "preBackupCapturePath": "recovery/backup-wait-resume/original-100gib/prebackup-tmp",
+  "preBackupCaptureReceiptPath": "recovery/backup-wait-resume/original-100gib/prebackup-capture.json",
+  "preBackupCaptureReceiptSha256": "92fdfa006e10260090957b52c48fb77b59778046285c2445689d179872e67364",
+  "replicaCatchup": {
+    "primaryFlushLsn": "9A/84000EF8",
+    "replicaCaughtUp": true,
+    "streaming": true
+  },
+  "resumerScriptSha256": "9af2aa9ee75bafe1e888bcce12b471f1ade14239ff6e1992ef77870719016f1b",
+  "seedEventsPath": "recovery/backup-wait-resume/results/100gib-v2/seed-events.json",
+  "seedEventsSha256": "0cb3025d85df2c744fb562c12ba8e8fbfe726929c10da4b592cbfaf159bd98a9",
+  "seedJobReceiptPath": "recovery/backup-wait-resume/results/100gib-v2/seed-job.json",
+  "seedJobReceiptSha256": "a301046f53884ba3f239b29d4a3c82174ff075f7d72e9c1c797f3b4513a78d86",
+  "seedSystemImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+  "seedValidation": {
+    "completedEvent": {
+      "apiVersion": "v1",
+      "count": 1,
+      "eventTime": null,
+      "firstTimestamp": "2026-10-07T07:38:43Z",
+      "involvedObject": {
+        "apiVersion": "batch/v1",
+        "kind": "Job",
+        "name": "hdd-pg-2-snapshot-recovery",
+        "namespace": "repro",
+        "resourceVersion": "292373",
+        "uid": "aecfcd65-ba99-4667-9ef6-1bb75558bb26"
+      },
+      "kind": "Event",
+      "lastTimestamp": "2026-10-07T07:38:43Z",
+      "message": "Job completed",
+      "metadata": {
+        "creationTimestamp": "2026-10-07T07:38:43Z",
+        "name": "hdd-pg-2-snapshot-recovery.18dc2f44abb9a56e",
+        "namespace": "repro",
+        "resourceVersion": "292376",
+        "uid": "a493c888-6237-48bb-928a-d31c41aba2a2"
+      },
+      "reason": "Completed",
+      "reportingComponent": "job-controller",
+      "reportingInstance": "",
+      "source": {
+        "component": "job-controller"
+      },
+      "type": "Normal"
+    },
+    "completedEventTimestamp": "2026-10-07T07:38:43Z",
+    "jobEvidence": "live-job",
+    "jobSucceeded": true,
+    "jobUID": "aecfcd65-ba99-4667-9ef6-1bb75558bb26",
+    "replicaPVCs": {
+      "hdd-pg-2": {
+        "creationTimestamp": "2026-10-07T07:29:59Z",
+        "dataSource": {
+          "apiGroup": "snapshot.storage.k8s.io",
+          "kind": "VolumeSnapshot",
+          "name": "vacuum-backup-f1b90aec"
+        },
+        "uid": "33bde4d4-2c77-4dae-afe6-6e8895633723"
+      },
+      "hdd-pg-2-wal": {
+        "creationTimestamp": "2026-10-07T07:29:59Z",
+        "dataSource": {
+          "apiGroup": "snapshot.storage.k8s.io",
+          "kind": "VolumeSnapshot",
+          "name": "vacuum-backup-f1b90aec-wal"
+        },
+        "uid": "e5d5f186-de82-4348-9a5a-c6ab8c7439dc"
+      }
+    },
+    "replicaPod": {
+      "creationTimestamp": "2026-10-07T07:38:44Z",
+      "name": "hdd-pg-2",
+      "uid": "b83b93d1-20a9-4479-89fd-18caececc617"
+    },
+    "sourceBackupSnapshots": {
+      "data": "vacuum-backup-f1b90aec",
+      "wal": "vacuum-backup-f1b90aec-wal"
+    }
+  },
+  "snapshotJournalPath": "recovery/backup-wait-resume/results/100gib-v2/output-snapshots.jsonl",
+  "snapshotJournalSha256": "62a865eec4debe958d031aff527f620a14341ee5fbfdb45d288d09c032da6c81",
+  "stackOwnerToken": "f1b90aec9e24f6a2008d6991738742cf",
+  "terminalBindingHelperPath": "recovery/backup-wait-resume/bind_terminal_process.py",
+  "terminalBindingHelperSha256": "1a7e1b48ffe91a64ec7cdd90f8c520bb4ee5eb14edf60aa1e13e02e3e260dc3d",
+  "terminalProcessBindingPath": "recovery/backup-wait-resume/original-100gib/terminal-process-binding.json",
+  "terminalProcessBindingSha256": "fe72639e5955a1f368e6b9b5f204684b71cc4a931e528ac444b8fb7807f9267d",
+  "version": 1
+}

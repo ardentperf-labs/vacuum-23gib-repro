@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-06T22:33:28Z",
+  "checkpoint": "20261006T223328Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "fixtureHeapBytes": 53687091200,
+      "fixtureHeapGiB": 50,
+      "activeFixturePhase": "create-index",
+      "indexPhase": "building index: scanning table",
+      "indexBlocksDone": 3386654,
+      "indexBlocksTotal": 6553600,
+      "indexScanFraction": 0.5167623901367188,
+      "indexElapsedSeconds": 1999
+    },
+    "100gib": {
+      "processStatus": "running",
+      "fixtureHeapBytes": 69235081216,
+      "fixtureHeapGiB": 64.48019409179688,
+      "activeFixturePhase": "insert",
+      "insertElapsedSeconds": 5461
+    }
+  }
+}

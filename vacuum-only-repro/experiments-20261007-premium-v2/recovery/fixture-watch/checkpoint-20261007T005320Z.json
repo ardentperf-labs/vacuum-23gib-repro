@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-07T00:53:20Z",
+  "checkpoint": "20261007T005320Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "supervisorPid": 126516,
+      "childPid": 126519,
+      "assignedTargetHeapBytes": 53687091200,
+      "activeFixturePhase": "wal-storage-primary-restart",
+      "clusterPhase": "Primary instance is being restarted without a switchover",
+      "clusterReadyInstances": null,
+      "pod": "hdd-pg-1",
+      "podUid": "6db137b8-b2f6-48f1-bb7e-6ee83b396144",
+      "podPhase": "Running",
+      "podReady": false,
+      "postgresContainerStartedProbe": false,
+      "podStartedAt": "2026-10-07T00:48:38Z",
+      "lastInstanceManagerLogAt": "2026-10-07T00:49:11.303845Z",
+      "lastInstanceManagerMessage": "Moving data from /var/lib/postgresql/data/pgdata/pg_wal to /var/lib/postgresql/wal/pg_wal",
+      "activeQuery": null,
+      "latestObservedAtUtc": "2026-10-07T00:53:20Z"
+    },
+    "100gib": {
+      "processStatus": "running",
+      "supervisorPid": 126517,
+      "childPid": 126518,
+      "assignedTargetHeapBytes": 107374182400,
+      "activeFixturePhase": "create-index",
+      "indexPhase": "building index: scanning table",
+      "indexBlocksDone": 3163838,
+      "indexBlocksTotal": 13107200,
+      "indexScanFraction": 0.24138168334960938,
+      "indexElapsedSeconds": 2097,
+      "activeWaits": [
+        {
+          "type": "IO",
+          "event": "DataFileRead"
+        }
+      ],
+      "stageRelationBytes": 107374182400,
+      "pod": "hdd-pg-1",
+      "podReady": true
+    }
+  }
+}

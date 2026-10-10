@@ -1,0 +1,81 @@
+{
+  "allSnapshotsPreserved": true,
+  "args": [
+    "${PROJECT_ROOT}/vacuum-only-repro/.venv/bin/python",
+    "03-test.py",
+    "--kubeconfig",
+    ".state/kubeconfig",
+    "--interval",
+    "5",
+    "--safety-hours",
+    "24",
+    "--catchup-hours",
+    "336",
+    "--out",
+    "results/full-fpw-off-prefetch-off-23gib-20261006T061600Z"
+  ],
+  "attempt": 2,
+  "catchupHours": 336,
+  "collectorSourceAsRunArchive": ".state/03-test-prefailure-2994c86f.py",
+  "createdAtUtc": "2026-10-06T06:16:11.106785+00:00",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "exitCode": 2,
+  "failureReason": "kubectl --kubeconfig ${PROJECT_ROOT}/experiments/20261005-four/prefetch-off-fpw-off/.state/kubeconfig exec -i -c postgres -n repro hdd-pg-1 -- psql -X -A -t -v ON_ERROR_STOP=1 -U postgres -d repro failed (3): ERROR:  column \"data_checksum_version\" does not exist\nLINE 10:  'dataChecksumVersion',(SELECT data_checksum_version FROM pg...\n                                        ^\ncommand terminated with exit code 3\n",
+  "finishedAtUtc": "2026-10-06T06:16:13.452Z",
+  "logPath": ".state/measurement-attempt2.log",
+  "measurementImageAliasCorrectionPath": ".state/measurement-image-alias-correction.json",
+  "outputPath": "results/full-fpw-off-prefetch-off-23gib-20261006T061600Z",
+  "pid": "[REDACTED]",
+  "preflightPassed": false,
+  "preparationRecoveryJobUid": "b5a9adb4-e280-4459-84f3-4bc670fc1823",
+  "prepareEvidencePath": ".state/prepare.json",
+  "prepareJsonSha256": "1d0a56985fcd1534129dde96c65f7a3be7e85f2e897ba14ba981b615caaefb2a",
+  "prepareRecoveryAuditCorrectionPath": ".state/prepare-recovery-audit-correction.json",
+  "prepareRecoveryAuditPath": ".state/prepare-recovery-audit.json",
+  "pythonExecutable": "${PROJECT_ROOT}/vacuum-only-repro/.venv/bin/python",
+  "resultDirectoryWasEmpty": true,
+  "sourceMap": [
+    {
+      "path": "01-provision.sh",
+      "role": "successful_stack_provision",
+      "sha256": "38ad456b74e208652dd6d7b0d93b1d2c30351d636cadbae7b25fb87273f86b4b"
+    },
+    {
+      "path": "02-prepare.sh",
+      "role": "failed_initial_prepare",
+      "sha256": "2007e0d27f8b506514c508b0a6d1f8d008f51480b9f7b9ed0bcc277b04f716d8"
+    },
+    {
+      "path": ".state/continue-after-source-pair-restore-v2.sh",
+      "role": "successful_source_restore_continuation_and_seed",
+      "sha256": "33dc25abae50c1aba96e4280563b559bfa01ba2729fe47406274ec584c4255c8"
+    },
+    {
+      "path": ".state/remove-source-snapshot-role-grants-with-lock-restore.sh",
+      "role": "successful_snapshot_grant_removal_and_lock_restore",
+      "sha256": "073f5698f27b0b95fcb835c52e1a6dda26f105a4d1222c104c39bc150e47e502"
+    },
+    {
+      "path": ".state/remove-source-snapshot-role-grants-with-lock-restore-v2.sh",
+      "role": "successful_post_removal_source_verification",
+      "sha256": "44b6880723afc47abd542cb4718f4c6d0dcb67533e997f5a078cf6e8d64d5f09"
+    },
+    {
+      "path": "03-test.py",
+      "role": "measurement_collector",
+      "sha256": "2994c86f76b17c0baee369fc39e8b03aa0ce97c287835c96f768f7ddb3b7ecc8"
+    },
+    {
+      "path": "plot.py",
+      "role": "linear_plot_and_analysis",
+      "sha256": "d0ac35439ba17dcfe6f50e9484dd12274575755451258d82d7b12210c91317ec"
+    }
+  ],
+  "startedAtUtc": "2026-10-06T06:16:11.107436+00:00",
+  "status": "failed_preflight",
+  "testStatePath": ".state/preflight-failure-attempt2.json",
+  "vacuumLaunched": false,
+  "workingDirectory": "."
+}

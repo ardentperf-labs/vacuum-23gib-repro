@@ -1,0 +1,10 @@
+region,workload,source_role,source_file,status,rows,scope
+eastus,4KiB,main,eastus/fio-hdd-repro/artifacts/analysis/summary.csv,present,15,primary regional run; threshold and regional series
+eastus,1MiB,main,eastus/fio-hdd-1m-repro/artifacts/analysis/summary.csv,present,10,primary regional run; threshold and regional series
+westus2,4KiB,main,westus2/fio-hdd-repro/artifacts/analysis/summary.csv,present,15,primary regional run; threshold and regional series
+westus2,1MiB,main,westus2/fio-hdd-1m-repro/artifacts/analysis/summary.csv,present,14,primary regional run; threshold and regional series
+eastus,4KiB,single_validation,eastus/fio-hdd-repro/artifacts/single-validation/analysis/summary.csv,present,1,optional single-thread baseline range; excluded from main curves and threshold
+eastus,1MiB,single_validation,eastus/fio-hdd-1m-repro/artifacts/single-validation/analysis/summary.csv,present,1,optional single-thread baseline range; excluded from main curves and threshold
+westus2,4KiB,single_validation,westus2/fio-hdd-repro/artifacts/single-validation/analysis/summary.csv,present,1,optional single-thread baseline range; excluded from main curves and threshold
+westus2,1MiB,single_validation,westus2/fio-hdd-1m-repro/artifacts/single-validation/analysis/summary.csv,present,1,optional single-thread baseline range; excluded from main curves and threshold
+eastus,1MiB,supporting_headroom,eastus/fio-hdd-1m-headroom/artifacts/analysis/summary.csv,present,3,supporting headroom validation only; excluded from main curves and threshold

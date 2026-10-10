@@ -1,0 +1,21 @@
+{
+  "applyExecuted": false,
+  "finalReceiptRule": "six final receipt files written only after all fresh checks pass; never overwrite existing receipts",
+  "gate": "all four full runs plus requested pressure partial and per-stack cleanup must complete before apply",
+  "historicalKeeperRefs": "old deleted provenance IDs validated using saved independent evidence; current keeper alone preserved and UID-verified",
+  "localDryRunGatePassed": true,
+  "mutationScope": "Create missing direct CanNotDelete snapshot locks; delete only exact token-owned watcher groups after fresh group/resource ownership readback",
+  "offlineOwnershipTestsPassed": 9,
+  "ownershipCorrection": "Missing native CSI reprotoken accepted only with exact prior ledger ID+UID+source-disk+group+CSI-creator proof. Conflicting tokens and unknown tokenless snapshots rejected; fresh RG token readback unchanged.",
+  "preservationChecks": [
+    "global before snapshot uniqueIds subset of after",
+    "exact owned snapshot UID and Succeeded state unchanged",
+    "all per-stack retained snapshot ledgers match final owned inventory",
+    "direct ARM lock scope/id joins",
+    "exact two Stopped AKS exceptions with protected node-RG snapshots"
+  ],
+  "reviewPassed": true,
+  "reviewedAtUtc": "2026-10-06T07:13:29.782920+00:00",
+  "script": "experiments/20261005-four/finish-shared-cleanup-v2.py",
+  "sha256": "a661e8a60ad66e514fda5a510e57c7deded3e245e35010b4296a2aff40fb1807"
+}

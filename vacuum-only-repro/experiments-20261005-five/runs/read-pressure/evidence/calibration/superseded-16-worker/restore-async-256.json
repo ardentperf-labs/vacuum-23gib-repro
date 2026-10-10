@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "kubectl",
+    "--kubeconfig",
+    "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/.state/kubeconfig",
+    "exec",
+    "-i",
+    "-n",
+    "kube-system",
+    "csi-azuredisk-node-4lrnv",
+    "-c",
+    "azuredisk",
+    "--",
+    "sh",
+    "-s"
+  ],
+  "completedAtHost": "2026-10-05T20:19:13.844Z",
+  "returnCode": 0,
+  "stderr": "",
+  "stdout": "asyncDepthRestored=256 scheduler=mq-deadline nr_requests=1024 DATAonly\n"
+}

@@ -1,0 +1,181 @@
+{
+  "checkedAtUtc": "2026-10-07T12:42:15.576054+00:00",
+  "stacks": [
+    {
+      "name": "baseline-23gib",
+      "location": "eastus",
+      "clusterMissing": true,
+      "mainResourceGroupMissing": true,
+      "nodeResourceGroupMissing": true,
+      "nodeResourceGroup": "rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e",
+      "localStatus": "measurement and cleanup complete"
+    },
+    {
+      "name": "50gib",
+      "location": "westus3",
+      "clusterMissing": true,
+      "mainResourceGroupMissing": true,
+      "nodeResourceGroupMissing": true,
+      "nodeResourceGroup": "rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6",
+      "localStatus": "measurement and cleanup complete"
+    },
+    {
+      "name": "100gib",
+      "location": "eastus",
+      "clusterMissing": true,
+      "mainResourceGroupMissing": true,
+      "nodeResourceGroupMissing": true,
+      "nodeResourceGroup": "rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf",
+      "localStatus": "measurement and cleanup complete"
+    }
+  ],
+  "updatedAtUtc": "2026-10-07T12:42:15.576054+00:00",
+  "measurementProgress": {
+    "baseline-23gib": {
+      "process": {
+        "phase": "test",
+        "stack": "baseline-23gib",
+        "status": "complete",
+        "supervisorPid": 353056,
+        "startedAtUtc": "2026-10-07T08:35:43.075046+00:00",
+        "command": [
+          "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/.venv/bin/python",
+          "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/baseline-23gib/03-test.py",
+          "--out",
+          "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/baseline-23gib/results",
+          "--interval",
+          "5",
+          "--safety-hours",
+          "24",
+          "--catchup-hours",
+          "24"
+        ],
+        "environment": {
+          "TEST_HEAP_GIB": "23",
+          "SOURCE_MANIFEST": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/baseline-23gib/source-manifest.json"
+        },
+        "scriptSha256": {
+          "03-test.py": "59e3eb442dc2fa0d52df6eb97b8addd728f21b5742635d842afbf857f5c5a8a3",
+          "plot.py": "70155d4c5b5d1685600c431805feb305e7235aebb4081155668390e4467aca52"
+        },
+        "childPid": 353061,
+        "finishedAtUtc": "2026-10-07T09:09:03.833844+00:00",
+        "exitCode": 0
+      },
+      "testState": {
+        "error": null,
+        "output": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/baseline-23gib/results",
+        "phase": "complete",
+        "replayCaughtUp": true,
+        "runId": "results",
+        "testComplete": true,
+        "updatedAt": "2026-10-07T09:09:02.923Z"
+      }
+    },
+    "50gib": {
+      "process": {
+        "phase": "test",
+        "stack": "50gib",
+        "status": "complete",
+        "supervisorPid": 353058,
+        "startedAtUtc": "2026-10-07T08:35:43.084572+00:00",
+        "command": [
+          "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/.venv/bin/python",
+          "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/50gib/03-test.py",
+          "--out",
+          "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/50gib/results",
+          "--interval",
+          "5",
+          "--safety-hours",
+          "24",
+          "--catchup-hours",
+          "24"
+        ],
+        "environment": {
+          "TEST_HEAP_GIB": "50",
+          "SOURCE_MANIFEST": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/50gib/source-manifest.json"
+        },
+        "scriptSha256": {
+          "03-test.py": "59e3eb442dc2fa0d52df6eb97b8addd728f21b5742635d842afbf857f5c5a8a3",
+          "plot.py": "70155d4c5b5d1685600c431805feb305e7235aebb4081155668390e4467aca52"
+        },
+        "childPid": 353062,
+        "finishedAtUtc": "2026-10-07T09:48:07.495116+00:00",
+        "exitCode": 0
+      },
+      "testState": {
+        "error": null,
+        "output": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/50gib/results",
+        "phase": "complete",
+        "replayCaughtUp": true,
+        "runId": "results",
+        "testComplete": true,
+        "updatedAt": "2026-10-07T09:48:06.942Z"
+      }
+    },
+    "100gib": {
+      "process": {
+        "phase": "test",
+        "stack": "100gib",
+        "status": "complete",
+        "supervisorPid": 353060,
+        "startedAtUtc": "2026-10-07T08:35:43.085195+00:00",
+        "command": [
+          "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/.venv/bin/python",
+          "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/100gib/03-test.py",
+          "--out",
+          "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/100gib/results",
+          "--interval",
+          "5",
+          "--safety-hours",
+          "24",
+          "--catchup-hours",
+          "24"
+        ],
+        "environment": {
+          "TEST_HEAP_GIB": "100",
+          "SOURCE_MANIFEST": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/100gib/source-manifest.json"
+        },
+        "scriptSha256": {
+          "03-test.py": "59e3eb442dc2fa0d52df6eb97b8addd728f21b5742635d842afbf857f5c5a8a3",
+          "plot.py": "70155d4c5b5d1685600c431805feb305e7235aebb4081155668390e4467aca52"
+        },
+        "childPid": 353063,
+        "finishedAtUtc": "2026-10-07T12:12:20.645378+00:00",
+        "exitCode": 0
+      },
+      "testState": {
+        "error": null,
+        "output": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/100gib/results",
+        "phase": "complete",
+        "replayCaughtUp": true,
+        "runId": "results",
+        "testComplete": true,
+        "updatedAt": "2026-10-07T12:12:19.838Z"
+      }
+    }
+  },
+  "endToEndTimelineRequiredInEachFinalReport": true,
+  "cleanupTimelineCandidateReviewed": true,
+  "cleanupAuthorizedNow": true,
+  "updatedAtScope": "Fresh root ARM resource-group absence checks; historical running-stack observation archived separately. Final measurement and cleanup receipts are local artifacts.",
+  "allThreeRequiredBackupWalExportsRootVerified": true,
+  "allThreeActualMeasurementsComplete": true,
+  "cleanupState": {
+    "phase": "complete",
+    "updatedAtUtc": "2026-10-07T12:41:35.564847+00:00",
+    "snapshotCount": 42,
+    "priorSnapshotsPreserved": true,
+    "allExperimentSnapshotsPreserved": true,
+    "teardownExitCodes": {
+      "baseline-23gib": 0,
+      "50gib": 0,
+      "100gib": 0
+    },
+    "walArchiveRetentionVerified": true,
+    "walArchiveRetentionReceipt": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/preflight/wal-retention-before-cleanup.json"
+  },
+  "cleanupComplete": true,
+  "allOwnedGroupsAbsent": true,
+  "resourceAbsenceReceipt": "preflight/root-final-resource-absence.json"
+}

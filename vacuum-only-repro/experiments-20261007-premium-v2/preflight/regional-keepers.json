@@ -1,0 +1,33 @@
+[
+  {
+    "name": "keeper-base-16244c2c",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_LRS",
+    "tags": {
+      "reproPurpose": "regional-snapshot-base"
+    }
+  },
+  {
+    "name": "keeper-16244c2c",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_LRS",
+    "tags": {
+      "reproPurpose": "regional-prepared-source"
+    }
+  },
+  {
+    "name": "vacuum-copy-16244c2c",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_LRS",
+    "tags": {
+      "reproPurpose": "restore-source-copy",
+      "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/snapshots/keeper-16244c2c"
+    }
+  }
+]

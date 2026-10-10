@@ -1,0 +1,79 @@
+{
+  "checkpoint": {
+    "after": {
+      "flushLsn": "9A/860000D8",
+      "statsReset": "2026-10-06T21:01:56.151035+00:00",
+      "walBytes": "475329761692",
+      "walFpi": 46217509,
+      "walRecords": 144525825
+    },
+    "before": {
+      "flushLsn": "9A/86000000",
+      "statsReset": "2026-10-06T21:01:56.151035+00:00",
+      "walBytes": "475329761528",
+      "walFpi": 46217509,
+      "walRecords": 144525823
+    },
+    "targetLsn": "9A/860000D8"
+  },
+  "heapWorkComplete": null,
+  "heapWorkCompleteLowerBound": null,
+  "heapWorkCompleteUpperBound": null,
+  "heapWorkCompletionObservedByProgress": false,
+  "heapWorkFirstProgress": "2026-10-07T08:36:02.066850270Z",
+  "heapWorkLastProgress": "2026-10-07T10:34:27.043568291Z",
+  "heapWorkStart": "2026-10-07T08:36:00.983779Z",
+  "observationEnd": "2026-10-07T12:12:15.673044477Z",
+  "postVacuumObservationError": null,
+  "primaryFlushLsnAtObservationEnd": "C0/15000000",
+  "remoteVacuumExitCode": 0,
+  "replayCaughtUp": true,
+  "replayDrainSeconds": 5861.189251809003,
+  "replayEnd": "2026-10-07T12:12:15.664417135Z",
+  "replayTargetLsn": "C0/140EBE90",
+  "replicaLagBytesAtObservationEnd": 0,
+  "replicaReplayLsnAtObservationEnd": "C0/15000000",
+  "replicationEvents": [],
+  "testComplete": true,
+  "vacuumComplete": "2026-10-07T10:34:28.321130Z",
+  "vacuumOptions": [
+    "VERBOSE",
+    "FREEZE"
+  ],
+  "vacuumSql": "VACUUM (VERBOSE, FREEZE) public.vacuum_target;",
+  "vacuumStart": "2026-10-07T08:36:00.983779Z",
+  "walAtVacuumComplete": {
+    "flushLsn": "C0/140EBE90",
+    "time": "2026-10-07T10:34:28.321130Z",
+    "walBytes": 635905026315,
+    "walFpi": 72614703,
+    "walRecords": 210245128
+  },
+  "walAtVacuumStart": {
+    "flushLsn": "9A/86000110",
+    "time": "2026-10-07T08:36:00.983779Z",
+    "walBytes": 475329761742,
+    "walFpi": 46217509,
+    "walRecords": 144525826
+  },
+  "walBeforeVacuum": {
+    "flushLsn": "9A/860000D8",
+    "statsReset": "2026-10-06T21:01:56.151035+00:00",
+    "walBytes": "475329761692",
+    "walFpi": 46217509,
+    "walRecords": 144525825
+  },
+  "walCounterDeltaFromBeforeVacuum": {
+    "walBytes": 160575264623,
+    "walFpi": 26397194,
+    "walRecords": 65719303
+  },
+  "walCounterDeltaScope": "cluster pg_stat_wal counters; includes background WAL, not physical disk writes",
+  "walCountersAfterBackendExit": {
+    "flushLsn": "C0/14101ED0",
+    "statsReset": "2026-10-06T21:01:56.151035+00:00",
+    "walBytes": "635905026315",
+    "walFpi": 72614703,
+    "walRecords": 210245128
+  }
+}

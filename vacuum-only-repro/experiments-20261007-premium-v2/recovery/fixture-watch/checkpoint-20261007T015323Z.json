@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-07T01:53:23Z",
+  "checkpoint": "20261007T015323Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "supervisorPid": 126516,
+      "childPid": 126519,
+      "activeFixturePhase": "cnpg-volume-snapshot-backup-finalizing",
+      "backup": "vacuum-backup-5c241a19",
+      "backupPhase": "finalizing",
+      "snapshotCompletion": {
+        "data": {
+          "name": "snapshot-5915d49f-e4ce-41da-b157-40e0043dcdb2",
+          "provisioningState": "Succeeded",
+          "completionPercent": 63.0,
+          "kubernetesReadyToUse": false,
+          "error": null
+        },
+        "wal": {
+          "name": "snapshot-f60780dd-a9b5-4401-a1c7-30a64acd114e",
+          "provisioningState": "Succeeded",
+          "completionPercent": 100.0,
+          "kubernetesReadyToUse": true,
+          "error": null
+        }
+      }
+    },
+    "100gib": {
+      "processStatus": "running",
+      "supervisorPid": 126517,
+      "childPid": 126518,
+      "assignedTargetHeapBytes": 107374182400,
+      "activeFixturePhase": "create-index",
+      "indexPhase": "building index: scanning table",
+      "indexBlocksDone": 8543198,
+      "indexBlocksTotal": 13107200,
+      "indexScanFraction": 0.651763916015625,
+      "activeWaits": [
+        {
+          "type": "IO",
+          "event": "DataFileRead"
+        }
+      ],
+      "stageRelationBytes": 107374182400,
+      "pod": "hdd-pg-1",
+      "podReady": true
+    }
+  }
+}

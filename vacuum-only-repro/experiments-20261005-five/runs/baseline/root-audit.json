@@ -1,0 +1,219 @@
+{
+  "auditVersion": 1,
+  "auditedAtUtc": "2026-10-05T13:57:40.321702Z",
+  "checks": {
+    "cleanup": {
+      "allAfterSnapshotsSucceeded": true,
+      "allSnapshotsPreserved": true,
+      "cleanupComplete": false,
+      "finalizationStatus": "finished",
+      "note": "Local evidence only; no Azure state query performed.",
+      "residual": [
+        "AKS control plane blocked by preservation of incremental snapshots in node RG",
+        "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-only-0aaf271768f70a4fd06a9cb05e75a4ea/providers/Microsoft.ContainerService/managedClusters/aks-vacuum-only-0aaf271768f7"
+      ],
+      "sameSnapshotIdsPreserved": true,
+      "snapshotCountAfter": 3,
+      "snapshotCountBefore": 3,
+      "snapshotIds": [
+        "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/snapshot-406392c2-75ac-4caa-b329-e620bddbf5ce",
+        "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/snapshot-c8982298-a32d-4955-a144-205ddf80a3e7",
+        "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/vacuum-copy-0aaf2717"
+      ]
+    },
+    "monitoring": {
+      "finishedAt": "2026-10-05T09:25:35.198570+00:00",
+      "followerRestarts": [],
+      "followerStderrBytes": {
+        "primary": 0,
+        "replica": 0
+      },
+      "logFiles": {
+        "primary": {
+          "actualBytes": 104606,
+          "exists": true,
+          "reportedBytes": 104606,
+          "sizeMatches": true
+        },
+        "replica": {
+          "actualBytes": 66786,
+          "exists": true,
+          "reportedBytes": 66786,
+          "sizeMatches": true
+        }
+      },
+      "replicationEventCount": 0,
+      "testStateComplete": true
+    },
+    "originalComparison": {
+      "originalReplayTailMinutes": 149.43017923333335,
+      "originalReplicaDataReadIopsVacuum": 537.3907940443858,
+      "originalReplicaPrimaryVacuumReadIopsRatio": 3.006080587050959,
+      "originalVacuumMinutes": 35.14287701666667,
+      "rawSummaryRecomputationMatchesOriginal": true,
+      "repeatReplayTailMinutes": 152.12283176666668,
+      "repeatReplicaDataReadIopsVacuum": 537.8105757448944,
+      "repeatReplicaPrimaryVacuumReadIopsRatio": 2.7712643342201218,
+      "repeatVacuumMinutes": 32.366955983333334
+    },
+    "rawCounters": {
+      "allSummaryDeviceWindowValuesMatchRecomputation": true,
+      "clusterPgStatWalRecordsAboveVacuumSqlRecordsBy": 244,
+      "coverageValidFromRawRecomputation": true,
+      "interpretation": "Marker and summary deltas match exactly. VACUUM VERBOSE operation WAL counts are lower than cluster pg_stat_wal deltas, as expected since the cluster counters include background WAL.",
+      "markerDeltaFromTiming": {
+        "walBytes": 36932319438,
+        "walFpi": 6071356,
+        "walRecords": 15115451
+      },
+      "markerDeltaMatchesTimingAndSummary": true,
+      "maximumSampleGapSeconds": 6.200135231018066,
+      "perWindowSeriesMatches": {
+        "replayDrain": {
+          "primary_data": true,
+          "primary_wal": true,
+          "replica_data": true,
+          "replica_wal": true
+        },
+        "vacuum": {
+          "primary_data": true,
+          "primary_wal": true,
+          "replica_data": true,
+          "replica_wal": true
+        },
+        "vacuumAndReplay": {
+          "primary_data": true,
+          "primary_wal": true,
+          "replica_data": true,
+          "replica_wal": true
+        }
+      },
+      "rawSamples": 2216,
+      "summarySamples": 2216,
+      "vacuumLogHasStartAndCompletionMarkers": true,
+      "vacuumSqlLogFullPageImages": 6071356,
+      "vacuumSqlLogWalRecords": 15115207
+    },
+    "reportAndGraphs": {
+      "brokenLocalLinks": [],
+      "graphs": {
+        "await.png": {
+          "bytes": 367857,
+          "exists": true,
+          "linearScaleSetInGenerator": true
+        },
+        "iops.png": {
+          "bytes": 280027,
+          "exists": true,
+          "linearScaleSetInGenerator": true
+        },
+        "throughput.png": {
+          "bytes": 339794,
+          "exists": true,
+          "linearScaleSetInGenerator": true
+        }
+      },
+      "keyReportValuesPresentAndRoundedToSummary": true,
+      "localMarkdownLinkCount": 12,
+      "reportDeclaresLinearYAxes": true,
+      "visuallyInspected": true
+    },
+    "source": {
+      "currentScriptHashes": {
+        "01-provision.sh": {
+          "matchesCurrentCanonicalSource": true,
+          "sha256": "b4321d09efc91ef88466efe713fdbf90b30f424a03583393b6e7a82cd12b9396"
+        },
+        "02-prepare.sh": {
+          "matchesCurrentCanonicalSource": true,
+          "sha256": "29ef390fdbc3418d529c755fbca34b5f2718e76f03e9b3726c6023fa75379b4c"
+        },
+        "03-test.py": {
+          "matchesCurrentCanonicalSource": true,
+          "sha256": "dab1764f2bcffa03740dde4440cc0bef7e4754e09e591fb2b5b4aa6234a37eb2"
+        },
+        "04-teardown.sh": {
+          "matchesCurrentCanonicalSource": true,
+          "sha256": "e27e5a582a91d3f693deab7a7d348e3b41e861cc2705d91c94246ff6fb9a4889"
+        },
+        "plot.py": {
+          "matchesCurrentCanonicalSource": true,
+          "sha256": "d0ac35439ba17dcfe6f50e9484dd12274575755451258d82d7b12210c91317ec"
+        }
+      },
+      "executionTimeScriptHashManifestPresent": false,
+      "measurementImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+      "measurementImageDigestPinnedInPrepareScriptPrepareStateAndPreflight": true,
+      "note": "The image digest is saved and consistent. No historical script-hash manifest was found; current experiment copies match current canonical source byte-for-byte, which does not attest what ran at execution time.",
+      "sourceSnapshotIdEqualsRetainedKeeperSnapshotId": true
+    },
+    "workloadAndCatchup": {
+      "allRawApplicationSessionChecksZero": true,
+      "catchupEventConsecutiveSamples": 3,
+      "catchupEventTime": "2026-10-05T09:25:31.449889982Z",
+      "completionTargetLsn": "56/F43BA628",
+      "finalLagBytes": 0,
+      "finalPrimaryFlushLsn": "56/F5000000",
+      "finalReplicaReplayLsn": "56/F5000000",
+      "finalThreeRawSamples": [
+        {
+          "lsnsEqual": true,
+          "primaryAppSessions": 0,
+          "primaryFlushLsn": "56/F5000000",
+          "primarySampleUtc": "2026-10-05T09:25:21.410007316Z",
+          "replicaAppSessions": 0,
+          "replicaReplayLsn": "56/F5000000",
+          "replicaSampleUtc": "2026-10-05T09:25:21.382593185Z"
+        },
+        {
+          "lsnsEqual": true,
+          "primaryAppSessions": 0,
+          "primaryFlushLsn": "56/F5000000",
+          "primarySampleUtc": "2026-10-05T09:25:26.508798345Z",
+          "replicaAppSessions": 0,
+          "replicaReplayLsn": "56/F5000000",
+          "replicaSampleUtc": "2026-10-05T09:25:26.539438016Z"
+        },
+        {
+          "lsnsEqual": true,
+          "primaryAppSessions": 0,
+          "primaryFlushLsn": "56/F5000000",
+          "primarySampleUtc": "2026-10-05T09:25:31.397981305Z",
+          "replicaAppSessions": 0,
+          "replicaReplayLsn": "56/F5000000",
+          "replicaSampleUtc": "2026-10-05T09:25:31.449889982Z"
+        }
+      ],
+      "remoteVacuumExitCode": 0,
+      "replayCaughtUp": true,
+      "replayEnd": "2026-10-05T09:25:31.449889982Z",
+      "replayTailSeconds": 9127.369906,
+      "testState": {
+        "error": null,
+        "output": "${PROJECT_ROOT}/experiments/20261005-four/baseline/results/20261005T062051Z",
+        "phase": "complete",
+        "replayCaughtUp": true,
+        "runId": "20261005T062051Z",
+        "testComplete": true,
+        "updatedAt": "2026-10-05T09:25:34.782Z"
+      },
+      "vacuumComplete": "2026-10-05T06:53:24.079983Z",
+      "vacuumDurationSeconds": 1942.017359,
+      "vacuumSql": "VACUUM (VERBOSE, FREEZE) public.vacuum_target;",
+      "vacuumStart": "2026-10-05T06:21:02.062624Z"
+    }
+  },
+  "discrepanciesOrCaveats": [
+    "No execution-time script hash manifest is saved. Current files hash-identically match today\u2019s canonical files; the saved PostgreSQL image digest agrees across script, prepare state, and preflight.",
+    "Cleanup is explicitly incomplete: local finalization and cleanup result list the AKS managed cluster/control plane as remaining because node-RG incremental snapshots were preserved.",
+    "timing.json observationEnd precedes replayEnd/catch-up by about 52 ms; report and summary windows consistently use replayEnd.",
+    "The headline phrase \u201cPrimary-to-replica DATA read amplification\u201d is less precise than \u201creplica/primary DATA read IOPS ratio\u201d; reported 2.77x matches the summary."
+  ],
+  "overall": "Measurements independently reconcile. Cleanup artifacts record an outstanding AKS managed-cluster resource.",
+  "scope": {
+    "readOnlyExceptThisAuditFile": true,
+    "reportPath": "${PROJECT_ROOT}/experiments/20261005-four/baseline/REPORT.md",
+    "resultPath": "${PROJECT_ROOT}/experiments/20261005-four/baseline/results/20261005T062051Z",
+    "run": "20261005T062051Z"
+  }
+}

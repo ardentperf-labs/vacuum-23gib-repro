@@ -1,0 +1,17 @@
+{
+  "review": "root source review plus independent Luna review; local dry-run and syntax passed",
+  "helper": "run/recovery/seed-replica-and-finalize.py",
+  "sha256": "b3e80497e8d798124cf21b88f9977cb121d5fe787a2e37d814c96bf985eac2c2",
+  "cloudMutationAuthorizedBy": "User snapshot-based baseline repeat; owned preparation continuation",
+  "controls": [
+    "existing completed offline Backup UID and existing paired snapshot UID/source disk pins",
+    "source snapshots uniqueId + direct locks unchanged",
+    "separate archive writer serverName; WAL-only verification",
+    "exact snapshot-recovery job and VolumeSnapshot PVC lineage",
+    "four 512-GiB PremiumV2_LRS 3000 IOPS/125 MB/s Copy disks numeric100",
+    "no client/fixture DML before measurement; writer/reader/Secret absent at final audit",
+    "original failed preparation and restore attempts retained; root durable seed receipt"
+  ],
+  "runtimeNote": "Idle primary required a recorded CHECKPOINT plus WAL switch for a new WAL segment; executed helper was not edited",
+  "failureBoundary": "Post-scale failures preserve resources/evidence for root review"
+}

@@ -1,0 +1,62 @@
+{
+    "apiVersion": "postgresql.cnpg.io/v1",
+    "kind": "Backup",
+    "metadata": {
+        "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"postgresql.cnpg.io/v1\",\"kind\":\"Backup\",\"metadata\":{\"annotations\":{},\"labels\":{\"repro.stack.token\":\"804391dc0a7b56b597915163951aed1a\"},\"name\":\"vacuum-backup-804391dc\",\"namespace\":\"repro\"},\"spec\":{\"cluster\":{\"name\":\"hdd-pg\"},\"method\":\"volumeSnapshot\",\"online\":true,\"onlineConfiguration\":{\"immediateCheckpoint\":false,\"waitForArchive\":true}}}\n"
+        },
+        "creationTimestamp": "2026-10-04T13:48:14Z",
+        "generation": 1,
+        "labels": {
+            "repro.stack.token": "804391dc0a7b56b597915163951aed1a"
+        },
+        "name": "vacuum-backup-804391dc",
+        "namespace": "repro",
+        "resourceVersion": "17704",
+        "uid": "ad53ec59-c49c-400d-8e9f-fbbf3b9f2535"
+    },
+    "spec": {
+        "cluster": {
+            "name": "hdd-pg"
+        },
+        "method": "volumeSnapshot",
+        "online": true,
+        "onlineConfiguration": {
+            "immediateCheckpoint": false,
+            "waitForArchive": true
+        }
+    },
+    "status": {
+        "backupId": "vacuum-backup-804391dc",
+        "backupLabelFile": "U1RBUlQgV0FMIExPQ0FUSU9OOiAzNy84RDAwMDAyOCAoZmlsZSAwMDAwMDAwMTAwMDAwMDM3MDAwMDAwOEQpCkNIRUNLUE9JTlQgTE9DQVRJT046IDM3LzhEMDAwMDYwCkJBQ0tVUCBNRVRIT0Q6IHN0cmVhbWVkCkJBQ0tVUCBGUk9NOiBwcmltYXJ5ClNUQVJUIFRJTUU6IDIwMjYtMTAtMDQgMTM6NDg6MTQgVVRDCkxBQkVMOiB2YWN1dW0tYmFja3VwLTgwNDM5MWRjClNUQVJUIFRJTUVMSU5FOiAxCg==",
+        "backupName": "vacuum-backup-804391dc",
+        "beginLSN": "37/8D000028",
+        "beginWal": "00000001000000370000008D",
+        "endLSN": "37/8D000138",
+        "endWal": "00000001000000370000008D",
+        "instanceID": {
+            "ContainerID": "containerd://ac40fec5a47924ed842cee9c003b770cf8a26d85f4c05994660cdf6f3c240bf7",
+            "podName": "hdd-pg-1"
+        },
+        "majorVersion": 16,
+        "method": "volumeSnapshot",
+        "online": true,
+        "phase": "completed",
+        "reconciliationStartedAt": "2026-10-04T13:48:14Z",
+        "reconciliationTerminatedAt": "2026-10-04T13:48:36Z",
+        "snapshotBackupStatus": {
+            "elements": [
+                {
+                    "name": "vacuum-backup-804391dc-wal",
+                    "type": "PG_WAL"
+                },
+                {
+                    "name": "vacuum-backup-804391dc",
+                    "type": "PG_DATA"
+                }
+            ]
+        },
+        "startedAt": "2026-10-04T13:48:14Z",
+        "stoppedAt": "2026-10-04T13:48:36Z"
+    }
+}

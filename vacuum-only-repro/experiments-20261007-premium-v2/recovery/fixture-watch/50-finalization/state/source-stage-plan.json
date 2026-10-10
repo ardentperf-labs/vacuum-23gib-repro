@@ -1,0 +1,53 @@
+{
+  "mode": "--apply",
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-16244c2c",
+  "sourceSnapshotUniqueId": "5ba409da-55b4-4e77-a47f-346ccc7b44ff",
+  "stagingDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/restore-stage-5c241a19-4b554415",
+  "ownedIncrementalSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/snapshots/keeper-pv2-5c241a19-4b554415",
+  "location": "westus3",
+  "availabilityZone": "1",
+  "ownerToken": "5c241a190a85f40b788038945c9744f6",
+  "resourceSuffix": "4b554415",
+  "sourceSnapshotMetadata": {
+    "completionPercent": 100.0,
+    "creationData": {
+      "createOption": "CopyStart",
+      "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c",
+      "sourceUniqueId": "5ba7640c-4e34-4227-be0d-d428baeaf2cf"
+    },
+    "diskSizeBytes": 549755813888,
+    "diskSizeGB": 512,
+    "diskState": "Unattached",
+    "encryption": {
+      "type": "EncryptionAtRestWithPlatformKey"
+    },
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-16244c2c",
+    "incremental": true,
+    "incrementalSnapshotFamilyId": "b043315b-9213-4ac5-82c1-5da40d88f3fc",
+    "location": "westus3",
+    "name": "keeper-16244c2c",
+    "networkAccessPolicy": "DenyAll",
+    "provisioningState": "Succeeded",
+    "publicNetworkAccess": "Disabled",
+    "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+    "sku": {
+      "name": "Standard_LRS",
+      "tier": "Standard"
+    },
+    "snapshotAccessState": "Available",
+    "tags": {
+      "reproPurpose": "regional-prepared-source",
+      "reprotoken": "16244c2c1353a0fc1b108ec455fd70c8"
+    },
+    "timeCreated": "2026-10-05T05:34:53.8922367+00:00",
+    "type": "Microsoft.Compute/snapshots",
+    "uniqueId": "5ba409da-55b4-4e77-a47f-346ccc7b44ff"
+  },
+  "mutationPlan": [
+    "Create a Standard_LRS 512-GiB disk from the allowlisted incremental snapshot in the owned node resource group",
+    "Create an incremental Copy snapshot of that disk in the owned retained-snapshot resource group",
+    "Apply and verify a CanNotDelete lock directly on the new snapshot"
+  ],
+  "existingResourcesChanged": []
+}

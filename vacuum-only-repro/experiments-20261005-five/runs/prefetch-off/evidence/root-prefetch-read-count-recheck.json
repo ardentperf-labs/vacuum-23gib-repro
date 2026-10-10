@@ -1,0 +1,85 @@
+{
+  "causality": "The low measured DATA read ratio is verified; FPI-based page restoration and caches can avoid disk reads, but their contribution and the effect of recovery_prefetch are not isolated by this cross-region experiment.",
+  "checkedAtUtc": "2026-10-06T03:54:50.713075+00:00",
+  "estimatedWindowOperations": {
+    "definition": "Estimated total replica DATA completed reads / estimated total primary DATA completed reads; averages multiplied by wall-clock window durations. Replica interval includes replay concurrent with primary VACUUM and its later tail.",
+    "primary": {
+      "averageReadIops": 243.8116505547938,
+      "durationSeconds": 1545.340077,
+      "estimatedReadOperations": 376771.91484184214,
+      "window": "primary VACUUM"
+    },
+    "ratio": 0.0008917477727123105,
+    "replica": {
+      "averageReadIops": 0.21562847672757232,
+      "durationSeconds": 1558.168573,
+      "estimatedReadOperations": 335.98551588076504,
+      "window": "VACUUM start through verified full replica catchup"
+    }
+  },
+  "meaning": "Guest completed block DATA reads only, not logical PostgreSQL page accesses or DATA writes. The unclipped span starts before VACUUM and contains 339 replica DATA reads; interpolating to the VACUUM-start-through-catch-up markers estimates 336 reads. WAL is independently mapped to the other LUN and has 93,734 captured reads.",
+  "primary": {
+    "data": {
+      "allCountersMonotonic": true,
+      "finalReadCounter": 978957,
+      "initialReadCounter": 601927,
+      "lun": 0,
+      "majorMinor": "8:16",
+      "pv": "pvc-a4aaa041-02e0-4924-831d-0a62a37b8507",
+      "readBytes": 49232207872,
+      "source": "/dev/sdb",
+      "stableMapping": true,
+      "unclippedCapturedReadOperations": 377030,
+      "writeBytes": 49764495360,
+      "writeOperations": 55857
+    },
+    "wal": {
+      "allCountersMonotonic": true,
+      "finalReadCounter": 2219,
+      "initialReadCounter": 2213,
+      "lun": 1,
+      "majorMinor": "8:32",
+      "pv": "pvc-dcee1d34-1e20-42c3-a5a5-1702dcbdb7f7",
+      "readBytes": 643072,
+      "source": "/dev/sdc",
+      "stableMapping": true,
+      "unclippedCapturedReadOperations": 6,
+      "writeBytes": 38994321408,
+      "writeOperations": 204121
+    }
+  },
+  "rawSha256": "d0450fe2eeabee3ec841a58232f92c6a2f72fe85db8db44bf1b6bede1a3beafc",
+  "replica": {
+    "data": {
+      "allCountersMonotonic": true,
+      "finalReadCounter": 5060,
+      "initialReadCounter": 4721,
+      "lun": 0,
+      "majorMinor": "8:32",
+      "pv": "pvc-199b4169-1be7-47fb-8cee-129e0a2ce6e1",
+      "readBytes": 14475264,
+      "source": "/dev/sdc",
+      "stableMapping": true,
+      "unclippedCapturedReadOperations": 339,
+      "writeBytes": 49531342848,
+      "writeOperations": 67782
+    },
+    "wal": {
+      "allCountersMonotonic": true,
+      "finalReadCounter": 97447,
+      "initialReadCounter": 3713,
+      "lun": 1,
+      "majorMinor": "8:16",
+      "pv": "pvc-6d7a8c1e-9715-4926-b03a-a745ad592af8",
+      "readBytes": 423215104,
+      "source": "/dev/sdb",
+      "stableMapping": true,
+      "unclippedCapturedReadOperations": 93734,
+      "writeBytes": 49228558336,
+      "writeOperations": 177411
+    }
+  },
+  "sampleCount": 314,
+  "status": "passed-independent-raw-read-count-check",
+  "threeHealthyFullCatchupSamples": true
+}

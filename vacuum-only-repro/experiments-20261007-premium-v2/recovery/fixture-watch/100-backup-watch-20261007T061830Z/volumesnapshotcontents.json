@@ -1,0 +1,122 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "snapshot.storage.k8s.io/v1",
+            "kind": "VolumeSnapshotContent",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T06:11:46Z",
+                "finalizers": [
+                    "snapshot.storage.kubernetes.io/volumesnapshotcontent-bound-protection"
+                ],
+                "generation": 1,
+                "name": "snapcontent-604b8cee-1a94-4df6-b846-be245038a795",
+                "resourceVersion": "266889",
+                "uid": "46dcf188-df95-4561-a4ef-23bd0d7fb416"
+            },
+            "spec": {
+                "deletionPolicy": "Retain",
+                "driver": "disk.csi.azure.com",
+                "source": {
+                    "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1"
+                },
+                "sourceVolumeMode": "Filesystem",
+                "volumeSnapshotClassName": "vacuum-backup-snap-f1b90aec",
+                "volumeSnapshotRef": {
+                    "apiVersion": "snapshot.storage.k8s.io/v1",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-backup-f1b90aec",
+                    "namespace": "repro",
+                    "resourceVersion": "264729",
+                    "uid": "604b8cee-1a94-4df6-b846-be245038a795"
+                }
+            },
+            "status": {
+                "creationTime": 1791353507413148900,
+                "readyToUse": false,
+                "restoreSize": 549755813888,
+                "snapshotHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795"
+            }
+        },
+        {
+            "apiVersion": "snapshot.storage.k8s.io/v1",
+            "kind": "VolumeSnapshotContent",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T06:11:46Z",
+                "finalizers": [
+                    "snapshot.storage.kubernetes.io/volumesnapshotcontent-bound-protection"
+                ],
+                "generation": 1,
+                "name": "snapcontent-ebeff553-ca6f-487c-8517-e803b02337ca",
+                "resourceVersion": "266910",
+                "uid": "61bc9a55-1e2a-40cc-905c-d74058149dae"
+            },
+            "spec": {
+                "deletionPolicy": "Retain",
+                "driver": "disk.csi.azure.com",
+                "source": {
+                    "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632"
+                },
+                "sourceVolumeMode": "Filesystem",
+                "volumeSnapshotClassName": "vacuum-backup-snap-f1b90aec",
+                "volumeSnapshotRef": {
+                    "apiVersion": "snapshot.storage.k8s.io/v1",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-backup-f1b90aec-wal",
+                    "namespace": "repro",
+                    "resourceVersion": "264736",
+                    "uid": "ebeff553-ca6f-487c-8517-e803b02337ca"
+                }
+            },
+            "status": {
+                "creationTime": 1791353507417243300,
+                "readyToUse": false,
+                "restoreSize": 549755813888,
+                "snapshotHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca"
+            }
+        },
+        {
+            "apiVersion": "snapshot.storage.k8s.io/v1",
+            "kind": "VolumeSnapshotContent",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"snapshot.storage.k8s.io/v1\",\"kind\":\"VolumeSnapshotContent\",\"metadata\":{\"annotations\":{},\"labels\":{\"repro.stack.token\":\"f1b90aec9e24f6a2008d6991738742cf\"},\"name\":\"vacuum-content-f1b90aec\"},\"spec\":{\"deletionPolicy\":\"Retain\",\"driver\":\"disk.csi.azure.com\",\"source\":{\"snapshotHandle\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376\"},\"volumeSnapshotClassName\":\"vacuum-snap-f1b90aec\",\"volumeSnapshotRef\":{\"kind\":\"VolumeSnapshot\",\"name\":\"vacuum-data-f1b90aec\",\"namespace\":\"repro\"}}}\n"
+                },
+                "creationTimestamp": "2026-10-06T20:54:08Z",
+                "finalizers": [
+                    "snapshot.storage.kubernetes.io/volumesnapshotcontent-bound-protection"
+                ],
+                "generation": 2,
+                "labels": {
+                    "repro.stack.token": "f1b90aec9e24f6a2008d6991738742cf"
+                },
+                "name": "vacuum-content-f1b90aec",
+                "resourceVersion": "89570",
+                "uid": "db2a1753-dee1-4b1f-ae96-c0838bc6144f"
+            },
+            "spec": {
+                "deletionPolicy": "Retain",
+                "driver": "disk.csi.azure.com",
+                "source": {
+                    "snapshotHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376"
+                },
+                "volumeSnapshotClassName": "vacuum-snap-f1b90aec",
+                "volumeSnapshotRef": {
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-data-f1b90aec",
+                    "namespace": "repro",
+                    "uid": "54bbd81a-6dcf-4115-bfae-970daeb17380"
+                }
+            },
+            "status": {
+                "creationTime": 1791320048485899397,
+                "readyToUse": true,
+                "snapshotHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

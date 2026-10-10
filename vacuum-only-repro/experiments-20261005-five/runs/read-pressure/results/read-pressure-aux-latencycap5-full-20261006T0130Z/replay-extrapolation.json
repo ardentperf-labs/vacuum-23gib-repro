@@ -1,0 +1,40 @@
+{
+  "caveat": "Assumes unchanged recent rate through remaining WAL. Rate can vary with WAL records, disk behavior, restartpoints and reconnect; these are projections, not measured finish times.",
+  "projections": [
+    {
+      "actualWindowSeconds": 300.0121397972107,
+      "estimatedAdditionalReplayHoursAtThisRate": 154.19583880708169,
+      "estimatedTotalReplayHoursFromVacuumStartAtThisRate": 157.18989915244,
+      "requestedWindowSeconds": 300,
+      "walBytesPerSecond": 62453.44609276442,
+      "walBytesReplayed": 18736792
+    },
+    {
+      "actualWindowSeconds": 900.0124070644379,
+      "estimatedAdditionalReplayHoursAtThisRate": 156.7089314223882,
+      "estimatedTotalReplayHoursFromVacuumStartAtThisRate": 159.7029917677465,
+      "requestedWindowSeconds": 900,
+      "walBytesPerSecond": 61451.899513692115,
+      "walBytesReplayed": 55307472
+    },
+    {
+      "actualWindowSeconds": 1805.0058341026306,
+      "estimatedAdditionalReplayHoursAtThisRate": 151.04346171793728,
+      "estimatedTotalReplayHoursFromVacuumStartAtThisRate": 154.0375220632956,
+      "requestedWindowSeconds": 1800,
+      "walBytesPerSecond": 63756.89087853474,
+      "walBytesReplayed": 115081560
+    },
+    {
+      "actualWindowSeconds": 3605.0201778411865,
+      "estimatedAdditionalReplayHoursAtThisRate": 142.09961007720568,
+      "estimatedTotalReplayHoursFromVacuumStartAtThisRate": 145.093670422564,
+      "requestedWindowSeconds": 3600,
+      "walBytesPerSecond": 67769.79543740094,
+      "walBytesReplayed": 244311480
+    }
+  ],
+  "rawSamplesSha256": "72bbca6f1825deab40c6e482b244d20137c7d0de7e2af93bbf104c664caa462a",
+  "remainingWalAddressBytesAtStop": 34668221424,
+  "status": "rate-conditioned-projections-only"
+}

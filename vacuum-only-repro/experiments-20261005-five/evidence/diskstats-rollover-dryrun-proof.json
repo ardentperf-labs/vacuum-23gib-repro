@@ -1,0 +1,524 @@
+{
+  "100GiB": {
+    "allThreeWindowsFourDevicesSixReadWriteMetricsMatchSavedCorrectedSummary": true,
+    "events": [
+      {
+        "afterTime": "2026-10-05T19:16:49.750639493Z",
+        "afterValue": 746023,
+        "beforeTime": "2026-10-05T19:16:44.857071449Z",
+        "beforeValue": 4294833901,
+        "correctedAwaitMsPerOperation": 333.99848082035703,
+        "correctedDelta": 879418,
+        "counter": "rm",
+        "deltaOperations": 2633,
+        "deltaSecondaryCounter": 42240,
+        "device": "data",
+        "majorMinor": "8:16",
+        "maximumPlausibleDeltaMs": 3092667.194366455,
+        "previousRowIndex": 4444,
+        "queueDepthBound": 316,
+        "rawDelta": -4294087878,
+        "role": "replica",
+        "rowIndex": 4445,
+        "seconds": 4.893460750579834
+      },
+      {
+        "afterTime": "2026-10-06T01:56:14.684461741Z",
+        "afterValue": 101766,
+        "beforeTime": "2026-10-06T01:56:09.823599665Z",
+        "beforeValue": 4294226385,
+        "correctedAwaitMsPerOperation": 318.47203325774757,
+        "correctedDelta": 842677,
+        "counter": "rm",
+        "deltaOperations": 2646,
+        "deltaSecondaryCounter": 42336,
+        "device": "data",
+        "majorMinor": "8:16",
+        "maximumPlausibleDeltaMs": 3072079.8625946045,
+        "previousRowIndex": 9237,
+        "queueDepthBound": 316,
+        "rawDelta": -4294124619,
+        "role": "replica",
+        "rowIndex": 9238,
+        "seconds": 4.860885858535767
+      }
+    ],
+    "expectedPriorCorrectionEventsMatchedExactly": true,
+    "input": "100gib/results/100gib-20261005T130618Z/samples.jsonl",
+    "metricChecks": [
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "readIops",
+        "window": "vacuum"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "readMBps",
+        "window": "vacuum"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "readAwaitMs",
+        "window": "vacuum"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "writeIops",
+        "window": "vacuum"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "writeMBps",
+        "window": "vacuum"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "writeAwaitMs",
+        "window": "vacuum"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "readIops",
+        "window": "vacuum"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "readMBps",
+        "window": "vacuum"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "readAwaitMs",
+        "window": "vacuum"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "writeIops",
+        "window": "vacuum"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "writeMBps",
+        "window": "vacuum"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "writeAwaitMs",
+        "window": "vacuum"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "readIops",
+        "window": "vacuum"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "readMBps",
+        "window": "vacuum"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "readAwaitMs",
+        "window": "vacuum"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "writeIops",
+        "window": "vacuum"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "writeMBps",
+        "window": "vacuum"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "writeAwaitMs",
+        "window": "vacuum"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "readIops",
+        "window": "vacuum"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "readMBps",
+        "window": "vacuum"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "readAwaitMs",
+        "window": "vacuum"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "writeIops",
+        "window": "vacuum"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "writeMBps",
+        "window": "vacuum"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "writeAwaitMs",
+        "window": "vacuum"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "readIops",
+        "window": "replayDrain"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "readMBps",
+        "window": "replayDrain"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "readAwaitMs",
+        "window": "replayDrain"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "writeIops",
+        "window": "replayDrain"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "writeMBps",
+        "window": "replayDrain"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "writeAwaitMs",
+        "window": "replayDrain"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "readIops",
+        "window": "replayDrain"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "readMBps",
+        "window": "replayDrain"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "readAwaitMs",
+        "window": "replayDrain"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "writeIops",
+        "window": "replayDrain"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "writeMBps",
+        "window": "replayDrain"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "writeAwaitMs",
+        "window": "replayDrain"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "readIops",
+        "window": "replayDrain"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "readMBps",
+        "window": "replayDrain"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "readAwaitMs",
+        "window": "replayDrain"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "writeIops",
+        "window": "replayDrain"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "writeMBps",
+        "window": "replayDrain"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "writeAwaitMs",
+        "window": "replayDrain"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "readIops",
+        "window": "replayDrain"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "readMBps",
+        "window": "replayDrain"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "readAwaitMs",
+        "window": "replayDrain"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "writeIops",
+        "window": "replayDrain"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "writeMBps",
+        "window": "replayDrain"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "writeAwaitMs",
+        "window": "replayDrain"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "readIops",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "readMBps",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "readAwaitMs",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "writeIops",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "writeMBps",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "primary_data",
+        "matches": true,
+        "metric": "writeAwaitMs",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "readIops",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "readMBps",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "readAwaitMs",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "writeIops",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "writeMBps",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "primary_wal",
+        "matches": true,
+        "metric": "writeAwaitMs",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "readIops",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "readMBps",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "readAwaitMs",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "writeIops",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "writeMBps",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "replica_data",
+        "matches": true,
+        "metric": "writeAwaitMs",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "readIops",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "readMBps",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "readAwaitMs",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "writeIops",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "writeMBps",
+        "window": "vacuumAndReplay"
+      },
+      {
+        "device": "replica_wal",
+        "matches": true,
+        "metric": "writeAwaitMs",
+        "window": "vacuumAndReplay"
+      }
+    ],
+    "metricComparisonTolerance": "rel_tol=1e-12, abs_tol=1e-12",
+    "normalizerStatus": "passed-with-corrections",
+    "plotAnalyzeCoverageValid": true,
+    "rawSha256BeforeAndAfter": "acf37b109194529e8c68b66555eaf60aed5404e8e0d71d1b39c7d72a4852875d",
+    "rawUnchanged": true,
+    "rejectionCount": 0,
+    "rowCount": 9721
+  },
+  "activePressureSnapshot": {
+    "acceptedWrapEvents": 0,
+    "input": "read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/samples.jsonl",
+    "normalizerStatus": "passed-no-corrections",
+    "note": "One immutable byte snapshot of the live run file was read into memory; the file may continue to append after this audit.",
+    "rejections": [],
+    "snapshotByteCount": 10307099,
+    "snapshotRowCount": 1428,
+    "snapshotSha256BeforeAndAfter": "5c76866009c97d1276b793cf3d8b737a781b12e55eb767454a6a93c2eb5421f8",
+    "snapshotUnchanged": true
+  },
+  "createdAtUtc": "2026-10-06T03:30:10Z",
+  "helperPath": "diskstats_rollover.py",
+  "helperSha256": "17975514a3a0e25f221a3e759c6f62457e30806bde23644b7fd29f9e5db9f2c4",
+  "schemaVersion": 1,
+  "scope": "The helper is isolated from measurement collectors and active pressure sources. All normalization used in-memory row copies. No raw sample, run summary, graph, or experiment configuration was written.",
+  "status": "passed-offline-in-memory-dry-run",
+  "testPath": "test_diskstats_rollover.py",
+  "testSha256": "a2166dda13f65e1c27feb310013f6fe05730481ad92007683490d3183d2557e1",
+  "tests": {
+    "cases": [
+      "valid rm wrap",
+      "valid wm wrap",
+      "simultaneous rm/wm wraps",
+      "ordinary reset rejected",
+      "changed device identity rejected",
+      "long sample gap rejected",
+      "operation/sector counter reset rejected",
+      "implausible modulo delta rejected"
+    ],
+    "command": "python3 -m unittest -v experiments/20261005-four/test_diskstats_rollover.py",
+    "failed": 0,
+    "passed": 8
+  }
+}

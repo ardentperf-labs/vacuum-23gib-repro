@@ -1,0 +1,114 @@
+{
+  "artifacts": {
+    "calibrationResult": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm-latencycap-5--20261006T004632Z/reader-calibration.json",
+    "controllerSummary": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm-latencycap-5-controller-20261006T004632Z/controller-summary.json",
+    "queueApply": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm-latencycap-5-controller-20261006T004632Z/queue-apply.json",
+    "queueRestoreFiles": [
+      "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm-latencycap-5-controller-20261006T004632Z/restore-async-256.json",
+      "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm-latencycap-5-controller-20261006T004632Z/verify-async-256-under-mq.json",
+      "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm-latencycap-5-controller-20261006T004632Z/restore-default-none-316.json",
+      "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm-latencycap-5-controller-20261006T004632Z/queue-final-readback.json"
+    ],
+    "rawSamples": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm-latencycap-5--20261006T004632Z/raw-disk-replay-checkpointer-samples.jsonl",
+    "readerLogs": [
+      "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm-latencycap-5--20261006T004632Z/reader-logs/read-pressure-16244c2c-cal-5-ef32.jsonl"
+    ],
+    "readerPlan": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm-latencycap-5--20261006T004632Z/reader-plan.json",
+    "validation": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm-latencycap-5--20261006T004632Z/auxiliary-arm-validation.json"
+  },
+  "auditStatus": "positive_bounded_latency_calibration_independent_audit",
+  "auditedAtUtc": "2026-10-06T00:51:56.046441+00:00",
+  "completionClaimPending": true,
+  "isFinalFullExperiment": false,
+  "limitations": [
+    "This was a 91-second bounded calibration during post-abort replay tail, not the requested full 23-GiB VACUUM run. Primary flush LSN was stable; replica replay advanced 34.55 MB with a positive ~26.7-GB backlog. Do not present it as VACUUM-overlap evidence or full-experiment completion.",
+    "Whole-device read-await is the acceptance metric; reader native-AIO operation latency is reported separately (1.668s weighted, 2.594s maximum single-worker operation)."
+  ],
+  "measurement": {
+    "allIntervalsAtOrAbove1500ms": true,
+    "bytesPerReadOperation": 838510.8912049734,
+    "elapsedSeconds": 91.11010217666626,
+    "independentlyRecomputedOperationWeightedGuestDataReadAwaitMs": 1675.9349058328762,
+    "intervalCount": 15,
+    "maxIntervalGuestAwaitMs": 1793.0707395498391,
+    "maxIntervalSeconds": 6.5418219566345215,
+    "measurementAppSessionsAllZero": true,
+    "queueGeometryHeldForAllInWindowSamples": true,
+    "rawReadMilliseconds": 18331376,
+    "rawReadOperations": 10938,
+    "readIops": 120.05254893459306,
+    "readMBps": 100.66536979857432,
+    "replicaCombinedReadMBps": 101.04372450542293,
+    "replicaCombinedWriteMBps": 0.46183910449807875,
+    "replicaDataWriteIops": 1.4268450687051653,
+    "replicaDataWriteMBps": 0.46147945173491467,
+    "replicaWalWriteIops": 0.06585438778639224,
+    "replicaWalWriteMBps": 0.00035965276316408354,
+    "reportedAwaitMs": 1675.9349058328762,
+    "secondsAtOrAbove1500ms": 91.11010217666626,
+    "secondsAtOrAbove2000ms": 0,
+    "usableIntervals": 15,
+    "windowEnd": "2026-10-06T00:48:48.155504123Z",
+    "windowStart": "2026-10-06T00:47:17.045063992Z"
+  },
+  "queue": {
+    "async256VerifiedUnderMq": true,
+    "cleanupReadbacksPassed": true,
+    "device": "8:16 /dev/sdb LUN0",
+    "during": {
+      "asyncDepth": 512,
+      "hardwareQueueDepth": 316,
+      "hctxTags": [
+        316,
+        316
+      ],
+      "maxHwSectorsKb": 2048,
+      "maxSectorsKb": 1280,
+      "nrRequests": 1024,
+      "scheduler": "mq-deadline"
+    },
+    "queueBefore": {
+      "maxHwSectorsKb": 2048,
+      "maxSectorsKb": 1280,
+      "nrRequests": 316,
+      "scheduler": "[none] mq-deadline ",
+      "scsiDeviceQueueDepth": 316
+    },
+    "readerPodsAndConfigMapsAbsent": true,
+    "restoredDefaultQueue": true,
+    "treatmentWasStandbyDataOnly": true
+  },
+  "reader": {
+    "allFiveExitedWithPositiveReads": true,
+    "cleanExitEvents": 5,
+    "dataTreatment": "1MiB O_DIRECT native-AIO reads over four exact token-owned files outside PGDATA on read-only DATA PVC",
+    "maxSingleWorkerReadLatencyMs": 2593.566886,
+    "operationWeightedMeanReadLatencyMsFromExitEvents": 1667.7757237744304,
+    "readBytes": 9571401728,
+    "readErrors": 0,
+    "readOps": 9128,
+    "readyEvents": 5,
+    "recordedMeanReadLatencyMs": 1667.7757237744304,
+    "requestedProcesses": 5
+  },
+  "replay": {
+    "backlogEndBytes": 26681806024,
+    "backlogStartBytes": 26716358952,
+    "positiveBacklogAtBothEnds": true,
+    "rawProgressRowsInsideWindow": 16,
+    "replayAdvancedBytes": 34552928,
+    "replayLsnEnd": "50/C3A3F338",
+    "replayLsnStart": "50/C194B6D8",
+    "replicaDataWritesAndWALWrites": {
+      "dataIops": 1.4268450687051653,
+      "walIops": 0.06585438778639224
+    },
+    "telemetryErrors": 0
+  },
+  "sourceHashes": {
+    "calibrationHelperReviewed": "e0104e98c90832f2474fb4e75cc658415f66c328be2c2027f92c375411a7dad0",
+    "controllerReviewed": "a4ab33e745654e08038e97eda8e9fa9aa3d24aad0da57f0507020e1b5bd10597",
+    "coreReadPressurePy": null,
+    "helperHashRecordedByController": "e0104e98c90832f2474fb4e75cc658415f66c328be2c2027f92c375411a7dad0"
+  }
+}

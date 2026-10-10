@@ -1,0 +1,69 @@
+{
+  "finishedAt": "2026-10-06T04:30:07.927415+00:00",
+  "followerRestarts": [],
+  "logFiles": {
+    "primary": {
+      "bytes": 106531,
+      "path": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/monitoring/primary-postgres-live.log"
+    },
+    "replica": {
+      "bytes": 6912,
+      "path": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/monitoring/replica-postgres-live.log"
+    }
+  },
+  "measurementWindow": {
+    "end": null,
+    "start": null
+  },
+  "replicationEvents": {
+    "events": [
+      {
+        "applicationName": "hdd-pg-2",
+        "backendType": "walsender",
+        "event": "sender_timeout",
+        "message": "terminating walsender process due to replication timeout",
+        "processId": "115",
+        "role": "primary",
+        "sessionId": "6ac44954.73",
+        "time": "2026-10-06T01:30:59.633759839Z"
+      },
+      {
+        "applicationName": "hdd-pg-2",
+        "backendType": "walsender",
+        "event": "sender_timeout",
+        "message": "terminating walsender process due to replication timeout",
+        "processId": "4467",
+        "role": "primary",
+        "sessionId": "6ac44fed.1173",
+        "time": "2026-10-06T01:38:59.30177602Z"
+      },
+      {
+        "backendType": "walreceiver",
+        "event": "receiver_connected",
+        "message": "started streaming WAL from primary at 4E/8A000000 on timeline 1",
+        "processId": "4401",
+        "role": "replica",
+        "sessionId": "6ac44fed.1131",
+        "time": "2026-10-06T01:33:33.513672782Z"
+      },
+      {
+        "backendType": "walreceiver",
+        "event": "receiver_disconnect",
+        "message": "could not receive data from WAL stream: SSL error: unexpected eof while reading",
+        "processId": "4401",
+        "role": "replica",
+        "sessionId": "6ac44fed.1131",
+        "time": "2026-10-06T01:39:00.681811512Z"
+      }
+    ],
+    "total": 4
+  },
+  "startedAt": "2026-10-06T01:30:09Z",
+  "testState": {
+    "error": "controller exited before terminal test state",
+    "output": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z",
+    "phase": "failed",
+    "runId": "read-pressure-aux-latencycap5-full-20261006T0130Z",
+    "updatedAt": "2026-10-06T04:30:07.773Z"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "reviewedAtUtc": "2026-10-07T09:10:37.423821+00:00",
+  "candidatePath": "post-measurement-cleanup-v2.py",
+  "candidateSha256": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603",
+  "originalSha256": "dcb32f9685dfbf2d3487b308a36a7db518fa184163d715b85f60d2e05c4d93ec",
+  "scope": "Add only private local append-only cleanup phase journal and per-stack teardown launch/exit observation receipts. All existing snapshot/WAL/ownership/completion/gate checks and Azure actions retained.",
+  "exitTimestampSemantics": "exitObservedAtUtc bounds observation; canonical teardownCompletedAtUtc records completion of teardown work.",
+  "validated": [
+    "Full source diff reviewed",
+    "In-memory compilation passed",
+    "ROOT remains candidate parent; teardown/guard source hashes unchanged"
+  ],
+  "executionAuthorizedNow": false,
+  "conditionsBeforeExecution": [
+    "All three measured tests exit0 with replay caught up and valid coverage",
+    "All required backup WAL/history exports verified",
+    "Fresh snapshot retention audit",
+    "Root binds exact candidate selfhash and existing teardown/guard hashes in cleanup gate"
+  ]
+}

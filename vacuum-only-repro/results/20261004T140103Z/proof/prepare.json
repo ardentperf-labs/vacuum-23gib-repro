@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "status": "complete",
+  "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/snapshots/keeper-804391dc",
+  "retainedKeeperSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-amplification-prepared-05d212886d",
+  "sourceKind": "regional_copy",
+  "systemIdentifier": "7692518806614212629",
+  "heapBytes": 118128640000,
+  "tableBytes": 119777173504,
+  "restoreCopySnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/snapshots/vacuum-copy-804391dc",
+  "cluster": "repro/hdd-pg",
+  "instances": 2,
+  "storage": "four separate 512-GiB Standard_LRS data/WAL disks",
+  "backup": "vacuum-backup-804391dc",
+  "replicaSnapshots": {
+    "data": "vacuum-backup-804391dc",
+    "wal": "vacuum-backup-804391dc-wal"
+  },
+  "measurementImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+  "clientCreated": false
+}

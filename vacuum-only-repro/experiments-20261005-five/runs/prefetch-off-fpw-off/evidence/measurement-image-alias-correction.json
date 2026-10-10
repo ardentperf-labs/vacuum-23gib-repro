@@ -1,0 +1,27 @@
+{
+  "basis": {
+    "clusterReadyInstances": 2,
+    "liveClusterImageName": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+    "primary": {
+      "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+      "imageID": "ghcr.io/cloudnative-pg/postgresql@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+      "pod": "hdd-pg-1",
+      "ready": true,
+      "uid": "2fa5d292-1ef9-4e32-acde-90991025a23c"
+    },
+    "replica": {
+      "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+      "imageID": "ghcr.io/cloudnative-pg/postgresql@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+      "pod": "hdd-pg-2",
+      "ready": true,
+      "uid": "718f11fc-cfb7-4492-8ad3-2ce6c7212cb6"
+    }
+  },
+  "correctedAtUtc": "2026-10-06T06:14:30.918586+00:00",
+  "field": "measurementImage",
+  "newSha256": "1d0a56985fcd1534129dde96c65f7a3be7e85f2e897ba14ba981b615caaefb2a",
+  "path": ".state/prepare.json",
+  "previousSha256": "41566623a01d20c7df52458f3131c95122362b6c4750ad806e4a716542218170",
+  "reason": "The continuation stored the already-proven digest-pinned measurement image only under replicaSeed; 03-test.py requires the same value at top level. First run failed at preflight before creating samples, checkpointing, or launching VACUUM.",
+  "value": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd"
+}

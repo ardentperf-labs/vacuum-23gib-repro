@@ -1,0 +1,92 @@
+{
+  "vacuumStart": "2026-10-04T06:54:32.350072Z",
+  "vacuumComplete": "2026-10-04T08:49:17.136219Z",
+  "heapWorkStart": "2026-10-04T06:54:32.350072Z",
+  "heapWorkComplete": "2026-10-04T08:49:17.136219Z",
+  "heapWorkCompleteLowerBound": "2026-10-04T08:49:11.528599583Z",
+  "heapWorkCompletionBoundSource": "completion marker following last progress sample",
+  "replicationEvents": [
+    {
+      "time": "2026-10-04T07:19:34.60885486Z",
+      "event": "sender_timeout",
+      "role": "primary",
+      "message": "terminating walsender process due to replication timeout"
+    },
+    {
+      "time": "2026-10-04T07:19:37.889314211Z",
+      "event": "receiver_disconnect",
+      "role": "replica",
+      "message": "could not receive data from WAL stream: server closed the connection unexpectedly\n\tThis probably means the server terminated abnormally\n\tbefore or while processing the request.\nserver closed the connection unexpectedly\n\tThis probably means the server terminated abnormally\n\tbefore or while processing the request."
+    },
+    {
+      "time": "2026-10-04T10:28:02.236508026Z",
+      "event": "receiver_connected",
+      "role": "replica",
+      "message": "started streaming WAL from primary at 42/51000000 on timeline 1"
+    },
+    {
+      "time": "2026-10-04T10:32:24.897443133Z",
+      "event": "receiver_timeout",
+      "role": "replica",
+      "message": "terminating walreceiver due to timeout"
+    },
+    {
+      "time": "2026-10-04T11:47:12.342344568Z",
+      "event": "receiver_connected",
+      "role": "replica",
+      "message": "started streaming WAL from primary at 45/40000000 on timeline 1"
+    },
+    {
+      "time": "2026-10-04T12:03:12.759970286Z",
+      "event": "sender_timeout",
+      "role": "primary",
+      "message": "terminating walsender process due to replication timeout"
+    },
+    {
+      "time": "2026-10-04T12:03:28.138323564Z",
+      "event": "receiver_disconnect",
+      "role": "replica",
+      "message": "could not receive data from WAL stream: SSL error: unexpected eof while reading"
+    }
+  ],
+  "observationEnd": "2026-10-04T12:10:46.122641555Z",
+  "replayEnd": null,
+  "replayCaughtUp": false,
+  "replayTargetLsn": "60/E002C000",
+  "walAtVacuumStart": {
+    "time": "2026-10-04T06:54:32.350072Z",
+    "flushLsn": "37/8F000110",
+    "walBytes": 52382,
+    "walRecords": 76,
+    "walFpi": 10
+  },
+  "walAtVacuumComplete": {
+    "time": "2026-10-04T08:49:17.136219Z",
+    "flushLsn": "60/E002C000",
+    "walBytes": 176652581903,
+    "walRecords": 72301679,
+    "walFpi": 29041115
+  },
+  "checkpoint": {
+    "after": {
+      "flushLsn": "37/8F000110",
+      "time": "2026-10-04T06:54:29.162639+00:00",
+      "walBytes": "52382",
+      "walFpi": 10,
+      "walRecords": 76
+    },
+    "before": {
+      "flushLsn": "37/8F000060",
+      "time": "2026-10-04T06:54:27.502851+00:00",
+      "walBytes": "52218",
+      "walFpi": 10,
+      "walRecords": 74
+    },
+    "replicaReplayLsn": "37/8F000110",
+    "targetLsn": "37/8F000110"
+  },
+  "remoteVacuumExitCode": 0,
+  "observationEndReason": "VACUUM completed; bounded passive replay observation intentionally ended",
+  "replicaReplayLsnAtEnd": "46/A3711080",
+  "replayBacklogBytesAtEnd": 112685330304
+}

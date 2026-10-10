@@ -1,0 +1,408 @@
+[
+  {
+    "etag": "\"4\"",
+    "hardwareProfile": {
+      "vmSize": "Standard_D2s_v4"
+    },
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-37028789-vmss/virtualMachines/0",
+    "identity": {
+      "type": "UserAssigned",
+      "userAssignedIdentities": {
+        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.ManagedIdentity/userAssignedIdentities/aks-vacuum-only-804391dc0a7b-agentpool": {
+          "clientId": "c34f2507-da9a-4644-b1e9-21e084fea433",
+          "principalId": "23e72b41-c4f6-44c5-b835-aa68fc11c222"
+        }
+      }
+    },
+    "instanceId": "0",
+    "latestModelApplied": true,
+    "location": "eastus",
+    "modelDefinitionApplied": "VirtualMachineScaleSet",
+    "name": "aks-nodepool1-37028789-vmss_0",
+    "networkProfile": {
+      "networkInterfaces": [
+        {
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-37028789-vmss/virtualMachines/0/networkInterfaces/aks-nodepool1-37028789-vmss",
+          "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a"
+        }
+      ]
+    },
+    "networkProfileConfiguration": {
+      "networkInterfaceConfigurations": [
+        {
+          "disableTcpStateTracking": false,
+          "dnsSettings": {
+            "dnsServers": []
+          },
+          "enableAcceleratedNetworking": true,
+          "enableIPForwarding": true,
+          "ipConfigurations": [
+            {
+              "loadBalancerBackendAddressPools": [
+                {
+                  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/aksOutboundBackendPool",
+                  "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a"
+                },
+                {
+                  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/kubernetes",
+                  "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a"
+                }
+              ],
+              "name": "ipconfig1",
+              "primary": true,
+              "privateIPAddressVersion": "IPv4",
+              "subnet": {
+                "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Network/virtualNetworks/aks-vnet-18105488/subnets/aks-subnet",
+                "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a"
+              }
+            }
+          ],
+          "name": "aks-nodepool1-37028789-vmss",
+          "primary": true
+        }
+      ]
+    },
+    "osProfile": {
+      "adminUsername": "azureuser",
+      "allowExtensionOperations": true,
+      "computerName": "aks-nodepool1-37028789-vmss000000",
+      "linuxConfiguration": {
+        "disablePasswordAuthentication": true,
+        "provisionVMAgent": true,
+        "ssh": {
+          "publicKeys": [
+            {
+              "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCpqS+UeBva2ahvMZVfyM/I7AaaQOnlTIvRvnXJdLQsQfagQHYUTGyj6hTkINzMGfS9sn+TCsFNFDwmLaBy0S1My06WBx9wOSmk9Y2CdCfnP98bapM1bJewkgVhmi1iPcdPhBYZ5Q/ZqD4xiezu2/jkdis1UPqNnuI5sNwszTpP0YfQDLgil4F9V8JCf4gIoQaCTquuZ3OrVHTBRRh89ZGAIQ579+I20RfDwXSfjoHSDTBKyCpf+A+ozkheyVXI4VtiaIJ34t6IYMTIjG4lAFpRV1T+pE6ONcJxTSDOWU/Zt4+vmv8A1attQSKVJssr7koW5qm1eBOq+eQUcyncnlyUYAu8eAAIo7Vg+Fg6rnaXzsQcP3vHjZCFSMxetm/1NDZ6mvevIuTlEeSQ/69AVj6DjKqP8/zfXqnpNC9sgzHmZ7sXOuf5CiIHxvUENafK1jCX72hzpupF8rQftUy5tG7ot8Q8smxk3AtE30o0o4HZQGkrKxW6f+mt976IcqUX3puRE8xWwvZDJaF18+QQXcwMVgqLfJcSLsDGr/ih3ohiHP1uDMYtEWF39wRp5OzTMNE7T9xWL0OvVeL2pVcvDBM/HLe23nkG9HZUd7Kxat7y8SZ2u1DKzqEX+7l99/u+ZIBWe9lHuVVBQlgcRJ2mgXQ5tBbgu0qYKlmvE0Fif1NKvw== vacuum-only-repro\n",
+              "path": "/home/azureuser/.ssh/authorized_keys"
+            }
+          ]
+        }
+      },
+      "requireGuestProvisionSignal": true,
+      "secrets": []
+    },
+    "provisioningState": "Succeeded",
+    "resilientVMDeletionStatus": "Disabled",
+    "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+    "resources": [
+      {
+        "autoUpgradeMinorVersion": true,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/virtualMachines/aks-nodepool1-37028789-vmss_0/extensions/vmssCSE",
+        "location": "eastus",
+        "name": "vmssCSE",
+        "provisioningState": "Succeeded",
+        "publisher": "Microsoft.Azure.Extensions",
+        "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+        "settings": {},
+        "type": "CustomScript",
+        "typeHandlerVersion": "2.0"
+      },
+      {
+        "autoUpgradeMinorVersion": true,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/virtualMachines/aks-nodepool1-37028789-vmss_0/extensions/aks-nodepool1-37028789-vmss-AKSLinuxBilling",
+        "location": "eastus",
+        "name": "aks-nodepool1-37028789-vmss-AKSLinuxBilling",
+        "provisioningState": "Succeeded",
+        "publisher": "Microsoft.AKS",
+        "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+        "settings": {},
+        "type": "Compute.AKS.Linux.Billing",
+        "typeHandlerVersion": "1.0"
+      },
+      {
+        "autoUpgradeMinorVersion": false,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/virtualMachines/aks-nodepool1-37028789-vmss_0/extensions/AKSLinuxExtension",
+        "location": "eastus",
+        "name": "AKSLinuxExtension",
+        "provisioningState": "Succeeded",
+        "publisher": "Microsoft.AKS",
+        "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+        "settings": {
+          "disable-uu": "true",
+          "enable-uu": "false",
+          "node-exporter-tls": "false"
+        },
+        "suppressFailures": true,
+        "type": "Compute.AKS.Linux.AKSNode",
+        "typeHandlerVersion": "1.501"
+      }
+    ],
+    "sku": {
+      "name": "Standard_D2s_v4",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "dataDisks": [
+        {
+          "caching": "None",
+          "createOption": "Attach",
+          "diskSizeGB": 512,
+          "lun": 0,
+          "managedDisk": {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/microsoft.compute/disks/pvc-b10487ad-93ff-4649-985d-7ee7a4488187",
+            "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+            "storageAccountType": "Standard_LRS"
+          },
+          "name": "pvc-b10487ad-93ff-4649-985d-7ee7a4488187",
+          "toBeDetached": false,
+          "writeAcceleratorEnabled": false
+        },
+        {
+          "caching": "None",
+          "createOption": "Attach",
+          "diskSizeGB": 512,
+          "lun": 1,
+          "managedDisk": {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/microsoft.compute/disks/pvc-a13e4b08-de7f-4b92-b504-85856421e5fe",
+            "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+            "storageAccountType": "Standard_LRS"
+          },
+          "name": "pvc-a13e4b08-de7f-4b92-b504-85856421e5fe",
+          "toBeDetached": false,
+          "writeAcceleratorEnabled": false
+        }
+      ],
+      "diskControllerType": "SCSI",
+      "imageReference": {
+        "exactVersion": "202609.15.0",
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/AKS-Ubuntu/providers/Microsoft.Compute/galleries/AKSUbuntu/images/2404gen2containerd/versions/202609.15.0",
+        "resourceGroup": "AKS-Ubuntu"
+      },
+      "osDisk": {
+        "caching": "ReadOnly",
+        "createOption": "FromImage",
+        "diskSizeGB": 128,
+        "managedDisk": {
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/disks/aks-nodepool1-370287aks-nodepool1-3702878disk1_d7921b0707d44c238ebf9234c9fa54f0",
+          "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+          "storageAccountType": "Premium_LRS"
+        },
+        "name": "aks-nodepool1-370287aks-nodepool1-3702878disk1_d7921b0707d44c238ebf9234c9fa54f0",
+        "osType": "Linux"
+      }
+    },
+    "tags": {
+      "aks-managed-azure-cni-overlay": "true",
+      "aks-managed-bootstrap-profile-acr-name": "",
+      "aks-managed-consolidated-additional-properties": "2ad7f071-bff2-11f1-81b6-aaac2b614c65",
+      "aks-managed-coordination": "true",
+      "aks-managed-createOperationID": "9e85ab75-d9b9-448c-9325-70a72ab72f57",
+      "aks-managed-creationSource": "vmssclient-aks-nodepool1-37028789-vmss",
+      "aks-managed-enable-imds-restriction": "false",
+      "aks-managed-kubeletIdentityClientID": "c34f2507-da9a-4644-b1e9-21e084fea433",
+      "aks-managed-networkisolated-outbound-type": "",
+      "aks-managed-orchestrator": "Kubernetes:1.35.8",
+      "aks-managed-poolName": "nodepool1",
+      "aks-managed-resourceNameSuffix": "18105488",
+      "aks-managed-saip-default-client-id": "",
+      "aks-managed-ssh-access": "LocalUser",
+      "compute.aks.billing": "linux"
+    },
+    "timeCreated": "2026-10-04T12:52:41.9477246+00:00",
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "b42cfd28-8475-4639-a300-387cfa60fe43"
+  },
+  {
+    "etag": "\"6\"",
+    "hardwareProfile": {
+      "vmSize": "Standard_D2s_v4"
+    },
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-37028789-vmss/virtualMachines/1",
+    "identity": {
+      "type": "UserAssigned",
+      "userAssignedIdentities": {
+        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.ManagedIdentity/userAssignedIdentities/aks-vacuum-only-804391dc0a7b-agentpool": {
+          "clientId": "c34f2507-da9a-4644-b1e9-21e084fea433",
+          "principalId": "23e72b41-c4f6-44c5-b835-aa68fc11c222"
+        }
+      }
+    },
+    "instanceId": "1",
+    "latestModelApplied": true,
+    "location": "eastus",
+    "modelDefinitionApplied": "VirtualMachineScaleSet",
+    "name": "aks-nodepool1-37028789-vmss_1",
+    "networkProfile": {
+      "networkInterfaces": [
+        {
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-37028789-vmss/virtualMachines/1/networkInterfaces/aks-nodepool1-37028789-vmss",
+          "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a"
+        }
+      ]
+    },
+    "networkProfileConfiguration": {
+      "networkInterfaceConfigurations": [
+        {
+          "disableTcpStateTracking": false,
+          "dnsSettings": {
+            "dnsServers": []
+          },
+          "enableAcceleratedNetworking": true,
+          "enableIPForwarding": true,
+          "ipConfigurations": [
+            {
+              "loadBalancerBackendAddressPools": [
+                {
+                  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/aksOutboundBackendPool",
+                  "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a"
+                },
+                {
+                  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Network/loadBalancers/kubernetes/backendAddressPools/kubernetes",
+                  "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a"
+                }
+              ],
+              "name": "ipconfig1",
+              "primary": true,
+              "privateIPAddressVersion": "IPv4",
+              "subnet": {
+                "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Network/virtualNetworks/aks-vnet-18105488/subnets/aks-subnet",
+                "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a"
+              }
+            }
+          ],
+          "name": "aks-nodepool1-37028789-vmss",
+          "primary": true
+        }
+      ]
+    },
+    "osProfile": {
+      "adminUsername": "azureuser",
+      "allowExtensionOperations": true,
+      "computerName": "aks-nodepool1-37028789-vmss000001",
+      "linuxConfiguration": {
+        "disablePasswordAuthentication": true,
+        "provisionVMAgent": true,
+        "ssh": {
+          "publicKeys": [
+            {
+              "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCpqS+UeBva2ahvMZVfyM/I7AaaQOnlTIvRvnXJdLQsQfagQHYUTGyj6hTkINzMGfS9sn+TCsFNFDwmLaBy0S1My06WBx9wOSmk9Y2CdCfnP98bapM1bJewkgVhmi1iPcdPhBYZ5Q/ZqD4xiezu2/jkdis1UPqNnuI5sNwszTpP0YfQDLgil4F9V8JCf4gIoQaCTquuZ3OrVHTBRRh89ZGAIQ579+I20RfDwXSfjoHSDTBKyCpf+A+ozkheyVXI4VtiaIJ34t6IYMTIjG4lAFpRV1T+pE6ONcJxTSDOWU/Zt4+vmv8A1attQSKVJssr7koW5qm1eBOq+eQUcyncnlyUYAu8eAAIo7Vg+Fg6rnaXzsQcP3vHjZCFSMxetm/1NDZ6mvevIuTlEeSQ/69AVj6DjKqP8/zfXqnpNC9sgzHmZ7sXOuf5CiIHxvUENafK1jCX72hzpupF8rQftUy5tG7ot8Q8smxk3AtE30o0o4HZQGkrKxW6f+mt976IcqUX3puRE8xWwvZDJaF18+QQXcwMVgqLfJcSLsDGr/ih3ohiHP1uDMYtEWF39wRp5OzTMNE7T9xWL0OvVeL2pVcvDBM/HLe23nkG9HZUd7Kxat7y8SZ2u1DKzqEX+7l99/u+ZIBWe9lHuVVBQlgcRJ2mgXQ5tBbgu0qYKlmvE0Fif1NKvw== vacuum-only-repro\n",
+              "path": "/home/azureuser/.ssh/authorized_keys"
+            }
+          ]
+        }
+      },
+      "requireGuestProvisionSignal": true,
+      "secrets": []
+    },
+    "provisioningState": "Succeeded",
+    "resilientVMDeletionStatus": "Disabled",
+    "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+    "resources": [
+      {
+        "autoUpgradeMinorVersion": true,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/virtualMachines/aks-nodepool1-37028789-vmss_1/extensions/vmssCSE",
+        "location": "eastus",
+        "name": "vmssCSE",
+        "provisioningState": "Succeeded",
+        "publisher": "Microsoft.Azure.Extensions",
+        "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+        "settings": {},
+        "type": "CustomScript",
+        "typeHandlerVersion": "2.0"
+      },
+      {
+        "autoUpgradeMinorVersion": true,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/virtualMachines/aks-nodepool1-37028789-vmss_1/extensions/aks-nodepool1-37028789-vmss-AKSLinuxBilling",
+        "location": "eastus",
+        "name": "aks-nodepool1-37028789-vmss-AKSLinuxBilling",
+        "provisioningState": "Succeeded",
+        "publisher": "Microsoft.AKS",
+        "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+        "settings": {},
+        "type": "Compute.AKS.Linux.Billing",
+        "typeHandlerVersion": "1.0"
+      },
+      {
+        "autoUpgradeMinorVersion": false,
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/virtualMachines/aks-nodepool1-37028789-vmss_1/extensions/AKSLinuxExtension",
+        "location": "eastus",
+        "name": "AKSLinuxExtension",
+        "provisioningState": "Succeeded",
+        "publisher": "Microsoft.AKS",
+        "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+        "settings": {
+          "disable-uu": "true",
+          "enable-uu": "false",
+          "node-exporter-tls": "false"
+        },
+        "suppressFailures": true,
+        "type": "Compute.AKS.Linux.AKSNode",
+        "typeHandlerVersion": "1.501"
+      }
+    ],
+    "sku": {
+      "name": "Standard_D2s_v4",
+      "tier": "Standard"
+    },
+    "storageProfile": {
+      "dataDisks": [
+        {
+          "caching": "None",
+          "createOption": "Attach",
+          "diskSizeGB": 512,
+          "lun": 0,
+          "managedDisk": {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/microsoft.compute/disks/pvc-3b7742d3-59d4-4a51-b9cb-c1818ec7dbaf",
+            "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+            "storageAccountType": "Standard_LRS"
+          },
+          "name": "pvc-3b7742d3-59d4-4a51-b9cb-c1818ec7dbaf",
+          "toBeDetached": false,
+          "writeAcceleratorEnabled": false
+        },
+        {
+          "caching": "None",
+          "createOption": "Attach",
+          "diskSizeGB": 512,
+          "lun": 1,
+          "managedDisk": {
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/microsoft.compute/disks/pvc-620fb663-31c7-4cd8-a241-f60774c157b4",
+            "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+            "storageAccountType": "Standard_LRS"
+          },
+          "name": "pvc-620fb663-31c7-4cd8-a241-f60774c157b4",
+          "toBeDetached": false,
+          "writeAcceleratorEnabled": false
+        }
+      ],
+      "diskControllerType": "SCSI",
+      "imageReference": {
+        "exactVersion": "202609.15.0",
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/AKS-Ubuntu/providers/Microsoft.Compute/galleries/AKSUbuntu/images/2404gen2containerd/versions/202609.15.0",
+        "resourceGroup": "AKS-Ubuntu"
+      },
+      "osDisk": {
+        "caching": "ReadOnly",
+        "createOption": "FromImage",
+        "diskSizeGB": 128,
+        "managedDisk": {
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/disks/aks-nodepool1-370287aks-nodepool1-3702878disk1_e62553b2f71047318720a1e65fde9b0f",
+          "resourceGroup": "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a",
+          "storageAccountType": "Premium_LRS"
+        },
+        "name": "aks-nodepool1-370287aks-nodepool1-3702878disk1_e62553b2f71047318720a1e65fde9b0f",
+        "osType": "Linux"
+      }
+    },
+    "tags": {
+      "aks-managed-azure-cni-overlay": "true",
+      "aks-managed-bootstrap-profile-acr-name": "",
+      "aks-managed-consolidated-additional-properties": "2ad7f071-bff2-11f1-81b6-aaac2b614c65",
+      "aks-managed-coordination": "true",
+      "aks-managed-createOperationID": "9e85ab75-d9b9-448c-9325-70a72ab72f57",
+      "aks-managed-creationSource": "vmssclient-aks-nodepool1-37028789-vmss",
+      "aks-managed-enable-imds-restriction": "false",
+      "aks-managed-kubeletIdentityClientID": "c34f2507-da9a-4644-b1e9-21e084fea433",
+      "aks-managed-networkisolated-outbound-type": "",
+      "aks-managed-orchestrator": "Kubernetes:1.35.8",
+      "aks-managed-poolName": "nodepool1",
+      "aks-managed-resourceNameSuffix": "18105488",
+      "aks-managed-saip-default-client-id": "",
+      "aks-managed-ssh-access": "LocalUser",
+      "compute.aks.billing": "linux"
+    },
+    "timeCreated": "2026-10-04T12:52:41.9477246+00:00",
+    "type": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "vmId": "d818c6a4-8e98-4462-b670-a36ce77de2f9"
+  }
+]

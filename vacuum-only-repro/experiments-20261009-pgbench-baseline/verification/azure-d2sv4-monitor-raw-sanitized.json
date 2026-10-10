@@ -1,0 +1,780 @@
+{
+  "evidenceClass": "sanitized_fields_from_raw_azure_cli_response",
+  "metrics": [
+    {
+      "displayDescription": "Percentage of uncached disk IOPS consumed by the VM. Only available on VM series that support premium storage.",
+      "errorCode": "Success",
+      "name": {
+        "localizedValue": "VM Uncached IOPS Consumed Percentage",
+        "value": "VM Uncached IOPS Consumed Percentage"
+      },
+      "series": [
+        {
+          "data": [
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:40:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:41:00Z"
+            },
+            {
+              "average": 2.0,
+              "timeStamp": "2026-10-09T08:42:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:43:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:44:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:45:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:46:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:47:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:48:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:49:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:50:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:51:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:52:00Z"
+            }
+          ],
+          "dimensions": {
+            "vmname": "aks-nodepool1-16953089-vmss_1"
+          }
+        },
+        {
+          "data": [
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:40:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:41:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:42:00Z"
+            },
+            {
+              "average": 16.0,
+              "timeStamp": "2026-10-09T08:43:00Z"
+            },
+            {
+              "average": 20.0,
+              "timeStamp": "2026-10-09T08:44:00Z"
+            },
+            {
+              "average": 20.0,
+              "timeStamp": "2026-10-09T08:45:00Z"
+            },
+            {
+              "average": 18.0,
+              "timeStamp": "2026-10-09T08:46:00Z"
+            },
+            {
+              "average": 20.0,
+              "timeStamp": "2026-10-09T08:47:00Z"
+            },
+            {
+              "average": 20.0,
+              "timeStamp": "2026-10-09T08:48:00Z"
+            },
+            {
+              "average": 20.0,
+              "timeStamp": "2026-10-09T08:49:00Z"
+            },
+            {
+              "average": 20.0,
+              "timeStamp": "2026-10-09T08:50:00Z"
+            },
+            {
+              "average": 21.0,
+              "timeStamp": "2026-10-09T08:51:00Z"
+            },
+            {
+              "average": 21.0,
+              "timeStamp": "2026-10-09T08:52:00Z"
+            }
+          ],
+          "dimensions": {
+            "vmname": "aks-nodepool1-16953089-vmss_0"
+          }
+        }
+      ],
+      "unit": "Percent"
+    },
+    {
+      "displayDescription": "Percentage of uncached disk bandwidth consumed by the VM. Only available on VM series that support premium storage.",
+      "errorCode": "Success",
+      "name": {
+        "localizedValue": "VM Uncached Bandwidth Consumed Percentage",
+        "value": "VM Uncached Bandwidth Consumed Percentage"
+      },
+      "series": [
+        {
+          "data": [
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:40:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:41:00Z"
+            },
+            {
+              "average": 3.0,
+              "timeStamp": "2026-10-09T08:42:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:43:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:44:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:45:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:46:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:47:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:48:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:49:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:50:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:51:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:52:00Z"
+            }
+          ],
+          "dimensions": {
+            "vmname": "aks-nodepool1-16953089-vmss_1"
+          }
+        },
+        {
+          "data": [
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:40:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:41:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:42:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:43:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:44:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:45:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:46:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:47:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:48:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:49:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:50:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:51:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T08:52:00Z"
+            }
+          ],
+          "dimensions": {
+            "vmname": "aks-nodepool1-16953089-vmss_0"
+          }
+        }
+      ],
+      "unit": "Percent"
+    },
+    {
+      "displayDescription": "Percentage of Uncached Burst IO Credits used by the VM.",
+      "errorCode": "Success",
+      "name": {
+        "localizedValue": "VM Uncached Used Burst IO Credits Percentage",
+        "value": "VM Remote Used Burst IO Credits Percentage"
+      },
+      "series": [
+        {
+          "data": [
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:40:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:41:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:42:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:43:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:44:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:45:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:46:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:47:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:48:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:49:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:50:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:51:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:52:00Z"
+            }
+          ],
+          "dimensions": {
+            "vmname": "aks-nodepool1-16953089-vmss_1"
+          }
+        },
+        {
+          "data": [
+            {
+              "timeStamp": "2026-10-09T08:40:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:41:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:42:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:43:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:44:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:45:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:46:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:47:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:48:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:49:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:50:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:51:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:52:00Z"
+            }
+          ],
+          "dimensions": {
+            "vmname": "aks-nodepool1-16953089-vmss_0"
+          }
+        }
+      ],
+      "unit": "Percent"
+    },
+    {
+      "displayDescription": "Percentage of Uncached Burst BPS Credits used by the VM.",
+      "errorCode": "Success",
+      "name": {
+        "localizedValue": "VM Uncached Used Burst BPS Credits Percentage",
+        "value": "VM Remote Used Burst BPS Credits Percentage"
+      },
+      "series": [
+        {
+          "data": [
+            {
+              "timeStamp": "2026-10-09T08:40:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:41:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:42:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:43:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:44:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:45:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:46:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:47:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:48:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:49:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:50:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:51:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:52:00Z"
+            }
+          ],
+          "dimensions": {
+            "vmname": "aks-nodepool1-16953089-vmss_0"
+          }
+        },
+        {
+          "data": [
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:40:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:41:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:42:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:43:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:44:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:45:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:46:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:47:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:48:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:49:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:50:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:51:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:52:00Z"
+            }
+          ],
+          "dimensions": {
+            "vmname": "aks-nodepool1-16953089-vmss_1"
+          }
+        }
+      ],
+      "unit": "Percent"
+    },
+    {
+      "displayDescription": "Percentage of data disk I/Os consumed per minute. Only available on VM series that support premium storage.",
+      "errorCode": "Success",
+      "name": {
+        "localizedValue": "Data Disk IOPS Consumed Percentage",
+        "value": "Data Disk IOPS Consumed Percentage"
+      },
+      "series": [
+        {
+          "data": [
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:40:00Z"
+            },
+            {
+              "average": 17.0,
+              "timeStamp": "2026-10-09T08:41:00Z"
+            },
+            {
+              "average": 55.5,
+              "timeStamp": "2026-10-09T08:42:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:43:00Z"
+            },
+            {
+              "average": 58.0,
+              "timeStamp": "2026-10-09T08:44:00Z"
+            },
+            {
+              "average": 58.5,
+              "timeStamp": "2026-10-09T08:45:00Z"
+            },
+            {
+              "average": 59.0,
+              "timeStamp": "2026-10-09T08:46:00Z"
+            },
+            {
+              "average": 58.0,
+              "timeStamp": "2026-10-09T08:47:00Z"
+            },
+            {
+              "average": 58.5,
+              "timeStamp": "2026-10-09T08:48:00Z"
+            },
+            {
+              "average": 58.5,
+              "timeStamp": "2026-10-09T08:49:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:50:00Z"
+            },
+            {
+              "average": 57.5,
+              "timeStamp": "2026-10-09T08:51:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:52:00Z"
+            }
+          ],
+          "dimensions": {
+            "vmname": "aks-nodepool1-16953089-vmss_1"
+          }
+        },
+        {
+          "data": [
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:40:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:41:00Z"
+            },
+            {
+              "average": 12.0,
+              "timeStamp": "2026-10-09T08:42:00Z"
+            },
+            {
+              "average": 12.0,
+              "timeStamp": "2026-10-09T08:43:00Z"
+            },
+            {
+              "average": 11.5,
+              "timeStamp": "2026-10-09T08:44:00Z"
+            },
+            {
+              "average": 11.0,
+              "timeStamp": "2026-10-09T08:45:00Z"
+            },
+            {
+              "average": 11.5,
+              "timeStamp": "2026-10-09T08:46:00Z"
+            },
+            {
+              "average": 12.0,
+              "timeStamp": "2026-10-09T08:47:00Z"
+            },
+            {
+              "average": 11.0,
+              "timeStamp": "2026-10-09T08:48:00Z"
+            },
+            {
+              "average": 12.5,
+              "timeStamp": "2026-10-09T08:49:00Z"
+            },
+            {
+              "average": 12.0,
+              "timeStamp": "2026-10-09T08:50:00Z"
+            },
+            {
+              "average": 12.5,
+              "timeStamp": "2026-10-09T08:51:00Z"
+            },
+            {
+              "average": 13.5,
+              "timeStamp": "2026-10-09T08:52:00Z"
+            }
+          ],
+          "dimensions": {
+            "vmname": "aks-nodepool1-16953089-vmss_0"
+          }
+        }
+      ],
+      "unit": "Percent"
+    },
+    {
+      "displayDescription": "Percentage of data disk bandwidth consumed per minute. Only available on VM series that support premium storage.",
+      "errorCode": "Success",
+      "name": {
+        "localizedValue": "Data Disk Bandwidth Consumed Percentage",
+        "value": "Data Disk Bandwidth Consumed Percentage"
+      },
+      "series": [
+        {
+          "data": [
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:40:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:41:00Z"
+            },
+            {
+              "average": 88.5,
+              "timeStamp": "2026-10-09T08:42:00Z"
+            },
+            {
+              "average": 75.5,
+              "timeStamp": "2026-10-09T08:43:00Z"
+            },
+            {
+              "average": 73.0,
+              "timeStamp": "2026-10-09T08:44:00Z"
+            },
+            {
+              "average": 72.0,
+              "timeStamp": "2026-10-09T08:45:00Z"
+            },
+            {
+              "average": 75.0,
+              "timeStamp": "2026-10-09T08:46:00Z"
+            },
+            {
+              "average": 76.5,
+              "timeStamp": "2026-10-09T08:47:00Z"
+            },
+            {
+              "average": 70.5,
+              "timeStamp": "2026-10-09T08:48:00Z"
+            },
+            {
+              "average": 75.0,
+              "timeStamp": "2026-10-09T08:49:00Z"
+            },
+            {
+              "average": 73.0,
+              "timeStamp": "2026-10-09T08:50:00Z"
+            },
+            {
+              "average": 64.0,
+              "timeStamp": "2026-10-09T08:51:00Z"
+            },
+            {
+              "average": 65.0,
+              "timeStamp": "2026-10-09T08:52:00Z"
+            }
+          ],
+          "dimensions": {
+            "vmname": "aks-nodepool1-16953089-vmss_0"
+          }
+        },
+        {
+          "data": [
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T08:40:00Z"
+            },
+            {
+              "average": 7.0,
+              "timeStamp": "2026-10-09T08:41:00Z"
+            },
+            {
+              "average": 76.0,
+              "timeStamp": "2026-10-09T08:42:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:43:00Z"
+            },
+            {
+              "average": 73.0,
+              "timeStamp": "2026-10-09T08:44:00Z"
+            },
+            {
+              "average": 73.5,
+              "timeStamp": "2026-10-09T08:45:00Z"
+            },
+            {
+              "average": 75.5,
+              "timeStamp": "2026-10-09T08:46:00Z"
+            },
+            {
+              "average": 73.0,
+              "timeStamp": "2026-10-09T08:47:00Z"
+            },
+            {
+              "average": 76.0,
+              "timeStamp": "2026-10-09T08:48:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:49:00Z"
+            },
+            {
+              "average": 77.5,
+              "timeStamp": "2026-10-09T08:50:00Z"
+            },
+            {
+              "average": 67.75,
+              "timeStamp": "2026-10-09T08:51:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T08:52:00Z"
+            }
+          ],
+          "dimensions": {
+            "vmname": "aks-nodepool1-16953089-vmss_1"
+          }
+        }
+      ],
+      "unit": "Percent"
+    },
+    {
+      "displayDescription": "Percentage of Data Disk burst I/O credits used so far",
+      "errorCode": "Success",
+      "name": {
+        "localizedValue": "Data Disk Used Burst IO Credits Percentage",
+        "value": "Data Disk Used Burst IO Credits Percentage"
+      },
+      "series": [],
+      "unit": "Percent"
+    },
+    {
+      "displayDescription": "Percentage of Data Disk burst bandwidth credits used so far",
+      "errorCode": "Success",
+      "name": {
+        "localizedValue": "Data Disk Used Burst BPS Credits Percentage",
+        "value": "Data Disk Used Burst BPS Credits Percentage"
+      },
+      "series": [],
+      "unit": "Percent"
+    }
+  ],
+  "privateRawResponsePath": "../.state/azure-evidence-requery-20261009/vmss-parent-vmname-08-40-08-53-correct-subscription-correct-metrics.raw.json",
+  "privateRawResponseSha256": "5acb69ecd3e1b431ccdddfde48c0f8ab25a7c5f4db81f5ae16e1d41d113be655",
+  "query": {
+    "aggregation": "Average",
+    "endTimeUtc": "2026-10-09T08:53:00Z",
+    "filter": "VMName eq '*'",
+    "format": "json; no JMESPath output projection",
+    "interval": "PT1M",
+    "metrics": [
+      "VM Uncached IOPS Consumed Percentage",
+      "VM Uncached Bandwidth Consumed Percentage",
+      "VM Remote Used Burst IO Credits Percentage",
+      "VM Remote Used Burst BPS Credits Percentage",
+      "Data Disk IOPS Consumed Percentage",
+      "Data Disk Bandwidth Consumed Percentage",
+      "Data Disk Used Burst IO Credits Percentage",
+      "Data Disk Used Burst BPS Credits Percentage"
+    ],
+    "resource": "VMSS parent aks-nodepool1-16953089-vmss (resource ID omitted)",
+    "startTimeUtc": "2026-10-09T08:40:00Z",
+    "subscription": "verified broker subscription from run state (ID omitted)"
+  },
+  "rawResponseCapturedAtUtc": "2026-10-09T09:06:18.742327Z",
+  "rawResponseFields": {
+    "cost": 96,
+    "interval": "PT1M",
+    "namespace": "Microsoft.Compute/virtualMachineScaleSets",
+    "resourceregion": "eastus",
+    "timespan": "2026-10-09T08:40:00Z/2026-10-09T08:53:00Z"
+  },
+  "sanitization": "Omitted subscription/resource IDs, per-metric IDs, resourceGroup, and type. Preserved raw metric names/descriptions/units/errors, VMName dimension values, timestamps, averages, and no-data datapoints."
+}

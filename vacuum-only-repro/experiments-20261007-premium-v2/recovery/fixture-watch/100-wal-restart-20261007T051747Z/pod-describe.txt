@@ -1,0 +1,141 @@
+Name:                      hdd-pg-1
+Namespace:                 repro
+Priority:                  0
+Service Account:           hdd-pg
+Node:                      aks-nodepool1-15388874-vmss000001/10.224.0.5
+Start Time:                Tue, 06 Oct 2026 21:01:10 +0000
+Labels:                    app.kubernetes.io/component=database
+                           app.kubernetes.io/instance=hdd-pg
+                           app.kubernetes.io/managed-by=cloudnative-pg
+                           app.kubernetes.io/name=postgresql
+                           app.kubernetes.io/version=16
+                           cnpg.io/cluster=hdd-pg
+                           cnpg.io/instanceName=hdd-pg-1
+                           cnpg.io/instanceRole=primary
+                           cnpg.io/podRole=instance
+                           role=primary
+                           topology.kubernetes.io/region=eastus
+                           topology.kubernetes.io/zone=eastus-1
+Annotations:               cnpg.io/nodeSerial: 1
+                           cnpg.io/operatorVersion: 1.30.1
+                           cnpg.io/podEnvHash: 54d9d5b46b
+                           cnpg.io/podSpec:
+                             {"volumes":[{"name":"pgdata","persistentVolumeClaim":{"claimName":"hdd-pg-1"}},{"name":"scratch-data","emptyDir":{}},{"name":"shm","emptyD...
+Status:                    Terminating (lasts <invalid>)
+Termination Grace Period:  1800s
+SeccompProfile:            RuntimeDefault
+IP:                        10.244.1.196
+IPs:
+  IP:           10.244.1.196
+Controlled By:  Cluster/hdd-pg
+Init Containers:
+  bootstrap-controller:
+    Container ID:    containerd://6872ce2994d7eba667d9ac0f88ea87d293252bd42276739bbe3cdeaa32fe3f06
+    Image:           ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1
+    Image ID:        ghcr.io/cloudnative-pg/cloudnative-pg@sha256:923c267ec29636db3bee20f993d0ec4973fa22998e1adad37da79e4d32b5bc07
+    Port:            <none>
+    Host Port:       <none>
+    SeccompProfile:  RuntimeDefault
+    Command:
+      /manager
+      bootstrap
+      /controller/manager
+      --log-level=info
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 06 Oct 2026 21:01:39 +0000
+      Finished:     Tue, 06 Oct 2026 21:01:40 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     2
+      memory:  3Gi
+    Requests:
+      cpu:        1
+      memory:     2Gi
+    Environment:  <none>
+    Mounts:
+      /controller from scratch-data (rw)
+      /dev/shm from shm (rw)
+      /run from scratch-data (rw)
+      /var/lib/postgresql/data from pgdata (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-kcf7l (ro)
+Containers:
+  postgres:
+    Container ID:    containerd://daae9b1070a09f23c26d7f37e42a47de7e994de10e6934ee581c3ba0c2645c3e
+    Image:           ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215
+    Image ID:        ghcr.io/cloudnative-pg/postgresql@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215
+    Ports:           5432/TCP (postgresql), 9187/TCP (metrics), 8000/TCP (status)
+    Host Ports:      0/TCP (postgresql), 0/TCP (metrics), 0/TCP (status)
+    SeccompProfile:  RuntimeDefault
+    Command:
+      /controller/manager
+      instance
+      run
+      --status-port-tls
+      --log-level=info
+    State:          Running
+      Started:      Tue, 06 Oct 2026 21:01:54 +0000
+    Ready:          False
+    Restart Count:  0
+    Limits:
+      cpu:     2
+      memory:  3Gi
+    Requests:
+      cpu:      1
+      memory:   2Gi
+    Liveness:   http-get https://:8000/healthz delay=0s timeout=5s period=10s successThreshold=1 failureThreshold=3
+    Readiness:  http-get https://:8000/readyz delay=0s timeout=5s period=10s successThreshold=1 failureThreshold=3
+    Startup:    http-get https://:8000/startupz delay=0s timeout=5s period=10s successThreshold=1 failureThreshold=360
+    Environment:
+      PGDATA:        /var/lib/postgresql/data/pgdata
+      POD_NAME:      hdd-pg-1
+      NAMESPACE:     repro
+      CLUSTER_NAME:  hdd-pg
+      PSQL_HISTORY:  /controller/tmp/.psql_history
+      PGPORT:        5432
+      PGHOST:        /controller/run
+      TMPDIR:        /controller/tmp
+    Mounts:
+      /controller from scratch-data (rw)
+      /dev/shm from shm (rw)
+      /run from scratch-data (rw)
+      /var/lib/postgresql/data from pgdata (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-kcf7l (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  pgdata:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  hdd-pg-1
+    ReadOnly:   false
+  scratch-data:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  shm:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     Memory
+    SizeLimit:  <unset>
+  kube-api-access-kcf7l:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                  From     Message
+  ----     ------     ----                 ----     -------
+  Normal   Killing    2m18s                kubelet  spec.containers{postgres}: Stopping container postgres
+  Warning  Unhealthy  7s (x14 over 2m17s)  kubelet  spec.containers{postgres}: Readiness probe failed: HTTP probe failed with statuscode: 500

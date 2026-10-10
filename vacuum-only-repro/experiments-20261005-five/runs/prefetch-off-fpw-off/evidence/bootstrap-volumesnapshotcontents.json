@@ -1,0 +1,87 @@
+{
+  "apiVersion": "v1",
+  "items": [
+    {
+      "apiVersion": "snapshot.storage.k8s.io/v1",
+      "kind": "VolumeSnapshotContent",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"snapshot.storage.k8s.io/v1\",\"kind\":\"VolumeSnapshotContent\",\"metadata\":{\"annotations\":{},\"labels\":{\"repro.stack.token\":\"9daba6b61cdb3b2f6eca73f2f8e15c3c\"},\"name\":\"src-data-content-9daba6b6\"},\"spec\":{\"deletionPolicy\":\"Retain\",\"driver\":\"disk.csi.azure.com\",\"source\":{\"snapshotHandle\":\"/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01\"},\"volumeSnapshotClassName\":\"src-pair-9daba6b6\",\"volumeSnapshotRef\":{\"kind\":\"VolumeSnapshot\",\"name\":\"src-data-9daba6b6\",\"namespace\":\"repro\"}}}\n"
+        },
+        "creationTimestamp": "2026-10-06T05:14:37Z",
+        "finalizers": [
+          "snapshot.storage.kubernetes.io/volumesnapshotcontent-bound-protection"
+        ],
+        "generation": 2,
+        "labels": {
+          "repro.stack.token": "9daba6b61cdb3b2f6eca73f2f8e15c3c"
+        },
+        "name": "src-data-content-9daba6b6",
+        "resourceVersion": "11531",
+        "uid": "e720625d-c361-4b5b-93fb-20aec8fa1a99"
+      },
+      "spec": {
+        "deletionPolicy": "Retain",
+        "driver": "disk.csi.azure.com",
+        "source": {
+          "snapshotHandle": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01"
+        },
+        "volumeSnapshotClassName": "src-pair-9daba6b6",
+        "volumeSnapshotRef": {
+          "kind": "VolumeSnapshot",
+          "name": "src-data-9daba6b6",
+          "namespace": "repro",
+          "uid": "169e0a98-cb1e-4dfa-bfbe-745cf43c950e"
+        }
+      },
+      "status": {
+        "creationTime": 1791263677444456339,
+        "readyToUse": true,
+        "snapshotHandle": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01"
+      }
+    },
+    {
+      "apiVersion": "snapshot.storage.k8s.io/v1",
+      "kind": "VolumeSnapshotContent",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"snapshot.storage.k8s.io/v1\",\"kind\":\"VolumeSnapshotContent\",\"metadata\":{\"annotations\":{},\"labels\":{\"repro.stack.token\":\"9daba6b61cdb3b2f6eca73f2f8e15c3c\"},\"name\":\"src-wal-content-9daba6b6\"},\"spec\":{\"deletionPolicy\":\"Retain\",\"driver\":\"disk.csi.azure.com\",\"source\":{\"snapshotHandle\":\"/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-01605f86-3d24-4371-81cc-9a908a426b18\"},\"volumeSnapshotClassName\":\"src-pair-9daba6b6\",\"volumeSnapshotRef\":{\"kind\":\"VolumeSnapshot\",\"name\":\"src-wal-9daba6b6\",\"namespace\":\"repro\"}}}\n"
+        },
+        "creationTimestamp": "2026-10-06T05:14:37Z",
+        "finalizers": [
+          "snapshot.storage.kubernetes.io/volumesnapshotcontent-bound-protection"
+        ],
+        "generation": 2,
+        "labels": {
+          "repro.stack.token": "9daba6b61cdb3b2f6eca73f2f8e15c3c"
+        },
+        "name": "src-wal-content-9daba6b6",
+        "resourceVersion": "11540",
+        "uid": "d90709ee-7571-4aef-95f9-79aab4247562"
+      },
+      "spec": {
+        "deletionPolicy": "Retain",
+        "driver": "disk.csi.azure.com",
+        "source": {
+          "snapshotHandle": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-01605f86-3d24-4371-81cc-9a908a426b18"
+        },
+        "volumeSnapshotClassName": "src-pair-9daba6b6",
+        "volumeSnapshotRef": {
+          "kind": "VolumeSnapshot",
+          "name": "src-wal-9daba6b6",
+          "namespace": "repro",
+          "uid": "fd50f21c-b236-42ae-9b5e-e92700eaa2fb"
+        }
+      },
+      "status": {
+        "creationTime": 1791263677670303785,
+        "readyToUse": true,
+        "snapshotHandle": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-01605f86-3d24-4371-81cc-9a908a426b18"
+      }
+    }
+  ],
+  "kind": "List",
+  "metadata": {
+    "resourceVersion": ""
+  }
+}

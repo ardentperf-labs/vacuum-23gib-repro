@@ -1,0 +1,131 @@
+{
+  "after": {
+    "primary": {
+      "available": true,
+      "pod": "hdd-pg-1",
+      "stats": {
+        "block_distance": 0,
+        "hit": 0,
+        "io_depth": 0,
+        "prefetch": 0,
+        "skip_fpw": 0,
+        "skip_init": 0,
+        "skip_new": 0,
+        "skip_rep": 0,
+        "stats_reset": "2026-10-05T07:14:53.284891+00:00",
+        "wal_distance": 0
+      },
+      "uid": "e3a1cd29-3f43-47f5-982a-52aa02ff5316"
+    },
+    "replica": {
+      "available": true,
+      "pod": "hdd-pg-2",
+      "stats": {
+        "block_distance": 0,
+        "hit": 0,
+        "io_depth": 0,
+        "prefetch": 0,
+        "skip_fpw": 1,
+        "skip_init": 0,
+        "skip_new": 0,
+        "skip_rep": 0,
+        "stats_reset": "2026-10-05T07:14:19.328645+00:00",
+        "wal_distance": 0
+      },
+      "uid": "1d7fe331-20b0-423d-a983-fb32bf823258"
+    }
+  },
+  "afterCapturedAt": "2026-10-05T07:55:39.423Z",
+  "before": {
+    "primary": {
+      "available": true,
+      "pod": "hdd-pg-1",
+      "stats": {
+        "block_distance": 0,
+        "hit": 0,
+        "io_depth": 0,
+        "prefetch": 0,
+        "skip_fpw": 0,
+        "skip_init": 0,
+        "skip_new": 0,
+        "skip_rep": 0,
+        "stats_reset": "2026-10-05T07:14:53.284891+00:00",
+        "wal_distance": 0
+      },
+      "uid": "e3a1cd29-3f43-47f5-982a-52aa02ff5316"
+    },
+    "replica": {
+      "available": true,
+      "pod": "hdd-pg-2",
+      "stats": {
+        "block_distance": 0,
+        "hit": 0,
+        "io_depth": 0,
+        "prefetch": 0,
+        "skip_fpw": 1,
+        "skip_init": 0,
+        "skip_new": 0,
+        "skip_rep": 0,
+        "stats_reset": "2026-10-05T07:14:19.328645+00:00",
+        "wal_distance": 0
+      },
+      "uid": "1d7fe331-20b0-423d-a983-fb32bf823258"
+    }
+  },
+  "beforeCapturedAt": "2026-10-05T07:29:36.888Z",
+  "counterDelta": {
+    "primary": {
+      "available": true,
+      "counterDelta": {
+        "hit": 0,
+        "prefetch": 0,
+        "skip_fpw": 0,
+        "skip_init": 0,
+        "skip_new": 0,
+        "skip_rep": 0
+      },
+      "gauges": {
+        "block_distance": {
+          "after": 0,
+          "before": 0
+        },
+        "io_depth": {
+          "after": 0,
+          "before": 0
+        },
+        "wal_distance": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "statsReset": "2026-10-05T07:14:53.284891+00:00"
+    },
+    "replica": {
+      "available": true,
+      "counterDelta": {
+        "hit": 0,
+        "prefetch": 0,
+        "skip_fpw": 0,
+        "skip_init": 0,
+        "skip_new": 0,
+        "skip_rep": 0
+      },
+      "gauges": {
+        "block_distance": {
+          "after": 0,
+          "before": 0
+        },
+        "io_depth": {
+          "after": 0,
+          "before": 0
+        },
+        "wal_distance": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "statsReset": "2026-10-05T07:14:19.328645+00:00"
+    }
+  },
+  "measurementBoundary": "after checkpoint replay and immediately before baseline sampling/VACUUM launch; counters were not reset"
+}

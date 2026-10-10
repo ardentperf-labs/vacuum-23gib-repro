@@ -1,0 +1,75 @@
+{
+  "container": "vhds",
+  "content": "",
+  "deleted": false,
+  "encryptedMetadata": null,
+  "encryptionKeySha256": null,
+  "encryptionScope": null,
+  "hasLegalHold": null,
+  "hasVersionsOnly": null,
+  "immutabilityPolicy": {
+    "expiryTime": null,
+    "policyMode": null
+  },
+  "isAppendBlobSealed": null,
+  "isCurrentVersion": null,
+  "lastAccessedOn": null,
+  "metadata": {
+    "CRPDiskId": "7327545a-bde7-4d5e-b767-fab6437948cc",
+    "VMId": "0d8e658d-ec54-4cd1-96dc-52544e5a02b6"
+  },
+  "name": "prepared.vhd",
+  "objectReplicationDestinationPolicy": null,
+  "objectReplicationSourceProperties": [],
+  "properties": {
+    "appendBlobCommittedBlockCount": null,
+    "blobTier": null,
+    "blobTierChangeTime": null,
+    "blobTierInferred": null,
+    "blobType": "PageBlob",
+    "contentLength": 0,
+    "contentRange": null,
+    "contentSettings": {
+      "cacheControl": null,
+      "contentDisposition": null,
+      "contentEncoding": null,
+      "contentLanguage": null,
+      "contentMd5": null,
+      "contentType": "application/octet-stream"
+    },
+    "copy": {
+      "completionTime": "2026-10-09T09:18:10+00:00",
+      "destinationSnapshot": null,
+      "id": "9ffc5f96-5382-4a8c-8877-a326895b2a83",
+      "incrementalCopy": null,
+      "progress": "158947475456/549755814400",
+      "source": "https://md-hdd-jrgbrzmt20pz.z20.blob.storage.azure.net/s4wqfbr4pj2n/abcd?<redacted>",
+      "status": "failed",
+      "statusDescription": "403 AuthenticationFailed \"Copy failed when reading the source.\""
+    },
+    "creationTime": "2026-10-09T08:30:27+00:00",
+    "deletedTime": null,
+    "etag": "\"0x8DF25E63D3A1B8B\"",
+    "lastModified": "2026-10-09T09:18:10+00:00",
+    "lease": {
+      "duration": null,
+      "state": "available",
+      "status": "unlocked"
+    },
+    "pageBlobSequenceNumber": 1,
+    "pageRanges": [
+      {
+        "isCleared": false
+      }
+    ],
+    "rehydrationStatus": null,
+    "remainingRetentionDays": null,
+    "serverEncrypted": true
+  },
+  "rehydratePriority": null,
+  "requestServerEncrypted": true,
+  "snapshot": null,
+  "tagCount": null,
+  "tags": null,
+  "versionId": null
+}

@@ -1,0 +1,30 @@
+{
+  "availabilityZone": "1",
+  "backup": "vacuum-backup-5c241a19",
+  "clientCreated": false,
+  "cluster": "repro/hdd-pg",
+  "estimatedVacuumMinutes": 118.4,
+  "fixtureTargetHeapBytes": 53687091200,
+  "fixtureTargetHeapGiB": 50,
+  "heapBytes": 53687091200,
+  "instances": 2,
+  "measurementImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+  "preparedDeadTuplesEstimate": 16384000,
+  "preparedLiveTuplesEstimate": 16384000,
+  "replicaCaughtUpToLsn": "69/D000000",
+  "replicaSnapshots": {
+    "data": "vacuum-backup-5c241a19",
+    "wal": "vacuum-backup-5c241a19-wal"
+  },
+  "restoreCopySnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/snapshots/keeper-pv2-5c241a19-4b554415",
+  "retainedSnapshotResourceGroup": "rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6",
+  "sourceKind": "incremental_copy",
+  "sourceSnapshotHeapBytes": 118128640000,
+  "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-16244c2c",
+  "sourceSnapshotTableBytes": 119777173504,
+  "status": "complete",
+  "storage": "four separate 512-GiB PremiumV2_LRS data/WAL disks at 3000 IOPS / 125 MB/s",
+  "systemIdentifier": "7692518806614212629",
+  "tableBytes": 54436372480,
+  "version": 1
+}

@@ -1,0 +1,735 @@
+{
+  "checkedAtUtc": "2026-10-09T04:02:39.810575Z",
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "readOnly": true,
+  "snapshotInventoryCount": 42,
+  "lockInventoryCount": 45,
+  "snapshotCountWithDirectCanNotDeleteLock": 42,
+  "snapshotCountWithoutDirectCanNotDeleteLock": 0,
+  "allSnapshotsDirectlyProtected": true,
+  "resourceGroupLevelCanNotDeleteLockCount": 3,
+  "resourceGroupLocks": [
+    {
+      "scope": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6",
+      "lockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "scope": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-pv2-snap-4b1163091c697351e7725163a5a28e2e",
+      "lockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "scope": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf",
+      "lockNames": [
+        "preserve-all-snapshots"
+      ]
+    }
+  ],
+  "retainedLargeKeeper": {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-AZ-HDD-REPRO-SNAPSHOT-KEEPER/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+    "name": "azhr-keep-scsi-prepared-7a297601434285b1",
+    "resourceGroup": "RG-AZ-HDD-REPRO-SNAPSHOT-KEEPER",
+    "location": "eastus",
+    "state": "Succeeded",
+    "accessState": "Available",
+    "sizeGiB": 512,
+    "incremental": false,
+    "purpose": "retained-primary-pg-snapshot",
+    "directCanNotDeleteLockCount": 1,
+    "directLockNames": [
+      "preserve-all-snapshots"
+    ]
+  },
+  "eastUsIncrementalBaseCandidate": {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c",
+    "name": "keeper-base-16244c2c",
+    "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+    "location": "eastus",
+    "state": "Succeeded",
+    "accessState": "Available",
+    "sizeGiB": 512,
+    "incremental": true,
+    "purpose": "regional-snapshot-base",
+    "directCanNotDeleteLockCount": 1,
+    "directLockNames": [
+      "preserve-all-snapshots"
+    ]
+  },
+  "snapshots": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-AZ-HDD-REPRO-SNAPSHOT-KEEPER/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+      "name": "azhr-keep-scsi-prepared-7a297601434285b1",
+      "resourceGroup": "RG-AZ-HDD-REPRO-SNAPSHOT-KEEPER",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": false,
+      "purpose": "retained-primary-pg-snapshot",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/snapshot-406392c2-75ac-4caa-b329-e620bddbf5ce",
+      "name": "snapshot-406392c2-75ac-4caa-b329-e620bddbf5ce",
+      "resourceGroup": "RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/snapshot-c8982298-a32d-4955-a144-205ddf80a3e7",
+      "name": "snapshot-c8982298-a32d-4955-a144-205ddf80a3e7",
+      "resourceGroup": "RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/vacuum-copy-0aaf2717",
+      "name": "vacuum-copy-0aaf2717",
+      "resourceGroup": "RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": false,
+      "purpose": "restore-source-copy",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-NODES-C370BE15909DE6A69298CB6713D85226/providers/Microsoft.Compute/snapshots/snapshot-84308a63-e3ce-4617-9cac-813ff5226aaf",
+      "name": "snapshot-84308a63-e3ce-4617-9cac-813ff5226aaf",
+      "resourceGroup": "RG-VACUUM-NODES-C370BE15909DE6A69298CB6713D85226",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-NODES-C370BE15909DE6A69298CB6713D85226/providers/Microsoft.Compute/snapshots/snapshot-d61fbe90-30e4-4556-80ce-6eade4540bdb",
+      "name": "snapshot-d61fbe90-30e4-4556-80ce-6eade4540bdb",
+      "resourceGroup": "RG-VACUUM-NODES-C370BE15909DE6A69298CB6713D85226",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-NODES-C370BE15909DE6A69298CB6713D85226/providers/Microsoft.Compute/snapshots/vacuum-copy-c370be15",
+      "name": "vacuum-copy-c370be15",
+      "resourceGroup": "RG-VACUUM-NODES-C370BE15909DE6A69298CB6713D85226",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": false,
+      "purpose": "restore-source-copy",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-ONLY-35E99CB5FEBDA94C55CCF8B1BED3704C/providers/Microsoft.Compute/snapshots/keeper-base-35e99cb5",
+      "name": "keeper-base-35e99cb5",
+      "resourceGroup": "RG-VACUUM-ONLY-35E99CB5FEBDA94C55CCF8B1BED3704C",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "regional-snapshot-base",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-4B1163091C697351E7725163A5A28E2E/providers/Microsoft.Compute/snapshots/keeper-pv2-4b116309",
+      "name": "keeper-pv2-4b116309",
+      "resourceGroup": "RG-VACUUM-PV2-SNAP-4B1163091C697351E7725163A5A28E2E",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "premiumv2-keeper-copy",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "retain-keeper-pv2-4b116309"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-4B1163091C697351E7725163A5A28E2E/providers/Microsoft.Compute/snapshots/snapshot-53ea286c-28a7-4225-b58f-ddd91ed93f57",
+      "name": "snapshot-53ea286c-28a7-4225-b58f-ddd91ed93f57",
+      "resourceGroup": "RG-VACUUM-PV2-SNAP-4B1163091C697351E7725163A5A28E2E",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "premiumv2-vacuum-backup",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "retain-snapshot-53ea286c-28a7-4225-b58f-ddd91ed93f57"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-4B1163091C697351E7725163A5A28E2E/providers/Microsoft.Compute/snapshots/snapshot-caf74210-9ce8-4f42-8c47-9ee8076a0201",
+      "name": "snapshot-caf74210-9ce8-4f42-8c47-9ee8076a0201",
+      "resourceGroup": "RG-VACUUM-PV2-SNAP-4B1163091C697351E7725163A5A28E2E",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "premiumv2-vacuum-backup",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "retain-snapshot-caf74210-9ce8-4f42-8c47-9ee8076a0201"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-F1B90AEC9E24F6A2008D6991738742CF/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec",
+      "name": "keeper-pv2-f1b90aec",
+      "resourceGroup": "RG-VACUUM-PV2-SNAP-F1B90AEC9E24F6A2008D6991738742CF",
+      "location": "eastus",
+      "state": "Failed",
+      "accessState": "Unknown",
+      "sizeGiB": null,
+      "incremental": true,
+      "purpose": "premiumv2-keeper-copy",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "retain-keeper-pv2-f1b90aec"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-F1B90AEC9E24F6A2008D6991738742CF/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376",
+      "name": "keeper-pv2-f1b90aec-ef6f2376",
+      "resourceGroup": "RG-VACUUM-PV2-SNAP-F1B90AEC9E24F6A2008D6991738742CF",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "premiumv2-keeper-copy",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-keeper-pv2-f1b90aec-ef6f2376"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-F1B90AEC9E24F6A2008D6991738742CF/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+      "name": "snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+      "resourceGroup": "RG-VACUUM-PV2-SNAP-F1B90AEC9E24F6A2008D6991738742CF",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "premiumv2-vacuum-backup",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "retain-snapshot-604b8cee-1a94-4df6-b846-be245038a795"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-F1B90AEC9E24F6A2008D6991738742CF/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "name": "snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "resourceGroup": "RG-VACUUM-PV2-SNAP-F1B90AEC9E24F6A2008D6991738742CF",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "premiumv2-vacuum-backup",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "retain-snapshot-ebeff553-ca6f-487c-8517-e803b02337ca"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D/providers/Microsoft.Compute/snapshots/snapshot-48de84ee-7815-4c0c-a96f-e7d0751e08a5",
+      "name": "snapshot-48de84ee-7815-4c0c-a96f-e7d0751e08a5",
+      "resourceGroup": "RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "cnpg-pre-vacuum-snapshot",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D/providers/Microsoft.Compute/snapshots/snapshot-4bfa0dd4-8ccb-4a22-a514-fe4770e83e1a",
+      "name": "snapshot-4bfa0dd4-8ccb-4a22-a514-fe4770e83e1a",
+      "resourceGroup": "RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "cnpg-pre-vacuum-snapshot",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D/providers/Microsoft.Compute/snapshots/snapshot-90446491-f3b1-4bbe-a527-93ee6066d102",
+      "name": "snapshot-90446491-f3b1-4bbe-a527-93ee6066d102",
+      "resourceGroup": "RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "cnpg-pre-vacuum-snapshot",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D/providers/Microsoft.Compute/snapshots/snapshot-bf28fdba-ac33-4a6d-82ff-03f66821489f",
+      "name": "snapshot-bf28fdba-ac33-4a6d-82ff-03f66821489f",
+      "resourceGroup": "RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "cnpg-pre-vacuum-snapshot",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D/providers/Microsoft.Compute/snapshots/vacuum-copy-e92bdc27",
+      "name": "vacuum-copy-e92bdc27",
+      "resourceGroup": "RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": false,
+      "purpose": "restore-source-copy",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c",
+      "name": "keeper-base-16244c2c",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+      "location": "eastus",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "regional-snapshot-base",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-ONLY-35E99CB5FEBDA94C55CCF8B1BED3704C/providers/Microsoft.Compute/snapshots/keeper-35e99cb5",
+      "name": "keeper-35e99cb5",
+      "resourceGroup": "RG-VACUUM-ONLY-35E99CB5FEBDA94C55CCF8B1BED3704C",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "regional-prepared-source",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5C241A190A85F40B788038945C9744F6/providers/Microsoft.Compute/snapshots/keeper-pv2-5c241a19-4b554415",
+      "name": "keeper-pv2-5c241a19-4b554415",
+      "resourceGroup": "RG-VACUUM-PV2-SNAP-5C241A190A85F40B788038945C9744F6",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "premiumv2-keeper-copy",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-keeper-pv2-5c241a19-4b554415"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5C241A190A85F40B788038945C9744F6/providers/Microsoft.Compute/snapshots/snapshot-5915d49f-e4ce-41da-b157-40e0043dcdb2",
+      "name": "snapshot-5915d49f-e4ce-41da-b157-40e0043dcdb2",
+      "resourceGroup": "RG-VACUUM-PV2-SNAP-5C241A190A85F40B788038945C9744F6",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "premiumv2-vacuum-backup",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "retain-snapshot-5915d49f-e4ce-41da-b157-40e0043dcdb2"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5C241A190A85F40B788038945C9744F6/providers/Microsoft.Compute/snapshots/snapshot-f60780dd-a9b5-4401-a1c7-30a64acd114e",
+      "name": "snapshot-f60780dd-a9b5-4401-a1c7-30a64acd114e",
+      "resourceGroup": "RG-VACUUM-PV2-SNAP-5C241A190A85F40B788038945C9744F6",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "premiumv2-vacuum-backup",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "retain-snapshot-f60780dd-a9b5-4401-a1c7-30a64acd114e"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-16244c2c",
+      "name": "keeper-16244c2c",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "regional-prepared-source",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-1970d44d-cec9-4483-b853-9e7b9a7e0064",
+      "name": "snapshot-1970d44d-cec9-4483-b853-9e7b9a7e0064",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-248b72da-1b4a-41bf-9cd9-65723367580b",
+      "name": "snapshot-248b72da-1b4a-41bf-9cd9-65723367580b",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-28737878-e0aa-4cee-923a-a37578094b30",
+      "name": "snapshot-28737878-e0aa-4cee-923a-a37578094b30",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-4d712e3d-bc99-42ab-8874-3bc99089aa5a",
+      "name": "snapshot-4d712e3d-bc99-42ab-8874-3bc99089aa5a",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-60ee0174-0046-4022-8b22-eb0ecd09fd75",
+      "name": "snapshot-60ee0174-0046-4022-8b22-eb0ecd09fd75",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-69176264-19e3-445a-be3b-113c0b180cd9",
+      "name": "snapshot-69176264-19e3-445a-be3b-113c0b180cd9",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-9b94e91a-817f-4bbb-ad10-962a063bae49",
+      "name": "snapshot-9b94e91a-817f-4bbb-ad10-962a063bae49",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-9c783acb-2d07-4feb-bce6-6ae9e764cf27",
+      "name": "snapshot-9c783acb-2d07-4feb-bce6-6ae9e764cf27",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-d370b592-1c96-438d-a161-4a6557e656ae",
+      "name": "snapshot-d370b592-1c96-438d-a161-4a6557e656ae",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-efd44f62-4b4c-4e83-abd6-e3496281c58c",
+      "name": "snapshot-efd44f62-4b4c-4e83-abd6-e3496281c58c",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/vacuum-copy-16244c2c",
+      "name": "vacuum-copy-16244c2c",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": false,
+      "purpose": "restore-source-copy",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-35E99CB5FEBDA94C55CCF8B1BED3704C/providers/Microsoft.Compute/snapshots/snapshot-01605f86-3d24-4371-81cc-9a908a426b18",
+      "name": "snapshot-01605f86-3d24-4371-81cc-9a908a426b18",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-35E99CB5FEBDA94C55CCF8B1BED3704C",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-35E99CB5FEBDA94C55CCF8B1BED3704C/providers/Microsoft.Compute/snapshots/snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01",
+      "name": "snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-35E99CB5FEBDA94C55CCF8B1BED3704C",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": null,
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-35E99CB5FEBDA94C55CCF8B1BED3704C/providers/Microsoft.Compute/snapshots/vacuum-copy-35e99cb5",
+      "name": "vacuum-copy-35e99cb5",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-35E99CB5FEBDA94C55CCF8B1BED3704C",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": false,
+      "purpose": "restore-source-copy",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-9DABA6B61CDB3B2F6ECA73F2F8E15C3C/providers/Microsoft.Compute/snapshots/snapshot-0396f821-5881-4ccd-bc9c-0d754b88a19e",
+      "name": "snapshot-0396f821-5881-4ccd-bc9c-0d754b88a19e",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-9DABA6B61CDB3B2F6ECA73F2F8E15C3C",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "fpw-off-seed-paired-replica",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-9DABA6B61CDB3B2F6ECA73F2F8E15C3C/providers/Microsoft.Compute/snapshots/snapshot-8c3724c4-0d3e-481d-bfea-ec27196cb40c",
+      "name": "snapshot-8c3724c4-0d3e-481d-bfea-ec27196cb40c",
+      "resourceGroup": "RG-VACUUM-SNAPSHOTS-9DABA6B61CDB3B2F6ECA73F2F8E15C3C",
+      "location": "westus3",
+      "state": "Succeeded",
+      "accessState": "Available",
+      "sizeGiB": 512,
+      "incremental": true,
+      "purpose": "fpw-off-seed-paired-replica",
+      "directCanNotDeleteLockCount": 1,
+      "directLockNames": [
+        "preserve-all-snapshots"
+      ]
+    }
+  ],
+  "preexistingInventory": {
+    "resourceGroupCount": 13,
+    "aksClusterCount": 2,
+    "aksClusters": [
+      {
+        "name": "aks-vacuum-only-c370be15909d",
+        "resourceGroup": "rg-vacuum-only-c370be15909de6a69298cb6713d85226",
+        "location": "eastus",
+        "provisioningState": "Succeeded",
+        "kubernetesVersion": "1.35",
+        "managedBy": "vacuum-only-repro",
+        "reproPurpose": null,
+        "pools": [
+          {
+            "name": "nodepool1",
+            "count": 2,
+            "vmSize": "Standard_D2s_v4",
+            "availabilityZones": null,
+            "mode": "System"
+          }
+        ]
+      },
+      {
+        "name": "aks-vacuum-only-0aaf271768f7",
+        "resourceGroup": "rg-vacuum-only-0aaf271768f70a4fd06a9cb05e75a4ea",
+        "location": "eastus",
+        "provisioningState": "Succeeded",
+        "kubernetesVersion": "1.35",
+        "managedBy": "vacuum-only-repro",
+        "reproPurpose": null,
+        "pools": [
+          {
+            "name": "nodepool1",
+            "count": 2,
+            "vmSize": "Standard_D2s_v4",
+            "availabilityZones": null,
+            "mode": "System"
+          }
+        ]
+      }
+    ]
+  }
+}

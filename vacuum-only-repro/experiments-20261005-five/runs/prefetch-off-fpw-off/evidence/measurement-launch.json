@@ -1,0 +1,76 @@
+{
+  "allSnapshotsPreserved": true,
+  "args": [
+    "${PROJECT_ROOT}/vacuum-only-repro/.venv/bin/python",
+    "03-test.py",
+    "--kubeconfig",
+    ".state/kubeconfig",
+    "--interval",
+    "5",
+    "--safety-hours",
+    "24",
+    "--catchup-hours",
+    "336",
+    "--out",
+    "results/full-fpw-off-prefetch-off-23gib-20261006T062000Z"
+  ],
+  "attempt": 3,
+  "catchupHours": 336,
+  "collectorPeerAudit": ".state/collector-peer-audit.json",
+  "collectorReadOnlySqlProof": ".state/collector-sql-preflight-proof.json",
+  "collectorSourceAsRunCopy": ".state/03-test-as-run-e1132c857d95.py",
+  "createdAtUtc": "2026-10-06T06:19:06.844817+00:00",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "logPath": ".state/measurement-attempt3.log",
+  "measurementImageAliasCorrectionPath": ".state/measurement-image-alias-correction.json",
+  "outputPath": "results/full-fpw-off-prefetch-off-23gib-20261006T062000Z",
+  "pid": "[REDACTED]",
+  "preparationRecoveryJobUid": "b5a9adb4-e280-4459-84f3-4bc670fc1823",
+  "prepareEvidencePath": ".state/prepare.json",
+  "prepareJsonSha256": "1d0a56985fcd1534129dde96c65f7a3be7e85f2e897ba14ba981b615caaefb2a",
+  "prepareRecoveryAuditCorrectionPath": ".state/prepare-recovery-audit-correction.json",
+  "prepareRecoveryAuditPath": ".state/prepare-recovery-audit.json",
+  "pythonExecutable": "${PROJECT_ROOT}/vacuum-only-repro/.venv/bin/python",
+  "sourceMap": [
+    {
+      "path": "01-provision.sh",
+      "role": "successful_stack_provision",
+      "sha256": "38ad456b74e208652dd6d7b0d93b1d2c30351d636cadbae7b25fb87273f86b4b"
+    },
+    {
+      "path": "02-prepare.sh",
+      "role": "failed_initial_prepare_source",
+      "sha256": "2007e0d27f8b506514c508b0a6d1f8d008f51480b9f7b9ed0bcc277b04f716d8"
+    },
+    {
+      "path": ".state/continue-after-source-pair-restore-v2.sh",
+      "role": "successful_source_restore_continuation",
+      "sha256": "33dc25abae50c1aba96e4280563b559bfa01ba2729fe47406274ec584c4255c8"
+    },
+    {
+      "path": ".state/remove-source-snapshot-role-grants-with-lock-restore.sh",
+      "role": "successful_source_grant_removal",
+      "sha256": "073f5698f27b0b95fcb835c52e1a6dda26f105a4d1222c104c39bc150e47e502"
+    },
+    {
+      "path": ".state/remove-source-snapshot-role-grants-with-lock-restore-v2.sh",
+      "role": "post_removal_verifier",
+      "sha256": "44b6880723afc47abd542cb4718f4c6d0dcb67533e997f5a078cf6e8d64d5f09"
+    },
+    {
+      "path": "03-test.py",
+      "role": "measurement_collector",
+      "sha256": "e1132c857d956df47ac2f57821c65dbc8280a6ba48dc658928f2a09ad9cc84cb"
+    },
+    {
+      "path": "plot.py",
+      "role": "plot_and_analysis",
+      "sha256": "d0ac35439ba17dcfe6f50e9484dd12274575755451258d82d7b12210c91317ec"
+    }
+  ],
+  "startedAtUtc": "2026-10-06T06:19:06.845396+00:00",
+  "status": "running",
+  "workingDirectory": "."
+}

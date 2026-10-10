@@ -1,0 +1,39 @@
+{
+  "clusterName": "aks-vacuum-only-35e99cb5febd",
+  "kubeconfigPath": "[REDACTED]",
+  "location": "westus3",
+  "networkWatcher": {
+    "createdBy": "vacuum-only-repro/01-provision.sh",
+    "etag": "W/\"5c70edc9-a938-42af-a1b1-fcce4cb33d18\"",
+    "id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-watcher-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Network/networkWatchers/vacuum-watcher-35e99cb5febd",
+    "location": "westus3",
+    "name": "vacuum-watcher-35e99cb5febd",
+    "owned": true,
+    "ownerToken": "[REDACTED]",
+    "resourceGroup": "rg-vacuum-watcher-35e99cb5febda94c55ccf8b1bed3704c",
+    "status": "ready"
+  },
+  "networkWatcherBaseline": {
+    "ids": [],
+    "location": "westus3"
+  },
+  "nodeResourceGroup": "rg-vacuum-nodes-35e99cb5febda94c55ccf8b1bed3704c",
+  "ownerToken": "[REDACTED]",
+  "requestedNodeResourceGroup": "rg-vacuum-nodes-35e99cb5febda94c55ccf8b1bed3704c",
+  "resourceGroup": "rg-vacuum-only-35e99cb5febda94c55ccf8b1bed3704c",
+  "snapshotRetentionResourceGroup": {
+    "aksPrincipalId": "[REDACTED]",
+    "id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c",
+    "name": "rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c",
+    "ownerToken": "[REDACTED]",
+    "purpose": "experiment-snapshots",
+    "restoreCopySnapshotId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/vacuum-copy-35e99cb5",
+    "roleAssignmentId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Authorization/roleAssignments/221612d4-c93d-4c88-910d-5b2ad0f869c7",
+    "roleAssignmentRemoved": true,
+    "roleAssignmentRemovedAt": "2026-10-05T07:28:56.744282+00:00",
+    "roleDefinitionId": "7efff54f-a5b4-42b5-a1c5-5411624893ce"
+  },
+  "status": "ready",
+  "subscriptionId": "[REDACTED]",
+  "version": 1
+}

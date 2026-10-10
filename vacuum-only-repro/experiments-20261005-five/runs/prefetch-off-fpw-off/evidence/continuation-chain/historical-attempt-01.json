@@ -1,0 +1,26 @@
+{
+  "boundPvcRefs": {
+    "hdd-pg-1": {
+      "apiGroup": "snapshot.storage.k8s.io",
+      "kind": "VolumeSnapshot",
+      "name": "src-data-9daba6b6"
+    },
+    "hdd-pg-1-wal": {
+      "apiGroup": "snapshot.storage.k8s.io",
+      "kind": "VolumeSnapshot",
+      "name": "src-wal-9daba6b6"
+    }
+  },
+  "capturedAtUtc": "2026-10-06T05:24:45.874002Z",
+  "continuation": " .state/continue-after-source-pair-restore.sh rechecks ownership, snapshot uniqueIds/locks/CSI handles/PVC dataSources and read-only fixture/catalog defaults before tuning.",
+  "exactCauseConfirmedFromSource": true,
+  "failedScript": "02-prepare.sh",
+  "failedScriptSha256": "2007e0d27f8b506514c508b0a6d1f8d008f51480b9f7b9ed0bcc277b04f716d8",
+  "failure": "DREF and WREF assignments invoked jq -cer without passing the captured pvcs JSON on stdin; jq read EOF and exited 4, triggering the no-bound-source error.",
+  "noGucTuningOrCheckpointBeforeFailure": true,
+  "noVacuumLaunched": true,
+  "primaryPodUid": "f71c148a-6746-4954-a49a-42615cb08a45",
+  "primaryReadyWhenCaptured": true,
+  "sourceSnapshotsAndAzureResourcesPreserved": true,
+  "status": "failed_before_any_database_tuning_or_vacuum"
+}

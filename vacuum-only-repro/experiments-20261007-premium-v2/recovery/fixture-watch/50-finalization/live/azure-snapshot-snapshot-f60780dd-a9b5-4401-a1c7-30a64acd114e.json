@@ -1,0 +1,29 @@
+{
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/snapshots/snapshot-f60780dd-a9b5-4401-a1c7-30a64acd114e",
+  "name": "snapshot-f60780dd-a9b5-4401-a1c7-30a64acd114e",
+  "location": "westus3",
+  "sku": {
+    "name": "Standard_ZRS",
+    "tier": "Standard"
+  },
+  "uniqueId": "357803e4-0309-40c1-8834-60d34ad1dbff",
+  "provisioningState": "Succeeded",
+  "snapshotAccessState": "Available",
+  "diskSizeGB": 512,
+  "diskSizeBytes": 549755813888,
+  "incremental": true,
+  "incrementalSnapshotFamilyId": "fcb02b72-f10c-458b-b3f4-616740c1453c",
+  "completionPercent": 100.0,
+  "creationData": {
+    "createOption": "Copy",
+    "logicalSectorSize": 512,
+    "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-d1307045-4698-46ba-b0bf-7c380fa13fb2",
+    "sourceUniqueId": "21fa4781-e955-4980-b7bf-521d4662bec7"
+  },
+  "tags": {
+    "k8s-azure-created-by": "kubernetes-azure-dd",
+    "reproPurpose": "premiumv2-vacuum-backup",
+    "reprotoken": "5c241a190a85f40b788038945c9744f6",
+    "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-d1307045-4698-46ba-b0bf-7c380fa13fb2"
+  }
+}

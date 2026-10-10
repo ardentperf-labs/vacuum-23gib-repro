@@ -1,0 +1,41 @@
+{
+  "completedEvent": {
+    "apiVersion": "v1",
+    "count": 1,
+    "eventTime": null,
+    "firstTimestamp": "2026-10-07T07:38:43Z",
+    "involvedObject": {
+      "apiVersion": "batch/v1",
+      "kind": "Job",
+      "name": "hdd-pg-2-snapshot-recovery",
+      "namespace": "repro",
+      "resourceVersion": "292373",
+      "uid": "aecfcd65-ba99-4667-9ef6-1bb75558bb26"
+    },
+    "kind": "Event",
+    "lastTimestamp": "2026-10-07T07:38:43Z",
+    "message": "Job completed",
+    "metadata": {
+      "creationTimestamp": "2026-10-07T07:38:43Z",
+      "name": "hdd-pg-2-snapshot-recovery.18dc2f44abb9a56e",
+      "namespace": "repro",
+      "resourceVersion": "292376",
+      "uid": "a493c888-6237-48bb-928a-d31c41aba2a2"
+    },
+    "reason": "Completed",
+    "reportingComponent": "job-controller",
+    "reportingInstance": "",
+    "source": {
+      "component": "job-controller"
+    },
+    "type": "Normal"
+  },
+  "jobSucceeded": true,
+  "source": "live-job",
+  "sourceBackupSnapshots": {
+    "data": "vacuum-backup-f1b90aec",
+    "wal": "vacuum-backup-f1b90aec-wal"
+  },
+  "systemImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+  "uid": "aecfcd65-ba99-4667-9ef6-1bb75558bb26"
+}

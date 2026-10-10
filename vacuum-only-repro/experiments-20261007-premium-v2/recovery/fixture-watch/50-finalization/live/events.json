@@ -1,0 +1,1923 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T01:31:03Z",
+            "involvedObject": {
+                "apiVersion": "snapshot.storage.k8s.io/v1",
+                "kind": "VolumeSnapshot",
+                "name": "vacuum-backup-5c241a19-wal",
+                "namespace": "repro",
+                "resourceVersion": "170985",
+                "uid": "f60780dd-a9b5-4401-a1c7-30a64acd114e"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T01:31:03Z",
+            "message": "Snapshot repro/vacuum-backup-5c241a19-wal is ready to use.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T01:31:03Z",
+                "name": "vacuum-backup-5c241a19-wal.18dc1b34563c8f36",
+                "namespace": "repro",
+                "resourceVersion": "176465",
+                "uid": "a51536d0-443f-4abe-a8a5-5a4d86c5707f"
+            },
+            "reason": "SnapshotReady",
+            "reportingComponent": "snapshot-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "snapshot-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:13:31Z",
+            "involvedObject": {
+                "apiVersion": "snapshot.storage.k8s.io/v1",
+                "kind": "VolumeSnapshot",
+                "name": "vacuum-backup-5c241a19",
+                "namespace": "repro",
+                "resourceVersion": "170982",
+                "uid": "5915d49f-e4ce-41da-b157-40e0043dcdb2"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:13:31Z",
+            "message": "Snapshot repro/vacuum-backup-5c241a19 is ready to use.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:13:31Z",
+                "name": "vacuum-backup-5c241a19.18dc1d85a77b9aa9",
+                "namespace": "repro",
+                "resourceVersion": "189935",
+                "uid": "10545850-c4d2-4eea-9d64-3d233437ef12"
+            },
+            "reason": "SnapshotReady",
+            "reportingComponent": "snapshot-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "snapshot-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 3,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:13:41Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "190011",
+                "uid": "96bd9d47-717d-4913-913f-0c7ec271f76d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:13:47Z",
+            "message": "Waiting for a volume to be created either by the external provisioner 'disk.csi.azure.com' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:13:41Z",
+                "name": "hdd-pg-2.18dc1d8802168437",
+                "namespace": "repro",
+                "resourceVersion": "190054",
+                "uid": "597412e7-928a-4524-99a3-329784b9696b"
+            },
+            "reason": "ExternalProvisioning",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:13:41Z",
+            "involvedObject": {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "kind": "Cluster",
+                "name": "hdd-pg",
+                "namespace": "repro",
+                "resourceVersion": "189995",
+                "uid": "8932221b-bcc5-485d-bcb3-4a80a548fc9c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:13:41Z",
+            "message": "Creating instance hdd-pg-2",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:13:41Z",
+                "name": "hdd-pg.18dc1d87f88a375a",
+                "namespace": "repro",
+                "resourceVersion": "189997",
+                "uid": "dde88063-0f75-4497-b64b-f2418959a02f"
+            },
+            "reason": "CreatingInstance",
+            "reportingComponent": "cloudnative-pg",
+            "reportingInstance": "",
+            "source": {
+                "component": "cloudnative-pg"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:13:41Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "resourceVersion": "190001",
+                "uid": "b2505bd1-4201-4657-8456-15a2dde19fb0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:13:41Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:13:41Z",
+                "name": "hdd-pg-2-wal.18dc1d87fc53c548",
+                "namespace": "repro",
+                "resourceVersion": "190003",
+                "uid": "20ba6b0b-73c6-4ea9-af92-4c895ca217ad"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:13:41Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "190011",
+                "uid": "96bd9d47-717d-4913-913f-0c7ec271f76d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:13:41Z",
+            "message": "External provisioner is provisioning volume for claim \"repro/hdd-pg-2\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:13:41Z",
+                "name": "hdd-pg-2.18dc1d8802151237",
+                "namespace": "repro",
+                "resourceVersion": "190013",
+                "uid": "604bc4ee-4734-4943-8479-0aa4b65af2f8"
+            },
+            "reason": "Provisioning",
+            "reportingComponent": "disk.csi.azure.com_csi-azuredisk-controller-7978d47457-9kq4k_b24e79f1-40d2-47fd-a401-85859c9eb084",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com_csi-azuredisk-controller-7978d47457-9kq4k_b24e79f1-40d2-47fd-a401-85859c9eb084"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:13:41Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "190000",
+                "uid": "96bd9d47-717d-4913-913f-0c7ec271f76d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:13:41Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:13:41Z",
+                "name": "hdd-pg-2.18dc1d87fb8d9efb",
+                "namespace": "repro",
+                "resourceVersion": "190002",
+                "uid": "2f7c3794-958c-4e7c-8189-5e7482d24405"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:13:41Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "hdd-pg-2-snapshot-recovery",
+                "namespace": "repro",
+                "resourceVersion": "189999",
+                "uid": "bc0de226-e948-4186-90c8-573c8b0be2ed"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:13:41Z",
+            "message": "Created pod: hdd-pg-2-snapshot-recovery-9vxpj",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:13:41Z",
+                "name": "hdd-pg-2-snapshot-recovery.18dc1d8800041284",
+                "namespace": "repro",
+                "resourceVersion": "190005",
+                "uid": "168d5348-86e2-4a81-a59d-2a6907cc37e9"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:13:41Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "resourceVersion": "190014",
+                "uid": "b2505bd1-4201-4657-8456-15a2dde19fb0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:13:41Z",
+            "message": "External provisioner is provisioning volume for claim \"repro/hdd-pg-2-wal\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:13:41Z",
+                "name": "hdd-pg-2-wal.18dc1d88026de2e5",
+                "namespace": "repro",
+                "resourceVersion": "190015",
+                "uid": "3b64b256-635a-4a6a-a0c6-ecdc83345078"
+            },
+            "reason": "Provisioning",
+            "reportingComponent": "disk.csi.azure.com_csi-azuredisk-controller-7978d47457-9kq4k_b24e79f1-40d2-47fd-a401-85859c9eb084",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com_csi-azuredisk-controller-7978d47457-9kq4k_b24e79f1-40d2-47fd-a401-85859c9eb084"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 3,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:13:41Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "resourceVersion": "190014",
+                "uid": "b2505bd1-4201-4657-8456-15a2dde19fb0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:13:47Z",
+            "message": "Waiting for a volume to be created either by the external provisioner 'disk.csi.azure.com' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:13:41Z",
+                "name": "hdd-pg-2-wal.18dc1d880295f290",
+                "namespace": "repro",
+                "resourceVersion": "190053",
+                "uid": "a4a9baa4-c5ca-4b19-8d2f-85a39b1f6c23"
+            },
+            "reason": "ExternalProvisioning",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:13:53Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "190020",
+                "uid": "96bd9d47-717d-4913-913f-0c7ec271f76d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:13:53Z",
+            "message": "Successfully provisioned volume pvc-96bd9d47-717d-4913-913f-0c7ec271f76d",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:13:53Z",
+                "name": "hdd-pg-2.18dc1d8ad8cf8945",
+                "namespace": "repro",
+                "resourceVersion": "190088",
+                "uid": "7eb07297-2572-4192-a082-dbe9baf72360"
+            },
+            "reason": "ProvisioningSucceeded",
+            "reportingComponent": "disk.csi.azure.com_csi-azuredisk-controller-7978d47457-9kq4k_b24e79f1-40d2-47fd-a401-85859c9eb084",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com_csi-azuredisk-controller-7978d47457-9kq4k_b24e79f1-40d2-47fd-a401-85859c9eb084"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:13:54Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "resourceVersion": "190022",
+                "uid": "b2505bd1-4201-4657-8456-15a2dde19fb0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:13:54Z",
+            "message": "Successfully provisioned volume pvc-b2505bd1-4201-4657-8456-15a2dde19fb0",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:13:54Z",
+                "name": "hdd-pg-2-wal.18dc1d8aebdfa92f",
+                "namespace": "repro",
+                "resourceVersion": "190097",
+                "uid": "e7ae0a80-54f8-4d5a-8fba-eba358edd861"
+            },
+            "reason": "ProvisioningSucceeded",
+            "reportingComponent": "disk.csi.azure.com_csi-azuredisk-controller-7978d47457-9kq4k_b24e79f1-40d2-47fd-a401-85859c9eb084",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com_csi-azuredisk-controller-7978d47457-9kq4k_b24e79f1-40d2-47fd-a401-85859c9eb084"
+            },
+            "type": "Normal"
+        },
+        {
+            "action": "Binding",
+            "apiVersion": "v1",
+            "eventTime": "2026-10-07T02:13:54.782401Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+                "namespace": "repro",
+                "resourceVersion": "190004",
+                "uid": "b9c3eb1e-3ff3-4902-9187-e17df4eca551"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Successfully assigned repro/hdd-pg-2-snapshot-recovery-9vxpj to aks-nodepool1-30685692-vmss000000",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:13:54Z",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj.18dc1d8b096d0732",
+                "namespace": "repro",
+                "resourceVersion": "190105",
+                "uid": "cbcb2b5c-560e-4ddd-81bd-711fcd92044b"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "default-scheduler-kube-scheduler-v2-b4ffb59c8-tmlkq",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:14:05Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+                "namespace": "repro",
+                "resourceVersion": "190104",
+                "uid": "b9c3eb1e-3ff3-4902-9187-e17df4eca551"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:14:05Z",
+            "message": "AttachVolume.Attach succeeded for volume \"pvc-96bd9d47-717d-4913-913f-0c7ec271f76d\" ",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:14:05Z",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj.18dc1d8d792c4636",
+                "namespace": "repro",
+                "resourceVersion": "190171",
+                "uid": "ba7e137b-bafe-4ce3-99f7-4c1e1b03c5ee"
+            },
+            "reason": "SuccessfulAttachVolume",
+            "reportingComponent": "attachdetach-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "attachdetach-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:14:05Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+                "namespace": "repro",
+                "resourceVersion": "190104",
+                "uid": "b9c3eb1e-3ff3-4902-9187-e17df4eca551"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:14:05Z",
+            "message": "AttachVolume.Attach succeeded for volume \"pvc-b2505bd1-4201-4657-8456-15a2dde19fb0\" ",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:14:05Z",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj.18dc1d8d7ab2312f",
+                "namespace": "repro",
+                "resourceVersion": "190172",
+                "uid": "ffe2bda6-ecb8-4094-bf77-1ff16da3861b"
+            },
+            "reason": "SuccessfulAttachVolume",
+            "reportingComponent": "attachdetach-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "attachdetach-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:14:53Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "190091",
+                "uid": "96bd9d47-717d-4913-913f-0c7ec271f76d"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:14:53Z",
+            "message": "Started monitoring SKU migration from Standard_ZRS to PremiumV2_LRS for volume pvc-96bd9d47-717d-4913-913f-0c7ec271f76d (timeout: 10h0m0s)",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:14:53Z",
+                "name": "hdd-pg-2.18dc1d98ceb01f73",
+                "namespace": "repro",
+                "resourceVersion": "190432",
+                "uid": "dfb737c4-3d36-4f16-a799-b4a90fd02b77"
+            },
+            "reason": "SKUMigrationStarted",
+            "reportingComponent": "disk.csi.azure.com",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:14:54Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "resourceVersion": "190101",
+                "uid": "b2505bd1-4201-4657-8456-15a2dde19fb0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:14:54Z",
+            "message": "Started monitoring SKU migration from Standard_ZRS to PremiumV2_LRS for volume pvc-b2505bd1-4201-4657-8456-15a2dde19fb0 (timeout: 10h0m0s)",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:14:54Z",
+                "name": "hdd-pg-2-wal.18dc1d98e33c8913",
+                "namespace": "repro",
+                "resourceVersion": "190436",
+                "uid": "642d1201-dfe1-49b5-9c77-7173380e004c"
+            },
+            "reason": "SKUMigrationStarted",
+            "reportingComponent": "disk.csi.azure.com",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:16:05Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+                "namespace": "repro",
+                "resourceVersion": "190104",
+                "uid": "b9c3eb1e-3ff3-4902-9187-e17df4eca551"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:16:05Z",
+            "message": "MountVolume.MountDevice failed for volume \"pvc-b2505bd1-4201-4657-8456-15a2dde19fb0\" : rpc error: code = DeadlineExceeded desc = context deadline exceeded",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:16:05Z",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj.18dc1da97ae2fa96",
+                "namespace": "repro",
+                "resourceVersion": "190813",
+                "uid": "e82c792f-fe52-437a-8a7b-8a8863dff2b4"
+            },
+            "reason": "FailedMount",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 10,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:16:06Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+                "namespace": "repro",
+                "resourceVersion": "190104",
+                "uid": "b9c3eb1e-3ff3-4902-9187-e17df4eca551"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:22:17Z",
+            "message": "MountVolume.MountDevice failed for volume \"pvc-b2505bd1-4201-4657-8456-15a2dde19fb0\" : rpc error: code = Aborted desc = An operation with the given Volume ID /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-b2505bd1-4201-4657-8456-15a2dde19fb0 already exists",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:16:06Z",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj.18dc1da99c15d627",
+                "namespace": "repro",
+                "resourceVersion": "192781",
+                "uid": "b0bb2cc0-aa12-4ddb-a059-2d15d08fb615"
+            },
+            "reason": "FailedMount",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:16:54Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "resourceVersion": "190101",
+                "uid": "b2505bd1-4201-4657-8456-15a2dde19fb0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:16:54Z",
+            "message": "Migration progress: 60.0% complete for volume pvc-b2505bd1-4201-4657-8456-15a2dde19fb0 (elapsed: 3m0.545173491s)",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:16:54Z",
+                "name": "hdd-pg-2-wal.18dc1db4f2e2af11",
+                "namespace": "repro",
+                "resourceVersion": "191075",
+                "uid": "5ac7fa0f-f7fa-4f41-8c63-a8f9748f70ba"
+            },
+            "reason": "SKUMigrationProgress",
+            "reportingComponent": "disk.csi.azure.com",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:19:54Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "resourceVersion": "190101",
+                "uid": "b2505bd1-4201-4657-8456-15a2dde19fb0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:19:54Z",
+            "message": "Migration progress: 84.0% complete for volume pvc-b2505bd1-4201-4657-8456-15a2dde19fb0 (elapsed: 6m0.596964512s)",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:19:54Z",
+                "name": "hdd-pg-2-wal.18dc1ddedecca5b2",
+                "namespace": "repro",
+                "resourceVersion": "192030",
+                "uid": "c90cf437-0d54-44e3-8206-d7b0efc1d3e3"
+            },
+            "reason": "SKUMigrationProgress",
+            "reportingComponent": "disk.csi.azure.com",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:20Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{bootstrap-controller}",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+                "namespace": "repro",
+                "resourceVersion": "190104",
+                "uid": "b9c3eb1e-3ff3-4902-9187-e17df4eca551"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:20Z",
+            "message": "Pulling image \"ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:20Z",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj.18dc1e1cb398010a",
+                "namespace": "repro",
+                "resourceVersion": "193428",
+                "uid": "24a7a189-6cd1-4cb2-b347-87972d761a3d"
+            },
+            "reason": "Pulling",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:24Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{bootstrap-controller}",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+                "namespace": "repro",
+                "resourceVersion": "190104",
+                "uid": "b9c3eb1e-3ff3-4902-9187-e17df4eca551"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:24Z",
+            "message": "Successfully pulled image \"ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1\" in 3.958s (3.958s including waiting). Image size: 38509985 bytes.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:24Z",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj.18dc1e1d9f84376c",
+                "namespace": "repro",
+                "resourceVersion": "193448",
+                "uid": "f09092e3-d104-43e9-8fd1-81f8f6ff40bd"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:24Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{bootstrap-controller}",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+                "namespace": "repro",
+                "resourceVersion": "190104",
+                "uid": "b9c3eb1e-3ff3-4902-9187-e17df4eca551"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:24Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:24Z",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj.18dc1e1da680961e",
+                "namespace": "repro",
+                "resourceVersion": "193450",
+                "uid": "3130ff87-af5e-491e-9eb3-4120cbdd9132"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:24Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{bootstrap-controller}",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+                "namespace": "repro",
+                "resourceVersion": "190104",
+                "uid": "b9c3eb1e-3ff3-4902-9187-e17df4eca551"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:24Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:24Z",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj.18dc1e1da1d3f563",
+                "namespace": "repro",
+                "resourceVersion": "193449",
+                "uid": "5da69d6e-57d8-4e51-88a2-cefd94777188"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:26Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{snapshot-recovery}",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+                "namespace": "repro",
+                "resourceVersion": "190104",
+                "uid": "b9c3eb1e-3ff3-4902-9187-e17df4eca551"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:26Z",
+            "message": "Pulling image \"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:26Z",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj.18dc1e1e0a83cab2",
+                "namespace": "repro",
+                "resourceVersion": "193462",
+                "uid": "8e310a5c-aa35-43e8-b946-6bd901aaf04d"
+            },
+            "reason": "Pulling",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:39Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{snapshot-recovery}",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+                "namespace": "repro",
+                "resourceVersion": "190104",
+                "uid": "b9c3eb1e-3ff3-4902-9187-e17df4eca551"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:39Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:39Z",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj.18dc1e21127e07ae",
+                "namespace": "repro",
+                "resourceVersion": "193533",
+                "uid": "dca54082-820e-422f-a44e-49c4423c4be3"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:39Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{snapshot-recovery}",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+                "namespace": "repro",
+                "resourceVersion": "190104",
+                "uid": "b9c3eb1e-3ff3-4902-9187-e17df4eca551"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:39Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:39Z",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj.18dc1e210d86064b",
+                "namespace": "repro",
+                "resourceVersion": "193532",
+                "uid": "3ce2b65f-55e0-435a-a1bc-88f430327eba"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:39Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{snapshot-recovery}",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+                "namespace": "repro",
+                "resourceVersion": "190104",
+                "uid": "b9c3eb1e-3ff3-4902-9187-e17df4eca551"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:39Z",
+            "message": "Successfully pulled image \"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\" in 12.891s (12.891s including waiting). Image size: 286556752 bytes.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:39Z",
+                "name": "hdd-pg-2-snapshot-recovery-9vxpj.18dc1e210aea5020",
+                "namespace": "repro",
+                "resourceVersion": "193530",
+                "uid": "6660d991-322a-4611-bcb8-224e2a26f5a9"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:47Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "hdd-pg-2-snapshot-recovery",
+                "namespace": "repro",
+                "resourceVersion": "193581",
+                "uid": "bc0de226-e948-4186-90c8-573c8b0be2ed"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:47Z",
+            "message": "Job completed",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:47Z",
+                "name": "hdd-pg-2-snapshot-recovery.18dc1e22f86ec6df",
+                "namespace": "repro",
+                "resourceVersion": "193584",
+                "uid": "50b69e23-3bd8-4faf-9060-dde3a1dfb192"
+            },
+            "reason": "Completed",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "action": "Binding",
+            "apiVersion": "v1",
+            "eventTime": "2026-10-07T02:24:47.495881Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193590",
+                "uid": "64c38827-a87e-4d53-b780-48f2e4dc86e5"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Successfully assigned repro/hdd-pg-2 to aks-nodepool1-30685692-vmss000000",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:47Z",
+                "name": "hdd-pg-2.18dc1e23022e5ce0",
+                "namespace": "repro",
+                "resourceVersion": "193592",
+                "uid": "2ea9aabc-8d0e-4038-9036-a64f1975da60"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "default-scheduler-kube-scheduler-v2-b4ffb59c8-tmlkq",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:56Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{bootstrap-controller}",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193591",
+                "uid": "64c38827-a87e-4d53-b780-48f2e4dc86e5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:56Z",
+            "message": "Container image \"ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:56Z",
+                "name": "hdd-pg-2.18dc1e2507baf325",
+                "namespace": "repro",
+                "resourceVersion": "193709",
+                "uid": "24c5991b-8e36-4b29-8217-76bbf599792e"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:56Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{bootstrap-controller}",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193591",
+                "uid": "64c38827-a87e-4d53-b780-48f2e4dc86e5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:56Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:56Z",
+                "name": "hdd-pg-2.18dc1e250ee0e4bf",
+                "namespace": "repro",
+                "resourceVersion": "193711",
+                "uid": "219b04d4-2e09-4906-88b0-5af38c2462c5"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:56Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{bootstrap-controller}",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193591",
+                "uid": "64c38827-a87e-4d53-b780-48f2e4dc86e5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:56Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:56Z",
+                "name": "hdd-pg-2.18dc1e250a12c18f",
+                "namespace": "repro",
+                "resourceVersion": "193710",
+                "uid": "1e0c0286-7a1c-461c-b9dc-16f22a7432a2"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:57Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193591",
+                "uid": "64c38827-a87e-4d53-b780-48f2e4dc86e5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:57Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:57Z",
+                "name": "hdd-pg-2.18dc1e2550e00134",
+                "namespace": "repro",
+                "resourceVersion": "193731",
+                "uid": "c60a9b8c-648c-4a71-b90b-05f7b6f7a5a9"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:57Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193591",
+                "uid": "64c38827-a87e-4d53-b780-48f2e4dc86e5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:57Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:57Z",
+                "name": "hdd-pg-2.18dc1e254af72ef4",
+                "namespace": "repro",
+                "resourceVersion": "193726",
+                "uid": "b529cdab-8633-4bf3-aca4-9c7abcb6aaaa"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:24:57Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193591",
+                "uid": "64c38827-a87e-4d53-b780-48f2e4dc86e5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:24:57Z",
+            "message": "Container image \"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:24:57Z",
+                "name": "hdd-pg-2.18dc1e25484cf531",
+                "namespace": "repro",
+                "resourceVersion": "193724",
+                "uid": "2806d9e7-1e7e-47f7-9f99-c439c8776f74"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:10Z",
+            "involvedObject": {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "kind": "Cluster",
+                "name": "hdd-pg",
+                "namespace": "repro",
+                "resourceVersion": "193828",
+                "uid": "8932221b-bcc5-485d-bcb3-4a80a548fc9c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:10Z",
+            "message": "Updating Cluster Role",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:10Z",
+                "name": "hdd-pg.18dc1e283f97bc4c",
+                "namespace": "repro",
+                "resourceVersion": "193830",
+                "uid": "c98c3032-a726-4bca-b871-7e6fdcb4b8cc"
+            },
+            "reason": "UpdatingRole",
+            "reportingComponent": "cloudnative-pg",
+            "reportingInstance": "",
+            "source": {
+                "component": "cloudnative-pg"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:13Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193591",
+                "uid": "64c38827-a87e-4d53-b780-48f2e4dc86e5"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:13Z",
+            "message": "Stopping container postgres",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:13Z",
+                "name": "hdd-pg-2.18dc1e2925a3e219",
+                "namespace": "repro",
+                "resourceVersion": "193857",
+                "uid": "ef29bc03-3d38-4e28-96c5-cc2c9acf115e"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:13Z",
+            "involvedObject": {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "kind": "Cluster",
+                "name": "hdd-pg",
+                "namespace": "repro",
+                "resourceVersion": "193851",
+                "uid": "8932221b-bcc5-485d-bcb3-4a80a548fc9c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:13Z",
+            "message": "Upgrading instance hdd-pg-2",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:13Z",
+                "name": "hdd-pg.18dc1e2924975284",
+                "namespace": "repro",
+                "resourceVersion": "193855",
+                "uid": "7bed7192-6a25-42a9-a5bb-d2385bf3f101"
+            },
+            "reason": "UpgradingInstance",
+            "reportingComponent": "cloudnative-pg",
+            "reportingInstance": "",
+            "source": {
+                "component": "cloudnative-pg"
+            },
+            "type": "Normal"
+        },
+        {
+            "action": "Binding",
+            "apiVersion": "v1",
+            "eventTime": "2026-10-07T02:25:14.827864Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193876",
+                "uid": "98ac31a9-4aed-46f1-ba00-3a6a4b146f2f"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Successfully assigned repro/hdd-pg-2 to aks-nodepool1-30685692-vmss000000",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:14Z",
+                "name": "hdd-pg-2.18dc1e295f4b4896",
+                "namespace": "repro",
+                "resourceVersion": "193878",
+                "uid": "65aa1f3f-0128-4696-b91e-f7a4cbc8dc0d"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "default-scheduler-kube-scheduler-v2-b4ffb59c8-tmlkq",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:16Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{bootstrap-controller}",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193877",
+                "uid": "98ac31a9-4aed-46f1-ba00-3a6a4b146f2f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:16Z",
+            "message": "Container image \"ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:16Z",
+                "name": "hdd-pg-2.18dc1e29d93727e9",
+                "namespace": "repro",
+                "resourceVersion": "193908",
+                "uid": "23e8e71a-81fa-4d6b-8446-f8f85ce5f3cf"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:16Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{bootstrap-controller}",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193877",
+                "uid": "98ac31a9-4aed-46f1-ba00-3a6a4b146f2f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:16Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:16Z",
+                "name": "hdd-pg-2.18dc1e29dbd37215",
+                "namespace": "repro",
+                "resourceVersion": "193909",
+                "uid": "0465b24c-0643-4cbe-a30c-c66eebe66328"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:16Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{bootstrap-controller}",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193877",
+                "uid": "98ac31a9-4aed-46f1-ba00-3a6a4b146f2f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:16Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:16Z",
+                "name": "hdd-pg-2.18dc1e29e058c33a",
+                "namespace": "repro",
+                "resourceVersion": "193910",
+                "uid": "bf41ce9b-de89-47aa-95d6-1e70e96866d9"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:18Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193877",
+                "uid": "98ac31a9-4aed-46f1-ba00-3a6a4b146f2f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:18Z",
+            "message": "Pulling image \"ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:18Z",
+                "name": "hdd-pg-2.18dc1e2a30ee2459",
+                "namespace": "repro",
+                "resourceVersion": "193931",
+                "uid": "07367f0b-4d4f-47e6-bf47-396d7e7cc766"
+            },
+            "reason": "Pulling",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:28Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193877",
+                "uid": "98ac31a9-4aed-46f1-ba00-3a6a4b146f2f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:28Z",
+            "message": "Successfully pulled image \"ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd\" in 10.134s (10.134s including waiting). Image size: 217663605 bytes.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:28Z",
+                "name": "hdd-pg-2.18dc1e2c8d05e0a7",
+                "namespace": "repro",
+                "resourceVersion": "194064",
+                "uid": "ec1065cf-4eb1-4f99-8f53-0d37d5d941bb"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:28Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193877",
+                "uid": "98ac31a9-4aed-46f1-ba00-3a6a4b146f2f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:28Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:28Z",
+                "name": "hdd-pg-2.18dc1e2c944e14c8",
+                "namespace": "repro",
+                "resourceVersion": "194068",
+                "uid": "bf0f6fd3-6eae-4010-a711-e6b8e3083a47"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:28Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "193877",
+                "uid": "98ac31a9-4aed-46f1-ba00-3a6a4b146f2f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:28Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:28Z",
+                "name": "hdd-pg-2.18dc1e2c8f3f491d",
+                "namespace": "repro",
+                "resourceVersion": "194065",
+                "uid": "6e32072e-82fa-408f-a035-3bf2047aa2fa"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000000"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:37Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "163658",
+                "uid": "6db137b8-b2f6-48f1-bb7e-6ee83b396144"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:37Z",
+            "message": "Stopping container postgres",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:37Z",
+                "name": "hdd-pg-1.18dc1e2eb3d036c7",
+                "namespace": "repro",
+                "resourceVersion": "194146",
+                "uid": "0323fdb5-a09f-4a5b-8d5e-c2ca8563491f"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000001",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000001"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T00:24:45Z",
+            "involvedObject": {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "kind": "Cluster",
+                "name": "hdd-pg",
+                "namespace": "repro",
+                "resourceVersion": "194137",
+                "uid": "8932221b-bcc5-485d-bcb3-4a80a548fc9c"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:37Z",
+            "message": "Upgrading instance hdd-pg-1",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:37Z",
+                "name": "hdd-pg.18dc1796302e1130",
+                "namespace": "repro",
+                "resourceVersion": "194141",
+                "uid": "71779aee-7441-4b67-95e4-2c8b9c734032"
+            },
+            "reason": "UpgradingInstance",
+            "reportingComponent": "cloudnative-pg",
+            "reportingInstance": "",
+            "source": {
+                "component": "cloudnative-pg"
+            },
+            "type": "Normal"
+        },
+        {
+            "action": "Binding",
+            "apiVersion": "v1",
+            "eventTime": "2026-10-07T02:25:38.801656Z",
+            "firstTimestamp": null,
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "194164",
+                "uid": "d203071f-0c92-484f-bb46-971f4405f7f3"
+            },
+            "kind": "Event",
+            "lastTimestamp": null,
+            "message": "Successfully assigned repro/hdd-pg-1 to aks-nodepool1-30685692-vmss000001",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:38Z",
+                "name": "hdd-pg-1.18dc1e2ef43e5a09",
+                "namespace": "repro",
+                "resourceVersion": "194166",
+                "uid": "07c26179-7afc-44a9-bbf4-6384046cd61c"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "default-scheduler-kube-scheduler-v2-b4ffb59c8-tmlkq",
+            "source": {},
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 6,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-06T20:54:06Z",
+            "involvedObject": {
+                "apiVersion": "policy/v1",
+                "kind": "PodDisruptionBudget",
+                "name": "hdd-pg-primary",
+                "namespace": "repro",
+                "resourceVersion": "194147",
+                "uid": "a60ac0ff-d2cd-430f-90ec-082bf060ae6b"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:38Z",
+            "message": "No matching pods found",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:38Z",
+                "name": "hdd-pg-primary.18dc0c1783eebbe3",
+                "namespace": "repro",
+                "resourceVersion": "194162",
+                "uid": "8969e3c7-3d42-4ef8-a311-c73c73aba11b"
+            },
+            "reason": "NoPods",
+            "reportingComponent": "controllermanager",
+            "reportingInstance": "",
+            "source": {
+                "component": "controllermanager"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:45Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{bootstrap-controller}",
+                "kind": "Pod",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "194165",
+                "uid": "d203071f-0c92-484f-bb46-971f4405f7f3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:45Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:45Z",
+                "name": "hdd-pg-1.18dc1e309eeed7c9",
+                "namespace": "repro",
+                "resourceVersion": "194204",
+                "uid": "5c0ad784-1093-4d6e-bc27-f13cb9404547"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000001",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000001"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:45Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{bootstrap-controller}",
+                "kind": "Pod",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "194165",
+                "uid": "d203071f-0c92-484f-bb46-971f4405f7f3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:45Z",
+            "message": "Container image \"ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1\" already present on machine and can be accessed by the pod",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:45Z",
+                "name": "hdd-pg-1.18dc1e309d4fa7e0",
+                "namespace": "repro",
+                "resourceVersion": "194203",
+                "uid": "9ef30778-f858-4cab-9183-097375a2b933"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000001",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000001"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:46Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.initContainers{bootstrap-controller}",
+                "kind": "Pod",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "194165",
+                "uid": "d203071f-0c92-484f-bb46-971f4405f7f3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:46Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:46Z",
+                "name": "hdd-pg-1.18dc1e30a387e5b2",
+                "namespace": "repro",
+                "resourceVersion": "194206",
+                "uid": "425d2b74-052c-4b40-a4b8-cddd5a1d9ddb"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000001",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000001"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:47Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "194165",
+                "uid": "d203071f-0c92-484f-bb46-971f4405f7f3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:47Z",
+            "message": "Pulling image \"ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:47Z",
+                "name": "hdd-pg-1.18dc1e310152e7c8",
+                "namespace": "repro",
+                "resourceVersion": "194219",
+                "uid": "6a5f96e6-6489-4c87-a04a-069719aeb3b5"
+            },
+            "reason": "Pulling",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000001",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000001"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:56Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "194165",
+                "uid": "d203071f-0c92-484f-bb46-971f4405f7f3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:56Z",
+            "message": "Container started",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:56Z",
+                "name": "hdd-pg-1.18dc1e3326353f7d",
+                "namespace": "repro",
+                "resourceVersion": "194269",
+                "uid": "32384d5d-3af4-4bef-80f8-47ea2475936b"
+            },
+            "reason": "Started",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000001",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000001"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:56Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "194165",
+                "uid": "d203071f-0c92-484f-bb46-971f4405f7f3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:56Z",
+            "message": "Container created",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:56Z",
+                "name": "hdd-pg-1.18dc1e33218f9708",
+                "namespace": "repro",
+                "resourceVersion": "194268",
+                "uid": "df622b88-2f70-45d2-93c5-9eea847af515"
+            },
+            "reason": "Created",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000001",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000001"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:25:56Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "194165",
+                "uid": "d203071f-0c92-484f-bb46-971f4405f7f3"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:25:56Z",
+            "message": "Successfully pulled image \"ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd\" in 9.098s (9.098s including waiting). Image size: 217663605 bytes.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:25:56Z",
+                "name": "hdd-pg-1.18dc1e331faa2926",
+                "namespace": "repro",
+                "resourceVersion": "194267",
+                "uid": "1fd1180f-3d65-4e75-ba83-34d5c48305b6"
+            },
+            "reason": "Pulled",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-30685692-vmss000001",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-30685692-vmss000001"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T02:28:54Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "resourceVersion": "190101",
+                "uid": "b2505bd1-4201-4657-8456-15a2dde19fb0"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T02:28:54Z",
+            "message": "Successfully completed SKU migration from Standard_ZRS to PremiumV2_LRS for volume pvc-b2505bd1-4201-4657-8456-15a2dde19fb0 (duration: 15m0.117455798s)",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T02:28:54Z",
+                "name": "hdd-pg-2-wal.18dc1e5c7cc0966a",
+                "namespace": "repro",
+                "resourceVersion": "195219",
+                "uid": "06fcd091-2e76-4770-a3cc-d0f6ee9270de"
+            },
+            "reason": "SKUMigrationCompleted",
+            "reportingComponent": "disk.csi.azure.com",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

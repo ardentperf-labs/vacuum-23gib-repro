@@ -1,0 +1,12 @@
+{
+  "actualSourceSha256": "2007e0d27f8b506514c508b0a6d1f8d008f51480b9f7b9ed0bcc277b04f716d8",
+  "auditPath": ".state/prepare-recovery-audit.json",
+  "correctedAtUtc": "2026-10-06T06:12:08.353794+00:00",
+  "field": "historicalAttempts[name=original_02_prepare].sourceAvailable",
+  "newValue": true,
+  "oldValue": false,
+  "previousAuditSha256": "2d56362c0221eeb5f0c5722cf4510ed41d9b8abeb03653279219b831db214a71",
+  "reason": "The source file exists and its current bytes exactly match the as-run failed-prepare hash; it must not be labeled unavailable.",
+  "recordedFailedSourceSha256": "2007e0d27f8b506514c508b0a6d1f8d008f51480b9f7b9ed0bcc277b04f716d8",
+  "sourcePath": "02-prepare.sh"
+}

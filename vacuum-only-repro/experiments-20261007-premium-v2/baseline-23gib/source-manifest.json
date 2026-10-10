@@ -1,0 +1,121 @@
+{
+  "manifestVersion": 1,
+  "version": 1,
+  "verifiedAtUtc": "2026-10-06T15:39:55Z",
+  "readOnlyReview": true,
+  "externalResource": true,
+  "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c",
+  "ownerToken": "16244c2c1353a0fc1b108ec455fd70c8",
+  "purpose": "regional-snapshot-base",
+  "name": "keeper-base-16244c2c",
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "resourceGroup": "RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8",
+  "location": "eastus",
+  "uniqueId": "5ba7640c-4e34-4227-be0d-d428baeaf2cf",
+  "incrementalSnapshotFamilyId": "36f1e425-5e76-4fcd-b65e-cd813d028af4",
+  "provisioningState": "Succeeded",
+  "snapshotAccessState": "Available",
+  "completionPercent": null,
+  "diskSizeGiB": 512,
+  "diskSizeBytes": 549755813888,
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "incremental": true,
+  "logicalSectorSize": 512,
+  "systemIdentifier": "7692518806614212629",
+  "logicalSectorSizeBytes": 512,
+  "logicalSectorSizeEvidence": "Inferred from the Standard_LRS keeper and Standard_LRS staging-disk lineage, created without a sector-size override. Azure's snapshot show response does not expose logicalSectorSize for this source. The PremiumV2 restore disk must explicitly request 512 and its returned property must be verified before attach.",
+  "diskState": "Unattached",
+  "encryption": {
+    "type": "EncryptionAtRestWithPlatformKey"
+  },
+  "networkAccessPolicy": "DenyAll",
+  "publicNetworkAccess": "Disabled",
+  "timeCreated": "2026-10-05T05:34:50.754499+00:00",
+  "tags": {
+    "reprotoken": "16244c2c1353a0fc1b108ec455fd70c8",
+    "reproPurpose": "regional-snapshot-base"
+  },
+  "creationData": {
+    "createOption": "Copy",
+    "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/keeper-stage-16244c2c",
+    "sourceUniqueId": "57dd5b06-a8ab-43b0-bbd3-62348d3e2a9c"
+  },
+  "retention": {
+    "lockId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c/providers/Microsoft.Authorization/locks/preserve-all-snapshots",
+    "lockName": "preserve-all-snapshots",
+    "lockLevel": "CanNotDelete",
+    "lockScope": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c",
+    "lockNotes": "Preserve every snapshot until explicit user deletion authorization.",
+    "resourceGroup": {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+      "name": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+      "location": "westus3",
+      "provisioningState": "Succeeded",
+      "tags": {
+        "managed-by": "vacuum-only-repro",
+        "reproPurpose": "retained-snapshots",
+        "reprotoken": "16244c2c1353a0fc1b108ec455fd70c8"
+      }
+    }
+  },
+  "pinnedKeeper": {
+    "snapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+    "uniqueId": "c05eba46-c2d2-4600-9a5c-fbd1c2671f22",
+    "ownerToken": "93494924de3e081fc5803031e15d5587",
+    "purpose": "retained-primary-pg-snapshot",
+    "location": "eastus",
+    "diskSizeGiB": 512,
+    "sku": "Standard_LRS",
+    "incremental": false,
+    "provisioningState": "Succeeded",
+    "snapshotAccessState": "Available",
+    "timeCreated": "2026-10-04T14:10:10.0747777+00:00",
+    "sourceSetId": "scsi-prepared",
+    "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/snapshots/vacuum-copy-804391dc",
+    "sourceUniqueId": "da0d6fc8-415f-4f28-aeef-2fa8b068f345",
+    "sourceOwnerToken": "804391dc0a7b56b597915163951aed1a",
+    "systemIdentifier": "7692518806614212629",
+    "heapBytes": 118128640000,
+    "tableBytes": 119777173504,
+    "preparedLiveTuplesEstimate": 36050000,
+    "preparedDeadTuplesEstimate": 36050000,
+    "sourceTopology": "combined PGDATA/pg_wal",
+    "consistency": "online primary disk snapshot after checkpoint; crash-consistent",
+    "keeperOwnerToken": "93494924de3e081fc5803031e15d5587",
+    "originalKeeperSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-amplification-prepared-05d212886d"
+  },
+  "provenance": {
+    "sourceChain": [
+      {
+        "step": "pinnedKeeper",
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1"
+      },
+      {
+        "step": "keeperStageDisk",
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/keeper-stage-16244c2c",
+        "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+        "sizeGiB": 512,
+        "sku": "Standard_LRS",
+        "sourceUniqueId": "57dd5b06-a8ab-43b0-bbd3-62348d3e2a9c",
+        "evidence": "experiments/20261005-four/read-pressure/02-prepare.sh lines 97-123 creates stage from pinned snapshot and incremental base from stage"
+      },
+      {
+        "step": "selectedIncrementalSnapshot",
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c",
+        "sourceUniqueId": "57dd5b06-a8ab-43b0-bbd3-62348d3e2a9c"
+      }
+    ],
+    "evidence": [
+      "vacuum-only-repro/snapshot.json",
+      "experiments/20261005-four/read-pressure/02-prepare.sh",
+      "experiments/20261005-four/read-pressure/.state/prepare.json",
+      "experiments/20261005-four/final-owned-snapshot-inventory.json",
+      "experiments/20261005-four/all-snapshots-after-shared-cleanup.json",
+      "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/preflight/all-snapshots-before.json"
+    ],
+    "keeperSourcePredecessorStatus": "The keeper metadata points to vacuum-copy-804391dc in rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a; that predecessor resource group was observed absent during preflight. The pinned full keeper snapshot remains succeeded and available. The selected incremental source is derived from the pinned keeper through the recorded keeper-stage disk, not from that missing predecessor directly."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "kubectl",
+    "--kubeconfig",
+    "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/.state/kubeconfig",
+    "exec",
+    "-i",
+    "-n",
+    "kube-system",
+    "csi-azuredisk-node-4lrnv",
+    "-c",
+    "azuredisk",
+    "--",
+    "sh",
+    "-s"
+  ],
+  "completedAtHost": "2026-10-06T00:46:35.801Z",
+  "returnCode": 0,
+  "stderr": "",
+  "stdout": "before|dev=8:16|sys=/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0|nr=316|depth=316|scheduler=[none] mq-deadline |async_depth=unavailable|tunables=|max_sectors_kb=1280|max_hw_sectors_kb=2048|hctx_nr_tags=0:316,1:316,\nafterSchedulerSwitch|dev=8:16|sys=/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0|nr=256|depth=316|scheduler=none [mq-deadline] |async_depth=256|tunables=writes_starved=2,fifo_batch=16,read_expire=500,write_expire=5000,front_merges=1,|max_sectors_kb=1280|max_hw_sectors_kb=2048|hctx_nr_tags=0:316,1:316,\nafterNrRequests1024|dev=8:16|sys=/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0|nr=1024|depth=316|scheduler=none [mq-deadline] |async_depth=256|tunables=writes_starved=2,fifo_batch=16,read_expire=500,write_expire=5000,front_merges=1,|max_sectors_kb=1280|max_hw_sectors_kb=2048|hctx_nr_tags=0:316,1:316,\nafterAsyncDepth512|dev=8:16|sys=/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0|nr=1024|depth=316|scheduler=none [mq-deadline] |async_depth=512|tunables=writes_starved=2,fifo_batch=16,read_expire=500,write_expire=5000,front_merges=1,|max_sectors_kb=1280|max_hw_sectors_kb=2048|hctx_nr_tags=0:316,1:316,\n"
+}

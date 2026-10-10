@@ -1,0 +1,63 @@
+{
+  "archivedTempPath": "recovery/backup-wait-resume/original-100gib/prebackup-tmp",
+  "captureHelperPath": "recovery/backup-wait-resume/capture_prebackup_tmp.py",
+  "captureHelperSha256": "1a1437306ed4bfdf8edb872b7f5e1ade475eb54fa305a67b1048eb986dad214e",
+  "captureMethod": "read-only byte copy with source and destination hashes before/after",
+  "capturedAtUtc": "2026-10-07T06:11:51.712917+00:00",
+  "childPidAtCapture": 126518,
+  "filesSha256": {
+    "backup.yaml": "50920a82cb9cc09556ed6daa0ba4ea6788e80aaa5d9c00a1c0b4912b885fd960",
+    "cluster.yaml": "ba32ef063d01899010d9be5a3d324f2ad863a55028c12e1f713b5cf574af2aea",
+    "seed-path": "5897829c2962a99fc4aace13eafdb5316d425814a0bd8220fd910f1cfdf02d0e"
+  },
+  "fullTmpManifest": {
+    "absent-backup-vacuum-backup-f1b90aec.err": {
+      "sha256": "c55928eb5591556716ae780642dc1f299873fb70fcb20d5b87a4abcbc5a44a83",
+      "sizeBytes": 92
+    },
+    "absent-cluster-hdd-pg.err": {
+      "sha256": "eabdbefeb476c30595b6036110c8f1f480b2cfce81235e9957238d4a3894c86b",
+      "sizeBytes": 77
+    },
+    "absent-volumesnapshot-vacuum-data-f1b90aec.err": {
+      "sha256": "b4b89abba2dd01336df3e61116022a691dcaa87c64d7543128d16bc179eed39a",
+      "sizeBytes": 103
+    },
+    "absent-volumesnapshotclass-vacuum-backup-snap-f1b90aec.err": {
+      "sha256": "8915c4280775d08f5ba6f43cbc07d584c23c5e0e451be4b03dd60872ec4be23d",
+      "sizeBytes": 116
+    },
+    "absent-volumesnapshotclass-vacuum-snap-f1b90aec.err": {
+      "sha256": "a7452de91c326d402050f1eae489513c63edcf4d6c492164d8bb550cc31b97be",
+      "sizeBytes": 109
+    },
+    "absent-volumesnapshotcontent-vacuum-content-f1b90aec.err": {
+      "sha256": "9b1bd413057ca9540bbfff77af633684d23752ad9655aefb221472912a284fd5",
+      "sizeBytes": 113
+    },
+    "backup.yaml": {
+      "sha256": "50920a82cb9cc09556ed6daa0ba4ea6788e80aaa5d9c00a1c0b4912b885fd960",
+      "sizeBytes": 314
+    },
+    "cluster.yaml": {
+      "sha256": "ba32ef063d01899010d9be5a3d324f2ad863a55028c12e1f713b5cf574af2aea",
+      "sizeBytes": 1820
+    },
+    "seed-path": {
+      "sha256": "5897829c2962a99fc4aace13eafdb5316d425814a0bd8220fd910f1cfdf02d0e",
+      "sizeBytes": 77
+    }
+  },
+  "originalScriptArchivePath": "recovery/backup-wait-resume/original-100gib/original-02-prepare.sh",
+  "originalScriptSha256": "7b24d869c7ef362653f38201402f5e4f297c874f66253658f884ced15055b20f",
+  "processStatusAtCapture": "running",
+  "runStartedAtUtc": "2026-10-06T20:53:32.307852+00:00",
+  "runningProcessReceiptPath": "recovery/backup-wait-resume/original-100gib/original-process-running.json",
+  "runningProcessReceiptSha256": "68472626da0721b22247773d4782d1940e5b992b1d3c5af3ba422249aeb4205e",
+  "sourceStageHelperArchivePath": "recovery/backup-wait-resume/original-100gib/stage-allowlisted-source.sh",
+  "sourceStageHelperSha256": "0eacb0a81b30703a3b788aa745d3eca8c079e3e4e0cfca9921f500b6f5c8918b",
+  "sourceTempPath": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/100gib/.state/.prepare.HPy2Kn",
+  "stack": "100gib",
+  "supervisorPidAtCapture": 126517,
+  "version": 1
+}

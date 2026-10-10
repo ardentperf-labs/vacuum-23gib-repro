@@ -1,0 +1,28 @@
+{
+  "clusterName": "aks-vacuum-only-9daba6b61cdb",
+  "kubeconfigPath": "[REDACTED]",
+  "location": "westus3",
+  "networkWatcherBaseline": {
+    "ids": [
+      "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-watcher-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Network/networkWatchers/vacuum-watcher-35e99cb5febd"
+    ],
+    "location": "westus3"
+  },
+  "nodeResourceGroup": "rg-vacuum-nodes-9daba6b61cdb3b2f6eca73f2f8e15c3c",
+  "ownerToken": "[REDACTED]",
+  "requestedNodeResourceGroup": "rg-vacuum-nodes-9daba6b61cdb3b2f6eca73f2f8e15c3c",
+  "resourceGroup": "rg-vacuum-only-9daba6b61cdb3b2f6eca73f2f8e15c3c",
+  "snapshotRetentionResourceGroup": {
+    "aksPrincipalId": "[REDACTED]",
+    "id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c",
+    "name": "rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c",
+    "ownerToken": "[REDACTED]",
+    "purpose": "experiment-snapshots",
+    "roleAssignmentId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Authorization/roleAssignments/91962b9b-7f26-473e-8067-8bdc53bd62df",
+    "roleAssignmentRemoved": false,
+    "roleDefinitionId": "7efff54f-a5b4-42b5-a1c5-5411624893ce"
+  },
+  "status": "ready",
+  "subscriptionId": "[REDACTED]",
+  "version": 1
+}

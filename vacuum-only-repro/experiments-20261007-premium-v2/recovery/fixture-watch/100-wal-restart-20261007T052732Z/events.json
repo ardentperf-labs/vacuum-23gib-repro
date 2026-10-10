@@ -1,0 +1,137 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 43,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T05:15:33Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-1-wal",
+                "namespace": "repro",
+                "resourceVersion": "247655",
+                "uid": "316a1094-6e0e-4dd5-a32b-070319573632"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T05:25:41Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T05:15:33Z",
+                "name": "hdd-pg-1-wal.18dc2774abc74458",
+                "namespace": "repro",
+                "resourceVersion": "250912",
+                "uid": "a935f499-1501-4326-ab60-4eab370dd2e7"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T05:15:34Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "91675",
+                "uid": "405550c1-241d-4bb2-81ea-30ec649ea373"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T05:15:34Z",
+            "message": "Stopping container postgres",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T05:15:34Z",
+                "name": "hdd-pg-1.18dc2774bfa8c901",
+                "namespace": "repro",
+                "resourceVersion": "247664",
+                "uid": "b4e065ca-6764-4e76-947d-a9eba927cb07"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-15388874-vmss000001",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-15388874-vmss000001"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 62,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T05:15:35Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{postgres}",
+                "kind": "Pod",
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "resourceVersion": "91675",
+                "uid": "405550c1-241d-4bb2-81ea-30ec649ea373"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T05:25:45Z",
+            "message": "Readiness probe failed: HTTP probe failed with statuscode: 500",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T05:15:35Z",
+                "name": "hdd-pg-1.18dc27751213c5ac",
+                "namespace": "repro",
+                "resourceVersion": "250936",
+                "uid": "9a7e88f8-640b-4cb5-bb64-b10ebe43f8cd"
+            },
+            "reason": "Unhealthy",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-15388874-vmss000001",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-15388874-vmss000001"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T05:15:34Z",
+            "involvedObject": {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "kind": "Cluster",
+                "name": "hdd-pg",
+                "namespace": "repro",
+                "resourceVersion": "247657",
+                "uid": "cbd63e61-de31-4991-8c4a-fe7206407486"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T05:15:34Z",
+            "message": "Upgrading instance hdd-pg-1",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T05:15:34Z",
+                "name": "hdd-pg.18dc2774bc537499",
+                "namespace": "repro",
+                "resourceVersion": "247662",
+                "uid": "3b9e7a99-10ee-49fb-95a7-2d3bce8af8bd"
+            },
+            "reason": "UpgradingInstance",
+            "reportingComponent": "cloudnative-pg",
+            "reportingInstance": "",
+            "source": {
+                "component": "cloudnative-pg"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

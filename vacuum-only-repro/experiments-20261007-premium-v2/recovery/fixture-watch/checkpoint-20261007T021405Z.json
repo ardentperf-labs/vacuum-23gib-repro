@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-07T02:14:05Z",
+  "checkpoint": "20261007T021405Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "supervisorPid": 126516,
+      "childPid": 126519,
+      "activeFixturePhase": "replica-snapshot-recovery-job",
+      "clusterPhase": "Creating a new replica",
+      "clusterInstances": 2,
+      "clusterReadyInstances": 1,
+      "primary": "hdd-pg-1",
+      "primaryReady": true,
+      "snapshotRecoveryJob": {
+        "name": "hdd-pg-2-snapshot-recovery",
+        "status": "Running",
+        "ageSeconds": 24,
+        "completion": "0/1"
+      },
+      "snapshotRecoveryPod": {
+        "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+        "phase": "Pending",
+        "ready": false,
+        "containerState": "Init:0/1"
+      },
+      "archiveFailures": 0
+    },
+    "100gib": {
+      "processStatus": "running",
+      "supervisorPid": 126517,
+      "childPid": 126518,
+      "assignedTargetHeapBytes": 107374182400,
+      "activeFixturePhase": "create-index",
+      "indexPhase": "building index: scanning table",
+      "indexBlocksDone": 10408271,
+      "indexBlocksTotal": 13107200,
+      "indexScanFraction": 0.7933779144287109,
+      "activeWaits": [
+        {
+          "type": "LWLock",
+          "event": "WALWrite"
+        }
+      ],
+      "stageRelationBytes": 107374182400,
+      "pod": "hdd-pg-1",
+      "podReady": true
+    }
+  }
+}

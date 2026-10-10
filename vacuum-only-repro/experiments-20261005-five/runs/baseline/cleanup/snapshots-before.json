@@ -1,0 +1,104 @@
+[
+  {
+    "creationData": {
+      "createOption": "Copy",
+      "sourceResourceId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-0aaf271768f70a4fd06a9cb05e75a4ea/providers/Microsoft.Compute/disks/pvc-8914e88b-e123-4117-88b7-7493896698b7",
+      "sourceUniqueId": "42132189-ba09-4d2f-b88f-8851e3e9403a"
+    },
+    "diskSizeBytes": 549755813888,
+    "diskSizeGB": 512,
+    "diskState": "Unattached",
+    "encryption": {
+      "type": "EncryptionAtRestWithPlatformKey"
+    },
+    "id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/snapshot-406392c2-75ac-4caa-b329-e620bddbf5ce",
+    "incremental": true,
+    "incrementalSnapshotFamilyId": "17dc6c8c-a218-4523-8614-49f1058a0b09",
+    "location": "eastus",
+    "name": "snapshot-406392c2-75ac-4caa-b329-e620bddbf5ce",
+    "networkAccessPolicy": "DenyAll",
+    "provisioningState": "Succeeded",
+    "publicNetworkAccess": "Disabled",
+    "resourceGroup": "RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA",
+    "sku": {
+      "name": "Standard_ZRS",
+      "tier": "Standard"
+    },
+    "snapshotAccessState": "Available",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-0aaf271768f70a4fd06a9cb05e75a4ea/providers/Microsoft.Compute/disks/pvc-8914e88b-e123-4117-88b7-7493896698b7"
+    },
+    "timeCreated": "2026-10-05T06:16:10.9813467+00:00",
+    "type": "Microsoft.Compute/snapshots",
+    "uniqueId": "42adef30-e04b-4184-a925-2bd55e9dcbe3"
+  },
+  {
+    "creationData": {
+      "createOption": "Copy",
+      "sourceResourceId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-0aaf271768f70a4fd06a9cb05e75a4ea/providers/Microsoft.Compute/disks/pvc-e159778d-37d9-4cab-9793-e46878b79275",
+      "sourceUniqueId": "60427258-5ec0-40be-a0e7-d81e641183f5"
+    },
+    "diskSizeBytes": 549755813888,
+    "diskSizeGB": 512,
+    "diskState": "Unattached",
+    "encryption": {
+      "type": "EncryptionAtRestWithPlatformKey"
+    },
+    "id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/snapshot-c8982298-a32d-4955-a144-205ddf80a3e7",
+    "incremental": true,
+    "incrementalSnapshotFamilyId": "de250167-6877-46b2-a1cc-7208f89e56eb",
+    "location": "eastus",
+    "name": "snapshot-c8982298-a32d-4955-a144-205ddf80a3e7",
+    "networkAccessPolicy": "DenyAll",
+    "provisioningState": "Succeeded",
+    "publicNetworkAccess": "Disabled",
+    "resourceGroup": "RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA",
+    "sku": {
+      "name": "Standard_ZRS",
+      "tier": "Standard"
+    },
+    "snapshotAccessState": "Available",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-0aaf271768f70a4fd06a9cb05e75a4ea/providers/Microsoft.Compute/disks/pvc-e159778d-37d9-4cab-9793-e46878b79275"
+    },
+    "timeCreated": "2026-10-05T06:16:11.0429381+00:00",
+    "type": "Microsoft.Compute/snapshots",
+    "uniqueId": "02b16683-32fa-4b19-8191-249278e64ad7"
+  },
+  {
+    "creationData": {
+      "createOption": "Copy",
+      "sourceResourceId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+      "sourceUniqueId": "c05eba46-c2d2-4600-9a5c-fbd1c2671f22"
+    },
+    "diskSizeBytes": 549755813888,
+    "diskSizeGB": 512,
+    "diskState": "Unattached",
+    "encryption": {
+      "type": "EncryptionAtRestWithPlatformKey"
+    },
+    "id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/vacuum-copy-0aaf2717",
+    "incremental": false,
+    "location": "eastus",
+    "name": "vacuum-copy-0aaf2717",
+    "networkAccessPolicy": "DenyAll",
+    "provisioningState": "Succeeded",
+    "publicNetworkAccess": "Disabled",
+    "resourceGroup": "RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA",
+    "sku": {
+      "name": "Standard_LRS",
+      "tier": "Standard"
+    },
+    "snapshotAccessState": "Available",
+    "tags": {
+      "reproPurpose": "restore-source-copy",
+      "reprotoken": "0aaf271768f70a4fd06a9cb05e75a4ea",
+      "sourceSnapshotId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1"
+    },
+    "timeCreated": "2026-10-05T05:08:19.9054045+00:00",
+    "type": "Microsoft.Compute/snapshots",
+    "uniqueId": "e67d85dc-5603-49d9-bd18-61046fb9b8d6"
+  }
+]

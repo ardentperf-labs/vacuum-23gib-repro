@@ -1,0 +1,26 @@
+INFO:  aggressively vacuuming "postgres.public.vacuum_fixture"
+INFO:  finished vacuuming "postgres.public.vacuum_fixture": index scans: 1
+pages: 0 removed, 200 remain, 200 scanned (100.00% of total)
+tuples: 500 removed, 500 remain, 0 are dead but not yet removable
+removable cutoff: 738, which was 0 XIDs old when operation ended
+new relfrozenxid: 738, which is 8 XIDs ahead of previous value
+frozen: 200 pages from table (100.00% of total) had 500 tuples frozen
+index scan needed: 200 pages from table (100.00% of total) had 500 dead item identifiers removed
+index "vacuum_fixture_id_idx": pages: 5 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+avg read rate: 495.803 MB/s, avg write rate: 489.786 MB/s
+buffer usage: 247 hits, 412 misses, 407 dirtied
+WAL usage: 1008 records, 207 full page images, 1686662 bytes
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+INFO:  aggressively vacuuming "postgres.pg_toast.pg_toast_16384"
+INFO:  finished vacuuming "postgres.pg_toast.pg_toast_16384": index scans: 0
+pages: 0 removed, 0 remain, 0 scanned (100.00% of total)
+tuples: 0 removed, 0 remain, 0 are dead but not yet removable
+removable cutoff: 738, which was 0 XIDs old when operation ended
+new relfrozenxid: 738, which is 8 XIDs ahead of previous value
+frozen: 0 pages from table (100.00% of total) had 0 tuples frozen
+index scan not needed: 0 pages from table (100.00% of total) had 0 dead item identifiers removed
+avg read rate: 98.892 MB/s, avg write rate: 98.892 MB/s
+buffer usage: 27 hits, 1 misses, 1 dirtied
+WAL usage: 2 records, 1 full page images, 8253 bytes
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+VACUUM

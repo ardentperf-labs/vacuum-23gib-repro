@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "status": "ready-for-root-integration",
+  "scope": "common Premium SSD v2 VACUUM framework; no Azure resource operations performed",
+  "provenance": {
+    "sourceCheckout": "/workspace",
+    "sourceExperiment": "experiments/20261005-four/baseline",
+    "sourceReview": "per-run source-manifest.json files remain root-owned and are not copied here",
+    "fixtureMetadata": "Reduced to fixture identity/size fields; removed copied owner tokens and Azure resource IDs."
+  },
+  "sha256": {
+    "01-provision.sh": "899abb94e41feb9407dd75714995e6342af7c3ee7a06f08184cc7befe092ac5c",
+    "02-prepare.sh": "1d07e1b2020677465621df54ca122e61d2b2473b0beb4ba8f9ade4adb4bc7c00",
+    "03-test.py": "b3ee3858094da6e85ed27a4c954de5db01b177935a51818991646cc279308e11",
+    "04-teardown.sh": "bf574fea4670af735e5e16c4fb708f24fff8227cc5ac0e888ef79e5fff1c5da8",
+    "plot.py": "70155d4c5b5d1685600c431805feb305e7235aebb4081155668390e4467aca52",
+    "README.md": "0961e82f66f55b925a14af012e49dbd70b35f4ff42199115b065e5d0dbb589cc",
+    "PROVENANCE.md": "4bfb0feaada8187a93df9da92658795271882faa1bdc9ce3886c6254f02fa88a",
+    "requirements.txt": "47efd43c1214958d9a6dd5fb235a3c34db3a0d12c82897ea04af8374c7b21935",
+    "snapshot.json": "50f692d6d5157f99b47a0d0e7fb813778d0e8a3c1c0c2c51f1e8d2dfd109cbe1"
+  },
+  "validation": {
+    "bashSyntax": "passed: bash -n 01-provision.sh 02-prepare.sh 04-teardown.sh",
+    "shellcheckErrors": "passed: shellcheck -S error 01-provision.sh 02-prepare.sh 04-teardown.sh",
+    "pythonSyntax": "passed: python3 -m py_compile 03-test.py plot.py",
+    "staleStorageAndRetentionSearch": "passed: no old HDD StorageClass labels, snapshot deletion commands, or blanket teardown hold",
+    "azureRuntimeValidation": "not run; Azure actions are owned by the root orchestrator",
+    "mockedRoleAssignmentCleanup": "passed: ScopeLocked residual, successful delete, already-absent, delete-not-found, and unexpected-error fail-closed cases; Azure CLI replaced by a local fake"
+  },
+  "safety": "04-teardown.sh leaves the separate retained RG locked and refuses AKS/node/test RG deletion when snapshots exist in the node or test RG. The recorded CSI role assignment is deleted when permitted; a verified ScopeLocked residual is included in the completed receipt with its deleted AKS principal ID.",
+  "runtimeInput": "Each run passes its root-owned source-manifest.json with SOURCE_MANIFEST; live snapshot unique ID and metadata must match."
+}

@@ -1,0 +1,423 @@
+{
+  "checkpoint": {
+    "after": {
+      "flushLsn": "4E/5D0267C0",
+      "statsReset": "2026-10-09T05:55:16.011625+00:00",
+      "walBytes": "291891",
+      "walFpi": 43,
+      "walRecords": 1443
+    },
+    "before": {
+      "flushLsn": "4E/5D026710",
+      "statsReset": "2026-10-09T05:55:16.011625+00:00",
+      "walBytes": "291727",
+      "walFpi": 43,
+      "walRecords": 1441
+    },
+    "targetLsn": "4E/5D0267C0"
+  },
+  "clientPostRecoveryHealthy": true,
+  "clientPostRecoveryHealthySeconds": 300.00714299600804,
+  "clientSessionAgeAndWaitSource": "primary pg_stat_activity xact/query ages and wait events, sampled once per second",
+  "clientSessionSamples": "client/sessions.jsonl",
+  "clientStop": {
+    "exitCode": 0,
+    "finishedAtUtc": "2026-10-09T09:19:20.283Z",
+    "requestResult": "graceful_stop_requested",
+    "requestedAtUtc": "2026-10-09T09:19:16.064Z",
+    "serverActivityAfterDrain": {
+      "activeSessions": 0,
+      "backends": [],
+      "benchSessions": 0,
+      "committedTransactions": 13176,
+      "idleClientReadSessions": 0,
+      "maxActiveQueryAgeSeconds": null,
+      "maxActiveXactAgeSeconds": null,
+      "observedAtUtc": "2026-10-09T09:19:19.446970Z",
+      "sampleCommandSeconds": 0.7734413649886847,
+      "sampleEpoch": 1791537559.4941514,
+      "sampleRequestedEpoch": 1791537558.7207093,
+      "sampleStatus": "ok",
+      "unrelatedAppSessions": 0,
+      "waitingSessions": 0
+    },
+    "serverActivityBeforeStopRequest": {
+      "activeSessions": 0,
+      "backends": [
+        {
+          "pid": 1320,
+          "queryAgeSeconds": 1.661279,
+          "state": "idle",
+          "waitEvent": "ClientRead",
+          "waitEventType": "Client",
+          "xactAgeSeconds": null
+        },
+        {
+          "pid": 1321,
+          "queryAgeSeconds": 0.686488,
+          "state": "idle",
+          "waitEvent": "ClientRead",
+          "waitEventType": "Client",
+          "xactAgeSeconds": null
+        },
+        {
+          "pid": 1322,
+          "queryAgeSeconds": 0.455593,
+          "state": "idle",
+          "waitEvent": "ClientRead",
+          "waitEventType": "Client",
+          "xactAgeSeconds": null
+        },
+        {
+          "pid": 1323,
+          "queryAgeSeconds": 2.892503,
+          "state": "idle",
+          "waitEvent": "ClientRead",
+          "waitEventType": "Client",
+          "xactAgeSeconds": null
+        },
+        {
+          "pid": 1324,
+          "queryAgeSeconds": 1.560032,
+          "state": "idle",
+          "waitEvent": "ClientRead",
+          "waitEventType": "Client",
+          "xactAgeSeconds": null
+        },
+        {
+          "pid": 1325,
+          "queryAgeSeconds": 1.132507,
+          "state": "idle",
+          "waitEvent": "ClientRead",
+          "waitEventType": "Client",
+          "xactAgeSeconds": null
+        },
+        {
+          "pid": 1326,
+          "queryAgeSeconds": 3.092731,
+          "state": "idle",
+          "waitEvent": "ClientRead",
+          "waitEventType": "Client",
+          "xactAgeSeconds": null
+        },
+        {
+          "pid": 1327,
+          "queryAgeSeconds": 0.634671,
+          "state": "idle",
+          "waitEvent": "ClientRead",
+          "waitEventType": "Client",
+          "xactAgeSeconds": null
+        },
+        {
+          "pid": 1328,
+          "queryAgeSeconds": 0.633627,
+          "state": "idle",
+          "waitEvent": "ClientRead",
+          "waitEventType": "Client",
+          "xactAgeSeconds": null
+        },
+        {
+          "pid": 1329,
+          "queryAgeSeconds": 3.0451,
+          "state": "idle",
+          "waitEvent": "ClientRead",
+          "waitEventType": "Client",
+          "xactAgeSeconds": null
+        }
+      ],
+      "benchSessions": 10,
+      "committedTransactions": 13171,
+      "idleClientReadSessions": 10,
+      "maxActiveQueryAgeSeconds": null,
+      "maxActiveXactAgeSeconds": null,
+      "observedAtUtc": "2026-10-09T09:19:15.463602Z",
+      "sampleCommandSeconds": 0.791296333016362,
+      "sampleEpoch": 1791537555.51127,
+      "sampleRequestedEpoch": 1791537554.7199733,
+      "sampleStatus": "ok",
+      "unrelatedAppSessions": 0,
+      "waitingSessions": 0
+    },
+    "signal": "SIGALRM",
+    "signalSemantics": "pgbench duration handler stops scheduling and drains active transactions",
+    "status": "0",
+    "waitSeconds": 3.456337998039089
+  },
+  "clientSummary": {
+    "commitLogReconciliation": {
+      "difference": 0,
+      "explainedByInFlightGracefulDrain": false,
+      "pgbenchCompletedTransactions": 13176,
+      "possibleInflightAtStopRequest": 0,
+      "serverCommittedUpdates": 13176
+    },
+    "committedTransactions": 13176,
+    "committedUpdateCountSource": "sum(update_count) from the ten logged client rows after all pgbench sessions drained",
+    "completedTransactions": 13176,
+    "executionMs": {
+      "count": 13176,
+      "max": 1548.026,
+      "mean": 39.175369990892534,
+      "p50": 4.308,
+      "p95": 250.86,
+      "p99": 543.541
+    },
+    "executionSource": "pgbench logged latency minus schedule_lag; log rows are completion records",
+    "failedTransactions": 0,
+    "inFlightActiveSessionsAtStopRequest": 0,
+    "latencyMs": {
+      "count": 13176,
+      "max": 3561.564,
+      "mean": 44.63926062537948,
+      "p50": 4.476,
+      "p95": 273.631,
+      "p99": 600.039
+    },
+    "latencySource": "pgbench per-transaction completion logs; latency includes Poisson schedule lag",
+    "loggedCompletedTransactions": 13176,
+    "malformedLogRows": [],
+    "pendingTransactionsAtStopRequest": 0,
+    "pgbenchExitCode": 0,
+    "progressOutput": "client/raw/pgbench.out",
+    "rawTransactionLogs": [
+      "client/raw/pgbench-log.1307.7",
+      "client/raw/pgbench-log.1307.3",
+      "client/raw/pgbench-log.1307.6",
+      "client/raw/pgbench-log.1307.9",
+      "client/raw/pgbench-log.1307.5",
+      "client/raw/pgbench-log.1307",
+      "client/raw/pgbench-log.1307.2",
+      "client/raw/pgbench-log.1307.1",
+      "client/raw/pgbench-log.1307.4",
+      "client/raw/pgbench-log.1307.8"
+    ],
+    "reportedFailedTransactions": 0,
+    "scheduleLagMs": {
+      "count": 13176,
+      "max": 2611.632,
+      "mean": 5.463890634486946,
+      "p50": 0.093,
+      "p95": 1.085,
+      "p99": 127.377
+    },
+    "transactionLogRows": 13176,
+    "unfinishedAtStopSemantics": "pgbench transaction logs record completed transactions; one-second pg_stat_activity samples preserve pending states, waits, and ages through graceful stop and session drain",
+    "validationErrors": [],
+    "waitEventsAtStopRequest": [
+      {
+        "pid": 1320,
+        "queryAgeSeconds": 1.661279,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1321,
+        "queryAgeSeconds": 0.686488,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1322,
+        "queryAgeSeconds": 0.455593,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1323,
+        "queryAgeSeconds": 2.892503,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1324,
+        "queryAgeSeconds": 1.560032,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1325,
+        "queryAgeSeconds": 1.132507,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1326,
+        "queryAgeSeconds": 3.092731,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1327,
+        "queryAgeSeconds": 0.634671,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1328,
+        "queryAgeSeconds": 0.633627,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1329,
+        "queryAgeSeconds": 3.0451,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      }
+    ]
+  },
+  "clientWarmup": {
+    "averageTps": 4.916891322916992,
+    "endEpoch": 1791535243.299827,
+    "healthyWindows": [
+      {
+        "endEpoch": 1791535001.5745587,
+        "seconds": 60.09144926071167,
+        "startEpoch": 1791534941.4831095,
+        "tps": 5.242010367121397,
+        "transactions": 315
+      },
+      {
+        "endEpoch": 1791535062.093131,
+        "seconds": 60.51857233047485,
+        "startEpoch": 1791535001.5745587,
+        "tps": 4.907584375556098,
+        "transactions": 297
+      },
+      {
+        "endEpoch": 1791535122.1737318,
+        "seconds": 60.08060073852539,
+        "startEpoch": 1791535062.093131,
+        "tps": 4.860137821703924,
+        "transactions": 292
+      },
+      {
+        "endEpoch": 1791535182.2468157,
+        "seconds": 60.07308387756348,
+        "startEpoch": 1791535122.1737318,
+        "tps": 4.427939816476569,
+        "transactions": 266
+      },
+      {
+        "endEpoch": 1791535243.299827,
+        "seconds": 61.053011417388916,
+        "startEpoch": 1791535182.2468157,
+        "tps": 5.143071450699442,
+        "transactions": 314
+      }
+    ],
+    "persistentSessions": 10,
+    "seconds": 301.8167176246643,
+    "startEpoch": 1791534941.4831095,
+    "targetTps": 5,
+    "transactions": 1484,
+    "unrelatedAppSessions": 0
+  },
+  "finalReplayCaughtUp": true,
+  "finalReplayDrainSeconds": 11.21504164399812,
+  "finalReplayTargetLsn": "57/501E570",
+  "heapWorkComplete": null,
+  "heapWorkCompleteLowerBound": null,
+  "heapWorkCompleteUpperBound": null,
+  "heapWorkCompletionObservedByProgress": false,
+  "heapWorkFirstProgress": "2026-10-09T08:40:52.433025716Z",
+  "heapWorkLastProgress": "2026-10-09T08:56:32.383881365Z",
+  "heapWorkStart": "2026-10-09T08:40:51.289421Z",
+  "observationEnd": "2026-10-09T09:19:32.138817165Z",
+  "postVacuumObservationError": null,
+  "preVacuumCheckpoint": {
+    "checkpointCompletedAtUtc": "2026-10-09T08:40:46.486Z",
+    "clientStillRunning": true,
+    "primaryFlushLsnAtReplay": "4E/5E020F30",
+    "replayReachedAtUtc": "2026-10-09T08:40:48.802Z",
+    "replicaReplayLsn": "4E/5E020D10",
+    "startedAtUtc": "2026-10-09T08:40:44.858Z",
+    "targetLsn": "4E/5E0207C0",
+    "walAfter": {
+      "flushLsn": "4E/5E0207C0",
+      "statsReset": "2026-10-09T05:55:16.011625+00:00",
+      "walBytes": "493404",
+      "walFpi": 45,
+      "walRecords": 4486
+    },
+    "walBefore": {
+      "flushLsn": "4E/5E01ED18",
+      "statsReset": "2026-10-09T05:55:16.011625+00:00",
+      "walBytes": "492344",
+      "walFpi": 45,
+      "walRecords": 4470
+    }
+  },
+  "primaryFlushLsnAtObservationEnd": "57/501E570",
+  "remoteVacuumExitCode": 0,
+  "replayCaughtUp": true,
+  "replayDrainSeconds": 1372.4563279659487,
+  "replayEnd": "2026-10-09T09:19:32.138817165Z",
+  "replayTargetLsn": "57/14C1DB8",
+  "replicaLagBytesAtObservationEnd": 0,
+  "replicaReplayLsnAtObservationEnd": "57/501E570",
+  "replicationEvents": [],
+  "testComplete": true,
+  "vacuumComplete": "2026-10-09T08:56:34.085991Z",
+  "vacuumOptions": [
+    "VERBOSE",
+    "FREEZE"
+  ],
+  "vacuumSql": "VACUUM (VERBOSE, FREEZE) public.vacuum_target;",
+  "vacuumStart": "2026-10-09T08:40:51.289421Z",
+  "vacuumTargetReachedWithClient": true,
+  "walAtVacuumComplete": {
+    "flushLsn": "57/14C1DB8",
+    "time": "2026-10-09T08:56:34.085991Z",
+    "walBytes": 36933713251,
+    "walFpi": 6071468,
+    "walRecords": 15129377
+  },
+  "walAtVacuumStart": {
+    "flushLsn": "4E/5E0213F8",
+    "time": "2026-10-09T08:40:51.289421Z",
+    "walBytes": 501007,
+    "walFpi": 46,
+    "walRecords": 4526
+  },
+  "walBeforeVacuum": {
+    "flushLsn": "4E/5E0210C8",
+    "statsReset": "2026-10-09T05:55:16.011625+00:00",
+    "walBytes": "500445",
+    "walFpi": 46,
+    "walRecords": 4517
+  },
+  "walCounterDeltaFromBeforeVacuum": {
+    "walBytes": 36933223760,
+    "walFpi": 6071423,
+    "walRecords": 15124917
+  },
+  "walCounterDeltaScope": "cluster pg_stat_wal counters; includes background WAL, not physical disk writes",
+  "walCountersAfterBackendExit": {
+    "flushLsn": "57/14CA110",
+    "statsReset": "2026-10-09T05:55:16.011625+00:00",
+    "walBytes": "36933724205",
+    "walFpi": 6071469,
+    "walRecords": 15129434
+  }
+}

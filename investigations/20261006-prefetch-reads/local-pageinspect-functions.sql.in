@@ -1,0 +1,14 @@
+CREATE FUNCTION get_raw_page(text, int4) RETURNS bytea
+AS '@PAGEINSPECT_SO@', 'get_raw_page' LANGUAGE C STRICT PARALLEL SAFE;
+CREATE FUNCTION page_header(IN page bytea,
+  OUT lsn pg_lsn, OUT checksum smallint, OUT flags smallint,
+  OUT lower smallint, OUT upper smallint, OUT special smallint,
+  OUT pagesize smallint, OUT version smallint, OUT prune_xid xid)
+AS '@PAGEINSPECT_SO@', 'page_header' LANGUAGE C STRICT PARALLEL SAFE;
+CREATE FUNCTION heap_page_items(IN page bytea,
+  OUT lp smallint, OUT lp_off smallint, OUT lp_flags smallint, OUT lp_len smallint,
+  OUT t_xmin xid, OUT t_xmax xid, OUT t_field3 int4, OUT t_ctid tid,
+  OUT t_infomask2 integer, OUT t_infomask integer, OUT t_hoff smallint,
+  OUT t_bits text, OUT t_oid oid, OUT t_data bytea)
+RETURNS SETOF record
+AS '@PAGEINSPECT_SO@', 'heap_page_items' LANGUAGE C STRICT PARALLEL SAFE;

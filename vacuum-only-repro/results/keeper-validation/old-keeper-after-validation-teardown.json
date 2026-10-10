@@ -1,0 +1,36 @@
+{
+  "creationData": {
+    "createOption": "Copy",
+    "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-14495d19/providers/Microsoft.Compute/snapshots/azhr-amplification-prepared-primary",
+    "sourceUniqueId": "ca798f86-d31d-4bee-9ea1-72af24bfd423"
+  },
+  "diskSizeBytes": 549755813888,
+  "diskSizeGB": 512,
+  "diskState": "Unattached",
+  "encryption": {
+    "type": "EncryptionAtRestWithPlatformKey"
+  },
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-amplification-prepared-05d212886d",
+  "incremental": false,
+  "location": "eastus2",
+  "name": "azhr-keep-amplification-prepared-05d212886d",
+  "networkAccessPolicy": "DenyAll",
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": "Disabled",
+  "resourceGroup": "rg-az-hdd-repro-snapshot-keeper",
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "snapshotAccessState": "Available",
+  "tags": {
+    "managed-by": "local-repro-script",
+    "reproPurpose": "retained-primary-pg-snapshot",
+    "reproSourceSetId": "amplification-prepared",
+    "reproSourceToken": "5c0442481960e3f07737ba8c53bbe089",
+    "reprotoken": "93494924de3e081fc5803031e15d5587"
+  },
+  "timeCreated": "2026-10-04T00:15:12.185146+00:00",
+  "type": "Microsoft.Compute/snapshots",
+  "uniqueId": "00bd9862-71c6-4015-a4a7-52f0015046b9"
+}

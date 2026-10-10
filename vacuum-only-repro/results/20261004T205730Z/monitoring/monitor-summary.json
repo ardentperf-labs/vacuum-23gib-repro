@@ -1,0 +1,45 @@
+{
+  "controller": {
+    "phase": "finished",
+    "updatedAt": "2026-10-05T01:50:17.294748+00:00"
+  },
+  "logFiles": {
+    "primary": {
+      "bytes": 104608,
+      "modifiedAtEpoch": 1791156055.4605806,
+      "path": "/workspace/.parallel/vacuum-23gib-20261004T205657Z/artifacts/primary-postgres-live.log"
+    },
+    "replica": {
+      "bytes": 65050,
+      "modifiedAtEpoch": 1791164836.6317403,
+      "path": "/workspace/.parallel/vacuum-23gib-20261004T205657Z/artifacts/replica-postgres-live.log"
+    }
+  },
+  "replicationEvents": {
+    "byEvent": {},
+    "byRole": {},
+    "firstTime": null,
+    "lastTime": null,
+    "total": 0
+  },
+  "test": {
+    "latestEvent": {
+      "error": null,
+      "event": "observation_finished",
+      "time": "2026-10-05T01:50:16.486Z"
+    },
+    "latestSample": {
+      "phase": "replay_drain",
+      "primaryFlushLsn": "56/F5000000",
+      "replicaReplayLsn": "56/F5000000",
+      "seq": 2216,
+      "time": "2026-10-05T01:50:13.121005923Z",
+      "vacuumProgress": {}
+    },
+    "output": "/workspace/.parallel/vacuum-23gib-20261004T205657Z/results/20261004T205730Z",
+    "phase": "complete",
+    "runId": "20261004T205730Z",
+    "updatedAt": "2026-10-05T01:50:16.486Z"
+  },
+  "updatedAt": "2026-10-05T01:50:29Z"
+}

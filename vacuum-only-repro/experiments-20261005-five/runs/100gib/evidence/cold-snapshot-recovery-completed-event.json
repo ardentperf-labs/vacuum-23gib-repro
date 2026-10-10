@@ -1,0 +1,31 @@
+{
+  "apiVersion": "v1",
+  "count": 1,
+  "eventTime": null,
+  "firstTimestamp": "2026-10-06T02:54:33Z",
+  "involvedObject": {
+    "apiVersion": "batch/v1",
+    "kind": "Job",
+    "name": "hdd-pg-cold-check-e92bdc27-1-snapshot-recovery",
+    "namespace": "repro",
+    "resourceVersion": "411858",
+    "uid": "0e2b3345-f15e-45da-84f2-a7fbc50c3de3"
+  },
+  "kind": "Event",
+  "lastTimestamp": "2026-10-06T02:54:33Z",
+  "message": "Job completed",
+  "metadata": {
+    "creationTimestamp": "2026-10-06T02:54:33Z",
+    "name": "hdd-pg-cold-check-e92bdc27-1-snapshot-recovery.18dbd12e6137e902",
+    "namespace": "repro",
+    "resourceVersion": "411862",
+    "uid": "8a70bfe4-7a74-4fa8-8502-1370dd83d1df"
+  },
+  "reason": "Completed",
+  "reportingComponent": "job-controller",
+  "reportingInstance": "",
+  "source": {
+    "component": "job-controller"
+  },
+  "type": "Normal"
+}

@@ -1,0 +1,67 @@
+{
+  "async256UnderMqVerified": true,
+  "completedAtHost": "2026-10-06T04:30:07.773Z",
+  "csiRollbackTarget": {
+    "capturedAtHost": "2026-10-06T04:30:05.439Z",
+    "initialPod": "csi-azuredisk-node-4lrnv",
+    "node": "aks-nodepool1-35454189-vmss000001",
+    "ready": true,
+    "resolvedPod": "csi-azuredisk-node-4lrnv",
+    "resolvedPodUid": "79103a5a-0bb6-4b30-905e-7b98241d86a9"
+  },
+  "failure": null,
+  "passed": true,
+  "queueFinalReadback": {
+    "passed": true,
+    "returnCode": 0,
+    "stderr": "",
+    "stdout": "dev=8:32|sys=/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0|nr_requests=316|depth=316|scheduler=[none] mq-deadline \n"
+  },
+  "queueRestore": [
+    {
+      "name": "restore-async-256-under-mq",
+      "returnCode": 0,
+      "stderr": "",
+      "stdout": "asyncDepthRestored=256 scheduler=mq-deadline nr_requests=1024 DATAonly\n"
+    },
+    {
+      "name": "restore-data-queue-defaults",
+      "returnCode": 0,
+      "stderr": "",
+      "stdout": "settingsRestored=standbyDATAonly scheduler=none nr_requests=316\n"
+    }
+  ],
+  "queueRestored": true,
+  "readers": {
+    "passed": true,
+    "readerConfigMapsAbsent": true,
+    "readerPodsAbsent": true,
+    "selector": "repro.stack.token=16244c2c1353a0fc1b108ec455fd70c8,repro.experiment=read-pressure",
+    "steps": [
+      {
+        "name": "delete-owned-reader-pods",
+        "returnCode": 0,
+        "stderr": "",
+        "stdout": "pod \"read-pressure-16244c2c-full-3e4d\" deleted from repro namespace\n"
+      },
+      {
+        "name": "reader-pod-final-inventory",
+        "returnCode": 0,
+        "stderr": "",
+        "stdout": "{\n    \"apiVersion\": \"v1\",\n    \"items\": [],\n    \"kind\": \"List\",\n    \"metadata\": {\n        \"resourceVersion\": \"\"\n    }\n}\n"
+      },
+      {
+        "name": "delete-owned-reader-configmaps",
+        "returnCode": 0,
+        "stderr": "",
+        "stdout": "configmap \"read-bin-16244c2c\" deleted from repro namespace\n"
+      },
+      {
+        "name": "reader-configmap-final-inventory",
+        "returnCode": 0,
+        "stderr": "",
+        "stdout": "{\n    \"apiVersion\": \"v1\",\n    \"items\": [],\n    \"kind\": \"List\",\n    \"metadata\": {\n        \"resourceVersion\": \"\"\n    }\n}\n"
+      }
+    ]
+  }
+}

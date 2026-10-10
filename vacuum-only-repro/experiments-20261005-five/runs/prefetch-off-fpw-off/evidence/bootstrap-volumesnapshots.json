@@ -1,0 +1,73 @@
+{
+  "apiVersion": "v1",
+  "items": [
+    {
+      "apiVersion": "snapshot.storage.k8s.io/v1",
+      "kind": "VolumeSnapshot",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"snapshot.storage.k8s.io/v1\",\"kind\":\"VolumeSnapshot\",\"metadata\":{\"annotations\":{},\"labels\":{\"repro.stack.token\":\"9daba6b61cdb3b2f6eca73f2f8e15c3c\"},\"name\":\"src-data-9daba6b6\",\"namespace\":\"repro\"},\"spec\":{\"source\":{\"volumeSnapshotContentName\":\"src-data-content-9daba6b6\"},\"volumeSnapshotClassName\":\"src-pair-9daba6b6\"}}\n"
+        },
+        "creationTimestamp": "2026-10-06T05:14:37Z",
+        "finalizers": [
+          "snapshot.storage.kubernetes.io/volumesnapshot-as-source-protection"
+        ],
+        "generation": 1,
+        "labels": {
+          "repro.stack.token": "9daba6b61cdb3b2f6eca73f2f8e15c3c"
+        },
+        "name": "src-data-9daba6b6",
+        "namespace": "repro",
+        "resourceVersion": "11686",
+        "uid": "169e0a98-cb1e-4dfa-bfbe-745cf43c950e"
+      },
+      "spec": {
+        "source": {
+          "volumeSnapshotContentName": "src-data-content-9daba6b6"
+        },
+        "volumeSnapshotClassName": "src-pair-9daba6b6"
+      },
+      "status": {
+        "boundVolumeSnapshotContentName": "src-data-content-9daba6b6",
+        "creationTime": "2026-10-06T05:14:37Z",
+        "readyToUse": true
+      }
+    },
+    {
+      "apiVersion": "snapshot.storage.k8s.io/v1",
+      "kind": "VolumeSnapshot",
+      "metadata": {
+        "annotations": {
+          "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"snapshot.storage.k8s.io/v1\",\"kind\":\"VolumeSnapshot\",\"metadata\":{\"annotations\":{},\"labels\":{\"repro.stack.token\":\"9daba6b61cdb3b2f6eca73f2f8e15c3c\"},\"name\":\"src-wal-9daba6b6\",\"namespace\":\"repro\"},\"spec\":{\"source\":{\"volumeSnapshotContentName\":\"src-wal-content-9daba6b6\"},\"volumeSnapshotClassName\":\"src-pair-9daba6b6\"}}\n"
+        },
+        "creationTimestamp": "2026-10-06T05:14:37Z",
+        "finalizers": [
+          "snapshot.storage.kubernetes.io/volumesnapshot-as-source-protection"
+        ],
+        "generation": 1,
+        "labels": {
+          "repro.stack.token": "9daba6b61cdb3b2f6eca73f2f8e15c3c"
+        },
+        "name": "src-wal-9daba6b6",
+        "namespace": "repro",
+        "resourceVersion": "11679",
+        "uid": "fd50f21c-b236-42ae-9b5e-e92700eaa2fb"
+      },
+      "spec": {
+        "source": {
+          "volumeSnapshotContentName": "src-wal-content-9daba6b6"
+        },
+        "volumeSnapshotClassName": "src-pair-9daba6b6"
+      },
+      "status": {
+        "boundVolumeSnapshotContentName": "src-wal-content-9daba6b6",
+        "creationTime": "2026-10-06T05:14:37Z",
+        "readyToUse": true
+      }
+    }
+  ],
+  "kind": "List",
+  "metadata": {
+    "resourceVersion": ""
+  }
+}

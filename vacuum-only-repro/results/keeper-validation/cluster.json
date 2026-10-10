@@ -1,0 +1,312 @@
+{
+    "apiVersion": "postgresql.cnpg.io/v1",
+    "kind": "Cluster",
+    "metadata": {
+        "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"postgresql.cnpg.io/v1\",\"kind\":\"Cluster\",\"metadata\":{\"annotations\":{\"vacuum-only-repro/restore-copy-id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-b198f3c57285598156bcdc3f198be3d0/providers/Microsoft.Compute/snapshots/vacuum-copy-b198f3c5\",\"vacuum-only-repro/source-snapshot-id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1\"},\"labels\":{\"repro.stack.token\":\"b198f3c57285598156bcdc3f198be3d0\"},\"name\":\"hdd-pg\",\"namespace\":\"repro\"},\"spec\":{\"affinity\":{\"enablePodAntiAffinity\":true,\"podAntiAffinityType\":\"required\",\"topologyKey\":\"kubernetes.io/hostname\"},\"backup\":{\"barmanObjectStore\":{\"azureCredentials\":{\"connectionString\":{\"key\":\"connection-string\",\"name\":\"azure-barman-credentials\"}},\"destinationPath\":\"https://cnpgwalb198f3c5728559815.blob.core.windows.net/wal-b198f3c57285/cnpg-vacuum-only/b198f3c57285598156bcdc3f198be3d0/\",\"serverName\":\"hdd-pg\"},\"volumeSnapshot\":{\"className\":\"vacuum-backup-snap-b198f3c5\",\"online\":true,\"onlineConfiguration\":{\"immediateCheckpoint\":false,\"waitForArchive\":true},\"walClassName\":\"vacuum-backup-snap-b198f3c5\"}},\"bootstrap\":{\"recovery\":{\"database\":\"repro\",\"owner\":\"app\",\"volumeSnapshots\":{\"storage\":{\"apiGroup\":\"snapshot.storage.k8s.io\",\"kind\":\"VolumeSnapshot\",\"name\":\"vacuum-data-b198f3c5\"}}}},\"imageName\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"instances\":1,\"postgresql\":{\"parameters\":{\"shared_buffers\":\"256MB\",\"track_io_timing\":\"on\",\"track_wal_io_timing\":\"on\"}},\"resources\":{\"limits\":{\"cpu\":\"2\",\"memory\":\"3Gi\"},\"requests\":{\"cpu\":\"1\",\"memory\":\"2Gi\"}},\"storage\":{\"size\":\"512Gi\",\"storageClass\":\"azure-standard-hdd\"}}}\n",
+            "vacuum-only-repro/restore-copy-id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-b198f3c57285598156bcdc3f198be3d0/providers/Microsoft.Compute/snapshots/vacuum-copy-b198f3c5",
+            "vacuum-only-repro/source-snapshot-id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1"
+        },
+        "creationTimestamp": "2026-10-04T14:18:29Z",
+        "generation": 5,
+        "labels": {
+            "repro.stack.token": "b198f3c57285598156bcdc3f198be3d0"
+        },
+        "name": "hdd-pg",
+        "namespace": "repro",
+        "resourceVersion": "8406",
+        "uid": "5b02f728-aad4-4cbd-a4d5-aa39b135766b"
+    },
+    "spec": {
+        "affinity": {
+            "enablePodAntiAffinity": true,
+            "podAntiAffinityType": "required",
+            "topologyKey": "kubernetes.io/hostname"
+        },
+        "backup": {
+            "target": "prefer-standby",
+            "volumeSnapshot": {
+                "className": "vacuum-backup-snap-b198f3c5",
+                "online": true,
+                "onlineConfiguration": {
+                    "immediateCheckpoint": false,
+                    "waitForArchive": true
+                },
+                "snapshotOwnerReference": "none",
+                "walClassName": "vacuum-backup-snap-b198f3c5"
+            }
+        },
+        "bootstrap": {
+            "recovery": {
+                "database": "repro",
+                "owner": "app",
+                "volumeSnapshots": {
+                    "storage": {
+                        "apiGroup": "snapshot.storage.k8s.io",
+                        "kind": "VolumeSnapshot",
+                        "name": "vacuum-data-b198f3c5"
+                    }
+                }
+            }
+        },
+        "enablePDB": true,
+        "enableSuperuserAccess": false,
+        "failoverDelay": 0,
+        "imageName": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+        "instances": 2,
+        "logLevel": "info",
+        "maxSyncReplicas": 0,
+        "minSyncReplicas": 0,
+        "monitoring": {
+            "customQueriesConfigMap": [
+                {
+                    "key": "queries",
+                    "name": "cnpg-default-monitoring"
+                }
+            ],
+            "disableDefaultQueries": false,
+            "enablePodMonitor": false
+        },
+        "postgresGID": 26,
+        "postgresUID": 26,
+        "postgresql": {
+            "parameters": {
+                "archive_mode": "on",
+                "archive_timeout": "5min",
+                "dynamic_shared_memory_type": "posix",
+                "full_page_writes": "on",
+                "log_destination": "csvlog",
+                "log_directory": "/controller/log",
+                "log_filename": "postgres",
+                "log_rotation_age": "0",
+                "log_rotation_size": "0",
+                "log_truncate_on_rotation": "false",
+                "logging_collector": "on",
+                "max_parallel_workers": "32",
+                "max_replication_slots": "32",
+                "max_worker_processes": "32",
+                "shared_buffers": "256MB",
+                "shared_memory_type": "mmap",
+                "shared_preload_libraries": "",
+                "ssl_max_protocol_version": "TLSv1.3",
+                "ssl_min_protocol_version": "TLSv1.3",
+                "track_io_timing": "on",
+                "track_wal_io_timing": "on",
+                "wal_keep_size": "512MB",
+                "wal_level": "logical",
+                "wal_log_hints": "on",
+                "wal_receiver_timeout": "5s",
+                "wal_sender_timeout": "5s"
+            },
+            "syncReplicaElectionConstraint": {
+                "enabled": false
+            },
+            "synchronous": {
+                "dataDurability": "preferred",
+                "method": "any",
+                "number": 1
+            }
+        },
+        "primaryUpdateMethod": "restart",
+        "primaryUpdateStrategy": "unsupervised",
+        "probes": {
+            "liveness": {
+                "isolationCheck": {
+                    "connectionTimeout": 1000,
+                    "enabled": true,
+                    "requestTimeout": 1000
+                }
+            }
+        },
+        "replicationSlots": {
+            "highAvailability": {
+                "enabled": true,
+                "slotPrefix": "_cnpg_"
+            },
+            "synchronizeReplicas": {
+                "enabled": true
+            },
+            "updateInterval": 30
+        },
+        "resources": {
+            "limits": {
+                "cpu": "2",
+                "memory": "3Gi"
+            },
+            "requests": {
+                "cpu": "1",
+                "memory": "2Gi"
+            }
+        },
+        "smartShutdownTimeout": 180,
+        "startDelay": 3600,
+        "stopDelay": 1800,
+        "storage": {
+            "resizeInUseVolumes": true,
+            "size": "512Gi",
+            "storageClass": "azure-standard-hdd"
+        },
+        "switchoverDelay": 3600,
+        "walStorage": {
+            "resizeInUseVolumes": false,
+            "size": "512Gi",
+            "storageClass": "azure-standard-hdd"
+        }
+    },
+    "status": {
+        "availableArchitectures": [
+            {
+                "goArch": "amd64",
+                "hash": "6d915657dadd72f66b0cdeca4d8f357d00de769bee14d4f6ea8adb501dab80d4"
+            },
+            {
+                "goArch": "arm64",
+                "hash": "37e47ffea358929899c8fd2b54139307934492108f5a0cde76e491248145fd4d"
+            }
+        ],
+        "certificates": {
+            "clientCASecret": "hdd-pg-ca",
+            "expirations": {
+                "hdd-pg-ca": "2027-01-02 14:13:29 +0000 UTC",
+                "hdd-pg-replication": "2027-01-02 14:13:29 +0000 UTC",
+                "hdd-pg-server": "2027-01-02 14:13:29 +0000 UTC"
+            },
+            "replicationTLSSecret": "hdd-pg-replication",
+            "serverAltDNSNames": [
+                "hdd-pg-rw",
+                "hdd-pg-rw.repro",
+                "hdd-pg-rw.repro.svc",
+                "hdd-pg-rw.repro.svc.cluster.local",
+                "hdd-pg-r",
+                "hdd-pg-r.repro",
+                "hdd-pg-r.repro.svc",
+                "hdd-pg-r.repro.svc.cluster.local",
+                "hdd-pg-ro",
+                "hdd-pg-ro.repro",
+                "hdd-pg-ro.repro.svc",
+                "hdd-pg-ro.repro.svc.cluster.local"
+            ],
+            "serverCASecret": "hdd-pg-ca",
+            "serverTLSSecret": "hdd-pg-server"
+        },
+        "cloudNativePGCommitHash": "2a35abb46",
+        "cloudNativePGOperatorHash": "6d915657dadd72f66b0cdeca4d8f357d00de769bee14d4f6ea8adb501dab80d4",
+        "conditions": [
+            {
+                "lastTransitionTime": "2026-10-04T14:18:30Z",
+                "message": "Cluster has been bootstrapped",
+                "reason": "BootstrapCompleted",
+                "status": "True",
+                "type": "Initialized"
+            },
+            {
+                "lastTransitionTime": "2026-10-04T14:30:53Z",
+                "message": "A single, unique system ID was found across reporting instances.",
+                "reason": "Unique",
+                "status": "True",
+                "type": "ConsistentSystemID"
+            },
+            {
+                "lastTransitionTime": "2026-10-04T14:35:47Z",
+                "message": "Cluster is Ready",
+                "reason": "ClusterIsReady",
+                "status": "True",
+                "type": "Ready"
+            },
+            {
+                "lastTransitionTime": "2026-10-04T14:24:16Z",
+                "message": "Continuous archiving is working",
+                "reason": "ContinuousArchivingSuccess",
+                "status": "True",
+                "type": "ContinuousArchiving"
+            },
+            {
+                "lastTransitionTime": "2026-10-04T14:31:30Z",
+                "message": "Backup was successful",
+                "reason": "LastBackupSucceeded",
+                "status": "True",
+                "type": "LastBackupSucceeded"
+            }
+        ],
+        "configMapResourceVersion": {
+            "metrics": {
+                "cnpg-default-monitoring": "2144"
+            }
+        },
+        "currentPrimary": "hdd-pg-1",
+        "currentPrimaryTimestamp": "2026-10-04T14:23:55.416287Z",
+        "firstRecoverabilityPoint": "2026-10-04T14:31:30Z",
+        "firstRecoverabilityPointByMethod": {
+            "volumeSnapshot": "2026-10-04T14:31:30Z"
+        },
+        "healthyPVC": [
+            "hdd-pg-1",
+            "hdd-pg-1-wal",
+            "hdd-pg-2",
+            "hdd-pg-2-wal"
+        ],
+        "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+        "instanceNames": [
+            "hdd-pg-1",
+            "hdd-pg-2"
+        ],
+        "instances": 2,
+        "instancesReportedState": {
+            "hdd-pg-1": {
+                "ip": "10.244.1.154",
+                "isPrimary": true,
+                "timeLineID": 1
+            },
+            "hdd-pg-2": {
+                "ip": "10.244.0.19",
+                "isPrimary": false,
+                "timeLineID": 1
+            }
+        },
+        "instancesStatus": {
+            "healthy": [
+                "hdd-pg-1",
+                "hdd-pg-2"
+            ]
+        },
+        "lastSuccessfulBackup": "2026-10-04T14:31:30Z",
+        "lastSuccessfulBackupByMethod": {
+            "volumeSnapshot": "2026-10-04T14:31:30Z"
+        },
+        "managedRolesStatus": {},
+        "operatorCertificateFingerprint": "fde7e5dd937971b2c20d1b58f0e91cff3931bad8d2dbf1ced78c857bdebc8488",
+        "pgDataImageInfo": {
+            "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+            "majorVersion": 16
+        },
+        "phase": "Cluster in healthy state",
+        "poolerIntegrations": {
+            "pgBouncerIntegration": {}
+        },
+        "pvcCount": 4,
+        "readService": "hdd-pg-r",
+        "readyInstances": 2,
+        "secretsResourceVersion": {
+            "applicationSecretVersion": "2119",
+            "clientCaSecretVersion": "2116",
+            "replicationSecretVersion": "2118",
+            "serverCaSecretVersion": "2116",
+            "serverSecretVersion": "2117"
+        },
+        "selector": "cnpg.io/cluster=hdd-pg,cnpg.io/podRole=instance",
+        "switchReplicaClusterStatus": {},
+        "systemID": "7692518806614212629",
+        "targetPrimary": "hdd-pg-1",
+        "targetPrimaryTimestamp": "2026-10-04T14:18:30.446646Z",
+        "timelineID": 1,
+        "topology": {
+            "instances": {
+                "hdd-pg-1": {},
+                "hdd-pg-2": {}
+            },
+            "nodesUsed": 2,
+            "successfullyExtracted": true
+        },
+        "writeService": "hdd-pg-rw"
+    }
+}

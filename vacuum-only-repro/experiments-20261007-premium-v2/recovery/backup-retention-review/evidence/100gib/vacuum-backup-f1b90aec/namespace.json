@@ -1,0 +1,22 @@
+{
+  "apiVersion": "v1",
+  "kind": "Namespace",
+  "metadata": {
+    "creationTimestamp": "2026-10-06T15:54:51Z",
+    "labels": {
+      "kubernetes.io/metadata.name": "repro",
+      "repro.stack.token": "f1b90aec9e24f6a2008d6991738742cf"
+    },
+    "name": "repro",
+    "resourceVersion": "4200",
+    "uid": "e2560ef7-84b5-42a5-afaa-5ee56a5b3ac1"
+  },
+  "spec": {
+    "finalizers": [
+      "kubernetes"
+    ]
+  },
+  "status": {
+    "phase": "Active"
+  }
+}

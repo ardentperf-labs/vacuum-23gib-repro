@@ -1,0 +1,400 @@
+{
+  "targetTps": 5.0,
+  "clients": 10,
+  "synchronousCommit": "on",
+  "targetTpsMeaning": "Expected Poisson offer rate; not a fixed transaction count or backlog.",
+  "completionBucketSeconds": 10.0,
+  "healthyWarmup": {
+    "startEpoch": 1791534941.436894,
+    "endEpoch": 1791535243.228511,
+    "startUtc": "2026-10-09T08:35:41.436894Z",
+    "endUtc": "2026-10-09T08:40:43.228511Z",
+    "seconds": 301.7916171550751,
+    "completedTransactions": 1484,
+    "completedTps": 4.917300268275674,
+    "clientActive": true,
+    "transactionPhaseBasis": "completion timestamp; a transaction may have started in an earlier phase",
+    "latencyMs": {
+      "count": 1484,
+      "mean": 4.167094339622642,
+      "p50": 3.72,
+      "p95": 6.498,
+      "p99": 11.567,
+      "max": 18.967
+    },
+    "scheduleLagMs": {
+      "count": 1484,
+      "mean": 0.1425134770889488,
+      "p50": 0.095,
+      "p95": 0.216,
+      "p99": 1.368,
+      "max": 5.111
+    },
+    "executionMs": {
+      "count": 1484,
+      "mean": 4.024580862533693,
+      "p50": 3.597,
+      "p95": 6.237,
+      "p99": 10.908,
+      "max": 18.878999999999998
+    },
+    "maxPendingXactAgeSeconds": 0.005827,
+    "maxPendingQueryAgeSeconds": 0.005948,
+    "serverCommittedTransactions": 1484,
+    "serverCommittedTps": 4.916891322916992,
+    "serverCounterDurationSeconds": 301.8167176246643,
+    "serverCounterStartEpoch": 1791534941.4831095,
+    "serverCounterEndEpoch": 1791535243.299827,
+    "healthyWindows": [
+      {
+        "endEpoch": 1791535001.5745587,
+        "seconds": 60.09144926071167,
+        "startEpoch": 1791534941.4831095,
+        "tps": 5.242010367121397,
+        "transactions": 315
+      },
+      {
+        "endEpoch": 1791535062.093131,
+        "seconds": 60.51857233047485,
+        "startEpoch": 1791535001.5745587,
+        "tps": 4.907584375556098,
+        "transactions": 297
+      },
+      {
+        "endEpoch": 1791535122.1737318,
+        "seconds": 60.08060073852539,
+        "startEpoch": 1791535062.093131,
+        "tps": 4.860137821703924,
+        "transactions": 292
+      },
+      {
+        "endEpoch": 1791535182.2468157,
+        "seconds": 60.07308387756348,
+        "startEpoch": 1791535122.1737318,
+        "tps": 4.427939816476569,
+        "transactions": 266
+      },
+      {
+        "endEpoch": 1791535243.299827,
+        "seconds": 61.053011417388916,
+        "startEpoch": 1791535182.2468157,
+        "tps": 5.143071450699442,
+        "transactions": 314
+      }
+    ],
+    "sourceFile": "client-warmup.json",
+    "serverCounterBasis": "committed transaction counter delta over the confirmed healthy warm-up window"
+  },
+  "phases": {
+    "pre_vacuum": {
+      "startEpoch": 1791534941.436894,
+      "endEpoch": 1791535251.289421,
+      "startUtc": "2026-10-09T08:35:41.436894Z",
+      "endUtc": "2026-10-09T08:40:51.289421Z",
+      "seconds": 309.85252714157104,
+      "completedTransactions": 1528,
+      "completedTps": 4.931378207871965,
+      "clientActive": true,
+      "transactionPhaseBasis": "completion timestamp; a transaction may have started in an earlier phase",
+      "latencyMs": {
+        "count": 1528,
+        "mean": 4.1746472513089,
+        "p50": 3.721,
+        "p95": 6.556,
+        "p99": 11.567,
+        "max": 18.967
+      },
+      "scheduleLagMs": {
+        "count": 1528,
+        "mean": 0.14918259162303665,
+        "p50": 0.095,
+        "p95": 0.218,
+        "p99": 1.473,
+        "max": 8.22
+      },
+      "executionMs": {
+        "count": 1528,
+        "mean": 4.025464659685864,
+        "p50": 3.597,
+        "p95": 6.25,
+        "p99": 10.814,
+        "max": 18.878999999999998
+      },
+      "maxPendingXactAgeSeconds": 0.005827,
+      "maxPendingQueryAgeSeconds": 0.005948
+    },
+    "vacuum": {
+      "startEpoch": 1791535251.289421,
+      "endEpoch": 1791536194.085991,
+      "startUtc": "2026-10-09T08:40:51.289421Z",
+      "endUtc": "2026-10-09T08:56:34.085991Z",
+      "seconds": 942.7965698242188,
+      "completedTransactions": 4706,
+      "completedTps": 4.9915327978732655,
+      "clientActive": true,
+      "transactionPhaseBasis": "completion timestamp; a transaction may have started in an earlier phase",
+      "latencyMs": {
+        "count": 4706,
+        "mean": 101.6325361240969,
+        "p50": 11.252,
+        "p95": 459.227,
+        "p99": 951.539,
+        "max": 3561.564
+      },
+      "scheduleLagMs": {
+        "count": 4706,
+        "mean": 12.855209519762006,
+        "p50": 0.089,
+        "p95": 3.584,
+        "p99": 359.849,
+        "max": 2611.632
+      },
+      "executionMs": {
+        "count": 4706,
+        "mean": 88.77732660433489,
+        "p50": 10.105,
+        "p95": 434.225,
+        "p99": 745.741,
+        "max": 1548.026
+      },
+      "maxPendingXactAgeSeconds": 1.397018,
+      "maxPendingQueryAgeSeconds": 1.397093
+    },
+    "replay_catchup": {
+      "startEpoch": 1791536194.085991,
+      "endEpoch": 1791537255.922748,
+      "startUtc": "2026-10-09T08:56:34.085991Z",
+      "endUtc": "2026-10-09T09:14:15.922748Z",
+      "seconds": 1061.836757183075,
+      "completedTransactions": 5409,
+      "completedTps": 5.094003351654002,
+      "clientActive": true,
+      "transactionPhaseBasis": "completion timestamp; a transaction may have started in an earlier phase",
+      "latencyMs": {
+        "count": 5409,
+        "mean": 17.80149084858569,
+        "p50": 3.612,
+        "p95": 53.398,
+        "p99": 346.414,
+        "max": 2061.47
+      },
+      "scheduleLagMs": {
+        "count": 5409,
+        "mean": 2.0403325938251062,
+        "p50": 0.095,
+        "p95": 0.275,
+        "p99": 2.723,
+        "max": 2055.324
+      },
+      "executionMs": {
+        "count": 5409,
+        "mean": 15.761158254760584,
+        "p50": 3.483,
+        "p95": 46.299,
+        "p99": 312.242,
+        "max": 998.082
+      },
+      "maxPendingXactAgeSeconds": 0.53998,
+      "maxPendingQueryAgeSeconds": 0.540056
+    },
+    "recovery_verification": {
+      "startEpoch": 1791537255.922748,
+      "endEpoch": 1791537555.898647,
+      "startUtc": "2026-10-09T09:14:15.922748Z",
+      "endUtc": "2026-10-09T09:19:15.898647Z",
+      "seconds": 299.97589898109436,
+      "completedTransactions": 1521,
+      "completedTps": 5.0704073399438645,
+      "clientActive": true,
+      "transactionPhaseBasis": "completion timestamp; a transaction may have started in an earlier phase",
+      "latencyMs": {
+        "count": 1521,
+        "mean": 4.694272189349112,
+        "p50": 3.728,
+        "p95": 7.595,
+        "p99": 15.235,
+        "max": 313.759
+      },
+      "scheduleLagMs": {
+        "count": 1521,
+        "mean": 0.15151939513477974,
+        "p50": 0.095,
+        "p95": 0.24,
+        "p99": 1.5,
+        "max": 3.917
+      },
+      "executionMs": {
+        "count": 1521,
+        "mean": 4.542752794214333,
+        "p50": 3.603,
+        "p95": 7.153,
+        "p99": 15.147,
+        "max": 312.439
+      },
+      "maxPendingXactAgeSeconds": 0.292951,
+      "maxPendingQueryAgeSeconds": 0.293014
+    },
+    "post_recovery_client": {
+      "startEpoch": 1791537555.898647,
+      "endEpoch": 1791537556.0158792,
+      "startUtc": "2026-10-09T09:19:15.898647Z",
+      "endUtc": "2026-10-09T09:19:16.015879Z",
+      "seconds": 0.11723208427429199,
+      "completedTransactions": 1,
+      "completedTps": 8.530088040235343,
+      "clientActive": true,
+      "transactionPhaseBasis": "completion timestamp; a transaction may have started in an earlier phase",
+      "latencyMs": {
+        "count": 1,
+        "mean": 3.707,
+        "p50": 3.707,
+        "p95": 3.707,
+        "p99": 3.707,
+        "max": 3.707
+      },
+      "scheduleLagMs": {
+        "count": 1,
+        "mean": 0.08,
+        "p50": 0.08,
+        "p95": 0.08,
+        "p99": 0.08,
+        "max": 0.08
+      },
+      "executionMs": {
+        "count": 1,
+        "mean": 3.627,
+        "p50": 3.627,
+        "p95": 3.627,
+        "p99": 3.627,
+        "max": 3.627
+      },
+      "maxPendingXactAgeSeconds": null,
+      "maxPendingQueryAgeSeconds": null
+    },
+    "stop_drain": {
+      "startEpoch": 1791537556.0158792,
+      "endEpoch": 1791537559.44697,
+      "startUtc": "2026-10-09T09:19:16.015879Z",
+      "endUtc": "2026-10-09T09:19:19.446970Z",
+      "seconds": 3.431090831756592,
+      "completedTransactions": 3,
+      "completedTps": null,
+      "clientActive": false,
+      "transactionPhaseBasis": "completion timestamp; a transaction may have started in an earlier phase",
+      "latencyMs": {
+        "count": 3,
+        "mean": 3.8856666666666664,
+        "p50": 4.14,
+        "p95": 4.14,
+        "p99": 4.14,
+        "max": 4.154
+      },
+      "scheduleLagMs": {
+        "count": 3,
+        "mean": 0.08933333333333333,
+        "p50": 0.082,
+        "p95": 0.082,
+        "p99": 0.082,
+        "max": 0.107
+      },
+      "executionMs": {
+        "count": 3,
+        "mean": 3.796333333333333,
+        "p50": 4.061,
+        "p95": 4.061,
+        "p99": 4.061,
+        "max": 4.072
+      },
+      "maxPendingXactAgeSeconds": 0,
+      "maxPendingQueryAgeSeconds": 0
+    }
+  },
+  "transactionPhaseBasis": "Transactions are assigned by pod-clock completion timestamp; latency can include work begun in an earlier phase.",
+  "totalCompletedTransactions": 13176,
+  "measurementCompletedTransactions": 13168,
+  "transactionsBeforeMeasurementStart": 8,
+  "transactionsAfterDrainBoundary": 0,
+  "malformedRows": [],
+  "validationErrors": [],
+  "validForClaims": true,
+  "sessionSamples": 2602,
+  "sessionSampleErrors": 0,
+  "sessionSamplesInFullFile": 2618,
+  "sessionSampleErrorsInFullFile": 0,
+  "sessionSampleMaxGapSeconds": 6.614167928695679,
+  "samplingCoverage": {
+    "windowStartUtc": "2026-10-09T08:35:41.436894Z",
+    "windowEndUtc": "2026-10-09T09:19:19.446970Z",
+    "windowSeconds": 2618.01007604599,
+    "successfulSamples": 2602,
+    "sampleErrorsInWindow": 0,
+    "gapLimitSeconds": 2.5,
+    "coveredSeconds": 2611.3959081172943,
+    "coverageFraction": 0.9974735895827089,
+    "maximumSuccessfulSampleGapSeconds": 6.614167928695679,
+    "gaps": [
+      {
+        "startUtc": "2026-10-09T08:58:42.466427Z",
+        "endUtc": "2026-10-09T08:58:49.080595Z",
+        "seconds": 6.614167928695679,
+        "kind": "successful-sample gap exceeds limit"
+      }
+    ],
+    "coverageDefinition": "Only intervals between consecutive successful DB observations no more than 2.5 seconds apart count as covered; leading and trailing intervals are uncovered."
+  },
+  "clockAlignment": {
+    "sourceClock": "PostgreSQL primary pod UTC observedAtUtc for samples, transaction completions, VACUUM and recovery boundaries.",
+    "controllerToDbOffsetSeconds": {
+      "min": -0.16353511810302734,
+      "max": -0.04353046417236328,
+      "median": -0.04894673824310303,
+      "sampleCount": 2618,
+      "definition": "DB observedAtUtc epoch minus controller sampleEpoch for paired successful monitor rows."
+    },
+    "warmupStart": {
+      "controllerEpoch": 1791534941.4831095,
+      "dbEpoch": 1791534941.436894,
+      "dbTimeUtc": "2026-10-09T08:35:41.436894Z",
+      "nearestSampleControllerEpoch": 1791534941.4831095,
+      "nearestSampleObservedAtUtc": "2026-10-09T08:35:41.436894Z",
+      "nearestSampleDistanceSeconds": 0.0,
+      "appliedOffsetSeconds": -0.04621553421020508,
+      "mapping": "nearest sample observedAtUtc"
+    },
+    "warmupEnd": {
+      "controllerEpoch": 1791535243.299827,
+      "dbEpoch": 1791535243.228511,
+      "dbTimeUtc": "2026-10-09T08:40:43.228511Z",
+      "nearestSampleControllerEpoch": 1791535243.299827,
+      "nearestSampleObservedAtUtc": "2026-10-09T08:40:43.228511Z",
+      "nearestSampleDistanceSeconds": 0.0,
+      "appliedOffsetSeconds": -0.07131600379943848,
+      "mapping": "nearest sample observedAtUtc"
+    },
+    "clientStopRequest": {
+      "controllerEpoch": 1791537556.064,
+      "dbEpoch": 1791537556.0158792,
+      "dbTimeUtc": "2026-10-09T09:19:16.015879Z",
+      "nearestSampleControllerEpoch": 1791537556.5107608,
+      "nearestSampleObservedAtUtc": "2026-10-09T09:19:16.462640Z",
+      "nearestSampleDistanceSeconds": 0.446760892868042,
+      "appliedOffsetSeconds": -0.048120737075805664,
+      "mapping": "controller time plus nearest paired DB/controller offset"
+    },
+    "drainBoundaryUtc": "2026-10-09T09:19:19.446970Z",
+    "drainBoundarySource": "clientStop.serverActivityAfterDrain.observedAtUtc"
+  },
+  "notes": [
+    "Target TPS is the expected Poisson offer rate; no synthetic offered-count backlog is inferred.",
+    "Latency includes schedule lag; execution latency subtracts schedule lag and includes commit wait.",
+    "Latency statistics contain completed transactions only. Pending ages include sampled unfinished work.",
+    "Transactions are assigned to phases by completion time, so phase latency can include work started earlier.",
+    "TPS buckets include zero-completion intervals only while pgbench is active and stop at the mapped stop request.",
+    "The healthy warm-up TPS is the exact primary committed-transaction counter delta in client-warmup.json; phase TPS uses native client-log completion timestamps.",
+    "The pre_vacuum phase is the full interval from warm-up start to VACUUM start, including the post-warm-up checkpoint and replica replay wait.",
+    "The stop_drain phase includes completions from transactions still in flight at the stop request; no active-client TPS is reported for it.",
+    "Successful pending-work samples are graphed at DB observedAtUtc; lines break across sample errors and gaps over 2.5 seconds.",
+    "Sampling coverage counts only intervals between consecutive successful DB observations no more than 2.5 seconds apart.",
+    "All graph axes are linear."
+  ]
+}

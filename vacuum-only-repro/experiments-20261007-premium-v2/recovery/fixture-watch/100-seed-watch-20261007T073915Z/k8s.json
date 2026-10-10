@@ -1,0 +1,1751 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "postgresql.cnpg.io/v1",
+            "kind": "Backup",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"postgresql.cnpg.io/v1\",\"kind\":\"Backup\",\"metadata\":{\"annotations\":{},\"labels\":{\"repro.stack.token\":\"f1b90aec9e24f6a2008d6991738742cf\"},\"name\":\"vacuum-backup-f1b90aec\",\"namespace\":\"repro\"},\"spec\":{\"cluster\":{\"name\":\"hdd-pg\"},\"method\":\"volumeSnapshot\",\"online\":true,\"onlineConfiguration\":{\"immediateCheckpoint\":false,\"waitForArchive\":true}}}\n"
+                },
+                "creationTimestamp": "2026-10-07T06:11:36Z",
+                "generation": 1,
+                "labels": {
+                    "repro.stack.token": "f1b90aec9e24f6a2008d6991738742cf"
+                },
+                "name": "vacuum-backup-f1b90aec",
+                "namespace": "repro",
+                "resourceVersion": "284291",
+                "uid": "597e0f7d-c87e-4455-b01a-42120f969859"
+            },
+            "spec": {
+                "cluster": {
+                    "name": "hdd-pg"
+                },
+                "method": "volumeSnapshot",
+                "online": true,
+                "onlineConfiguration": {
+                    "immediateCheckpoint": false,
+                    "waitForArchive": true
+                }
+            },
+            "status": {
+                "backupId": "vacuum-backup-f1b90aec",
+                "backupLabelFile": "U1RBUlQgV0FMIExPQ0FUSU9OOiA5QS84MDAwMDAyOCAoZmlsZSAwMDAwMDAwMTAwMDAwMDlBMDAwMDAwODApCkNIRUNLUE9JTlQgTE9DQVRJT046IDlBLzgwMDAwMDYwCkJBQ0tVUCBNRVRIT0Q6IHN0cmVhbWVkCkJBQ0tVUCBGUk9NOiBwcmltYXJ5ClNUQVJUIFRJTUU6IDIwMjYtMTAtMDcgMDY6MTE6NDMgVVRDCkxBQkVMOiB2YWN1dW0tYmFja3VwLWYxYjkwYWVjClNUQVJUIFRJTUVMSU5FOiAxCg==",
+                "backupName": "vacuum-backup-f1b90aec",
+                "beginLSN": "9A/80000028",
+                "beginWal": "000000010000009A00000080",
+                "endLSN": "9A/80000138",
+                "endWal": "000000010000009A00000080",
+                "instanceID": {
+                    "ContainerID": "containerd://c467caed5c92ed84af4ffbe000b719df987faae28077b990892d443c80bec96a",
+                    "podName": "hdd-pg-1"
+                },
+                "majorVersion": 16,
+                "method": "volumeSnapshot",
+                "online": true,
+                "phase": "completed",
+                "reconciliationStartedAt": "2026-10-07T06:11:36Z",
+                "reconciliationTerminatedAt": "2026-10-07T07:13:20Z",
+                "snapshotBackupStatus": {
+                    "elements": [
+                        {
+                            "name": "vacuum-backup-f1b90aec",
+                            "type": "PG_DATA"
+                        },
+                        {
+                            "name": "vacuum-backup-f1b90aec-wal",
+                            "type": "PG_WAL"
+                        }
+                    ]
+                },
+                "startedAt": "2026-10-07T06:11:36Z",
+                "stoppedAt": "2026-10-07T07:13:20Z"
+            }
+        },
+        {
+            "apiVersion": "snapshot.storage.k8s.io/v1",
+            "kind": "VolumeSnapshot",
+            "metadata": {
+                "annotations": {
+                    "cnpg.io/backupEndTime": "2026-10-07T07:13:20Z",
+                    "cnpg.io/backupEndWAL": "000000010000009A00000080",
+                    "cnpg.io/backupLabelFile": "U1RBUlQgV0FMIExPQ0FUSU9OOiA5QS84MDAwMDAyOCAoZmlsZSAwMDAwMDAwMTAwMDAwMDlBMDAwMDAwODApCkNIRUNLUE9JTlQgTE9DQVRJT046IDlBLzgwMDAwMDYwCkJBQ0tVUCBNRVRIT0Q6IHN0cmVhbWVkCkJBQ0tVUCBGUk9NOiBwcmltYXJ5ClNUQVJUIFRJTUU6IDIwMjYtMTAtMDcgMDY6MTE6NDMgVVRDCkxBQkVMOiB2YWN1dW0tYmFja3VwLWYxYjkwYWVjClNUQVJUIFRJTUVMSU5FOiAxCg==",
+                    "cnpg.io/backupStartTime": "2026-10-07T06:11:36Z",
+                    "cnpg.io/backupStartWAL": "000000010000009A00000080",
+                    "cnpg.io/clusterManifest": "{\"kind\":\"Cluster\",\"apiVersion\":\"postgresql.cnpg.io/v1\",\"metadata\":{\"name\":\"hdd-pg\",\"namespace\":\"repro\",\"uid\":\"cbd63e61-de31-4991-8c4a-fe7206407486\",\"resourceVersion\":\"264674\",\"generation\":2,\"creationTimestamp\":\"2026-10-06T20:54:10Z\",\"labels\":{\"repro.stack.token\":\"f1b90aec9e24f6a2008d6991738742cf\"},\"annotations\":{\"kubectl.kubernetes.io/last-applied-configuration\":\"{\\\"apiVersion\\\":\\\"postgresql.cnpg.io/v1\\\",\\\"kind\\\":\\\"Cluster\\\",\\\"metadata\\\":{\\\"annotations\\\":{\\\"vacuum-only-repro/restore-copy-id\\\":\\\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376\\\",\\\"vacuum-only-repro/source-snapshot-id\\\":\\\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c\\\"},\\\"labels\\\":{\\\"repro.stack.token\\\":\\\"f1b90aec9e24f6a2008d6991738742cf\\\"},\\\"name\\\":\\\"hdd-pg\\\",\\\"namespace\\\":\\\"repro\\\"},\\\"spec\\\":{\\\"affinity\\\":{\\\"enablePodAntiAffinity\\\":true,\\\"podAntiAffinityType\\\":\\\"required\\\",\\\"topologyKey\\\":\\\"kubernetes.io/hostname\\\"},\\\"backup\\\":{\\\"barmanObjectStore\\\":{\\\"azureCredentials\\\":{\\\"connectionString\\\":{\\\"key\\\":\\\"connection-string\\\",\\\"name\\\":\\\"azure-barman-credentials\\\"}},\\\"destinationPath\\\":\\\"https://cnpgwalf1b90aec9e24f6a20.blob.core.windows.net/wal-f1b90aec9e24/cnpg-vacuum-only/f1b90aec9e24f6a2008d6991738742cf/\\\",\\\"serverName\\\":\\\"hdd-pg\\\"},\\\"volumeSnapshot\\\":{\\\"className\\\":\\\"vacuum-backup-snap-f1b90aec\\\",\\\"online\\\":true,\\\"onlineConfiguration\\\":{\\\"immediateCheckpoint\\\":false,\\\"waitForArchive\\\":true},\\\"walClassName\\\":\\\"vacuum-backup-snap-f1b90aec\\\"}},\\\"bootstrap\\\":{\\\"recovery\\\":{\\\"database\\\":\\\"repro\\\",\\\"owner\\\":\\\"app\\\",\\\"volumeSnapshots\\\":{\\\"storage\\\":{\\\"apiGroup\\\":\\\"snapshot.storage.k8s.io\\\",\\\"kind\\\":\\\"VolumeSnapshot\\\",\\\"name\\\":\\\"vacuum-data-f1b90aec\\\"}}}},\\\"imageName\\\":\\\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\\\",\\\"instances\\\":1,\\\"postgresql\\\":{\\\"parameters\\\":{\\\"shared_buffers\\\":\\\"256MB\\\",\\\"track_io_timing\\\":\\\"on\\\",\\\"track_wal_io_timing\\\":\\\"on\\\"}},\\\"resources\\\":{\\\"limits\\\":{\\\"cpu\\\":\\\"2\\\",\\\"memory\\\":\\\"3Gi\\\"},\\\"requests\\\":{\\\"cpu\\\":\\\"1\\\",\\\"memory\\\":\\\"2Gi\\\"}},\\\"storage\\\":{\\\"size\\\":\\\"512Gi\\\",\\\"storageClass\\\":\\\"azure-premiumv2\\\"}}}\\n\",\"vacuum-only-repro/restore-copy-id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376\",\"vacuum-only-repro/source-snapshot-id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c\"},\"managedFields\":[{\"manager\":\"kubectl-client-side-apply\",\"operation\":\"Update\",\"apiVersion\":\"postgresql.cnpg.io/v1\",\"time\":\"2026-10-06T20:54:10Z\",\"fieldsType\":\"FieldsV1\",\"fieldsV1\":{\"f:metadata\":{\"f:annotations\":{\".\":{},\"f:kubectl.kubernetes.io/last-applied-configuration\":{},\"f:vacuum-only-repro/restore-copy-id\":{},\"f:vacuum-only-repro/source-snapshot-id\":{}},\"f:labels\":{\".\":{},\"f:repro.stack.token\":{}}},\"f:spec\":{\".\":{},\"f:affinity\":{\".\":{},\"f:enablePodAntiAffinity\":{},\"f:podAntiAffinityType\":{},\"f:topologyKey\":{}},\"f:backup\":{\".\":{},\"f:barmanObjectStore\":{\".\":{},\"f:azureCredentials\":{\".\":{},\"f:connectionString\":{\".\":{},\"f:key\":{},\"f:name\":{}}},\"f:destinationPath\":{},\"f:serverName\":{}},\"f:target\":{},\"f:volumeSnapshot\":{\".\":{},\"f:className\":{},\"f:online\":{},\"f:onlineConfiguration\":{\".\":{},\"f:immediateCheckpoint\":{},\"f:waitForArchive\":{}},\"f:snapshotOwnerReference\":{},\"f:walClassName\":{}}},\"f:bootstrap\":{\".\":{},\"f:recovery\":{\".\":{},\"f:database\":{},\"f:owner\":{},\"f:volumeSnapshots\":{\".\":{},\"f:storage\":{}}}},\"f:enablePDB\":{},\"f:enableSuperuserAccess\":{},\"f:failoverDelay\":{},\"f:imageName\":{},\"f:instances\":{},\"f:logLevel\":{},\"f:maxSyncReplicas\":{},\"f:minSyncReplicas\":{},\"f:postgresGID\":{},\"f:postgresUID\":{},\"f:postgresql\":{\".\":{},\"f:parameters\":{\".\":{},\"f:shared_buffers\":{},\"f:track_io_timing\":{},\"f:track_wal_io_timing\":{}}},\"f:primaryUpdateMethod\":{},\"f:primaryUpdateStrategy\":{},\"f:replicationSlots\":{\".\":{},\"f:highAvailability\":{\".\":{},\"f:enabled\":{},\"f:slotPrefix\":{}},\"f:updateInterval\":{}},\"f:resources\":{\".\":{},\"f:limits\":{\".\":{},\"f:cpu\":{},\"f:memory\":{}},\"f:requests\":{\".\":{},\"f:cpu\":{},\"f:memory\":{}}},\"f:smartShutdownTimeout\":{},\"f:startDelay\":{},\"f:stopDelay\":{},\"f:storage\":{\".\":{},\"f:resizeInUseVolumes\":{},\"f:size\":{},\"f:storageClass\":{}},\"f:switchoverDelay\":{}}}},{\"manager\":\"kubectl-patch\",\"operation\":\"Update\",\"apiVersion\":\"postgresql.cnpg.io/v1\",\"time\":\"2026-10-07T05:15:33Z\",\"fieldsType\":\"FieldsV1\",\"fieldsV1\":{\"f:spec\":{\"f:walStorage\":{\".\":{},\"f:resizeInUseVolumes\":{},\"f:size\":{},\"f:storageClass\":{}}}}},{\"manager\":\"manager\",\"operation\":\"Update\",\"apiVersion\":\"postgresql.cnpg.io/v1\",\"time\":\"2026-10-07T06:11:36Z\",\"fieldsType\":\"FieldsV1\",\"fieldsV1\":{\"f:status\":{\".\":{},\"f:availableArchitectures\":{},\"f:certificates\":{\".\":{},\"f:clientCASecret\":{},\"f:expirations\":{\".\":{},\"f:hdd-pg-ca\":{},\"f:hdd-pg-replication\":{},\"f:hdd-pg-server\":{}},\"f:replicationTLSSecret\":{},\"f:serverAltDNSNames\":{},\"f:serverCASecret\":{},\"f:serverTLSSecret\":{}},\"f:cloudNativePGCommitHash\":{},\"f:cloudNativePGOperatorHash\":{},\"f:conditions\":{},\"f:configMapResourceVersion\":{\".\":{},\"f:metrics\":{\".\":{},\"f:cnpg-default-monitoring\":{}}},\"f:currentPrimary\":{},\"f:currentPrimaryTimestamp\":{},\"f:healthyPVC\":{},\"f:image\":{},\"f:instanceNames\":{},\"f:instances\":{},\"f:instancesReportedState\":{\".\":{},\"f:hdd-pg-1\":{\".\":{},\"f:ip\":{},\"f:isPrimary\":{},\"f:timeLineID\":{}}},\"f:instancesStatus\":{\".\":{},\"f:healthy\":{}},\"f:managedRolesStatus\":{},\"f:operatorCertificateFingerprint\":{},\"f:pgDataImageInfo\":{\".\":{},\"f:image\":{},\"f:majorVersion\":{}},\"f:phase\":{},\"f:poolerIntegrations\":{\".\":{},\"f:pgBouncerIntegration\":{}},\"f:pvcCount\":{},\"f:readService\":{},\"f:readyInstances\":{},\"f:secretsResourceVersion\":{\".\":{},\"f:applicationSecretVersion\":{},\"f:clientCaSecretVersion\":{},\"f:replicationSecretVersion\":{},\"f:serverCaSecretVersion\":{},\"f:serverSecretVersion\":{}},\"f:selector\":{},\"f:switchReplicaClusterStatus\":{},\"f:systemID\":{},\"f:targetPrimary\":{},\"f:targetPrimaryTimestamp\":{},\"f:timelineID\":{},\"f:topology\":{\".\":{},\"f:instances\":{\".\":{},\"f:hdd-pg-1\":{}},\"f:nodesUsed\":{},\"f:successfullyExtracted\":{}},\"f:writeService\":{}}},\"subresource\":\"status\"}]},\"spec\":{\"imageName\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"postgresUID\":26,\"postgresGID\":26,\"instances\":1,\"postgresql\":{\"parameters\":{\"archive_mode\":\"on\",\"archive_timeout\":\"5min\",\"dynamic_shared_memory_type\":\"posix\",\"full_page_writes\":\"on\",\"log_destination\":\"csvlog\",\"log_directory\":\"/controller/log\",\"log_filename\":\"postgres\",\"log_rotation_age\":\"0\",\"log_rotation_size\":\"0\",\"log_truncate_on_rotation\":\"false\",\"logging_collector\":\"on\",\"max_parallel_workers\":\"32\",\"max_replication_slots\":\"32\",\"max_worker_processes\":\"32\",\"shared_buffers\":\"256MB\",\"shared_memory_type\":\"mmap\",\"shared_preload_libraries\":\"\",\"ssl_max_protocol_version\":\"TLSv1.3\",\"ssl_min_protocol_version\":\"TLSv1.3\",\"track_io_timing\":\"on\",\"track_wal_io_timing\":\"on\",\"wal_keep_size\":\"512MB\",\"wal_level\":\"logical\",\"wal_log_hints\":\"on\",\"wal_receiver_timeout\":\"5s\",\"wal_sender_timeout\":\"5s\"},\"syncReplicaElectionConstraint\":{\"enabled\":false}},\"replicationSlots\":{\"highAvailability\":{\"enabled\":true,\"slotPrefix\":\"_cnpg_\"},\"updateInterval\":30,\"synchronizeReplicas\":{\"enabled\":true}},\"bootstrap\":{\"recovery\":{\"volumeSnapshots\":{\"storage\":{\"apiGroup\":\"snapshot.storage.k8s.io\",\"kind\":\"VolumeSnapshot\",\"name\":\"vacuum-data-f1b90aec\"}},\"database\":\"repro\",\"owner\":\"app\"}},\"enableSuperuserAccess\":false,\"storage\":{\"storageClass\":\"azure-premiumv2\",\"size\":\"512Gi\",\"resizeInUseVolumes\":true},\"walStorage\":{\"storageClass\":\"azure-premiumv2\",\"size\":\"512Gi\",\"resizeInUseVolumes\":false},\"startDelay\":3600,\"stopDelay\":1800,\"smartShutdownTimeout\":180,\"switchoverDelay\":3600,\"affinity\":{\"enablePodAntiAffinity\":true,\"topologyKey\":\"kubernetes.io/hostname\",\"podAntiAffinityType\":\"required\"},\"resources\":{\"limits\":{\"cpu\":\"2\",\"memory\":\"3Gi\"},\"requests\":{\"cpu\":\"1\",\"memory\":\"2Gi\"}},\"primaryUpdateStrategy\":\"unsupervised\",\"primaryUpdateMethod\":\"restart\",\"backup\":{\"volumeSnapshot\":{\"className\":\"vacuum-backup-snap-f1b90aec\",\"walClassName\":\"vacuum-backup-snap-f1b90aec\",\"snapshotOwnerReference\":\"none\",\"online\":true,\"onlineConfiguration\":{\"waitForArchive\":true,\"immediateCheckpoint\":false}},\"barmanObjectStore\":{\"azureCredentials\":{\"connectionString\":{\"name\":\"azure-barman-credentials\",\"key\":\"connection-string\"}},\"destinationPath\":\"https://cnpgwalf1b90aec9e24f6a20.blob.core.windows.net/wal-f1b90aec9e24/cnpg-vacuum-only/f1b90aec9e24f6a2008d6991738742cf/\",\"serverName\":\"hdd-pg\"},\"target\":\"prefer-standby\"},\"monitoring\":{\"disableDefaultQueries\":false,\"customQueriesConfigMap\":[{\"name\":\"cnpg-default-monitoring\",\"key\":\"queries\"}]},\"logLevel\":\"info\",\"enablePDB\":true,\"probes\":{\"liveness\":{\"isolationCheck\":{\"enabled\":true,\"requestTimeout\":1000,\"connectionTimeout\":1000}}}},\"status\":{\"instances\":1,\"readyInstances\":1,\"selector\":\"cnpg.io/cluster=hdd-pg,cnpg.io/podRole=instance\",\"instancesStatus\":{\"healthy\":[\"hdd-pg-1\"]},\"instancesReportedState\":{\"hdd-pg-1\":{\"isPrimary\":true,\"timeLineID\":1,\"ip\":\"10.244.1.0\"}},\"managedRolesStatus\":{},\"timelineID\":1,\"topology\":{\"instances\":{\"hdd-pg-1\":{}},\"nodesUsed\":1,\"successfullyExtracted\":true},\"currentPrimary\":\"hdd-pg-1\",\"targetPrimary\":\"hdd-pg-1\",\"pvcCount\":2,\"healthyPVC\":[\"hdd-pg-1\",\"hdd-pg-1-wal\"],\"writeService\":\"hdd-pg-rw\",\"readService\":\"hdd-pg-r\",\"phase\":\"Cluster in healthy state\",\"secretsResourceVersion\":{\"replicationSecretVersion\":\"89590\",\"applicationSecretVersion\":\"89591\",\"clientCaSecretVersion\":\"89588\",\"serverCaSecretVersion\":\"89588\",\"serverSecretVersion\":\"89589\"},\"configMapResourceVersion\":{\"metrics\":{\"cnpg-default-monitoring\":\"89615\"}},\"certificates\":{\"serverCASecret\":\"hdd-pg-ca\",\"serverTLSSecret\":\"hdd-pg-server\",\"replicationTLSSecret\":\"hdd-pg-replication\",\"clientCASecret\":\"hdd-pg-ca\",\"serverAltDNSNames\":[\"hdd-pg-rw\",\"hdd-pg-rw.repro\",\"hdd-pg-rw.repro.svc\",\"hdd-pg-rw.repro.svc.cluster.local\",\"hdd-pg-r\",\"hdd-pg-r.repro\",\"hdd-pg-r.repro.svc\",\"hdd-pg-r.repro.svc.cluster.local\",\"hdd-pg-ro\",\"hdd-pg-ro.repro\",\"hdd-pg-ro.repro.svc\",\"hdd-pg-ro.repro.svc.cluster.local\"],\"expirations\":{\"hdd-pg-ca\":\"2027-01-04 20:49:10 +0000 UTC\",\"hdd-pg-replication\":\"2027-01-04 20:49:10 +0000 UTC\",\"hdd-pg-server\":\"2027-01-04 20:49:10 +0000 UTC\"}},\"cloudNativePGCommitHash\":\"2a35abb46\",\"currentPrimaryTimestamp\":\"2026-10-06T21:01:55.720851Z\",\"targetPrimaryTimestamp\":\"2026-10-06T20:54:11.019388Z\",\"poolerIntegrations\":{\"pgBouncerIntegration\":{}},\"cloudNativePGOperatorHash\":\"6d915657dadd72f66b0cdeca4d8f357d00de769bee14d4f6ea8adb501dab80d4\",\"operatorCertificateFingerprint\":\"8bbb1a2fc0a9d8e4581a8092a66ad65628675707dcf61b90325ea36d5d45f677\",\"availableArchitectures\":[{\"goArch\":\"amd64\",\"hash\":\"6d915657dadd72f66b0cdeca4d8f357d00de769bee14d4f6ea8adb501dab80d4\"},{\"goArch\":\"arm64\",\"hash\":\"37e47ffea358929899c8fd2b54139307934492108f5a0cde76e491248145fd4d\"}],\"conditions\":[{\"type\":\"Initialized\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-06T20:54:11Z\",\"reason\":\"BootstrapCompleted\",\"message\":\"Cluster has been bootstrapped\"},{\"type\":\"ConsistentSystemID\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-07T06:11:18Z\",\"reason\":\"Unique\",\"message\":\"A single, unique system ID was found across reporting instances.\"},{\"type\":\"Ready\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-07T06:11:26Z\",\"reason\":\"ClusterIsReady\",\"message\":\"Cluster is Ready\"},{\"type\":\"ContinuousArchiving\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-06T21:02:21Z\",\"reason\":\"ContinuousArchivingSuccess\",\"message\":\"Continuous archiving is working\"},{\"type\":\"LastBackupSucceeded\",\"status\":\"False\",\"lastTransitionTime\":\"2026-10-07T06:11:36Z\",\"reason\":\"BackupStarted\",\"message\":\"New Backup starting up\"}],\"instanceNames\":[\"hdd-pg-1\"],\"image\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"pgDataImageInfo\":{\"image\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"majorVersion\":16},\"switchReplicaClusterStatus\":{},\"systemID\":\"7692518806614212629\"}}",
+                    "cnpg.io/instanceName": "hdd-pg-1",
+                    "cnpg.io/instanceRole": "primary",
+                    "cnpg.io/nodeSerial": "1",
+                    "cnpg.io/onlineBackup": "true",
+                    "cnpg.io/operatorVersion": "1.30.1",
+                    "cnpg.io/pgControldata": "pg_control version number:            1300\nCatalog version number:               202307071\nDatabase system identifier:           7692518806614212629\nDatabase cluster state:               in production\npg_control last modified:             Wed Oct  7 06:11:36 2026\nLatest checkpoint location:           9A/80000060\nLatest checkpoint's REDO location:    9A/80000028\nLatest checkpoint's REDO WAL file:    000000010000009A00000080\nLatest checkpoint's TimeLineID:       1\nLatest checkpoint's PrevTimeLineID:   1\nLatest checkpoint's full_page_writes: on\nLatest checkpoint's NextXID:          0:1486\nLatest checkpoint's NextOID:          24584\nLatest checkpoint's NextMultiXactId:  1\nLatest checkpoint's NextMultiOffset:  0\nLatest checkpoint's oldestXID:        722\nLatest checkpoint's oldestXID's DB:   1\nLatest checkpoint's oldestActiveXID:  1486\nLatest checkpoint's oldestMultiXid:   1\nLatest checkpoint's oldestMulti's DB: 1\nLatest checkpoint's oldestCommitTsXid:0\nLatest checkpoint's newestCommitTsXid:0\nTime of latest checkpoint:            Wed Oct  7 06:11:36 2026\nFake LSN counter for unlogged rels:   0/3E8\nMinimum recovery ending location:     0/0\nMin recovery ending loc's timeline:   0\nBackup start location:                0/0\nBackup end location:                  0/0\nEnd-of-backup record required:        no\nwal_level setting:                    logical\nwal_log_hints setting:                on\nmax_connections setting:              100\nmax_worker_processes setting:         32\nmax_wal_senders setting:              10\nmax_prepared_xacts setting:           0\nmax_locks_per_xact setting:           64\ntrack_commit_timestamp setting:       off\nMaximum data alignment:               8\nDatabase block size:                  8192\nBlocks per segment of large relation: 131072\nWAL block size:                       8192\nBytes per WAL segment:                16777216\nMaximum length of identifiers:        64\nMaximum columns in an index:          32\nMaximum size of a TOAST chunk:        1996\nSize of a large-object chunk:         2048\nDate/time type storage:               64-bit integers\nFloat8 argument passing:              by value\nData page checksum version:           0\nMock authentication nonce:            fc0d78fa47129da1a4d778a30791fbd57abeda46e4d66059d8facad444d9faa9\n",
+                    "cnpg.io/pvcRole": "PG_DATA",
+                    "cnpg.io/pvcStatus": "ready",
+                    "cnpg.io/snapshotEndTime": "2026-10-07T06:11:58Z",
+                    "cnpg.io/snapshotStartTime": "2026-10-07T06:11:47Z",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "role": "primary",
+                    "volume.beta.kubernetes.io/storage-provisioner": "disk.csi.azure.com",
+                    "volume.kubernetes.io/selected-node": "aks-nodepool1-15388874-vmss000000",
+                    "volume.kubernetes.io/storage-provisioner": "disk.csi.azure.com"
+                },
+                "creationTimestamp": "2026-10-07T06:11:46Z",
+                "finalizers": [
+                    "snapshot.storage.kubernetes.io/volumesnapshot-as-source-protection"
+                ],
+                "generation": 1,
+                "labels": {
+                    "app.kubernetes.io/component": "database",
+                    "app.kubernetes.io/instance": "hdd-pg",
+                    "app.kubernetes.io/managed-by": "cloudnative-pg",
+                    "app.kubernetes.io/name": "postgresql",
+                    "app.kubernetes.io/version": "16",
+                    "cnpg.io/backupDate": "20261007",
+                    "cnpg.io/backupMonth": "202610",
+                    "cnpg.io/backupName": "vacuum-backup-f1b90aec",
+                    "cnpg.io/backupTimeline": "1",
+                    "cnpg.io/backupYear": "2026",
+                    "cnpg.io/cluster": "hdd-pg",
+                    "cnpg.io/majorVersion": "16"
+                },
+                "name": "vacuum-backup-f1b90aec",
+                "namespace": "repro",
+                "resourceVersion": "289640",
+                "uid": "604b8cee-1a94-4df6-b846-be245038a795"
+            },
+            "spec": {
+                "source": {
+                    "persistentVolumeClaimName": "hdd-pg-1"
+                },
+                "volumeSnapshotClassName": "vacuum-backup-snap-f1b90aec"
+            },
+            "status": {
+                "boundVolumeSnapshotContentName": "snapcontent-604b8cee-1a94-4df6-b846-be245038a795",
+                "creationTime": "2026-10-07T06:11:47Z",
+                "readyToUse": true,
+                "restoreSize": "512Gi"
+            }
+        },
+        {
+            "apiVersion": "snapshot.storage.k8s.io/v1",
+            "kind": "VolumeSnapshot",
+            "metadata": {
+                "annotations": {
+                    "cnpg.io/backupEndTime": "2026-10-07T07:13:20Z",
+                    "cnpg.io/backupEndWAL": "000000010000009A00000080",
+                    "cnpg.io/backupLabelFile": "U1RBUlQgV0FMIExPQ0FUSU9OOiA5QS84MDAwMDAyOCAoZmlsZSAwMDAwMDAwMTAwMDAwMDlBMDAwMDAwODApCkNIRUNLUE9JTlQgTE9DQVRJT046IDlBLzgwMDAwMDYwCkJBQ0tVUCBNRVRIT0Q6IHN0cmVhbWVkCkJBQ0tVUCBGUk9NOiBwcmltYXJ5ClNUQVJUIFRJTUU6IDIwMjYtMTAtMDcgMDY6MTE6NDMgVVRDCkxBQkVMOiB2YWN1dW0tYmFja3VwLWYxYjkwYWVjClNUQVJUIFRJTUVMSU5FOiAxCg==",
+                    "cnpg.io/backupStartTime": "2026-10-07T06:11:36Z",
+                    "cnpg.io/backupStartWAL": "000000010000009A00000080",
+                    "cnpg.io/clusterManifest": "{\"kind\":\"Cluster\",\"apiVersion\":\"postgresql.cnpg.io/v1\",\"metadata\":{\"name\":\"hdd-pg\",\"namespace\":\"repro\",\"uid\":\"cbd63e61-de31-4991-8c4a-fe7206407486\",\"resourceVersion\":\"264674\",\"generation\":2,\"creationTimestamp\":\"2026-10-06T20:54:10Z\",\"labels\":{\"repro.stack.token\":\"f1b90aec9e24f6a2008d6991738742cf\"},\"annotations\":{\"kubectl.kubernetes.io/last-applied-configuration\":\"{\\\"apiVersion\\\":\\\"postgresql.cnpg.io/v1\\\",\\\"kind\\\":\\\"Cluster\\\",\\\"metadata\\\":{\\\"annotations\\\":{\\\"vacuum-only-repro/restore-copy-id\\\":\\\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376\\\",\\\"vacuum-only-repro/source-snapshot-id\\\":\\\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c\\\"},\\\"labels\\\":{\\\"repro.stack.token\\\":\\\"f1b90aec9e24f6a2008d6991738742cf\\\"},\\\"name\\\":\\\"hdd-pg\\\",\\\"namespace\\\":\\\"repro\\\"},\\\"spec\\\":{\\\"affinity\\\":{\\\"enablePodAntiAffinity\\\":true,\\\"podAntiAffinityType\\\":\\\"required\\\",\\\"topologyKey\\\":\\\"kubernetes.io/hostname\\\"},\\\"backup\\\":{\\\"barmanObjectStore\\\":{\\\"azureCredentials\\\":{\\\"connectionString\\\":{\\\"key\\\":\\\"connection-string\\\",\\\"name\\\":\\\"azure-barman-credentials\\\"}},\\\"destinationPath\\\":\\\"https://cnpgwalf1b90aec9e24f6a20.blob.core.windows.net/wal-f1b90aec9e24/cnpg-vacuum-only/f1b90aec9e24f6a2008d6991738742cf/\\\",\\\"serverName\\\":\\\"hdd-pg\\\"},\\\"volumeSnapshot\\\":{\\\"className\\\":\\\"vacuum-backup-snap-f1b90aec\\\",\\\"online\\\":true,\\\"onlineConfiguration\\\":{\\\"immediateCheckpoint\\\":false,\\\"waitForArchive\\\":true},\\\"walClassName\\\":\\\"vacuum-backup-snap-f1b90aec\\\"}},\\\"bootstrap\\\":{\\\"recovery\\\":{\\\"database\\\":\\\"repro\\\",\\\"owner\\\":\\\"app\\\",\\\"volumeSnapshots\\\":{\\\"storage\\\":{\\\"apiGroup\\\":\\\"snapshot.storage.k8s.io\\\",\\\"kind\\\":\\\"VolumeSnapshot\\\",\\\"name\\\":\\\"vacuum-data-f1b90aec\\\"}}}},\\\"imageName\\\":\\\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\\\",\\\"instances\\\":1,\\\"postgresql\\\":{\\\"parameters\\\":{\\\"shared_buffers\\\":\\\"256MB\\\",\\\"track_io_timing\\\":\\\"on\\\",\\\"track_wal_io_timing\\\":\\\"on\\\"}},\\\"resources\\\":{\\\"limits\\\":{\\\"cpu\\\":\\\"2\\\",\\\"memory\\\":\\\"3Gi\\\"},\\\"requests\\\":{\\\"cpu\\\":\\\"1\\\",\\\"memory\\\":\\\"2Gi\\\"}},\\\"storage\\\":{\\\"size\\\":\\\"512Gi\\\",\\\"storageClass\\\":\\\"azure-premiumv2\\\"}}}\\n\",\"vacuum-only-repro/restore-copy-id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376\",\"vacuum-only-repro/source-snapshot-id\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c\"},\"managedFields\":[{\"manager\":\"kubectl-client-side-apply\",\"operation\":\"Update\",\"apiVersion\":\"postgresql.cnpg.io/v1\",\"time\":\"2026-10-06T20:54:10Z\",\"fieldsType\":\"FieldsV1\",\"fieldsV1\":{\"f:metadata\":{\"f:annotations\":{\".\":{},\"f:kubectl.kubernetes.io/last-applied-configuration\":{},\"f:vacuum-only-repro/restore-copy-id\":{},\"f:vacuum-only-repro/source-snapshot-id\":{}},\"f:labels\":{\".\":{},\"f:repro.stack.token\":{}}},\"f:spec\":{\".\":{},\"f:affinity\":{\".\":{},\"f:enablePodAntiAffinity\":{},\"f:podAntiAffinityType\":{},\"f:topologyKey\":{}},\"f:backup\":{\".\":{},\"f:barmanObjectStore\":{\".\":{},\"f:azureCredentials\":{\".\":{},\"f:connectionString\":{\".\":{},\"f:key\":{},\"f:name\":{}}},\"f:destinationPath\":{},\"f:serverName\":{}},\"f:target\":{},\"f:volumeSnapshot\":{\".\":{},\"f:className\":{},\"f:online\":{},\"f:onlineConfiguration\":{\".\":{},\"f:immediateCheckpoint\":{},\"f:waitForArchive\":{}},\"f:snapshotOwnerReference\":{},\"f:walClassName\":{}}},\"f:bootstrap\":{\".\":{},\"f:recovery\":{\".\":{},\"f:database\":{},\"f:owner\":{},\"f:volumeSnapshots\":{\".\":{},\"f:storage\":{}}}},\"f:enablePDB\":{},\"f:enableSuperuserAccess\":{},\"f:failoverDelay\":{},\"f:imageName\":{},\"f:instances\":{},\"f:logLevel\":{},\"f:maxSyncReplicas\":{},\"f:minSyncReplicas\":{},\"f:postgresGID\":{},\"f:postgresUID\":{},\"f:postgresql\":{\".\":{},\"f:parameters\":{\".\":{},\"f:shared_buffers\":{},\"f:track_io_timing\":{},\"f:track_wal_io_timing\":{}}},\"f:primaryUpdateMethod\":{},\"f:primaryUpdateStrategy\":{},\"f:replicationSlots\":{\".\":{},\"f:highAvailability\":{\".\":{},\"f:enabled\":{},\"f:slotPrefix\":{}},\"f:updateInterval\":{}},\"f:resources\":{\".\":{},\"f:limits\":{\".\":{},\"f:cpu\":{},\"f:memory\":{}},\"f:requests\":{\".\":{},\"f:cpu\":{},\"f:memory\":{}}},\"f:smartShutdownTimeout\":{},\"f:startDelay\":{},\"f:stopDelay\":{},\"f:storage\":{\".\":{},\"f:resizeInUseVolumes\":{},\"f:size\":{},\"f:storageClass\":{}},\"f:switchoverDelay\":{}}}},{\"manager\":\"kubectl-patch\",\"operation\":\"Update\",\"apiVersion\":\"postgresql.cnpg.io/v1\",\"time\":\"2026-10-07T05:15:33Z\",\"fieldsType\":\"FieldsV1\",\"fieldsV1\":{\"f:spec\":{\"f:walStorage\":{\".\":{},\"f:resizeInUseVolumes\":{},\"f:size\":{},\"f:storageClass\":{}}}}},{\"manager\":\"manager\",\"operation\":\"Update\",\"apiVersion\":\"postgresql.cnpg.io/v1\",\"time\":\"2026-10-07T06:11:36Z\",\"fieldsType\":\"FieldsV1\",\"fieldsV1\":{\"f:status\":{\".\":{},\"f:availableArchitectures\":{},\"f:certificates\":{\".\":{},\"f:clientCASecret\":{},\"f:expirations\":{\".\":{},\"f:hdd-pg-ca\":{},\"f:hdd-pg-replication\":{},\"f:hdd-pg-server\":{}},\"f:replicationTLSSecret\":{},\"f:serverAltDNSNames\":{},\"f:serverCASecret\":{},\"f:serverTLSSecret\":{}},\"f:cloudNativePGCommitHash\":{},\"f:cloudNativePGOperatorHash\":{},\"f:conditions\":{},\"f:configMapResourceVersion\":{\".\":{},\"f:metrics\":{\".\":{},\"f:cnpg-default-monitoring\":{}}},\"f:currentPrimary\":{},\"f:currentPrimaryTimestamp\":{},\"f:healthyPVC\":{},\"f:image\":{},\"f:instanceNames\":{},\"f:instances\":{},\"f:instancesReportedState\":{\".\":{},\"f:hdd-pg-1\":{\".\":{},\"f:ip\":{},\"f:isPrimary\":{},\"f:timeLineID\":{}}},\"f:instancesStatus\":{\".\":{},\"f:healthy\":{}},\"f:managedRolesStatus\":{},\"f:operatorCertificateFingerprint\":{},\"f:pgDataImageInfo\":{\".\":{},\"f:image\":{},\"f:majorVersion\":{}},\"f:phase\":{},\"f:poolerIntegrations\":{\".\":{},\"f:pgBouncerIntegration\":{}},\"f:pvcCount\":{},\"f:readService\":{},\"f:readyInstances\":{},\"f:secretsResourceVersion\":{\".\":{},\"f:applicationSecretVersion\":{},\"f:clientCaSecretVersion\":{},\"f:replicationSecretVersion\":{},\"f:serverCaSecretVersion\":{},\"f:serverSecretVersion\":{}},\"f:selector\":{},\"f:switchReplicaClusterStatus\":{},\"f:systemID\":{},\"f:targetPrimary\":{},\"f:targetPrimaryTimestamp\":{},\"f:timelineID\":{},\"f:topology\":{\".\":{},\"f:instances\":{\".\":{},\"f:hdd-pg-1\":{}},\"f:nodesUsed\":{},\"f:successfullyExtracted\":{}},\"f:writeService\":{}}},\"subresource\":\"status\"}]},\"spec\":{\"imageName\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"postgresUID\":26,\"postgresGID\":26,\"instances\":1,\"postgresql\":{\"parameters\":{\"archive_mode\":\"on\",\"archive_timeout\":\"5min\",\"dynamic_shared_memory_type\":\"posix\",\"full_page_writes\":\"on\",\"log_destination\":\"csvlog\",\"log_directory\":\"/controller/log\",\"log_filename\":\"postgres\",\"log_rotation_age\":\"0\",\"log_rotation_size\":\"0\",\"log_truncate_on_rotation\":\"false\",\"logging_collector\":\"on\",\"max_parallel_workers\":\"32\",\"max_replication_slots\":\"32\",\"max_worker_processes\":\"32\",\"shared_buffers\":\"256MB\",\"shared_memory_type\":\"mmap\",\"shared_preload_libraries\":\"\",\"ssl_max_protocol_version\":\"TLSv1.3\",\"ssl_min_protocol_version\":\"TLSv1.3\",\"track_io_timing\":\"on\",\"track_wal_io_timing\":\"on\",\"wal_keep_size\":\"512MB\",\"wal_level\":\"logical\",\"wal_log_hints\":\"on\",\"wal_receiver_timeout\":\"5s\",\"wal_sender_timeout\":\"5s\"},\"syncReplicaElectionConstraint\":{\"enabled\":false}},\"replicationSlots\":{\"highAvailability\":{\"enabled\":true,\"slotPrefix\":\"_cnpg_\"},\"updateInterval\":30,\"synchronizeReplicas\":{\"enabled\":true}},\"bootstrap\":{\"recovery\":{\"volumeSnapshots\":{\"storage\":{\"apiGroup\":\"snapshot.storage.k8s.io\",\"kind\":\"VolumeSnapshot\",\"name\":\"vacuum-data-f1b90aec\"}},\"database\":\"repro\",\"owner\":\"app\"}},\"enableSuperuserAccess\":false,\"storage\":{\"storageClass\":\"azure-premiumv2\",\"size\":\"512Gi\",\"resizeInUseVolumes\":true},\"walStorage\":{\"storageClass\":\"azure-premiumv2\",\"size\":\"512Gi\",\"resizeInUseVolumes\":false},\"startDelay\":3600,\"stopDelay\":1800,\"smartShutdownTimeout\":180,\"switchoverDelay\":3600,\"affinity\":{\"enablePodAntiAffinity\":true,\"topologyKey\":\"kubernetes.io/hostname\",\"podAntiAffinityType\":\"required\"},\"resources\":{\"limits\":{\"cpu\":\"2\",\"memory\":\"3Gi\"},\"requests\":{\"cpu\":\"1\",\"memory\":\"2Gi\"}},\"primaryUpdateStrategy\":\"unsupervised\",\"primaryUpdateMethod\":\"restart\",\"backup\":{\"volumeSnapshot\":{\"className\":\"vacuum-backup-snap-f1b90aec\",\"walClassName\":\"vacuum-backup-snap-f1b90aec\",\"snapshotOwnerReference\":\"none\",\"online\":true,\"onlineConfiguration\":{\"waitForArchive\":true,\"immediateCheckpoint\":false}},\"barmanObjectStore\":{\"azureCredentials\":{\"connectionString\":{\"name\":\"azure-barman-credentials\",\"key\":\"connection-string\"}},\"destinationPath\":\"https://cnpgwalf1b90aec9e24f6a20.blob.core.windows.net/wal-f1b90aec9e24/cnpg-vacuum-only/f1b90aec9e24f6a2008d6991738742cf/\",\"serverName\":\"hdd-pg\"},\"target\":\"prefer-standby\"},\"monitoring\":{\"disableDefaultQueries\":false,\"customQueriesConfigMap\":[{\"name\":\"cnpg-default-monitoring\",\"key\":\"queries\"}]},\"logLevel\":\"info\",\"enablePDB\":true,\"probes\":{\"liveness\":{\"isolationCheck\":{\"enabled\":true,\"requestTimeout\":1000,\"connectionTimeout\":1000}}}},\"status\":{\"instances\":1,\"readyInstances\":1,\"selector\":\"cnpg.io/cluster=hdd-pg,cnpg.io/podRole=instance\",\"instancesStatus\":{\"healthy\":[\"hdd-pg-1\"]},\"instancesReportedState\":{\"hdd-pg-1\":{\"isPrimary\":true,\"timeLineID\":1,\"ip\":\"10.244.1.0\"}},\"managedRolesStatus\":{},\"timelineID\":1,\"topology\":{\"instances\":{\"hdd-pg-1\":{}},\"nodesUsed\":1,\"successfullyExtracted\":true},\"currentPrimary\":\"hdd-pg-1\",\"targetPrimary\":\"hdd-pg-1\",\"pvcCount\":2,\"healthyPVC\":[\"hdd-pg-1\",\"hdd-pg-1-wal\"],\"writeService\":\"hdd-pg-rw\",\"readService\":\"hdd-pg-r\",\"phase\":\"Cluster in healthy state\",\"secretsResourceVersion\":{\"replicationSecretVersion\":\"89590\",\"applicationSecretVersion\":\"89591\",\"clientCaSecretVersion\":\"89588\",\"serverCaSecretVersion\":\"89588\",\"serverSecretVersion\":\"89589\"},\"configMapResourceVersion\":{\"metrics\":{\"cnpg-default-monitoring\":\"89615\"}},\"certificates\":{\"serverCASecret\":\"hdd-pg-ca\",\"serverTLSSecret\":\"hdd-pg-server\",\"replicationTLSSecret\":\"hdd-pg-replication\",\"clientCASecret\":\"hdd-pg-ca\",\"serverAltDNSNames\":[\"hdd-pg-rw\",\"hdd-pg-rw.repro\",\"hdd-pg-rw.repro.svc\",\"hdd-pg-rw.repro.svc.cluster.local\",\"hdd-pg-r\",\"hdd-pg-r.repro\",\"hdd-pg-r.repro.svc\",\"hdd-pg-r.repro.svc.cluster.local\",\"hdd-pg-ro\",\"hdd-pg-ro.repro\",\"hdd-pg-ro.repro.svc\",\"hdd-pg-ro.repro.svc.cluster.local\"],\"expirations\":{\"hdd-pg-ca\":\"2027-01-04 20:49:10 +0000 UTC\",\"hdd-pg-replication\":\"2027-01-04 20:49:10 +0000 UTC\",\"hdd-pg-server\":\"2027-01-04 20:49:10 +0000 UTC\"}},\"cloudNativePGCommitHash\":\"2a35abb46\",\"currentPrimaryTimestamp\":\"2026-10-06T21:01:55.720851Z\",\"targetPrimaryTimestamp\":\"2026-10-06T20:54:11.019388Z\",\"poolerIntegrations\":{\"pgBouncerIntegration\":{}},\"cloudNativePGOperatorHash\":\"6d915657dadd72f66b0cdeca4d8f357d00de769bee14d4f6ea8adb501dab80d4\",\"operatorCertificateFingerprint\":\"8bbb1a2fc0a9d8e4581a8092a66ad65628675707dcf61b90325ea36d5d45f677\",\"availableArchitectures\":[{\"goArch\":\"amd64\",\"hash\":\"6d915657dadd72f66b0cdeca4d8f357d00de769bee14d4f6ea8adb501dab80d4\"},{\"goArch\":\"arm64\",\"hash\":\"37e47ffea358929899c8fd2b54139307934492108f5a0cde76e491248145fd4d\"}],\"conditions\":[{\"type\":\"Initialized\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-06T20:54:11Z\",\"reason\":\"BootstrapCompleted\",\"message\":\"Cluster has been bootstrapped\"},{\"type\":\"ConsistentSystemID\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-07T06:11:18Z\",\"reason\":\"Unique\",\"message\":\"A single, unique system ID was found across reporting instances.\"},{\"type\":\"Ready\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-07T06:11:26Z\",\"reason\":\"ClusterIsReady\",\"message\":\"Cluster is Ready\"},{\"type\":\"ContinuousArchiving\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-06T21:02:21Z\",\"reason\":\"ContinuousArchivingSuccess\",\"message\":\"Continuous archiving is working\"},{\"type\":\"LastBackupSucceeded\",\"status\":\"False\",\"lastTransitionTime\":\"2026-10-07T06:11:36Z\",\"reason\":\"BackupStarted\",\"message\":\"New Backup starting up\"}],\"instanceNames\":[\"hdd-pg-1\"],\"image\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"pgDataImageInfo\":{\"image\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"majorVersion\":16},\"switchReplicaClusterStatus\":{},\"systemID\":\"7692518806614212629\"}}",
+                    "cnpg.io/instanceName": "hdd-pg-1",
+                    "cnpg.io/instanceRole": "primary",
+                    "cnpg.io/nodeSerial": "1",
+                    "cnpg.io/onlineBackup": "true",
+                    "cnpg.io/operatorVersion": "1.30.1",
+                    "cnpg.io/pgControldata": "pg_control version number:            1300\nCatalog version number:               202307071\nDatabase system identifier:           7692518806614212629\nDatabase cluster state:               in production\npg_control last modified:             Wed Oct  7 06:11:36 2026\nLatest checkpoint location:           9A/80000060\nLatest checkpoint's REDO location:    9A/80000028\nLatest checkpoint's REDO WAL file:    000000010000009A00000080\nLatest checkpoint's TimeLineID:       1\nLatest checkpoint's PrevTimeLineID:   1\nLatest checkpoint's full_page_writes: on\nLatest checkpoint's NextXID:          0:1486\nLatest checkpoint's NextOID:          24584\nLatest checkpoint's NextMultiXactId:  1\nLatest checkpoint's NextMultiOffset:  0\nLatest checkpoint's oldestXID:        722\nLatest checkpoint's oldestXID's DB:   1\nLatest checkpoint's oldestActiveXID:  1486\nLatest checkpoint's oldestMultiXid:   1\nLatest checkpoint's oldestMulti's DB: 1\nLatest checkpoint's oldestCommitTsXid:0\nLatest checkpoint's newestCommitTsXid:0\nTime of latest checkpoint:            Wed Oct  7 06:11:36 2026\nFake LSN counter for unlogged rels:   0/3E8\nMinimum recovery ending location:     0/0\nMin recovery ending loc's timeline:   0\nBackup start location:                0/0\nBackup end location:                  0/0\nEnd-of-backup record required:        no\nwal_level setting:                    logical\nwal_log_hints setting:                on\nmax_connections setting:              100\nmax_worker_processes setting:         32\nmax_wal_senders setting:              10\nmax_prepared_xacts setting:           0\nmax_locks_per_xact setting:           64\ntrack_commit_timestamp setting:       off\nMaximum data alignment:               8\nDatabase block size:                  8192\nBlocks per segment of large relation: 131072\nWAL block size:                       8192\nBytes per WAL segment:                16777216\nMaximum length of identifiers:        64\nMaximum columns in an index:          32\nMaximum size of a TOAST chunk:        1996\nSize of a large-object chunk:         2048\nDate/time type storage:               64-bit integers\nFloat8 argument passing:              by value\nData page checksum version:           0\nMock authentication nonce:            fc0d78fa47129da1a4d778a30791fbd57abeda46e4d66059d8facad444d9faa9\n",
+                    "cnpg.io/pvcRole": "PG_WAL",
+                    "cnpg.io/pvcStatus": "ready",
+                    "cnpg.io/snapshotEndTime": "2026-10-07T06:12:01Z",
+                    "cnpg.io/snapshotStartTime": "2026-10-07T06:11:47Z",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "role": "primary",
+                    "volume.beta.kubernetes.io/storage-provisioner": "disk.csi.azure.com",
+                    "volume.kubernetes.io/selected-node": "aks-nodepool1-15388874-vmss000001",
+                    "volume.kubernetes.io/storage-provisioner": "disk.csi.azure.com"
+                },
+                "creationTimestamp": "2026-10-07T06:11:46Z",
+                "finalizers": [
+                    "snapshot.storage.kubernetes.io/volumesnapshot-as-source-protection"
+                ],
+                "generation": 1,
+                "labels": {
+                    "app.kubernetes.io/component": "database",
+                    "app.kubernetes.io/instance": "hdd-pg",
+                    "app.kubernetes.io/managed-by": "cloudnative-pg",
+                    "app.kubernetes.io/name": "postgresql",
+                    "app.kubernetes.io/version": "16",
+                    "cnpg.io/backupDate": "20261007",
+                    "cnpg.io/backupMonth": "202610",
+                    "cnpg.io/backupName": "vacuum-backup-f1b90aec",
+                    "cnpg.io/backupTimeline": "1",
+                    "cnpg.io/backupYear": "2026",
+                    "cnpg.io/cluster": "hdd-pg",
+                    "cnpg.io/majorVersion": "16"
+                },
+                "name": "vacuum-backup-f1b90aec-wal",
+                "namespace": "repro",
+                "resourceVersion": "289647",
+                "uid": "ebeff553-ca6f-487c-8517-e803b02337ca"
+            },
+            "spec": {
+                "source": {
+                    "persistentVolumeClaimName": "hdd-pg-1-wal"
+                },
+                "volumeSnapshotClassName": "vacuum-backup-snap-f1b90aec"
+            },
+            "status": {
+                "boundVolumeSnapshotContentName": "snapcontent-ebeff553-ca6f-487c-8517-e803b02337ca",
+                "creationTime": "2026-10-07T06:11:47Z",
+                "readyToUse": true,
+                "restoreSize": "512Gi"
+            }
+        },
+        {
+            "apiVersion": "snapshot.storage.k8s.io/v1",
+            "kind": "VolumeSnapshot",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"snapshot.storage.k8s.io/v1\",\"kind\":\"VolumeSnapshot\",\"metadata\":{\"annotations\":{},\"labels\":{\"repro.stack.token\":\"f1b90aec9e24f6a2008d6991738742cf\"},\"name\":\"vacuum-data-f1b90aec\",\"namespace\":\"repro\"},\"spec\":{\"source\":{\"volumeSnapshotContentName\":\"vacuum-content-f1b90aec\"},\"volumeSnapshotClassName\":\"vacuum-snap-f1b90aec\"}}\n"
+                },
+                "creationTimestamp": "2026-10-06T20:54:08Z",
+                "finalizers": [
+                    "snapshot.storage.kubernetes.io/volumesnapshot-as-source-protection"
+                ],
+                "generation": 1,
+                "labels": {
+                    "repro.stack.token": "f1b90aec9e24f6a2008d6991738742cf"
+                },
+                "name": "vacuum-data-f1b90aec",
+                "namespace": "repro",
+                "resourceVersion": "89692",
+                "uid": "54bbd81a-6dcf-4115-bfae-970daeb17380"
+            },
+            "spec": {
+                "source": {
+                    "volumeSnapshotContentName": "vacuum-content-f1b90aec"
+                },
+                "volumeSnapshotClassName": "vacuum-snap-f1b90aec"
+            },
+            "status": {
+                "boundVolumeSnapshotContentName": "vacuum-content-f1b90aec",
+                "creationTime": "2026-10-06T20:54:08Z",
+                "readyToUse": true
+            }
+        },
+        {
+            "apiVersion": "snapshot.storage.k8s.io/v1",
+            "kind": "VolumeSnapshotContent",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T06:11:46Z",
+                "finalizers": [
+                    "snapshot.storage.kubernetes.io/volumesnapshotcontent-bound-protection"
+                ],
+                "generation": 1,
+                "name": "snapcontent-604b8cee-1a94-4df6-b846-be245038a795",
+                "resourceVersion": "284284",
+                "uid": "46dcf188-df95-4561-a4ef-23bd0d7fb416"
+            },
+            "spec": {
+                "deletionPolicy": "Retain",
+                "driver": "disk.csi.azure.com",
+                "source": {
+                    "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1"
+                },
+                "sourceVolumeMode": "Filesystem",
+                "volumeSnapshotClassName": "vacuum-backup-snap-f1b90aec",
+                "volumeSnapshotRef": {
+                    "apiVersion": "snapshot.storage.k8s.io/v1",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-backup-f1b90aec",
+                    "namespace": "repro",
+                    "resourceVersion": "264729",
+                    "uid": "604b8cee-1a94-4df6-b846-be245038a795"
+                }
+            },
+            "status": {
+                "creationTime": 1791353507413148900,
+                "readyToUse": true,
+                "restoreSize": 549755813888,
+                "snapshotHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795"
+            }
+        },
+        {
+            "apiVersion": "snapshot.storage.k8s.io/v1",
+            "kind": "VolumeSnapshotContent",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T06:11:46Z",
+                "finalizers": [
+                    "snapshot.storage.kubernetes.io/volumesnapshotcontent-bound-protection"
+                ],
+                "generation": 1,
+                "name": "snapcontent-ebeff553-ca6f-487c-8517-e803b02337ca",
+                "resourceVersion": "270047",
+                "uid": "61bc9a55-1e2a-40cc-905c-d74058149dae"
+            },
+            "spec": {
+                "deletionPolicy": "Retain",
+                "driver": "disk.csi.azure.com",
+                "source": {
+                    "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632"
+                },
+                "sourceVolumeMode": "Filesystem",
+                "volumeSnapshotClassName": "vacuum-backup-snap-f1b90aec",
+                "volumeSnapshotRef": {
+                    "apiVersion": "snapshot.storage.k8s.io/v1",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-backup-f1b90aec-wal",
+                    "namespace": "repro",
+                    "resourceVersion": "264736",
+                    "uid": "ebeff553-ca6f-487c-8517-e803b02337ca"
+                }
+            },
+            "status": {
+                "creationTime": 1791353507417243300,
+                "readyToUse": true,
+                "restoreSize": 549755813888,
+                "snapshotHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca"
+            }
+        },
+        {
+            "apiVersion": "snapshot.storage.k8s.io/v1",
+            "kind": "VolumeSnapshotContent",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"snapshot.storage.k8s.io/v1\",\"kind\":\"VolumeSnapshotContent\",\"metadata\":{\"annotations\":{},\"labels\":{\"repro.stack.token\":\"f1b90aec9e24f6a2008d6991738742cf\"},\"name\":\"vacuum-content-f1b90aec\"},\"spec\":{\"deletionPolicy\":\"Retain\",\"driver\":\"disk.csi.azure.com\",\"source\":{\"snapshotHandle\":\"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376\"},\"volumeSnapshotClassName\":\"vacuum-snap-f1b90aec\",\"volumeSnapshotRef\":{\"kind\":\"VolumeSnapshot\",\"name\":\"vacuum-data-f1b90aec\",\"namespace\":\"repro\"}}}\n"
+                },
+                "creationTimestamp": "2026-10-06T20:54:08Z",
+                "finalizers": [
+                    "snapshot.storage.kubernetes.io/volumesnapshotcontent-bound-protection"
+                ],
+                "generation": 2,
+                "labels": {
+                    "repro.stack.token": "f1b90aec9e24f6a2008d6991738742cf"
+                },
+                "name": "vacuum-content-f1b90aec",
+                "resourceVersion": "89570",
+                "uid": "db2a1753-dee1-4b1f-ae96-c0838bc6144f"
+            },
+            "spec": {
+                "deletionPolicy": "Retain",
+                "driver": "disk.csi.azure.com",
+                "source": {
+                    "snapshotHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376"
+                },
+                "volumeSnapshotClassName": "vacuum-snap-f1b90aec",
+                "volumeSnapshotRef": {
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-data-f1b90aec",
+                    "namespace": "repro",
+                    "uid": "54bbd81a-6dcf-4115-bfae-970daeb17380"
+                }
+            },
+            "status": {
+                "creationTime": 1791320048485899397,
+                "readyToUse": true,
+                "snapshotHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "cnpg.io/nodeSerial": "1",
+                    "cnpg.io/operatorVersion": "1.30.1",
+                    "cnpg.io/podEnvHash": "54d9d5b46b",
+                    "cnpg.io/podSpec": "{\"volumes\":[{\"name\":\"pgdata\",\"persistentVolumeClaim\":{\"claimName\":\"hdd-pg-1\"}},{\"name\":\"scratch-data\",\"emptyDir\":{}},{\"name\":\"shm\",\"emptyDir\":{\"medium\":\"Memory\"}},{\"name\":\"pg-wal\",\"persistentVolumeClaim\":{\"claimName\":\"hdd-pg-1-wal\"}}],\"initContainers\":[{\"name\":\"bootstrap-controller\",\"image\":\"ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1\",\"command\":[\"/manager\",\"bootstrap\",\"/controller/manager\",\"--log-level=info\"],\"resources\":{\"limits\":{\"cpu\":\"2\",\"memory\":\"3Gi\"},\"requests\":{\"cpu\":\"1\",\"memory\":\"2Gi\"}},\"volumeMounts\":[{\"name\":\"pgdata\",\"mountPath\":\"/var/lib/postgresql/data\"},{\"name\":\"scratch-data\",\"mountPath\":\"/run\"},{\"name\":\"scratch-data\",\"mountPath\":\"/controller\"},{\"name\":\"shm\",\"mountPath\":\"/dev/shm\"},{\"name\":\"pg-wal\",\"mountPath\":\"/var/lib/postgresql/wal\"}],\"securityContext\":{\"capabilities\":{\"drop\":[\"ALL\"]},\"privileged\":false,\"runAsNonRoot\":true,\"readOnlyRootFilesystem\":true,\"allowPrivilegeEscalation\":false,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}],\"containers\":[{\"name\":\"postgres\",\"image\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"command\":[\"/controller/manager\",\"instance\",\"run\",\"--status-port-tls\",\"--log-level=info\"],\"ports\":[{\"name\":\"postgresql\",\"containerPort\":5432,\"protocol\":\"TCP\"},{\"name\":\"metrics\",\"containerPort\":9187,\"protocol\":\"TCP\"},{\"name\":\"status\",\"containerPort\":8000,\"protocol\":\"TCP\"}],\"env\":[{\"name\":\"PGDATA\",\"value\":\"/var/lib/postgresql/data/pgdata\"},{\"name\":\"POD_NAME\",\"value\":\"hdd-pg-1\"},{\"name\":\"NAMESPACE\",\"value\":\"repro\"},{\"name\":\"CLUSTER_NAME\",\"value\":\"hdd-pg\"},{\"name\":\"PSQL_HISTORY\",\"value\":\"/controller/tmp/.psql_history\"},{\"name\":\"PGPORT\",\"value\":\"5432\"},{\"name\":\"PGHOST\",\"value\":\"/controller/run\"},{\"name\":\"TMPDIR\",\"value\":\"/controller/tmp\"}],\"resources\":{\"limits\":{\"cpu\":\"2\",\"memory\":\"3Gi\"},\"requests\":{\"cpu\":\"1\",\"memory\":\"2Gi\"}},\"volumeMounts\":[{\"name\":\"pgdata\",\"mountPath\":\"/var/lib/postgresql/data\"},{\"name\":\"scratch-data\",\"mountPath\":\"/run\"},{\"name\":\"scratch-data\",\"mountPath\":\"/controller\"},{\"name\":\"shm\",\"mountPath\":\"/dev/shm\"},{\"name\":\"pg-wal\",\"mountPath\":\"/var/lib/postgresql/wal\"}],\"livenessProbe\":{\"httpGet\":{\"path\":\"/healthz\",\"port\":8000,\"scheme\":\"HTTPS\"},\"timeoutSeconds\":5,\"periodSeconds\":10},\"readinessProbe\":{\"httpGet\":{\"path\":\"/readyz\",\"port\":8000,\"scheme\":\"HTTPS\"},\"timeoutSeconds\":5,\"periodSeconds\":10},\"startupProbe\":{\"httpGet\":{\"path\":\"/startupz\",\"port\":8000,\"scheme\":\"HTTPS\"},\"timeoutSeconds\":5,\"periodSeconds\":10,\"failureThreshold\":360},\"securityContext\":{\"capabilities\":{\"drop\":[\"ALL\"]},\"privileged\":false,\"runAsNonRoot\":true,\"readOnlyRootFilesystem\":true,\"allowPrivilegeEscalation\":false,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}],\"terminationGracePeriodSeconds\":1800,\"serviceAccountName\":\"hdd-pg\",\"securityContext\":{\"runAsUser\":26,\"runAsGroup\":26,\"runAsNonRoot\":true,\"fsGroup\":26,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}},\"hostname\":\"hdd-pg-1\",\"affinity\":{\"podAntiAffinity\":{\"requiredDuringSchedulingIgnoredDuringExecution\":[{\"labelSelector\":{\"matchExpressions\":[{\"key\":\"cnpg.io/cluster\",\"operator\":\"In\",\"values\":[\"hdd-pg\"]},{\"key\":\"cnpg.io/podRole\",\"operator\":\"In\",\"values\":[\"instance\"]}]},\"topologyKey\":\"kubernetes.io/hostname\"}]}}}"
+                },
+                "creationTimestamp": "2026-10-07T05:44:18Z",
+                "generation": 1,
+                "labels": {
+                    "app.kubernetes.io/component": "database",
+                    "app.kubernetes.io/instance": "hdd-pg",
+                    "app.kubernetes.io/managed-by": "cloudnative-pg",
+                    "app.kubernetes.io/name": "postgresql",
+                    "app.kubernetes.io/version": "16",
+                    "cnpg.io/cluster": "hdd-pg",
+                    "cnpg.io/instanceName": "hdd-pg-1",
+                    "cnpg.io/instanceRole": "primary",
+                    "cnpg.io/podRole": "instance",
+                    "role": "primary",
+                    "topology.kubernetes.io/region": "eastus",
+                    "topology.kubernetes.io/zone": "eastus-1"
+                },
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "postgresql.cnpg.io/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Cluster",
+                        "name": "hdd-pg",
+                        "uid": "cbd63e61-de31-4991-8c4a-fe7206407486"
+                    }
+                ],
+                "resourceVersion": "264614",
+                "uid": "4a4793aa-f940-4255-80d4-775dda9efbc6"
+            },
+            "spec": {
+                "affinity": {
+                    "podAntiAffinity": {
+                        "requiredDuringSchedulingIgnoredDuringExecution": [
+                            {
+                                "labelSelector": {
+                                    "matchExpressions": [
+                                        {
+                                            "key": "cnpg.io/cluster",
+                                            "operator": "In",
+                                            "values": [
+                                                "hdd-pg"
+                                            ]
+                                        },
+                                        {
+                                            "key": "cnpg.io/podRole",
+                                            "operator": "In",
+                                            "values": [
+                                                "instance"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "topologyKey": "kubernetes.io/hostname"
+                            }
+                        ]
+                    }
+                },
+                "containers": [
+                    {
+                        "command": [
+                            "/controller/manager",
+                            "instance",
+                            "run",
+                            "--status-port-tls",
+                            "--log-level=info"
+                        ],
+                        "env": [
+                            {
+                                "name": "PGDATA",
+                                "value": "/var/lib/postgresql/data/pgdata"
+                            },
+                            {
+                                "name": "POD_NAME",
+                                "value": "hdd-pg-1"
+                            },
+                            {
+                                "name": "NAMESPACE",
+                                "value": "repro"
+                            },
+                            {
+                                "name": "CLUSTER_NAME",
+                                "value": "hdd-pg"
+                            },
+                            {
+                                "name": "PSQL_HISTORY",
+                                "value": "/controller/tmp/.psql_history"
+                            },
+                            {
+                                "name": "PGPORT",
+                                "value": "5432"
+                            },
+                            {
+                                "name": "PGHOST",
+                                "value": "/controller/run"
+                            },
+                            {
+                                "name": "TMPDIR",
+                                "value": "/controller/tmp"
+                            }
+                        ],
+                        "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+                        "imagePullPolicy": "IfNotPresent",
+                        "livenessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": 8000,
+                                "scheme": "HTTPS"
+                            },
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 5
+                        },
+                        "name": "postgres",
+                        "ports": [
+                            {
+                                "containerPort": 5432,
+                                "name": "postgresql",
+                                "protocol": "TCP"
+                            },
+                            {
+                                "containerPort": 9187,
+                                "name": "metrics",
+                                "protocol": "TCP"
+                            },
+                            {
+                                "containerPort": 8000,
+                                "name": "status",
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/readyz",
+                                "port": 8000,
+                                "scheme": "HTTPS"
+                            },
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 5
+                        },
+                        "resources": {
+                            "limits": {
+                                "cpu": "2",
+                                "memory": "3Gi"
+                            },
+                            "requests": {
+                                "cpu": "1",
+                                "memory": "2Gi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "privileged": false,
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true,
+                            "seccompProfile": {
+                                "type": "RuntimeDefault"
+                            }
+                        },
+                        "startupProbe": {
+                            "failureThreshold": 360,
+                            "httpGet": {
+                                "path": "/startupz",
+                                "port": 8000,
+                                "scheme": "HTTPS"
+                            },
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 5
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/lib/postgresql/data",
+                                "name": "pgdata"
+                            },
+                            {
+                                "mountPath": "/run",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/controller",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/dev/shm",
+                                "name": "shm"
+                            },
+                            {
+                                "mountPath": "/var/lib/postgresql/wal",
+                                "name": "pg-wal"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-ln75z",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "hostname": "hdd-pg-1",
+                "initContainers": [
+                    {
+                        "command": [
+                            "/manager",
+                            "bootstrap",
+                            "/controller/manager",
+                            "--log-level=info"
+                        ],
+                        "image": "ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "bootstrap-controller",
+                        "resources": {
+                            "limits": {
+                                "cpu": "2",
+                                "memory": "3Gi"
+                            },
+                            "requests": {
+                                "cpu": "1",
+                                "memory": "2Gi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "privileged": false,
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true,
+                            "seccompProfile": {
+                                "type": "RuntimeDefault"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/lib/postgresql/data",
+                                "name": "pgdata"
+                            },
+                            {
+                                "mountPath": "/run",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/controller",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/dev/shm",
+                                "name": "shm"
+                            },
+                            {
+                                "mountPath": "/var/lib/postgresql/wal",
+                                "name": "pg-wal"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-ln75z",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "nodeName": "aks-nodepool1-15388874-vmss000001",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "fsGroup": 26,
+                    "runAsGroup": 26,
+                    "runAsNonRoot": true,
+                    "runAsUser": 26,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "serviceAccount": "hdd-pg",
+                "serviceAccountName": "hdd-pg",
+                "terminationGracePeriodSeconds": 1800,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoSchedule",
+                        "key": "node.kubernetes.io/memory-pressure",
+                        "operator": "Exists"
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "pgdata",
+                        "persistentVolumeClaim": {
+                            "claimName": "hdd-pg-1"
+                        }
+                    },
+                    {
+                        "emptyDir": {},
+                        "name": "scratch-data"
+                    },
+                    {
+                        "emptyDir": {
+                            "medium": "Memory"
+                        },
+                        "name": "shm"
+                    },
+                    {
+                        "name": "pg-wal",
+                        "persistentVolumeClaim": {
+                            "claimName": "hdd-pg-1-wal"
+                        }
+                    },
+                    {
+                        "name": "kube-api-access-ln75z",
+                        "projected": {
+                            "defaultMode": 420,
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ],
+                                        "name": "kube-root-ca.crt"
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                },
+                                                "path": "namespace"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-10-07T05:44:57Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-10-07T05:44:57Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-10-07T06:11:26Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-10-07T06:11:26Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-10-07T05:44:30Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "allocatedResources": {
+                            "cpu": "1",
+                            "memory": "2Gi"
+                        },
+                        "containerID": "containerd://c467caed5c92ed84af4ffbe000b719df987faae28077b990892d443c80bec96a",
+                        "image": "sha256:6fd8088f6e9c40a2ec6b61bad944a8590b4929d571be3b56055cc920999b2d45",
+                        "imageID": "ghcr.io/cloudnative-pg/postgresql@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+                        "lastState": {},
+                        "name": "postgres",
+                        "ready": true,
+                        "resources": {
+                            "limits": {
+                                "cpu": "2",
+                                "memory": "3Gi"
+                            },
+                            "requests": {
+                                "cpu": "1",
+                                "memory": "2Gi"
+                            }
+                        },
+                        "restartCount": 0,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2026-10-07T05:44:57Z"
+                            }
+                        },
+                        "user": {
+                            "linux": {
+                                "gid": 26,
+                                "supplementalGroups": [
+                                    26,
+                                    101
+                                ],
+                                "uid": 26
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/lib/postgresql/data",
+                                "name": "pgdata"
+                            },
+                            {
+                                "mountPath": "/run",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/controller",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/dev/shm",
+                                "name": "shm"
+                            },
+                            {
+                                "mountPath": "/var/lib/postgresql/wal",
+                                "name": "pg-wal"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-ln75z",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    }
+                ],
+                "hostIP": "10.224.0.5",
+                "hostIPs": [
+                    {
+                        "ip": "10.224.0.5"
+                    }
+                ],
+                "initContainerStatuses": [
+                    {
+                        "allocatedResources": {
+                            "cpu": "1",
+                            "memory": "2Gi"
+                        },
+                        "containerID": "containerd://e48f99aac940901009cb1f92ff74b2402c89c14ea42e5b1d607ed7d5107bc1df",
+                        "image": "ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1",
+                        "imageID": "ghcr.io/cloudnative-pg/cloudnative-pg@sha256:923c267ec29636db3bee20f993d0ec4973fa22998e1adad37da79e4d32b5bc07",
+                        "lastState": {},
+                        "name": "bootstrap-controller",
+                        "ready": true,
+                        "resources": {
+                            "limits": {
+                                "cpu": "2",
+                                "memory": "3Gi"
+                            },
+                            "requests": {
+                                "cpu": "1",
+                                "memory": "2Gi"
+                            }
+                        },
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://e48f99aac940901009cb1f92ff74b2402c89c14ea42e5b1d607ed7d5107bc1df",
+                                "exitCode": 0,
+                                "finishedAt": "2026-10-07T05:44:57Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-10-07T05:44:56Z"
+                            }
+                        },
+                        "user": {
+                            "linux": {
+                                "gid": 26,
+                                "supplementalGroups": [
+                                    26
+                                ],
+                                "uid": 26
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/lib/postgresql/data",
+                                "name": "pgdata"
+                            },
+                            {
+                                "mountPath": "/run",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/controller",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/dev/shm",
+                                "name": "shm"
+                            },
+                            {
+                                "mountPath": "/var/lib/postgresql/wal",
+                                "name": "pg-wal"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-ln75z",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    }
+                ],
+                "observedGeneration": 1,
+                "phase": "Running",
+                "podIP": "10.244.1.0",
+                "podIPs": [
+                    {
+                        "ip": "10.244.1.0"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-10-07T05:44:30Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "cnpg.io/nodeSerial": "2",
+                    "cnpg.io/operatorVersion": "1.30.1",
+                    "cnpg.io/podEnvHash": "5d6f7f4fb7",
+                    "cnpg.io/podSpec": "{\"volumes\":[{\"name\":\"pgdata\",\"persistentVolumeClaim\":{\"claimName\":\"hdd-pg-2\"}},{\"name\":\"scratch-data\",\"emptyDir\":{}},{\"name\":\"shm\",\"emptyDir\":{\"medium\":\"Memory\"}},{\"name\":\"pg-wal\",\"persistentVolumeClaim\":{\"claimName\":\"hdd-pg-2-wal\"}}],\"initContainers\":[{\"name\":\"bootstrap-controller\",\"image\":\"ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1\",\"command\":[\"/manager\",\"bootstrap\",\"/controller/manager\",\"--log-level=info\"],\"resources\":{\"limits\":{\"cpu\":\"2\",\"memory\":\"3Gi\"},\"requests\":{\"cpu\":\"1\",\"memory\":\"2Gi\"}},\"volumeMounts\":[{\"name\":\"pgdata\",\"mountPath\":\"/var/lib/postgresql/data\"},{\"name\":\"scratch-data\",\"mountPath\":\"/run\"},{\"name\":\"scratch-data\",\"mountPath\":\"/controller\"},{\"name\":\"shm\",\"mountPath\":\"/dev/shm\"},{\"name\":\"pg-wal\",\"mountPath\":\"/var/lib/postgresql/wal\"}],\"securityContext\":{\"capabilities\":{\"drop\":[\"ALL\"]},\"privileged\":false,\"runAsNonRoot\":true,\"readOnlyRootFilesystem\":true,\"allowPrivilegeEscalation\":false,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}],\"containers\":[{\"name\":\"postgres\",\"image\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd\",\"command\":[\"/controller/manager\",\"instance\",\"run\",\"--status-port-tls\",\"--log-level=info\"],\"ports\":[{\"name\":\"postgresql\",\"containerPort\":5432,\"protocol\":\"TCP\"},{\"name\":\"metrics\",\"containerPort\":9187,\"protocol\":\"TCP\"},{\"name\":\"status\",\"containerPort\":8000,\"protocol\":\"TCP\"}],\"env\":[{\"name\":\"PGDATA\",\"value\":\"/var/lib/postgresql/data/pgdata\"},{\"name\":\"POD_NAME\",\"value\":\"hdd-pg-2\"},{\"name\":\"NAMESPACE\",\"value\":\"repro\"},{\"name\":\"CLUSTER_NAME\",\"value\":\"hdd-pg\"},{\"name\":\"PSQL_HISTORY\",\"value\":\"/controller/tmp/.psql_history\"},{\"name\":\"PGPORT\",\"value\":\"5432\"},{\"name\":\"PGHOST\",\"value\":\"/controller/run\"},{\"name\":\"TMPDIR\",\"value\":\"/controller/tmp\"}],\"resources\":{\"limits\":{\"cpu\":\"2\",\"memory\":\"3Gi\"},\"requests\":{\"cpu\":\"1\",\"memory\":\"2Gi\"}},\"volumeMounts\":[{\"name\":\"pgdata\",\"mountPath\":\"/var/lib/postgresql/data\"},{\"name\":\"scratch-data\",\"mountPath\":\"/run\"},{\"name\":\"scratch-data\",\"mountPath\":\"/controller\"},{\"name\":\"shm\",\"mountPath\":\"/dev/shm\"},{\"name\":\"pg-wal\",\"mountPath\":\"/var/lib/postgresql/wal\"}],\"livenessProbe\":{\"httpGet\":{\"path\":\"/healthz\",\"port\":8000,\"scheme\":\"HTTPS\"},\"timeoutSeconds\":5,\"periodSeconds\":10},\"readinessProbe\":{\"httpGet\":{\"path\":\"/readyz\",\"port\":8000,\"scheme\":\"HTTPS\"},\"timeoutSeconds\":5,\"periodSeconds\":10},\"startupProbe\":{\"httpGet\":{\"path\":\"/startupz\",\"port\":8000,\"scheme\":\"HTTPS\"},\"timeoutSeconds\":5,\"periodSeconds\":10,\"failureThreshold\":360},\"securityContext\":{\"capabilities\":{\"drop\":[\"ALL\"]},\"privileged\":false,\"runAsNonRoot\":true,\"readOnlyRootFilesystem\":true,\"allowPrivilegeEscalation\":false,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}],\"terminationGracePeriodSeconds\":1800,\"serviceAccountName\":\"hdd-pg\",\"securityContext\":{\"runAsUser\":26,\"runAsGroup\":26,\"runAsNonRoot\":true,\"fsGroup\":26,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}},\"hostname\":\"hdd-pg-2\",\"affinity\":{\"podAntiAffinity\":{\"requiredDuringSchedulingIgnoredDuringExecution\":[{\"labelSelector\":{\"matchExpressions\":[{\"key\":\"cnpg.io/cluster\",\"operator\":\"In\",\"values\":[\"hdd-pg\"]},{\"key\":\"cnpg.io/podRole\",\"operator\":\"In\",\"values\":[\"instance\"]}]},\"topologyKey\":\"kubernetes.io/hostname\"}]}}}"
+                },
+                "creationTimestamp": "2026-10-07T07:39:15Z",
+                "generation": 1,
+                "labels": {
+                    "app.kubernetes.io/component": "database",
+                    "app.kubernetes.io/instance": "hdd-pg",
+                    "app.kubernetes.io/managed-by": "cloudnative-pg",
+                    "app.kubernetes.io/name": "postgresql",
+                    "app.kubernetes.io/version": "16",
+                    "cnpg.io/cluster": "hdd-pg",
+                    "cnpg.io/instanceName": "hdd-pg-2",
+                    "cnpg.io/podRole": "instance",
+                    "topology.kubernetes.io/region": "eastus",
+                    "topology.kubernetes.io/zone": "eastus-1"
+                },
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "postgresql.cnpg.io/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Cluster",
+                        "name": "hdd-pg",
+                        "uid": "cbd63e61-de31-4991-8c4a-fe7206407486"
+                    }
+                ],
+                "resourceVersion": "292698",
+                "uid": "fbdd3bfb-cd94-43ff-b067-c142ee030385"
+            },
+            "spec": {
+                "affinity": {
+                    "podAntiAffinity": {
+                        "requiredDuringSchedulingIgnoredDuringExecution": [
+                            {
+                                "labelSelector": {
+                                    "matchExpressions": [
+                                        {
+                                            "key": "cnpg.io/cluster",
+                                            "operator": "In",
+                                            "values": [
+                                                "hdd-pg"
+                                            ]
+                                        },
+                                        {
+                                            "key": "cnpg.io/podRole",
+                                            "operator": "In",
+                                            "values": [
+                                                "instance"
+                                            ]
+                                        }
+                                    ]
+                                },
+                                "topologyKey": "kubernetes.io/hostname"
+                            }
+                        ]
+                    }
+                },
+                "containers": [
+                    {
+                        "command": [
+                            "/controller/manager",
+                            "instance",
+                            "run",
+                            "--status-port-tls",
+                            "--log-level=info"
+                        ],
+                        "env": [
+                            {
+                                "name": "PGDATA",
+                                "value": "/var/lib/postgresql/data/pgdata"
+                            },
+                            {
+                                "name": "POD_NAME",
+                                "value": "hdd-pg-2"
+                            },
+                            {
+                                "name": "NAMESPACE",
+                                "value": "repro"
+                            },
+                            {
+                                "name": "CLUSTER_NAME",
+                                "value": "hdd-pg"
+                            },
+                            {
+                                "name": "PSQL_HISTORY",
+                                "value": "/controller/tmp/.psql_history"
+                            },
+                            {
+                                "name": "PGPORT",
+                                "value": "5432"
+                            },
+                            {
+                                "name": "PGHOST",
+                                "value": "/controller/run"
+                            },
+                            {
+                                "name": "TMPDIR",
+                                "value": "/controller/tmp"
+                            }
+                        ],
+                        "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+                        "imagePullPolicy": "IfNotPresent",
+                        "livenessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": 8000,
+                                "scheme": "HTTPS"
+                            },
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 5
+                        },
+                        "name": "postgres",
+                        "ports": [
+                            {
+                                "containerPort": 5432,
+                                "name": "postgresql",
+                                "protocol": "TCP"
+                            },
+                            {
+                                "containerPort": 9187,
+                                "name": "metrics",
+                                "protocol": "TCP"
+                            },
+                            {
+                                "containerPort": 8000,
+                                "name": "status",
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/readyz",
+                                "port": 8000,
+                                "scheme": "HTTPS"
+                            },
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 5
+                        },
+                        "resources": {
+                            "limits": {
+                                "cpu": "2",
+                                "memory": "3Gi"
+                            },
+                            "requests": {
+                                "cpu": "1",
+                                "memory": "2Gi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "privileged": false,
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true,
+                            "seccompProfile": {
+                                "type": "RuntimeDefault"
+                            }
+                        },
+                        "startupProbe": {
+                            "failureThreshold": 360,
+                            "httpGet": {
+                                "path": "/startupz",
+                                "port": 8000,
+                                "scheme": "HTTPS"
+                            },
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 5
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/lib/postgresql/data",
+                                "name": "pgdata"
+                            },
+                            {
+                                "mountPath": "/run",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/controller",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/dev/shm",
+                                "name": "shm"
+                            },
+                            {
+                                "mountPath": "/var/lib/postgresql/wal",
+                                "name": "pg-wal"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-jwghk",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "hostname": "hdd-pg-2",
+                "initContainers": [
+                    {
+                        "command": [
+                            "/manager",
+                            "bootstrap",
+                            "/controller/manager",
+                            "--log-level=info"
+                        ],
+                        "image": "ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "bootstrap-controller",
+                        "resources": {
+                            "limits": {
+                                "cpu": "2",
+                                "memory": "3Gi"
+                            },
+                            "requests": {
+                                "cpu": "1",
+                                "memory": "2Gi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "privileged": false,
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true,
+                            "seccompProfile": {
+                                "type": "RuntimeDefault"
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/lib/postgresql/data",
+                                "name": "pgdata"
+                            },
+                            {
+                                "mountPath": "/run",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/controller",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/dev/shm",
+                                "name": "shm"
+                            },
+                            {
+                                "mountPath": "/var/lib/postgresql/wal",
+                                "name": "pg-wal"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-jwghk",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "nodeName": "aks-nodepool1-15388874-vmss000000",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "fsGroup": 26,
+                    "runAsGroup": 26,
+                    "runAsNonRoot": true,
+                    "runAsUser": 26,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "serviceAccount": "hdd-pg",
+                "serviceAccountName": "hdd-pg",
+                "terminationGracePeriodSeconds": 1800,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoSchedule",
+                        "key": "node.kubernetes.io/memory-pressure",
+                        "operator": "Exists"
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "pgdata",
+                        "persistentVolumeClaim": {
+                            "claimName": "hdd-pg-2"
+                        }
+                    },
+                    {
+                        "emptyDir": {},
+                        "name": "scratch-data"
+                    },
+                    {
+                        "emptyDir": {
+                            "medium": "Memory"
+                        },
+                        "name": "shm"
+                    },
+                    {
+                        "name": "pg-wal",
+                        "persistentVolumeClaim": {
+                            "claimName": "hdd-pg-2-wal"
+                        }
+                    },
+                    {
+                        "name": "kube-api-access-jwghk",
+                        "projected": {
+                            "defaultMode": 420,
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ],
+                                        "name": "kube-root-ca.crt"
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                },
+                                                "path": "namespace"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-10-07T07:39:15Z",
+                        "observedGeneration": 1,
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-10-07T07:39:15Z",
+                        "message": "containers with incomplete status: [bootstrap-controller]",
+                        "observedGeneration": 1,
+                        "reason": "ContainersNotInitialized",
+                        "status": "False",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-10-07T07:39:15Z",
+                        "message": "containers with unready status: [postgres]",
+                        "observedGeneration": 1,
+                        "reason": "ContainersNotReady",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-10-07T07:39:15Z",
+                        "message": "containers with unready status: [postgres]",
+                        "observedGeneration": 1,
+                        "reason": "ContainersNotReady",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-10-07T07:39:15Z",
+                        "observedGeneration": 1,
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+                        "imageID": "",
+                        "lastState": {},
+                        "name": "postgres",
+                        "ready": false,
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "waiting": {
+                                "reason": "PodInitializing"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/lib/postgresql/data",
+                                "name": "pgdata"
+                            },
+                            {
+                                "mountPath": "/run",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/controller",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/dev/shm",
+                                "name": "shm"
+                            },
+                            {
+                                "mountPath": "/var/lib/postgresql/wal",
+                                "name": "pg-wal"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-jwghk",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    }
+                ],
+                "hostIP": "10.224.0.4",
+                "hostIPs": [
+                    {
+                        "ip": "10.224.0.4"
+                    }
+                ],
+                "initContainerStatuses": [
+                    {
+                        "image": "ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1",
+                        "imageID": "",
+                        "lastState": {},
+                        "name": "bootstrap-controller",
+                        "ready": false,
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "waiting": {
+                                "reason": "PodInitializing"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/lib/postgresql/data",
+                                "name": "pgdata"
+                            },
+                            {
+                                "mountPath": "/run",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/controller",
+                                "name": "scratch-data"
+                            },
+                            {
+                                "mountPath": "/dev/shm",
+                                "name": "shm"
+                            },
+                            {
+                                "mountPath": "/var/lib/postgresql/wal",
+                                "name": "pg-wal"
+                            },
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-jwghk",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    }
+                ],
+                "observedGeneration": 1,
+                "phase": "Pending",
+                "qosClass": "Burstable",
+                "startTime": "2026-10-07T07:39:15Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "cnpg.io/nodeSerial": "1",
+                    "cnpg.io/operatorVersion": "1.30.1",
+                    "cnpg.io/pvcStatus": "ready",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "disk.csi.azure.com",
+                    "volume.kubernetes.io/selected-node": "aks-nodepool1-15388874-vmss000000",
+                    "volume.kubernetes.io/storage-provisioner": "disk.csi.azure.com"
+                },
+                "creationTimestamp": "2026-10-06T20:54:11Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/component": "database",
+                    "app.kubernetes.io/managed-by": "cloudnative-pg",
+                    "app.kubernetes.io/name": "postgresql",
+                    "cnpg.io/cluster": "hdd-pg",
+                    "cnpg.io/instanceName": "hdd-pg-1",
+                    "cnpg.io/instanceRole": "primary",
+                    "cnpg.io/pvcRole": "PG_DATA",
+                    "role": "primary"
+                },
+                "name": "hdd-pg-1",
+                "namespace": "repro",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "postgresql.cnpg.io/v1",
+                        "controller": true,
+                        "kind": "Cluster",
+                        "name": "hdd-pg",
+                        "uid": "cbd63e61-de31-4991-8c4a-fe7206407486"
+                    }
+                ],
+                "resourceVersion": "284287",
+                "uid": "a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "dataSource": {
+                    "apiGroup": "snapshot.storage.k8s.io",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-data-f1b90aec"
+                },
+                "dataSourceRef": {
+                    "apiGroup": "snapshot.storage.k8s.io",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-data-f1b90aec"
+                },
+                "resources": {
+                    "requests": {
+                        "storage": "512Gi"
+                    }
+                },
+                "storageClassName": "azure-premiumv2",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "512Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "cnpg.io/nodeSerial": "1",
+                    "cnpg.io/operatorVersion": "1.30.1",
+                    "cnpg.io/pvcStatus": "ready",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "disk.csi.azure.com",
+                    "volume.kubernetes.io/selected-node": "aks-nodepool1-15388874-vmss000001",
+                    "volume.kubernetes.io/storage-provisioner": "disk.csi.azure.com"
+                },
+                "creationTimestamp": "2026-10-07T05:15:33Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/component": "database",
+                    "app.kubernetes.io/managed-by": "cloudnative-pg",
+                    "app.kubernetes.io/name": "postgresql",
+                    "cnpg.io/cluster": "hdd-pg",
+                    "cnpg.io/instanceName": "hdd-pg-1",
+                    "cnpg.io/instanceRole": "primary",
+                    "cnpg.io/pvcRole": "PG_WAL",
+                    "role": "primary"
+                },
+                "name": "hdd-pg-1-wal",
+                "namespace": "repro",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "postgresql.cnpg.io/v1",
+                        "controller": true,
+                        "kind": "Cluster",
+                        "name": "hdd-pg",
+                        "uid": "cbd63e61-de31-4991-8c4a-fe7206407486"
+                    }
+                ],
+                "resourceVersion": "270051",
+                "uid": "316a1094-6e0e-4dd5-a32b-070319573632"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "resources": {
+                    "requests": {
+                        "storage": "512Gi"
+                    }
+                },
+                "storageClassName": "azure-premiumv2",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-316a1094-6e0e-4dd5-a32b-070319573632"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "512Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "cnpg.io/nodeSerial": "2",
+                    "cnpg.io/operatorVersion": "1.30.1",
+                    "cnpg.io/pvcStatus": "ready",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "disk.csi.azure.com",
+                    "volume.kubernetes.io/selected-node": "aks-nodepool1-15388874-vmss000000",
+                    "volume.kubernetes.io/storage-provisioner": "disk.csi.azure.com"
+                },
+                "creationTimestamp": "2026-10-07T07:29:59Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/component": "database",
+                    "app.kubernetes.io/managed-by": "cloudnative-pg",
+                    "app.kubernetes.io/name": "postgresql",
+                    "cnpg.io/cluster": "hdd-pg",
+                    "cnpg.io/instanceName": "hdd-pg-2",
+                    "cnpg.io/instanceRole": "replica",
+                    "cnpg.io/pvcRole": "PG_DATA",
+                    "role": "replica"
+                },
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "postgresql.cnpg.io/v1",
+                        "controller": true,
+                        "kind": "Cluster",
+                        "name": "hdd-pg",
+                        "uid": "cbd63e61-de31-4991-8c4a-fe7206407486"
+                    }
+                ],
+                "resourceVersion": "292379",
+                "uid": "33bde4d4-2c77-4dae-afe6-6e8895633723"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "dataSource": {
+                    "apiGroup": "snapshot.storage.k8s.io",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-backup-f1b90aec"
+                },
+                "dataSourceRef": {
+                    "apiGroup": "snapshot.storage.k8s.io",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-backup-f1b90aec"
+                },
+                "resources": {
+                    "requests": {
+                        "storage": "512Gi"
+                    }
+                },
+                "storageClassName": "azure-premiumv2",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-33bde4d4-2c77-4dae-afe6-6e8895633723"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "512Gi"
+                },
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolumeClaim",
+            "metadata": {
+                "annotations": {
+                    "cnpg.io/nodeSerial": "2",
+                    "cnpg.io/operatorVersion": "1.30.1",
+                    "cnpg.io/pvcStatus": "ready",
+                    "pv.kubernetes.io/bind-completed": "yes",
+                    "pv.kubernetes.io/bound-by-controller": "yes",
+                    "volume.beta.kubernetes.io/storage-provisioner": "disk.csi.azure.com",
+                    "volume.kubernetes.io/selected-node": "aks-nodepool1-15388874-vmss000000",
+                    "volume.kubernetes.io/storage-provisioner": "disk.csi.azure.com"
+                },
+                "creationTimestamp": "2026-10-07T07:29:59Z",
+                "finalizers": [
+                    "kubernetes.io/pvc-protection"
+                ],
+                "labels": {
+                    "app.kubernetes.io/component": "database",
+                    "app.kubernetes.io/managed-by": "cloudnative-pg",
+                    "app.kubernetes.io/name": "postgresql",
+                    "cnpg.io/cluster": "hdd-pg",
+                    "cnpg.io/instanceName": "hdd-pg-2",
+                    "cnpg.io/instanceRole": "replica",
+                    "cnpg.io/pvcRole": "PG_WAL",
+                    "role": "replica"
+                },
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "postgresql.cnpg.io/v1",
+                        "controller": true,
+                        "kind": "Cluster",
+                        "name": "hdd-pg",
+                        "uid": "cbd63e61-de31-4991-8c4a-fe7206407486"
+                    }
+                ],
+                "resourceVersion": "289653",
+                "uid": "e5d5f186-de82-4348-9a5a-c6ab8c7439dc"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "dataSource": {
+                    "apiGroup": "snapshot.storage.k8s.io",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-backup-f1b90aec-wal"
+                },
+                "dataSourceRef": {
+                    "apiGroup": "snapshot.storage.k8s.io",
+                    "kind": "VolumeSnapshot",
+                    "name": "vacuum-backup-f1b90aec-wal"
+                },
+                "resources": {
+                    "requests": {
+                        "storage": "512Gi"
+                    }
+                },
+                "storageClassName": "azure-premiumv2",
+                "volumeMode": "Filesystem",
+                "volumeName": "pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc"
+            },
+            "status": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "512Gi"
+                },
+                "phase": "Bound"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

@@ -1,0 +1,75 @@
+WARNING: Consider upgrading security for your workloads using Azure Trusted Launch VMs. To know more about Trusted Launch, please visit https://aka.ms/TrustedLaunch.
+ERROR: The command failed with an unexpected error. Here is the traceback:
+ERROR: The content for this response was already consumed
+Traceback (most recent call last):
+  File "/opt/az/lib/python3.14/site-packages/azure/cli/core/commands/__init__.py", line 789, in _run_job
+    result = cmd_copy(params)
+  File "/opt/az/lib/python3.14/site-packages/azure/cli/core/commands/__init__.py", line 335, in __call__
+    return self.handler(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.14/site-packages/azure/cli/core/commands/command_operation.py", line 120, in handler
+    return op(**command_args)
+  File "/opt/az/lib/python3.14/site-packages/azure/cli/command_modules/vm/custom.py", line 1246, in create_vm
+    LongRunningOperation(cmd.cli_ctx)(client.begin_create_or_update(resource_group_name, deployment_name, deployment))
+                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.14/site-packages/azure/core/tracing/decorator.py", line 119, in wrapper_use_tracer
+    return func(*args, **kwargs)
+  File "/opt/az/lib/python3.14/site-packages/azure/mgmt/resource/resources/v2024_11_01/operations/_operations.py", line 11281, in begin_create_or_update
+    raw_result = self._create_or_update_initial(
+        resource_group_name=resource_group_name,
+    ...<7 lines>...
+        **kwargs
+    )
+  File "/opt/az/lib/python3.14/site-packages/azure/mgmt/resource/resources/v2024_11_01/operations/_operations.py", line 11174, in _create_or_update_initial
+    raise HttpResponseError(response=response, error_format=ARMErrorFormat)
+azure.core.exceptions.HttpResponseError: (InvalidTemplateDeployment) The template deployment 'vm_deploy_nMziStevXFj87nVWODvxnjYXGiHqe2G1' is not valid according to the validation procedure. The following resource provider(s) - 'Microsoft.Compute/virtualMachines (2026-04-01)' reported preflight validation errors. Tracking id is 'b87fc84e-7eea-4361-9b6e-a7cba47c34bf'. See inner errors for details.
+Code: InvalidTemplateDeployment
+Message: The template deployment 'vm_deploy_nMziStevXFj87nVWODvxnjYXGiHqe2G1' is not valid according to the validation procedure. The following resource provider(s) - 'Microsoft.Compute/virtualMachines (2026-04-01)' reported preflight validation errors. Tracking id is 'b87fc84e-7eea-4361-9b6e-a7cba47c34bf'. See inner errors for details.
+Exception Details:	(SkuNotAvailable) The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_D4s_v4' is currently not available in location 'westus2'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.
+	Code: SkuNotAvailable
+	Message: The requested VM size for resource 'Following SKUs have failed for Capacity Restrictions: Standard_D4s_v4' is currently not available in location 'westus2'. Please try another size or deploy to a different location or different zone. See https://aka.ms/azureskunotavailable for details.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/az/lib/python3.14/site-packages/azure/cli/core/commands/arm.py", line 109, in handle_template_based_exception
+    raise CLIError(ex.inner_exception.error.message)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'error'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/az/lib/python3.14/site-packages/knack/cli.py", line 233, in invoke
+    cmd_result = self.invocation.execute(args)
+  File "/opt/az/lib/python3.14/site-packages/azure/cli/core/commands/__init__.py", line 677, in execute
+    raise ex
+  File "/opt/az/lib/python3.14/site-packages/azure/cli/core/commands/__init__.py", line 820, in _run_jobs_serially
+    results.append(self._run_job(expanded_arg, cmd_copy))
+                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.14/site-packages/azure/cli/core/commands/__init__.py", line 812, in _run_job
+    return cmd_copy.exception_handler(ex)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^
+  File "/opt/az/lib/python3.14/site-packages/azure/cli/core/commands/arm.py", line 112, in handle_template_based_exception
+    raise_subdivision_deployment_error(ex.response.internal_response.text, ex.error.code if ex.error else None)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/az/lib/python3.14/site-packages/requests/models.py", line 928, in text
+    if not self.content:
+           ^^^^^^^^^^^^
+  File "/opt/az/lib/python3.14/site-packages/requests/models.py", line 899, in content
+    raise RuntimeError("The content for this response was already consumed")
+RuntimeError: The content for this response was already consumed
+To check existing issues, please visit: https://github.com/Azure/azure-cli/issues
+Traceback (most recent call last):
+  File "/workspace/fio-hdd-westus2-1m-repro/provision.py", line 53, in <module>
+    vm = az('vm', 'create', '-g', state['rg'], '-n', state['vm'], '-l', state['location'],
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/fio-hdd-westus2-1m-repro/provision.py", line 14, in az
+    output = subprocess.check_output(['az', *args, '-o', 'json'], text=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['az', 'vm', 'create', '-g', 'rg-fio-hdd-756be87f1141784f272b05b2', '-n', 'fio-vm', '-l', 'westus2', '--size', 'Standard_D4s_v4', '--image', 'Ubuntu2204', '--admin-username', 'fioadmin', '--ssh-key-values', '/workspace/fio-hdd-westus2-1m-repro/ssh-key.pub', '--storage-sku', 'StandardSSD_LRS', '--os-disk-size-gb', '32', '--public-ip-sku', 'Standard', '--nsg-rule', 'SSH', '--custom-data', '/workspace/fio-hdd-westus2-1m-repro/cloud-init.yml', '--tags', 'reprotoken=756be87f1141784f272b05b2', '--zone', '1', '-o', 'json']' returned non-zero exit status 1.

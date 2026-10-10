@@ -1,0 +1,12 @@
+{"event":"worker_ready","pid":7,"ioDepth":32}
+{"event":"started","pid":1,"requestedWorkers":5,"startedWorkers":5,"ioDepthPerProcess":32,"maxOutstandingReads":160,"blockBytes":1048576,"relationBytes":4294967296,"eligibleRelationBytes":4294967296,"excludedRelationBytes":0,"eligibleSegments":4,"excludedSegmentsForReadSize":0,"zeroLengthSegmentsSkipped":0,"subPageSegmentsSkipped":0,"subPageBytesSkipped":0,"segments":4,"readOnly":true,"directIo":true}
+{"event":"worker_ready","pid":8,"ioDepth":32}
+{"event":"worker_ready","pid":9,"ioDepth":32}
+{"event":"worker_ready","pid":10,"ioDepth":32}
+{"event":"worker_ready","pid":11,"ioDepth":32}
+{"event":"worker_exit","pid":10,"exitUnixEpoch":1791261003.587931,"readOps":127729,"readBytes":133933563904,"errors":0,"meanReadLatencyMs":2701.980565,"maxReadLatencyMs":6782.417250}
+{"event":"worker_exit","pid":11,"exitUnixEpoch":1791261003.663089,"readOps":127728,"readBytes":133932515328,"errors":0,"meanReadLatencyMs":2701.988250,"maxReadLatencyMs":6727.032521}
+{"event":"worker_exit","pid":7,"exitUnixEpoch":1791261003.702234,"readOps":127746,"readBytes":133951389696,"errors":0,"meanReadLatencyMs":2701.598582,"maxReadLatencyMs":6748.239830}
+{"event":"worker_exit","pid":9,"exitUnixEpoch":1791261003.753573,"readOps":127714,"readBytes":133917835264,"errors":0,"meanReadLatencyMs":2702.258416,"maxReadLatencyMs":6729.940618}
+{"event":"worker_exit","pid":8,"exitUnixEpoch":1791261003.808560,"readOps":127757,"readBytes":133962924032,"errors":0,"meanReadLatencyMs":2701.364502,"maxReadLatencyMs":6700.685579}
+{"event":"stopped","pid":1,"startedWorkers":5,"exitCode":0}

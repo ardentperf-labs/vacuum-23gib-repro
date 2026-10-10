@@ -1,0 +1,47 @@
+{
+  "captureCompletedAtUtc": "2026-10-06T06:59:43.485903+00:00",
+  "captureMode": "collector-post-completion-kubectl-logs; no independent continuous follower was launched",
+  "captureProvenance": {
+    "captureErrors": [],
+    "invocation": "kubectl logs --since-time=<VACUUM-start> after terminal observation state",
+    "replicationEventCount": 0,
+    "replicationEventsArtifact": "../replication-events.json",
+    "source": "03-test.py::capture_replication_logs",
+    "sourceSha256": "e1132c857d956df47ac2f57821c65dbc8280a6ba48dc658928f2a09ad9cc84cb"
+  },
+  "continuousFollowerFlushed": false,
+  "continuousFollowerLaunched": false,
+  "limitation": "Retained PostgreSQL container logs were retrieved after completion and flushed locally. This is not continuous monitoring and does not independently prove no earlier log lines were rotated or lost. See root-completion-log-capture-audit.json.",
+  "logFiles": {
+    "primary": {
+      "bytes": 6628,
+      "identicalToCollectorCapture": true,
+      "path": "primary-postgres-live.log",
+      "sha256": "f27806729f14c61f2a8e6f8c402e2e8ebfda8f9e0e9bf96aa5dd7ab8846cfe17",
+      "sourcePath": "raw/primary-postgres.log"
+    },
+    "replica": {
+      "bytes": 10027,
+      "identicalToCollectorCapture": true,
+      "path": "replica-postgres-live.log",
+      "sha256": "0d5a3ad2862652fc516b9220bff299c0d3851f4dc41a16793530b2a9d8b4134e",
+      "sourcePath": "raw/replica-postgres.log"
+    }
+  },
+  "measurementWindow": {
+    "end": "2026-10-06T06:59:38.649981943Z",
+    "start": "2026-10-06T06:19:15.770198Z",
+    "vacuumComplete": "2026-10-06T06:49:10.965711Z"
+  },
+  "schemaVersion": 1,
+  "summaryGeneratedAtUtc": "2026-10-06T07:05:01.704112+00:00",
+  "testState": {
+    "error": null,
+    "output": "${PROJECT_ROOT}/experiments/20261005-four/prefetch-off-fpw-off/results/full-fpw-off-prefetch-off-23gib-20261006T062000Z",
+    "phase": "complete",
+    "replayCaughtUp": true,
+    "runId": "full-fpw-off-prefetch-off-23gib-20261006T062000Z",
+    "testComplete": true,
+    "updatedAt": "2026-10-06T06:59:44.758Z"
+  }
+}

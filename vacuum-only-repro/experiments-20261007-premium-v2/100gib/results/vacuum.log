@@ -1,0 +1,30 @@
+VACUUM_START|2026-10-07T08:36:00.983779Z|9A/86000110|475329761742|144525826|46217509
+psql:/controller/tmp/vacuum-4071c18434bf4c06a26831eb763686f5/vacuum.sql:2: INFO:  aggressively vacuuming "repro.public.vacuum_target"
+psql:/controller/tmp/vacuum-4071c18434bf4c06a26831eb763686f5/vacuum.sql:2: INFO:  finished vacuuming "repro.public.vacuum_target": index scans: 3
+pages: 0 removed, 13107200 remain, 13107200 scanned (100.00% of total)
+tuples: 32767995 removed, 32768000 remain, 0 are dead but not yet removable
+removable cutoff: 1487, which was 0 XIDs old when operation ended
+new relfrozenxid: 1487, which is 10 XIDs ahead of previous value
+frozen: 13107200 pages from table (100.00% of total) had 32768000 tuples frozen
+index scan needed: 13107200 pages from table (100.00% of total) had 32768000 dead item identifiers removed
+index "vacuum_target_id_idx": pages: 179697 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+I/O timings: read: 2470520.375 ms, write: 176407.817 ms
+avg read rate: 29.411 MB/s, avg write rate: 29.016 MB/s
+buffer usage: 13108500 hits, 26756677 misses, 26397117 dirtied
+WAL usage: 65718290 records, 26397194 full page images, 160575194979 bytes
+system usage: CPU: user: 203.89 s, system: 548.59 s, elapsed: 7107.33 s
+psql:/controller/tmp/vacuum-4071c18434bf4c06a26831eb763686f5/vacuum.sql:2: INFO:  aggressively vacuuming "repro.pg_toast.pg_toast_24578"
+psql:/controller/tmp/vacuum-4071c18434bf4c06a26831eb763686f5/vacuum.sql:2: INFO:  finished vacuuming "repro.pg_toast.pg_toast_24578": index scans: 0
+pages: 0 removed, 0 remain, 0 scanned (100.00% of total)
+tuples: 0 removed, 0 remain, 0 are dead but not yet removable
+removable cutoff: 1487, which was 0 XIDs old when operation ended
+new relfrozenxid: 1487, which is 10 XIDs ahead of previous value
+frozen: 0 pages from table (100.00% of total) had 0 tuples frozen
+index scan not needed: 0 pages from table (100.00% of total) had 0 dead item identifiers removed
+I/O timings: read: 0.803 ms, write: 0.000 ms
+avg read rate: 7.988 MB/s, avg write rate: 0.000 MB/s
+buffer usage: 32 hits, 1 misses, 0 dirtied
+WAL usage: 1 records, 0 full page images, 188 bytes
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+VACUUM
+VACUUM_COMPLETE|2026-10-07T10:34:28.321130Z|C0/140EBE90|635905026315|210245128|72614703

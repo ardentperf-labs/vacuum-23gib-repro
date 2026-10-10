@@ -1,0 +1,77 @@
+{
+  "apiVersion": "v1",
+  "kind": "PersistentVolume",
+  "metadata": {
+    "annotations": {
+      "pv.kubernetes.io/provisioned-by": "disk.csi.azure.com",
+      "volume.kubernetes.io/provisioner-deletion-secret-name": "",
+      "volume.kubernetes.io/provisioner-deletion-secret-namespace": ""
+    },
+    "creationTimestamp": "2026-10-07T07:30:12Z",
+    "finalizers": [
+      "external-provisioner.volume.kubernetes.io/finalizer",
+      "kubernetes.io/pv-protection",
+      "external-attacher/disk-csi-azure-com"
+    ],
+    "name": "pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc",
+    "resourceVersion": "295081",
+    "uid": "73689a6c-e0c8-4760-b179-6b6c4d90910d"
+  },
+  "spec": {
+    "accessModes": [
+      "ReadWriteOnce"
+    ],
+    "capacity": {
+      "storage": "512Gi"
+    },
+    "claimRef": {
+      "apiVersion": "v1",
+      "kind": "PersistentVolumeClaim",
+      "name": "hdd-pg-2-wal",
+      "namespace": "repro",
+      "resourceVersion": "289560",
+      "uid": "e5d5f186-de82-4348-9a5a-c6ab8c7439dc"
+    },
+    "csi": {
+      "driver": "disk.csi.azure.com",
+      "volumeAttributes": {
+        "DiskIOPSReadWrite": "3000",
+        "DiskMBpsReadWrite": "125",
+        "LogicalSectorSize": "512",
+        "cachingMode": "None",
+        "csi.storage.k8s.io/pv/name": "pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc",
+        "csi.storage.k8s.io/pvc/name": "hdd-pg-2-wal",
+        "csi.storage.k8s.io/pvc/namespace": "repro",
+        "kind": "Managed",
+        "requestedsizegib": "512",
+        "skuName": "PremiumV2_LRS",
+        "storage.kubernetes.io/csiProvisionerIdentity": "1791301337265-7128-disk.csi.azure.com"
+      },
+      "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc"
+    },
+    "nodeAffinity": {
+      "required": {
+        "nodeSelectorTerms": [
+          {
+            "matchExpressions": [
+              {
+                "key": "topology.disk.csi.azure.com/zone",
+                "operator": "In",
+                "values": [
+                  "eastus-1"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "persistentVolumeReclaimPolicy": "Delete",
+    "storageClassName": "azure-premiumv2",
+    "volumeMode": "Filesystem"
+  },
+  "status": {
+    "lastPhaseTransitionTime": "2026-10-07T07:30:12Z",
+    "phase": "Bound"
+  }
+}

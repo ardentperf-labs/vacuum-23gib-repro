@@ -1,0 +1,33 @@
+{
+  "creationData": {
+    "createOption": "Import",
+    "sourceUri": "https://fiow2168d63b3cf97eb87.blob.core.windows.net/vhds/prepared-azcopy-retry.vhd",
+    "storageAccountId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-transport-168d63b3cf97eb87fa9f88d9/providers/Microsoft.Storage/storageAccounts/fiow2168d63b3cf97eb87"
+  },
+  "diskSizeBytes": 549755813888,
+  "diskSizeGB": 512,
+  "diskState": "Unattached",
+  "encryption": {
+    "type": "EncryptionAtRestWithPlatformKey"
+  },
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-keeper-westus2-168d63b3cf97eb87fa9f88d9/providers/Microsoft.Compute/snapshots/prepared-full",
+  "incremental": false,
+  "location": "westus2",
+  "name": "prepared-full",
+  "networkAccessPolicy": "DenyAll",
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": "Disabled",
+  "resourceGroup": "rg-fio-hdd-keeper-westus2-168d63b3cf97eb87fa9f88d9",
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "snapshotAccessState": "Available",
+  "tags": {
+    "preserve-all-snapshots": "true",
+    "reprotoken": "168d63b3cf97eb87fa9f88d9"
+  },
+  "timeCreated": "2026-10-09T09:54:18.1269853+00:00",
+  "type": "Microsoft.Compute/snapshots",
+  "uniqueId": "97ca0333-f260-46b4-97f9-1f5bbe23b5a7"
+}

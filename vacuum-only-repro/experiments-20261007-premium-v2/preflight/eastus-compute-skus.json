@@ -1,0 +1,286 @@
+[
+  {
+    "capabilities": [
+      {
+        "name": "MaxSizeGiB",
+        "value": "65536"
+      },
+      {
+        "name": "MinSizeGiB",
+        "value": "1"
+      },
+      {
+        "name": "MaxIOpsReadWrite",
+        "value": "80000"
+      },
+      {
+        "name": "MinIOpsReadWrite",
+        "value": "3000"
+      },
+      {
+        "name": "MaxBandwidthMBpsReadWrite",
+        "value": "2000"
+      },
+      {
+        "name": "MinBandwidthMBpsReadWrite",
+        "value": "125"
+      },
+      {
+        "name": "MaxValueOfMaxShares",
+        "value": "15"
+      },
+      {
+        "name": "MinIOSizeKiBps",
+        "value": "4"
+      },
+      {
+        "name": "MaxIOSizeKiBps",
+        "value": "256"
+      },
+      {
+        "name": "MinIopsReadOnly",
+        "value": "3000"
+      },
+      {
+        "name": "MaxIopsReadOnly",
+        "value": "80000"
+      },
+      {
+        "name": "MinBandwidthMBpsReadOnly",
+        "value": "125"
+      },
+      {
+        "name": "MaxBandwidthMBpsReadOnly",
+        "value": "2000"
+      },
+      {
+        "name": "MaxIopsPerGiBReadWrite",
+        "value": "500"
+      },
+      {
+        "name": "MaxIopsPerGiBReadOnly",
+        "value": "500"
+      },
+      {
+        "name": "MinIopsPerGiBReadWrite",
+        "value": "1"
+      },
+      {
+        "name": "MinIopsPerGiBReadOnly",
+        "value": "1"
+      },
+      {
+        "name": "BillingPartitionSizes",
+        "value": "1, 2, 3, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 3072, 4096, 5120, 6144, 7168, 8192, 9216, 10240, 11264, 12288, 13312, 14336, 15360, 16384, 17408, 18432, 19456, 20480, 21504, 22528, 23552,24576,25600,26624,27648,28672,29696,30720,31744,32768,33792,34816,35840,36864,37888,38912,39936,40960,41984,43008,44032,45056,46080,47104,48128,49152,50176,51200,52224,53248,54272,55296,56320,57344,58368,59392,60416,61440,62464,63488,64512,65536"
+      },
+      {
+        "name": "MaxZonalFaultDomainCount",
+        "value": "3"
+      },
+      {
+        "name": "PlatformFaultDomainCount",
+        "value": "3"
+      }
+    ],
+    "locationInfo": [
+      {
+        "location": "eastus",
+        "zoneDetails": [
+          {
+            "Name": [
+              "2"
+            ],
+            "capabilities": [
+              {
+                "name": "MaxFaultDomainCountInZone",
+                "value": "3"
+              }
+            ]
+          },
+          {
+            "Name": [
+              "1"
+            ],
+            "capabilities": [
+              {
+                "name": "MaxFaultDomainCountInZone",
+                "value": "3"
+              }
+            ]
+          },
+          {
+            "Name": [
+              "3"
+            ],
+            "capabilities": [
+              {
+                "name": "MaxFaultDomainCountInZone",
+                "value": "3"
+              }
+            ]
+          }
+        ],
+        "zones": [
+          "2",
+          "1",
+          "3"
+        ]
+      }
+    ],
+    "locations": [
+      "eastus"
+    ],
+    "name": "PremiumV2_LRS",
+    "resourceType": "disks",
+    "restrictions": [],
+    "zones": null
+  },
+  {
+    "capabilities": [
+      {
+        "name": "MaxResourceVolumeMB",
+        "value": "0"
+      },
+      {
+        "name": "OSVhdSizeMB",
+        "value": "1047552"
+      },
+      {
+        "name": "vCPUs",
+        "value": "2"
+      },
+      {
+        "name": "MemoryPreservingMaintenanceSupported",
+        "value": "True"
+      },
+      {
+        "name": "HyperVGenerations",
+        "value": "V1,V2"
+      },
+      {
+        "name": "SupportedCapacityReservationTypes",
+        "value": "Open,Targeted"
+      },
+      {
+        "name": "MemoryGB",
+        "value": "8"
+      },
+      {
+        "name": "MaxDataDiskCount",
+        "value": "4"
+      },
+      {
+        "name": "CpuArchitectureType",
+        "value": "x64"
+      },
+      {
+        "name": "LowPriorityCapable",
+        "value": "True"
+      },
+      {
+        "name": "PremiumIO",
+        "value": "True"
+      },
+      {
+        "name": "VMDeploymentTypes",
+        "value": "IaaS"
+      },
+      {
+        "name": "vCPUsConstraintsAllowed",
+        "value": "1, 2"
+      },
+      {
+        "name": "vCPUsAvailable",
+        "value": "2"
+      },
+      {
+        "name": "ACUs",
+        "value": "195"
+      },
+      {
+        "name": "vCPUsPerCore",
+        "value": "2"
+      },
+      {
+        "name": "CombinedTempDiskAndCachedIOPS",
+        "value": "19000"
+      },
+      {
+        "name": "CombinedTempDiskAndCachedReadBytesPerSecond",
+        "value": "120586240"
+      },
+      {
+        "name": "CombinedTempDiskAndCachedWriteBytesPerSecond",
+        "value": "120586240"
+      },
+      {
+        "name": "CachedDiskBytes",
+        "value": "53687091200"
+      },
+      {
+        "name": "UncachedDiskIOPS",
+        "value": "3200"
+      },
+      {
+        "name": "UncachedDiskBytesPerSecond",
+        "value": "48000000"
+      },
+      {
+        "name": "EphemeralOSDiskSupported",
+        "value": "False"
+      },
+      {
+        "name": "EncryptionAtHostSupported",
+        "value": "True"
+      },
+      {
+        "name": "CapacityReservationSupported",
+        "value": "True"
+      },
+      {
+        "name": "AcceleratedNetworkingEnabled",
+        "value": "True"
+      },
+      {
+        "name": "RdmaEnabled",
+        "value": "False"
+      },
+      {
+        "name": "MaxNetworkInterfaces",
+        "value": "2"
+      }
+    ],
+    "locationInfo": [
+      {
+        "location": "eastus",
+        "zoneDetails": [
+          {
+            "Name": [
+              "2",
+              "1",
+              "3"
+            ],
+            "capabilities": [
+              {
+                "name": "UltraSSDAvailable",
+                "value": "True"
+              }
+            ]
+          }
+        ],
+        "zones": [
+          "2",
+          "1",
+          "3"
+        ]
+      }
+    ],
+    "locations": [
+      "eastus"
+    ],
+    "name": "Standard_D2s_v4",
+    "resourceType": "virtualMachines",
+    "restrictions": [],
+    "zones": null
+  }
+]

@@ -1,0 +1,103 @@
+{
+  "exitCode": 0,
+  "finishedAtUtc": "2026-10-09T08:34:10.919Z",
+  "requestResult": "graceful_stop_requested",
+  "requestedAtUtc": "2026-10-09T08:34:01.161Z",
+  "serverActivityBeforeStopRequest": {
+    "activeSessions": 0,
+    "backends": [
+      {
+        "pid": 1020,
+        "queryAgeSeconds": 1.253701,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1021,
+        "queryAgeSeconds": 0.12868,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1022,
+        "queryAgeSeconds": 1.194182,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1023,
+        "queryAgeSeconds": 0.697468,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1024,
+        "queryAgeSeconds": 1.337179,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1025,
+        "queryAgeSeconds": 0.841684,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1026,
+        "queryAgeSeconds": 1.028991,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1027,
+        "queryAgeSeconds": 4.172846,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1028,
+        "queryAgeSeconds": 0.401687,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1029,
+        "queryAgeSeconds": 2.988776,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      }
+    ],
+    "benchSessions": 10,
+    "committedTransactions": 526,
+    "idleClientReadSessions": 10,
+    "maxActiveQueryAgeSeconds": null,
+    "maxActiveXactAgeSeconds": null,
+    "observedAtUtc": "2026-10-09T08:34:01.114127Z",
+    "unrelatedAppSessions": 0,
+    "waitingSessions": 0
+  },
+  "signal": "SIGALRM",
+  "signalSemantics": "pgbench duration handler stops scheduling and drains active transactions",
+  "status": "0",
+  "waitSeconds": 8.994268890004605
+}

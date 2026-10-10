@@ -1,0 +1,35 @@
+{
+  "apiVersion": "2025-01-02",
+  "backupName": "vacuum-backup-f1b90aec",
+  "backupUid": "597e0f7d-c87e-4455-b01a-42120f969859",
+  "observedAtUtc": "2026-10-07T06:56:30.916031+00:00",
+  "snapshots": [
+    {
+      "completionPercent": 63.0,
+      "diskSizeGB": 512,
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+      "incremental": true,
+      "provisioningState": "Succeeded",
+      "reproPurpose": "premiumv2-vacuum-backup",
+      "reprotoken": "f1b90aec9e24f6a2008d6991738742cf",
+      "sku": "Standard_ZRS",
+      "snapshotAccessState": "Pending",
+      "uniqueId": "b530378c-e2ce-43e0-a464-209842f00958",
+      "volumeSnapshotName": "vacuum-backup-f1b90aec"
+    },
+    {
+      "completionPercent": 100.0,
+      "diskSizeGB": 512,
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "incremental": true,
+      "provisioningState": "Succeeded",
+      "reproPurpose": "premiumv2-vacuum-backup",
+      "reprotoken": "f1b90aec9e24f6a2008d6991738742cf",
+      "sku": "Standard_ZRS",
+      "snapshotAccessState": "Available",
+      "uniqueId": "5d6164bd-68b6-455a-ada8-cfb4c9f95022",
+      "volumeSnapshotName": "vacuum-backup-f1b90aec-wal"
+    }
+  ],
+  "source": "Azure Resource Manager GET; token retained in memory only"
+}

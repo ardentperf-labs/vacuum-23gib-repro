@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-07T01:09:53Z",
+  "checkpoint": "20261007T010953Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "walMigrationEvidence": "wal-migration-20261007T010956Z.json",
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "supervisorPid": 126516,
+      "childPid": 126519,
+      "activeFixturePhase": "wal-storage-primary-restart",
+      "clusterPhase": "Primary instance is being restarted without a switchover",
+      "clusterReadyInstances": null,
+      "pod": "hdd-pg-1",
+      "podUid": "6db137b8-b2f6-48f1-bb7e-6ee83b396144",
+      "podPhase": "Running",
+      "podReady": false,
+      "postgresContainerStartedProbe": false,
+      "podObservedAtUtc": "2026-10-07T01:09:53Z",
+      "activeQuery": null
+    },
+    "100gib": {
+      "processStatus": "running",
+      "supervisorPid": 126517,
+      "childPid": 126518,
+      "assignedTargetHeapBytes": 107374182400,
+      "activeFixturePhase": "create-index",
+      "indexPhase": "building index: scanning table",
+      "indexBlocksDone": 4670926,
+      "indexBlocksTotal": 13107200,
+      "indexScanFraction": 0.3563926696777344,
+      "indexElapsedSeconds": null,
+      "activeWaits": [
+        {
+          "type": "IO",
+          "event": "DataFileRead"
+        }
+      ],
+      "stageRelationBytes": 107374182400,
+      "pod": "hdd-pg-1",
+      "podReady": true
+    }
+  }
+}

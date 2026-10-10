@@ -1,0 +1,177 @@
+{
+  "failedCommand": "psql -c \"ALTER SYSTEM SET recovery_prefetch = 'off'; SELECT pg_reload_conf();\"",
+  "failedStep": "replica recovery_prefetch override in 02-prepare.sh, before final preparation gates and before any measurement",
+  "failure": "ERROR: ALTER SYSTEM cannot run inside a transaction block",
+  "preRecoveryEvidence": {
+    "activity": {
+      "activeNonIdleBackends": 0,
+      "applicationSessions": 0
+    },
+    "cluster": {
+      "clusterRecoveryPrefetchOverride": null,
+      "currentPrimary": "hdd-pg-1",
+      "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+      "readyInstances": 2
+    },
+    "pods": [
+      {
+        "name": "hdd-pg-1",
+        "phase": "Running",
+        "role": "primary",
+        "uid": "e3a1cd29-3f43-47f5-982a-52aa02ff5316"
+      },
+      {
+        "name": "hdd-pg-2",
+        "phase": "Running",
+        "role": "replica",
+        "uid": "1d7fe331-20b0-423d-a983-fb32bf823258"
+      }
+    ],
+    "sql": {
+      "primary": {
+        "heapBytes": 24696061952,
+        "inRecovery": false,
+        "recoveryPrefetch": {
+          "pendingRestart": false,
+          "source": "default",
+          "sourceFile": null,
+          "value": "try"
+        },
+        "systemIdentifier": "7692518806614212629",
+        "tableAutovacuumDisabled": true,
+        "tableBytes": 25040748544
+      },
+      "replica": {
+        "heapBytes": 24696061952,
+        "inRecovery": true,
+        "recoveryPrefetch": {
+          "pendingRestart": false,
+          "source": "default",
+          "sourceFile": null,
+          "value": "try"
+        },
+        "systemIdentifier": "7692518806614212629",
+        "tableAutovacuumDisabled": true,
+        "tableBytes": 25040748544
+      }
+    },
+    "testStatePresent": false
+  },
+  "recordedAtUtc": "2026-10-05T07:18:40.599612+00:00",
+  "recoveryAttempts": [
+    {
+      "command": "psql -c ALTER SYSTEM ...; SELECT pg_reload_conf();",
+      "result": "failed: ALTER SYSTEM cannot run inside a transaction block; no database change"
+    },
+    {
+      "command": "psql -c ALTER SYSTEM SET recovery_prefetch = 'off';",
+      "result": "failed: postgresql.auto.conf was mode 0400; no setting change"
+    },
+    {
+      "command": "temporarily chmod u+w on replica postgresql.auto.conf; run ALTER SYSTEM and pg_reload_conf in separate psql -c calls; restore mode 0400 via EXIT trap",
+      "result": "succeeded; replica value=off, source=postgresql.auto.conf, pending_restart=false"
+    }
+  ],
+  "recoveryCommands": [
+    "kubectl exec -n repro hdd-pg-2 -c postgres -- psql -X -v ON_ERROR_STOP=1 -U postgres -d repro -c \"ALTER SYSTEM SET recovery_prefetch = 'off';\"",
+    "kubectl exec -n repro hdd-pg-2 -c postgres -- psql -X -v ON_ERROR_STOP=1 -U postgres -d repro -c \"SELECT pg_reload_conf();\""
+  ],
+  "recoveryValidation": {
+    "applicationActivity": {
+      "activeVacuum": 0,
+      "applicationSessions": 0
+    },
+    "autoConfModeAndSettingVerified": [
+      "400",
+      "setting-present"
+    ],
+    "clusterReady": 2,
+    "currentLsnCatchupSamples": [
+      {
+        "primaryFlushLsn": "4E/53000000",
+        "replicaReplayLsn": "4E/53000000",
+        "streaming": true
+      },
+      {
+        "primaryFlushLsn": "4E/53000000",
+        "replicaReplayLsn": "4E/53000000",
+        "streaming": true
+      },
+      {
+        "primaryFlushLsn": "4E/53000000",
+        "replicaReplayLsn": "4E/53000000",
+        "streaming": true
+      }
+    ],
+    "fourDistinctHddDisks": {
+      "hdd-pg-1": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/disks/pvc-a4aaa041-02e0-4924-831d-0a62a37b8507",
+      "hdd-pg-1-wal": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/disks/pvc-dcee1d34-1e20-42c3-a5a5-1702dcbdb7f7",
+      "hdd-pg-2": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/disks/pvc-199b4169-1be7-47fb-8cee-129e0a2ce6e1",
+      "hdd-pg-2-wal": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/disks/pvc-6d7a8c1e-9715-4926-b03a-a745ad592af8"
+    },
+    "primary": {
+      "archiveMode": "on",
+      "autovacuum": "on",
+      "checkpointTimeout": "5min",
+      "fullPageWrites": "on",
+      "heapBytes": 24696061952,
+      "inRecovery": false,
+      "maintenanceIoConcurrency": "10",
+      "maxWalSize": "1GB",
+      "recoveryPrefetch": {
+        "pendingRestart": false,
+        "source": "default",
+        "sourceFile": null,
+        "value": "try"
+      },
+      "sharedBuffers": "256MB",
+      "systemIdentifier": "7692518806614212629",
+      "tableAutovacuumDisabled": true,
+      "tableBytes": 25040748544,
+      "tablespaceOverride": false,
+      "trackIoTiming": "on",
+      "trackWalIoTiming": "on",
+      "vacuumCostDelay": "0",
+      "walLevel": "logical"
+    },
+    "regionalSnapshotId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-only-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/keeper-35e99cb5",
+    "replica": {
+      "archiveMode": "on",
+      "autovacuum": "on",
+      "checkpointTimeout": "5min",
+      "fullPageWrites": "on",
+      "heapBytes": 24696061952,
+      "inRecovery": true,
+      "maintenanceIoConcurrency": "10",
+      "maxWalSize": "1GB",
+      "recoveryPrefetch": {
+        "pendingRestart": false,
+        "source": "configuration file",
+        "sourceFile": "/var/lib/postgresql/data/pgdata/postgresql.auto.conf",
+        "value": "off"
+      },
+      "sharedBuffers": "256MB",
+      "systemIdentifier": "7692518806614212629",
+      "tableAutovacuumDisabled": true,
+      "tableBytes": 25040748544,
+      "tablespaceOverride": false,
+      "trackIoTiming": "on",
+      "trackWalIoTiming": "on",
+      "vacuumCostDelay": "0",
+      "walLevel": "logical"
+    },
+    "replicaSnapshotHandles": {
+      "data": "vacuum-backup-35e99cb5",
+      "wal": "vacuum-backup-35e99cb5-wal"
+    },
+    "restoreSourceCopyId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/vacuum-copy-35e99cb5",
+    "roleAssignmentRemoved": true,
+    "validatedAtUtc": "2026-10-05T07:28:56.744779+00:00"
+  },
+  "rootCause": "psql -c sent two SQL statements in one implicit transaction context; ALTER SYSTEM requires its own statement.",
+  "snapshotsDeleted": false,
+  "snapshotsRecreated": false,
+  "status": "preparation_recovered_and_gates_complete",
+  "updatedAtUtc": "2026-10-05T07:28:56.744769+00:00",
+  "vacuumLaunched": false
+}

@@ -1,0 +1,307 @@
+{
+  "backupName": "fpw-off-seed-9daba6b6",
+  "backupUid": "50d7f38a-1594-4dbb-82ff-0c243c87d389",
+  "data": {
+    "azureSnapshot": {
+      "creationData": {
+        "createOption": "Copy",
+        "sourceResourceId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/disks/pvc-a9dca03f-b331-4913-944f-c14043b83b72",
+        "sourceUniqueId": "c3e0e9a2-488b-4178-bb22-33b0727da5d3"
+      },
+      "diskSizeBytes": 549755813888,
+      "diskSizeGB": 512,
+      "diskState": "Unattached",
+      "encryption": {
+        "type": "EncryptionAtRestWithPlatformKey"
+      },
+      "id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/snapshots/snapshot-0396f821-5881-4ccd-bc9c-0d754b88a19e",
+      "incremental": true,
+      "incrementalSnapshotFamilyId": "74fc3996-1f9d-4b6d-8b1e-909daa72b83e",
+      "location": "westus3",
+      "name": "snapshot-0396f821-5881-4ccd-bc9c-0d754b88a19e",
+      "networkAccessPolicy": "DenyAll",
+      "provisioningState": "Succeeded",
+      "publicNetworkAccess": "Disabled",
+      "resourceGroup": "rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c",
+      "sku": {
+        "name": "Standard_ZRS",
+        "tier": "Standard"
+      },
+      "snapshotAccessState": "Available",
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "fpw-off-seed-paired-replica",
+        "reprotoken": "9daba6b61cdb3b2f6eca73f2f8e15c3c",
+        "source_volume_id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/disks/pvc-a9dca03f-b331-4913-944f-c14043b83b72"
+      },
+      "timeCreated": "2026-10-06T06:05:52.9065294+00:00",
+      "type": "Microsoft.Compute/snapshots",
+      "uniqueId": "df0dd7ae-76a7-4313-9bfa-526fa83baa90"
+    },
+    "pvc": "hdd-pg-1",
+    "snapshotId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/snapshots/snapshot-0396f821-5881-4ccd-bc9c-0d754b88a19e",
+    "sourceDiskId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/disks/pvc-a9dca03f-b331-4913-944f-c14043b83b72",
+    "uniqueId": "df0dd7ae-76a7-4313-9bfa-526fa83baa90",
+    "volumeSnapshot": {
+      "name": "fpw-off-seed-9daba6b6",
+      "object": {
+        "apiVersion": "snapshot.storage.k8s.io/v1",
+        "kind": "VolumeSnapshot",
+        "metadata": {
+          "annotations": {
+            "cnpg.io/backupEndTime": "2026-10-06T06:06:10Z",
+            "cnpg.io/backupEndWAL": "000000010000004E00000053",
+            "cnpg.io/backupLabelFile": "U1RBUlQgV0FMIExPQ0FUSU9OOiA0RS81MzAwMDAyOCAoZmlsZSAwMDAwMDAwMTAwMDAwMDRFMDAwMDAwNTMpCkNIRUNLUE9JTlQgTE9DQVRJT046IDRFLzUzMDAwMDYwCkJBQ0tVUCBNRVRIT0Q6IHN0cmVhbWVkCkJBQ0tVUCBGUk9NOiBwcmltYXJ5ClNUQVJUIFRJTUU6IDIwMjYtMTAtMDYgMDY6MDU6NDYgVVRDCkxBQkVMOiBmcHctb2ZmLXNlZWQtOWRhYmE2YjYKU1RBUlQgVElNRUxJTkU6IDEK",
+            "cnpg.io/backupStartTime": "2026-10-06T06:05:46Z",
+            "cnpg.io/backupStartWAL": "000000010000004E00000053",
+            "cnpg.io/clusterManifest": "{\"kind\":\"Cluster\",\"apiVersion\":\"postgresql.cnpg.io/v1\",\"metadata\":{\"name\":\"hdd-pg\",\"namespace\":\"repro\",\"uid\":\"a5eee884-5152-453d-bd56-06b998402fdf\",\"resourceVersion\":\"27948\",\"generation\":1,\"creationTimestamp\":\"2026-10-06T05:14:39Z\",\"labels\":{\"repro.stack.token\":\"9daba6b61cdb3b2f6eca73f2f8e15c3c\"},\"annotations\":{\"kubectl.kubernetes.io/last-applied-configuration\":\"{\\\"apiVersion\\\":\\\"postgresql.cnpg.io/v1\\\",\\\"kind\\\":\\\"Cluster\\\",\\\"metadata\\\":{\\\"annotations\\\":{\\\"vacuum-only-repro/source-data-snapshot-id\\\":\\\"/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01\\\",\\\"vacuum-only-repro/source-wal-snapshot-id\\\":\\\"/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-01605f86-3d24-4371-81cc-9a908a426b18\\\"},\\\"labels\\\":{\\\"repro.stack.token\\\":\\\"9daba6b61cdb3b2f6eca73f2f8e15c3c\\\"},\\\"name\\\":\\\"hdd-pg\\\",\\\"namespace\\\":\\\"repro\\\"},\\\"spec\\\":{\\\"affinity\\\":{\\\"enablePodAntiAffinity\\\":true,\\\"podAntiAffinityType\\\":\\\"required\\\",\\\"topologyKey\\\":\\\"kubernetes.io/hostname\\\"},\\\"backup\\\":{\\\"barmanObjectStore\\\":{\\\"azureCredentials\\\":{\\\"connectionString\\\":{\\\"key\\\":\\\"connection-string\\\",\\\"name\\\":\\\"azure-barman-credentials\\\"}},\\\"destinationPath\\\":\\\"[AZURE BLOB ENDPOINT REDACTED]/wal-9daba6b61cdb/cnpg-vacuum-only/9daba6b61cdb3b2f6eca73f2f8e15c3c/\\\",\\\"serverName\\\":\\\"hdd-pg\\\"},\\\"volumeSnapshot\\\":{\\\"className\\\":\\\"seed-snapshot-9daba6b6\\\",\\\"online\\\":true,\\\"onlineConfiguration\\\":{\\\"immediateCheckpoint\\\":false,\\\"waitForArchive\\\":true},\\\"walClassName\\\":\\\"seed-snapshot-9daba6b6\\\"}},\\\"bootstrap\\\":{\\\"recovery\\\":{\\\"database\\\":\\\"repro\\\",\\\"owner\\\":\\\"app\\\",\\\"volumeSnapshots\\\":{\\\"storage\\\":{\\\"apiGroup\\\":\\\"snapshot.storage.k8s.io\\\",\\\"kind\\\":\\\"VolumeSnapshot\\\",\\\"name\\\":\\\"src-data-9daba6b6\\\"},\\\"walStorage\\\":{\\\"apiGroup\\\":\\\"snapshot.storage.k8s.io\\\",\\\"kind\\\":\\\"VolumeSnapshot\\\",\\\"name\\\":\\\"src-wal-9daba6b6\\\"}}}},\\\"imageName\\\":\\\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\\\",\\\"instances\\\":1,\\\"postgresql\\\":{\\\"parameters\\\":{\\\"shared_buffers\\\":\\\"256MB\\\",\\\"track_io_timing\\\":\\\"on\\\",\\\"track_wal_io_timing\\\":\\\"on\\\",\\\"wal_level\\\":\\\"logical\\\"}},\\\"resources\\\":{\\\"limits\\\":{\\\"cpu\\\":\\\"2\\\",\\\"memory\\\":\\\"3Gi\\\"},\\\"requests\\\":{\\\"cpu\\\":\\\"1\\\",\\\"memory\\\":\\\"2Gi\\\"}},\\\"storage\\\":{\\\"size\\\":\\\"512Gi\\\",\\\"storageClass\\\":\\\"azure-standard-hdd\\\"},\\\"walStorage\\\":{\\\"size\\\":\\\"512Gi\\\",\\\"storageClass\\\":\\\"azure-standard-hdd\\\"}}}\\n\",\"vacuum-only-repro/source-data-snapshot-id\":\"/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01\",\"vacuum-only-repro/source-wal-snapshot-id\":\"/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-01605f86-3d24-4371-81cc-9a908a426b18\"},\"managedFields\":[{\"manager\":\"kubectl-client-side-apply\",\"operation\":\"Update\",\"apiVersion\":\"postgresql.cnpg.io/v1\",\"time\":\"2026-10-06T05:14:39Z\",\"fieldsType\":\"FieldsV1\",\"fieldsV1\":{\"f:metadata\":{\"f:annotations\":{\".\":{},\"f:kubectl.kubernetes.io/last-applied-configuration\":{},\"f:vacuum-only-repro/source-data-snapshot-id\":{},\"f:vacuum-only-repro/source-wal-snapshot-id\":{}},\"f:labels\":{\".\":{},\"f:repro.stack.token\":{}}},\"f:spec\":{\".\":{},\"f:affinity\":{\".\":{},\"f:enablePodAntiAffinity\":{},\"f:podAntiAffinityType\":{},\"f:topologyKey\":{}},\"f:backup\":{\".\":{},\"f:barmanObjectStore\":{\".\":{},\"f:azureCredentials\":{\".\":{},\"f:connectionString\":{\".\":{},\"f:key\":{},\"f:name\":{}}},\"f:destinationPath\":{},\"f:serverName\":{}},\"f:target\":{},\"f:volumeSnapshot\":{\".\":{},\"f:className\":{},\"f:online\":{},\"f:onlineConfiguration\":{\".\":{},\"f:immediateCheckpoint\":{},\"f:waitForArchive\":{}},\"f:snapshotOwnerReference\":{},\"f:walClassName\":{}}},\"f:bootstrap\":{\".\":{},\"f:recovery\":{\".\":{},\"f:database\":{},\"f:owner\":{},\"f:volumeSnapshots\":{\".\":{},\"f:storage\":{},\"f:walStorage\":{}}}},\"f:enablePDB\":{},\"f:enableSuperuserAccess\":{},\"f:failoverDelay\":{},\"f:imageName\":{},\"f:instances\":{},\"f:logLevel\":{},\"f:maxSyncReplicas\":{},\"f:minSyncReplicas\":{},\"f:postgresGID\":{},\"f:postgresUID\":{},\"f:postgresql\":{\".\":{},\"f:parameters\":{\".\":{},\"f:shared_buffers\":{},\"f:track_io_timing\":{},\"f:track_wal_io_timing\":{},\"f:wal_level\":{}}},\"f:primaryUpdateMethod\":{},\"f:primaryUpdateStrategy\":{},\"f:replicationSlots\":{\".\":{},\"f:highAvailability\":{\".\":{},\"f:enabled\":{},\"f:slotPrefix\":{}},\"f:updateInterval\":{}},\"f:resources\":{\".\":{},\"f:limits\":{\".\":{},\"f:cpu\":{},\"f:memory\":{}},\"f:requests\":{\".\":{},\"f:cpu\":{},\"f:memory\":{}}},\"f:smartShutdownTimeout\":{},\"f:startDelay\":{},\"f:stopDelay\":{},\"f:storage\":{\".\":{},\"f:resizeInUseVolumes\":{},\"f:size\":{},\"f:storageClass\":{}},\"f:switchoverDelay\":{},\"f:walStorage\":{\".\":{},\"f:resizeInUseVolumes\":{},\"f:size\":{},\"f:storageClass\":{}}}}},{\"manager\":\"manager\",\"operation\":\"Update\",\"apiVersion\":\"postgresql.cnpg.io/v1\",\"time\":\"2026-10-06T06:05:46Z\",\"fieldsType\":\"FieldsV1\",\"fieldsV1\":{\"f:status\":{\".\":{},\"f:availableArchitectures\":{},\"f:certificates\":{\".\":{},\"f:clientCASecret\":{},\"f:expirations\":{\".\":{},\"f:hdd-pg-ca\":{},\"f:hdd-pg-replication\":{},\"f:hdd-pg-server\":{}},\"f:replicationTLSSecret\":{},\"f:serverAltDNSNames\":{},\"f:serverCASecret\":{},\"f:serverTLSSecret\":{}},\"f:cloudNativePGCommitHash\":{},\"f:cloudNativePGOperatorHash\":{},\"f:conditions\":{},\"f:configMapResourceVersion\":{\".\":{},\"f:metrics\":{\".\":{},\"f:cnpg-default-monitoring\":{}}},\"f:currentPrimary\":{},\"f:currentPrimaryTimestamp\":{},\"f:healthyPVC\":{},\"f:image\":{},\"f:instanceNames\":{},\"f:instances\":{},\"f:instancesReportedState\":{\".\":{},\"f:hdd-pg-1\":{\".\":{},\"f:ip\":{},\"f:isPrimary\":{},\"f:timeLineID\":{}}},\"f:instancesStatus\":{\".\":{},\"f:healthy\":{}},\"f:managedRolesStatus\":{},\"f:operatorCertificateFingerprint\":{},\"f:pgDataImageInfo\":{\".\":{},\"f:image\":{},\"f:majorVersion\":{}},\"f:phase\":{},\"f:poolerIntegrations\":{\".\":{},\"f:pgBouncerIntegration\":{}},\"f:pvcCount\":{},\"f:readService\":{},\"f:readyInstances\":{},\"f:secretsResourceVersion\":{\".\":{},\"f:applicationSecretVersion\":{},\"f:clientCaSecretVersion\":{},\"f:replicationSecretVersion\":{},\"f:serverCaSecretVersion\":{},\"f:serverSecretVersion\":{}},\"f:selector\":{},\"f:switchReplicaClusterStatus\":{},\"f:systemID\":{},\"f:targetPrimary\":{},\"f:targetPrimaryTimestamp\":{},\"f:timelineID\":{},\"f:topology\":{\".\":{},\"f:instances\":{\".\":{},\"f:hdd-pg-1\":{}},\"f:nodesUsed\":{},\"f:successfullyExtracted\":{}},\"f:writeService\":{}}},\"subresource\":\"status\"}]},\"spec\":{\"imageName\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"postgresUID\":26,\"postgresGID\":26,\"instances\":1,\"postgresql\":{\"parameters\":{\"archive_mode\":\"on\",\"archive_timeout\":\"5min\",\"dynamic_shared_memory_type\":\"posix\",\"full_page_writes\":\"on\",\"log_destination\":\"csvlog\",\"log_directory\":\"/controller/log\",\"log_filename\":\"postgres\",\"log_rotation_age\":\"0\",\"log_rotation_size\":\"0\",\"log_truncate_on_rotation\":\"false\",\"logging_collector\":\"on\",\"max_parallel_workers\":\"32\",\"max_replication_slots\":\"32\",\"max_worker_processes\":\"32\",\"shared_buffers\":\"256MB\",\"shared_memory_type\":\"mmap\",\"shared_preload_libraries\":\"\",\"ssl_max_protocol_version\":\"TLSv1.3\",\"ssl_min_protocol_version\":\"TLSv1.3\",\"track_io_timing\":\"on\",\"track_wal_io_timing\":\"on\",\"wal_keep_size\":\"512MB\",\"wal_level\":\"logical\",\"wal_log_hints\":\"on\",\"wal_receiver_timeout\":\"5s\",\"wal_sender_timeout\":\"5s\"},\"syncReplicaElectionConstraint\":{\"enabled\":false}},\"replicationSlots\":{\"highAvailability\":{\"enabled\":true,\"slotPrefix\":\"_cnpg_\"},\"updateInterval\":30,\"synchronizeReplicas\":{\"enabled\":true}},\"bootstrap\":{\"recovery\":{\"volumeSnapshots\":{\"storage\":{\"apiGroup\":\"snapshot.storage.k8s.io\",\"kind\":\"VolumeSnapshot\",\"name\":\"src-data-9daba6b6\"},\"walStorage\":{\"apiGroup\":\"snapshot.storage.k8s.io\",\"kind\":\"VolumeSnapshot\",\"name\":\"src-wal-9daba6b6\"}},\"database\":\"repro\",\"owner\":\"app\"}},\"enableSuperuserAccess\":false,\"storage\":{\"storageClass\":\"azure-standard-hdd\",\"size\":\"512Gi\",\"resizeInUseVolumes\":true},\"walStorage\":{\"storageClass\":\"azure-standard-hdd\",\"size\":\"512Gi\",\"resizeInUseVolumes\":true},\"startDelay\":3600,\"stopDelay\":1800,\"smartShutdownTimeout\":180,\"switchoverDelay\":3600,\"affinity\":{\"enablePodAntiAffinity\":true,\"topologyKey\":\"kubernetes.io/hostname\",\"podAntiAffinityType\":\"required\"},\"resources\":{\"limits\":{\"cpu\":\"2\",\"memory\":\"3Gi\"},\"requests\":{\"cpu\":\"1\",\"memory\":\"2Gi\"}},\"primaryUpdateStrategy\":\"unsupervised\",\"primaryUpdateMethod\":\"restart\",\"backup\":{\"volumeSnapshot\":{\"className\":\"seed-snapshot-9daba6b6\",\"walClassName\":\"seed-snapshot-9daba6b6\",\"snapshotOwnerReference\":\"none\",\"online\":true,\"onlineConfiguration\":{\"waitForArchive\":true,\"immediateCheckpoint\":false}},\"barmanObjectStore\":{\"azureCredentials\":{\"connectionString\":{\"name\":\"azure-barman-credentials\",\"key\":\"connection-string\"}},\"destinationPath\":\"[AZURE BLOB ENDPOINT REDACTED]/wal-9daba6b61cdb/cnpg-vacuum-only/9daba6b61cdb3b2f6eca73f2f8e15c3c/\",\"serverName\":\"hdd-pg\"},\"target\":\"prefer-standby\"},\"monitoring\":{\"disableDefaultQueries\":false,\"customQueriesConfigMap\":[{\"name\":\"cnpg-default-monitoring\",\"key\":\"queries\"}]},\"logLevel\":\"info\",\"enablePDB\":true,\"probes\":{\"liveness\":{\"isolationCheck\":{\"enabled\":true,\"requestTimeout\":1000,\"connectionTimeout\":1000}}}},\"status\":{\"instances\":1,\"readyInstances\":1,\"selector\":\"cnpg.io/cluster=hdd-pg,cnpg.io/podRole=instance\",\"instancesStatus\":{\"healthy\":[\"hdd-pg-1\"]},\"instancesReportedState\":{\"hdd-pg-1\":{\"isPrimary\":true,\"timeLineID\":1,\"ip\":\"[IP REDACTED]\"}},\"managedRolesStatus\":{},\"timelineID\":1,\"topology\":{\"instances\":{\"hdd-pg-1\":{}},\"nodesUsed\":1,\"successfullyExtracted\":true},\"currentPrimary\":\"hdd-pg-1\",\"targetPrimary\":\"hdd-pg-1\",\"pvcCount\":2,\"healthyPVC\":[\"hdd-pg-1\",\"hdd-pg-1-wal\"],\"writeService\":\"hdd-pg-rw\",\"readService\":\"hdd-pg-r\",\"phase\":\"Cluster in healthy state\",\"secretsResourceVersion\":{\"replicationSecretVersion\":\"11559\",\"applicationSecretVersion\":\"11560\",\"clientCaSecretVersion\":\"11557\",\"serverCaSecretVersion\":\"11557\",\"serverSecretVersion\":\"11558\"},\"configMapResourceVersion\":{\"metrics\":{\"cnpg-default-monitoring\":\"11584\"}},\"certificates\":{\"serverCASecret\":\"hdd-pg-ca\",\"serverTLSSecret\":\"hdd-pg-server\",\"replicationTLSSecret\":\"hdd-pg-replication\",\"clientCASecret\":\"hdd-pg-ca\",\"serverAltDNSNames\":[\"hdd-pg-rw\",\"hdd-pg-rw.repro\",\"hdd-pg-rw.repro.svc\",\"hdd-pg-rw.repro.svc.cluster.local\",\"hdd-pg-r\",\"hdd-pg-r.repro\",\"hdd-pg-r.repro.svc\",\"hdd-pg-r.repro.svc.cluster.local\",\"hdd-pg-ro\",\"hdd-pg-ro.repro\",\"hdd-pg-ro.repro.svc\",\"hdd-pg-ro.repro.svc.cluster.local\"],\"expirations\":{\"hdd-pg-ca\":\"2027-01-04 05:09:39 +0000 UTC\",\"hdd-pg-replication\":\"2027-01-04 05:09:39 +0000 UTC\",\"hdd-pg-server\":\"2027-01-04 05:09:39 +0000 UTC\"}},\"cloudNativePGCommitHash\":\"2a35abb46\",\"currentPrimaryTimestamp\":\"2026-10-06T05:15:51.396109Z\",\"targetPrimaryTimestamp\":\"2026-10-06T05:14:40.410012Z\",\"poolerIntegrations\":{\"pgBouncerIntegration\":{}},\"cloudNativePGOperatorHash\":\"6d915657dadd72f66b0cdeca4d8f357d00de769bee14d4f6ea8adb501dab80d4\",\"operatorCertificateFingerprint\":\"ba8866d36cd0cfa117721eb46e0602dea4cffd90c32da19e1f40daf0bb2566d6\",\"availableArchitectures\":[{\"goArch\":\"amd64\",\"hash\":\"6d915657dadd72f66b0cdeca4d8f357d00de769bee14d4f6ea8adb501dab80d4\"},{\"goArch\":\"arm64\",\"hash\":\"37e47ffea358929899c8fd2b54139307934492108f5a0cde76e491248145fd4d\"}],\"conditions\":[{\"type\":\"Initialized\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-06T05:14:40Z\",\"reason\":\"BootstrapCompleted\",\"message\":\"Cluster has been bootstrapped\"},{\"type\":\"ConsistentSystemID\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-06T05:15:52Z\",\"reason\":\"Unique\",\"message\":\"A single, unique system ID was found across reporting instances.\"},{\"type\":\"Ready\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-06T05:15:58Z\",\"reason\":\"ClusterIsReady\",\"message\":\"Cluster is Ready\"},{\"type\":\"ContinuousArchiving\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-06T05:20:52Z\",\"reason\":\"ContinuousArchivingSuccess\",\"message\":\"Continuous archiving is working\"},{\"type\":\"LastBackupSucceeded\",\"status\":\"False\",\"lastTransitionTime\":\"2026-10-06T06:05:46Z\",\"reason\":\"BackupStarted\",\"message\":\"New Backup starting up\"}],\"instanceNames\":[\"hdd-pg-1\"],\"image\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"pgDataImageInfo\":{\"image\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"majorVersion\":16},\"switchReplicaClusterStatus\":{},\"systemID\":\"7692518806614212629\"}}",
+            "cnpg.io/instanceName": "hdd-pg-1",
+            "cnpg.io/instanceRole": "primary",
+            "cnpg.io/nodeSerial": "1",
+            "cnpg.io/onlineBackup": "true",
+            "cnpg.io/operatorVersion": "1.30.1",
+            "cnpg.io/pgControldata": "pg_control version number:            1300\nCatalog version number:               202307071\nDatabase system identifier:           7692518806614212629\nDatabase cluster state:               in production\npg_control last modified:             Tue Oct  6 06:05:46 2026\nLatest checkpoint location:           4E/53000060\nLatest checkpoint's REDO location:    4E/53000028\nLatest checkpoint's REDO WAL file:    000000010000004E00000053\nLatest checkpoint's TimeLineID:       1\nLatest checkpoint's PrevTimeLineID:   1\nLatest checkpoint's full_page_writes: off\nLatest checkpoint's NextXID:          0:1487\nLatest checkpoint's NextOID:          24584\nLatest checkpoint's NextMultiXactId:  1\nLatest checkpoint's NextMultiOffset:  0\nLatest checkpoint's oldestXID:        722\nLatest checkpoint's oldestXID's DB:   1\nLatest checkpoint's oldestActiveXID:  1487\nLatest checkpoint's oldestMultiXid:   1\nLatest checkpoint's oldestMulti's DB: 1\nLatest checkpoint's oldestCommitTsXid:0\nLatest checkpoint's newestCommitTsXid:0\nTime of latest checkpoint:            Tue Oct  6 06:05:46 2026\nFake LSN counter for unlogged rels:   0/3E8\nMinimum recovery ending location:     0/0\nMin recovery ending loc's timeline:   0\nBackup start location:                0/0\nBackup end location:                  0/0\nEnd-of-backup record required:        no\nwal_level setting:                    logical\nwal_log_hints setting:                on\nmax_connections setting:              100\nmax_worker_processes setting:         32\nmax_wal_senders setting:              10\nmax_prepared_xacts setting:           0\nmax_locks_per_xact setting:           64\ntrack_commit_timestamp setting:       off\nMaximum data alignment:               8\nDatabase block size:                  8192\nBlocks per segment of large relation: 131072\nWAL block size:                       8192\nBytes per WAL segment:                16777216\nMaximum length of identifiers:        64\nMaximum columns in an index:          32\nMaximum size of a TOAST chunk:        1996\nSize of a large-object chunk:         2048\nDate/time type storage:               64-bit integers\nFloat8 argument passing:              by value\nData page checksum version:           0\nMock authentication nonce:            fc0d78fa47129da1a4d778a30791fbd57abeda46e4d66059d8facad444d9faa9\n",
+            "cnpg.io/pvcRole": "PG_DATA",
+            "cnpg.io/pvcStatus": "ready",
+            "cnpg.io/snapshotEndTime": "2026-10-06T06:06:04Z",
+            "cnpg.io/snapshotStartTime": "2026-10-06T06:05:52Z",
+            "pv.kubernetes.io/bind-completed": "yes",
+            "pv.kubernetes.io/bound-by-controller": "yes",
+            "role": "primary",
+            "volume.beta.kubernetes.io/storage-provisioner": "disk.csi.azure.com",
+            "volume.kubernetes.io/selected-node": "aks-nodepool1-45524177-vmss000000",
+            "volume.kubernetes.io/storage-provisioner": "disk.csi.azure.com"
+          },
+          "creationTimestamp": "2026-10-06T06:05:51Z",
+          "finalizers": [
+            "snapshot.storage.kubernetes.io/volumesnapshot-as-source-protection"
+          ],
+          "generation": 1,
+          "labels": {
+            "app.kubernetes.io/component": "database",
+            "app.kubernetes.io/instance": "hdd-pg",
+            "app.kubernetes.io/managed-by": "cloudnative-pg",
+            "app.kubernetes.io/name": "postgresql",
+            "app.kubernetes.io/version": "16",
+            "cnpg.io/backupDate": "20261006",
+            "cnpg.io/backupMonth": "202610",
+            "cnpg.io/backupName": "fpw-off-seed-9daba6b6",
+            "cnpg.io/backupTimeline": "1",
+            "cnpg.io/backupYear": "2026",
+            "cnpg.io/cluster": "hdd-pg",
+            "cnpg.io/majorVersion": "16"
+          },
+          "name": "fpw-off-seed-9daba6b6",
+          "namespace": "repro",
+          "resourceVersion": "28109",
+          "uid": "0396f821-5881-4ccd-bc9c-0d754b88a19e"
+        },
+        "spec": {
+          "source": {
+            "persistentVolumeClaimName": "hdd-pg-1"
+          },
+          "volumeSnapshotClassName": "seed-snapshot-9daba6b6"
+        },
+        "status": {
+          "boundVolumeSnapshotContentName": "snapcontent-0396f821-5881-4ccd-bc9c-0d754b88a19e",
+          "creationTime": "2026-10-06T06:05:52Z",
+          "readyToUse": true,
+          "restoreSize": "512Gi"
+        }
+      }
+    },
+    "volumeSnapshotContent": {
+      "name": "snapcontent-0396f821-5881-4ccd-bc9c-0d754b88a19e",
+      "object": {
+        "apiVersion": "snapshot.storage.k8s.io/v1",
+        "kind": "VolumeSnapshotContent",
+        "metadata": {
+          "creationTimestamp": "2026-10-06T06:05:51Z",
+          "finalizers": [
+            "snapshot.storage.kubernetes.io/volumesnapshotcontent-bound-protection"
+          ],
+          "generation": 1,
+          "name": "snapcontent-0396f821-5881-4ccd-bc9c-0d754b88a19e",
+          "resourceVersion": "28061",
+          "uid": "f3b047a4-0f30-4c3e-8cd2-dcdd21c16889"
+        },
+        "spec": {
+          "deletionPolicy": "Retain",
+          "driver": "disk.csi.azure.com",
+          "source": {
+            "volumeHandle": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/disks/pvc-a9dca03f-b331-4913-944f-c14043b83b72"
+          },
+          "sourceVolumeMode": "Filesystem",
+          "volumeSnapshotClassName": "seed-snapshot-9daba6b6",
+          "volumeSnapshotRef": {
+            "apiVersion": "snapshot.storage.k8s.io/v1",
+            "kind": "VolumeSnapshot",
+            "name": "fpw-off-seed-9daba6b6",
+            "namespace": "repro",
+            "resourceVersion": "27978",
+            "uid": "0396f821-5881-4ccd-bc9c-0d754b88a19e"
+          }
+        },
+        "status": {
+          "creationTime": 1791266752906529400,
+          "readyToUse": true,
+          "restoreSize": 549755813888,
+          "snapshotHandle": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/snapshots/snapshot-0396f821-5881-4ccd-bc9c-0d754b88a19e"
+        }
+      },
+      "snapshotHandle": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/snapshots/snapshot-0396f821-5881-4ccd-bc9c-0d754b88a19e"
+    }
+  },
+  "version": 1,
+  "wal": {
+    "azureSnapshot": {
+      "creationData": {
+        "createOption": "Copy",
+        "sourceResourceId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/disks/pvc-b31d2f04-499a-4c9a-9ef5-fb29d5c59272",
+        "sourceUniqueId": "03194f25-432b-4346-8aa0-5717f4dc1a3c"
+      },
+      "diskSizeBytes": 549755813888,
+      "diskSizeGB": 512,
+      "diskState": "Unattached",
+      "encryption": {
+        "type": "EncryptionAtRestWithPlatformKey"
+      },
+      "id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/snapshots/snapshot-8c3724c4-0d3e-481d-bfea-ec27196cb40c",
+      "incremental": true,
+      "incrementalSnapshotFamilyId": "a0fc8be8-e96a-49f2-b3d0-c606a83edd65",
+      "location": "westus3",
+      "name": "snapshot-8c3724c4-0d3e-481d-bfea-ec27196cb40c",
+      "networkAccessPolicy": "DenyAll",
+      "provisioningState": "Succeeded",
+      "publicNetworkAccess": "Disabled",
+      "resourceGroup": "rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c",
+      "sku": {
+        "name": "Standard_ZRS",
+        "tier": "Standard"
+      },
+      "snapshotAccessState": "Available",
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "fpw-off-seed-paired-replica",
+        "reprotoken": "9daba6b61cdb3b2f6eca73f2f8e15c3c",
+        "source_volume_id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/disks/pvc-b31d2f04-499a-4c9a-9ef5-fb29d5c59272"
+      },
+      "timeCreated": "2026-10-06T06:05:53.1185204+00:00",
+      "type": "Microsoft.Compute/snapshots",
+      "uniqueId": "183a4d80-2374-4b1e-bd90-c29aa372dab2"
+    },
+    "pvc": "hdd-pg-1-wal",
+    "snapshotId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/snapshots/snapshot-8c3724c4-0d3e-481d-bfea-ec27196cb40c",
+    "sourceDiskId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/disks/pvc-b31d2f04-499a-4c9a-9ef5-fb29d5c59272",
+    "uniqueId": "183a4d80-2374-4b1e-bd90-c29aa372dab2",
+    "volumeSnapshot": {
+      "name": "fpw-off-seed-9daba6b6-wal",
+      "object": {
+        "apiVersion": "snapshot.storage.k8s.io/v1",
+        "kind": "VolumeSnapshot",
+        "metadata": {
+          "annotations": {
+            "cnpg.io/backupEndTime": "2026-10-06T06:06:10Z",
+            "cnpg.io/backupEndWAL": "000000010000004E00000053",
+            "cnpg.io/backupLabelFile": "U1RBUlQgV0FMIExPQ0FUSU9OOiA0RS81MzAwMDAyOCAoZmlsZSAwMDAwMDAwMTAwMDAwMDRFMDAwMDAwNTMpCkNIRUNLUE9JTlQgTE9DQVRJT046IDRFLzUzMDAwMDYwCkJBQ0tVUCBNRVRIT0Q6IHN0cmVhbWVkCkJBQ0tVUCBGUk9NOiBwcmltYXJ5ClNUQVJUIFRJTUU6IDIwMjYtMTAtMDYgMDY6MDU6NDYgVVRDCkxBQkVMOiBmcHctb2ZmLXNlZWQtOWRhYmE2YjYKU1RBUlQgVElNRUxJTkU6IDEK",
+            "cnpg.io/backupStartTime": "2026-10-06T06:05:46Z",
+            "cnpg.io/backupStartWAL": "000000010000004E00000053",
+            "cnpg.io/clusterManifest": "{\"kind\":\"Cluster\",\"apiVersion\":\"postgresql.cnpg.io/v1\",\"metadata\":{\"name\":\"hdd-pg\",\"namespace\":\"repro\",\"uid\":\"a5eee884-5152-453d-bd56-06b998402fdf\",\"resourceVersion\":\"27948\",\"generation\":1,\"creationTimestamp\":\"2026-10-06T05:14:39Z\",\"labels\":{\"repro.stack.token\":\"9daba6b61cdb3b2f6eca73f2f8e15c3c\"},\"annotations\":{\"kubectl.kubernetes.io/last-applied-configuration\":\"{\\\"apiVersion\\\":\\\"postgresql.cnpg.io/v1\\\",\\\"kind\\\":\\\"Cluster\\\",\\\"metadata\\\":{\\\"annotations\\\":{\\\"vacuum-only-repro/source-data-snapshot-id\\\":\\\"/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01\\\",\\\"vacuum-only-repro/source-wal-snapshot-id\\\":\\\"/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-01605f86-3d24-4371-81cc-9a908a426b18\\\"},\\\"labels\\\":{\\\"repro.stack.token\\\":\\\"9daba6b61cdb3b2f6eca73f2f8e15c3c\\\"},\\\"name\\\":\\\"hdd-pg\\\",\\\"namespace\\\":\\\"repro\\\"},\\\"spec\\\":{\\\"affinity\\\":{\\\"enablePodAntiAffinity\\\":true,\\\"podAntiAffinityType\\\":\\\"required\\\",\\\"topologyKey\\\":\\\"kubernetes.io/hostname\\\"},\\\"backup\\\":{\\\"barmanObjectStore\\\":{\\\"azureCredentials\\\":{\\\"connectionString\\\":{\\\"key\\\":\\\"connection-string\\\",\\\"name\\\":\\\"azure-barman-credentials\\\"}},\\\"destinationPath\\\":\\\"[AZURE BLOB ENDPOINT REDACTED]/wal-9daba6b61cdb/cnpg-vacuum-only/9daba6b61cdb3b2f6eca73f2f8e15c3c/\\\",\\\"serverName\\\":\\\"hdd-pg\\\"},\\\"volumeSnapshot\\\":{\\\"className\\\":\\\"seed-snapshot-9daba6b6\\\",\\\"online\\\":true,\\\"onlineConfiguration\\\":{\\\"immediateCheckpoint\\\":false,\\\"waitForArchive\\\":true},\\\"walClassName\\\":\\\"seed-snapshot-9daba6b6\\\"}},\\\"bootstrap\\\":{\\\"recovery\\\":{\\\"database\\\":\\\"repro\\\",\\\"owner\\\":\\\"app\\\",\\\"volumeSnapshots\\\":{\\\"storage\\\":{\\\"apiGroup\\\":\\\"snapshot.storage.k8s.io\\\",\\\"kind\\\":\\\"VolumeSnapshot\\\",\\\"name\\\":\\\"src-data-9daba6b6\\\"},\\\"walStorage\\\":{\\\"apiGroup\\\":\\\"snapshot.storage.k8s.io\\\",\\\"kind\\\":\\\"VolumeSnapshot\\\",\\\"name\\\":\\\"src-wal-9daba6b6\\\"}}}},\\\"imageName\\\":\\\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\\\",\\\"instances\\\":1,\\\"postgresql\\\":{\\\"parameters\\\":{\\\"shared_buffers\\\":\\\"256MB\\\",\\\"track_io_timing\\\":\\\"on\\\",\\\"track_wal_io_timing\\\":\\\"on\\\",\\\"wal_level\\\":\\\"logical\\\"}},\\\"resources\\\":{\\\"limits\\\":{\\\"cpu\\\":\\\"2\\\",\\\"memory\\\":\\\"3Gi\\\"},\\\"requests\\\":{\\\"cpu\\\":\\\"1\\\",\\\"memory\\\":\\\"2Gi\\\"}},\\\"storage\\\":{\\\"size\\\":\\\"512Gi\\\",\\\"storageClass\\\":\\\"azure-standard-hdd\\\"},\\\"walStorage\\\":{\\\"size\\\":\\\"512Gi\\\",\\\"storageClass\\\":\\\"azure-standard-hdd\\\"}}}\\n\",\"vacuum-only-repro/source-data-snapshot-id\":\"/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01\",\"vacuum-only-repro/source-wal-snapshot-id\":\"/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-01605f86-3d24-4371-81cc-9a908a426b18\"},\"managedFields\":[{\"manager\":\"kubectl-client-side-apply\",\"operation\":\"Update\",\"apiVersion\":\"postgresql.cnpg.io/v1\",\"time\":\"2026-10-06T05:14:39Z\",\"fieldsType\":\"FieldsV1\",\"fieldsV1\":{\"f:metadata\":{\"f:annotations\":{\".\":{},\"f:kubectl.kubernetes.io/last-applied-configuration\":{},\"f:vacuum-only-repro/source-data-snapshot-id\":{},\"f:vacuum-only-repro/source-wal-snapshot-id\":{}},\"f:labels\":{\".\":{},\"f:repro.stack.token\":{}}},\"f:spec\":{\".\":{},\"f:affinity\":{\".\":{},\"f:enablePodAntiAffinity\":{},\"f:podAntiAffinityType\":{},\"f:topologyKey\":{}},\"f:backup\":{\".\":{},\"f:barmanObjectStore\":{\".\":{},\"f:azureCredentials\":{\".\":{},\"f:connectionString\":{\".\":{},\"f:key\":{},\"f:name\":{}}},\"f:destinationPath\":{},\"f:serverName\":{}},\"f:target\":{},\"f:volumeSnapshot\":{\".\":{},\"f:className\":{},\"f:online\":{},\"f:onlineConfiguration\":{\".\":{},\"f:immediateCheckpoint\":{},\"f:waitForArchive\":{}},\"f:snapshotOwnerReference\":{},\"f:walClassName\":{}}},\"f:bootstrap\":{\".\":{},\"f:recovery\":{\".\":{},\"f:database\":{},\"f:owner\":{},\"f:volumeSnapshots\":{\".\":{},\"f:storage\":{},\"f:walStorage\":{}}}},\"f:enablePDB\":{},\"f:enableSuperuserAccess\":{},\"f:failoverDelay\":{},\"f:imageName\":{},\"f:instances\":{},\"f:logLevel\":{},\"f:maxSyncReplicas\":{},\"f:minSyncReplicas\":{},\"f:postgresGID\":{},\"f:postgresUID\":{},\"f:postgresql\":{\".\":{},\"f:parameters\":{\".\":{},\"f:shared_buffers\":{},\"f:track_io_timing\":{},\"f:track_wal_io_timing\":{},\"f:wal_level\":{}}},\"f:primaryUpdateMethod\":{},\"f:primaryUpdateStrategy\":{},\"f:replicationSlots\":{\".\":{},\"f:highAvailability\":{\".\":{},\"f:enabled\":{},\"f:slotPrefix\":{}},\"f:updateInterval\":{}},\"f:resources\":{\".\":{},\"f:limits\":{\".\":{},\"f:cpu\":{},\"f:memory\":{}},\"f:requests\":{\".\":{},\"f:cpu\":{},\"f:memory\":{}}},\"f:smartShutdownTimeout\":{},\"f:startDelay\":{},\"f:stopDelay\":{},\"f:storage\":{\".\":{},\"f:resizeInUseVolumes\":{},\"f:size\":{},\"f:storageClass\":{}},\"f:switchoverDelay\":{},\"f:walStorage\":{\".\":{},\"f:resizeInUseVolumes\":{},\"f:size\":{},\"f:storageClass\":{}}}}},{\"manager\":\"manager\",\"operation\":\"Update\",\"apiVersion\":\"postgresql.cnpg.io/v1\",\"time\":\"2026-10-06T06:05:46Z\",\"fieldsType\":\"FieldsV1\",\"fieldsV1\":{\"f:status\":{\".\":{},\"f:availableArchitectures\":{},\"f:certificates\":{\".\":{},\"f:clientCASecret\":{},\"f:expirations\":{\".\":{},\"f:hdd-pg-ca\":{},\"f:hdd-pg-replication\":{},\"f:hdd-pg-server\":{}},\"f:replicationTLSSecret\":{},\"f:serverAltDNSNames\":{},\"f:serverCASecret\":{},\"f:serverTLSSecret\":{}},\"f:cloudNativePGCommitHash\":{},\"f:cloudNativePGOperatorHash\":{},\"f:conditions\":{},\"f:configMapResourceVersion\":{\".\":{},\"f:metrics\":{\".\":{},\"f:cnpg-default-monitoring\":{}}},\"f:currentPrimary\":{},\"f:currentPrimaryTimestamp\":{},\"f:healthyPVC\":{},\"f:image\":{},\"f:instanceNames\":{},\"f:instances\":{},\"f:instancesReportedState\":{\".\":{},\"f:hdd-pg-1\":{\".\":{},\"f:ip\":{},\"f:isPrimary\":{},\"f:timeLineID\":{}}},\"f:instancesStatus\":{\".\":{},\"f:healthy\":{}},\"f:managedRolesStatus\":{},\"f:operatorCertificateFingerprint\":{},\"f:pgDataImageInfo\":{\".\":{},\"f:image\":{},\"f:majorVersion\":{}},\"f:phase\":{},\"f:poolerIntegrations\":{\".\":{},\"f:pgBouncerIntegration\":{}},\"f:pvcCount\":{},\"f:readService\":{},\"f:readyInstances\":{},\"f:secretsResourceVersion\":{\".\":{},\"f:applicationSecretVersion\":{},\"f:clientCaSecretVersion\":{},\"f:replicationSecretVersion\":{},\"f:serverCaSecretVersion\":{},\"f:serverSecretVersion\":{}},\"f:selector\":{},\"f:switchReplicaClusterStatus\":{},\"f:systemID\":{},\"f:targetPrimary\":{},\"f:targetPrimaryTimestamp\":{},\"f:timelineID\":{},\"f:topology\":{\".\":{},\"f:instances\":{\".\":{},\"f:hdd-pg-1\":{}},\"f:nodesUsed\":{},\"f:successfullyExtracted\":{}},\"f:writeService\":{}}},\"subresource\":\"status\"}]},\"spec\":{\"imageName\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"postgresUID\":26,\"postgresGID\":26,\"instances\":1,\"postgresql\":{\"parameters\":{\"archive_mode\":\"on\",\"archive_timeout\":\"5min\",\"dynamic_shared_memory_type\":\"posix\",\"full_page_writes\":\"on\",\"log_destination\":\"csvlog\",\"log_directory\":\"/controller/log\",\"log_filename\":\"postgres\",\"log_rotation_age\":\"0\",\"log_rotation_size\":\"0\",\"log_truncate_on_rotation\":\"false\",\"logging_collector\":\"on\",\"max_parallel_workers\":\"32\",\"max_replication_slots\":\"32\",\"max_worker_processes\":\"32\",\"shared_buffers\":\"256MB\",\"shared_memory_type\":\"mmap\",\"shared_preload_libraries\":\"\",\"ssl_max_protocol_version\":\"TLSv1.3\",\"ssl_min_protocol_version\":\"TLSv1.3\",\"track_io_timing\":\"on\",\"track_wal_io_timing\":\"on\",\"wal_keep_size\":\"512MB\",\"wal_level\":\"logical\",\"wal_log_hints\":\"on\",\"wal_receiver_timeout\":\"5s\",\"wal_sender_timeout\":\"5s\"},\"syncReplicaElectionConstraint\":{\"enabled\":false}},\"replicationSlots\":{\"highAvailability\":{\"enabled\":true,\"slotPrefix\":\"_cnpg_\"},\"updateInterval\":30,\"synchronizeReplicas\":{\"enabled\":true}},\"bootstrap\":{\"recovery\":{\"volumeSnapshots\":{\"storage\":{\"apiGroup\":\"snapshot.storage.k8s.io\",\"kind\":\"VolumeSnapshot\",\"name\":\"src-data-9daba6b6\"},\"walStorage\":{\"apiGroup\":\"snapshot.storage.k8s.io\",\"kind\":\"VolumeSnapshot\",\"name\":\"src-wal-9daba6b6\"}},\"database\":\"repro\",\"owner\":\"app\"}},\"enableSuperuserAccess\":false,\"storage\":{\"storageClass\":\"azure-standard-hdd\",\"size\":\"512Gi\",\"resizeInUseVolumes\":true},\"walStorage\":{\"storageClass\":\"azure-standard-hdd\",\"size\":\"512Gi\",\"resizeInUseVolumes\":true},\"startDelay\":3600,\"stopDelay\":1800,\"smartShutdownTimeout\":180,\"switchoverDelay\":3600,\"affinity\":{\"enablePodAntiAffinity\":true,\"topologyKey\":\"kubernetes.io/hostname\",\"podAntiAffinityType\":\"required\"},\"resources\":{\"limits\":{\"cpu\":\"2\",\"memory\":\"3Gi\"},\"requests\":{\"cpu\":\"1\",\"memory\":\"2Gi\"}},\"primaryUpdateStrategy\":\"unsupervised\",\"primaryUpdateMethod\":\"restart\",\"backup\":{\"volumeSnapshot\":{\"className\":\"seed-snapshot-9daba6b6\",\"walClassName\":\"seed-snapshot-9daba6b6\",\"snapshotOwnerReference\":\"none\",\"online\":true,\"onlineConfiguration\":{\"waitForArchive\":true,\"immediateCheckpoint\":false}},\"barmanObjectStore\":{\"azureCredentials\":{\"connectionString\":{\"name\":\"azure-barman-credentials\",\"key\":\"connection-string\"}},\"destinationPath\":\"[AZURE BLOB ENDPOINT REDACTED]/wal-9daba6b61cdb/cnpg-vacuum-only/9daba6b61cdb3b2f6eca73f2f8e15c3c/\",\"serverName\":\"hdd-pg\"},\"target\":\"prefer-standby\"},\"monitoring\":{\"disableDefaultQueries\":false,\"customQueriesConfigMap\":[{\"name\":\"cnpg-default-monitoring\",\"key\":\"queries\"}]},\"logLevel\":\"info\",\"enablePDB\":true,\"probes\":{\"liveness\":{\"isolationCheck\":{\"enabled\":true,\"requestTimeout\":1000,\"connectionTimeout\":1000}}}},\"status\":{\"instances\":1,\"readyInstances\":1,\"selector\":\"cnpg.io/cluster=hdd-pg,cnpg.io/podRole=instance\",\"instancesStatus\":{\"healthy\":[\"hdd-pg-1\"]},\"instancesReportedState\":{\"hdd-pg-1\":{\"isPrimary\":true,\"timeLineID\":1,\"ip\":\"[IP REDACTED]\"}},\"managedRolesStatus\":{},\"timelineID\":1,\"topology\":{\"instances\":{\"hdd-pg-1\":{}},\"nodesUsed\":1,\"successfullyExtracted\":true},\"currentPrimary\":\"hdd-pg-1\",\"targetPrimary\":\"hdd-pg-1\",\"pvcCount\":2,\"healthyPVC\":[\"hdd-pg-1\",\"hdd-pg-1-wal\"],\"writeService\":\"hdd-pg-rw\",\"readService\":\"hdd-pg-r\",\"phase\":\"Cluster in healthy state\",\"secretsResourceVersion\":{\"replicationSecretVersion\":\"11559\",\"applicationSecretVersion\":\"11560\",\"clientCaSecretVersion\":\"11557\",\"serverCaSecretVersion\":\"11557\",\"serverSecretVersion\":\"11558\"},\"configMapResourceVersion\":{\"metrics\":{\"cnpg-default-monitoring\":\"11584\"}},\"certificates\":{\"serverCASecret\":\"hdd-pg-ca\",\"serverTLSSecret\":\"hdd-pg-server\",\"replicationTLSSecret\":\"hdd-pg-replication\",\"clientCASecret\":\"hdd-pg-ca\",\"serverAltDNSNames\":[\"hdd-pg-rw\",\"hdd-pg-rw.repro\",\"hdd-pg-rw.repro.svc\",\"hdd-pg-rw.repro.svc.cluster.local\",\"hdd-pg-r\",\"hdd-pg-r.repro\",\"hdd-pg-r.repro.svc\",\"hdd-pg-r.repro.svc.cluster.local\",\"hdd-pg-ro\",\"hdd-pg-ro.repro\",\"hdd-pg-ro.repro.svc\",\"hdd-pg-ro.repro.svc.cluster.local\"],\"expirations\":{\"hdd-pg-ca\":\"2027-01-04 05:09:39 +0000 UTC\",\"hdd-pg-replication\":\"2027-01-04 05:09:39 +0000 UTC\",\"hdd-pg-server\":\"2027-01-04 05:09:39 +0000 UTC\"}},\"cloudNativePGCommitHash\":\"2a35abb46\",\"currentPrimaryTimestamp\":\"2026-10-06T05:15:51.396109Z\",\"targetPrimaryTimestamp\":\"2026-10-06T05:14:40.410012Z\",\"poolerIntegrations\":{\"pgBouncerIntegration\":{}},\"cloudNativePGOperatorHash\":\"6d915657dadd72f66b0cdeca4d8f357d00de769bee14d4f6ea8adb501dab80d4\",\"operatorCertificateFingerprint\":\"ba8866d36cd0cfa117721eb46e0602dea4cffd90c32da19e1f40daf0bb2566d6\",\"availableArchitectures\":[{\"goArch\":\"amd64\",\"hash\":\"6d915657dadd72f66b0cdeca4d8f357d00de769bee14d4f6ea8adb501dab80d4\"},{\"goArch\":\"arm64\",\"hash\":\"37e47ffea358929899c8fd2b54139307934492108f5a0cde76e491248145fd4d\"}],\"conditions\":[{\"type\":\"Initialized\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-06T05:14:40Z\",\"reason\":\"BootstrapCompleted\",\"message\":\"Cluster has been bootstrapped\"},{\"type\":\"ConsistentSystemID\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-06T05:15:52Z\",\"reason\":\"Unique\",\"message\":\"A single, unique system ID was found across reporting instances.\"},{\"type\":\"Ready\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-06T05:15:58Z\",\"reason\":\"ClusterIsReady\",\"message\":\"Cluster is Ready\"},{\"type\":\"ContinuousArchiving\",\"status\":\"True\",\"lastTransitionTime\":\"2026-10-06T05:20:52Z\",\"reason\":\"ContinuousArchivingSuccess\",\"message\":\"Continuous archiving is working\"},{\"type\":\"LastBackupSucceeded\",\"status\":\"False\",\"lastTransitionTime\":\"2026-10-06T06:05:46Z\",\"reason\":\"BackupStarted\",\"message\":\"New Backup starting up\"}],\"instanceNames\":[\"hdd-pg-1\"],\"image\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"pgDataImageInfo\":{\"image\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"majorVersion\":16},\"switchReplicaClusterStatus\":{},\"systemID\":\"7692518806614212629\"}}",
+            "cnpg.io/instanceName": "hdd-pg-1",
+            "cnpg.io/instanceRole": "primary",
+            "cnpg.io/nodeSerial": "1",
+            "cnpg.io/onlineBackup": "true",
+            "cnpg.io/operatorVersion": "1.30.1",
+            "cnpg.io/pgControldata": "pg_control version number:            1300\nCatalog version number:               202307071\nDatabase system identifier:           7692518806614212629\nDatabase cluster state:               in production\npg_control last modified:             Tue Oct  6 06:05:46 2026\nLatest checkpoint location:           4E/53000060\nLatest checkpoint's REDO location:    4E/53000028\nLatest checkpoint's REDO WAL file:    000000010000004E00000053\nLatest checkpoint's TimeLineID:       1\nLatest checkpoint's PrevTimeLineID:   1\nLatest checkpoint's full_page_writes: off\nLatest checkpoint's NextXID:          0:1487\nLatest checkpoint's NextOID:          24584\nLatest checkpoint's NextMultiXactId:  1\nLatest checkpoint's NextMultiOffset:  0\nLatest checkpoint's oldestXID:        722\nLatest checkpoint's oldestXID's DB:   1\nLatest checkpoint's oldestActiveXID:  1487\nLatest checkpoint's oldestMultiXid:   1\nLatest checkpoint's oldestMulti's DB: 1\nLatest checkpoint's oldestCommitTsXid:0\nLatest checkpoint's newestCommitTsXid:0\nTime of latest checkpoint:            Tue Oct  6 06:05:46 2026\nFake LSN counter for unlogged rels:   0/3E8\nMinimum recovery ending location:     0/0\nMin recovery ending loc's timeline:   0\nBackup start location:                0/0\nBackup end location:                  0/0\nEnd-of-backup record required:        no\nwal_level setting:                    logical\nwal_log_hints setting:                on\nmax_connections setting:              100\nmax_worker_processes setting:         32\nmax_wal_senders setting:              10\nmax_prepared_xacts setting:           0\nmax_locks_per_xact setting:           64\ntrack_commit_timestamp setting:       off\nMaximum data alignment:               8\nDatabase block size:                  8192\nBlocks per segment of large relation: 131072\nWAL block size:                       8192\nBytes per WAL segment:                16777216\nMaximum length of identifiers:        64\nMaximum columns in an index:          32\nMaximum size of a TOAST chunk:        1996\nSize of a large-object chunk:         2048\nDate/time type storage:               64-bit integers\nFloat8 argument passing:              by value\nData page checksum version:           0\nMock authentication nonce:            fc0d78fa47129da1a4d778a30791fbd57abeda46e4d66059d8facad444d9faa9\n",
+            "cnpg.io/pvcRole": "PG_WAL",
+            "cnpg.io/pvcStatus": "ready",
+            "cnpg.io/snapshotEndTime": "2026-10-06T06:06:04Z",
+            "cnpg.io/snapshotStartTime": "2026-10-06T06:05:53Z",
+            "pv.kubernetes.io/bind-completed": "yes",
+            "pv.kubernetes.io/bound-by-controller": "yes",
+            "role": "primary",
+            "volume.beta.kubernetes.io/storage-provisioner": "disk.csi.azure.com",
+            "volume.kubernetes.io/selected-node": "aks-nodepool1-45524177-vmss000000",
+            "volume.kubernetes.io/storage-provisioner": "disk.csi.azure.com"
+          },
+          "creationTimestamp": "2026-10-06T06:05:51Z",
+          "finalizers": [
+            "snapshot.storage.kubernetes.io/volumesnapshot-as-source-protection"
+          ],
+          "generation": 1,
+          "labels": {
+            "app.kubernetes.io/component": "database",
+            "app.kubernetes.io/instance": "hdd-pg",
+            "app.kubernetes.io/managed-by": "cloudnative-pg",
+            "app.kubernetes.io/name": "postgresql",
+            "app.kubernetes.io/version": "16",
+            "cnpg.io/backupDate": "20261006",
+            "cnpg.io/backupMonth": "202610",
+            "cnpg.io/backupName": "fpw-off-seed-9daba6b6",
+            "cnpg.io/backupTimeline": "1",
+            "cnpg.io/backupYear": "2026",
+            "cnpg.io/cluster": "hdd-pg",
+            "cnpg.io/majorVersion": "16"
+          },
+          "name": "fpw-off-seed-9daba6b6-wal",
+          "namespace": "repro",
+          "resourceVersion": "28110",
+          "uid": "8c3724c4-0d3e-481d-bfea-ec27196cb40c"
+        },
+        "spec": {
+          "source": {
+            "persistentVolumeClaimName": "hdd-pg-1-wal"
+          },
+          "volumeSnapshotClassName": "seed-snapshot-9daba6b6"
+        },
+        "status": {
+          "boundVolumeSnapshotContentName": "snapcontent-8c3724c4-0d3e-481d-bfea-ec27196cb40c",
+          "creationTime": "2026-10-06T06:05:53Z",
+          "readyToUse": true,
+          "restoreSize": "512Gi"
+        }
+      }
+    },
+    "volumeSnapshotContent": {
+      "name": "snapcontent-8c3724c4-0d3e-481d-bfea-ec27196cb40c",
+      "object": {
+        "apiVersion": "snapshot.storage.k8s.io/v1",
+        "kind": "VolumeSnapshotContent",
+        "metadata": {
+          "creationTimestamp": "2026-10-06T06:05:51Z",
+          "finalizers": [
+            "snapshot.storage.kubernetes.io/volumesnapshotcontent-bound-protection"
+          ],
+          "generation": 1,
+          "name": "snapcontent-8c3724c4-0d3e-481d-bfea-ec27196cb40c",
+          "resourceVersion": "28068",
+          "uid": "6ef4d009-10a3-4077-8938-ebd5664f8e77"
+        },
+        "spec": {
+          "deletionPolicy": "Retain",
+          "driver": "disk.csi.azure.com",
+          "source": {
+            "volumeHandle": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/disks/pvc-b31d2f04-499a-4c9a-9ef5-fb29d5c59272"
+          },
+          "sourceVolumeMode": "Filesystem",
+          "volumeSnapshotClassName": "seed-snapshot-9daba6b6",
+          "volumeSnapshotRef": {
+            "apiVersion": "snapshot.storage.k8s.io/v1",
+            "kind": "VolumeSnapshot",
+            "name": "fpw-off-seed-9daba6b6-wal",
+            "namespace": "repro",
+            "resourceVersion": "27987",
+            "uid": "8c3724c4-0d3e-481d-bfea-ec27196cb40c"
+          }
+        },
+        "status": {
+          "creationTime": 1791266753118520400,
+          "readyToUse": true,
+          "restoreSize": 549755813888,
+          "snapshotHandle": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/snapshots/snapshot-8c3724c4-0d3e-481d-bfea-ec27196cb40c"
+        }
+      },
+      "snapshotHandle": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/snapshots/snapshot-8c3724c4-0d3e-481d-bfea-ec27196cb40c"
+    }
+  }
+}

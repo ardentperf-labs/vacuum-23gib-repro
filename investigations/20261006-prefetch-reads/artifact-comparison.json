@@ -1,0 +1,152 @@
+{
+  "baseline": {
+    "path": "vacuum-only-repro/experiments-20261005-five/runs/baseline/results/20261005T062051Z",
+    "sha256": {
+      "preflight.json": "9361f0c2d6e261478e22c07b52df83127739dc3acc6f38bf8bb0779661606573",
+      "summary.json": "c9e03debdc583f60d4efc83e265abfa358abe26c979396850b004fdf1c93161b",
+      "timing.json": "1a429338f061888d75b2b3aecd83909795ca6758c63b45a796d3fc3b3490ff3a",
+      "vacuum.log": "3fee1910aa5f49e4e5085a04153fc52c4e35bb64089bb66dce5433c346d8d75f"
+    },
+    "status": {
+      "error": null,
+      "replayCaughtUp": true,
+      "replayDrainSeconds": 9121.199554833,
+      "replicaLagBytesAtObservationEnd": 0,
+      "testComplete": true,
+      "vacuumComplete": true,
+      "vacuumExitCode": 0,
+      "vacuumWindowCoverageValid": true
+    },
+    "table": {
+      "deadEstimate": 7536640,
+      "heapBytes": 24696061952,
+      "liveEstimate": 7536640,
+      "oid": "24578",
+      "relfilenode": "24578",
+      "reloptions": [
+        "autovacuum_enabled=false"
+      ],
+      "tablespaceOid": "0",
+      "tablespaceOverrides": null,
+      "totalBytes": 25040748544
+    },
+    "walDelta": {
+      "walBytes": 36932319438,
+      "walFpi": 6071356,
+      "walRecords": 15115451
+    },
+    "wholeTimelineDeviceTotals": {
+      "primary_data": {
+        "meanReadBytes": 130563.73421052005,
+        "readAwaitMs": 5.691704979622282,
+        "readBytes": 49231356666.4665,
+        "readOperations": 377067.6211442161,
+        "writeBytes": 49765893508.47977
+      },
+      "primary_wal": {
+        "meanReadBytes": 109772.8,
+        "readAwaitMs": 4.2,
+        "readBytes": 1097728.0,
+        "readOperations": 10.0,
+        "writeBytes": 39319365991.15594
+      },
+      "replica_data": {
+        "meanReadBytes": 8193.951719138779,
+        "readAwaitMs": 342.63893804015106,
+        "readBytes": 48757269264.18771,
+        "readOperations": 5950397.4315963285,
+        "writeBytes": 49560363008.0
+      },
+      "replica_wal": {
+        "meanReadBytes": 127802.868869711,
+        "readAwaitMs": 5.003109216956106,
+        "readBytes": 35644096650.637314,
+        "readOperations": 278899.0338470006,
+        "writeBytes": 79907768102.87889
+      }
+    }
+  },
+  "capturedSettingDifferences": {
+    "primary": {},
+    "replica": {
+      "recovery_prefetch": {
+        "baseline": "try",
+        "prefetch_off": "off"
+      }
+    }
+  },
+  "prefetch_off": {
+    "path": "vacuum-only-repro/experiments-20261005-five/runs/prefetch-off/results/20261005T072928Z-prefetch-off",
+    "sha256": {
+      "preflight.json": "549aaaa3bba030f7f65e1b6791e5f354691cb7cca7afd56ff0782ae4ca2a6a1a",
+      "summary.json": "563dc79f11202a97130b5aaf800a50adab027a6e27348c0bf17ddf83fa9e6cf3",
+      "timing.json": "ceaacd901ffa9cb27f309dcb39b5ada526830b26a439e3b53a60f2219b3872e6",
+      "vacuum.log": "79836e805ff85001a8a8ce8118897fb0b26740148557f02583476723855dceb4"
+    },
+    "status": {
+      "artifactRecovery": "summary/graph render rerun with project venv after captured measurement completed",
+      "error": null,
+      "replayCaughtUp": true,
+      "replayDrainSeconds": 10.81511671899898,
+      "replicaLagBytesAtObservationEnd": 0,
+      "testComplete": true,
+      "vacuumComplete": true,
+      "vacuumExitCode": 0,
+      "vacuumWindowCoverageValid": true
+    },
+    "table": {
+      "deadEstimate": 7536640,
+      "heapBytes": 24696061952,
+      "liveEstimate": 7536640,
+      "oid": "24578",
+      "relfilenode": "24578",
+      "reloptions": [
+        "autovacuum_enabled=false"
+      ],
+      "tablespaceOid": "0",
+      "tablespaceOverrides": null,
+      "totalBytes": 25040748544
+    },
+    "walDelta": {
+      "walBytes": 36932318738,
+      "walFpi": 6071356,
+      "walRecords": 15115437
+    },
+    "wholeTimelineDeviceTotals": {
+      "primary_data": {
+        "meanReadBytes": 130580.26315429911,
+        "readAwaitMs": 4.956300192716937,
+        "readBytes": 49216321654.05097,
+        "readOperations": 376904.7516460807,
+        "writeBytes": 49764491030.74044
+      },
+      "primary_wal": {
+        "meanReadBytes": 107178.66666666667,
+        "readAwaitMs": 3.1666666666666665,
+        "readBytes": 643072.0,
+        "readOperations": 6.0,
+        "writeBytes": 38978120993.47555
+      },
+      "replica_data": {
+        "meanReadBytes": 42960.51539760267,
+        "readAwaitMs": 91.99737435968107,
+        "readBytes": 14434104.060949886,
+        "readOperations": 335.98535602660286,
+        "writeBytes": 49531342848.0
+      },
+      "replica_wal": {
+        "meanReadBytes": 4515.106262108005,
+        "readAwaitMs": 2.550597286867073,
+        "readBytes": 423044290.252942,
+        "readOperations": 93695.31206900807,
+        "writeBytes": 49219404365.55525
+      }
+    }
+  },
+  "twoHeapPassPrediction": {
+    "baselineReadBytesDividedByTwoPassBytes": 0.9871466422248574,
+    "heapPages": 3014656,
+    "twoPass8KiBRequests": 6029312,
+    "twoPassBytes": 49392123904
+  }
+}

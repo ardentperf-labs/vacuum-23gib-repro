@@ -1,0 +1,262 @@
+[
+  {
+    "category": "Disk Performance",
+    "displayDescription": "Bytes/sec read from disk during monitoring period, please note, this metric is in preview and is subject to change before becoming generally available",
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/disks/fio-data/providers/microsoft.insights/metricdefinitions/Composite Disk Read Bytes/sec",
+    "isDimensionRequired": false,
+    "metricAvailabilities": [
+      {
+        "retention": "P93D",
+        "timeGrain": "PT1M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT5M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT15M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT30M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT1H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT6H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT12H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "P1D"
+      }
+    ],
+    "name": {
+      "localizedValue": "Disk Read Bytes/sec(Preview)",
+      "value": "Composite Disk Read Bytes/sec"
+    },
+    "namespace": "Microsoft.Compute/disks",
+    "primaryAggregationType": "Average",
+    "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa",
+    "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/disks/fio-data",
+    "supportedAggregationTypes": [
+      "Average"
+    ],
+    "unit": "BytesPerSecond"
+  },
+  {
+    "category": "Disk Performance",
+    "displayDescription": "Number of read IOs performed on a disk during monitoring period, please note, this metric is in preview and is subject to change before becoming generally available",
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/disks/fio-data/providers/microsoft.insights/metricdefinitions/Composite Disk Read Operations/sec",
+    "isDimensionRequired": false,
+    "metricAvailabilities": [
+      {
+        "retention": "P93D",
+        "timeGrain": "PT1M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT5M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT15M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT30M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT1H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT6H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT12H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "P1D"
+      }
+    ],
+    "name": {
+      "localizedValue": "Disk Read Operations/sec(Preview)",
+      "value": "Composite Disk Read Operations/sec"
+    },
+    "namespace": "Microsoft.Compute/disks",
+    "primaryAggregationType": "Average",
+    "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa",
+    "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/disks/fio-data",
+    "supportedAggregationTypes": [
+      "Average"
+    ],
+    "unit": "CountPerSecond"
+  },
+  {
+    "category": "Disk Performance",
+    "displayDescription": "Bytes/sec written to disk during monitoring period, please note, this metric is in preview and is subject to change before becoming generally available",
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/disks/fio-data/providers/microsoft.insights/metricdefinitions/Composite Disk Write Bytes/sec",
+    "isDimensionRequired": false,
+    "metricAvailabilities": [
+      {
+        "retention": "P93D",
+        "timeGrain": "PT1M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT5M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT15M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT30M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT1H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT6H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT12H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "P1D"
+      }
+    ],
+    "name": {
+      "localizedValue": "Disk Write Bytes/sec(Preview)",
+      "value": "Composite Disk Write Bytes/sec"
+    },
+    "namespace": "Microsoft.Compute/disks",
+    "primaryAggregationType": "Average",
+    "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa",
+    "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/disks/fio-data",
+    "supportedAggregationTypes": [
+      "Average"
+    ],
+    "unit": "BytesPerSecond"
+  },
+  {
+    "category": "Disk Performance",
+    "displayDescription": "Number of Write IOs performed on a disk during monitoring period, please note, this metric is in preview and is subject to change before becoming generally available",
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/disks/fio-data/providers/microsoft.insights/metricdefinitions/Composite Disk Write Operations/sec",
+    "isDimensionRequired": false,
+    "metricAvailabilities": [
+      {
+        "retention": "P93D",
+        "timeGrain": "PT1M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT5M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT15M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT30M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT1H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT6H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT12H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "P1D"
+      }
+    ],
+    "name": {
+      "localizedValue": "Disk Write Operations/sec(Preview)",
+      "value": "Composite Disk Write Operations/sec"
+    },
+    "namespace": "Microsoft.Compute/disks",
+    "primaryAggregationType": "Average",
+    "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa",
+    "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/disks/fio-data",
+    "supportedAggregationTypes": [
+      "Average"
+    ],
+    "unit": "CountPerSecond"
+  },
+  {
+    "category": "Disk Performance",
+    "displayDescription": "The accumulated operations of burst transactions used for disks with on-demand burst enabled. Emitted on an hour interval",
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/disks/fio-data/providers/microsoft.insights/metricdefinitions/DiskPaidBurstIOPS",
+    "isDimensionRequired": false,
+    "metricAvailabilities": [
+      {
+        "retention": "P93D",
+        "timeGrain": "PT1M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT5M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT15M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT30M"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT1H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT6H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "PT12H"
+      },
+      {
+        "retention": "P93D",
+        "timeGrain": "P1D"
+      }
+    ],
+    "name": {
+      "localizedValue": "Disk On-demand Burst Operations(Preview)",
+      "value": "DiskPaidBurstIOPS"
+    },
+    "namespace": "Microsoft.Compute/disks",
+    "primaryAggregationType": "Average",
+    "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa",
+    "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/disks/fio-data",
+    "supportedAggregationTypes": [
+      "Average"
+    ],
+    "unit": "Count"
+  }
+]

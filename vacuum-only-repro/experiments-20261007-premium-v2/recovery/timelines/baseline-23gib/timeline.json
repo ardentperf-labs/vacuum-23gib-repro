@@ -1,0 +1,1262 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-10-07T12:42:02.089134+00:00",
+  "stack": "baseline-23gib",
+  "events": [
+    {
+      "id": "historical-prepared-keeper-created",
+      "title": "Historical fixture creation timestamp inherited from source metadata",
+      "timeUtc": "2026-10-04T14:10:10.0747777+00:00",
+      "timePrecision": "inherited-source-metadata-timestamp",
+      "details": "The inherited createdAtUtc field accompanies originalKeeperSnapshotId=azhr-keep-amplification-prepared-05d212886d and snapshotId=azhr-keep-scsi-prepared-7a297601434285b1. It is not an independently verified ARM creation time for the selected later keeper/copy. The historical source topology is combined PGDATA/pg_wal; prepared live/dead tuple counts are inherited estimates. The allowlisted source manifest and saved source-snapshot provenance record the intermediate copy lineage used by this run.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/preflight.json",
+          "sha256": "11be8c33ecc819fc47da93a067f1dc7bc9298bd026df997a459c3cb8fa2a6ea5"
+        },
+        {
+          "path": "baseline-23gib/.state/source-snapshot.json",
+          "sha256": "08cb6f0b4c58403e555e6a94f45ea785d6731b8fc1e606f4d53a463d73a5bdf4"
+        },
+        {
+          "path": "baseline-23gib/source-manifest.json",
+          "sha256": "939861f7eae1ec48978ff21cd31b9aaab07045302832aae53a3b24afa4c07560"
+        }
+      ]
+    },
+    {
+      "id": "retained-source-snapshot",
+      "title": "Allowlisted prepared source snapshot created",
+      "timeUtc": "2026-10-05T05:34:50.754499+00:00",
+      "timePrecision": "ARM-resource-creation-time",
+      "details": "Existing source snapshot keeper-base-16244c2c; its identity is selected by the pinned source manifest. The local source metadata records a keeper \u2192 staging disk \u2192 regional incremental snapshot lineage; historical fixture properties are inherited from that chain, not direct measurements of this stack.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/source-snapshot.json",
+          "sha256": "08cb6f0b4c58403e555e6a94f45ea785d6731b8fc1e606f4d53a463d73a5bdf4"
+        },
+        {
+          "path": "baseline-23gib/source-manifest.json",
+          "sha256": "939861f7eae1ec48978ff21cd31b9aaab07045302832aae53a3b24afa4c07560"
+        }
+      ]
+    },
+    {
+      "id": "provision-launch",
+      "title": "Provisioning process launched",
+      "timeUtc": "2026-10-06T15:36:09.009922+00:00",
+      "timePrecision": "exact-process-receipt",
+      "details": "This is the local provisioning-launch timestamp. See the captured provision log for its terminal result; resource creation timestamps below are independent Kubernetes evidence.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/provision-launch.json",
+          "sha256": "5929fc224ffb3870a2f7ea246e7ff88b40c5517452e167fe199137b8c89f88fb"
+        },
+        {
+          "path": "baseline-23gib/01-provision.sh",
+          "sha256": "dd031ccccb37512fbd5353287b9fa843a7e0d794fe4716b1fd881534873106b4"
+        },
+        {
+          "path": "baseline-23gib/provision.log",
+          "sha256": "32045cc904a461150af390b31440ea942d70ac404c1bdb9d73e5ca154d21cfe4"
+        }
+      ]
+    },
+    {
+      "id": "provision-verified",
+      "title": "Provisioning verified",
+      "timeUtc": "2026-10-06T15:51:38.017105+00:00",
+      "timePrecision": "exact-local-verification-receipt",
+      "details": "Local provisioning verification receipt.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/provision-verified.json",
+          "sha256": "9d441a4a2ed6659d94d80bb2c26acf8f144617b474e7eb91fe65b3b4408d9be4"
+        }
+      ]
+    },
+    {
+      "id": "fixture-dml-window",
+      "title": "Fixture INSERT/index/DELETE/CHECKPOINT phase",
+      "timeUtc": "2026-10-06T15:51:38.037452+00:00",
+      "timePrecision": "bounded-by-process-and-backup",
+      "details": "Frozen 02 control flow places INSERT, index build, DELETE, and CHECKPOINT before Backup creation. Exact SQL statement timestamps/output are absent from this stack's raw capture.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/attempts/prepare-1/prepare-process.json",
+          "sha256": "a49f3d63afdddb9a6a1827364361895bae052f06b22f94ad1363d2adac97879b"
+        },
+        {
+          "path": "baseline-23gib/.state/attempts/prepare-1/02-prepare.sh",
+          "sha256": "1d07e1b2020677465621df54ca122e61d2b2473b0beb4ba8f9ade4adb4bc7c00"
+        }
+      ],
+      "endUtc": "2026-10-06T18:08:37Z"
+    },
+    {
+      "id": "prepare-attempt-1-2a08572f",
+      "title": "Preparation attempt 1: failed (exit 1); ERROR: CNPG output snapshot ownership/performance metadata failed.",
+      "timeUtc": "2026-10-06T15:51:38.037452+00:00",
+      "timePrecision": "process-receipt-interval",
+      "details": "Supervisor receipt gives the exact process start/finish bounds; internal SQL statement times are not logged.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/attempts/prepare-1/prepare-process.json",
+          "sha256": "a49f3d63afdddb9a6a1827364361895bae052f06b22f94ad1363d2adac97879b"
+        },
+        {
+          "path": "baseline-23gib/.state/attempts/prepare-1/prepare.log",
+          "sha256": "a2ee8727f8aa215de9d90355a412943b96bcfc4c34bcfdb7c9b7a746e07078d0"
+        },
+        {
+          "path": "baseline-23gib/.state/attempts/prepare-1/02-prepare.sh",
+          "sha256": "1d07e1b2020677465621df54ca122e61d2b2473b0beb4ba8f9ade4adb4bc7c00"
+        }
+      ],
+      "endUtc": "2026-10-06T19:03:31.884887+00:00"
+    },
+    {
+      "id": "restore-copy-snapshot-created",
+      "title": "Owned restore-copy snapshot created",
+      "timeUtc": "2026-10-06T15:51:46.3738268+00:00",
+      "timePrecision": "ARM-resource-creation-time",
+      "details": "Restore copy keeper-pv2-4b116309; no Standard staging disk was recorded for the baseline stack.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/keeper-copy-arm.json",
+          "sha256": "0540bfacdc6abd32714da89ae663d1da2d8e4dfc7df5883eda36e34dd24a2820"
+        },
+        {
+          "path": "baseline-23gib/.state/prepare.json",
+          "sha256": "ca936312f9d0b7132c50a97bb91cacfd95fdc5f653e378c50e69a7f51bfc2702"
+        }
+      ]
+    },
+    {
+      "id": "resource-created-cluster",
+      "title": "Initial Cluster resource created",
+      "timeUtc": "2026-10-06T16:29:33Z",
+      "timePrecision": "exact-kubernetes-creation-timestamp",
+      "details": "Resource hdd-pg creation timestamp from the preserved Kubernetes object capture.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/cluster.json",
+          "sha256": "8c07bfca69f7f7ceda83e7bf73036f591c55e2733f17d0b4c44c955e764db339"
+        }
+      ]
+    },
+    {
+      "id": "resource-created-primary-data-pvc",
+      "title": "Initial primary DATA PVC resource created",
+      "timeUtc": "2026-10-06T16:29:33Z",
+      "timePrecision": "exact-kubernetes-creation-timestamp",
+      "details": "Resource hdd-pg-1 creation timestamp from the preserved Kubernetes object capture.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/pvc.json",
+          "sha256": "691cced76dd0b6e9b14c9b4f874d13ffafb86f8e95beacc8ce9cf4df0bab8a56"
+        }
+      ]
+    },
+    {
+      "id": "separate-wal-pvc-created",
+      "title": "Separate primary WAL PVC created",
+      "timeUtc": "2026-10-06T17:30:02Z",
+      "timePrecision": "exact-kubernetes-creation-timestamp",
+      "details": "The WAL claim has its own creation time and is separate from the prepared DATA claim.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/pvc.json",
+          "sha256": "691cced76dd0b6e9b14c9b4f874d13ffafb86f8e95beacc8ce9cf4df0bab8a56"
+        }
+      ]
+    },
+    {
+      "id": "primary-pod-created",
+      "title": "Primary PostgreSQL pod created",
+      "timeUtc": "2026-10-06T17:59:07Z",
+      "timePrecision": "exact-kubernetes-creation-timestamp",
+      "details": "Primary pod UID dc226657-0894-40a9-afa2-f63627631c67 in the preserved K8s capture. Later WAL-migration restarts are listed separately where captured.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/pods.json",
+          "sha256": "3f9993cab076522958ea1c4c59bd7b8c04e0154a2b901a0cd6989cbf7bf5f45b"
+        }
+      ]
+    },
+    {
+      "id": "paired-backup",
+      "title": "CNPG online paired DATA/WAL Backup started and completed",
+      "timeUtc": "2026-10-06T18:08:37Z",
+      "timePrecision": "exact-CNPG-status-time",
+      "details": "Backup vacuum-backup-4b116309; started 2026-10-06T18:08:37Z; completed 2026-10-06T19:03:21Z. Backup WAL range 4E/50000028\u20134E/50000138 (segments 000000010000004E00000050\u2013000000010000004E00000050).",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/backup.json",
+          "sha256": "9401846ba633c5b018b828b175651ebbfd6d99a5d164139880de83ee454220a9"
+        },
+        {
+          "path": "baseline-23gib/.state/recovery/volumesnapshot.json",
+          "sha256": "a21face6be028e9fd8f74bdf29fd817a35ba96cbc90b4c217c127ed11a908bf7"
+        },
+        {
+          "path": "baseline-23gib/.state/attempts/prepare-1/prepare-process.json",
+          "sha256": "a49f3d63afdddb9a6a1827364361895bae052f06b22f94ad1363d2adac97879b"
+        }
+      ],
+      "endUtc": "2026-10-06T19:03:21Z"
+    },
+    {
+      "id": "backup-vss-vacuum-backup-4b116309",
+      "title": "Paired Backup VolumeSnapshot created: vacuum-backup-4b116309",
+      "timeUtc": "2026-10-06T18:08:47Z",
+      "timePrecision": "exact-kubernetes-resource-timestamp",
+      "details": "VSS UID 53ea286c-28a7-4225-b58f-ddd91ed93f57; this timestamp is creation evidence. Later readiness is reported separately only where a SnapshotReady event was retained.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/volumesnapshot.json",
+          "sha256": "a21face6be028e9fd8f74bdf29fd817a35ba96cbc90b4c217c127ed11a908bf7"
+        }
+      ]
+    },
+    {
+      "id": "backup-vss-vacuum-backup-4b116309-wal",
+      "title": "Paired Backup VolumeSnapshot created: vacuum-backup-4b116309-wal",
+      "timeUtc": "2026-10-06T18:08:47Z",
+      "timePrecision": "exact-kubernetes-resource-timestamp",
+      "details": "VSS UID caf74210-9ce8-4f42-8c47-9ee8076a0201; this timestamp is creation evidence. Later readiness is reported separately only where a SnapshotReady event was retained.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/volumesnapshot.json",
+          "sha256": "a21face6be028e9fd8f74bdf29fd817a35ba96cbc90b4c217c127ed11a908bf7"
+        }
+      ]
+    },
+    {
+      "id": "backup-arm-snapshot-created-data",
+      "title": "Azure paired Backup DATA snapshot resource created: snapshot-53ea286c-28a7-4225-b58f-ddd91ed93f57",
+      "timeUtc": "2026-10-06T18:08:48.204739+00:00",
+      "timePrecision": "exact-ARM-resource-creation-time",
+      "details": "ARM snapshot uniqueId 1f377a1d-93eb-411b-8c91-e73955201414; linked through the prepared DATA Backup snapshot name and VSS UID 53ea286c-28a7-4225-b58f-ddd91ed93f57. This is the Azure resource creation timestamp, not copy completion or CSI SnapshotReady time.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/backup.json",
+          "sha256": "9401846ba633c5b018b828b175651ebbfd6d99a5d164139880de83ee454220a9"
+        },
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-finalize-audit.json",
+          "sha256": "758af7cd4804ce809bd7d81d3a4d41294eb7bc79bc46f5631039d573fe3c8b8e"
+        },
+        {
+          "path": "baseline-23gib/.state/prepare.json",
+          "sha256": "ca936312f9d0b7132c50a97bb91cacfd95fdc5f653e378c50e69a7f51bfc2702"
+        },
+        {
+          "path": "baseline-23gib/.state/recovery/volumesnapshot.json",
+          "sha256": "a21face6be028e9fd8f74bdf29fd817a35ba96cbc90b4c217c127ed11a908bf7"
+        },
+        {
+          "path": "baseline-23gib/.state/recovery/snapshot-53ea286c-28a7-4225-b58f-ddd91ed93f57.json",
+          "sha256": "14a4433013ea8a03a9fa81636abe31fe786a01a23b5084ebebbc4bc9cbcacd1f"
+        },
+        {
+          "path": "baseline-23gib/.state/recovery/volumesnapshotcontent.json",
+          "sha256": "fbcc27b24fccdcd333407edfa991e1ad32140acdfae10b31441034a60eae015f"
+        }
+      ]
+    },
+    {
+      "id": "backup-arm-snapshot-created-wal",
+      "title": "Azure paired Backup WAL snapshot resource created: snapshot-caf74210-9ce8-4f42-8c47-9ee8076a0201",
+      "timeUtc": "2026-10-06T18:08:48.6070195+00:00",
+      "timePrecision": "exact-ARM-resource-creation-time",
+      "details": "ARM snapshot uniqueId 65caa339-28ed-4173-b9eb-804eac40aa49; linked through the prepared WAL Backup snapshot name and VSS UID caf74210-9ce8-4f42-8c47-9ee8076a0201. This is the Azure resource creation timestamp, not copy completion or CSI SnapshotReady time.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/backup.json",
+          "sha256": "9401846ba633c5b018b828b175651ebbfd6d99a5d164139880de83ee454220a9"
+        },
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-finalize-audit.json",
+          "sha256": "758af7cd4804ce809bd7d81d3a4d41294eb7bc79bc46f5631039d573fe3c8b8e"
+        },
+        {
+          "path": "baseline-23gib/.state/prepare.json",
+          "sha256": "ca936312f9d0b7132c50a97bb91cacfd95fdc5f653e378c50e69a7f51bfc2702"
+        },
+        {
+          "path": "baseline-23gib/.state/recovery/volumesnapshot.json",
+          "sha256": "a21face6be028e9fd8f74bdf29fd817a35ba96cbc90b4c217c127ed11a908bf7"
+        },
+        {
+          "path": "baseline-23gib/.state/recovery/snapshot-caf74210-9ce8-4f42-8c47-9ee8076a0201.json",
+          "sha256": "d64ac2736661bd1a7d48ca1dce65425771cdd2d89e4440cc310981252786ebeb"
+        },
+        {
+          "path": "baseline-23gib/.state/recovery/volumesnapshotcontent.json",
+          "sha256": "fbcc27b24fccdcd333407edfa991e1ad32140acdfae10b31441034a60eae015f"
+        }
+      ]
+    },
+    {
+      "id": "prepare-attempt-2-4fb3bff8",
+      "title": "Preparation attempt 2: failed (exit 1); ERROR: hdd-pg-2 Premium SSD v2 disk SKU, performance, zone, sector, or hydration check failed.",
+      "timeUtc": "2026-10-06T20:37:27.064542+00:00",
+      "timePrecision": "process-receipt-interval",
+      "details": "Supervisor receipt gives the exact process start/finish bounds; internal SQL statement times are not logged.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/attempts/prepare-2/prepare-process.json",
+          "sha256": "60c64044983240f5bbcec04df6dd6b654d8b652fd47bd5f4e694cb57f317902f"
+        },
+        {
+          "path": "baseline-23gib/.state/attempts/prepare-2/prepare.log",
+          "sha256": "703634ca459b0e3e7cb212ed0ada3266c40e81e1a188c5df156989de220729c4"
+        },
+        {
+          "path": "baseline-23gib/.state/attempts/prepare-2/02-prepare.sh",
+          "sha256": "65950bfeb577f0eaa6d9f6b8111f6295175ee1ef8229865e318603355976811a"
+        }
+      ],
+      "endUtc": "2026-10-06T20:48:22.508213+00:00"
+    },
+    {
+      "id": "replica-pvcs-created",
+      "title": "Replica DATA and WAL PVCs created",
+      "timeUtc": "2026-10-06T20:37:40Z",
+      "timePrecision": "exact-kubernetes-creation-timestamp",
+      "details": "Both replica PVC creation timestamps are pinned in the finalizer audit.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-finalize-audit.json",
+          "sha256": "758af7cd4804ce809bd7d81d3a4d41294eb7bc79bc46f5631039d573fe3c8b8e"
+        },
+        {
+          "path": "baseline-23gib/.state/recovery/pods.json",
+          "sha256": "3f9993cab076522958ea1c4c59bd7b8c04e0154a2b901a0cd6989cbf7bf5f45b"
+        }
+      ]
+    },
+    {
+      "id": "replica-seed-completed",
+      "title": "Snapshot recovery seed Job Completed event",
+      "timeUtc": "2026-10-06T20:46:43Z",
+      "timePrecision": "exact-kubernetes-event-timestamp",
+      "details": "Job UID b221c328-954a-4699-8424-bf177e8b9400; completion is anchored to the Completed event rather than current-object existence after garbage collection.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-finalize-audit.json",
+          "sha256": "758af7cd4804ce809bd7d81d3a4d41294eb7bc79bc46f5631039d573fe3c8b8e"
+        },
+        {
+          "path": "baseline-23gib/.state/recovery/pods.json",
+          "sha256": "3f9993cab076522958ea1c4c59bd7b8c04e0154a2b901a0cd6989cbf7bf5f45b"
+        }
+      ]
+    },
+    {
+      "id": "replica-pod-created",
+      "title": "Replica PostgreSQL pod created",
+      "timeUtc": "2026-10-06T20:47:09Z",
+      "timePrecision": "exact-kubernetes-creation-timestamp",
+      "details": "Replica pod creation follows the pinned Job completion event in the finalizer audit.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-finalize-audit.json",
+          "sha256": "758af7cd4804ce809bd7d81d3a4d41294eb7bc79bc46f5631039d573fe3c8b8e"
+        },
+        {
+          "path": "baseline-23gib/.state/recovery/pods.json",
+          "sha256": "3f9993cab076522958ea1c4c59bd7b8c04e0154a2b901a0cd6989cbf7bf5f45b"
+        }
+      ]
+    },
+    {
+      "id": "measured-disk-copy-progress-2026-10-06T20:49:33Z",
+      "title": "Measured DATA/WAL copy progress observed",
+      "timeUtc": "2026-10-06T20:49:33Z",
+      "timePrecision": "first-observed-copy-progress",
+      "details": "DATA=0.0%; WAL=96.0%. Progress was observed at this poll; it does not identify the exact transition instant.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-watch/copy-progress-20261006T204933Z.json",
+          "sha256": "18d4aa5ec17a54374dda889fdb6c7394e5a93e9e7f4bb647f9249ed6cbad50b7"
+        }
+      ]
+    },
+    {
+      "id": "measured-disk-copy-progress-2026-10-06T20:51:44Z",
+      "title": "Measured DATA/WAL copy progress observed",
+      "timeUtc": "2026-10-06T20:51:44Z",
+      "timePrecision": "first-observed-copy-progress",
+      "details": "DATA=12.0%; WAL=100.0%. Progress was observed at this poll; it does not identify the exact transition instant.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-watch/copy-progress-20261006T205144Z.json",
+          "sha256": "9340fcd482e3b001a755da2804a1cc0bcfa451c1be754a8f1f5754975165a584"
+        }
+      ]
+    },
+    {
+      "id": "measured-disk-copy-progress-2026-10-06T20:56:08Z",
+      "title": "Measured DATA/WAL copy progress observed",
+      "timeUtc": "2026-10-06T20:56:08Z",
+      "timePrecision": "first-observed-copy-progress",
+      "details": "DATA=12.0%; WAL=100.0%. Progress was observed at this poll; it does not identify the exact transition instant.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-watch/copy-progress-20261006T205608Z.json",
+          "sha256": "081a48a1fc4be3f5e4da7c68129fa30f37460505181336ccf201b6244a8cbb36"
+        }
+      ]
+    },
+    {
+      "id": "measured-disk-copy-progress-2026-10-06T20:59:21Z",
+      "title": "Measured DATA/WAL copy progress observed",
+      "timeUtc": "2026-10-06T20:59:21Z",
+      "timePrecision": "first-observed-copy-progress",
+      "details": "DATA=12.0%; WAL=100.0%. Progress was observed at this poll; it does not identify the exact transition instant.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-watch/copy-progress-20261006T205921Z.json",
+          "sha256": "eadb393b7fd483478cce8274077bcf747676dba9084880c6ee871c6087f4ced7"
+        }
+      ]
+    },
+    {
+      "id": "measured-disk-copy-progress-2026-10-06T21:01:28Z",
+      "title": "Measured DATA/WAL copy progress observed",
+      "timeUtc": "2026-10-06T21:01:28Z",
+      "timePrecision": "first-observed-copy-progress",
+      "details": "DATA=12.0%; WAL=100.0%. Progress was observed at this poll; it does not identify the exact transition instant.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-watch/copy-progress-20261006T210128Z.json",
+          "sha256": "e0631d250547dc6be98cd288f260d388f13730a8561126ce82106ed42a8407b6"
+        }
+      ]
+    },
+    {
+      "id": "measured-disk-copy-progress-2026-10-06T21:03:33Z",
+      "title": "Measured DATA/WAL copy progress observed",
+      "timeUtc": "2026-10-06T21:03:33Z",
+      "timePrecision": "first-observed-copy-progress",
+      "details": "DATA=30.0%; WAL=100.0%. Progress was observed at this poll; it does not identify the exact transition instant.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-watch/copy-progress-20261006T210333Z.json",
+          "sha256": "f56a06d0fa04d43502f57247965f0bd7464a550d4f009d8dacb520afe5be8dca"
+        }
+      ]
+    },
+    {
+      "id": "prepare-attempt-current-e89d78be",
+      "title": "Preparation attempt current: complete (exit 0)",
+      "timeUtc": "2026-10-06T21:07:20.418922+00:00",
+      "timePrecision": "process-receipt-interval",
+      "details": "Supervisor receipt gives the exact process start/finish bounds; internal SQL statement times are not logged.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/prepare-process.json",
+          "sha256": "5325c2d0e5fb39564b51fbf8fb1955a7f54e0f767ef5f70ec6cc3bd4319e1c0a"
+        }
+      ],
+      "endUtc": "2026-10-06T21:24:21.103669+00:00"
+    },
+    {
+      "id": "measured-disk-copy-progress-2026-10-06T21:09:37Z",
+      "title": "Measured DATA/WAL copy progress observed",
+      "timeUtc": "2026-10-06T21:09:37Z",
+      "timePrecision": "first-observed-copy-progress",
+      "details": "DATA=30.0%; WAL=100.0%. Progress was observed at this poll; it does not identify the exact transition instant.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-watch/copy-progress-20261006T210937Z.json",
+          "sha256": "5c339ddf6144eb9563a0e27aee8407606a322bbd7de6421ac9d7c74ec5745d7b"
+        }
+      ]
+    },
+    {
+      "id": "measured-disk-copy-progress-2026-10-06T21:12:45Z",
+      "title": "Measured DATA/WAL copy progress observed",
+      "timeUtc": "2026-10-06T21:12:45Z",
+      "timePrecision": "first-observed-copy-progress",
+      "details": "DATA=59.0%; WAL=100.0%. Progress was observed at this poll; it does not identify the exact transition instant.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-watch/copy-progress-20261006T211245Z.json",
+          "sha256": "0bd0d703b89c421c36a763a9e35c1a6be3e764e896c7fe6fbcc3b89e443860d8"
+        }
+      ]
+    },
+    {
+      "id": "measured-disk-copy-progress-2026-10-06T21:17:51Z",
+      "title": "Measured DATA/WAL copy progress observed",
+      "timeUtc": "2026-10-06T21:17:51Z",
+      "timePrecision": "first-observed-copy-progress",
+      "details": "DATA=59.0%; WAL=100.0%. Progress was observed at this poll; it does not identify the exact transition instant.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-watch/copy-progress-20261006T211751Z.json",
+          "sha256": "e6d88df2f78ec45543bf50a17afcf0b66c5d4e8460f9bac6ace25d77583faf5b"
+        }
+      ]
+    },
+    {
+      "id": "measured-disk-copy-progress-2026-10-06T21:18:57Z",
+      "title": "Measured DATA/WAL copy progress observed",
+      "timeUtc": "2026-10-06T21:18:57Z",
+      "timePrecision": "first-observed-copy-progress",
+      "details": "DATA=82.0%; WAL=100.0%. Progress was observed at this poll; it does not identify the exact transition instant.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-watch/copy-progress-20261006T211857Z.json",
+          "sha256": "0e792ff5da43e163200a46462a20c3c2bfaea15bb0f2dddd85d7c594815eb881"
+        }
+      ]
+    },
+    {
+      "id": "measured-disk-copy-progress-2026-10-06T21:22:00Z",
+      "title": "Measured DATA/WAL copy progress observed",
+      "timeUtc": "2026-10-06T21:22:00Z",
+      "timePrecision": "first-observed-copy-progress",
+      "details": "DATA=95.0%; WAL=100.0%. Progress was observed at this poll; it does not identify the exact transition instant.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-watch/copy-progress-20261006T212200Z.json",
+          "sha256": "b0061f97b1b161b15ad37408c39d68f1401c25bf353f6d854aff8360a98f7ed5"
+        }
+      ]
+    },
+    {
+      "id": "preparation-finalized",
+      "title": "Preparation finalizer exit 0; four separate DATA/WAL disks gated",
+      "timeUtc": "2026-10-06T21:24:21.103669+00:00",
+      "timePrecision": "exact-finalizer-receipt-time",
+      "details": "All four measured PremiumV2 disks passed numeric hydration checks and replica catch-up; audit verifiedAtUtc=2026-10-06T21:24:21Z.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-finalize-audit.json",
+          "sha256": "758af7cd4804ce809bd7d81d3a4d41294eb7bc79bc46f5631039d573fe3c8b8e"
+        },
+        {
+          "path": "baseline-23gib/.state/prepare.json",
+          "sha256": "ca936312f9d0b7132c50a97bb91cacfd95fdc5f653e378c50e69a7f51bfc2702"
+        }
+      ]
+    },
+    {
+      "id": "hydrated-four-disk-inventory",
+      "title": "Finalizer's four-disk hydration inventory",
+      "timeUtc": "2026-10-06T21:24:21Z",
+      "timePrecision": "first-complete-audit-observation",
+      "details": "Disk inventory at finalizer verification: pvc-4a55da2c-5dbc-42be-bdcd-e5f4d6352742 Copy 100.0%; pvc-9c7f12e9-c595-4e56-bbaa-7fc9dcbf7460 Empty None%; pvc-1b8dc8b3-93f5-40a2-8f17-d99854e6a82a Copy 100.0%; pvc-4928871f-3702-4af2-86fe-0a6d5a211e39 Copy 100.0%. Empty disks correctly have null copy progress. This records the first retained complete audit, not exact Azure hydration transition times.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-finalize-audit.json",
+          "sha256": "758af7cd4804ce809bd7d81d3a4d41294eb7bc79bc46f5631039d573fe3c8b8e"
+        }
+      ]
+    },
+    {
+      "id": "premiumv2-hydration-100",
+      "title": "Measured PremiumV2 disk copies verified at 100%",
+      "timeUtc": "2026-10-06T21:24:21Z",
+      "timePrecision": "first-complete-audit-observation",
+      "details": "The audit confirms every measured DATA Copy disk at 100%, DATA Empty disk with null progress, and every WAL/replica disk at 100% where copied. Exact underlying transition time is not recorded.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-finalize-audit.json",
+          "sha256": "758af7cd4804ce809bd7d81d3a4d41294eb7bc79bc46f5631039d573fe3c8b8e"
+        }
+      ]
+    },
+    {
+      "id": "measured-disk-copy-progress-2026-10-06T21:25:04Z",
+      "title": "Measured DATA/WAL copy progress observed",
+      "timeUtc": "2026-10-06T21:25:04Z",
+      "timePrecision": "first-observed-copy-progress",
+      "details": "DATA=100.0%; WAL=100.0%. Progress was observed at this poll; it does not identify the exact transition instant.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/recovery/baseline-watch/copy-progress-20261006T212504Z.json",
+          "sha256": "946f62fd0f4ad7067ee13952b10ac1bfd56804946d4a5eb9e7daf01b725c174e"
+        }
+      ]
+    },
+    {
+      "id": "wal-export-1",
+      "title": "Required paired-Backup WAL/history archive exported and verified locally",
+      "timeUtc": "2026-10-06T23:18:26.146529+00:00",
+      "timePrecision": "exact-export-receipt-time",
+      "details": "Private local export receipt records selected object bytes and hashes; no credential values or WAL contents are included in this timeline.",
+      "evidence": [
+        {
+          "path": "recovery/backup-retention-review/exports/baseline-23gib/vacuum-backup-4b116309/receipt.json",
+          "sha256": "31ab1df24af285d856451dbcc8f4949d9e0c46baadd23ee33622a9b2f0c4d8be"
+        }
+      ]
+    },
+    {
+      "id": "staging-retired",
+      "title": "Temporary Standard staging disks retired; snapshots preserved",
+      "timeUtc": "2026-10-07T08:28:45.766885+00:00",
+      "timePrecision": "exact-retirement-receipt-time",
+      "details": "Exactly the two owned unattached Standard staging disks were deleted. All before/after snapshot identities and lock protections were preserved.",
+      "evidence": [
+        {
+          "path": "preflight/staging-retirement.json",
+          "sha256": "65c47e46a9d0d979e4c0cd6ce58d42886086804f4a19863663c8ccf0528bb1d4"
+        },
+        {
+          "path": "preflight/snapshot-audit-staging-retirement-before-20261007T082828Z.json",
+          "sha256": "909ba6962e368547d68d41d9af4c20d92de91388936f3935b84aa8aabf40d8a0"
+        },
+        {
+          "path": "preflight/snapshot-audit-staging-retirement-after-20261007T082828Z.json",
+          "sha256": "089a1fe07d85a3db7b2569981b5beb2b06e9f940cd3274c1874ffb4e402cb863"
+        }
+      ]
+    },
+    {
+      "id": "measurement-gate-1f4f4913",
+      "title": "Fresh all-stack hydration gate released measurement startup (first-startup)",
+      "timeUtc": "2026-10-07T08:29:00.702085+00:00",
+      "timePrecision": "exact-gate-receipt-time",
+      "details": "The gate checked all preparation receipts, four measured PremiumV2 disks per stack, copy progress, replica readiness, and staging-retirement evidence before authorizing startup.",
+      "evidence": [
+        {
+          "path": "recovery/measurement-checksum-v2/first-startup/measurement-gate.json",
+          "sha256": "584911701cbe201f87a24a3243c0f994c1147b0067b55a8951d56102846f72a9"
+        },
+        {
+          "path": "preflight/staging-retirement.json",
+          "sha256": "65c47e46a9d0d979e4c0cd6ce58d42886086804f4a19863663c8ccf0528bb1d4"
+        }
+      ]
+    },
+    {
+      "id": "measurement-process-1",
+      "title": "Measurement process failed",
+      "timeUtc": "2026-10-07T08:29:00.723541+00:00",
+      "timePrecision": "exact-process-receipt-interval",
+      "details": "Test process status=failed, exit=2. PostgreSQL startup query failed: pg_control column \"data_checksum_version\" does not exist (PG16 uses data_page_checksum_version).",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/attempts/test-1/test-process.json",
+          "sha256": "642c7ef42097c6c2068f649bbc011abea0819fdd76092892d920585ea1bbca7d"
+        },
+        {
+          "path": "baseline-23gib/.state/attempts/test-1/test.log",
+          "sha256": "b1e44def4f1c2276b12c061418fd49e4ac4457ea93acdd54bcf616deb5703bbb"
+        },
+        {
+          "path": "baseline-23gib/.state/attempts/test-1/03-test.py",
+          "sha256": "1b6b25fdd0c49f1ec9c1b116f28c72ddb5d63202c858ffa34ec12815756e004a"
+        }
+      ],
+      "endUtc": "2026-10-07T08:29:10.811838+00:00"
+    },
+    {
+      "id": "measurement-process-2",
+      "title": "Measurement process completed",
+      "timeUtc": "2026-10-07T08:35:43.075046+00:00",
+      "timePrecision": "exact-process-receipt-interval",
+      "details": "Test process status=complete, exit=0.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/test-process.json",
+          "sha256": "372282e6604911d15511410fdf0b07f4f10696207bd25e8056be7a7904ef5d8a"
+        }
+      ],
+      "endUtc": "2026-10-07T09:09:03.833844+00:00"
+    },
+    {
+      "id": "measurement-startup-retry",
+      "title": "Measurement restarted after preserving the pre-VACUUM startup failure",
+      "timeUtc": "2026-10-07T08:35:43.075046+00:00",
+      "timePrecision": "exact-process-receipt-time",
+      "details": "The first test attempt exited before submitting VACUUM because its PostgreSQL 16 checksum query used an unavailable column. The corrected query reads data_page_checksum_version; the new supervised process began this retry.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/.state/attempts/test-1/test-process.json",
+          "sha256": "642c7ef42097c6c2068f649bbc011abea0819fdd76092892d920585ea1bbca7d"
+        },
+        {
+          "path": "baseline-23gib/.state/test-process.json",
+          "sha256": "372282e6604911d15511410fdf0b07f4f10696207bd25e8056be7a7904ef5d8a"
+        },
+        {
+          "path": "recovery/measurement-checksum-v2/source-review.json",
+          "sha256": "1735bbdbc5ee7a8164a08292a9759bdf1354c2eadb3c3b3ba797b69f1ba52bc3"
+        },
+        {
+          "path": "recovery/measurement-checksum-v2/03-test-v2.py",
+          "sha256": "59e3eb442dc2fa0d52df6eb97b8addd728f21b5742635d842afbf857f5c5a8a3"
+        }
+      ]
+    },
+    {
+      "id": "test-event-preflight_complete-2026-10-07T08:35:54.949Z",
+      "title": "Measurement preflight complete",
+      "timeUtc": "2026-10-07T08:35:54.949Z",
+      "timePrecision": "exact-test-event-time",
+      "details": "The persisted test event stream records this milestone.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/events.jsonl",
+          "sha256": "1750bcaeae09618c1948445240c28ddce43f945e22b6f2907f11ece033e53753"
+        }
+      ]
+    },
+    {
+      "id": "test-event-checkpoint_complete-2026-10-07T08:35:57.295Z",
+      "title": "Primary checkpoint complete; target LSN established",
+      "timeUtc": "2026-10-07T08:35:57.295Z",
+      "timePrecision": "exact-test-event-time",
+      "details": "The persisted test event stream records this milestone. Primary checkpoint target LSN 4E/550000D8 was established. The initial replica replay wait occurs after this event and before observation_started; its completion is bounded by observation_started, not separately timestamped here.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/events.jsonl",
+          "sha256": "1750bcaeae09618c1948445240c28ddce43f945e22b6f2907f11ece033e53753"
+        }
+      ]
+    },
+    {
+      "id": "measurement-vacuumStart",
+      "title": "VACUUM started",
+      "timeUtc": "2026-10-07T08:36:00.425657Z",
+      "timePrecision": "exact-test-timing-receipt",
+      "details": "Result status: True; coverage valid=True.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/timing.json",
+          "sha256": "01a84b29ad3be33e5bf9f6a23704ca8458f5f7fafb21cfb81d1d56772669f768"
+        },
+        {
+          "path": "baseline-23gib/results/summary.json",
+          "sha256": "f57505a3f819bcb684657beaa21f9da26fc26f8448ba3cd4d7c148814e6a8145"
+        }
+      ]
+    },
+    {
+      "id": "test-event-vacuum_started-2026-10-07T08:36:00.425657Z",
+      "title": "VACUUM start marker observed",
+      "timeUtc": "2026-10-07T08:36:00.425657Z",
+      "timePrecision": "exact-postgresql-log-time",
+      "details": "The persisted test event stream records this milestone. Marker time 2026-10-07T08:36:00.425657Z.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/events.jsonl",
+          "sha256": "1750bcaeae09618c1948445240c28ddce43f945e22b6f2907f11ece033e53753"
+        }
+      ]
+    },
+    {
+      "id": "test-event-observation_started-2026-10-07T08:36:00.429Z",
+      "title": "Counter observation and VACUUM process launched",
+      "timeUtc": "2026-10-07T08:36:00.429Z",
+      "timePrecision": "exact-test-event-time",
+      "details": "The persisted test event stream records this milestone.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/events.jsonl",
+          "sha256": "1750bcaeae09618c1948445240c28ddce43f945e22b6f2907f11ece033e53753"
+        }
+      ]
+    },
+    {
+      "id": "test-event-vacuum_progress_phase-2026-10-07T08:36:01.632152124Z",
+      "title": "VACUUM progress phase first observed",
+      "timeUtc": "2026-10-07T08:36:01.632152124Z",
+      "timePrecision": "first-observed-vacuum-phase",
+      "details": "The persisted test event stream records this milestone. First sampled phase: scanning heap.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/events.jsonl",
+          "sha256": "1750bcaeae09618c1948445240c28ddce43f945e22b6f2907f11ece033e53753"
+        }
+      ]
+    },
+    {
+      "id": "test-event-vacuum_progress_phase-2026-10-07T08:43:31.576893177Z",
+      "title": "VACUUM progress phase first observed",
+      "timeUtc": "2026-10-07T08:43:31.576893177Z",
+      "timePrecision": "first-observed-vacuum-phase",
+      "details": "The persisted test event stream records this milestone. First sampled phase: vacuuming indexes.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/events.jsonl",
+          "sha256": "1750bcaeae09618c1948445240c28ddce43f945e22b6f2907f11ece033e53753"
+        }
+      ]
+    },
+    {
+      "id": "test-event-vacuum_progress_phase-2026-10-07T08:43:36.543271965Z",
+      "title": "VACUUM progress phase first observed",
+      "timeUtc": "2026-10-07T08:43:36.543271965Z",
+      "timePrecision": "first-observed-vacuum-phase",
+      "details": "The persisted test event stream records this milestone. First sampled phase: vacuuming heap.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/events.jsonl",
+          "sha256": "1750bcaeae09618c1948445240c28ddce43f945e22b6f2907f11ece033e53753"
+        }
+      ]
+    },
+    {
+      "id": "measurement-vacuumComplete",
+      "title": "VACUUM completed",
+      "timeUtc": "2026-10-07T08:50:04.738699Z",
+      "timePrecision": "exact-test-timing-receipt",
+      "details": "Result status: True; coverage valid=True.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/timing.json",
+          "sha256": "01a84b29ad3be33e5bf9f6a23704ca8458f5f7fafb21cfb81d1d56772669f768"
+        },
+        {
+          "path": "baseline-23gib/results/summary.json",
+          "sha256": "f57505a3f819bcb684657beaa21f9da26fc26f8448ba3cd4d7c148814e6a8145"
+        }
+      ]
+    },
+    {
+      "id": "test-event-vacuum_completed-2026-10-07T08:50:04.738699Z",
+      "title": "VACUUM completion marker observed",
+      "timeUtc": "2026-10-07T08:50:04.738699Z",
+      "timePrecision": "exact-postgresql-log-time",
+      "details": "The persisted test event stream records this milestone. Marker time 2026-10-07T08:50:04.738699Z.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/events.jsonl",
+          "sha256": "1750bcaeae09618c1948445240c28ddce43f945e22b6f2907f11ece033e53753"
+        }
+      ]
+    },
+    {
+      "id": "test-event-replay_drain_started-2026-10-07T08:50:09.072Z",
+      "title": "Replica replay drain started after VACUUM",
+      "timeUtc": "2026-10-07T08:50:09.072Z",
+      "timePrecision": "exact-test-event-time",
+      "details": "The persisted test event stream records this milestone.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/events.jsonl",
+          "sha256": "1750bcaeae09618c1948445240c28ddce43f945e22b6f2907f11ece033e53753"
+        }
+      ]
+    },
+    {
+      "id": "measurement-replayEnd",
+      "title": "Replica replay catch-up complete",
+      "timeUtc": "2026-10-07T09:09:00.254700003Z",
+      "timePrecision": "exact-test-timing-receipt",
+      "details": "Result status: True; coverage valid=True.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/timing.json",
+          "sha256": "01a84b29ad3be33e5bf9f6a23704ca8458f5f7fafb21cfb81d1d56772669f768"
+        },
+        {
+          "path": "baseline-23gib/results/summary.json",
+          "sha256": "f57505a3f819bcb684657beaa21f9da26fc26f8448ba3cd4d7c148814e6a8145"
+        }
+      ]
+    },
+    {
+      "id": "test-event-replica_caught_up-2026-10-07T09:09:00.254700003Z",
+      "title": "Replica reached the VACUUM completion LSN",
+      "timeUtc": "2026-10-07T09:09:00.254700003Z",
+      "timePrecision": "exact-test-event-sample-time",
+      "details": "The persisted test event stream records this milestone. Stable catch-up target LSN 56/F83AAFD0; replay=56/F9000000; primary flush=56/F9000000.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/events.jsonl",
+          "sha256": "1750bcaeae09618c1948445240c28ddce43f945e22b6f2907f11ece033e53753"
+        }
+      ]
+    },
+    {
+      "id": "test-event-observation_finished-2026-10-07T09:09:02.923Z",
+      "title": "Counter observation finished",
+      "timeUtc": "2026-10-07T09:09:02.923Z",
+      "timePrecision": "exact-test-event-time",
+      "details": "The persisted test event stream records this milestone.",
+      "evidence": [
+        {
+          "path": "baseline-23gib/results/events.jsonl",
+          "sha256": "1750bcaeae09618c1948445240c28ddce43f945e22b6f2907f11ece033e53753"
+        }
+      ]
+    },
+    {
+      "id": "cleanup-phase-auditing-before-cleanup-20261007T121744.019044Z-550172",
+      "title": "Cleanup attempt 20261007T121744.019044Z-550172: phase recorded: auditing-before-cleanup",
+      "timeUtc": "2026-10-07T12:17:44.020012+00:00",
+      "timePrecision": "exact-local-cleanup-journal-time",
+      "details": "Cleanup run 20261007T121744.019044Z-550172 journal records the phase after its local state receipt was saved; cloud completion requires separate resource audit evidence.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "post-measurement-cleanup-v2.py",
+          "sha256": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603"
+        }
+      ]
+    },
+    {
+      "id": "cleanup-phase-removing-owned-compute-20261007T121744.019044Z-550172",
+      "title": "Cleanup attempt 20261007T121744.019044Z-550172: phase recorded: removing-owned-compute",
+      "timeUtc": "2026-10-07T12:17:45.581517+00:00",
+      "timePrecision": "exact-local-cleanup-journal-time",
+      "details": "Cleanup run 20261007T121744.019044Z-550172 journal records the phase after its local state receipt was saved; cloud completion requires separate resource audit evidence.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "post-measurement-cleanup-v2.py",
+          "sha256": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603"
+        }
+      ]
+    },
+    {
+      "id": "teardown-process-launched-baseline-23gib-20261007T121744.019044Z-550172-550198",
+      "title": "Cleanup attempt 20261007T121744.019044Z-550172: baseline-23gib teardown process launched",
+      "timeUtc": "2026-10-07T12:17:45.582564+00:00",
+      "timePrecision": "exact-local-process-launch-bounds",
+      "details": "Run 20261007T121744.019044Z-550172 launched PID 550198 with command `bash baseline-23gib/04-teardown.sh`; Popen returned at 2026-10-07T12:17:45.582983+00:00. Resource-removal completion is recorded separately.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "recovery/cleanup-timeline/teardown-observations/baseline-23gib-20261007T121744.019044Z-550172.json",
+          "sha256": "c42ca0de5a86277a641822b66e0e1b0398113ede1318cc93930aa4b042d469b5"
+        }
+      ],
+      "endUtc": "2026-10-07T12:17:45.582983+00:00"
+    },
+    {
+      "id": "teardown-process-exit-baseline-23gib-20261007T121744.019044Z-550172-550198",
+      "title": "Cleanup attempt 20261007T121744.019044Z-550172: baseline-23gib teardown process exit observed",
+      "timeUtc": "2026-10-07T12:18:35.819213+00:00",
+      "timePrecision": "exact-local-process-exit-observation-time",
+      "details": "Run 20261007T121744.019044Z-550172 PID 550198 exited 1; its per-run receipt status is None. No cleanup completion is inferred from this process exit.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "recovery/cleanup-timeline/teardown-observations/baseline-23gib-20261007T121744.019044Z-550172.json",
+          "sha256": "c42ca0de5a86277a641822b66e0e1b0398113ede1318cc93930aa4b042d469b5"
+        },
+        {
+          "path": "recovery/cleanup-cli-correction/04-teardown-before.sh",
+          "sha256": "c49fc87cf125b3dc85f2219c39fbc0d0838903bb9f03d96ffbec66f9376f02ca"
+        },
+        {
+          "path": "recovery/cleanup-cli-correction/README.md",
+          "sha256": "bcc91ac332adff69a1545e1014abb62622b15f734545dcb582b8b0ac23f9a0dd"
+        },
+        {
+          "path": "recovery/cleanup-cli-correction/failed-attempt-evidence/manifest.json",
+          "sha256": "5c04545a6d3156314cfbfc2cbb0b22de233007c3681459f3597918ff6c83e320"
+        },
+        {
+          "path": "recovery/cleanup-cli-correction/failed-attempt-evidence/baseline-23gib/teardown.log",
+          "sha256": "efb8223a8f059798471a1af63750bbe1bccf46835c5ce0a123e6d9fd2ea14138"
+        },
+        {
+          "path": "recovery/cleanup-cli-correction/failed-attempt-evidence/post-cleanup-v2.log",
+          "sha256": "b889aa595e38d3b508bf7cafd8088f5cb2e07bd87990030162a3d2f6efd46591"
+        }
+      ],
+      "endUtc": "2026-10-07T12:18:35.819213+00:00"
+    },
+    {
+      "id": "cleanup-phase-failed-20261007T121744.019044Z-550172",
+      "title": "Cleanup attempt 20261007T121744.019044Z-550172: phase recorded: failed",
+      "timeUtc": "2026-10-07T12:18:39.334676+00:00",
+      "timePrecision": "exact-local-cleanup-journal-time",
+      "details": "Cleanup run 20261007T121744.019044Z-550172 journal records the phase after its local state receipt was saved; cloud completion requires separate resource audit evidence.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "post-measurement-cleanup-v2.py",
+          "sha256": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603"
+        }
+      ]
+    },
+    {
+      "id": "cleanup-phase-auditing-before-cleanup-20261007T122903.746854Z-560008",
+      "title": "Cleanup attempt 20261007T122903.746854Z-560008: phase recorded: auditing-before-cleanup",
+      "timeUtc": "2026-10-07T12:29:03.748011+00:00",
+      "timePrecision": "exact-local-cleanup-journal-time",
+      "details": "Cleanup run 20261007T122903.746854Z-560008 journal records the phase after its local state receipt was saved; cloud completion requires separate resource audit evidence.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "post-measurement-cleanup-v2.py",
+          "sha256": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603"
+        }
+      ]
+    },
+    {
+      "id": "cleanup-phase-removing-owned-compute-20261007T122903.746854Z-560008",
+      "title": "Cleanup attempt 20261007T122903.746854Z-560008: phase recorded: removing-owned-compute",
+      "timeUtc": "2026-10-07T12:29:05.427140+00:00",
+      "timePrecision": "exact-local-cleanup-journal-time",
+      "details": "Cleanup run 20261007T122903.746854Z-560008 journal records the phase after its local state receipt was saved; cloud completion requires separate resource audit evidence.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "post-measurement-cleanup-v2.py",
+          "sha256": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603"
+        }
+      ]
+    },
+    {
+      "id": "teardown-process-launched-baseline-23gib-20261007T122903.746854Z-560008-560034",
+      "title": "Cleanup attempt 20261007T122903.746854Z-560008: baseline-23gib teardown process launched",
+      "timeUtc": "2026-10-07T12:29:05.428893+00:00",
+      "timePrecision": "exact-local-process-launch-bounds",
+      "details": "Run 20261007T122903.746854Z-560008 launched PID 560034 with command `bash baseline-23gib/04-teardown.sh`; Popen returned at 2026-10-07T12:29:05.429379+00:00. Resource-removal completion is recorded separately.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "recovery/cleanup-timeline/teardown-observations/baseline-23gib-20261007T122903.746854Z-560008.json",
+          "sha256": "3cd7bfb1347a02c88c7611d944dc16594013b282183da450fa26252fd31d151d"
+        }
+      ],
+      "endUtc": "2026-10-07T12:29:05.429379+00:00"
+    },
+    {
+      "id": "teardown-attempt-historical-complete-baseline-23gib-20261007T122903.746854Z-560008-560034",
+      "title": "Cleanup attempt 20261007T122903.746854Z-560008: per-run receipt recorded baseline-23gib completion",
+      "timeUtc": "2026-10-07T12:37:11Z",
+      "timePrecision": "exact-run-specific-teardown-receipt-time",
+      "details": "Run 20261007T122903.746854Z-560008 PID 560034 exited 0; its immutable per-run receipt says complete at 2026-10-07T12:37:11Z. The current canonical receipt represents a different state, so no current resource state is inferred from this historical attempt.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "recovery/cleanup-timeline/teardown-observations/baseline-23gib-20261007T122903.746854Z-560008.json",
+          "sha256": "3cd7bfb1347a02c88c7611d944dc16594013b282183da450fa26252fd31d151d"
+        }
+      ],
+      "endUtc": "2026-10-07T12:37:11.926749+00:00"
+    },
+    {
+      "id": "cleanup-phase-removing-owned-shared-watchers-20261007T122903.746854Z-560008",
+      "title": "Cleanup attempt 20261007T122903.746854Z-560008: phase recorded: removing-owned-shared-watchers",
+      "timeUtc": "2026-10-07T12:37:36.257080+00:00",
+      "timePrecision": "exact-local-cleanup-journal-time",
+      "details": "Cleanup run 20261007T122903.746854Z-560008 journal records the phase after its local state receipt was saved; cloud completion requires separate resource audit evidence.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "post-measurement-cleanup-v2.py",
+          "sha256": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603"
+        }
+      ]
+    },
+    {
+      "id": "cleanup-phase-failed-20261007T122903.746854Z-560008",
+      "title": "Cleanup attempt 20261007T122903.746854Z-560008: phase recorded: failed",
+      "timeUtc": "2026-10-07T12:37:54.108809+00:00",
+      "timePrecision": "exact-local-cleanup-journal-time",
+      "details": "Cleanup run 20261007T122903.746854Z-560008 journal records the phase after its local state receipt was saved; cloud completion requires separate resource audit evidence.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "post-measurement-cleanup-v2.py",
+          "sha256": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603"
+        }
+      ]
+    },
+    {
+      "id": "cleanup-phase-auditing-before-cleanup-20261007T123942.774537Z-567745",
+      "title": "Cleanup attempt 20261007T123942.774537Z-567745: phase recorded: auditing-before-cleanup",
+      "timeUtc": "2026-10-07T12:39:42.775668+00:00",
+      "timePrecision": "exact-local-cleanup-journal-time",
+      "details": "Cleanup run 20261007T123942.774537Z-567745 journal records the phase after its local state receipt was saved; cloud completion requires separate resource audit evidence.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "post-measurement-cleanup-v2.py",
+          "sha256": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603"
+        }
+      ]
+    },
+    {
+      "id": "cleanup-phase-removing-owned-compute-20261007T123942.774537Z-567745",
+      "title": "Cleanup attempt 20261007T123942.774537Z-567745: phase recorded: removing-owned-compute",
+      "timeUtc": "2026-10-07T12:39:44.325137+00:00",
+      "timePrecision": "exact-local-cleanup-journal-time",
+      "details": "Cleanup run 20261007T123942.774537Z-567745 journal records the phase after its local state receipt was saved; cloud completion requires separate resource audit evidence.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "post-measurement-cleanup-v2.py",
+          "sha256": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603"
+        }
+      ]
+    },
+    {
+      "id": "teardown-process-launched-baseline-23gib-20261007T123942.774537Z-567745-567787",
+      "title": "Cleanup attempt 20261007T123942.774537Z-567745: baseline-23gib teardown process launched",
+      "timeUtc": "2026-10-07T12:39:44.327053+00:00",
+      "timePrecision": "exact-local-process-launch-bounds",
+      "details": "Run 20261007T123942.774537Z-567745 launched PID 567787 with command `bash baseline-23gib/04-teardown.sh`; Popen returned at 2026-10-07T12:39:44.327428+00:00. Resource-removal completion is recorded separately.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "recovery/cleanup-timeline/teardown-observations/baseline-23gib-20261007T123942.774537Z-567745.json",
+          "sha256": "ce528d896e52e3d158e73ef1a7efb3eb537d722f43130a371f19b66491c79ad8"
+        }
+      ],
+      "endUtc": "2026-10-07T12:39:44.327428+00:00"
+    },
+    {
+      "id": "owned-teardown-completed-baseline-23gib-20261007T123942.774537Z-567745-567787",
+      "title": "Cleanup attempt 20261007T123942.774537Z-567745: baseline-23gib teardown completed; retained snapshots verified",
+      "timeUtc": "2026-10-07T12:41:09Z",
+      "timePrecision": "exact-canonical-teardown-receipt-time",
+      "details": "Run 20261007T123942.774537Z-567745 process PID 567787 exited 0 (observed 2026-10-07T12:41:09.391609+00:00); its receipt and current canonical teardown both say complete at 2026-10-07T12:41:09Z. Snapshot retention is verified in the linked receipts.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "recovery/cleanup-timeline/teardown-observations/baseline-23gib-20261007T123942.774537Z-567745.json",
+          "sha256": "ce528d896e52e3d158e73ef1a7efb3eb537d722f43130a371f19b66491c79ad8"
+        },
+        {
+          "path": "baseline-23gib/.state/teardown.json",
+          "sha256": "1165decb3aef24bee05d17fdb22fe04c7ec96bf25313cc7a2684e052802efb80"
+        },
+        {
+          "path": "baseline-23gib/.state/snapshot-retention.json",
+          "sha256": "b60bb5053108fc7f79b330d817f9d4c2ba752f1ac6bde81fdd7294bce99f29ac"
+        },
+        {
+          "path": "preflight/snapshot-audit-before-compute-cleanup.json",
+          "sha256": "9fe1292228a90353114c27cab218f20263f92006e3a560427686d2c550ca8b8b"
+        },
+        {
+          "path": "preflight/snapshot-audit-after-compute-cleanup.json",
+          "sha256": "9828c445ee66a138cf43978b41333d69b7f7197e55a20071d1b84fb3f2e3fbc4"
+        },
+        {
+          "path": "preflight/snapshot-audit-after-shared-cleanup.json",
+          "sha256": "300be77da98e29bdee0fedff936df529ca455f0e74f5a15a5e3766b4e345a335"
+        }
+      ],
+      "endUtc": "2026-10-07T12:41:09.391609+00:00"
+    },
+    {
+      "id": "cleanup-phase-removing-owned-shared-watchers-20261007T123942.774537Z-567745",
+      "title": "Cleanup attempt 20261007T123942.774537Z-567745: phase recorded: removing-owned-shared-watchers",
+      "timeUtc": "2026-10-07T12:41:20.100124+00:00",
+      "timePrecision": "exact-local-cleanup-journal-time",
+      "details": "Cleanup run 20261007T123942.774537Z-567745 journal records the phase after its local state receipt was saved; cloud completion requires separate resource audit evidence.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "post-measurement-cleanup-v2.py",
+          "sha256": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603"
+        }
+      ]
+    },
+    {
+      "id": "cleanup-complete",
+      "title": "Authorized non-snapshot test resources cleaned up; snapshots retained",
+      "timeUtc": "2026-10-07T12:41:35.564847+00:00",
+      "timePrecision": "exact-cleanup-receipt-time",
+      "details": "Cleanup receipt reports 42 retained snapshots; every snapshot remained protected.",
+      "evidence": [
+        {
+          "path": "cleanup-state.json",
+          "sha256": "30a03d9eca34530ca792426c99f50db0bca8bea0c7ab64bb1fe9544b3f527ad2"
+        },
+        {
+          "path": "preflight/snapshot-audit-before-compute-cleanup.json",
+          "sha256": "9fe1292228a90353114c27cab218f20263f92006e3a560427686d2c550ca8b8b"
+        },
+        {
+          "path": "preflight/snapshot-audit-after-compute-cleanup.json",
+          "sha256": "9828c445ee66a138cf43978b41333d69b7f7197e55a20071d1b84fb3f2e3fbc4"
+        },
+        {
+          "path": "preflight/snapshot-audit-after-shared-cleanup.json",
+          "sha256": "300be77da98e29bdee0fedff936df529ca455f0e74f5a15a5e3766b4e345a335"
+        }
+      ]
+    },
+    {
+      "id": "cleanup-phase-complete-20261007T123942.774537Z-567745",
+      "title": "Cleanup attempt 20261007T123942.774537Z-567745: phase recorded: complete",
+      "timeUtc": "2026-10-07T12:41:35.565094+00:00",
+      "timePrecision": "exact-local-cleanup-journal-time",
+      "details": "Cleanup run 20261007T123942.774537Z-567745 journal records the phase after its local state receipt was saved; cloud completion requires separate resource audit evidence.",
+      "evidence": [
+        {
+          "path": "recovery/cleanup-timeline/phase-events.jsonl",
+          "sha256": "6cbe15696dd2f45369d40ed2274eb00713e378137b9724a6b866ea478d5b45d9"
+        },
+        {
+          "path": "post-measurement-cleanup-v2.py",
+          "sha256": "d11df6f5e0a57c0fdd42282ab8215cfb29e82ca6310af24297324bb235d13603"
+        }
+      ]
+    }
+  ],
+  "timeSemantics": {
+    "exact": "Timestamp comes directly from a process/Kubernetes/ARM/export receipt.",
+    "first-observed": "The value was present in the cited poll or audit at that time; the underlying background transition may be earlier.",
+    "bounded": "Only the supplied start/end observations are available; no per-statement instant is inferred."
+  },
+  "limitations": [
+    "Raw INSERT/DELETE command output was not retained for this stack; finalizer receipts and database estimates are reported as such, not presented as captured row counts."
+  ]
+}

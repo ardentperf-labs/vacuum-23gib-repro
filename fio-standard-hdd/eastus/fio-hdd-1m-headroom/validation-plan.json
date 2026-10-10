@@ -1,0 +1,18 @@
+{
+  "purpose": "Check throughput with VM bandwidth headroom and refine 1.5 second mean latency crossing",
+  "vm_size": "Standard_D8ds_v4",
+  "uncached_baseline_MB_s": 192,
+  "source": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+  "long_phase": {
+    "threads": 4,
+    "runtime_seconds": 600
+  },
+  "refinement": {
+    "threads": [
+      144,
+      160
+    ],
+    "runtime_seconds": 180
+  },
+  "metric_units": "decimal MB/s"
+}

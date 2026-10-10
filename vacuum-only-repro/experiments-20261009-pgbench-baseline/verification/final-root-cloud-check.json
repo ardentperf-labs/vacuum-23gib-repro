@@ -1,0 +1,80 @@
+{
+  "recordedAtUtc": "2026-10-09T09:44:05.131136+00:00",
+  "queryWindowStartUtc": "2026-10-09T09:42:43Z",
+  "subscription": "00000000-0000-0000-0000-000000000000",
+  "checks": [
+    {
+      "role": "test",
+      "resourceGroup": "rg-vacuum-only-5203346e38bc77fbedc14b472f6e4775",
+      "command": [
+        "az",
+        "group",
+        "exists",
+        "--subscription",
+        "00000000-0000-0000-0000-000000000000",
+        "-n",
+        "rg-vacuum-only-5203346e38bc77fbedc14b472f6e4775",
+        "--only-show-errors",
+        "-o",
+        "json"
+      ],
+      "exitCode": 0,
+      "exists": false
+    },
+    {
+      "role": "node",
+      "resourceGroup": "rg-vacuum-nodes-5203346e38bc77fbedc14b472f6e4775",
+      "command": [
+        "az",
+        "group",
+        "exists",
+        "--subscription",
+        "00000000-0000-0000-0000-000000000000",
+        "-n",
+        "rg-vacuum-nodes-5203346e38bc77fbedc14b472f6e4775",
+        "--only-show-errors",
+        "-o",
+        "json"
+      ],
+      "exitCode": 0,
+      "exists": false
+    },
+    {
+      "role": "snapshots",
+      "resourceGroup": "rg-vacuum-pv2-snap-5203346e38bc77fbedc14b472f6e4775",
+      "command": [
+        "az",
+        "group",
+        "exists",
+        "--subscription",
+        "00000000-0000-0000-0000-000000000000",
+        "-n",
+        "rg-vacuum-pv2-snap-5203346e38bc77fbedc14b472f6e4775",
+        "--only-show-errors",
+        "-o",
+        "json"
+      ],
+      "exitCode": 0,
+      "exists": true
+    },
+    {
+      "role": "watcher",
+      "resourceGroup": "rg-vacuum-watcher-5203346e38bc77fbedc14b472f6e4775",
+      "command": [
+        "az",
+        "group",
+        "exists",
+        "--subscription",
+        "00000000-0000-0000-0000-000000000000",
+        "-n",
+        "rg-vacuum-watcher-5203346e38bc77fbedc14b472f6e4775",
+        "--only-show-errors",
+        "-o",
+        "json"
+      ],
+      "exitCode": 0,
+      "exists": true
+    }
+  ],
+  "source": "Root direct Azure CLI tool calls after completed guarded cleanup; each response was collected with exit code 0."
+}

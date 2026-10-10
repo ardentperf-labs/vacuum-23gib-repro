@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-06T21:15:53Z",
+  "checkpoint": "20261006T211553Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "cluster": "repro/hdd-pg",
+      "currentPrimary": "hdd-pg-1",
+      "readyInstances": 1,
+      "fixtureBuildTable": "public.vacuum_target_stage",
+      "fixtureHeapBytes": 12981223424,
+      "fixtureHeapGiB": 12.089706420898438,
+      "measurementImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+      "sourceCopySnapshot": {
+        "provisioningState": "Succeeded",
+        "snapshotAccessState": "Available",
+        "createOption": "Copy",
+        "completionPercent": null,
+        "sku": "Standard_LRS",
+        "sizeGiB": 512
+      }
+    },
+    "100gib": {
+      "processStatus": "running",
+      "cluster": "repro/hdd-pg",
+      "currentPrimary": "hdd-pg-1",
+      "readyInstances": 1,
+      "fixtureBuildTable": "public.vacuum_target_stage",
+      "fixtureHeapBytes": 11147476992,
+      "fixtureHeapGiB": 10.38189697265625,
+      "measurementImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+      "sourceCopySnapshot": {
+        "provisioningState": "Succeeded",
+        "snapshotAccessState": "Available",
+        "createOption": "Copy",
+        "completionPercent": null,
+        "sku": "Standard_LRS",
+        "sizeGiB": 512
+      }
+    }
+  }
+}

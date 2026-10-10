@@ -1,0 +1,4526 @@
+{
+  "value": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/lowPriorityCores",
+      "name": "lowPriorityCores",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 3
+        },
+        "name": {
+          "localizedValue": "Total Regional Low-priority vCPUs",
+          "value": "lowPriorityCores"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/cores",
+      "name": "cores",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Total Regional vCPUs",
+          "value": "cores"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/virtualMachines",
+      "name": "virtualMachines",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 25000
+        },
+        "name": {
+          "localizedValue": "Virtual Machines",
+          "value": "virtualMachines"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/availabilitySets",
+      "name": "availabilitySets",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 2500
+        },
+        "name": {
+          "localizedValue": "Availability Sets",
+          "value": "availabilitySets"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/virtualMachineScaleSets",
+      "name": "virtualMachineScaleSets",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 2500
+        },
+        "name": {
+          "localizedValue": "Virtual Machine Scale Sets",
+          "value": "virtualMachineScaleSets"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/dedicatedVCpus",
+      "name": "dedicatedVCpus",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 3000
+        },
+        "name": {
+          "localizedValue": "Dedicated vCPUs",
+          "value": "dedicatedVCpus"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/cloudServices",
+      "name": "cloudServices",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 2500
+        },
+        "name": {
+          "localizedValue": "Cloud Services",
+          "value": "cloudServices"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/basicAFamily",
+      "name": "basicAFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Basic A Family vCPUs",
+          "value": "basicAFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardA0_A7Family",
+      "name": "standardA0_A7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard A0-A7 Family vCPUs",
+          "value": "standardA0_A7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardA8_A11Family",
+      "name": "standardA8_A11Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard A8-A11 Family vCPUs",
+          "value": "standardA8_A11Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardAv2Family",
+      "name": "standardAv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Av2 Family vCPUs",
+          "value": "standardAv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardBSFamily",
+      "name": "standardBSFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard BS Family vCPUs",
+          "value": "standardBSFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardBasv2Family",
+      "name": "standardBasv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard Basv2 Family vCPUs",
+          "value": "standardBasv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardBsv2Family",
+      "name": "standardBsv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard Bsv2 Family vCPUs",
+          "value": "standardBsv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardBpsv2Family",
+      "name": "standardBpsv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard Bpsv2 Family vCPUs",
+          "value": "standardBpsv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDFamily",
+      "name": "standardDFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard D Family vCPUs",
+          "value": "standardDFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDv2Family",
+      "name": "standardDv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dv2 Family vCPUs",
+          "value": "standardDv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDv2PromoFamily",
+      "name": "standardDv2PromoFamily",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dv2 Promo Family vCPUs",
+          "value": "standardDv2PromoFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDadsv7Family",
+      "name": "StandardDadsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dadsv7 Family vCPUs",
+          "value": "StandardDadsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDaldsv7Family",
+      "name": "StandardDaldsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Daldsv7 Family vCPUs",
+          "value": "StandardDaldsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDalsv7Family",
+      "name": "StandardDalsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dalsv7 Family vCPUs",
+          "value": "StandardDalsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDasv7Family",
+      "name": "StandardDasv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dasv7 Family vCPUs",
+          "value": "StandardDasv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDdsv6Family",
+      "name": "StandardDdsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Ddsv6 Family vCPUs",
+          "value": "StandardDdsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDdsv7Family",
+      "name": "StandardDdsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Ddsv7 Family vCPUs",
+          "value": "StandardDdsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDldsv6Family",
+      "name": "StandardDldsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dldsv6 Family vCPUs",
+          "value": "StandardDldsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDldsv7Family",
+      "name": "StandardDldsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dldsv7 Family vCPUs",
+          "value": "StandardDldsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDlsv6Family",
+      "name": "StandardDlsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dlsv6 Family vCPUs",
+          "value": "StandardDlsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDlsv7Family",
+      "name": "StandardDlsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dlsv7 Family vCPUs",
+          "value": "StandardDlsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDndv6Family",
+      "name": "StandardDndv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dndv6 Family vCPUs",
+          "value": "StandardDndv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDnldv6Family",
+      "name": "StandardDnldv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dnldv6 Family vCPUs",
+          "value": "StandardDnldv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDnlv6Family",
+      "name": "StandardDnlv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dnlv6 Family vCPUs",
+          "value": "StandardDnlv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDnv6Family",
+      "name": "StandardDnv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dnv6 Family vCPUs",
+          "value": "StandardDnv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDsv6Family",
+      "name": "StandardDsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dsv6 Family vCPUs",
+          "value": "StandardDsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDsv7Family",
+      "name": "StandardDsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dsv7 Family vCPUs",
+          "value": "StandardDsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDADSv5Family",
+      "name": "standardDADSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DADSv5 Family vCPUs",
+          "value": "standardDADSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDadv6Family",
+      "name": "standardDadv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "standard Dadv6 Family vCPUs",
+          "value": "standardDadv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDaldv6Family",
+      "name": "standardDaldv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "standard Daldv6 Family vCPUs",
+          "value": "standardDaldv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDalv6Family",
+      "name": "standardDalv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "standard Dalv6 Family vCPUs",
+          "value": "standardDalv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDASv4Family",
+      "name": "standardDASv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard DASv4 Family vCPUs",
+          "value": "standardDASv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDASv5Family",
+      "name": "standardDASv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DASv5 Family vCPUs",
+          "value": "standardDASv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDav6Family",
+      "name": "standardDav6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "standard Dav6 Family vCPUs",
+          "value": "standardDav6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDAv4Family",
+      "name": "standardDAv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DAv4 Family vCPUs",
+          "value": "standardDAv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDDSv4Family",
+      "name": "standardDDSv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard DDSv4 Family vCPUs",
+          "value": "standardDDSv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDDSv5Family",
+      "name": "standardDDSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DDSv5 Family vCPUs",
+          "value": "standardDDSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDDv4Family",
+      "name": "standardDDv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard DDv4 Family vCPUs",
+          "value": "standardDDv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDDv5Family",
+      "name": "standardDDv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DDv5 Family vCPUs",
+          "value": "standardDDv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDLDSv5Family",
+      "name": "standardDLDSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DLDSv5 Family vCPUs",
+          "value": "standardDLDSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDLSv5Family",
+      "name": "standardDLSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DLSv5 Family vCPUs",
+          "value": "standardDLSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDPDSv5Family",
+      "name": "standardDPDSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DPDSv5 Family vCPUs",
+          "value": "standardDPDSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDpdsv6Family",
+      "name": "StandardDpdsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dpdsv6 Family vCPUs",
+          "value": "StandardDpdsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDPLDSv5Family",
+      "name": "standardDPLDSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DPLDSv5 Family vCPUs",
+          "value": "standardDPLDSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDpldsv6Family",
+      "name": "StandardDpldsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dpldsv6 Family vCPUs",
+          "value": "StandardDpldsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDPLSv5Family",
+      "name": "standardDPLSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DPLSv5 Family vCPUs",
+          "value": "standardDPLSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDplsv6Family",
+      "name": "StandardDplsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dplsv6 Family vCPUs",
+          "value": "StandardDplsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDPSv5Family",
+      "name": "standardDPSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DPSv5 Family vCPUs",
+          "value": "standardDPSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDpsv6Family",
+      "name": "StandardDpsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dpsv6 Family vCPUs",
+          "value": "StandardDpsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDSv3Family",
+      "name": "standardDSv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard DSv3 Family vCPUs",
+          "value": "standardDSv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDSv4Family",
+      "name": "standardDSv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard DSv4 Family vCPUs",
+          "value": "standardDSv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDSv5Family",
+      "name": "standardDSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DSv5 Family vCPUs",
+          "value": "standardDSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDv3Family",
+      "name": "standardDv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dv3 Family vCPUs",
+          "value": "standardDv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDv4Family",
+      "name": "standardDv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Dv4 Family vCPUs",
+          "value": "standardDv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDv5Family",
+      "name": "standardDv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard Dv5 Family vCPUs",
+          "value": "standardDv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDCEDV6Family",
+      "name": "standardDCEDV6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard DCEDV6 Family vCPUs",
+          "value": "standardDCEDV6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDCEV6Family",
+      "name": "standardDCEV6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard DCEV6 Family vCPUs",
+          "value": "standardDCEV6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDCADCCV5Family",
+      "name": "standardDCADCCV5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "standard DCADCCV5 Family vCPUs",
+          "value": "standardDCADCCV5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDCADSv5Family",
+      "name": "standardDCADSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DCADSv5 Family vCPUs",
+          "value": "standardDCADSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDCadsv6Family",
+      "name": "standardDCadsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DCadsv6 Family vCPUs",
+          "value": "standardDCadsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDCACCV5Family",
+      "name": "standardDCACCV5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "standard DCACCV5 Family vCPUs",
+          "value": "standardDCACCV5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDCASv5Family",
+      "name": "standardDCASv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DCASv5 Family vCPUs",
+          "value": "standardDCASv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDCasv6Family",
+      "name": "standardDCasv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DCasv6 Family vCPUs",
+          "value": "standardDCasv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDDCSv3Family",
+      "name": "standardDDCSv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DDCSv3 Family vCPUs",
+          "value": "standardDDCSv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDCEDV5Family",
+      "name": "standardDCEDV5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DCEDV5 Family vCPUs",
+          "value": "standardDCEDV5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDCEV5Family",
+      "name": "standardDCEV5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DCEV5 Family vCPUs",
+          "value": "standardDCEV5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDCSv3Family",
+      "name": "standardDCSv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard DCSv3 Family vCPUs",
+          "value": "standardDCSv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDCSv2Family",
+      "name": "standardDCSv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 8
+        },
+        "name": {
+          "localizedValue": "Standard DCSv2 Family vCPUs",
+          "value": "standardDCSv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDCSFamily",
+      "name": "standardDCSFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 8
+        },
+        "name": {
+          "localizedValue": "Standard DCS Family vCPUs",
+          "value": "standardDCSFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDSFamily",
+      "name": "standardDSFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard DS Family vCPUs",
+          "value": "standardDSFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDSv2Family",
+      "name": "standardDSv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard DSv2 Family vCPUs",
+          "value": "standardDSv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardDSv2PromoFamily",
+      "name": "standardDSv2PromoFamily",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard DSv2 Promo Family vCPUs",
+          "value": "standardDSv2PromoFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEIDSv5Family",
+      "name": "standardEIDSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EIDSv5 Family vCPUs",
+          "value": "standardEIDSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEIDv5Family",
+      "name": "standardEIDv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EIDv5 Family vCPUs",
+          "value": "standardEIDv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEISv5Family",
+      "name": "standardEISv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EISv5 Family vCPUs",
+          "value": "standardEISv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEIv5Family",
+      "name": "standardEIv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EIv5 Family vCPUs",
+          "value": "standardEIv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEIADSv5Family",
+      "name": "standardEIADSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EIADSv5 Family vCPUs",
+          "value": "standardEIADSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEIASv5Family",
+      "name": "standardEIASv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EIASv5 Family vCPUs",
+          "value": "standardEIASv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEIBDSv5Family",
+      "name": "standardEIBDSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EIBDSv5 Family vCPUs",
+          "value": "standardEIBDSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEIBSv5Family",
+      "name": "standardEIBSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EIBSv5 Family vCPUs",
+          "value": "standardEIBSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardEadsv7Family",
+      "name": "StandardEadsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Eadsv7 Family vCPUs",
+          "value": "StandardEadsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardEasv7Family",
+      "name": "StandardEasv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Easv7 Family vCPUs",
+          "value": "StandardEasv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardEdsv6Family",
+      "name": "StandardEdsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Edsv6 Family vCPUs",
+          "value": "StandardEdsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardEsv6Family",
+      "name": "StandardEsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Esv6 Family vCPUs",
+          "value": "StandardEsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardEdsv7Family",
+      "name": "StandardEdsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Edsv7 Family vCPUs",
+          "value": "StandardEdsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardEndv6Family",
+      "name": "StandardEndv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Endv6 Family vCPUs",
+          "value": "StandardEndv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardEnv6Family",
+      "name": "StandardEnv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Env6 Family vCPUs",
+          "value": "StandardEnv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardEsv7Family",
+      "name": "StandardEsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Esv7 Family vCPUs",
+          "value": "StandardEsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEADSv5Family",
+      "name": "standardEADSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EADSv5 Family vCPUs",
+          "value": "standardEADSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEASv4Family",
+      "name": "standardEASv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard EASv4 Family vCPUs",
+          "value": "standardEASv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEASv5Family",
+      "name": "standardEASv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EASv5 Family vCPUs",
+          "value": "standardEASv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEDSv4Family",
+      "name": "standardEDSv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard EDSv4 Family vCPUs",
+          "value": "standardEDSv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEDSv5Family",
+      "name": "standardEDSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EDSv5 Family vCPUs",
+          "value": "standardEDSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardESv3Family",
+      "name": "standardESv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard ESv3 Family vCPUs",
+          "value": "standardESv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardESv4Family",
+      "name": "standardESv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard ESv4 Family vCPUs",
+          "value": "standardESv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardESv5Family",
+      "name": "standardESv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard ESv5 Family vCPUs",
+          "value": "standardESv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEadv6Family",
+      "name": "standardEadv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "standard Eadv6 Family vCPUs",
+          "value": "standardEadv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEav6Family",
+      "name": "standardEav6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "standard Eav6 Family vCPUs",
+          "value": "standardEav6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEAv4Family",
+      "name": "standardEAv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EAv4 Family vCPUs",
+          "value": "standardEAv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEBDSv5Family",
+      "name": "standardEBDSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard EBDSv5 Family vCPUs",
+          "value": "standardEBDSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEBSv5Family",
+      "name": "standardEBSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard EBSv5 Family vCPUs",
+          "value": "standardEBSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEDv4Family",
+      "name": "standardEDv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EDv4 Family vCPUs",
+          "value": "standardEDv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEDv5Family",
+      "name": "standardEDv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EDv5 Family vCPUs",
+          "value": "standardEDv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEPDSv5Family",
+      "name": "standardEPDSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EPDSv5 Family vCPUs",
+          "value": "standardEPDSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardEpdsv6Family",
+      "name": "StandardEpdsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Epdsv6 Family vCPUs",
+          "value": "StandardEpdsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEPSv5Family",
+      "name": "standardEPSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EPSv5 Family vCPUs",
+          "value": "standardEPSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardEpsv6Family",
+      "name": "StandardEpsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Epsv6 Family vCPUs",
+          "value": "StandardEpsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEv3Family",
+      "name": "standardEv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Ev3 Family vCPUs",
+          "value": "standardEv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEv4Family",
+      "name": "standardEv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Ev4 Family vCPUs",
+          "value": "standardEv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEv5Family",
+      "name": "standardEv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard Ev5 Family vCPUs",
+          "value": "standardEv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEISv3Family",
+      "name": "standardEISv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard EISv3 Family vCPUs",
+          "value": "standardEISv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEIv3Family",
+      "name": "standardEIv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard EIv3 Family vCPUs",
+          "value": "standardEIv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardXEIDSv4Family",
+      "name": "standardXEIDSv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EIDSv4 Family vCPUs",
+          "value": "standardXEIDSv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardXEISv4Family",
+      "name": "standardXEISv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard XEISv4 Family vCPUs",
+          "value": "standardXEISv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardEIASv4Family",
+      "name": "standardEIASv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard EIASv4 Family vCPUs",
+          "value": "standardEIASv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardECEDV5Family",
+      "name": "standardECEDV5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard ECEDV5 Family vCPUs",
+          "value": "standardECEDV5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardECEV5Family",
+      "name": "standardECEV5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard ECEV5 Family vCPUs",
+          "value": "standardECEV5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardECADCCV5Family",
+      "name": "standardECADCCV5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "standard ECADCCV5 Family vCPUs",
+          "value": "standardECADCCV5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardECADSv5Family",
+      "name": "standardECADSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard ECADSv5 Family vCPUs",
+          "value": "standardECADSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardECadsv6Family",
+      "name": "standardECadsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard ECadsv6 Family vCPUs",
+          "value": "standardECadsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardECACCV5Family",
+      "name": "standardECACCV5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "standard ECACCV5 Family vCPUs",
+          "value": "standardECACCV5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardECASv5Family",
+      "name": "standardECASv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard ECASv5 Family vCPUs",
+          "value": "standardECASv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardECasv6Family",
+      "name": "standardECasv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard ECasv6 Family vCPUs",
+          "value": "standardECasv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardECEDV6Family",
+      "name": "StandardECEDV6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard ECEDV6 Family vCPUs",
+          "value": "StandardECEDV6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardECEV6Family",
+      "name": "StandardECEV6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard ECEV6 Family vCPUs",
+          "value": "StandardECEV6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardECIADSv5Family",
+      "name": "standardECIADSv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard ECIADSv5 Family vCPUs",
+          "value": "standardECIADSv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardECIASv5Family",
+      "name": "standardECIASv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard ECIASv5 Family vCPUs",
+          "value": "standardECIASv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardFFamily",
+      "name": "standardFFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard F Family vCPUs",
+          "value": "standardFFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardFamdsv7Family",
+      "name": "StandardFamdsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Famdsv7 Family vCPUs",
+          "value": "StandardFamdsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardFamsv7Family",
+      "name": "StandardFamsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Famsv7 Family vCPUs",
+          "value": "StandardFamsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardFadsv7Family",
+      "name": "StandardFadsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Fadsv7 Family vCPUs",
+          "value": "StandardFadsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardFaldsv7Family",
+      "name": "StandardFaldsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Faldsv7 Family vCPUs",
+          "value": "StandardFaldsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardFalsv6Family",
+      "name": "StandardFalsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Falsv6 Family vCPUs",
+          "value": "StandardFalsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardFalsv7Family",
+      "name": "StandardFalsv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Falsv7 Family vCPUs",
+          "value": "StandardFalsv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardFamsv6Family",
+      "name": "StandardFamsv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Famsv6 Family vCPUs",
+          "value": "StandardFamsv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardFasv6Family",
+      "name": "StandardFasv6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Fasv6 Family vCPUs",
+          "value": "StandardFasv6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardFasv7Family",
+      "name": "StandardFasv7Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Fasv7 Family vCPUs",
+          "value": "StandardFasv7Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardFSFamily",
+      "name": "standardFSFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard FS Family vCPUs",
+          "value": "standardFSFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardFSv2Family",
+      "name": "standardFSv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard FSv2 Family vCPUs",
+          "value": "standardFSv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardFXmdsv2Family",
+      "name": "StandardFXmdsv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard FXmdsv2 Family vCPUs",
+          "value": "StandardFXmdsv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardFXmsv2Family",
+      "name": "StandardFXmsv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard FXmsv2 Family vCPUs",
+          "value": "StandardFXmsv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardFXMDVSFamily",
+      "name": "standardFXMDVSFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard FXMDVS Family vCPUs",
+          "value": "standardFXMDVSFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardGFamily",
+      "name": "standardGFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard G Family vCPUs",
+          "value": "standardGFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardGSFamily",
+      "name": "standardGSFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard GS Family vCPUs",
+          "value": "standardGSFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardHFamily",
+      "name": "standardHFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 8
+        },
+        "name": {
+          "localizedValue": "Standard H Family vCPUs",
+          "value": "standardHFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardHPromoFamily",
+      "name": "standardHPromoFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 8
+        },
+        "name": {
+          "localizedValue": "Standard H Promo Family vCPUs",
+          "value": "standardHPromoFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardHBrsv2Family",
+      "name": "standardHBrsv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard HBrsv2 Family vCPUs",
+          "value": "standardHBrsv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardHBv3Family",
+      "name": "standardHBv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard HBv3 Family vCPUs",
+          "value": "standardHBv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardHBv4Family",
+      "name": "standardHBv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard HBv4 Family vCPUs",
+          "value": "standardHBv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardHBv5Family",
+      "name": "standardHBv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard Hbv5 Family vCPUs",
+          "value": "standardHBv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardHBSFamily",
+      "name": "standardHBSFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard HBS Family vCPUs",
+          "value": "standardHBSFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardHCSFamily",
+      "name": "standardHCSFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard HCS Family vCPUs",
+          "value": "standardHCSFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardHXFamily",
+      "name": "standardHXFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard HX Family vCPUs",
+          "value": "standardHXFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/internalNDMSv1Family",
+      "name": "internalNDMSv1Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "InternalNDM Sv 1 Family vCPUs",
+          "value": "internalNDMSv1Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardLaosv5Family",
+      "name": "standardLaosv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Laosv5 Family vCPUs",
+          "value": "standardLaosv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardLasv5Family",
+      "name": "standardLasv5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Lasv5 Family vCPUs",
+          "value": "standardLasv5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardLaosv4Family",
+      "name": "standardLaosv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Laosv4 Family vCPUs",
+          "value": "standardLaosv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardLASv3Family",
+      "name": "standardLASv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard LASv3 Family vCPUs",
+          "value": "standardLASv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardLasv4Family",
+      "name": "standardLasv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Lasv 4 Family vCPUs",
+          "value": "standardLasv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardLSFamily",
+      "name": "standardLSFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard LS Family vCPUs",
+          "value": "standardLSFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardLSv2Family",
+      "name": "standardLSv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard LSv2 Family vCPUs",
+          "value": "standardLSv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardLSv3Family",
+      "name": "standardLSv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard LSv3 Family vCPUs",
+          "value": "standardLSv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardLsv4Family",
+      "name": "standardLsv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard Lsv 4 Family vCPUs",
+          "value": "standardLsv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardMSFamily",
+      "name": "standardMSFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard MS Family vCPUs",
+          "value": "standardMSFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardMBDSMediumMemoryv3Family",
+      "name": "StandardMBDSMediumMemoryv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard MBDSMediumMemoryv3 Family vCPUs",
+          "value": "StandardMBDSMediumMemoryv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardMBSMediumMemoryv3Family",
+      "name": "StandardMBSMediumMemoryv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10
+        },
+        "name": {
+          "localizedValue": "Standard MBSMediumMemoryv3 Family vCPUs",
+          "value": "StandardMBSMediumMemoryv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardMDSMediumMemoryv2Family",
+      "name": "standardMDSMediumMemoryv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard MDSMediumMemoryv2 Family vCPUs",
+          "value": "standardMDSMediumMemoryv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardMSMediumMemoryv2Family",
+      "name": "standardMSMediumMemoryv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard MSMediumMemoryv2 Family vCPUs",
+          "value": "standardMSMediumMemoryv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardMDSMediumMemoryv3Family",
+      "name": "standardMDSMediumMemoryv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "StandardMDS Medium Memoryv3 Family vCPUs",
+          "value": "standardMDSMediumMemoryv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardMSMediumMemoryv3Family",
+      "name": "standardMSMediumMemoryv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "StandardMS Medium Memoryv3 Family vCPUs",
+          "value": "standardMSMediumMemoryv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardMIDSMediumMemoryv2Family",
+      "name": "standardMIDSMediumMemoryv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard MIDSMediumMemoryv2 Family vCPUs",
+          "value": "standardMIDSMediumMemoryv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardMISMediumMemoryv2Family",
+      "name": "standardMISMediumMemoryv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard MISMediumMemoryv2 Family vCPUs",
+          "value": "standardMISMediumMemoryv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardMSv2Family",
+      "name": "standardMSv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard MSv2 Family vCPUs",
+          "value": "standardMSv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardMDSHighMemoryv3Family",
+      "name": "standardMDSHighMemoryv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "StandardMDS High Memoryv3 Family vCPUs",
+          "value": "standardMDSHighMemoryv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardMSHighMemoryv3Family",
+      "name": "standardMSHighMemoryv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "StandardMS High Memoryv3 Family vCPUs",
+          "value": "standardMSHighMemoryv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardMIDSHighMemoryv3Family",
+      "name": "standardMIDSHighMemoryv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "StandardMIDS High Memoryv3 Family vCPUs",
+          "value": "standardMIDSHighMemoryv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardMISHighMemoryv3Family",
+      "name": "standardMISHighMemoryv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "StandardMIS High Memoryv3 Family vCPUs",
+          "value": "standardMISHighMemoryv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNCFamily",
+      "name": "standardNCFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 12
+        },
+        "name": {
+          "localizedValue": "Standard NC Family vCPUs",
+          "value": "standardNCFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNCSv2Family",
+      "name": "standardNCSv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NCSv2 Family vCPUs",
+          "value": "standardNCSv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNCSv3Family",
+      "name": "standardNCSv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NCSv3 Family vCPUs",
+          "value": "standardNCSv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNCPromoFamily",
+      "name": "standardNCPromoFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 12
+        },
+        "name": {
+          "localizedValue": "Standard NC Promo Family vCPUs",
+          "value": "standardNCPromoFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardNCADSA10v4Family",
+      "name": "StandardNCADSA10v4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NCADSA10v4 Family vCPUs",
+          "value": "StandardNCADSA10v4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/Standard NCASv3_T4 Family",
+      "name": "Standard NCASv3_T4 Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NCASv3_T4 Family vCPUs",
+          "value": "Standard NCASv3_T4 Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardNCADSA100v4Family",
+      "name": "StandardNCADSA100v4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NCADS_A100_v4 Family vCPUs",
+          "value": "StandardNCADSA100v4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardNCadsH100v5Family",
+      "name": "StandardNCadsH100v5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NCadsH100v5 Family vCPUs",
+          "value": "StandardNCadsH100v5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardNCCads2023Family",
+      "name": "StandardNCCads2023Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NCCads2023 Family vCPUs",
+          "value": "StandardNCCads2023Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNDISRGB300G5V6Family",
+      "name": "standardNDISRGB300G5V6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standardndisrgb300g5v6family vCPUs",
+          "value": "standardNDISRGB300G5V6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNDISRGB300V6Family",
+      "name": "standardNDISRGB300V6Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NDISR GB300V6 Family vCPUs",
+          "value": "standardNDISRGB300V6Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNDISRGB200V6NDRFamily",
+      "name": "standardNDISRGB200V6NDRFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "StandardNDISRGB200V6NDRFamily vCPUs",
+          "value": "standardNDISRGB200V6NDRFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNDSFamily",
+      "name": "standardNDSFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NDS Family vCPUs",
+          "value": "standardNDSFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNDSv2Family",
+      "name": "standardNDSv2Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NDSv2 Family vCPUs",
+          "value": "standardNDSv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNDSv3Family",
+      "name": "standardNDSv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NDSv3 Family vCPUs",
+          "value": "standardNDSv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standard NDAMSv4_A100Family",
+      "name": "standard NDAMSv4_A100Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NDAMSv4_A100Family vCPUs",
+          "value": "standard NDAMSv4_A100Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/Standard NDASv4_A100 Family",
+      "name": "Standard NDASv4_A100 Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NDASv4_A100 Family vCPUs",
+          "value": "Standard NDASv4_A100 Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNDSH100v5Family",
+      "name": "standardNDSH100v5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NDSH100v5 Family vCPUs",
+          "value": "standardNDSH100v5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNDISRH200V5Family",
+      "name": "standardNDISRH200V5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "StandardNDISRH200V5Family vCPUs",
+          "value": "standardNDISRH200V5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNDISv5MI300XFamily",
+      "name": "standardNDISv5MI300XFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "StandardNDI Sv 5MI300X Family vCPUs",
+          "value": "standardNDISv5MI300XFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardNGADSV620v1Family",
+      "name": "StandardNGADSV620v1Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NGADSV620v1 Family vCPUs",
+          "value": "StandardNGADSV620v1Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNPSFamily",
+      "name": "standardNPSFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NPS Family vCPUs",
+          "value": "standardNPSFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardNVADSA10v5Family",
+      "name": "StandardNVADSA10v5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NVADSA10v5 Family vCPUs",
+          "value": "StandardNVADSA10v5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNVFamily",
+      "name": "standardNVFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 12
+        },
+        "name": {
+          "localizedValue": "Standard NV Family vCPUs",
+          "value": "standardNVFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardNVadsV710v5Family",
+      "name": "StandardNVadsV710v5Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NVadsV710v5 Family vCPUs",
+          "value": "StandardNVadsV710v5Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNVSv2Family",
+      "name": "standardNVSv2Family",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NVSv2 Family vCPUs",
+          "value": "standardNVSv2Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNVSv3Family",
+      "name": "standardNVSv3Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 0
+        },
+        "name": {
+          "localizedValue": "Standard NVSv3 Family vCPUs",
+          "value": "standardNVSv3Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNVPromoFamily",
+      "name": "standardNVPromoFamily",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 12
+        },
+        "name": {
+          "localizedValue": "Standard NV Promo Family vCPUs",
+          "value": "standardNVPromoFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardNVSv4Family",
+      "name": "standardNVSv4Family",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 8
+        },
+        "name": {
+          "localizedValue": "Standard NVSv4 Family vCPUs",
+          "value": "standardNVSv4Family"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/standardPBSFamily",
+      "name": "standardPBSFamily",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 6
+        },
+        "name": {
+          "localizedValue": "Standard PBS Family vCPUs",
+          "value": "standardPBSFamily"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardDiskCount",
+      "name": "StandardDiskCount",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 50000
+        },
+        "name": {
+          "localizedValue": "Standard Storage Managed Disks",
+          "value": "StandardDiskCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/PremiumDiskCount",
+      "name": "PremiumDiskCount",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 50000
+        },
+        "name": {
+          "localizedValue": "Premium Storage Managed Disks",
+          "value": "PremiumDiskCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardSSDDiskCount",
+      "name": "StandardSSDDiskCount",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 50000
+        },
+        "name": {
+          "localizedValue": "StandardSSDStorageDisks",
+          "value": "StandardSSDDiskCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardSSDZRSDiskCount",
+      "name": "StandardSSDZRSDiskCount",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 50000
+        },
+        "name": {
+          "localizedValue": "StandardSSDZRSStorageDisks",
+          "value": "StandardSSDZRSDiskCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/PremiumZRSDiskCount",
+      "name": "PremiumZRSDiskCount",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 50000
+        },
+        "name": {
+          "localizedValue": "PremiumZRSStorageDisks",
+          "value": "PremiumZRSDiskCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/UltraSSDDiskCount",
+      "name": "UltraSSDDiskCount",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 1000
+        },
+        "name": {
+          "localizedValue": "UltraSSDStorageDisks",
+          "value": "UltraSSDDiskCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/PremiumV2DiskCount",
+      "name": "PremiumV2DiskCount",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 5000
+        },
+        "name": {
+          "localizedValue": "PremiumV2StorageDisks",
+          "value": "PremiumV2DiskCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardSnapshotCount",
+      "name": "StandardSnapshotCount",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 75000
+        },
+        "name": {
+          "localizedValue": "StandardStorageSnapshots",
+          "value": "StandardSnapshotCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/StandardSSDSnapshotCount",
+      "name": "StandardSSDSnapshotCount",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 75000
+        },
+        "name": {
+          "localizedValue": "StandardSSDStorageSnapshots",
+          "value": "StandardSSDSnapshotCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/PremiumSnapshotCount",
+      "name": "PremiumSnapshotCount",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 75000
+        },
+        "name": {
+          "localizedValue": "PremiumStorageSnapshots",
+          "value": "PremiumSnapshotCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/ZRSSnapshotCount",
+      "name": "ZRSSnapshotCount",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 75000
+        },
+        "name": {
+          "localizedValue": "ZrsStorageSnapshots",
+          "value": "ZRSSnapshotCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/UltraSSDDiskSizeInGB",
+      "name": "UltraSSDDiskSizeInGB",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 102400
+        },
+        "name": {
+          "localizedValue": "UltraSSDTotalSizeInGB",
+          "value": "UltraSSDDiskSizeInGB"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/PremiumV2DiskSizeInGB",
+      "name": "PremiumV2DiskSizeInGB",
+      "properties": {
+        "isQuotaApplicable": true,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 1048576
+        },
+        "name": {
+          "localizedValue": "PremiumV2TotalDiskSizeInGB",
+          "value": "PremiumV2DiskSizeInGB"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/DiskEncryptionSetCount",
+      "name": "DiskEncryptionSetCount",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 5000
+        },
+        "name": {
+          "localizedValue": "DiskEncryptionSets",
+          "value": "DiskEncryptionSetCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/DiskAccessCount",
+      "name": "DiskAccessCount",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 1000
+        },
+        "name": {
+          "localizedValue": "DiskAccesses",
+          "value": "DiskAccessCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/BackgroundCopyInProgressUltraSSDDiskCount",
+      "name": "BackgroundCopyInProgressUltraSSDDiskCount",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 50
+        },
+        "name": {
+          "localizedValue": "BackgroundCopyInProgressUltraSSDDisks",
+          "value": "BackgroundCopyInProgressUltraSSDDiskCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/BackgroundCopyInProgressPremiumV2DiskCount",
+      "name": "BackgroundCopyInProgressPremiumV2DiskCount",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 50
+        },
+        "name": {
+          "localizedValue": "BackgroundCopyInProgressPremiumV2Disks",
+          "value": "BackgroundCopyInProgressPremiumV2DiskCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/PremiumV2SnapshotCount",
+      "name": "PremiumV2SnapshotCount",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 1000
+        },
+        "name": {
+          "localizedValue": "PremiumV2StorageSnapshots",
+          "value": "PremiumV2SnapshotCount"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/PremiumV2SnapshotSizeInGB",
+      "name": "PremiumV2SnapshotSizeInGB",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 102400
+        },
+        "name": {
+          "localizedValue": "PremiumV2TotalSnapshotSizeInGB",
+          "value": "PremiumV2SnapshotSizeInGB"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/Gallery",
+      "name": "Gallery",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 100
+        },
+        "name": {
+          "localizedValue": "Gallery",
+          "value": "Gallery"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/GalleryImage",
+      "name": "GalleryImage",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 1000
+        },
+        "name": {
+          "localizedValue": "Gallery Image",
+          "value": "GalleryImage"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/GalleryImageVersion",
+      "name": "GalleryImageVersion",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 10000
+        },
+        "name": {
+          "localizedValue": "Gallery Image Version",
+          "value": "GalleryImageVersion"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/GalleryApplicationVersion",
+      "name": "GalleryApplicationVersion",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 300
+        },
+        "name": {
+          "localizedValue": "Gallery Application Version",
+          "value": "GalleryApplicationVersion"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/westus3/providers/Microsoft.Quota/quotas/GalleryScriptVersion",
+      "name": "GalleryScriptVersion",
+      "properties": {
+        "isQuotaApplicable": false,
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 300
+        },
+        "name": {
+          "localizedValue": "Gallery Script Version",
+          "value": "GalleryScriptVersion"
+        },
+        "properties": {},
+        "unit": "Count"
+      },
+      "type": "Microsoft.Quota/Quotas"
+    }
+  ]
+}

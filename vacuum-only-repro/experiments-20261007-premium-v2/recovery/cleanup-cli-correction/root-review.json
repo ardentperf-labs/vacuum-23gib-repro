@@ -1,0 +1,11 @@
+{
+  "reviewedAtUtc": "2026-10-07T12:29:03.692677+00:00",
+  "previousTeardownSha256": "c49fc87cf125b3dc85f2219c39fbc0d0838903bb9f03d96ffbec66f9376f02ca",
+  "teardownSha256": "b8286fa5de3ec9ba0e3a2a7f67e8122303026626bd955e1f4783a015543431ca",
+  "testSha256": "b5e80ba9c5ea6c0e76ed28def91ddf0e6bdd7355df3c0c7eff4964290c0a4dca",
+  "scope": "Exactly four scoped role-assignment list calls omit --all. All ownership, snapshot protection, source identity, active copy and indirect deletion guards remain unchanged. Exact ID/scope/principal/role binding is preserved.",
+  "checks": "Independent Luna review, root full source diff review, all nine focused policy tests passed, and three actual live scoped read-only lookups verified exact identities. Installed CLI and official Azure CLI implementation confirm direct scope semantics.",
+  "liveReadReceipt": "recovery/cleanup-cli-correction/live-scoped-read-verification.json",
+  "allSnapshotRetentionUnchanged": true,
+  "cloudMutationScopeUnchanged": true
+}

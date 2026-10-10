@@ -1,0 +1,412 @@
+[
+  {
+    "name": "azhr-keep-scsi-prepared-7a297601434285b1",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-az-hdd-repro-snapshot-keeper",
+    "sku": "Standard_LRS",
+    "tags": {
+      "candidateSourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/snapshots/vacuum-copy-804391dc",
+      "createdBy": "parallel-keeper-validation-20261004",
+      "reproPurpose": "retained-primary-pg-snapshot",
+      "reproSourceSetId": "scsi-prepared"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "aks-vacuum-only-c370be15909d",
+    "type": "Microsoft.ContainerService/managedClusters",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-only-c370be15909de6a69298cb6713d85226",
+    "sku": "Base",
+    "tags": {
+      "managed-by": "vacuum-only-repro"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "vacuum-copy-c370be15",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-nodes-c370be15909de6a69298cb6713d85226",
+    "sku": "Standard_LRS",
+    "tags": {
+      "reproPurpose": "restore-source-copy",
+      "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-84308a63-e3ce-4617-9cac-813ff5226aaf",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-nodes-c370be15909de6a69298cb6713d85226",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-c370be15909de6a69298cb6713d85226/providers/Microsoft.Compute/disks/pvc-600e6a38-0fd4-4244-bfcb-549bf4990a75"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-d61fbe90-30e4-4556-80ce-6eade4540bdb",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-nodes-c370be15909de6a69298cb6713d85226",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-c370be15909de6a69298cb6713d85226/providers/Microsoft.Compute/disks/pvc-3935e7c1-d5a4-499f-80e1-30cdf1b86836"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "aks-vacuum-only-0aaf271768f7",
+    "type": "Microsoft.ContainerService/managedClusters",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-only-0aaf271768f70a4fd06a9cb05e75a4ea",
+    "sku": "Base",
+    "tags": {
+      "managed-by": "vacuum-only-repro"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "vacuum-copy-0aaf2717",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-nodes-0aaf271768f70a4fd06a9cb05e75a4ea",
+    "sku": "Standard_LRS",
+    "tags": {
+      "reproPurpose": "restore-source-copy",
+      "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-406392c2-75ac-4caa-b329-e620bddbf5ce",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-nodes-0aaf271768f70a4fd06a9cb05e75a4ea",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-0aaf271768f70a4fd06a9cb05e75a4ea/providers/Microsoft.Compute/disks/pvc-8914e88b-e123-4117-88b7-7493896698b7"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-c8982298-a32d-4955-a144-205ddf80a3e7",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-nodes-0aaf271768f70a4fd06a9cb05e75a4ea",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-0aaf271768f70a4fd06a9cb05e75a4ea/providers/Microsoft.Compute/disks/pvc-e159778d-37d9-4cab-9793-e46878b79275"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-48de84ee-7815-4c0c-a96f-e7d0751e08a5",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-retained-e92bdc2762775aa5ecbb33bf383e563d",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "reproPurpose": "cnpg-pre-vacuum-snapshot",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-e92bdc2762775aa5ecbb33bf383e563d/providers/Microsoft.Compute/disks/pvc-5c79be5a-d9c2-4a47-bdd5-68a340ef3717"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-4bfa0dd4-8ccb-4a22-a514-fe4770e83e1a",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-retained-e92bdc2762775aa5ecbb33bf383e563d",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "reproPurpose": "cnpg-pre-vacuum-snapshot",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-e92bdc2762775aa5ecbb33bf383e563d/providers/Microsoft.Compute/disks/pvc-8f26dea5-ef91-44b0-ac47-519af8fceef1"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-bf28fdba-ac33-4a6d-82ff-03f66821489f",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-retained-e92bdc2762775aa5ecbb33bf383e563d",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "reproPurpose": "cnpg-pre-vacuum-snapshot",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-e92bdc2762775aa5ecbb33bf383e563d/providers/Microsoft.Compute/disks/pvc-5c79be5a-d9c2-4a47-bdd5-68a340ef3717"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-90446491-f3b1-4bbe-a527-93ee6066d102",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-retained-e92bdc2762775aa5ecbb33bf383e563d",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "reproPurpose": "cnpg-pre-vacuum-snapshot",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-e92bdc2762775aa5ecbb33bf383e563d/providers/Microsoft.Compute/disks/pvc-8f26dea5-ef91-44b0-ac47-519af8fceef1"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "vacuum-copy-e92bdc27",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-retained-e92bdc2762775aa5ecbb33bf383e563d",
+    "sku": "Standard_LRS",
+    "tags": {
+      "reproPurpose": "restore-source-copy",
+      "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "keeper-base-35e99cb5",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-only-35e99cb5febda94c55ccf8b1bed3704c",
+    "sku": "Standard_LRS",
+    "tags": {
+      "reproPurpose": "regional-snapshot-base"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "keeper-35e99cb5",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-only-35e99cb5febda94c55ccf8b1bed3704c",
+    "sku": "Standard_LRS",
+    "tags": {
+      "reproPurpose": "regional-prepared-source"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "keeper-base-16244c2c",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "eastus",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_LRS",
+    "tags": {
+      "reproPurpose": "regional-snapshot-base"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "keeper-16244c2c",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_LRS",
+    "tags": {
+      "reproPurpose": "regional-prepared-source"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "vacuum-copy-35e99cb5",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c",
+    "sku": "Standard_LRS",
+    "tags": {
+      "reproPurpose": "restore-source-copy",
+      "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/keeper-35e99cb5"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "vacuum-copy-16244c2c",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_LRS",
+    "tags": {
+      "reproPurpose": "restore-source-copy",
+      "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/snapshots/keeper-16244c2c"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/disks/pvc-a4aaa041-02e0-4924-831d-0a62a37b8507"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-01605f86-3d24-4371-81cc-9a908a426b18",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/disks/pvc-dcee1d34-1e20-42c3-a5a5-1702dcbdb7f7"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-9c783acb-2d07-4feb-bce6-6ae9e764cf27",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-e048477c-b49f-449c-8547-01bef8d8cf3a"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-60ee0174-0046-4022-8b22-eb0ecd09fd75",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-c79cd248-c1d4-466e-85f8-48aa321e7be0"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-9b94e91a-817f-4bbb-ad10-962a063bae49",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-3dd661b3-792f-47db-944a-378657abd364"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-efd44f62-4b4c-4e83-abd6-e3496281c58c",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-e2e0b6e2-b24b-477d-846d-c4c8b27f24e5"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-248b72da-1b4a-41bf-9cd9-65723367580b",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-e2e0b6e2-b24b-477d-846d-c4c8b27f24e5"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-69176264-19e3-445a-be3b-113c0b180cd9",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-3dd661b3-792f-47db-944a-378657abd364"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-28737878-e0aa-4cee-923a-a37578094b30",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-a6744b6b-840c-4209-8e69-bfd952cc5d93"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-1970d44d-cec9-4483-b853-9e7b9a7e0064",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-a4b98a63-5daf-4240-b4d2-7bb700235b70"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-4d712e3d-bc99-42ab-8874-3bc99089aa5a",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-fdb04c8e-09f2-44c7-8020-aa71c34097e5"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-d370b592-1c96-438d-a161-4a6557e656ae",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-ccfcfb07-5571-4505-9056-3de2e825e060"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-0396f821-5881-4ccd-bc9c-0d754b88a19e",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "reproPurpose": "fpw-off-seed-paired-replica",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/disks/pvc-a9dca03f-b331-4913-944f-c14043b83b72"
+    },
+    "snapshot": {}
+  },
+  {
+    "name": "snapshot-8c3724c4-0d3e-481d-bfea-ec27196cb40c",
+    "type": "Microsoft.Compute/snapshots",
+    "location": "westus3",
+    "resourceGroup": "rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c",
+    "sku": "Standard_ZRS",
+    "tags": {
+      "k8s-azure-created-by": "kubernetes-azure-dd",
+      "reproPurpose": "fpw-off-seed-paired-replica",
+      "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/disks/pvc-b31d2f04-499a-4c9a-9ef5-fb29d5c59272"
+    },
+    "snapshot": {}
+  }
+]

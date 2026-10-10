@@ -4,3 +4,12 @@ __pycache__/
 *.pyc
 snapshot.json
 artifacts/
+fio-standard-hdd/eastus/.state/
+fio-standard-hdd/eastus/**/state.json
+!fio-standard-hdd/eastus/**/artifacts/
+!fio-standard-hdd/eastus/**/artifacts/**
+fio-standard-hdd/westus2/.state/
+fio-standard-hdd/westus2/**/state.json
+fio-standard-hdd/westus2/**/ssh-key*
+!fio-standard-hdd/westus2/**/artifacts/
+!fio-standard-hdd/westus2/**/artifacts/**

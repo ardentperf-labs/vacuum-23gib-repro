@@ -1,0 +1,28 @@
+{
+  "preparedAtUtc": "2026-10-10T10:39:18.845480+00:00",
+  "purpose": "Publish archived measurements and offline analysis in the actual GitHub checkout",
+  "measurementArtifactsChanged": false,
+  "cloudOperationsPerformed": false,
+  "ignoredPrivateEvidence": "Runtime state, credentials, virtual environments, source WAL/database exports and relocation manifests remain local and ignored",
+  "navigationChanges": [
+    {
+      "path": "vacuum-only-repro/experiments-20261007-premium-v2/verification/03-test.py",
+      "oldTarget": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/framework/03-test.py",
+      "newTarget": "../framework/03-test.py",
+      "referencedSourceSha256": "59e3eb442dc2fa0d52df6eb97b8addd728f21b5742635d842afbf857f5c5a8a3",
+      "publishedSourceSha256": "59e3eb442dc2fa0d52df6eb97b8addd728f21b5742635d842afbf857f5c5a8a3"
+    },
+    {
+      "path": "vacuum-only-repro/experiments-20261007-premium-v2/verification/plot.py",
+      "oldTarget": "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/framework/plot.py",
+      "newTarget": "../framework/plot.py",
+      "referencedSourceSha256": "70155d4c5b5d1685600c431805feb305e7235aebb4081155668390e4467aca52",
+      "publishedSourceSha256": "9ec04066a9bdd368092dbaa00a687da5112b10b0f3dad91134ce63a953323c39"
+    }
+  ],
+  "validation": {
+    "pgbenchOfflineTestsPassed": 44,
+    "fioComparisonPrimaryRows": 54,
+    "fioComparisonTotalRows": 61
+  }
+}

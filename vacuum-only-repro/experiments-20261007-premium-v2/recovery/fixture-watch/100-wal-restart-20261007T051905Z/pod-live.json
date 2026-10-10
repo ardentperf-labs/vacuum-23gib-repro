@@ -1,0 +1,569 @@
+{
+    "apiVersion": "v1",
+    "kind": "Pod",
+    "metadata": {
+        "annotations": {
+            "cnpg.io/nodeSerial": "1",
+            "cnpg.io/operatorVersion": "1.30.1",
+            "cnpg.io/podEnvHash": "54d9d5b46b",
+            "cnpg.io/podSpec": "{\"volumes\":[{\"name\":\"pgdata\",\"persistentVolumeClaim\":{\"claimName\":\"hdd-pg-1\"}},{\"name\":\"scratch-data\",\"emptyDir\":{}},{\"name\":\"shm\",\"emptyDir\":{\"medium\":\"Memory\"}}],\"initContainers\":[{\"name\":\"bootstrap-controller\",\"image\":\"ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1\",\"command\":[\"/manager\",\"bootstrap\",\"/controller/manager\",\"--log-level=info\"],\"resources\":{\"limits\":{\"cpu\":\"2\",\"memory\":\"3Gi\"},\"requests\":{\"cpu\":\"1\",\"memory\":\"2Gi\"}},\"volumeMounts\":[{\"name\":\"pgdata\",\"mountPath\":\"/var/lib/postgresql/data\"},{\"name\":\"scratch-data\",\"mountPath\":\"/run\"},{\"name\":\"scratch-data\",\"mountPath\":\"/controller\"},{\"name\":\"shm\",\"mountPath\":\"/dev/shm\"}],\"securityContext\":{\"capabilities\":{\"drop\":[\"ALL\"]},\"privileged\":false,\"runAsNonRoot\":true,\"readOnlyRootFilesystem\":true,\"allowPrivilegeEscalation\":false,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}],\"containers\":[{\"name\":\"postgres\",\"image\":\"ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215\",\"command\":[\"/controller/manager\",\"instance\",\"run\",\"--status-port-tls\",\"--log-level=info\"],\"ports\":[{\"name\":\"postgresql\",\"containerPort\":5432,\"protocol\":\"TCP\"},{\"name\":\"metrics\",\"containerPort\":9187,\"protocol\":\"TCP\"},{\"name\":\"status\",\"containerPort\":8000,\"protocol\":\"TCP\"}],\"env\":[{\"name\":\"PGDATA\",\"value\":\"/var/lib/postgresql/data/pgdata\"},{\"name\":\"POD_NAME\",\"value\":\"hdd-pg-1\"},{\"name\":\"NAMESPACE\",\"value\":\"repro\"},{\"name\":\"CLUSTER_NAME\",\"value\":\"hdd-pg\"},{\"name\":\"PSQL_HISTORY\",\"value\":\"/controller/tmp/.psql_history\"},{\"name\":\"PGPORT\",\"value\":\"5432\"},{\"name\":\"PGHOST\",\"value\":\"/controller/run\"},{\"name\":\"TMPDIR\",\"value\":\"/controller/tmp\"}],\"resources\":{\"limits\":{\"cpu\":\"2\",\"memory\":\"3Gi\"},\"requests\":{\"cpu\":\"1\",\"memory\":\"2Gi\"}},\"volumeMounts\":[{\"name\":\"pgdata\",\"mountPath\":\"/var/lib/postgresql/data\"},{\"name\":\"scratch-data\",\"mountPath\":\"/run\"},{\"name\":\"scratch-data\",\"mountPath\":\"/controller\"},{\"name\":\"shm\",\"mountPath\":\"/dev/shm\"}],\"livenessProbe\":{\"httpGet\":{\"path\":\"/healthz\",\"port\":8000,\"scheme\":\"HTTPS\"},\"timeoutSeconds\":5,\"periodSeconds\":10},\"readinessProbe\":{\"httpGet\":{\"path\":\"/readyz\",\"port\":8000,\"scheme\":\"HTTPS\"},\"timeoutSeconds\":5,\"periodSeconds\":10},\"startupProbe\":{\"httpGet\":{\"path\":\"/startupz\",\"port\":8000,\"scheme\":\"HTTPS\"},\"timeoutSeconds\":5,\"periodSeconds\":10,\"failureThreshold\":360},\"securityContext\":{\"capabilities\":{\"drop\":[\"ALL\"]},\"privileged\":false,\"runAsNonRoot\":true,\"readOnlyRootFilesystem\":true,\"allowPrivilegeEscalation\":false,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}],\"terminationGracePeriodSeconds\":1800,\"serviceAccountName\":\"hdd-pg\",\"securityContext\":{\"runAsUser\":26,\"runAsGroup\":26,\"runAsNonRoot\":true,\"fsGroup\":26,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}},\"hostname\":\"hdd-pg-1\",\"affinity\":{\"podAntiAffinity\":{\"requiredDuringSchedulingIgnoredDuringExecution\":[{\"labelSelector\":{\"matchExpressions\":[{\"key\":\"cnpg.io/cluster\",\"operator\":\"In\",\"values\":[\"hdd-pg\"]},{\"key\":\"cnpg.io/podRole\",\"operator\":\"In\",\"values\":[\"instance\"]}]},\"topologyKey\":\"kubernetes.io/hostname\"}]}}}"
+        },
+        "creationTimestamp": "2026-10-06T21:01:10Z",
+        "deletionGracePeriodSeconds": 1800,
+        "deletionTimestamp": "2026-10-07T05:45:34Z",
+        "generation": 2,
+        "labels": {
+            "app.kubernetes.io/component": "database",
+            "app.kubernetes.io/instance": "hdd-pg",
+            "app.kubernetes.io/managed-by": "cloudnative-pg",
+            "app.kubernetes.io/name": "postgresql",
+            "app.kubernetes.io/version": "16",
+            "cnpg.io/cluster": "hdd-pg",
+            "cnpg.io/instanceName": "hdd-pg-1",
+            "cnpg.io/instanceRole": "primary",
+            "cnpg.io/podRole": "instance",
+            "role": "primary",
+            "topology.kubernetes.io/region": "eastus",
+            "topology.kubernetes.io/zone": "eastus-1"
+        },
+        "name": "hdd-pg-1",
+        "namespace": "repro",
+        "ownerReferences": [
+            {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "blockOwnerDeletion": true,
+                "controller": true,
+                "kind": "Cluster",
+                "name": "hdd-pg",
+                "uid": "cbd63e61-de31-4991-8c4a-fe7206407486"
+            }
+        ],
+        "resourceVersion": "247788",
+        "uid": "405550c1-241d-4bb2-81ea-30ec649ea373"
+    },
+    "spec": {
+        "affinity": {
+            "podAntiAffinity": {
+                "requiredDuringSchedulingIgnoredDuringExecution": [
+                    {
+                        "labelSelector": {
+                            "matchExpressions": [
+                                {
+                                    "key": "cnpg.io/cluster",
+                                    "operator": "In",
+                                    "values": [
+                                        "hdd-pg"
+                                    ]
+                                },
+                                {
+                                    "key": "cnpg.io/podRole",
+                                    "operator": "In",
+                                    "values": [
+                                        "instance"
+                                    ]
+                                }
+                            ]
+                        },
+                        "topologyKey": "kubernetes.io/hostname"
+                    }
+                ]
+            }
+        },
+        "containers": [
+            {
+                "command": [
+                    "/controller/manager",
+                    "instance",
+                    "run",
+                    "--status-port-tls",
+                    "--log-level=info"
+                ],
+                "env": [
+                    {
+                        "name": "PGDATA",
+                        "value": "/var/lib/postgresql/data/pgdata"
+                    },
+                    {
+                        "name": "POD_NAME",
+                        "value": "hdd-pg-1"
+                    },
+                    {
+                        "name": "NAMESPACE",
+                        "value": "repro"
+                    },
+                    {
+                        "name": "CLUSTER_NAME",
+                        "value": "hdd-pg"
+                    },
+                    {
+                        "name": "PSQL_HISTORY",
+                        "value": "/controller/tmp/.psql_history"
+                    },
+                    {
+                        "name": "PGPORT",
+                        "value": "5432"
+                    },
+                    {
+                        "name": "PGHOST",
+                        "value": "/controller/run"
+                    },
+                    {
+                        "name": "TMPDIR",
+                        "value": "/controller/tmp"
+                    }
+                ],
+                "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+                "imagePullPolicy": "IfNotPresent",
+                "livenessProbe": {
+                    "failureThreshold": 3,
+                    "httpGet": {
+                        "path": "/healthz",
+                        "port": 8000,
+                        "scheme": "HTTPS"
+                    },
+                    "periodSeconds": 10,
+                    "successThreshold": 1,
+                    "timeoutSeconds": 5
+                },
+                "name": "postgres",
+                "ports": [
+                    {
+                        "containerPort": 5432,
+                        "name": "postgresql",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 9187,
+                        "name": "metrics",
+                        "protocol": "TCP"
+                    },
+                    {
+                        "containerPort": 8000,
+                        "name": "status",
+                        "protocol": "TCP"
+                    }
+                ],
+                "readinessProbe": {
+                    "failureThreshold": 3,
+                    "httpGet": {
+                        "path": "/readyz",
+                        "port": 8000,
+                        "scheme": "HTTPS"
+                    },
+                    "periodSeconds": 10,
+                    "successThreshold": 1,
+                    "timeoutSeconds": 5
+                },
+                "resources": {
+                    "limits": {
+                        "cpu": "2",
+                        "memory": "3Gi"
+                    },
+                    "requests": {
+                        "cpu": "1",
+                        "memory": "2Gi"
+                    }
+                },
+                "securityContext": {
+                    "allowPrivilegeEscalation": false,
+                    "capabilities": {
+                        "drop": [
+                            "ALL"
+                        ]
+                    },
+                    "privileged": false,
+                    "readOnlyRootFilesystem": true,
+                    "runAsNonRoot": true,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "startupProbe": {
+                    "failureThreshold": 360,
+                    "httpGet": {
+                        "path": "/startupz",
+                        "port": 8000,
+                        "scheme": "HTTPS"
+                    },
+                    "periodSeconds": 10,
+                    "successThreshold": 1,
+                    "timeoutSeconds": 5
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "volumeMounts": [
+                    {
+                        "mountPath": "/var/lib/postgresql/data",
+                        "name": "pgdata"
+                    },
+                    {
+                        "mountPath": "/run",
+                        "name": "scratch-data"
+                    },
+                    {
+                        "mountPath": "/controller",
+                        "name": "scratch-data"
+                    },
+                    {
+                        "mountPath": "/dev/shm",
+                        "name": "shm"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-kcf7l",
+                        "readOnly": true
+                    }
+                ]
+            }
+        ],
+        "dnsPolicy": "ClusterFirst",
+        "enableServiceLinks": true,
+        "hostname": "hdd-pg-1",
+        "initContainers": [
+            {
+                "command": [
+                    "/manager",
+                    "bootstrap",
+                    "/controller/manager",
+                    "--log-level=info"
+                ],
+                "image": "ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1",
+                "imagePullPolicy": "IfNotPresent",
+                "name": "bootstrap-controller",
+                "resources": {
+                    "limits": {
+                        "cpu": "2",
+                        "memory": "3Gi"
+                    },
+                    "requests": {
+                        "cpu": "1",
+                        "memory": "2Gi"
+                    }
+                },
+                "securityContext": {
+                    "allowPrivilegeEscalation": false,
+                    "capabilities": {
+                        "drop": [
+                            "ALL"
+                        ]
+                    },
+                    "privileged": false,
+                    "readOnlyRootFilesystem": true,
+                    "runAsNonRoot": true,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "terminationMessagePath": "/dev/termination-log",
+                "terminationMessagePolicy": "File",
+                "volumeMounts": [
+                    {
+                        "mountPath": "/var/lib/postgresql/data",
+                        "name": "pgdata"
+                    },
+                    {
+                        "mountPath": "/run",
+                        "name": "scratch-data"
+                    },
+                    {
+                        "mountPath": "/controller",
+                        "name": "scratch-data"
+                    },
+                    {
+                        "mountPath": "/dev/shm",
+                        "name": "shm"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-kcf7l",
+                        "readOnly": true
+                    }
+                ]
+            }
+        ],
+        "nodeName": "aks-nodepool1-15388874-vmss000001",
+        "preemptionPolicy": "PreemptLowerPriority",
+        "priority": 0,
+        "restartPolicy": "Always",
+        "schedulerName": "default-scheduler",
+        "securityContext": {
+            "fsGroup": 26,
+            "runAsGroup": 26,
+            "runAsNonRoot": true,
+            "runAsUser": 26,
+            "seccompProfile": {
+                "type": "RuntimeDefault"
+            }
+        },
+        "serviceAccount": "hdd-pg",
+        "serviceAccountName": "hdd-pg",
+        "terminationGracePeriodSeconds": 1800,
+        "tolerations": [
+            {
+                "effect": "NoExecute",
+                "key": "node.kubernetes.io/not-ready",
+                "operator": "Exists",
+                "tolerationSeconds": 300
+            },
+            {
+                "effect": "NoExecute",
+                "key": "node.kubernetes.io/unreachable",
+                "operator": "Exists",
+                "tolerationSeconds": 300
+            },
+            {
+                "effect": "NoSchedule",
+                "key": "node.kubernetes.io/memory-pressure",
+                "operator": "Exists"
+            }
+        ],
+        "volumes": [
+            {
+                "name": "pgdata",
+                "persistentVolumeClaim": {
+                    "claimName": "hdd-pg-1"
+                }
+            },
+            {
+                "emptyDir": {},
+                "name": "scratch-data"
+            },
+            {
+                "emptyDir": {
+                    "medium": "Memory"
+                },
+                "name": "shm"
+            },
+            {
+                "name": "kube-api-access-kcf7l",
+                "projected": {
+                    "defaultMode": 420,
+                    "sources": [
+                        {
+                            "serviceAccountToken": {
+                                "expirationSeconds": 3607,
+                                "path": "token"
+                            }
+                        },
+                        {
+                            "configMap": {
+                                "items": [
+                                    {
+                                        "key": "ca.crt",
+                                        "path": "ca.crt"
+                                    }
+                                ],
+                                "name": "kube-root-ca.crt"
+                            }
+                        },
+                        {
+                            "downwardAPI": {
+                                "items": [
+                                    {
+                                        "fieldRef": {
+                                            "apiVersion": "v1",
+                                            "fieldPath": "metadata.namespace"
+                                        },
+                                        "path": "namespace"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "status": {
+        "conditions": [
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-10-06T21:01:39Z",
+                "observedGeneration": 2,
+                "status": "True",
+                "type": "PodReadyToStartContainers"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-10-06T21:01:41Z",
+                "observedGeneration": 2,
+                "status": "True",
+                "type": "Initialized"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-10-07T05:15:55Z",
+                "message": "containers with unready status: [postgres]",
+                "observedGeneration": 2,
+                "reason": "ContainersNotReady",
+                "status": "False",
+                "type": "Ready"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-10-07T05:15:55Z",
+                "message": "containers with unready status: [postgres]",
+                "observedGeneration": 2,
+                "reason": "ContainersNotReady",
+                "status": "False",
+                "type": "ContainersReady"
+            },
+            {
+                "lastProbeTime": null,
+                "lastTransitionTime": "2026-10-06T21:01:10Z",
+                "observedGeneration": 2,
+                "status": "True",
+                "type": "PodScheduled"
+            }
+        ],
+        "containerStatuses": [
+            {
+                "allocatedResources": {
+                    "cpu": "1",
+                    "memory": "2Gi"
+                },
+                "containerID": "containerd://daae9b1070a09f23c26d7f37e42a47de7e994de10e6934ee581c3ba0c2645c3e",
+                "image": "sha256:6fd8088f6e9c40a2ec6b61bad944a8590b4929d571be3b56055cc920999b2d45",
+                "imageID": "ghcr.io/cloudnative-pg/postgresql@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+                "lastState": {},
+                "name": "postgres",
+                "ready": false,
+                "resources": {
+                    "limits": {
+                        "cpu": "2",
+                        "memory": "3Gi"
+                    },
+                    "requests": {
+                        "cpu": "1",
+                        "memory": "2Gi"
+                    }
+                },
+                "restartCount": 0,
+                "started": true,
+                "state": {
+                    "running": {
+                        "startedAt": "2026-10-06T21:01:54Z"
+                    }
+                },
+                "user": {
+                    "linux": {
+                        "gid": 26,
+                        "supplementalGroups": [
+                            26,
+                            101
+                        ],
+                        "uid": 26
+                    }
+                },
+                "volumeMounts": [
+                    {
+                        "mountPath": "/var/lib/postgresql/data",
+                        "name": "pgdata"
+                    },
+                    {
+                        "mountPath": "/run",
+                        "name": "scratch-data"
+                    },
+                    {
+                        "mountPath": "/controller",
+                        "name": "scratch-data"
+                    },
+                    {
+                        "mountPath": "/dev/shm",
+                        "name": "shm"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-kcf7l",
+                        "readOnly": true,
+                        "recursiveReadOnly": "Disabled"
+                    }
+                ]
+            }
+        ],
+        "hostIP": "10.224.0.5",
+        "hostIPs": [
+            {
+                "ip": "10.224.0.5"
+            }
+        ],
+        "initContainerStatuses": [
+            {
+                "allocatedResources": {
+                    "cpu": "1",
+                    "memory": "2Gi"
+                },
+                "containerID": "containerd://6872ce2994d7eba667d9ac0f88ea87d293252bd42276739bbe3cdeaa32fe3f06",
+                "image": "ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1",
+                "imageID": "ghcr.io/cloudnative-pg/cloudnative-pg@sha256:923c267ec29636db3bee20f993d0ec4973fa22998e1adad37da79e4d32b5bc07",
+                "lastState": {},
+                "name": "bootstrap-controller",
+                "ready": true,
+                "resources": {
+                    "limits": {
+                        "cpu": "2",
+                        "memory": "3Gi"
+                    },
+                    "requests": {
+                        "cpu": "1",
+                        "memory": "2Gi"
+                    }
+                },
+                "restartCount": 0,
+                "started": false,
+                "state": {
+                    "terminated": {
+                        "containerID": "containerd://6872ce2994d7eba667d9ac0f88ea87d293252bd42276739bbe3cdeaa32fe3f06",
+                        "exitCode": 0,
+                        "finishedAt": "2026-10-06T21:01:40Z",
+                        "reason": "Completed",
+                        "startedAt": "2026-10-06T21:01:39Z"
+                    }
+                },
+                "user": {
+                    "linux": {
+                        "gid": 26,
+                        "supplementalGroups": [
+                            26
+                        ],
+                        "uid": 26
+                    }
+                },
+                "volumeMounts": [
+                    {
+                        "mountPath": "/var/lib/postgresql/data",
+                        "name": "pgdata"
+                    },
+                    {
+                        "mountPath": "/run",
+                        "name": "scratch-data"
+                    },
+                    {
+                        "mountPath": "/controller",
+                        "name": "scratch-data"
+                    },
+                    {
+                        "mountPath": "/dev/shm",
+                        "name": "shm"
+                    },
+                    {
+                        "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                        "name": "kube-api-access-kcf7l",
+                        "readOnly": true,
+                        "recursiveReadOnly": "Disabled"
+                    }
+                ]
+            }
+        ],
+        "observedGeneration": 2,
+        "phase": "Running",
+        "podIP": "10.244.1.196",
+        "podIPs": [
+            {
+                "ip": "10.244.1.196"
+            }
+        ],
+        "qosClass": "Burstable",
+        "startTime": "2026-10-06T21:01:10Z"
+    }
+}

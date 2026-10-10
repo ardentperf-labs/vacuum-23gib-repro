@@ -1,0 +1,16 @@
+WARNING: Consider upgrading security for your workloads using Azure Trusted Launch VMs. To know more about Trusted Launch, please visit https://aka.ms/TrustedLaunch.
+Traceback (most recent call last):
+  File "/workspace/fio-hdd-repro/provision.py", line 49, in <module>
+    az('vm', 'disk', 'attach', '-g', state['rg'], '--vm-name', state['vm'], '--name', disk['id'],
+  File "/workspace/fio-hdd-repro/provision.py", line 8, in az
+    return json.loads(subprocess.check_output(['az', *args, '-o', 'json'], text=True))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

@@ -1,0 +1,68 @@
+{
+  "capturedAtUtc": "2026-10-04T18:33:27Z",
+  "experimentGroupsAbsent": {
+    "rg-az-hdd-parallel-d4-scsihost": false,
+    "rg-az-hdd-parallel-heavy-off": false,
+    "rg-az-hdd-parallel-heavy-on": false,
+    "rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a": false,
+    "rg-vacuum-nodes-aabfbb8edeb0669d6619a43063740ce7": false,
+    "rg-vacuum-nodes-b198f3c57285598156bcdc3f198be3d0": false,
+    "rg-vacuum-only-61ff4c4c73cc72ca98b8e0267725020f": false,
+    "rg-vacuum-only-804391dc0a7b56b597915163951aed1a": false,
+    "rg-vacuum-only-aabfbb8edeb0669d6619a43063740ce7": false,
+    "rg-vacuum-only-b198f3c57285598156bcdc3f198be3d0": false,
+    "rg-vacuum-only-nodes-61ff4c4c73cc72ca98b8e0267725020f": false,
+    "rg-vacuum-watcher-804391dc0a7b56b597915163951aed1a": false,
+    "rg-vacuum-watcher-aabfbb8edeb0669d6619a43063740ce7": false
+  },
+  "keeperResourceGroup": {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper",
+    "location": "eastus2",
+    "managedBy": null,
+    "name": "rg-az-hdd-repro-snapshot-keeper",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": {
+      "managed-by": "local-repro-script",
+      "reproPurpose": "prepared-snapshot-keeper",
+      "reprotoken": "93494924de3e081fc5803031e15d5587"
+    },
+    "type": "Microsoft.Resources/resourceGroups"
+  },
+  "keeperResourceGroupInventory": [
+    {
+      "changedTime": "2026-10-04T18:32:22.057891+00:00",
+      "createdTime": "2026-10-04T14:10:10.038372+00:00",
+      "extendedLocation": null,
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+      "identity": null,
+      "kind": null,
+      "location": "eastus",
+      "managedBy": null,
+      "name": "azhr-keep-scsi-prepared-7a297601434285b1",
+      "plan": null,
+      "properties": null,
+      "provisioningState": "Succeeded",
+      "resourceGroup": "rg-az-hdd-repro-snapshot-keeper",
+      "sku": {
+        "capacity": null,
+        "family": null,
+        "model": null,
+        "name": "Standard_LRS",
+        "size": null,
+        "tier": "Standard"
+      },
+      "tags": {
+        "candidateSourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/snapshots/vacuum-copy-804391dc",
+        "candidateToken": "2e23e93101111749a496b2a58ac1f2ad",
+        "createdBy": "parallel-keeper-validation-20261004",
+        "reproPurpose": "retained-primary-pg-snapshot",
+        "reproSourceSetId": "scsi-prepared",
+        "reproSourceToken": "804391dc0a7b56b597915163951aed1a",
+        "reprotoken": "93494924de3e081fc5803031e15d5587"
+      },
+      "type": "Microsoft.Compute/snapshots"
+    }
+  ]
+}

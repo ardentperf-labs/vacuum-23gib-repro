@@ -1,0 +1,14 @@
+[
+  {
+    "event": "sender_timeout",
+    "message": "terminating walsender process due to replication timeout",
+    "role": "primary",
+    "time": "2026-10-04T07:19:34.60885486Z"
+  },
+  {
+    "event": "receiver_disconnect",
+    "message": "could not receive data from WAL stream: server closed the connection unexpectedly\n\tThis probably means the server terminated abnormally\n\tbefore or while processing the request.\nserver closed the connection unexpectedly\n\tThis probably means the server terminated abnormally\n\tbefore or while processing the request.",
+    "role": "replica",
+    "time": "2026-10-04T07:19:37.889314211Z"
+  }
+]

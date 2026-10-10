@@ -1,0 +1,123 @@
+{
+  "exitCode": 0,
+  "finishedAtUtc": "2026-10-09T09:19:20.283Z",
+  "requestResult": "graceful_stop_requested",
+  "requestedAtUtc": "2026-10-09T09:19:16.064Z",
+  "serverActivityAfterDrain": {
+    "activeSessions": 0,
+    "backends": [],
+    "benchSessions": 0,
+    "committedTransactions": 13176,
+    "idleClientReadSessions": 0,
+    "maxActiveQueryAgeSeconds": null,
+    "maxActiveXactAgeSeconds": null,
+    "observedAtUtc": "2026-10-09T09:19:19.446970Z",
+    "sampleCommandSeconds": 0.7734413649886847,
+    "sampleEpoch": 1791537559.4941514,
+    "sampleRequestedEpoch": 1791537558.7207093,
+    "sampleStatus": "ok",
+    "unrelatedAppSessions": 0,
+    "waitingSessions": 0
+  },
+  "serverActivityBeforeStopRequest": {
+    "activeSessions": 0,
+    "backends": [
+      {
+        "pid": 1320,
+        "queryAgeSeconds": 1.661279,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1321,
+        "queryAgeSeconds": 0.686488,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1322,
+        "queryAgeSeconds": 0.455593,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1323,
+        "queryAgeSeconds": 2.892503,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1324,
+        "queryAgeSeconds": 1.560032,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1325,
+        "queryAgeSeconds": 1.132507,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1326,
+        "queryAgeSeconds": 3.092731,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1327,
+        "queryAgeSeconds": 0.634671,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1328,
+        "queryAgeSeconds": 0.633627,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      },
+      {
+        "pid": 1329,
+        "queryAgeSeconds": 3.0451,
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null
+      }
+    ],
+    "benchSessions": 10,
+    "committedTransactions": 13171,
+    "idleClientReadSessions": 10,
+    "maxActiveQueryAgeSeconds": null,
+    "maxActiveXactAgeSeconds": null,
+    "observedAtUtc": "2026-10-09T09:19:15.463602Z",
+    "sampleCommandSeconds": 0.791296333016362,
+    "sampleEpoch": 1791537555.51127,
+    "sampleRequestedEpoch": 1791537554.7199733,
+    "sampleStatus": "ok",
+    "unrelatedAppSessions": 0,
+    "waitingSessions": 0
+  },
+  "signal": "SIGALRM",
+  "signalSemantics": "pgbench duration handler stops scheduling and drains active transactions",
+  "status": "0",
+  "waitSeconds": 3.456337998039089
+}

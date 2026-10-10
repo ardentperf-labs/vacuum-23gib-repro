@@ -1,0 +1,5853 @@
+{
+  "checkedAtUtc": "2026-10-06T22:48:17.292140+00:00",
+  "metricDefinitionApiVersion": "2018-01-01",
+  "stacks": [
+    {
+      "name": "baseline-23gib",
+      "nodeResourceGroup": "rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e",
+      "vmScaleSets": [
+        {
+          "name": "aks-nodepool1-34976006-vmss",
+          "sku": "Standard_D2s_v4",
+          "instanceCount": 2,
+          "instances": [
+            {
+              "instanceId": "0",
+              "vmSize": "Standard_D2s_v4",
+              "metricDefinitionsStatus": 200,
+              "metricCount": 64,
+              "metrics": [
+                {
+                  "name": "Percentage CPU",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network In",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network Out",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Read Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Write Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "CPU Credits Remaining",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "CPU Credits Consumed",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Target Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Target IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Max Burst Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Max Burst IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Target Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Target IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Max Burst Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Max Burst IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Inbound Flows",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Outbound Flows",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Inbound Flows Maximum Creation Rate",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Outbound Flows Maximum Creation Rate",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium Data Disk Cache Read Hit",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium Data Disk Cache Read Miss",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium OS Disk Cache Read Hit",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium OS Disk Cache Read Miss",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Cached Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Cached IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Uncached Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Uncached IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network In Total",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network Out Total",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Available Memory Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Available Memory Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VmAvailabilityMetric",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Remote Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Remote Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Local Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Local Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                }
+              ]
+            },
+            {
+              "instanceId": "1",
+              "vmSize": "Standard_D2s_v4",
+              "metricDefinitionsStatus": 200,
+              "metricCount": 64,
+              "metrics": [
+                {
+                  "name": "Percentage CPU",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network In",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network Out",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Read Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Write Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "CPU Credits Remaining",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "CPU Credits Consumed",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Target Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Target IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Max Burst Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Max Burst IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Target Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Target IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Max Burst Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Max Burst IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Inbound Flows",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Outbound Flows",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Inbound Flows Maximum Creation Rate",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Outbound Flows Maximum Creation Rate",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium Data Disk Cache Read Hit",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium Data Disk Cache Read Miss",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium OS Disk Cache Read Hit",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium OS Disk Cache Read Miss",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Cached Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Cached IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Uncached Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Uncached IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network In Total",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network Out Total",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Available Memory Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Available Memory Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VmAvailabilityMetric",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Remote Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Remote Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Local Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Local Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "50gib",
+      "nodeResourceGroup": "rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6",
+      "vmScaleSets": [
+        {
+          "name": "aks-nodepool1-30685692-vmss",
+          "sku": "Standard_D2s_v4",
+          "instanceCount": 2,
+          "instances": [
+            {
+              "instanceId": "0",
+              "vmSize": "Standard_D2s_v4",
+              "metricDefinitionsStatus": 200,
+              "metricCount": 64,
+              "metrics": [
+                {
+                  "name": "Percentage CPU",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network In",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network Out",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Read Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Write Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "CPU Credits Remaining",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "CPU Credits Consumed",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Target Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Target IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Max Burst Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Max Burst IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Target Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Target IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Max Burst Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Max Burst IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Inbound Flows",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Outbound Flows",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Inbound Flows Maximum Creation Rate",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Outbound Flows Maximum Creation Rate",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium Data Disk Cache Read Hit",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium Data Disk Cache Read Miss",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium OS Disk Cache Read Hit",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium OS Disk Cache Read Miss",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Cached Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Cached IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Uncached Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Uncached IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network In Total",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network Out Total",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Available Memory Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Available Memory Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VmAvailabilityMetric",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Remote Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Remote Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Local Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Local Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                }
+              ]
+            },
+            {
+              "instanceId": "1",
+              "vmSize": "Standard_D2s_v4",
+              "metricDefinitionsStatus": 200,
+              "metricCount": 64,
+              "metrics": [
+                {
+                  "name": "Percentage CPU",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network In",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network Out",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Read Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Write Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "CPU Credits Remaining",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "CPU Credits Consumed",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Target Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Target IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Max Burst Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Max Burst IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Target Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Target IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Max Burst Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Max Burst IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Inbound Flows",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Outbound Flows",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Inbound Flows Maximum Creation Rate",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Outbound Flows Maximum Creation Rate",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium Data Disk Cache Read Hit",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium Data Disk Cache Read Miss",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium OS Disk Cache Read Hit",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium OS Disk Cache Read Miss",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Cached Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Cached IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Uncached Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Uncached IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network In Total",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network Out Total",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Available Memory Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Available Memory Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VmAvailabilityMetric",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Remote Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Remote Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Local Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Local Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "100gib",
+      "nodeResourceGroup": "rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf",
+      "vmScaleSets": [
+        {
+          "name": "aks-nodepool1-15388874-vmss",
+          "sku": "Standard_D2s_v4",
+          "instanceCount": 2,
+          "instances": [
+            {
+              "instanceId": "0",
+              "vmSize": "Standard_D2s_v4",
+              "metricDefinitionsStatus": 200,
+              "metricCount": 64,
+              "metrics": [
+                {
+                  "name": "Percentage CPU",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network In",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network Out",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Read Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Write Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "CPU Credits Remaining",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "CPU Credits Consumed",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Target Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Target IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Max Burst Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Max Burst IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Target Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Target IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Max Burst Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Max Burst IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Inbound Flows",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Outbound Flows",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Inbound Flows Maximum Creation Rate",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Outbound Flows Maximum Creation Rate",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium Data Disk Cache Read Hit",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium Data Disk Cache Read Miss",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium OS Disk Cache Read Hit",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium OS Disk Cache Read Miss",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Cached Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Cached IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Uncached Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Uncached IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network In Total",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network Out Total",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Available Memory Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Available Memory Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VmAvailabilityMetric",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Remote Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Remote Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Local Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Local Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                }
+              ]
+            },
+            {
+              "instanceId": "1",
+              "vmSize": "Standard_D2s_v4",
+              "metricDefinitionsStatus": 200,
+              "metricCount": 64,
+              "metrics": [
+                {
+                  "name": "Percentage CPU",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network In",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network Out",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Read Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Write Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "CPU Credits Remaining",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "CPU Credits Consumed",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Target Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Target IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Max Burst Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Max Burst IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Data Disk Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Target Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Target IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Max Burst Bandwidth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Max Burst IOPS",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "OS Disk Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Latency",
+                  "unit": "MilliSeconds",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Read Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Write Bytes/sec",
+                  "unit": "BytesPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Read Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Write Operations/Sec",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Temp Disk Queue Depth",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Inbound Flows",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Outbound Flows",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Inbound Flows Maximum Creation Rate",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Outbound Flows Maximum Creation Rate",
+                  "unit": "CountPerSecond",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium Data Disk Cache Read Hit",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium Data Disk Cache Read Miss",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium OS Disk Cache Read Hit",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Premium OS Disk Cache Read Miss",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Cached Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Cached IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Uncached Bandwidth Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Uncached IOPS Consumed Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network In Total",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Network Out Total",
+                  "unit": "Bytes",
+                  "aggregation": "Total",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Available Memory Bytes",
+                  "unit": "Bytes",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "Available Memory Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VmAvailabilityMetric",
+                  "unit": "Count",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Remote Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Remote Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Local Used Burst IO Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                },
+                {
+                  "name": "VM Local Used Burst BPS Credits Percentage",
+                  "unit": "Percent",
+                  "aggregation": "Average",
+                  "timeGrains": [
+                    "PT1M",
+                    "PT5M",
+                    "PT15M",
+                    "PT30M",
+                    "PT1H",
+                    "PT6H",
+                    "PT12H",
+                    "P1D"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

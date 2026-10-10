@@ -1,0 +1,169 @@
+{
+  "action": "Delete only the two listed unattached owner/source-bound Standard_LRS staging disks; preserve every snapshot and every lock.",
+  "createdAtUtc": "2026-10-07T08:28:29.701263+00:00",
+  "deleteOnly": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/restore-stage-5c241a19-4b554415",
+      "location": "westus3",
+      "restoreSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/snapshots/keeper-pv2-5c241a19-4b554415",
+      "restoreSnapshotUniqueId": "737fc1c3-dfd9-4db1-b1c9-1d09a45d95cc",
+      "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-16244c2c",
+      "sourceSnapshotUniqueId": "5ba409da-55b4-4e77-a47f-346ccc7b44ff",
+      "sourceStageReceiptPath": "50gib/.state/source-stage/receipt-4b554415.json",
+      "sourceStageReceiptSha256": "4282a52fcf2a4564a682c5a5760a3f1086eac98583f7ed600b9a6a9092d8b325",
+      "stack": "50gib",
+      "uniqueId": "060b2754-8d81-4a12-84d4-e5d258d79004",
+      "zone": "1"
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/restore-stage-f1b90aec-ef6f2376",
+      "location": "eastus",
+      "restoreSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376",
+      "restoreSnapshotUniqueId": "1f260967-6558-4934-a4b6-6574a2ef4db2",
+      "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c",
+      "sourceSnapshotUniqueId": "5ba7640c-4e34-4227-be0d-d428baeaf2cf",
+      "sourceStageReceiptPath": "100gib/.state/source-stage/receipt-ef6f2376.json",
+      "sourceStageReceiptSha256": "eaed6a8aa16c64c56c331024344bfdc2bfa0cec61c87bed947072aebe2a4d3cd",
+      "stack": "100gib",
+      "uniqueId": "2efcf9d2-d963-4f88-baef-7684c3213f0b",
+      "zone": "1"
+    }
+  ],
+  "measuredPremiumV2Disks": [
+    {
+      "completionPercent": 100.0,
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-1b8dc8b3-93f5-40a2-8f17-d99854e6a82a",
+      "stack": "baseline-23gib",
+      "uniqueId": "40dc1e5c-2de5-4025-a8d9-1a0ca0198008"
+    },
+    {
+      "completionPercent": 100.0,
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-4928871f-3702-4af2-86fe-0a6d5a211e39",
+      "stack": "baseline-23gib",
+      "uniqueId": "cf3630f7-50eb-4d25-9427-67229d276489"
+    },
+    {
+      "completionPercent": 100.0,
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-4a55da2c-5dbc-42be-bdcd-e5f4d6352742",
+      "stack": "baseline-23gib",
+      "uniqueId": "dee9d94d-50ac-4f8b-9759-a9d5222a6b39"
+    },
+    {
+      "completionPercent": null,
+      "createOption": "Empty",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-9c7f12e9-c595-4e56-bbaa-7fc9dcbf7460",
+      "stack": "baseline-23gib",
+      "uniqueId": "7e592f60-1c7e-4074-a4b2-6531882b0545"
+    },
+    {
+      "completionPercent": 100.0,
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-8c6afc42-60ef-409d-b8a4-f53c3c3145d2",
+      "stack": "50gib",
+      "uniqueId": "ef0922e8-e64f-437c-a31e-8906242c1b95"
+    },
+    {
+      "completionPercent": 100.0,
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-96bd9d47-717d-4913-913f-0c7ec271f76d",
+      "stack": "50gib",
+      "uniqueId": "607027e9-7bd3-4a99-9283-62ffa7aeea52"
+    },
+    {
+      "completionPercent": 100.0,
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-b2505bd1-4201-4657-8456-15a2dde19fb0",
+      "stack": "50gib",
+      "uniqueId": "2af2545d-5682-4bb2-8eb3-9f0300e6fe72"
+    },
+    {
+      "completionPercent": null,
+      "createOption": "Empty",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-d1307045-4698-46ba-b0bf-7c380fa13fb2",
+      "stack": "50gib",
+      "uniqueId": "21fa4781-e955-4980-b7bf-521d4662bec7"
+    },
+    {
+      "completionPercent": null,
+      "createOption": "Empty",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "stack": "100gib",
+      "uniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18"
+    },
+    {
+      "completionPercent": 100.0,
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-33bde4d4-2c77-4dae-afe6-6e8895633723",
+      "stack": "100gib",
+      "uniqueId": "10e1034f-e5cc-416b-9562-78df54c71f22"
+    },
+    {
+      "completionPercent": 100.0,
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "stack": "100gib",
+      "uniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2"
+    },
+    {
+      "completionPercent": 100.0,
+      "createOption": "Copy",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc",
+      "stack": "100gib",
+      "uniqueId": "d72d595b-525f-4f1f-8e86-2ff40a9f8d3a"
+    }
+  ],
+  "mode": "apply",
+  "officialReferences": [
+    "https://learn.microsoft.com/en-us/azure/virtual-machines/scripts/create-managed-disk-from-snapshot",
+    "https://learn.microsoft.com/en-us/azure/virtual-machines/disks-incremental-snapshots",
+    "https://learn.microsoft.com/en-us/azure/virtual-machines/disks-instant-access-snapshots",
+    "https://learn.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview"
+  ],
+  "preparation": {
+    "100gib": {
+      "ownerToken": "f1b90aec9e24f6a2008d6991738742cf",
+      "prepareMetadataSha256": "4c9089e078eb4ba5e99105c433de8403d658c12a299bb601bc64512aa4025236",
+      "prepareProcessSha256": "a3efcd8ce208d1b00ec2fedfeee5ab5b331a59ac463d6324fdd4532b56cb04ad",
+      "prepareScriptSha256": "dc727aec14699aa80a2d80a1a4357b6b423996c913f104f0504c68e33ea16111",
+      "sourceManifestSha256": "939861f7eae1ec48978ff21cd31b9aaab07045302832aae53a3b24afa4c07560",
+      "sourceStageHelperSha256": "0eacb0a81b30703a3b788aa745d3eca8c079e3e4e0cfca9921f500b6f5c8918b",
+      "sourceStageReceiptPath": "100gib/.state/source-stage/receipt-ef6f2376.json",
+      "sourceStageReceiptSha256": "eaed6a8aa16c64c56c331024344bfdc2bfa0cec61c87bed947072aebe2a4d3cd",
+      "stateSha256": "ab77283ff7bf5fb74a0ed0001fd6618a19b21a4f2e42e87d29dc94faf762cea6",
+      "targetHeapGiB": 100
+    },
+    "50gib": {
+      "ownerToken": "5c241a190a85f40b788038945c9744f6",
+      "prepareMetadataSha256": "2fe23496fe253459b0fc090dee71eaa4448dbd3204a214f7a1e6431c88d43a51",
+      "prepareProcessSha256": "b5167939052cc2fc65061e23d665117e47503bf9f8294e8a235fcd3a248b1199",
+      "prepareScriptSha256": "9ed8a378ba50a3b78a326670b74ae532bd22585ddd7240b421bd11e2f473a290",
+      "sourceManifestSha256": "11ecb0b9b58adcdc7f29c99ab38f99a4fcfd8547e96d75e47593d2ef03bc0fd2",
+      "sourceStageHelperSha256": "0eacb0a81b30703a3b788aa745d3eca8c079e3e4e0cfca9921f500b6f5c8918b",
+      "sourceStageReceiptPath": "50gib/.state/source-stage/receipt-4b554415.json",
+      "sourceStageReceiptSha256": "4282a52fcf2a4564a682c5a5760a3f1086eac98583f7ed600b9a6a9092d8b325",
+      "stateSha256": "e48137bb444eedd19ccddb8aab208d7332211062ef042acaf0c368841abca6de",
+      "targetHeapGiB": 50
+    },
+    "baseline-23gib": {
+      "ownerToken": "4b1163091c697351e7725163a5a28e2e",
+      "prepareMetadataSha256": "ca936312f9d0b7132c50a97bb91cacfd95fdc5f653e378c50e69a7f51bfc2702",
+      "prepareProcessSha256": "5325c2d0e5fb39564b51fbf8fb1955a7f54e0f767ef5f70ec6cc3bd4319e1c0a",
+      "prepareScriptSha256": "8b6c2f1f902987c4c81449127128702f289f8942474083e88b01d32c10ac0e4d",
+      "sourceManifestSha256": "939861f7eae1ec48978ff21cd31b9aaab07045302832aae53a3b24afa4c07560",
+      "sourceStageHelperSha256": null,
+      "sourceStageReceiptPath": null,
+      "sourceStageReceiptSha256": null,
+      "stateSha256": "41a4abc44b993e2d2df013fb747dc4042225a7d297bb81b2d57037bb9a0934d0",
+      "targetHeapGiB": 23
+    }
+  },
+  "scriptSha256": "4530981b432bace666ff94e90b29a403154a78c74cb349570313ca6fcc889ce7",
+  "snapshotAuditBeforePath": "preflight/snapshot-audit-staging-retirement-before-20261007T082828Z.json",
+  "snapshotAuditBeforeSha256": "909ba6962e368547d68d41d9af4c20d92de91388936f3935b84aa8aabf40d8a0",
+  "snapshotIdentityProtectionSha256": "f8fac2516640c23b85f49536d497093c10e13111e8c254d0889f541333e3e34e",
+  "standardCopyLimitation": "Standard_LRS snapshot copy progress is not exposed by Azure. These checks establish that measured Premium SSD v2 disks report complete hydration, the verified staging disks are absent, and no observable owned copy is active. They do not prove that unobservable Standard-origin backend snapshot copies have finished.",
+  "version": 1
+}

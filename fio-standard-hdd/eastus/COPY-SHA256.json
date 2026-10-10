@@ -1,0 +1,2054 @@
+{
+  "algorithm": "SHA-256",
+  "purpose": "Source-to-archive byte identity for copied files; intentional documentation edits are omitted.",
+  "intentional_document_edits": [
+    "fio-hdd-1m-headroom/README.md",
+    "fio-hdd-1m-repro/README.md",
+    "fio-hdd-1m-repro/artifacts/analysis/report.md",
+    "fio-hdd-repro/README.md",
+    "fio-hdd-repro/REPORT.md"
+  ],
+  "excluded_categories": [
+    ".venv/",
+    "__pycache__/",
+    "ssh-key*"
+  ],
+  "state_mapping": "Each source root state.json is preserved byte-for-byte at the run artifacts/infrastructure-state.json path; no root state.json is included.",
+  "identical_file_count": 339,
+  "files": [
+    {
+      "source": "fio-hdd-repro/.gitignore",
+      "archive": "fio-hdd-repro/.gitignore",
+      "sha256_source": "8703757d0b46c0ffcb02ead43f20a7825e7ba37ee9686d4c87db3b9f60b43aee",
+      "sha256_archive": "8703757d0b46c0ffcb02ead43f20a7825e7ba37ee9686d4c87db3b9f60b43aee"
+    },
+    {
+      "source": "fio-hdd-repro/analyze.py",
+      "archive": "fio-hdd-repro/analyze.py",
+      "sha256_source": "8e812b8436b0c32d9e032a2d5e058dfef905f5e41bc6f953165536f5242cc3c0",
+      "sha256_archive": "8e812b8436b0c32d9e032a2d5e058dfef905f5e41bc6f953165536f5242cc3c0"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/analysis/azure-minute-points.csv",
+      "archive": "fio-hdd-repro/artifacts/analysis/azure-minute-points.csv",
+      "sha256_source": "535bbb6470fc0dfed8e4c29b4e6e3dbae65d43f6fb92cde181f2c225e913cee1",
+      "sha256_archive": "535bbb6470fc0dfed8e4c29b4e6e3dbae65d43f6fb92cde181f2c225e913cee1"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/analysis/iops-low-threads.png",
+      "archive": "fio-hdd-repro/artifacts/analysis/iops-low-threads.png",
+      "sha256_source": "9e4c761bf3d8e4de3ea0ce5f6fa2a3dcae66b42b130cce94f9e9f4a65f2474a6",
+      "sha256_archive": "9e4c761bf3d8e4de3ea0ce5f6fa2a3dcae66b42b130cce94f9e9f4a65f2474a6"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/analysis/iops.png",
+      "archive": "fio-hdd-repro/artifacts/analysis/iops.png",
+      "sha256_source": "69a4d0c8fb2bb1dddd6a80242fb737b8ddcad02c53a49e3a98031cb3b7f61046",
+      "sha256_archive": "69a4d0c8fb2bb1dddd6a80242fb737b8ddcad02c53a49e3a98031cb3b7f61046"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/analysis/latency.png",
+      "archive": "fio-hdd-repro/artifacts/analysis/latency.png",
+      "sha256_source": "ebde0dc4bd65d72103b9de74e87b7438156bc23c96b159eb06efb7465beed48a",
+      "sha256_archive": "ebde0dc4bd65d72103b9de74e87b7438156bc23c96b159eb06efb7465beed48a"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/analysis/report.md",
+      "archive": "fio-hdd-repro/artifacts/analysis/report.md",
+      "sha256_source": "98e51ac9226cb153ed27cf92d9ad236e6c51f7a171b5d1a16e1f71fdc40c76db",
+      "sha256_archive": "98e51ac9226cb153ed27cf92d9ad236e6c51f7a171b5d1a16e1f71fdc40c76db"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/analysis/summary.csv",
+      "archive": "fio-hdd-repro/artifacts/analysis/summary.csv",
+      "sha256_source": "a51d51ad4d77ee3f008d1447f2b008a69e92899cdd828745234f4e1925217a78",
+      "sha256_archive": "a51d51ad4d77ee3f008d1447f2b008a69e92899cdd828745234f4e1925217a78"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/analysis/throughput.png",
+      "archive": "fio-hdd-repro/artifacts/analysis/throughput.png",
+      "sha256_source": "4b38ad1161210c05742652e73303ae561691534b4bc07461346d3f8852f22447",
+      "sha256_archive": "4b38ad1161210c05742652e73303ae561691534b4bc07461346d3f8852f22447"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/analysis-progress.log",
+      "archive": "fio-hdd-repro/artifacts/analysis-progress.log",
+      "sha256_source": "e8faf9d282eb3a1fcb3b9ba78660f6306047297be4a9ef032b1791f94ebe70cc",
+      "sha256_archive": "e8faf9d282eb3a1fcb3b9ba78660f6306047297be4a9ef032b1791f94ebe70cc"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/cleanup.json",
+      "archive": "fio-hdd-repro/artifacts/cleanup.json",
+      "sha256_source": "f1d094dc1d1b0f2f7bb1d025edffd71490e21363415ec7a0ded9a9dd22aa4945",
+      "sha256_archive": "f1d094dc1d1b0f2f7bb1d025edffd71490e21363415ec7a0ded9a9dd22aa4945"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/collection-final.log",
+      "archive": "fio-hdd-repro/artifacts/collection-final.log",
+      "sha256_source": "32eb4997c1bbae3679168cd08601ee07f42a9aab949625c86a3ae0b75189f9a7",
+      "sha256_archive": "32eb4997c1bbae3679168cd08601ee07f42a9aab949625c86a3ae0b75189f9a7"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/collection-progress.log",
+      "archive": "fio-hdd-repro/artifacts/collection-progress.log",
+      "sha256_source": "42e888702e842ce444961db442a806816369d635e0809adc525b7edecd784f5f",
+      "sha256_archive": "42e888702e842ce444961db442a806816369d635e0809adc525b7edecd784f5f"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/config-original.json",
+      "archive": "fio-hdd-repro/artifacts/config-original.json",
+      "sha256_source": "020f4fb7ac016c7599265a13b43320a83a1b98d93361d3a8621b7574a5d8455a",
+      "sha256_archive": "020f4fb7ac016c7599265a13b43320a83a1b98d93361d3a8621b7574a5d8455a"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/config.json",
+      "archive": "fio-hdd-repro/artifacts/config.json",
+      "sha256_source": "25e51cf5ce44c6aa1643d788d3d6818c5791d7b61a89844662b23f8ca4f3d3c7",
+      "sha256_archive": "25e51cf5ce44c6aa1643d788d3d6818c5791d7b61a89844662b23f8ca4f3d3c7"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/disk-definitions.json",
+      "archive": "fio-hdd-repro/artifacts/disk-definitions.json",
+      "sha256_source": "d74c34b293d80eef7ef0bf7926e87ee22e14658f65021780a52b017e85a39249",
+      "sha256_archive": "d74c34b293d80eef7ef0bf7926e87ee22e14658f65021780a52b017e85a39249"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/disk-definitions.json.stderr",
+      "archive": "fio-hdd-repro/artifacts/disk-definitions.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/disk-metrics.json",
+      "archive": "fio-hdd-repro/artifacts/disk-metrics.json",
+      "sha256_source": "5d53a9c1d90b6e5c26533ce3fbec368fe3d52caa208259cedeeb18d1f6beebb0",
+      "sha256_archive": "5d53a9c1d90b6e5c26533ce3fbec368fe3d52caa208259cedeeb18d1f6beebb0"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/disk-metrics.json.stderr",
+      "archive": "fio-hdd-repro/artifacts/disk-metrics.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/disk.json",
+      "archive": "fio-hdd-repro/artifacts/disk.json",
+      "sha256_source": "3f129ef3671f60094e17edcdec37c69f12996f41f88ffdbb6e8edab28e91dc05",
+      "sha256_archive": "3f129ef3671f60094e17edcdec37c69f12996f41f88ffdbb6e8edab28e91dc05"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/guest-original.txt",
+      "archive": "fio-hdd-repro/artifacts/guest-original.txt",
+      "sha256_source": "769411831970fd304bd453c89c0426ce47b6f2b239dfdf642b29ef9d3de64fb2",
+      "sha256_archive": "769411831970fd304bd453c89c0426ce47b6f2b239dfdf642b29ef9d3de64fb2"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/guest-test.log",
+      "archive": "fio-hdd-repro/artifacts/guest-test.log",
+      "sha256_source": "25e33e08db448a259cc4a1343cc4620ead6bcc0ebb39d5a8d906066f4e344285",
+      "sha256_archive": "25e33e08db448a259cc4a1343cc4620ead6bcc0ebb39d5a8d906066f4e344285"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/guest.txt",
+      "archive": "fio-hdd-repro/artifacts/guest.txt",
+      "sha256_source": "ef5562fe0e8434b757a6a7a1c5b9a946117e90daa317e1d902f5d9f44c7bdc0a",
+      "sha256_archive": "ef5562fe0e8434b757a6a7a1c5b9a946117e90daa317e1d902f5d9f44c7bdc0a"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/host-metrics.json",
+      "archive": "fio-hdd-repro/artifacts/host-metrics.json",
+      "sha256_source": "db69f2d05fa08bf60e92b09999f6e3423b9fca28e59c4a0faa6674c797ca90f5",
+      "sha256_archive": "db69f2d05fa08bf60e92b09999f6e3423b9fca28e59c4a0faa6674c797ca90f5"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/host-metrics.json.stderr",
+      "archive": "fio-hdd-repro/artifacts/host-metrics.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/provision-d4.log",
+      "archive": "fio-hdd-repro/artifacts/provision-d4.log",
+      "sha256_source": "c889a94c5f0055b9de2a4f0799f24e6664364fa1e48114305c2f43221461b7f0",
+      "sha256_archive": "c889a94c5f0055b9de2a4f0799f24e6664364fa1e48114305c2f43221461b7f0"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/provision.log",
+      "archive": "fio-hdd-repro/artifacts/provision.log",
+      "sha256_source": "624015c5ecd8dc9fd4e0017eab91471e7d32194c9c372244b46c7123f804fc34",
+      "sha256_archive": "624015c5ecd8dc9fd4e0017eab91471e7d32194c9c372244b46c7123f804fc34"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/python-setup.log",
+      "archive": "fio-hdd-repro/artifacts/python-setup.log",
+      "sha256_source": "7052e516651200c964d3abf140f60cbd23b83e6c4f4da5b490000426b1f472bb",
+      "sha256_archive": "7052e516651200c964d3abf140f60cbd23b83e6c4f4da5b490000426b1f472bb"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/queue-details.json",
+      "archive": "fio-hdd-repro/artifacts/queue-details.json",
+      "sha256_source": "5249a4d233b7950e8275bc95c5904969b3d03b207fcac6933c809d02b2445fae",
+      "sha256_archive": "5249a4d233b7950e8275bc95c5904969b3d03b207fcac6933c809d02b2445fae"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/quota.json",
+      "archive": "fio-hdd-repro/artifacts/quota.json",
+      "sha256_source": "a6d376c1b9838fb6414db0b2422dcee8b768d8fdea9eaefd39b2f1f76c26d7f9",
+      "sha256_archive": "a6d376c1b9838fb6414db0b2422dcee8b768d8fdea9eaefd39b2f1f76c26d7f9"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/retry-test.log",
+      "archive": "fio-hdd-repro/artifacts/retry-test.log",
+      "sha256_source": "c6828b5af6428b384f35bc3df5288fd0cb46aa6e65c337aff1e3957db5ebbb60",
+      "sha256_archive": "c6828b5af6428b384f35bc3df5288fd0cb46aa6e65c337aff1e3957db5ebbb60"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-1/command.json",
+      "sha256_source": "c4567dd814848f1e07f768bcdf606758eff60f102d6e2a4f52b01b9d7f52dd89",
+      "sha256_archive": "c4567dd814848f1e07f768bcdf606758eff60f102d6e2a4f52b01b9d7f52dd89"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-1/fio.json",
+      "sha256_source": "8d776acfc0238c6f00168b822bdf2eebdfcbbed2d389cbd0fd1f01baf6d26881",
+      "sha256_archive": "8d776acfc0238c6f00168b822bdf2eebdfcbbed2d389cbd0fd1f01baf6d26881"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-1/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-1/iostat.json",
+      "sha256_source": "303a57c6cb4582c52c1ebce7c1b07ae91469f6bb7f34b96e6aedfae566bfa0a7",
+      "sha256_archive": "303a57c6cb4582c52c1ebce7c1b07ae91469f6bb7f34b96e6aedfae566bfa0a7"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-1/meta.json",
+      "sha256_source": "ea05b12d447529608de7a4e8b58b015b6f83c811e6018e58f321787034cb2f75",
+      "sha256_archive": "ea05b12d447529608de7a4e8b58b015b6f83c811e6018e58f321787034cb2f75"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-1/vmstat.txt",
+      "sha256_source": "57a4a6a07404a89d9029cffa764a53151275dca9743837ca69b90c1111c2108d",
+      "sha256_archive": "57a4a6a07404a89d9029cffa764a53151275dca9743837ca69b90c1111c2108d"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1024/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-1024/command.json",
+      "sha256_source": "661ecab5b4b89289fc11cdb53a06f697fd8c976c2d49cf051a6d8b224e1470c9",
+      "sha256_archive": "661ecab5b4b89289fc11cdb53a06f697fd8c976c2d49cf051a6d8b224e1470c9"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1024/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-1024/fio.json",
+      "sha256_source": "b3148e3c24b86229dcb7d5d37a37543fa9a001f534f650c18fde36785c9f35fe",
+      "sha256_archive": "b3148e3c24b86229dcb7d5d37a37543fa9a001f534f650c18fde36785c9f35fe"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1024/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-1024/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1024/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-1024/iostat.json",
+      "sha256_source": "8cd4ee39f4b543ad8a8e4cd9bc5f3eb2c91f33f5af266cdc5a7ebdf76e8f0809",
+      "sha256_archive": "8cd4ee39f4b543ad8a8e4cd9bc5f3eb2c91f33f5af266cdc5a7ebdf76e8f0809"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1024/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-1024/meta.json",
+      "sha256_source": "51d95e2446e6f756b992a8e9cf40555c0e19097108d831d5a733ee6bbf33fd45",
+      "sha256_archive": "51d95e2446e6f756b992a8e9cf40555c0e19097108d831d5a733ee6bbf33fd45"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1024/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-1024/vmstat.txt",
+      "sha256_source": "4e40cc3a7267ae7ed658f9585e42e542afe3d2130ce7ca1e0568f4ffc3df2270",
+      "sha256_archive": "4e40cc3a7267ae7ed658f9585e42e542afe3d2130ce7ca1e0568f4ffc3df2270"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-128/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-128/command.json",
+      "sha256_source": "ed09500af3233698929275ab031461de1bd8ef663d9616d69c705abc2780bfec",
+      "sha256_archive": "ed09500af3233698929275ab031461de1bd8ef663d9616d69c705abc2780bfec"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-128/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-128/fio.json",
+      "sha256_source": "eac46a77cffba16b39f113701fde602061b71a1b99fbf4aedc4d1da361737cdf",
+      "sha256_archive": "eac46a77cffba16b39f113701fde602061b71a1b99fbf4aedc4d1da361737cdf"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-128/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-128/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-128/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-128/iostat.json",
+      "sha256_source": "9ba4612e600b0bd98e6eb49292b2a41744b542a8be9521336b10e16d162b30e7",
+      "sha256_archive": "9ba4612e600b0bd98e6eb49292b2a41744b542a8be9521336b10e16d162b30e7"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-128/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-128/meta.json",
+      "sha256_source": "3568f6f16de3e2f99f89e9640375e24cf3f72fc664c947aa2a185de2f46c92be",
+      "sha256_archive": "3568f6f16de3e2f99f89e9640375e24cf3f72fc664c947aa2a185de2f46c92be"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-128/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-128/vmstat.txt",
+      "sha256_source": "34347dca30ebf7ee7de1cbdf5fbc002338f3fb13d8324d33c9b68c954768e033",
+      "sha256_archive": "34347dca30ebf7ee7de1cbdf5fbc002338f3fb13d8324d33c9b68c954768e033"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1536/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-1536/command.json",
+      "sha256_source": "d682830173ea4283522ede97ac0aa7d25274b302e28719f9d1390bf53935eb5e",
+      "sha256_archive": "d682830173ea4283522ede97ac0aa7d25274b302e28719f9d1390bf53935eb5e"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1536/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-1536/fio.json",
+      "sha256_source": "8cdafe3d20842730db26bc5a8e521f1cff596c801e5331b7d245c8b61beca625",
+      "sha256_archive": "8cdafe3d20842730db26bc5a8e521f1cff596c801e5331b7d245c8b61beca625"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1536/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-1536/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1536/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-1536/iostat.json",
+      "sha256_source": "02b04ae81ba7670907bfb61f9659b6f79e1dbef310bbf271aa71285b1df5d3eb",
+      "sha256_archive": "02b04ae81ba7670907bfb61f9659b6f79e1dbef310bbf271aa71285b1df5d3eb"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1536/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-1536/meta.json",
+      "sha256_source": "2d077ad29f5f6eef991d6b5fc6121b00f6c105996b8f0da108b3f567ba17e27a",
+      "sha256_archive": "2d077ad29f5f6eef991d6b5fc6121b00f6c105996b8f0da108b3f567ba17e27a"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-1536/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-1536/vmstat.txt",
+      "sha256_source": "8ec571795f2118a3f3065d62c89eda35ab28ad5038a42a5a6609f2e124e92554",
+      "sha256_archive": "8ec571795f2118a3f3065d62c89eda35ab28ad5038a42a5a6609f2e124e92554"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-16/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-16/command.json",
+      "sha256_source": "833cb350c10f51e67fe323882352443eeeb949e4c372bf3d6ca6d40ebe45d75b",
+      "sha256_archive": "833cb350c10f51e67fe323882352443eeeb949e4c372bf3d6ca6d40ebe45d75b"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-16/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-16/fio.json",
+      "sha256_source": "939e3538ead4a4a7a7b4b9636de1c966a0110d84527eade4bf0c7ad5116e1579",
+      "sha256_archive": "939e3538ead4a4a7a7b4b9636de1c966a0110d84527eade4bf0c7ad5116e1579"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-16/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-16/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-16/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-16/iostat.json",
+      "sha256_source": "5178ca1162e8432923455de8c8cc1a4fb8e3546235465f965d1b8309880d2045",
+      "sha256_archive": "5178ca1162e8432923455de8c8cc1a4fb8e3546235465f965d1b8309880d2045"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-16/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-16/meta.json",
+      "sha256_source": "c9869452786234e523c9cc8322d5693dbc43e4673135d415b4ad9d4442941ed9",
+      "sha256_archive": "c9869452786234e523c9cc8322d5693dbc43e4673135d415b4ad9d4442941ed9"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-16/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-16/vmstat.txt",
+      "sha256_source": "4b8c727017dedb5a1941e51852ca697fa2857583603df4f8d40af3b696d23336",
+      "sha256_archive": "4b8c727017dedb5a1941e51852ca697fa2857583603df4f8d40af3b696d23336"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-2/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-2/command.json",
+      "sha256_source": "ab96e47ab4267e72e85ec2886f0c798fbc68866406fd9840b6c8b14531929a99",
+      "sha256_archive": "ab96e47ab4267e72e85ec2886f0c798fbc68866406fd9840b6c8b14531929a99"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-2/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-2/fio.json",
+      "sha256_source": "77673b02a22c1a070798c01ae9ebc1dee59fbe6adc06c7b6e997debbe11059c2",
+      "sha256_archive": "77673b02a22c1a070798c01ae9ebc1dee59fbe6adc06c7b6e997debbe11059c2"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-2/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-2/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-2/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-2/iostat.json",
+      "sha256_source": "83b4c8f5637724fba3158c8e08dbe7cbd9fdb0b72778e8390d3465b72c9cc9c5",
+      "sha256_archive": "83b4c8f5637724fba3158c8e08dbe7cbd9fdb0b72778e8390d3465b72c9cc9c5"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-2/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-2/meta.json",
+      "sha256_source": "14b53e60f3c2f017a69ad67a9232496e7e3da0697feae82e07fd8a22ba135f15",
+      "sha256_archive": "14b53e60f3c2f017a69ad67a9232496e7e3da0697feae82e07fd8a22ba135f15"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-2/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-2/vmstat.txt",
+      "sha256_source": "2084f7eb37b0c46cb08de5fabb9c2a2563f517ef092bab7c41c1edf4915f8207",
+      "sha256_archive": "2084f7eb37b0c46cb08de5fabb9c2a2563f517ef092bab7c41c1edf4915f8207"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-2048/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-2048/command.json",
+      "sha256_source": "d7f43716e10c9faa7dcb2dbc39692e2a3f17923ae5e1cedbe0a020709e566c8a",
+      "sha256_archive": "d7f43716e10c9faa7dcb2dbc39692e2a3f17923ae5e1cedbe0a020709e566c8a"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-2048/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-2048/fio.json",
+      "sha256_source": "f0a91e4c1d5b07122420054139d765c08b1ac9a99275ddbbafba86942b598fbc",
+      "sha256_archive": "f0a91e4c1d5b07122420054139d765c08b1ac9a99275ddbbafba86942b598fbc"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-2048/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-2048/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-2048/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-2048/iostat.json",
+      "sha256_source": "adad20a7567e7e03dc7c68ca0ee2fa6b2d7de85328c19849c05ab35deb691d31",
+      "sha256_archive": "adad20a7567e7e03dc7c68ca0ee2fa6b2d7de85328c19849c05ab35deb691d31"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-2048/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-2048/meta.json",
+      "sha256_source": "fca74df3ac97dc48f7158eccd8e5fe63451674152560bf7c50da794e4c50308d",
+      "sha256_archive": "fca74df3ac97dc48f7158eccd8e5fe63451674152560bf7c50da794e4c50308d"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-2048/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-2048/vmstat.txt",
+      "sha256_source": "ac3113ef4b18566b81c88ff46d7c10a1a29a6ac1cce7db75dd73517caa9fa334",
+      "sha256_archive": "ac3113ef4b18566b81c88ff46d7c10a1a29a6ac1cce7db75dd73517caa9fa334"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-256/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-256/command.json",
+      "sha256_source": "03533be5991604bf4e2899ff242865ffe713cdd5d49a5e60dbde07e61a49a2b8",
+      "sha256_archive": "03533be5991604bf4e2899ff242865ffe713cdd5d49a5e60dbde07e61a49a2b8"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-256/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-256/fio.json",
+      "sha256_source": "4157f22eb80e13404fad19f4336786a77d140f07fd5429ce126faf7f0bd6ac9a",
+      "sha256_archive": "4157f22eb80e13404fad19f4336786a77d140f07fd5429ce126faf7f0bd6ac9a"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-256/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-256/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-256/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-256/iostat.json",
+      "sha256_source": "1ef344ae4514c59041818beb2ea24f0e219155f82c0348d29a05c7e09b4b29a8",
+      "sha256_archive": "1ef344ae4514c59041818beb2ea24f0e219155f82c0348d29a05c7e09b4b29a8"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-256/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-256/meta.json",
+      "sha256_source": "89c1d32239c4dcb32e123baba2f45176d6a0942b37568ce465b46b77d98951be",
+      "sha256_archive": "89c1d32239c4dcb32e123baba2f45176d6a0942b37568ce465b46b77d98951be"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-256/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-256/vmstat.txt",
+      "sha256_source": "60631aa178eb327872f9590d80b7d0cde96a9f247fed98223bf99d16a81dd9cc",
+      "sha256_archive": "60631aa178eb327872f9590d80b7d0cde96a9f247fed98223bf99d16a81dd9cc"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-3072/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-3072/command.json",
+      "sha256_source": "17a05e9082fefc293ef440eb77710f90e7e74be4fcb8a90ae3a72c90e824228f",
+      "sha256_archive": "17a05e9082fefc293ef440eb77710f90e7e74be4fcb8a90ae3a72c90e824228f"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-3072/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-3072/fio.json",
+      "sha256_source": "797dca3e3cadcf61ff6ca4bbbd3256699d6cf1d456691849fc373ca1de2e15f8",
+      "sha256_archive": "797dca3e3cadcf61ff6ca4bbbd3256699d6cf1d456691849fc373ca1de2e15f8"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-3072/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-3072/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-3072/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-3072/iostat.json",
+      "sha256_source": "ba7e15484d6244c626b86f432cd80935138f7dcbba3550861f24cfbc7d05a8d0",
+      "sha256_archive": "ba7e15484d6244c626b86f432cd80935138f7dcbba3550861f24cfbc7d05a8d0"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-3072/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-3072/meta.json",
+      "sha256_source": "ab7a3f3de199cb9c16467d17ff7069ef2de2edadf6b79bb2010b76acc2414180",
+      "sha256_archive": "ab7a3f3de199cb9c16467d17ff7069ef2de2edadf6b79bb2010b76acc2414180"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-3072/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-3072/vmstat.txt",
+      "sha256_source": "0f3e4794c0550350d109fd7c09e2b1cc5fdc5a6d519e610fefeb081d029b0131",
+      "sha256_archive": "0f3e4794c0550350d109fd7c09e2b1cc5fdc5a6d519e610fefeb081d029b0131"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-32/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-32/command.json",
+      "sha256_source": "175fb0d9e479b2d4747e64cb22c187e7aa68296d21318fa33fe0964886fbc882",
+      "sha256_archive": "175fb0d9e479b2d4747e64cb22c187e7aa68296d21318fa33fe0964886fbc882"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-32/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-32/fio.json",
+      "sha256_source": "f5379d5d26d785d72697d5d5c2cfb5e423ca34799f3878138024bedf6495da0a",
+      "sha256_archive": "f5379d5d26d785d72697d5d5c2cfb5e423ca34799f3878138024bedf6495da0a"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-32/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-32/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-32/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-32/iostat.json",
+      "sha256_source": "ba366923580c312428b10006f7103e283b18918c15b088829520ab799b152c6f",
+      "sha256_archive": "ba366923580c312428b10006f7103e283b18918c15b088829520ab799b152c6f"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-32/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-32/meta.json",
+      "sha256_source": "1b7a174d2381ac56d25d2a6e716f4f694a180ab9ce6f28c2b9035233e9a237a8",
+      "sha256_archive": "1b7a174d2381ac56d25d2a6e716f4f694a180ab9ce6f28c2b9035233e9a237a8"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-32/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-32/vmstat.txt",
+      "sha256_source": "e6e9ac7b0088b4e6abe608a8c847ae000fbe2a416331d619d9c8db1246b7503d",
+      "sha256_archive": "e6e9ac7b0088b4e6abe608a8c847ae000fbe2a416331d619d9c8db1246b7503d"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-4/command.json",
+      "sha256_source": "d4da9cd9c1b8db2b2a52e339ab1618c526c26711615293d3dd82e022942f6696",
+      "sha256_archive": "d4da9cd9c1b8db2b2a52e339ab1618c526c26711615293d3dd82e022942f6696"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-4/fio.json",
+      "sha256_source": "7f61ce7a613e679a6dbfd7e7809d52493dd632c35f6e7c015a2d770320bbe687",
+      "sha256_archive": "7f61ce7a613e679a6dbfd7e7809d52493dd632c35f6e7c015a2d770320bbe687"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-4/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-4/iostat.json",
+      "sha256_source": "d2deebc4a38a6ccb711a14e4877352b0f8fb5a9282d709b355c9c119f841093b",
+      "sha256_archive": "d2deebc4a38a6ccb711a14e4877352b0f8fb5a9282d709b355c9c119f841093b"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-4/meta.json",
+      "sha256_source": "246fcd6d3c82c156dec509a40fcc1e13186a89131be6ff2a1525e4099eb541db",
+      "sha256_archive": "246fcd6d3c82c156dec509a40fcc1e13186a89131be6ff2a1525e4099eb541db"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-4/vmstat.txt",
+      "sha256_source": "afcc9bbc043b7c9be47520ba99a8a007f8b5f3719de3f0f0d50562b70f3258ff",
+      "sha256_archive": "afcc9bbc043b7c9be47520ba99a8a007f8b5f3719de3f0f0d50562b70f3258ff"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4096/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-4096/command.json",
+      "sha256_source": "498d99a30734ec62ab523c0079d82e4e34f02fef9669c3fc76c658214ab1a498",
+      "sha256_archive": "498d99a30734ec62ab523c0079d82e4e34f02fef9669c3fc76c658214ab1a498"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4096/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-4096/fio.json",
+      "sha256_source": "2d1fc4d1ed7d4dad0fa1cfad76dd0780b89021bb8e7fd853f1152e65457470b1",
+      "sha256_archive": "2d1fc4d1ed7d4dad0fa1cfad76dd0780b89021bb8e7fd853f1152e65457470b1"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4096/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-4096/fio.stderr",
+      "sha256_source": "2d1fc4d1ed7d4dad0fa1cfad76dd0780b89021bb8e7fd853f1152e65457470b1",
+      "sha256_archive": "2d1fc4d1ed7d4dad0fa1cfad76dd0780b89021bb8e7fd853f1152e65457470b1"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4096/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-4096/iostat.json",
+      "sha256_source": "fa893b16b6cea5ff97a59b0aeae81d37e9084e12b6e25ef0f654ba8f17a7b834",
+      "sha256_archive": "fa893b16b6cea5ff97a59b0aeae81d37e9084e12b6e25ef0f654ba8f17a7b834"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4096/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-4096/meta.json",
+      "sha256_source": "6156e58fb8dac242a8ada46092b578b6ab53972563e9d471005957979f142a63",
+      "sha256_archive": "6156e58fb8dac242a8ada46092b578b6ab53972563e9d471005957979f142a63"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4096/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-4096/vmstat.txt",
+      "sha256_source": "9de05c8159bb56af0f58a079073bfde0ecedaf8af9f545a3b70af79fb98c6df9",
+      "sha256_archive": "9de05c8159bb56af0f58a079073bfde0ecedaf8af9f545a3b70af79fb98c6df9"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4096-failed-1791524122/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-4096-failed-1791524122/command.json",
+      "sha256_source": "c14424b02f517fc63c7c394f9e5658a86936564331402dc11f9d7a4b4db4b199",
+      "sha256_archive": "c14424b02f517fc63c7c394f9e5658a86936564331402dc11f9d7a4b4db4b199"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4096-failed-1791524122/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-4096-failed-1791524122/fio.json",
+      "sha256_source": "2d1fc4d1ed7d4dad0fa1cfad76dd0780b89021bb8e7fd853f1152e65457470b1",
+      "sha256_archive": "2d1fc4d1ed7d4dad0fa1cfad76dd0780b89021bb8e7fd853f1152e65457470b1"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4096-failed-1791524122/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-4096-failed-1791524122/fio.stderr",
+      "sha256_source": "2d1fc4d1ed7d4dad0fa1cfad76dd0780b89021bb8e7fd853f1152e65457470b1",
+      "sha256_archive": "2d1fc4d1ed7d4dad0fa1cfad76dd0780b89021bb8e7fd853f1152e65457470b1"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4096-failed-1791524122/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-4096-failed-1791524122/iostat.json",
+      "sha256_source": "07465edfe09f94539eb7d22e37439800c8dbbd04a6b7204717478b50676cb59a",
+      "sha256_archive": "07465edfe09f94539eb7d22e37439800c8dbbd04a6b7204717478b50676cb59a"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4096-failed-1791524122/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-4096-failed-1791524122/meta.json",
+      "sha256_source": "21055d2489a305cf5ec1d04c3b67ee580207ca214bcf5f1d1e3f1ba23768add0",
+      "sha256_archive": "21055d2489a305cf5ec1d04c3b67ee580207ca214bcf5f1d1e3f1ba23768add0"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-4096-failed-1791524122/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-4096-failed-1791524122/vmstat.txt",
+      "sha256_source": "900c0912072c1a33e82fe3282315dadc6ee6cdc60e6ed0911b1720bfbadf2b55",
+      "sha256_archive": "900c0912072c1a33e82fe3282315dadc6ee6cdc60e6ed0911b1720bfbadf2b55"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-512/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-512/command.json",
+      "sha256_source": "42bb052003646987f773e0c36ac3d067e5ff88114616fb89f129666ecdd5f51e",
+      "sha256_archive": "42bb052003646987f773e0c36ac3d067e5ff88114616fb89f129666ecdd5f51e"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-512/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-512/fio.json",
+      "sha256_source": "d8b2f2202e1c6b3e361e84df641db0a6e6abe650846f134bc48e62f70a9ed46f",
+      "sha256_archive": "d8b2f2202e1c6b3e361e84df641db0a6e6abe650846f134bc48e62f70a9ed46f"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-512/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-512/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-512/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-512/iostat.json",
+      "sha256_source": "4cb9d2e508b7075a3f63b6447ee1a45018d440c5241f5314aff737d3dc3fa6e8",
+      "sha256_archive": "4cb9d2e508b7075a3f63b6447ee1a45018d440c5241f5314aff737d3dc3fa6e8"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-512/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-512/meta.json",
+      "sha256_source": "1d3dd638e6c9aa4e5f91a325cd2d695dc64142667da80ff15b0143b6ecedd4d4",
+      "sha256_archive": "1d3dd638e6c9aa4e5f91a325cd2d695dc64142667da80ff15b0143b6ecedd4d4"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-512/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-512/vmstat.txt",
+      "sha256_source": "c936910539e6beb7e6f82ae80a819e6915f5de1df509b19ae1af9bd12c519d37",
+      "sha256_archive": "c936910539e6beb7e6f82ae80a819e6915f5de1df509b19ae1af9bd12c519d37"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-64/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-64/command.json",
+      "sha256_source": "3302974e30dc55126690c3a48c7c1d4f42232f1a19909e4cef12cb58a6522b4d",
+      "sha256_archive": "3302974e30dc55126690c3a48c7c1d4f42232f1a19909e4cef12cb58a6522b4d"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-64/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-64/fio.json",
+      "sha256_source": "52ce424a3425c2ee2621198792d506ae39023701f3cf8c0c1121b7f8c6ee1fc1",
+      "sha256_archive": "52ce424a3425c2ee2621198792d506ae39023701f3cf8c0c1121b7f8c6ee1fc1"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-64/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-64/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-64/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-64/iostat.json",
+      "sha256_source": "7a2b8a3655a153ea3b577b126eca3e5ee667bcb6a8aeb09dcc1dcfc8fffb159c",
+      "sha256_archive": "7a2b8a3655a153ea3b577b126eca3e5ee667bcb6a8aeb09dcc1dcfc8fffb159c"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-64/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-64/meta.json",
+      "sha256_source": "290e712d1a88d2bc3bb0915bdbfe59a05379cdba804b800fe2bd8b528f01c37a",
+      "sha256_archive": "290e712d1a88d2bc3bb0915bdbfe59a05379cdba804b800fe2bd8b528f01c37a"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-64/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-64/vmstat.txt",
+      "sha256_source": "b6efa4acbdde822f796684a891510d8847609f2b8216b35dd51422eba160f805",
+      "sha256_archive": "b6efa4acbdde822f796684a891510d8847609f2b8216b35dd51422eba160f805"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-768/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-768/command.json",
+      "sha256_source": "0610b0166755512ae49b8e99bb0017928d07db87acfe7fd50ddea441ae931c9c",
+      "sha256_archive": "0610b0166755512ae49b8e99bb0017928d07db87acfe7fd50ddea441ae931c9c"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-768/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-768/fio.json",
+      "sha256_source": "f3569b78e409873917fe12af6f2ab9a2f4fc05ddc70b6a2ca72044e39e654bbc",
+      "sha256_archive": "f3569b78e409873917fe12af6f2ab9a2f4fc05ddc70b6a2ca72044e39e654bbc"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-768/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-768/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-768/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-768/iostat.json",
+      "sha256_source": "0263c3ec9f35397792c9f6e5244fae6b5853281b949e806fcd5b505bdeaa9568",
+      "sha256_archive": "0263c3ec9f35397792c9f6e5244fae6b5853281b949e806fcd5b505bdeaa9568"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-768/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-768/meta.json",
+      "sha256_source": "62963a8646870ec443d6d6b83c0bdd4910788924ad493d08f5c4ab8a55d0ea8d",
+      "sha256_archive": "62963a8646870ec443d6d6b83c0bdd4910788924ad493d08f5c4ab8a55d0ea8d"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-768/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-768/vmstat.txt",
+      "sha256_source": "8d97e560d3be08dde8023711907ef7872b4d6d100321adfd620826a023d990ee",
+      "sha256_archive": "8d97e560d3be08dde8023711907ef7872b4d6d100321adfd620826a023d990ee"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-8/command.json",
+      "archive": "fio-hdd-repro/artifacts/run-8/command.json",
+      "sha256_source": "232c6d52330c612e8c79ad8da94f1fc1b3558bb373b7b8d612a99b1f0eca7d9c",
+      "sha256_archive": "232c6d52330c612e8c79ad8da94f1fc1b3558bb373b7b8d612a99b1f0eca7d9c"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-8/fio.json",
+      "archive": "fio-hdd-repro/artifacts/run-8/fio.json",
+      "sha256_source": "8537d2c0f96cc359413cd27ce4a200f15890dea2e9be90e8862fa235b7b011a0",
+      "sha256_archive": "8537d2c0f96cc359413cd27ce4a200f15890dea2e9be90e8862fa235b7b011a0"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-8/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/run-8/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-8/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/run-8/iostat.json",
+      "sha256_source": "bf5f3286ebe0e3247397ae150cd274424dc2c70f528c607b84ee8b4cbfeddad0",
+      "sha256_archive": "bf5f3286ebe0e3247397ae150cd274424dc2c70f528c607b84ee8b4cbfeddad0"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-8/meta.json",
+      "archive": "fio-hdd-repro/artifacts/run-8/meta.json",
+      "sha256_source": "5c4f4bf744a5c3926bd75044e0ef7a23694487c7dfaf7a0085ee5d834e330352",
+      "sha256_archive": "5c4f4bf744a5c3926bd75044e0ef7a23694487c7dfaf7a0085ee5d834e330352"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/run-8/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/run-8/vmstat.txt",
+      "sha256_source": "33680debc078763231a837351536d119c5b58c4a73cf525f747e0ce3d679fc63",
+      "sha256_archive": "33680debc078763231a837351536d119c5b58c4a73cf525f747e0ce3d679fc63"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/analysis/azure-minute-points.csv",
+      "archive": "fio-hdd-repro/artifacts/single-validation/analysis/azure-minute-points.csv",
+      "sha256_source": "ae03ecbd3aede55deef6df170f5219570fac0ce986ef01aef46b82ab1ddff1af",
+      "sha256_archive": "ae03ecbd3aede55deef6df170f5219570fac0ce986ef01aef46b82ab1ddff1af"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/analysis/iops-low-threads.png",
+      "archive": "fio-hdd-repro/artifacts/single-validation/analysis/iops-low-threads.png",
+      "sha256_source": "9851077a9009c54082c916a1d919f9669c56600bfe398eb6017ddc5df5dd45a7",
+      "sha256_archive": "9851077a9009c54082c916a1d919f9669c56600bfe398eb6017ddc5df5dd45a7"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/analysis/iops.png",
+      "archive": "fio-hdd-repro/artifacts/single-validation/analysis/iops.png",
+      "sha256_source": "6108b6c9703c5751a68a43eb32160b133af9d11ff7e7b46eff2715574a096b77",
+      "sha256_archive": "6108b6c9703c5751a68a43eb32160b133af9d11ff7e7b46eff2715574a096b77"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/analysis/latency.png",
+      "archive": "fio-hdd-repro/artifacts/single-validation/analysis/latency.png",
+      "sha256_source": "e676b8a790063ac71eb9831a2c7708c1690dced318fb6bcbf74b15125d7759a4",
+      "sha256_archive": "e676b8a790063ac71eb9831a2c7708c1690dced318fb6bcbf74b15125d7759a4"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/analysis/report.md",
+      "archive": "fio-hdd-repro/artifacts/single-validation/analysis/report.md",
+      "sha256_source": "3268a941385787c91c853e32c4c6f6421f3a522f45459b8a1bb993c0a11f1c74",
+      "sha256_archive": "3268a941385787c91c853e32c4c6f6421f3a522f45459b8a1bb993c0a11f1c74"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/analysis/summary.csv",
+      "archive": "fio-hdd-repro/artifacts/single-validation/analysis/summary.csv",
+      "sha256_source": "5d11c14a40269e2645c884c1f4f1aa5d605e0219190bfbaff3d5889bdfa32462",
+      "sha256_archive": "5d11c14a40269e2645c884c1f4f1aa5d605e0219190bfbaff3d5889bdfa32462"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/analysis/throughput.png",
+      "archive": "fio-hdd-repro/artifacts/single-validation/analysis/throughput.png",
+      "sha256_source": "8ea6c5735a881cb4e55cc73105bbcd382fec2aa32801303a1ac3da4838cbb092",
+      "sha256_archive": "8ea6c5735a881cb4e55cc73105bbcd382fec2aa32801303a1ac3da4838cbb092"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/complete.json",
+      "archive": "fio-hdd-repro/artifacts/single-validation/complete.json",
+      "sha256_source": "aa78725a4af10c35ed2ad877905b991f6a95694c222b617c4799aecdd3a81b9c",
+      "sha256_archive": "aa78725a4af10c35ed2ad877905b991f6a95694c222b617c4799aecdd3a81b9c"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/config.json",
+      "archive": "fio-hdd-repro/artifacts/single-validation/config.json",
+      "sha256_source": "615d6c4b75131d6ba150373e6a446f2f5daf73e1287c58d65711f30f9db5c8d9",
+      "sha256_archive": "615d6c4b75131d6ba150373e6a446f2f5daf73e1287c58d65711f30f9db5c8d9"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/guest.txt",
+      "archive": "fio-hdd-repro/artifacts/single-validation/guest.txt",
+      "sha256_source": "42f3d46dcc63a7b1fc5b8084b976de75df9a48478b46432542314974fa9c147c",
+      "sha256_archive": "42f3d46dcc63a7b1fc5b8084b976de75df9a48478b46432542314974fa9c147c"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/run-1/command.json",
+      "archive": "fio-hdd-repro/artifacts/single-validation/run-1/command.json",
+      "sha256_source": "6e5d45b7216a332e6abc7e1a3d3a2c2c24b4026fe57a7c4908d1356174157384",
+      "sha256_archive": "6e5d45b7216a332e6abc7e1a3d3a2c2c24b4026fe57a7c4908d1356174157384"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/run-1/fio.json",
+      "archive": "fio-hdd-repro/artifacts/single-validation/run-1/fio.json",
+      "sha256_source": "d19648e95cc6430bfd600c8c8e40ffec6d06d2d54478612cdda8633700007b47",
+      "sha256_archive": "d19648e95cc6430bfd600c8c8e40ffec6d06d2d54478612cdda8633700007b47"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/run-1/fio.stderr",
+      "archive": "fio-hdd-repro/artifacts/single-validation/run-1/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/run-1/iostat.json",
+      "archive": "fio-hdd-repro/artifacts/single-validation/run-1/iostat.json",
+      "sha256_source": "b2c1c6893893f0313397c61f862f2c7e9e2cf7b785d1e628909d1f317ac63250",
+      "sha256_archive": "b2c1c6893893f0313397c61f862f2c7e9e2cf7b785d1e628909d1f317ac63250"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/run-1/meta.json",
+      "archive": "fio-hdd-repro/artifacts/single-validation/run-1/meta.json",
+      "sha256_source": "0752617943adf70c2056d4b147459ac1cbc74c33234ee274334931a70214b639",
+      "sha256_archive": "0752617943adf70c2056d4b147459ac1cbc74c33234ee274334931a70214b639"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/run-1/vmstat.txt",
+      "archive": "fio-hdd-repro/artifacts/single-validation/run-1/vmstat.txt",
+      "sha256_source": "14d18687695c0d0b82d79cdc4af7ca75746b8759b8510764c2f27a2ff2066a2a",
+      "sha256_archive": "14d18687695c0d0b82d79cdc4af7ca75746b8759b8510764c2f27a2ff2066a2a"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/test.log",
+      "archive": "fio-hdd-repro/artifacts/single-validation/test.log",
+      "sha256_source": "e3c818d546b26f56245bc6310934e9d0abb0b69d3be568534678f253d6b78619",
+      "sha256_archive": "e3c818d546b26f56245bc6310934e9d0abb0b69d3be568534678f253d6b78619"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/single-validation/vm-metrics.json",
+      "archive": "fio-hdd-repro/artifacts/single-validation/vm-metrics.json",
+      "sha256_source": "7ff87d9cfb9cfed3d0c71d57dcff08cc781d41f420b4402897ab14918ffb4659",
+      "sha256_archive": "7ff87d9cfb9cfed3d0c71d57dcff08cc781d41f420b4402897ab14918ffb4659"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/snapshots-before.json",
+      "archive": "fio-hdd-repro/artifacts/snapshots-before.json",
+      "sha256_source": "5e6c08036771f3e70ed4628ccf50584d0600babcbf4b5cd3e5e794013f9ab796",
+      "sha256_archive": "5e6c08036771f3e70ed4628ccf50584d0600babcbf4b5cd3e5e794013f9ab796"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/vm-definitions.json",
+      "archive": "fio-hdd-repro/artifacts/vm-definitions.json",
+      "sha256_source": "d5dc3bf44b7edf7846e889a3ade0ee255a2c2fc5bb1435b172c3f05b175d2bd5",
+      "sha256_archive": "d5dc3bf44b7edf7846e889a3ade0ee255a2c2fc5bb1435b172c3f05b175d2bd5"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/vm-definitions.json.stderr",
+      "archive": "fio-hdd-repro/artifacts/vm-definitions.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/vm-metrics.json",
+      "archive": "fio-hdd-repro/artifacts/vm-metrics.json",
+      "sha256_source": "7ff87d9cfb9cfed3d0c71d57dcff08cc781d41f420b4402897ab14918ffb4659",
+      "sha256_archive": "7ff87d9cfb9cfed3d0c71d57dcff08cc781d41f420b4402897ab14918ffb4659"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/vm-metrics.json.stderr",
+      "archive": "fio-hdd-repro/artifacts/vm-metrics.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/vm-sku.json",
+      "archive": "fio-hdd-repro/artifacts/vm-sku.json",
+      "sha256_source": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "sha256_archive": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "source": "fio-hdd-repro/artifacts/vm.json",
+      "archive": "fio-hdd-repro/artifacts/vm.json",
+      "sha256_source": "eae53b9371e47eda7df73ccba8aeea7293a6d2ce7673c362e0a195451fa3cf5f",
+      "sha256_archive": "eae53b9371e47eda7df73ccba8aeea7293a6d2ce7673c362e0a195451fa3cf5f"
+    },
+    {
+      "source": "fio-hdd-repro/cloud-init.yml",
+      "archive": "fio-hdd-repro/cloud-init.yml",
+      "sha256_source": "22fde8a6c9e583b8681854fbd86fe5f6766247ba42cf6dc1f601efcdc66574b5",
+      "sha256_archive": "22fde8a6c9e583b8681854fbd86fe5f6766247ba42cf6dc1f601efcdc66574b5"
+    },
+    {
+      "source": "fio-hdd-repro/collect.py",
+      "archive": "fio-hdd-repro/collect.py",
+      "sha256_source": "e577116e5f69a1399482e88f4980a09cede83baa226c95a57bc98a86e28f0b25",
+      "sha256_archive": "e577116e5f69a1399482e88f4980a09cede83baa226c95a57bc98a86e28f0b25"
+    },
+    {
+      "source": "fio-hdd-repro/guest-test.py",
+      "archive": "fio-hdd-repro/guest-test.py",
+      "sha256_source": "8ad5a7d2697bf4dd2b17f8545cdb865c5c10ea71ce0a22a1387ac3357ebf4ec5",
+      "sha256_archive": "8ad5a7d2697bf4dd2b17f8545cdb865c5c10ea71ce0a22a1387ac3357ebf4ec5"
+    },
+    {
+      "source": "fio-hdd-repro/poll.py",
+      "archive": "fio-hdd-repro/poll.py",
+      "sha256_source": "a7b80ea3a5007c696315214d40ca109b549f54a9d12258030b813764b16a7f85",
+      "sha256_archive": "a7b80ea3a5007c696315214d40ca109b549f54a9d12258030b813764b16a7f85"
+    },
+    {
+      "source": "fio-hdd-repro/provision.py",
+      "archive": "fio-hdd-repro/provision.py",
+      "sha256_source": "7f80242d805e0805dcaa918a047c1c118175d9f9839c86e62fada799cab657e8",
+      "sha256_archive": "7f80242d805e0805dcaa918a047c1c118175d9f9839c86e62fada799cab657e8"
+    },
+    {
+      "source": "fio-hdd-repro/requirements.txt",
+      "archive": "fio-hdd-repro/requirements.txt",
+      "sha256_source": "de950d3b75e4ad1a760c121533e06390c84574f7dd0b53c0eaa742ab6d5c2f38",
+      "sha256_archive": "de950d3b75e4ad1a760c121533e06390c84574f7dd0b53c0eaa742ab6d5c2f38"
+    },
+    {
+      "source": "fio-hdd-repro/state.json",
+      "archive": "fio-hdd-repro/artifacts/infrastructure-state.json",
+      "sha256_source": "096a69d26e719065484cfdd4ad7bb036fc1fd433f6d3a61fcc77e0ae304bdee1",
+      "sha256_archive": "096a69d26e719065484cfdd4ad7bb036fc1fd433f6d3a61fcc77e0ae304bdee1"
+    },
+    {
+      "source": "fio-hdd-repro/teardown.py",
+      "archive": "fio-hdd-repro/teardown.py",
+      "sha256_source": "536332a3af8b8d951da54ef240b2aa9ee828aaadc566b64459c1ef4c79830d1b",
+      "sha256_archive": "536332a3af8b8d951da54ef240b2aa9ee828aaadc566b64459c1ef4c79830d1b"
+    },
+    {
+      "source": "fio-hdd-1m-repro/.gitignore",
+      "archive": "fio-hdd-1m-repro/.gitignore",
+      "sha256_source": "8703757d0b46c0ffcb02ead43f20a7825e7ba37ee9686d4c87db3b9f60b43aee",
+      "sha256_archive": "8703757d0b46c0ffcb02ead43f20a7825e7ba37ee9686d4c87db3b9f60b43aee"
+    },
+    {
+      "source": "fio-hdd-1m-repro/REPORT.md",
+      "archive": "fio-hdd-1m-repro/REPORT.md",
+      "sha256_source": "9c2f2ef353844c4c749c321e9ba5d95e69129357fadad7b0dcebca483ec41b23",
+      "sha256_archive": "9c2f2ef353844c4c749c321e9ba5d95e69129357fadad7b0dcebca483ec41b23"
+    },
+    {
+      "source": "fio-hdd-1m-repro/analyze.py",
+      "archive": "fio-hdd-1m-repro/analyze.py",
+      "sha256_source": "30e1a584f4532782683344f2950523f110ab66708d403e97310aa83d12853ac0",
+      "sha256_archive": "30e1a584f4532782683344f2950523f110ab66708d403e97310aa83d12853ac0"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/analysis/azure-minute-points.csv",
+      "archive": "fio-hdd-1m-repro/artifacts/analysis/azure-minute-points.csv",
+      "sha256_source": "fa6d5af97a2808691b06f69bbef0970cffc32e7c9e590a3511a24f2a192e353f",
+      "sha256_archive": "fa6d5af97a2808691b06f69bbef0970cffc32e7c9e590a3511a24f2a192e353f"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/analysis/latency.png",
+      "archive": "fio-hdd-1m-repro/artifacts/analysis/latency.png",
+      "sha256_source": "5f71f5c1fab683a761f5653ca2ff2dbd32a861cb485eea2acbda766718181aaa",
+      "sha256_archive": "5f71f5c1fab683a761f5653ca2ff2dbd32a861cb485eea2acbda766718181aaa"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/analysis/summary.csv",
+      "archive": "fio-hdd-1m-repro/artifacts/analysis/summary.csv",
+      "sha256_source": "ae876da9bb536f4ae677672121b3a0f96e1f5319ea8d02e79f3db10171b8db65",
+      "sha256_archive": "ae876da9bb536f4ae677672121b3a0f96e1f5319ea8d02e79f3db10171b8db65"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/analysis/throughput-low-threads.png",
+      "archive": "fio-hdd-1m-repro/artifacts/analysis/throughput-low-threads.png",
+      "sha256_source": "b92db91ace497566dad241754be04955bd264e408f889458cc6ef30ef87da8c3",
+      "sha256_archive": "b92db91ace497566dad241754be04955bd264e408f889458cc6ef30ef87da8c3"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/analysis/throughput.png",
+      "archive": "fio-hdd-1m-repro/artifacts/analysis/throughput.png",
+      "sha256_source": "d5a0d93ee9d5fffa16ba273560f4d8f009974871814c9d64aea77dee127f3696",
+      "sha256_archive": "d5a0d93ee9d5fffa16ba273560f4d8f009974871814c9d64aea77dee127f3696"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/cleanup.json",
+      "archive": "fio-hdd-1m-repro/artifacts/cleanup.json",
+      "sha256_source": "796200757f4aa34f61712c353e4a039f339c278f9e5c86f15b1308b45885132c",
+      "sha256_archive": "796200757f4aa34f61712c353e4a039f339c278f9e5c86f15b1308b45885132c"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/collection-final.log",
+      "archive": "fio-hdd-1m-repro/artifacts/collection-final.log",
+      "sha256_source": "a31347108cb01cbf5af5d563e81c60b0fb1aefd73088dd152b7c74e85c5c4abc",
+      "sha256_archive": "a31347108cb01cbf5af5d563e81c60b0fb1aefd73088dd152b7c74e85c5c4abc"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/collection-progress.log",
+      "archive": "fio-hdd-1m-repro/artifacts/collection-progress.log",
+      "sha256_source": "6cf2b1cd867fa548a6a6fe4415f7bc020fd5eb7fd06ea1122ed6081550d08bc0",
+      "sha256_archive": "6cf2b1cd867fa548a6a6fe4415f7bc020fd5eb7fd06ea1122ed6081550d08bc0"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/complete.json",
+      "archive": "fio-hdd-1m-repro/artifacts/complete.json",
+      "sha256_source": "76e0feacd5831d9d3c416ad263766e4bc6c20d4d4c58ceade8a38ca031083fb7",
+      "sha256_archive": "76e0feacd5831d9d3c416ad263766e4bc6c20d4d4c58ceade8a38ca031083fb7"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/config.json",
+      "archive": "fio-hdd-1m-repro/artifacts/config.json",
+      "sha256_source": "5845add7ec6bfeb173ae38f8be76d0ba4522c36ee572570d334184d2ac7caa66",
+      "sha256_archive": "5845add7ec6bfeb173ae38f8be76d0ba4522c36ee572570d334184d2ac7caa66"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/disk-definitions.json",
+      "archive": "fio-hdd-1m-repro/artifacts/disk-definitions.json",
+      "sha256_source": "683e5b2d4dc11e013b176b9c5b87c8f45f35d17c640caab99c794e1c0bfa6519",
+      "sha256_archive": "683e5b2d4dc11e013b176b9c5b87c8f45f35d17c640caab99c794e1c0bfa6519"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/disk-definitions.json.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/disk-definitions.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/disk-metrics.json",
+      "archive": "fio-hdd-1m-repro/artifacts/disk-metrics.json",
+      "sha256_source": "d89203c7c68c9c24657e8c290b0ea816709f014931af7c7a780b627c34a17b8f",
+      "sha256_archive": "d89203c7c68c9c24657e8c290b0ea816709f014931af7c7a780b627c34a17b8f"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/disk-metrics.json.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/disk-metrics.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/disk.json",
+      "archive": "fio-hdd-1m-repro/artifacts/disk.json",
+      "sha256_source": "6ed0ba906926222d1ad0c31e7b0628af41c9504cfbd04bc77e48144d74ba6fd4",
+      "sha256_archive": "6ed0ba906926222d1ad0c31e7b0628af41c9504cfbd04bc77e48144d74ba6fd4"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/guest-test.log",
+      "archive": "fio-hdd-1m-repro/artifacts/guest-test.log",
+      "sha256_source": "bdea38077006281d1bae3d02ad8a49a47138ee9b7bd7cde56ae2216ba6262fcb",
+      "sha256_archive": "bdea38077006281d1bae3d02ad8a49a47138ee9b7bd7cde56ae2216ba6262fcb"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/guest.txt",
+      "archive": "fio-hdd-1m-repro/artifacts/guest.txt",
+      "sha256_source": "87c167d1ec425f9d36e39fa94df3a85588dd5162aa1e758544051b909322fab8",
+      "sha256_archive": "87c167d1ec425f9d36e39fa94df3a85588dd5162aa1e758544051b909322fab8"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/host-metrics.json",
+      "archive": "fio-hdd-1m-repro/artifacts/host-metrics.json",
+      "sha256_source": "528174e49e114b82c063f03d65b3ef2c221f5fa4d9b80cd424d9be0428a26347",
+      "sha256_archive": "528174e49e114b82c063f03d65b3ef2c221f5fa4d9b80cd424d9be0428a26347"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/host-metrics.json.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/host-metrics.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/provision.log",
+      "archive": "fio-hdd-1m-repro/artifacts/provision.log",
+      "sha256_source": "d7df525f4b395741cb3d6c37b43479bb06bffe7051bbea0f366df4d0bd3e231a",
+      "sha256_archive": "d7df525f4b395741cb3d6c37b43479bb06bffe7051bbea0f366df4d0bd3e231a"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/quota.json",
+      "archive": "fio-hdd-1m-repro/artifacts/quota.json",
+      "sha256_source": "3a12c93bffe989f96a2bade9a05663121d42e0ca95a20bc8c2eeb9f8885a5045",
+      "sha256_archive": "3a12c93bffe989f96a2bade9a05663121d42e0ca95a20bc8c2eeb9f8885a5045"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-1/command.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-1/command.json",
+      "sha256_source": "f2d92a74b8dfdc8183d93f0f00f845361213df5557bf39ce3efe568f0d798042",
+      "sha256_archive": "f2d92a74b8dfdc8183d93f0f00f845361213df5557bf39ce3efe568f0d798042"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-1/fio.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-1/fio.json",
+      "sha256_source": "0b28e4cc2d86559491e56c04be28697e7dec6cebd18a3cb4770486498e6d0160",
+      "sha256_archive": "0b28e4cc2d86559491e56c04be28697e7dec6cebd18a3cb4770486498e6d0160"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-1/fio.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/run-1/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-1/iostat.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-1/iostat.json",
+      "sha256_source": "72e4e2e40be99d0f66cdc2ba6e3c6333514d83f510d8822c57507f994ca67f58",
+      "sha256_archive": "72e4e2e40be99d0f66cdc2ba6e3c6333514d83f510d8822c57507f994ca67f58"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-1/meta.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-1/meta.json",
+      "sha256_source": "b1b436cfe7e576c23457b4550c874014378f5991f466f53bb8c25fc06ee86c11",
+      "sha256_archive": "b1b436cfe7e576c23457b4550c874014378f5991f466f53bb8c25fc06ee86c11"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-1/vmstat.txt",
+      "archive": "fio-hdd-1m-repro/artifacts/run-1/vmstat.txt",
+      "sha256_source": "ee87848d8a6ce4444c794be5325efcaf4572e52362ad55ddbecbb0eeb5db058f",
+      "sha256_archive": "ee87848d8a6ce4444c794be5325efcaf4572e52362ad55ddbecbb0eeb5db058f"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-128/command.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-128/command.json",
+      "sha256_source": "4f286a96d02bfd7533f650de32064c08d57df2efa4d9e9de1a7062766d56ee5f",
+      "sha256_archive": "4f286a96d02bfd7533f650de32064c08d57df2efa4d9e9de1a7062766d56ee5f"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-128/fio.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-128/fio.json",
+      "sha256_source": "536d9714f595d4eb8037ce9afa1611cecd864e4ad772da042ed578ea64de397e",
+      "sha256_archive": "536d9714f595d4eb8037ce9afa1611cecd864e4ad772da042ed578ea64de397e"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-128/fio.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/run-128/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-128/iostat.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-128/iostat.json",
+      "sha256_source": "c9c8c16a3e3bcc308535607cbe5d705fd51c689a5e3332faa37fd4647be06e55",
+      "sha256_archive": "c9c8c16a3e3bcc308535607cbe5d705fd51c689a5e3332faa37fd4647be06e55"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-128/meta.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-128/meta.json",
+      "sha256_source": "f75887b84d7e861a909993f6d9a3d5479f304fb9b2854ee248447169b54c0b7a",
+      "sha256_archive": "f75887b84d7e861a909993f6d9a3d5479f304fb9b2854ee248447169b54c0b7a"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-128/vmstat.txt",
+      "archive": "fio-hdd-1m-repro/artifacts/run-128/vmstat.txt",
+      "sha256_source": "16516a7cc5b8e3f43d4a210e772ec7ce3b98a65aab73ab6fffffba77c4f5c08a",
+      "sha256_archive": "16516a7cc5b8e3f43d4a210e772ec7ce3b98a65aab73ab6fffffba77c4f5c08a"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-16/command.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-16/command.json",
+      "sha256_source": "b1f98b286941d64cae4825e5ac8e5dacaea2741224734b53c1a1b9117ddbea4e",
+      "sha256_archive": "b1f98b286941d64cae4825e5ac8e5dacaea2741224734b53c1a1b9117ddbea4e"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-16/fio.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-16/fio.json",
+      "sha256_source": "bc5dd68648569361ff85bb336efea3ec41b8341709c9711f3528cdfeaf4201a2",
+      "sha256_archive": "bc5dd68648569361ff85bb336efea3ec41b8341709c9711f3528cdfeaf4201a2"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-16/fio.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/run-16/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-16/iostat.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-16/iostat.json",
+      "sha256_source": "f44d1352a6c4cb4ff030953f8c08683c386a8208e11b3974bf64b6c8c75224ae",
+      "sha256_archive": "f44d1352a6c4cb4ff030953f8c08683c386a8208e11b3974bf64b6c8c75224ae"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-16/meta.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-16/meta.json",
+      "sha256_source": "62588e867c943f74bc96a4d07658ca9f4ed4a5f504201dd4fba93719f48b6c4d",
+      "sha256_archive": "62588e867c943f74bc96a4d07658ca9f4ed4a5f504201dd4fba93719f48b6c4d"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-16/vmstat.txt",
+      "archive": "fio-hdd-1m-repro/artifacts/run-16/vmstat.txt",
+      "sha256_source": "b207245190cc2cdc3a7f337a7e239acbb250841783c98d478ca52c5488f9084a",
+      "sha256_archive": "b207245190cc2cdc3a7f337a7e239acbb250841783c98d478ca52c5488f9084a"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-2/command.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-2/command.json",
+      "sha256_source": "e22bc0fc52b122aaaaecd43e1918cb5cbd7105328cdacc5fb9cd4abe68433e33",
+      "sha256_archive": "e22bc0fc52b122aaaaecd43e1918cb5cbd7105328cdacc5fb9cd4abe68433e33"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-2/fio.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-2/fio.json",
+      "sha256_source": "c586b4e534e36c759d794d3716a60f30f977ab4f78d38f77938539b676ac8ef2",
+      "sha256_archive": "c586b4e534e36c759d794d3716a60f30f977ab4f78d38f77938539b676ac8ef2"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-2/fio.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/run-2/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-2/iostat.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-2/iostat.json",
+      "sha256_source": "dc0b1f68a0e40005fd2dd936c4864220e6c89bc661e713b887593b152881272d",
+      "sha256_archive": "dc0b1f68a0e40005fd2dd936c4864220e6c89bc661e713b887593b152881272d"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-2/meta.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-2/meta.json",
+      "sha256_source": "efba77d64f65fab3216d1e9360b28338e61f1078b7606553894eeb90d39119cf",
+      "sha256_archive": "efba77d64f65fab3216d1e9360b28338e61f1078b7606553894eeb90d39119cf"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-2/vmstat.txt",
+      "archive": "fio-hdd-1m-repro/artifacts/run-2/vmstat.txt",
+      "sha256_source": "eb1a232a23b853917c11fb370440326cb176cfc250c20c7b2884babce08a9b9e",
+      "sha256_archive": "eb1a232a23b853917c11fb370440326cb176cfc250c20c7b2884babce08a9b9e"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-256/command.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-256/command.json",
+      "sha256_source": "25d912c4e1945be728100c0b2314df4d99ea6cc39f87875300186a893383275c",
+      "sha256_archive": "25d912c4e1945be728100c0b2314df4d99ea6cc39f87875300186a893383275c"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-256/fio.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-256/fio.json",
+      "sha256_source": "165f45495f235100d0f167673f6b292f80436721229b385913cf8d20f8136def",
+      "sha256_archive": "165f45495f235100d0f167673f6b292f80436721229b385913cf8d20f8136def"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-256/fio.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/run-256/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-256/iostat.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-256/iostat.json",
+      "sha256_source": "aabe9a9124efab7c913415a7ec6ae0fb60f1b3c19050c9b23a8830c681cc6de7",
+      "sha256_archive": "aabe9a9124efab7c913415a7ec6ae0fb60f1b3c19050c9b23a8830c681cc6de7"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-256/meta.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-256/meta.json",
+      "sha256_source": "4f646af5aa5edd4dfe9f29c833ed65cb16dfdacb366f19dbfba8520c42abbe0a",
+      "sha256_archive": "4f646af5aa5edd4dfe9f29c833ed65cb16dfdacb366f19dbfba8520c42abbe0a"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-256/vmstat.txt",
+      "archive": "fio-hdd-1m-repro/artifacts/run-256/vmstat.txt",
+      "sha256_source": "21556937ae04456bda833c22397ddf5f8ed91113baa6f8d9cf86e3ff78052f19",
+      "sha256_archive": "21556937ae04456bda833c22397ddf5f8ed91113baa6f8d9cf86e3ff78052f19"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-32/command.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-32/command.json",
+      "sha256_source": "f61ebcffecdc84843377ab5f9c3376c66f1d13c5db6a9039f70f531cc5898110",
+      "sha256_archive": "f61ebcffecdc84843377ab5f9c3376c66f1d13c5db6a9039f70f531cc5898110"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-32/fio.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-32/fio.json",
+      "sha256_source": "b6d2d73da54085689b394235f90ceca4afeef9c8edc135b0d1fb835b2bafccb4",
+      "sha256_archive": "b6d2d73da54085689b394235f90ceca4afeef9c8edc135b0d1fb835b2bafccb4"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-32/fio.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/run-32/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-32/iostat.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-32/iostat.json",
+      "sha256_source": "4ab32546817b08408a95392aace5259cd6801d58709b55d38116683ab5478f70",
+      "sha256_archive": "4ab32546817b08408a95392aace5259cd6801d58709b55d38116683ab5478f70"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-32/meta.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-32/meta.json",
+      "sha256_source": "3c99ddb6420320a45fe30300b0c0e9797b8c03a016326688ec529d0cee5b1367",
+      "sha256_archive": "3c99ddb6420320a45fe30300b0c0e9797b8c03a016326688ec529d0cee5b1367"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-32/vmstat.txt",
+      "archive": "fio-hdd-1m-repro/artifacts/run-32/vmstat.txt",
+      "sha256_source": "b05920b3b3c889ed70fbe4c232c772e7894f33c9e81398109c635886fc64b2a8",
+      "sha256_archive": "b05920b3b3c889ed70fbe4c232c772e7894f33c9e81398109c635886fc64b2a8"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-4/command.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-4/command.json",
+      "sha256_source": "0612e904d7e59393660658c3008bc9f7d7ce1d23c02031469aeb2dad01adb890",
+      "sha256_archive": "0612e904d7e59393660658c3008bc9f7d7ce1d23c02031469aeb2dad01adb890"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-4/fio.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-4/fio.json",
+      "sha256_source": "02aa395fa3a067a534c4884ca942da57ce3a740a8bba3f12bfc89f172d0c2bb2",
+      "sha256_archive": "02aa395fa3a067a534c4884ca942da57ce3a740a8bba3f12bfc89f172d0c2bb2"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-4/fio.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/run-4/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-4/iostat.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-4/iostat.json",
+      "sha256_source": "df4a79b7509eb676d97d72928414145d7ccbdd7107b5f16fa361a1d967b2590e",
+      "sha256_archive": "df4a79b7509eb676d97d72928414145d7ccbdd7107b5f16fa361a1d967b2590e"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-4/meta.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-4/meta.json",
+      "sha256_source": "bb8149545f31bbabb8920280747052f6017513398af4a5708509e2c386659f98",
+      "sha256_archive": "bb8149545f31bbabb8920280747052f6017513398af4a5708509e2c386659f98"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-4/vmstat.txt",
+      "archive": "fio-hdd-1m-repro/artifacts/run-4/vmstat.txt",
+      "sha256_source": "027f3b0370ea3e1b5e0a0b6ba97f797dfdb7104aaf2acba4a2d92d5426506bb9",
+      "sha256_archive": "027f3b0370ea3e1b5e0a0b6ba97f797dfdb7104aaf2acba4a2d92d5426506bb9"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-512/command.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-512/command.json",
+      "sha256_source": "d07b8ed426282e1f7a4916331774e1938ec957ce33a15e603ff5ee228e2de58d",
+      "sha256_archive": "d07b8ed426282e1f7a4916331774e1938ec957ce33a15e603ff5ee228e2de58d"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-512/fio.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-512/fio.json",
+      "sha256_source": "953326aa9f3bc8ec74a613928901962688857fe909986b7a23363126ca6d5b10",
+      "sha256_archive": "953326aa9f3bc8ec74a613928901962688857fe909986b7a23363126ca6d5b10"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-512/fio.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/run-512/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-512/iostat.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-512/iostat.json",
+      "sha256_source": "52df5f3eb6459730d06d80252cdb7148f2e4c2e75af4950bd5f8fc3d3eeb1d9d",
+      "sha256_archive": "52df5f3eb6459730d06d80252cdb7148f2e4c2e75af4950bd5f8fc3d3eeb1d9d"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-512/meta.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-512/meta.json",
+      "sha256_source": "250dbae32ccb88939d9110c788d9a2a03e3600374aeb40501af45063ceebb415",
+      "sha256_archive": "250dbae32ccb88939d9110c788d9a2a03e3600374aeb40501af45063ceebb415"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-512/vmstat.txt",
+      "archive": "fio-hdd-1m-repro/artifacts/run-512/vmstat.txt",
+      "sha256_source": "6899cef8fab4a175129627ae52806aa6fb514b0024d4295b56a53d2333f8fad8",
+      "sha256_archive": "6899cef8fab4a175129627ae52806aa6fb514b0024d4295b56a53d2333f8fad8"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-64/command.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-64/command.json",
+      "sha256_source": "ef6c95d4490a07d6051aac12d5d4dc75789e21e18479800ec6e80f93c3b57bb7",
+      "sha256_archive": "ef6c95d4490a07d6051aac12d5d4dc75789e21e18479800ec6e80f93c3b57bb7"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-64/fio.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-64/fio.json",
+      "sha256_source": "126c3200d85d3e60c5ceedc7919dedfc41c3d293bf0dde192a8d7fd850eaa5c2",
+      "sha256_archive": "126c3200d85d3e60c5ceedc7919dedfc41c3d293bf0dde192a8d7fd850eaa5c2"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-64/fio.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/run-64/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-64/iostat.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-64/iostat.json",
+      "sha256_source": "09b013991e6289c48173a2b29e522096151b60ec95ffd232c4062ad2af04a65f",
+      "sha256_archive": "09b013991e6289c48173a2b29e522096151b60ec95ffd232c4062ad2af04a65f"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-64/meta.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-64/meta.json",
+      "sha256_source": "61363a88351cd48f320fe7c49e0d88e97b7c24fc8d102245738d1adf50bc1ff7",
+      "sha256_archive": "61363a88351cd48f320fe7c49e0d88e97b7c24fc8d102245738d1adf50bc1ff7"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-64/vmstat.txt",
+      "archive": "fio-hdd-1m-repro/artifacts/run-64/vmstat.txt",
+      "sha256_source": "7eb06d7f360b8b9644c0c24e723e37f186157d47e541cc94c14bc82c7be8087b",
+      "sha256_archive": "7eb06d7f360b8b9644c0c24e723e37f186157d47e541cc94c14bc82c7be8087b"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-8/command.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-8/command.json",
+      "sha256_source": "82c4aab2b55b7087d8363071d60f82a6711d18a6c68d7dccfb270fe79f8fa22c",
+      "sha256_archive": "82c4aab2b55b7087d8363071d60f82a6711d18a6c68d7dccfb270fe79f8fa22c"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-8/fio.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-8/fio.json",
+      "sha256_source": "45a08d8143795a12dba69c35a24b7608e22b9af85fc4699040d2fea0c2f09fc0",
+      "sha256_archive": "45a08d8143795a12dba69c35a24b7608e22b9af85fc4699040d2fea0c2f09fc0"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-8/fio.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/run-8/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-8/iostat.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-8/iostat.json",
+      "sha256_source": "b5e24d20cc0572d6cc33e8000959bb0838c3f0c9ae379d555c8f5dde53f8269d",
+      "sha256_archive": "b5e24d20cc0572d6cc33e8000959bb0838c3f0c9ae379d555c8f5dde53f8269d"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-8/meta.json",
+      "archive": "fio-hdd-1m-repro/artifacts/run-8/meta.json",
+      "sha256_source": "8cf203ce05656226255d090c2c943e75f0de8789b57b2bfe3a727bdcf7e6a079",
+      "sha256_archive": "8cf203ce05656226255d090c2c943e75f0de8789b57b2bfe3a727bdcf7e6a079"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/run-8/vmstat.txt",
+      "archive": "fio-hdd-1m-repro/artifacts/run-8/vmstat.txt",
+      "sha256_source": "2acf6461e18b5a2bf520ba4a226a9964382cc2ec5c5dba2bd1e23f899b372cc3",
+      "sha256_archive": "2acf6461e18b5a2bf520ba4a226a9964382cc2ec5c5dba2bd1e23f899b372cc3"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/analysis/azure-minute-points.csv",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/analysis/azure-minute-points.csv",
+      "sha256_source": "070c7158a3b07111c3be44f4aff2e995b5b00134471ee4fb993f07f414eb059d",
+      "sha256_archive": "070c7158a3b07111c3be44f4aff2e995b5b00134471ee4fb993f07f414eb059d"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/analysis/latency.png",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/analysis/latency.png",
+      "sha256_source": "ec4155967ab8e2cb8f921a33568b9a8386602f36df581a00995aff158c82f86a",
+      "sha256_archive": "ec4155967ab8e2cb8f921a33568b9a8386602f36df581a00995aff158c82f86a"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/analysis/report.md",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/analysis/report.md",
+      "sha256_source": "d1365d81c02eab1a7c198d67642b121f91bdd8f7a7bb0d25797c250051602161",
+      "sha256_archive": "d1365d81c02eab1a7c198d67642b121f91bdd8f7a7bb0d25797c250051602161"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/analysis/summary.csv",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/analysis/summary.csv",
+      "sha256_source": "6495870ca7f8e18b60ea027e3fd3349cd945ecb976333b6269832d7812fa63c0",
+      "sha256_archive": "6495870ca7f8e18b60ea027e3fd3349cd945ecb976333b6269832d7812fa63c0"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/analysis/throughput-low-threads.png",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/analysis/throughput-low-threads.png",
+      "sha256_source": "3e6e3e47e1820cdcfe5a2b2867367042b7defc80193168214b33c51b2c9dfcfa",
+      "sha256_archive": "3e6e3e47e1820cdcfe5a2b2867367042b7defc80193168214b33c51b2c9dfcfa"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/analysis/throughput.png",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/analysis/throughput.png",
+      "sha256_source": "6ee645d22c25d4bf10641fe3abb4b3df943b5ab34aeeb862916cf5bd83cf3816",
+      "sha256_archive": "6ee645d22c25d4bf10641fe3abb4b3df943b5ab34aeeb862916cf5bd83cf3816"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/complete.json",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/complete.json",
+      "sha256_source": "7f7076ca076c41e1a8ff354eb8a88e03952ba9e3a0a732cb11723a3901cd34f5",
+      "sha256_archive": "7f7076ca076c41e1a8ff354eb8a88e03952ba9e3a0a732cb11723a3901cd34f5"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/config.json",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/config.json",
+      "sha256_source": "595c6626a17bafd77b607f3cccb3721409236f5e28a3cbd6f20aaf51476b83ee",
+      "sha256_archive": "595c6626a17bafd77b607f3cccb3721409236f5e28a3cbd6f20aaf51476b83ee"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/guest.txt",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/guest.txt",
+      "sha256_source": "6c08856c472e40cbb4802aff8b2c1ae6d7537ea5e8a58b14373b7d6b78dd546e",
+      "sha256_archive": "6c08856c472e40cbb4802aff8b2c1ae6d7537ea5e8a58b14373b7d6b78dd546e"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/run-1/command.json",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/run-1/command.json",
+      "sha256_source": "1f6546ec0338914b4b16d2351a3d967c47579f0490a39a12fe3c555285790aa0",
+      "sha256_archive": "1f6546ec0338914b4b16d2351a3d967c47579f0490a39a12fe3c555285790aa0"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/run-1/fio.json",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/run-1/fio.json",
+      "sha256_source": "47ea8cf3187ce1cda6d692764208e366fbf02628326dd75ce50a15900056db24",
+      "sha256_archive": "47ea8cf3187ce1cda6d692764208e366fbf02628326dd75ce50a15900056db24"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/run-1/fio.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/run-1/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/run-1/iostat.json",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/run-1/iostat.json",
+      "sha256_source": "07d314d76d97a3e2708b0cee5b995480c0196622e8c2d03f11dc662b5a9fa30c",
+      "sha256_archive": "07d314d76d97a3e2708b0cee5b995480c0196622e8c2d03f11dc662b5a9fa30c"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/run-1/meta.json",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/run-1/meta.json",
+      "sha256_source": "bcd77460910dd3504c6315b5fad0c892f5b050bbb31980da3bedab0698314a2b",
+      "sha256_archive": "bcd77460910dd3504c6315b5fad0c892f5b050bbb31980da3bedab0698314a2b"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/run-1/vmstat.txt",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/run-1/vmstat.txt",
+      "sha256_source": "abd22da235c4cd40ea00568c948dac1ae1252d7066e8bc5bbc271dd850aeb0c1",
+      "sha256_archive": "abd22da235c4cd40ea00568c948dac1ae1252d7066e8bc5bbc271dd850aeb0c1"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/test.log",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/test.log",
+      "sha256_source": "609370a157d13fc395219eef98574cbd84d6a23433fdaed68036e5aa3a15f106",
+      "sha256_archive": "609370a157d13fc395219eef98574cbd84d6a23433fdaed68036e5aa3a15f106"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/single-validation/vm-metrics.json",
+      "archive": "fio-hdd-1m-repro/artifacts/single-validation/vm-metrics.json",
+      "sha256_source": "9dbec688b0804a0b2803076b8aba5a71c375c480832ae99894d3271df4f9270c",
+      "sha256_archive": "9dbec688b0804a0b2803076b8aba5a71c375c480832ae99894d3271df4f9270c"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/snapshots-before.json",
+      "archive": "fio-hdd-1m-repro/artifacts/snapshots-before.json",
+      "sha256_source": "408033e1a783fa184b93b85bfde47eb44dd5e0722992b35f8c89995c559fe6d7",
+      "sha256_archive": "408033e1a783fa184b93b85bfde47eb44dd5e0722992b35f8c89995c559fe6d7"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/vm-definitions.json",
+      "archive": "fio-hdd-1m-repro/artifacts/vm-definitions.json",
+      "sha256_source": "7c07fd299a83877d5234974015c00c210fb99b8a90de27dcdf27bf481a2ccd96",
+      "sha256_archive": "7c07fd299a83877d5234974015c00c210fb99b8a90de27dcdf27bf481a2ccd96"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/vm-definitions.json.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/vm-definitions.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/vm-metrics.json",
+      "archive": "fio-hdd-1m-repro/artifacts/vm-metrics.json",
+      "sha256_source": "9dbec688b0804a0b2803076b8aba5a71c375c480832ae99894d3271df4f9270c",
+      "sha256_archive": "9dbec688b0804a0b2803076b8aba5a71c375c480832ae99894d3271df4f9270c"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/vm-metrics.json.stderr",
+      "archive": "fio-hdd-1m-repro/artifacts/vm-metrics.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-repro/artifacts/vm.json",
+      "archive": "fio-hdd-1m-repro/artifacts/vm.json",
+      "sha256_source": "1b3f11c75016af01ea8592f6bb94ed1ae16b549908fd85905eaabb8a25c25222",
+      "sha256_archive": "1b3f11c75016af01ea8592f6bb94ed1ae16b549908fd85905eaabb8a25c25222"
+    },
+    {
+      "source": "fio-hdd-1m-repro/cloud-init.yml",
+      "archive": "fio-hdd-1m-repro/cloud-init.yml",
+      "sha256_source": "22fde8a6c9e583b8681854fbd86fe5f6766247ba42cf6dc1f601efcdc66574b5",
+      "sha256_archive": "22fde8a6c9e583b8681854fbd86fe5f6766247ba42cf6dc1f601efcdc66574b5"
+    },
+    {
+      "source": "fio-hdd-1m-repro/collect.py",
+      "archive": "fio-hdd-1m-repro/collect.py",
+      "sha256_source": "33da86c33696cfb427666885e9d12000a7f3e919cc2e45c3c8042b5bf9f37dbc",
+      "sha256_archive": "33da86c33696cfb427666885e9d12000a7f3e919cc2e45c3c8042b5bf9f37dbc"
+    },
+    {
+      "source": "fio-hdd-1m-repro/guest-test.py",
+      "archive": "fio-hdd-1m-repro/guest-test.py",
+      "sha256_source": "dc52b2b436de5bba840116af52cf3a26dadae7a2804975f63d85d91444ed4646",
+      "sha256_archive": "dc52b2b436de5bba840116af52cf3a26dadae7a2804975f63d85d91444ed4646"
+    },
+    {
+      "source": "fio-hdd-1m-repro/poll.py",
+      "archive": "fio-hdd-1m-repro/poll.py",
+      "sha256_source": "321747e99e002ab90bad634fa9e238e56dd0d098378c87c72b59f0ea1d4b89ea",
+      "sha256_archive": "321747e99e002ab90bad634fa9e238e56dd0d098378c87c72b59f0ea1d4b89ea"
+    },
+    {
+      "source": "fio-hdd-1m-repro/provision.py",
+      "archive": "fio-hdd-1m-repro/provision.py",
+      "sha256_source": "7f80242d805e0805dcaa918a047c1c118175d9f9839c86e62fada799cab657e8",
+      "sha256_archive": "7f80242d805e0805dcaa918a047c1c118175d9f9839c86e62fada799cab657e8"
+    },
+    {
+      "source": "fio-hdd-1m-repro/requirements.txt",
+      "archive": "fio-hdd-1m-repro/requirements.txt",
+      "sha256_source": "de950d3b75e4ad1a760c121533e06390c84574f7dd0b53c0eaa742ab6d5c2f38",
+      "sha256_archive": "de950d3b75e4ad1a760c121533e06390c84574f7dd0b53c0eaa742ab6d5c2f38"
+    },
+    {
+      "source": "fio-hdd-1m-repro/state.json",
+      "archive": "fio-hdd-1m-repro/artifacts/infrastructure-state.json",
+      "sha256_source": "5c8d717f485e42c22c5ef4b37f07929ed19d8cd31493af3d64df6ff5593a10c2",
+      "sha256_archive": "5c8d717f485e42c22c5ef4b37f07929ed19d8cd31493af3d64df6ff5593a10c2"
+    },
+    {
+      "source": "fio-hdd-1m-repro/teardown.py",
+      "archive": "fio-hdd-1m-repro/teardown.py",
+      "sha256_source": "536332a3af8b8d951da54ef240b2aa9ee828aaadc566b64459c1ef4c79830d1b",
+      "sha256_archive": "536332a3af8b8d951da54ef240b2aa9ee828aaadc566b64459c1ef4c79830d1b"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/.gitignore",
+      "archive": "fio-hdd-1m-headroom/.gitignore",
+      "sha256_source": "8703757d0b46c0ffcb02ead43f20a7825e7ba37ee9686d4c87db3b9f60b43aee",
+      "sha256_archive": "8703757d0b46c0ffcb02ead43f20a7825e7ba37ee9686d4c87db3b9f60b43aee"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/analysis/azure-minute-points.csv",
+      "archive": "fio-hdd-1m-headroom/artifacts/analysis/azure-minute-points.csv",
+      "sha256_source": "7146b431b77f3eea0532a3a283f40ae3d3bba87b2a853154b5d966cc04292afd",
+      "sha256_archive": "7146b431b77f3eea0532a3a283f40ae3d3bba87b2a853154b5d966cc04292afd"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/analysis/latency.png",
+      "archive": "fio-hdd-1m-headroom/artifacts/analysis/latency.png",
+      "sha256_source": "fe541a2ddfc51a68ee53187caf61e1af887fb864b53a24f1d319e0e0b0c5c5af",
+      "sha256_archive": "fe541a2ddfc51a68ee53187caf61e1af887fb864b53a24f1d319e0e0b0c5c5af"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/analysis/report.md",
+      "archive": "fio-hdd-1m-headroom/artifacts/analysis/report.md",
+      "sha256_source": "d55d0b6baf45e153eed19db8f804cbb485059a0509f7a6523969b14599ae2a8d",
+      "sha256_archive": "d55d0b6baf45e153eed19db8f804cbb485059a0509f7a6523969b14599ae2a8d"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/analysis/summary.csv",
+      "archive": "fio-hdd-1m-headroom/artifacts/analysis/summary.csv",
+      "sha256_source": "35fdf92db6398c79609fc2e99a1214724430f90a41f3a8a8d415455819f0048e",
+      "sha256_archive": "35fdf92db6398c79609fc2e99a1214724430f90a41f3a8a8d415455819f0048e"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/analysis/throughput-low-threads.png",
+      "archive": "fio-hdd-1m-headroom/artifacts/analysis/throughput-low-threads.png",
+      "sha256_source": "1b366676e171b1c5479de500ee464affe29e2a4c528e76399d2f32a1f1dafded",
+      "sha256_archive": "1b366676e171b1c5479de500ee464affe29e2a4c528e76399d2f32a1f1dafded"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/analysis/throughput.png",
+      "archive": "fio-hdd-1m-headroom/artifacts/analysis/throughput.png",
+      "sha256_source": "bc4b9a6f98d0d0515932ccc2b63b18e555e65dda15f4212105ec445cf6cd0e6f",
+      "sha256_archive": "bc4b9a6f98d0d0515932ccc2b63b18e555e65dda15f4212105ec445cf6cd0e6f"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/cleanup.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/cleanup.json",
+      "sha256_source": "ef490c8fc1d22c5347b523c5bfed2f141a59a01c8597df9508108e91d740801c",
+      "sha256_archive": "ef490c8fc1d22c5347b523c5bfed2f141a59a01c8597df9508108e91d740801c"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/collection-progress.log",
+      "archive": "fio-hdd-1m-headroom/artifacts/collection-progress.log",
+      "sha256_source": "14ae118ab043621de88f6c49d2907235108ac12e8f524d8525002447df23c7d9",
+      "sha256_archive": "14ae118ab043621de88f6c49d2907235108ac12e8f524d8525002447df23c7d9"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/complete.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/complete.json",
+      "sha256_source": "9085845b547b3c11184bfb2893784933f017ee01dc5db25d1276b88a2a2b17ab",
+      "sha256_archive": "9085845b547b3c11184bfb2893784933f017ee01dc5db25d1276b88a2a2b17ab"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/config-long-phase.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/config-long-phase.json",
+      "sha256_source": "b0dde2d80efa78a317149d45b17acef6eb80e050c11f73cee744c2c8e734e6d7",
+      "sha256_archive": "b0dde2d80efa78a317149d45b17acef6eb80e050c11f73cee744c2c8e734e6d7"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/config.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/config.json",
+      "sha256_source": "fa12f6d2fbba4f746f1d5a41f1a2f172a2bdb0ade377df7542dcb31c4495a7bf",
+      "sha256_archive": "fa12f6d2fbba4f746f1d5a41f1a2f172a2bdb0ade377df7542dcb31c4495a7bf"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/disk-definitions.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/disk-definitions.json",
+      "sha256_source": "fcb44ec8157ca30aea6a883182e1e43a22a2d0d104b285b4530592f2594bc9dd",
+      "sha256_archive": "fcb44ec8157ca30aea6a883182e1e43a22a2d0d104b285b4530592f2594bc9dd"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/disk-definitions.json.stderr",
+      "archive": "fio-hdd-1m-headroom/artifacts/disk-definitions.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/disk-metrics.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/disk-metrics.json",
+      "sha256_source": "d2d63bb4b0549b26a5fe147fc0491620db67f91d91822c41eafc3bde6e349510",
+      "sha256_archive": "d2d63bb4b0549b26a5fe147fc0491620db67f91d91822c41eafc3bde6e349510"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/disk-metrics.json.stderr",
+      "archive": "fio-hdd-1m-headroom/artifacts/disk-metrics.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/disk.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/disk.json",
+      "sha256_source": "61883e277cfe233fa6e792840ca7a04e9bcf49fbdb2f5773a535909c96dd2ba4",
+      "sha256_archive": "61883e277cfe233fa6e792840ca7a04e9bcf49fbdb2f5773a535909c96dd2ba4"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/guest-test-long-phase.log",
+      "archive": "fio-hdd-1m-headroom/artifacts/guest-test-long-phase.log",
+      "sha256_source": "ffe65a6351237502a406ca5fd0e0e62edaeec410311856f4b12c03a49449e195",
+      "sha256_archive": "ffe65a6351237502a406ca5fd0e0e62edaeec410311856f4b12c03a49449e195"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/guest-test.log",
+      "archive": "fio-hdd-1m-headroom/artifacts/guest-test.log",
+      "sha256_source": "d4be9959720183d6e3abf968c8207755d720d4a077675b4690017645eb7b274c",
+      "sha256_archive": "d4be9959720183d6e3abf968c8207755d720d4a077675b4690017645eb7b274c"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/guest.txt",
+      "archive": "fio-hdd-1m-headroom/artifacts/guest.txt",
+      "sha256_source": "ec410d34099d3867adb9e5eb9c2b86aa0d841e2d5e445321d23507241b67a85b",
+      "sha256_archive": "ec410d34099d3867adb9e5eb9c2b86aa0d841e2d5e445321d23507241b67a85b"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/host-metrics.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/host-metrics.json",
+      "sha256_source": "bd64a72b223cffea7858acfd71a0b3d3032694d83fc9f0ba87fb13d0d5733db7",
+      "sha256_archive": "bd64a72b223cffea7858acfd71a0b3d3032694d83fc9f0ba87fb13d0d5733db7"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/host-metrics.json.stderr",
+      "archive": "fio-hdd-1m-headroom/artifacts/host-metrics.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/provision-d8sv3-failed.log",
+      "archive": "fio-hdd-1m-headroom/artifacts/provision-d8sv3-failed.log",
+      "sha256_source": "f828933bc9d2f937b91b89344d7af9841c675bd43406afcce8716c977246f40a",
+      "sha256_archive": "f828933bc9d2f937b91b89344d7af9841c675bd43406afcce8716c977246f40a"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/provision.log",
+      "archive": "fio-hdd-1m-headroom/artifacts/provision.log",
+      "sha256_source": "33ae025cf92a20f99cd005fa1c0140069534f0c7e0cf2230284f3b029493edc3",
+      "sha256_archive": "33ae025cf92a20f99cd005fa1c0140069534f0c7e0cf2230284f3b029493edc3"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/quota-before.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/quota-before.json",
+      "sha256_source": "3a12c93bffe989f96a2bade9a05663121d42e0ca95a20bc8c2eeb9f8885a5045",
+      "sha256_archive": "3a12c93bffe989f96a2bade9a05663121d42e0ca95a20bc8c2eeb9f8885a5045"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-144/command.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-144/command.json",
+      "sha256_source": "6c7a691807d2871056bad1c640baa9ec4625a55e3ca75da37ecc254fbc51e69c",
+      "sha256_archive": "6c7a691807d2871056bad1c640baa9ec4625a55e3ca75da37ecc254fbc51e69c"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-144/fio.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-144/fio.json",
+      "sha256_source": "6cf3f58bc3677b37944ac8fac62344012ab5897fd54ee2e19121ac83720a7c14",
+      "sha256_archive": "6cf3f58bc3677b37944ac8fac62344012ab5897fd54ee2e19121ac83720a7c14"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-144/fio.stderr",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-144/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-144/iostat.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-144/iostat.json",
+      "sha256_source": "5e02d5ce540ae721c72cb9653f93488a4de21b25bc6143a211f7871c52f8e493",
+      "sha256_archive": "5e02d5ce540ae721c72cb9653f93488a4de21b25bc6143a211f7871c52f8e493"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-144/meta.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-144/meta.json",
+      "sha256_source": "63cf9e38932a3ec5a179a68faec59a72552e995d6638a186e3ba802762a45e74",
+      "sha256_archive": "63cf9e38932a3ec5a179a68faec59a72552e995d6638a186e3ba802762a45e74"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-144/vmstat.txt",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-144/vmstat.txt",
+      "sha256_source": "4f9bdc7c15b0d3c4155904acb6c9f563ea9ef0e18ebee45a6a795132a3cb0c44",
+      "sha256_archive": "4f9bdc7c15b0d3c4155904acb6c9f563ea9ef0e18ebee45a6a795132a3cb0c44"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-160/command.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-160/command.json",
+      "sha256_source": "f6da1d82e8ae0dd379de725358b505c5c7e414d9eb62796b89a658047aeb7b44",
+      "sha256_archive": "f6da1d82e8ae0dd379de725358b505c5c7e414d9eb62796b89a658047aeb7b44"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-160/fio.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-160/fio.json",
+      "sha256_source": "dfdeb9614fae8b5a962a9afe8e179dca09fcecf5c1195a18b504d7102575bcab",
+      "sha256_archive": "dfdeb9614fae8b5a962a9afe8e179dca09fcecf5c1195a18b504d7102575bcab"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-160/fio.stderr",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-160/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-160/iostat.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-160/iostat.json",
+      "sha256_source": "37b515a6e3dded1f14e97b4e034354d30d1e039421108df9bd41b14bfea0a4ea",
+      "sha256_archive": "37b515a6e3dded1f14e97b4e034354d30d1e039421108df9bd41b14bfea0a4ea"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-160/meta.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-160/meta.json",
+      "sha256_source": "50358a9511c051d409d7ae11c5e03597d7e4e43b79c6801c4985bd9071388102",
+      "sha256_archive": "50358a9511c051d409d7ae11c5e03597d7e4e43b79c6801c4985bd9071388102"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-160/vmstat.txt",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-160/vmstat.txt",
+      "sha256_source": "d42671de72c9f5701a3f540aa12f1549c4cb0e550ebeeef6be9f569a9343b87e",
+      "sha256_archive": "d42671de72c9f5701a3f540aa12f1549c4cb0e550ebeeef6be9f569a9343b87e"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-4/command.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-4/command.json",
+      "sha256_source": "3ad5c7ed2b9684ebbb660adf428e198750d7a8b7c37043ec6c274847156fb29c",
+      "sha256_archive": "3ad5c7ed2b9684ebbb660adf428e198750d7a8b7c37043ec6c274847156fb29c"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-4/fio.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-4/fio.json",
+      "sha256_source": "e290a5722fdbf5f99fdbc769cbcc651007c434d364c483d287847928aa5ba38c",
+      "sha256_archive": "e290a5722fdbf5f99fdbc769cbcc651007c434d364c483d287847928aa5ba38c"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-4/fio.stderr",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-4/fio.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-4/iostat.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-4/iostat.json",
+      "sha256_source": "ecbeefee0763aa7a3b533d33fa94bbcdab3c25f0ae6a69f42db5e2c2ebf8d327",
+      "sha256_archive": "ecbeefee0763aa7a3b533d33fa94bbcdab3c25f0ae6a69f42db5e2c2ebf8d327"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-4/meta.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-4/meta.json",
+      "sha256_source": "61129ed2e97e8ff37c8ce26d9e5f850dfa86d3242459b084ce62235e24de6682",
+      "sha256_archive": "61129ed2e97e8ff37c8ce26d9e5f850dfa86d3242459b084ce62235e24de6682"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/run-4/vmstat.txt",
+      "archive": "fio-hdd-1m-headroom/artifacts/run-4/vmstat.txt",
+      "sha256_source": "d4e90713758d7a6ada3f14cd69bfd8769a3d3df99aac73bb05dccf59a7900810",
+      "sha256_archive": "d4e90713758d7a6ada3f14cd69bfd8769a3d3df99aac73bb05dccf59a7900810"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/snapshots-before.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/snapshots-before.json",
+      "sha256_source": "d3188beb6750b17a5d380cd4de1a3b58213ce484e81e128f0c92d95c8935bc26",
+      "sha256_archive": "d3188beb6750b17a5d380cd4de1a3b58213ce484e81e128f0c92d95c8935bc26"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/vm-definitions.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/vm-definitions.json",
+      "sha256_source": "e354ffff1c0ce59f3bbcfd705c44497d6cef060249eac7fa84b26db6bb0c1c46",
+      "sha256_archive": "e354ffff1c0ce59f3bbcfd705c44497d6cef060249eac7fa84b26db6bb0c1c46"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/vm-definitions.json.stderr",
+      "archive": "fio-hdd-1m-headroom/artifacts/vm-definitions.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/vm-metrics.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/vm-metrics.json",
+      "sha256_source": "98a72d699ff3c7e2e22ad08ac283a720ed3c604c98a560aaf9a3757fb5aae97a",
+      "sha256_archive": "98a72d699ff3c7e2e22ad08ac283a720ed3c604c98a560aaf9a3757fb5aae97a"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/vm-metrics.json.stderr",
+      "archive": "fio-hdd-1m-headroom/artifacts/vm-metrics.json.stderr",
+      "sha256_source": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_archive": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/artifacts/vm.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/vm.json",
+      "sha256_source": "378f56d9cca8d8f2531dace55984b449d282e1d21cc56c352c1016c2a981bf3f",
+      "sha256_archive": "378f56d9cca8d8f2531dace55984b449d282e1d21cc56c352c1016c2a981bf3f"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/cloud-init.yml",
+      "archive": "fio-hdd-1m-headroom/cloud-init.yml",
+      "sha256_source": "22fde8a6c9e583b8681854fbd86fe5f6766247ba42cf6dc1f601efcdc66574b5",
+      "sha256_archive": "22fde8a6c9e583b8681854fbd86fe5f6766247ba42cf6dc1f601efcdc66574b5"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/collect.py",
+      "archive": "fio-hdd-1m-headroom/collect.py",
+      "sha256_source": "33da86c33696cfb427666885e9d12000a7f3e919cc2e45c3c8042b5bf9f37dbc",
+      "sha256_archive": "33da86c33696cfb427666885e9d12000a7f3e919cc2e45c3c8042b5bf9f37dbc"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/guest-test.py",
+      "archive": "fio-hdd-1m-headroom/guest-test.py",
+      "sha256_source": "cd3536c7c69300956ed249816c65b250a00abf955ef3340ac6edc4261e8238d3",
+      "sha256_archive": "cd3536c7c69300956ed249816c65b250a00abf955ef3340ac6edc4261e8238d3"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/poll.py",
+      "archive": "fio-hdd-1m-headroom/poll.py",
+      "sha256_source": "321747e99e002ab90bad634fa9e238e56dd0d098378c87c72b59f0ea1d4b89ea",
+      "sha256_archive": "321747e99e002ab90bad634fa9e238e56dd0d098378c87c72b59f0ea1d4b89ea"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/provision.py",
+      "archive": "fio-hdd-1m-headroom/provision.py",
+      "sha256_source": "afec93f4d227437c3343d4a5835fb77e870ecfb60b372d6dfdb534be57fcd25f",
+      "sha256_archive": "afec93f4d227437c3343d4a5835fb77e870ecfb60b372d6dfdb534be57fcd25f"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/state.json",
+      "archive": "fio-hdd-1m-headroom/artifacts/infrastructure-state.json",
+      "sha256_source": "24d39f29778c66b2e87abd89fc1f6cd80a69d9b60f1f94717676a9f5c3de4fd9",
+      "sha256_archive": "24d39f29778c66b2e87abd89fc1f6cd80a69d9b60f1f94717676a9f5c3de4fd9"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/teardown.py",
+      "archive": "fio-hdd-1m-headroom/teardown.py",
+      "sha256_source": "536332a3af8b8d951da54ef240b2aa9ee828aaadc566b64459c1ef4c79830d1b",
+      "sha256_archive": "536332a3af8b8d951da54ef240b2aa9ee828aaadc566b64459c1ef4c79830d1b"
+    },
+    {
+      "source": "fio-hdd-1m-headroom/validation-plan.json",
+      "archive": "fio-hdd-1m-headroom/validation-plan.json",
+      "sha256_source": "65171d7dc7330c7aa465f64723212a6c74375c722fd432953ac5045bb28b0bd8",
+      "sha256_archive": "65171d7dc7330c7aa465f64723212a6c74375c722fd432953ac5045bb28b0bd8"
+    },
+    {
+      "source": ".state/prepared-snapshot-keeper.json",
+      "archive": "fixture.json",
+      "sha256_source": "69232ed81ce3ae86f2fc5490fe69e60457934393904471633e9053ef72bffb9a",
+      "sha256_archive": "69232ed81ce3ae86f2fc5490fe69e60457934393904471633e9053ef72bffb9a"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+[
+  {
+    "time": "2026-10-04T07:19:34.60885486Z",
+    "event": "sender_timeout",
+    "role": "primary",
+    "message": "terminating walsender process due to replication timeout",
+    "record": {
+      "log_time": "2026-10-04 07:19:34.608 UTC",
+      "user_name": "streaming_replica",
+      "process_id": "4126",
+      "connection_from": "10.244.1.17:56362",
+      "session_id": "6ac1f74a.101e",
+      "session_line_num": "2",
+      "command_tag": "streaming 42/51E32000",
+      "session_start_time": "2026-10-04 06:50:50 UTC",
+      "virtual_transaction_id": "3/0",
+      "transaction_id": "0",
+      "error_severity": "LOG",
+      "sql_state_code": "00000",
+      "message": "terminating walsender process due to replication timeout",
+      "query": "START_REPLICATION SLOT \"_cnpg_hdd_pg_2\" 37/8F000000 TIMELINE 1",
+      "application_name": "hdd-pg-2",
+      "backend_type": "walsender",
+      "query_id": "0"
+    },
+    "source": "artifacts/hdd-pg-1-vacuum-final-pod-log.txt"
+  },
+  {
+    "time": "2026-10-04T12:03:12.759970286Z",
+    "event": "sender_timeout",
+    "role": "primary",
+    "message": "terminating walsender process due to replication timeout",
+    "record": {
+      "log_time": "2026-10-04 12:03:12.759 UTC",
+      "user_name": "streaming_replica",
+      "process_id": "119904",
+      "connection_from": "10.244.1.17:39698",
+      "session_id": "6ac23cc0.1d460",
+      "session_line_num": "1",
+      "command_tag": "streaming 4F/B0880000",
+      "session_start_time": "2026-10-04 11:47:12 UTC",
+      "virtual_transaction_id": "3/0",
+      "transaction_id": "0",
+      "error_severity": "LOG",
+      "sql_state_code": "00000",
+      "message": "terminating walsender process due to replication timeout",
+      "query": "START_REPLICATION SLOT \"_cnpg_hdd_pg_2\" 45/40000000 TIMELINE 1",
+      "application_name": "hdd-pg-2",
+      "backend_type": "walsender",
+      "query_id": "0"
+    },
+    "source": "artifacts/hdd-pg-1-vacuum-final-pod-log.txt"
+  },
+  {
+    "time": "2026-10-04T07:19:37.889314211Z",
+    "event": "receiver_disconnect",
+    "role": "replica",
+    "message": "could not receive data from WAL stream: server closed the connection unexpectedly\n\tThis probably means the server terminated abnormally\n\tbefore or while processing the request.\nserver closed the connection unexpectedly\n\tThis probably means the server terminated abnormally\n\tbefore or while processing the request.",
+    "record": {
+      "log_time": "2026-10-04 07:19:37.889 UTC",
+      "process_id": "67",
+      "session_id": "6ac1f74a.43",
+      "session_line_num": "2",
+      "session_start_time": "2026-10-04 06:50:50 UTC",
+      "transaction_id": "0",
+      "error_severity": "FATAL",
+      "sql_state_code": "08006",
+      "message": "could not receive data from WAL stream: server closed the connection unexpectedly\n\tThis probably means the server terminated abnormally\n\tbefore or while processing the request.\nserver closed the connection unexpectedly\n\tThis probably means the server terminated abnormally\n\tbefore or while processing the request.",
+      "backend_type": "walreceiver",
+      "query_id": "0"
+    },
+    "source": "artifacts/hdd-pg-2-vacuum-final-pod-log.txt"
+  },
+  {
+    "time": "2026-10-04T10:28:02.236508026Z",
+    "event": "receiver_connected",
+    "role": "replica",
+    "message": "started streaming WAL from primary at 42/51000000 on timeline 1",
+    "record": {
+      "log_time": "2026-10-04 10:28:02.236 UTC",
+      "process_id": "48985",
+      "session_id": "6ac22a32.bf59",
+      "session_line_num": "1",
+      "session_start_time": "2026-10-04 10:28:02 UTC",
+      "transaction_id": "0",
+      "error_severity": "LOG",
+      "sql_state_code": "00000",
+      "message": "started streaming WAL from primary at 42/51000000 on timeline 1",
+      "backend_type": "walreceiver",
+      "query_id": "0"
+    },
+    "source": "artifacts/hdd-pg-2-vacuum-final-pod-log.txt"
+  },
+  {
+    "time": "2026-10-04T10:32:24.897443133Z",
+    "event": "receiver_timeout",
+    "role": "replica",
+    "message": "terminating walreceiver due to timeout",
+    "record": {
+      "log_time": "2026-10-04 10:32:24.895 UTC",
+      "process_id": "48985",
+      "session_id": "6ac22a32.bf59",
+      "session_line_num": "2",
+      "session_start_time": "2026-10-04 10:28:02 UTC",
+      "transaction_id": "0",
+      "error_severity": "FATAL",
+      "sql_state_code": "08006",
+      "message": "terminating walreceiver due to timeout",
+      "backend_type": "walreceiver",
+      "query_id": "0"
+    },
+    "source": "artifacts/hdd-pg-2-vacuum-final-pod-log.txt"
+  },
+  {
+    "time": "2026-10-04T11:47:12.342344568Z",
+    "event": "receiver_connected",
+    "role": "replica",
+    "message": "started streaming WAL from primary at 45/40000000 on timeline 1",
+    "record": {
+      "log_time": "2026-10-04 11:47:12.342 UTC",
+      "process_id": "65565",
+      "session_id": "6ac23cc0.1001d",
+      "session_line_num": "1",
+      "session_start_time": "2026-10-04 11:47:12 UTC",
+      "transaction_id": "0",
+      "error_severity": "LOG",
+      "sql_state_code": "00000",
+      "message": "started streaming WAL from primary at 45/40000000 on timeline 1",
+      "backend_type": "walreceiver",
+      "query_id": "0"
+    },
+    "source": "artifacts/hdd-pg-2-vacuum-final-pod-log.txt"
+  },
+  {
+    "time": "2026-10-04T12:03:28.138323564Z",
+    "event": "receiver_disconnect",
+    "role": "replica",
+    "message": "could not receive data from WAL stream: SSL error: unexpected eof while reading",
+    "record": {
+      "log_time": "2026-10-04 12:03:28.137 UTC",
+      "process_id": "65565",
+      "session_id": "6ac23cc0.1001d",
+      "session_line_num": "2",
+      "session_start_time": "2026-10-04 11:47:12 UTC",
+      "transaction_id": "0",
+      "error_severity": "FATAL",
+      "sql_state_code": "08006",
+      "message": "could not receive data from WAL stream: SSL error: unexpected eof while reading",
+      "backend_type": "walreceiver",
+      "query_id": "0"
+    },
+    "source": "artifacts/hdd-pg-2-vacuum-final-pod-log.txt"
+  }
+]

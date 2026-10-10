@@ -1,0 +1,77 @@
+{
+  "backupName": "vacuum-backup-35e99cb5",
+  "data": {
+    "createdAtUtc": "2026-10-05T07:11:50.4128687Z",
+    "diskSizeBytes": 549755813888,
+    "id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01",
+    "incremental": true,
+    "location": "westus3",
+    "lock": {
+      "level": "CanNotDelete",
+      "name": "preserve-all-snapshots",
+      "scope": "snapshot"
+    },
+    "lun": 0,
+    "mount": "/var/lib/postgresql/data",
+    "name": "snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01",
+    "provisioningState": "Succeeded",
+    "sku": "Standard_ZRS",
+    "sourceDiskId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/disks/pvc-a4aaa041-02e0-4924-831d-0a62a37b8507",
+    "sourcePv": "pvc-a4aaa041-02e0-4924-831d-0a62a37b8507",
+    "sourcePvc": "hdd-pg-1",
+    "uniqueId": "d838e22b-a0e2-44d5-953c-819ed43dc87f"
+  },
+  "fixture": {
+    "createdAtUtc": "2026-10-05T07:11:50.4Z",
+    "heapBytes": 24696061952,
+    "oldRunCompleted": true,
+    "preparedDeadTuplesEstimate": 7536640,
+    "preparedLiveTuplesEstimate": 7536640,
+    "tableAutovacuumDisabled": true,
+    "tableBytes": 25040748544,
+    "vacuumFinishedAtUtc": "2026-10-05T07:55:24.056614Z",
+    "vacuumStartedAtUtc": "2026-10-05T07:29:38.716537Z"
+  },
+  "location": "westus3",
+  "pairingEvidence": [
+    "Old prepare.json records completed paired backup vacuum-backup-35e99cb5 and standby caught up to LSN 4E/53000000.",
+    "Old preflight maps pvc-a4aaa... to primary hdd-pg-1 DATA on LUN 0 and pvc-dcee... to primary hdd-pg-1 WAL on LUN 1.",
+    "Azure snapshot tags/sourceResourceIds map each exact snapshot to the corresponding old primary managed disk.",
+    "Azure snapshot inventory before/after cleanup retained both exact unique IDs; owner cleanup says all five snapshots preserved.",
+    "Azure lock list for each snapshot returns preserve-all-snapshots with CanNotDelete and explicit user authorization note."
+  ],
+  "sourceArtifacts": {
+    "cleanupResult": "../prefetch-off/attempt-westus3/cleanup/result.json",
+    "preflight": "../prefetch-off/attempt-westus3/results/20261005T072928Z-prefetch-off/preflight.json",
+    "prepare": "../prefetch-off/attempt-westus3/.state/prepare.json",
+    "snapshotInventory": "../prefetch-off/attempt-westus3/cleanup/snapshots-after.json",
+    "timing": "../prefetch-off/attempt-westus3/results/20261005T072928Z-prefetch-off/timing.json"
+  },
+  "sourceResourceGroup": "rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c",
+  "sourceResourceGroupAdopted": false,
+  "sourceResourceGroupOwnerToken": "[REDACTED]",
+  "subscriptionId": "[REDACTED]",
+  "systemIdentifier": "7692518806614212629",
+  "verifiedAtUtc": "2026-10-06T04:32:49Z",
+  "wal": {
+    "createdAtUtc": "2026-10-05T07:11:50.464453Z",
+    "diskSizeBytes": 549755813888,
+    "id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/snapshot-01605f86-3d24-4371-81cc-9a908a426b18",
+    "incremental": true,
+    "location": "westus3",
+    "lock": {
+      "level": "CanNotDelete",
+      "name": "preserve-all-snapshots",
+      "scope": "snapshot"
+    },
+    "lun": 1,
+    "mount": "/var/lib/postgresql/wal",
+    "name": "snapshot-01605f86-3d24-4371-81cc-9a908a426b18",
+    "provisioningState": "Succeeded",
+    "sku": "Standard_ZRS",
+    "sourceDiskId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/disks/pvc-dcee1d34-1e20-42c3-a5a5-1702dcbdb7f7",
+    "sourcePv": "pvc-dcee1d34-1e20-42c3-a5a5-1702dcbdb7f7",
+    "sourcePvc": "hdd-pg-1-wal",
+    "uniqueId": "74f4d862-be76-43f8-bf26-393d26def9ff"
+  }
+}

@@ -1,0 +1,15 @@
+Creating stack-owned incremental Copy snapshot keeper-pv2-f1b90aec-ef6f2376.
+ERROR: unrecognized arguments: --scope /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376
+
+https://aka.ms/cli_ref
+Read more about the command in reference docs
+ERROR: Cannot place a direct CanNotDelete lock on the new snapshot.
+ERROR: Cannot revalidate the previous owned source-stage receipt.
+Preparation stopped; inspect stack state and retry 04-teardown.sh after review.
+WARNING: option '--subscription' will be ignored due to use of '--ids'.
+Validating existing owned staging disk restore-stage-f1b90aec-ef6f2376 for safe resume.
+Validating existing owned snapshot keeper-pv2-f1b90aec-ef6f2376 for safe resume.
+WARNING: option '--subscription' will be ignored due to use of '--ids'.
+Warning: Native support for Barman Cloud backups and recovery is deprecated and will be completely removed in CloudNativePG 1.31.0. Found usage in: spec.backup.barmanObjectStore. Please migrate existing clusters to the new Barman Cloud Plugin to ensure a smooth transition.
+CREATE TABLE
+ALTER TABLE

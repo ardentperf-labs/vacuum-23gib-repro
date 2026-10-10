@@ -1,0 +1,4 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Backup
+metadata: {name: vacuum-backup-f1b90aec, namespace: repro, labels: {repro.stack.token: "f1b90aec9e24f6a2008d6991738742cf"}}
+spec: {cluster: {name: hdd-pg}, method: volumeSnapshot, online: true, onlineConfiguration: {waitForArchive: true, immediateCheckpoint: false}}

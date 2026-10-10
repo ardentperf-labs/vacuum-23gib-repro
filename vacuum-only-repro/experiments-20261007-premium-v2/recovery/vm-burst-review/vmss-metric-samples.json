@@ -1,0 +1,273 @@
+{
+  "checkedAtUtc": "2026-10-06T22:49:36.040475+00:00",
+  "scope": "VM scale set aggregate (not individual instance)",
+  "aggregation": "Average",
+  "interval": "PT5M",
+  "metricNamespace": "microsoft.compute/virtualmachinescalesets",
+  "metrics": [
+    "VM Remote Used Burst IO Credits Percentage",
+    "VM Remote Used Burst BPS Credits Percentage",
+    "VM Uncached IOPS Consumed Percentage",
+    "VM Uncached Bandwidth Consumed Percentage"
+  ],
+  "stacks": [
+    {
+      "name": "baseline-23gib",
+      "timespanStartUtc": "2026-10-06T15:36:09Z",
+      "timespanEndUtc": "2026-10-06T22:49:36Z",
+      "scaleSets": [
+        {
+          "name": "aks-nodepool1-34976006-vmss",
+          "sku": "Standard_D2s_v4",
+          "httpStatus": 200,
+          "metrics": [
+            {
+              "name": "VM Remote Used Burst IO Credits Percentage",
+              "unit": "Percent",
+              "seriesCount": 1,
+              "points": 82,
+              "first": [
+                "2026-10-06T15:46:00Z",
+                0,
+                []
+              ],
+              "last": [
+                "2026-10-06T22:41:00Z",
+                0,
+                []
+              ],
+              "min": 0,
+              "max": 0
+            },
+            {
+              "name": "VM Remote Used Burst BPS Credits Percentage",
+              "unit": "Percent",
+              "seriesCount": 1,
+              "points": 83,
+              "first": [
+                "2026-10-06T15:51:00Z",
+                0,
+                []
+              ],
+              "last": [
+                "2026-10-06T22:46:00Z",
+                0,
+                []
+              ],
+              "min": 0,
+              "max": 0
+            },
+            {
+              "name": "VM Uncached IOPS Consumed Percentage",
+              "unit": "Percent",
+              "seriesCount": 1,
+              "points": 84,
+              "first": [
+                "2026-10-06T15:51:00Z",
+                0.75,
+                []
+              ],
+              "last": [
+                "2026-10-06T22:46:00Z",
+                0,
+                []
+              ],
+              "min": 0,
+              "max": 13.1
+            },
+            {
+              "name": "VM Uncached Bandwidth Consumed Percentage",
+              "unit": "Percent",
+              "seriesCount": 1,
+              "points": 84,
+              "first": [
+                "2026-10-06T15:51:00Z",
+                19.625,
+                []
+              ],
+              "last": [
+                "2026-10-06T22:46:00Z",
+                0,
+                []
+              ],
+              "min": 0,
+              "max": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "50gib",
+      "timespanStartUtc": "2026-10-06T15:36:09Z",
+      "timespanEndUtc": "2026-10-06T22:49:36Z",
+      "scaleSets": [
+        {
+          "name": "aks-nodepool1-30685692-vmss",
+          "sku": "Standard_D2s_v4",
+          "httpStatus": 200,
+          "metrics": [
+            {
+              "name": "VM Remote Used Burst IO Credits Percentage",
+              "unit": "Percent",
+              "seriesCount": 1,
+              "points": 85,
+              "first": [
+                "2026-10-06T15:46:00Z",
+                0,
+                []
+              ],
+              "last": [
+                "2026-10-06T22:46:00Z",
+                0,
+                []
+              ],
+              "min": 0,
+              "max": 0
+            },
+            {
+              "name": "VM Remote Used Burst BPS Credits Percentage",
+              "unit": "Percent",
+              "seriesCount": 1,
+              "points": 84,
+              "first": [
+                "2026-10-06T15:46:00Z",
+                0,
+                []
+              ],
+              "last": [
+                "2026-10-06T22:46:00Z",
+                0,
+                []
+              ],
+              "min": 0,
+              "max": 0
+            },
+            {
+              "name": "VM Uncached IOPS Consumed Percentage",
+              "unit": "Percent",
+              "seriesCount": 1,
+              "points": 86,
+              "first": [
+                "2026-10-06T15:41:00Z",
+                0,
+                []
+              ],
+              "last": [
+                "2026-10-06T22:46:00Z",
+                2,
+                []
+              ],
+              "min": 0,
+              "max": 6.1
+            },
+            {
+              "name": "VM Uncached Bandwidth Consumed Percentage",
+              "unit": "Percent",
+              "seriesCount": 1,
+              "points": 86,
+              "first": [
+                "2026-10-06T15:41:00Z",
+                0,
+                []
+              ],
+              "last": [
+                "2026-10-06T22:46:00Z",
+                49.75,
+                []
+              ],
+              "min": 0,
+              "max": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "100gib",
+      "timespanStartUtc": "2026-10-06T15:36:09Z",
+      "timespanEndUtc": "2026-10-06T22:49:36Z",
+      "scaleSets": [
+        {
+          "name": "aks-nodepool1-15388874-vmss",
+          "sku": "Standard_D2s_v4",
+          "httpStatus": 200,
+          "metrics": [
+            {
+              "name": "VM Remote Used Burst IO Credits Percentage",
+              "unit": "Percent",
+              "seriesCount": 1,
+              "points": 84,
+              "first": [
+                "2026-10-06T15:46:00Z",
+                0,
+                []
+              ],
+              "last": [
+                "2026-10-06T22:46:00Z",
+                0,
+                []
+              ],
+              "min": 0,
+              "max": 0
+            },
+            {
+              "name": "VM Remote Used Burst BPS Credits Percentage",
+              "unit": "Percent",
+              "seriesCount": 1,
+              "points": 82,
+              "first": [
+                "2026-10-06T15:46:00Z",
+                0,
+                []
+              ],
+              "last": [
+                "2026-10-06T22:46:00Z",
+                0,
+                []
+              ],
+              "min": 0,
+              "max": 0
+            },
+            {
+              "name": "VM Uncached IOPS Consumed Percentage",
+              "unit": "Percent",
+              "seriesCount": 1,
+              "points": 86,
+              "first": [
+                "2026-10-06T15:41:00Z",
+                2,
+                []
+              ],
+              "last": [
+                "2026-10-06T22:46:00Z",
+                1.5,
+                []
+              ],
+              "min": 0,
+              "max": 4
+            },
+            {
+              "name": "VM Uncached Bandwidth Consumed Percentage",
+              "unit": "Percent",
+              "seriesCount": 1,
+              "points": 86,
+              "first": [
+                "2026-10-06T15:41:00Z",
+                27,
+                []
+              ],
+              "last": [
+                "2026-10-06T22:46:00Z",
+                49.833333333333336,
+                []
+              ],
+              "min": 0,
+              "max": 50
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

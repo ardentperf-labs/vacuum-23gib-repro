@@ -1,0 +1,189 @@
+{
+  "candidateInterpretation": {
+    "basis": "The read-millisecond counter drops by approximately 2^32 in two intervals while read operations, read sectors, write operations, write milliseconds, write sectors, major:minor, device, PV, LUN, node, and sysfs device path remain consistent/increasing. This is an offline reanalysis candidate; the original raw samples and measurement artifacts are preserved.",
+    "candidateModulus": 4294967296,
+    "candidateWidthBits": 32,
+    "counter": "replica DATA read milliseconds counter (diskstats rm)",
+    "finalLagBytes": 0,
+    "measurementEndUtc": "2026-10-06T02:36:24.684127146Z",
+    "replayCaughtUp": true,
+    "vacuumExitCode": 0
+  },
+  "candidateIntervals": [
+    {
+      "candidateModulo32ReadMillisecondsDelta": 879418,
+      "candidateOperationWeightedReadAwaitMs": 333.99848082035703,
+      "counterDeltas": {
+        "r": 2633,
+        "rm": -4294087878,
+        "rs": 42240,
+        "w": 44,
+        "wm": 13668,
+        "ws": 47960
+      },
+      "device": "sdb",
+      "diskCountersAfter": {
+        "name": "sdb",
+        "r": 11943659,
+        "rm": 746023,
+        "rs": 191251134,
+        "w": 190901,
+        "wm": 58070214,
+        "ws": 191643288
+      },
+      "diskCountersBefore": {
+        "name": "sdb",
+        "r": 11941026,
+        "rm": 4294833901,
+        "rs": 191208894,
+        "w": 190857,
+        "wm": 58056546,
+        "ws": 191595328
+      },
+      "elapsedSeconds": 4.893460750579834,
+      "endUtc": "2026-10-05T19:16:49.750639493Z",
+      "identityAfter": {
+        "claim": "hdd-pg-2",
+        "device": "sdb",
+        "lun": 0,
+        "majorMinor": "8:16",
+        "mount": "/var/lib/postgresql/data",
+        "node": "aks-nodepool1-11223260-vmss000000",
+        "pv": "pvc-73571d6f-eb85-433b-982e-bcd0a3ac53c5",
+        "source": "/dev/sdb",
+        "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0"
+      },
+      "identityBefore": {
+        "claim": "hdd-pg-2",
+        "device": "sdb",
+        "lun": 0,
+        "majorMinor": "8:16",
+        "mount": "/var/lib/postgresql/data",
+        "node": "aks-nodepool1-11223260-vmss000000",
+        "pv": "pvc-73571d6f-eb85-433b-982e-bcd0a3ac53c5",
+        "source": "/dev/sdb",
+        "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0"
+      },
+      "majorMinor": "8:16",
+      "phase": "replay_drain",
+      "previousSequence": 4444,
+      "sequence": 4445,
+      "startUtc": "2026-10-05T19:16:44.857071449Z"
+    },
+    {
+      "candidateModulo32ReadMillisecondsDelta": 842677,
+      "candidateOperationWeightedReadAwaitMs": 318.47203325774757,
+      "counterDeltas": {
+        "r": 2646,
+        "rm": -4294124619,
+        "rs": 42336,
+        "w": 28,
+        "wm": 8833,
+        "ws": 32040
+      },
+      "device": "sdb",
+      "diskCountersAfter": {
+        "name": "sdb",
+        "r": 24862942,
+        "rm": 101766,
+        "rs": 398007846,
+        "w": 391153,
+        "wm": 121024760,
+        "ws": 400709536
+      },
+      "diskCountersBefore": {
+        "name": "sdb",
+        "r": 24860296,
+        "rm": 4294226385,
+        "rs": 397965510,
+        "w": 391125,
+        "wm": 121015927,
+        "ws": 400677496
+      },
+      "elapsedSeconds": 4.860885858535767,
+      "endUtc": "2026-10-06T01:56:14.684461741Z",
+      "identityAfter": {
+        "claim": "hdd-pg-2",
+        "device": "sdb",
+        "lun": 0,
+        "majorMinor": "8:16",
+        "mount": "/var/lib/postgresql/data",
+        "node": "aks-nodepool1-11223260-vmss000000",
+        "pv": "pvc-73571d6f-eb85-433b-982e-bcd0a3ac53c5",
+        "source": "/dev/sdb",
+        "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0"
+      },
+      "identityBefore": {
+        "claim": "hdd-pg-2",
+        "device": "sdb",
+        "lun": 0,
+        "majorMinor": "8:16",
+        "mount": "/var/lib/postgresql/data",
+        "node": "aks-nodepool1-11223260-vmss000000",
+        "pv": "pvc-73571d6f-eb85-433b-982e-bcd0a3ac53c5",
+        "source": "/dev/sdb",
+        "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0"
+      },
+      "majorMinor": "8:16",
+      "phase": "replay_drain",
+      "previousSequence": 9237,
+      "sequence": 9238,
+      "startUtc": "2026-10-06T01:56:09.823599665Z"
+    }
+  ],
+  "coverageBeforeReanalysis": {
+    "overallReplicaDataCoverage": 0.9997992565642201,
+    "replayDrainRejectedIntervals": 2,
+    "replayDrainReplicaDataCoverage": 0.9997471497649941,
+    "replayDrainValid": false,
+    "vacuumAndReplayValid": false,
+    "valid": false
+  },
+  "createdAtUtc": "2026-10-06T02:40:20Z",
+  "offlineCorrection": {
+    "artifact": "${PROJECT_ROOT}/experiments/20261005-four/100gib/results/100gib-20261005T130618Z/counter-rollover-correction.json",
+    "measurementRerun": false,
+    "rawSamplesModified": false,
+    "status": "passed-offline-counter-analysis",
+    "summaryCoverageValidAfterCorrection": true,
+    "summaryHashAfterCorrection": "aa3b08282b52930d39e4cb138cad8b3953c7e96197c3711843e0ab5d794849e3"
+  },
+  "phase": "replay_drain for both candidate wrap intervals",
+  "reanalysis": "Root-owned modulo-wrap offline analysis is recorded in counter-rollover-correction.json. Original summary and graphs were preserved under original-analysis-before-counter-rollover-correction; current summary/graphs contain corrected analysis.",
+  "runId": "100gib-20261005T130618Z",
+  "sampleScan": {
+    "claim": "hdd-pg-2",
+    "counterFieldsChecked": [
+      "r",
+      "rm",
+      "rs",
+      "w",
+      "wm",
+      "ws"
+    ],
+    "decreasingIntervals": 2,
+    "device": "replica DATA",
+    "deviceName": "sdb",
+    "lun": "0",
+    "majorMinor": "8:16",
+    "node": "aks-nodepool1-11223260-vmss000000",
+    "operationSectorAndWriteCountersIncreaseAcrossBothIntervals": true,
+    "otherNegativeCounterIntervals": 0,
+    "pv": "pvc-73571d6f-eb85-433b-982e-bcd0a3ac53c5",
+    "stableReplicaDataIdentityAcrossBothIntervals": true,
+    "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0"
+  },
+  "schemaVersion": 1,
+  "sourceEvidence": {
+    "correctedSummaryPath": "${PROJECT_ROOT}/experiments/20261005-four/100gib/results/100gib-20261005T130618Z/summary.json",
+    "correctedSummarySha256": "aa3b08282b52930d39e4cb138cad8b3953c7e96197c3711843e0ab5d794849e3",
+    "originalSummaryPath": "${PROJECT_ROOT}/experiments/20261005-four/100gib/results/100gib-20261005T130618Z/original-analysis-before-counter-rollover-correction/summary.json",
+    "originalSummarySha256": "6ed311f09bf90289eedb23cb6a39c2bda29d7cbed8ae641d0b3214797d819cc1",
+    "plotSourcePath": "${PROJECT_ROOT}/experiments/20261005-four/100gib/plot.py",
+    "plotSourceSha256": "d0ac35439ba17dcfe6f50e9484dd12274575755451258d82d7b12210c91317ec",
+    "sampleCount": 9721,
+    "samplesPath": "${PROJECT_ROOT}/experiments/20261005-four/100gib/results/100gib-20261005T130618Z/samples.jsonl",
+    "samplesSha256": "acf37b109194529e8c68b66555eaf60aed5404e8e0d71d1b39c7d72a4852875d"
+  },
+  "status": "complete-measurement-counter-rollover-audit-pending-offline-reanalysis"
+}

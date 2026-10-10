@@ -1,0 +1,44 @@
+[
+  {
+    "time": "2026-10-04T07:19:34.60885486Z",
+    "event": "sender_timeout",
+    "role": "primary",
+    "message": "terminating walsender process due to replication timeout"
+  },
+  {
+    "time": "2026-10-04T07:19:37.889314211Z",
+    "event": "receiver_disconnect",
+    "role": "replica",
+    "message": "could not receive data from WAL stream: server closed the connection unexpectedly\n\tThis probably means the server terminated abnormally\n\tbefore or while processing the request.\nserver closed the connection unexpectedly\n\tThis probably means the server terminated abnormally\n\tbefore or while processing the request."
+  },
+  {
+    "time": "2026-10-04T10:28:02.236508026Z",
+    "event": "receiver_connected",
+    "role": "replica",
+    "message": "started streaming WAL from primary at 42/51000000 on timeline 1"
+  },
+  {
+    "time": "2026-10-04T10:32:24.897443133Z",
+    "event": "receiver_timeout",
+    "role": "replica",
+    "message": "terminating walreceiver due to timeout"
+  },
+  {
+    "time": "2026-10-04T11:47:12.342344568Z",
+    "event": "receiver_connected",
+    "role": "replica",
+    "message": "started streaming WAL from primary at 45/40000000 on timeline 1"
+  },
+  {
+    "time": "2026-10-04T12:03:12.759970286Z",
+    "event": "sender_timeout",
+    "role": "primary",
+    "message": "terminating walsender process due to replication timeout"
+  },
+  {
+    "time": "2026-10-04T12:03:28.138323564Z",
+    "event": "receiver_disconnect",
+    "role": "replica",
+    "message": "could not receive data from WAL stream: SSL error: unexpected eof while reading"
+  }
+]

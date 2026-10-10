@@ -1,0 +1,107 @@
+{
+  "durableLaunchCommand": "./run-test.sh --out results/<run-id> (verified with --help; launcher selects vacuum-only-repro/.venv/bin/python unless an experiment-local .venv exists)",
+  "measurementEvidence": {
+    "counterCoverageValid": true,
+    "postflightVerified": true,
+    "recoveryPrefetchCounterDelta": {
+      "primary": {
+        "available": true,
+        "counterDelta": {
+          "hit": 0,
+          "prefetch": 0,
+          "skip_fpw": 0,
+          "skip_init": 0,
+          "skip_new": 0,
+          "skip_rep": 0
+        },
+        "gauges": {
+          "block_distance": {
+            "after": 0,
+            "before": 0
+          },
+          "io_depth": {
+            "after": 0,
+            "before": 0
+          },
+          "wal_distance": {
+            "after": 0,
+            "before": 0
+          }
+        },
+        "statsReset": "2026-10-05T07:14:53.284891+00:00"
+      },
+      "replica": {
+        "available": true,
+        "counterDelta": {
+          "hit": 0,
+          "prefetch": 0,
+          "skip_fpw": 0,
+          "skip_init": 0,
+          "skip_new": 0,
+          "skip_rep": 0
+        },
+        "gauges": {
+          "block_distance": {
+            "after": 0,
+            "before": 0
+          },
+          "io_depth": {
+            "after": 0,
+            "before": 0
+          },
+          "wal_distance": {
+            "after": 0,
+            "before": 0
+          }
+        },
+        "statsReset": "2026-10-05T07:14:19.328645+00:00"
+      }
+    },
+    "remoteVacuumExitCode": 0,
+    "replayCatchupEvent": {
+      "consecutiveSamples": 3,
+      "event": "replica_caught_up",
+      "primaryFlushLsn": "56/F63C27A0",
+      "replayLsn": "56/F63C27A0",
+      "targetLsn": "56/F63A92F0",
+      "time": "2026-10-05T07:55:36.885110617Z"
+    },
+    "replicaLagBytesAtObservationEnd": 0,
+    "sampleCount": 314,
+    "threeTrailingSamplesQualify": true,
+    "vacuumComplete": {
+      "flushLsn": "56/F63A92F0",
+      "time": "2026-10-05T07:55:24.056614Z",
+      "walBytes": 146317135367,
+      "walFpi": 16708795,
+      "walRecords": 48363743
+    },
+    "vacuumStart": {
+      "flushLsn": "4E/53000110",
+      "time": "2026-10-05T07:29:38.716537Z",
+      "walBytes": 109384816629,
+      "walFpi": 10637439,
+      "walRecords": 33248306
+    }
+  },
+  "preservedOriginalEvidence": {
+    "events": "${PROJECT_ROOT}/experiments/20261005-four/prefetch-off/attempt-westus3/results/20261005T072928Z-prefetch-off/events.jsonl",
+    "monitorSummary": "${PROJECT_ROOT}/experiments/20261005-four/prefetch-off/attempt-westus3/results/20261005T072928Z-prefetch-off/monitoring/monitor-summary.json",
+    "monitorSummaryWasNotModified": true,
+    "testState": "${PROJECT_ROOT}/experiments/20261005-four/prefetch-off/attempt-westus3/.state/test-state.controller-failed.json",
+    "timing": "${PROJECT_ROOT}/experiments/20261005-four/prefetch-off/attempt-westus3/results/20261005T072928Z-prefetch-off/timing.controller-failed.json",
+    "vacuumProcess": "${PROJECT_ROOT}/experiments/20261005-four/prefetch-off/attempt-westus3/results/20261005T072928Z-prefetch-off/vacuum-process.json"
+  },
+  "recoveredArtifacts": [
+    "${PROJECT_ROOT}/experiments/20261005-four/prefetch-off/attempt-westus3/results/20261005T072928Z-prefetch-off/summary.json",
+    "${PROJECT_ROOT}/experiments/20261005-four/prefetch-off/attempt-westus3/results/20261005T072928Z-prefetch-off/timing.json",
+    "${PROJECT_ROOT}/experiments/20261005-four/prefetch-off/attempt-westus3/results/20261005T072928Z-prefetch-off/iops.png",
+    "${PROJECT_ROOT}/experiments/20261005-four/prefetch-off/attempt-westus3/results/20261005T072928Z-prefetch-off/await.png",
+    "${PROJECT_ROOT}/experiments/20261005-four/prefetch-off/attempt-westus3/results/20261005T072928Z-prefetch-off/throughput.png"
+  ],
+  "recoveredAtUtc": "2026-10-05T07:59:24.917+00:00",
+  "recoveryReason": "No module named 'matplotlib'",
+  "recoveryScope": "report and graph generation only; no workload rerun and no sample/timing boundary changes",
+  "rendererInterpreter": "${PROJECT_ROOT}/vacuum-only-repro/.venv/bin/python",
+  "status": "complete"
+}

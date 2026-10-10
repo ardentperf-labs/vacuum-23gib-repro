@@ -1,0 +1,21 @@
+{
+  "definition": "Estimated total replica DATA completed reads divided by estimated total primary DATA completed reads. Primary uses VACUUM-window average DATA read IOPS \u00d7 VACUUM duration. Replica uses VACUUM-start through verified full catch-up average DATA read IOPS \u00d7 the full elapsed duration; replay overlaps the VACUUM interval and its later tail.",
+  "primary": {
+    "averageReadIops": 208.2703135469088,
+    "durationSeconds": 1795.195513010025,
+    "estimatedReadOperations": 373885.9323726017,
+    "window": "primary VACUUM"
+  },
+  "ratio": 1.0028960741110347,
+  "replica": {
+    "averageReadIops": 154.7615925420279,
+    "durationSeconds": 2422.8797829151154,
+    "estimatedReadOperations": 374968.7337418261,
+    "window": "VACUUM start through verified full replica catch-up"
+  },
+  "source": "root-independent-counter-audit.json; independently recomputed from raw OS device-counter deltas and timestamp overlaps",
+  "units": {
+    "operations": "estimated completed guest DATA read operations",
+    "ratio": "replica / primary"
+  }
+}

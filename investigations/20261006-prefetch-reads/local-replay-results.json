@@ -1,0 +1,154 @@
+{
+  "postgresql": "16.15 (Ubuntu 16.15-0ubuntu0.24.04.1)",
+  "replay_start_lsn": "0/1902D60",
+  "restore_point": "vacuum_done",
+  "replay_target_lsn": "0/1AA5378",
+  "fixture": {
+    "rows_inserted": 1000,
+    "tuple_payload": "1536-byte bytea with STORAGE PLAIN",
+    "heap_tuple_length_bytes": 1572,
+    "aligned_tuple_storage_bytes": 1576,
+    "rows_per_heap_page": 5,
+    "heap_pages": 200,
+    "heap_bytes": 1638400,
+    "index_pages": 5,
+    "index_bytes": 40960,
+    "wal_log_hints": "on",
+    "data_checksums": "enabled",
+    "full_page_writes": "on"
+  },
+  "vacuum": {
+    "command": "VACUUM (FREEZE, VERBOSE) vacuum_fixture",
+    "pages_scanned": 200,
+    "tuples_removed": 500,
+    "tuples_remaining": 500,
+    "pages_frozen": 200,
+    "index_pages": 5,
+    "wal_records": 1008,
+    "full_page_images": 207,
+    "wal_bytes": 1686662,
+    "toast_relation_pages": 0
+  },
+  "page_zero_before_vacuum": {
+    "line_pointer_count": 5,
+    "line_pointer_flags": [1, 1, 1, 1, 1],
+    "tuple_lengths": [1572, 1572, 1572, 1572, 1572],
+    "xmin": 732,
+    "deleted_offsets": [2, 4],
+    "deleted_tuple_xmax": 734,
+    "pd_lower": 44,
+    "pd_upper": 312
+  },
+  "page_zero_after_vacuum": {
+    "line_pointer_flags": [1, 0, 1, 0, 1],
+    "live_tuple_offsets": [1, 3, 5],
+    "live_tuple_lengths": [1572, 1572, 1572],
+    "live_tuple_xmin": 732,
+    "live_tuple_infomask_hex": "b02",
+    "relation_all_visible_pages": 200,
+    "relation_frozen_xid": 738,
+    "pd_lower": 44,
+    "pd_upper": 3464
+  },
+  "page_zero_main_fork_wal": [
+    {
+      "lsn": "0/1905470",
+      "record": "XLOG/FPI_FOR_HINT",
+      "record_total_bytes": 7973,
+      "page_image_bytes": 7924,
+      "omitted_standard_page_hole": {
+        "offset": 44,
+        "length": 268
+      }
+    },
+    {
+      "lsn": "0/19073B0",
+      "record": "Heap2/PRUNE",
+      "record_bytes": 59,
+      "full_page_image": false,
+      "snapshot_conflict_horizon": 734,
+      "dead_offsets": [2, 4]
+    },
+    {
+      "lsn": "0/19073F0",
+      "record": "Heap2/FREEZE_PAGE",
+      "record_bytes": 71,
+      "full_page_image": false,
+      "snapshot_conflict_horizon": 732,
+      "survivor_offsets": [1, 3, 5],
+      "logged_infomask_decimal": 2818
+    },
+    {
+      "lsn": "0/1A95108",
+      "record": "Heap2/VACUUM",
+      "record_bytes": 52,
+      "full_page_image": false,
+      "unused_offsets": [2, 4]
+    },
+    {
+      "lsn": "0/1A95140",
+      "record": "Heap2/VISIBLE",
+      "record_total_bytes": 8256,
+      "heap_block_image": false,
+      "vm_block_image": true,
+      "visibility_flags": "0x03"
+    }
+  ],
+  "replay_off": {
+    "recovery_prefetch": "off",
+    "in_recovery": true,
+    "paused_at_restore_point": true,
+    "replay_lsn": "0/1AA5378",
+    "prefetch": 0,
+    "hit": 0,
+    "skip_fpw": 0,
+    "skip_rep": 0,
+    "paused_startup_relation_reads_pg_stat_io_unflushed": 0
+  },
+  "replay_try": {
+    "recovery_prefetch": "try",
+    "in_recovery": true,
+    "paused_at_restore_point": true,
+    "replay_lsn": "0/1AA5378",
+    "prefetch": 200,
+    "hit": 201,
+    "skip_fpw": 206,
+    "skip_rep": 402,
+    "paused_startup_relation_reads_pg_stat_io_unflushed": 0
+  },
+  "post_promotion_pg_stat_io_from_restarted_copies": {
+    "off": {
+      "in_recovery": false,
+      "startup_relation_normal_reads": 2,
+      "startup_relation_normal_hits": 3204,
+      "stats_reset": "2026-10-06T04:13:39.733704+00"
+    },
+    "try": {
+      "in_recovery": false,
+      "startup_relation_normal_reads": 2,
+      "startup_relation_normal_hits": 2802,
+      "stats_reset": "2026-10-06T04:13:39.733704+00"
+    },
+    "note": "These cumulative counters include prior local server starts and replay attempts because pg_stat_reset_shared('io') was not run before the captured copies. The durable script resets I/O stats before making its copies and captures again after promotion."
+  },
+  "independent_fresh_script_verification": {
+    "work_directory": "/tmp/pg16-prefetch-repro.FjPxsA",
+    "replay_endpoint_off": "0/1AA5308",
+    "replay_endpoint_try": "0/1AA5308",
+    "prefetch_off": 0,
+    "prefetch_try": 200,
+    "startup_relation_reads_after_exit_off": 1,
+    "startup_relation_reads_after_exit_try": 1,
+    "startup_relation_hits_after_exit_off": 1602,
+    "startup_relation_hits_after_exit_try": 1401,
+    "stats_reset": "2026-10-06T04:23:57.293125+00:00",
+    "verified_by": "root-validation/verification.json"
+  },
+  "interpretation_and_limits": [
+    "Both replays used copies of the same stopped pre-vacuum base cluster and the same copied WAL; both paused at the same restore-point LSN.",
+    "The independent fresh script run confirms 200 prefetch requests in try and zero with off, exactly matching the fixture's 200 heap blocks.",
+    "Paused pg_stat_io values are not final because the startup process may have pending I/O reports. The independent fresh run promoted both copies and read the stats after startup exited; it reported one startup relation read in each arm.",
+    "No global cache drop was used. The try replay ran second, so process read_bytes is not a comparable physical-device measure.",
+    "The tiny run had no intervening checkpoint or buffer pressure, so it showed one main-heap FPI followed by deltas, not the later second-pass main-heap FPI inferred for the larger Azure run."
+  ]
+}

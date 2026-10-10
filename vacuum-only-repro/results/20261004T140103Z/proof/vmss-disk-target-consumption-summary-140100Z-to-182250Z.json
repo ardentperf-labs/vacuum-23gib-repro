@@ -1,0 +1,763 @@
+{
+  "capture": {
+    "captureStartedUtc": "2026-10-04T18:22:50Z",
+    "captureFinishedUtc": "2026-10-04T18:22:51Z",
+    "queryStartUtc": "2026-10-04T14:01:00Z",
+    "queryEndRequestedUtc": "2026-10-04T18:22:50Z",
+    "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-37028789-vmss",
+    "rawFile": "vmss-disk-metrics-140100Z-to-182250Z.json",
+    "status": "succeeded"
+  },
+  "metricWindow": "2026-10-04T14:01:00Z/2026-10-04T18:22:50Z",
+  "interval": "PT1M",
+  "dimensions": [
+    "lun",
+    "vmname"
+  ],
+  "metrics": {
+    "Data Disk Target IOPS": {
+      "1|aks-nodepool1-37028789-vmss_1": {
+        "lun": "1",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_1",
+        "sampleCount": 52,
+        "firstTimestampUtc": "2026-10-04T14:03:00Z",
+        "latestTimestampUtc": "2026-10-04T18:18:00Z",
+        "mean": 550.0,
+        "lastFiveSampleMean": 550.0,
+        "latest": 550.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T17:58:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:03:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:08:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:13:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:18:00Z",
+            "average": 550.0
+          }
+        ],
+        "unit": "Count"
+      },
+      "0|aks-nodepool1-37028789-vmss_1": {
+        "lun": "0",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_1",
+        "sampleCount": 52,
+        "firstTimestampUtc": "2026-10-04T14:03:00Z",
+        "latestTimestampUtc": "2026-10-04T18:18:00Z",
+        "mean": 550.0,
+        "lastFiveSampleMean": 550.0,
+        "latest": 550.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T17:58:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:03:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:08:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:13:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:18:00Z",
+            "average": 550.0
+          }
+        ],
+        "unit": "Count"
+      },
+      "0|aks-nodepool1-37028789-vmss_0": {
+        "lun": "0",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_0",
+        "sampleCount": 52,
+        "firstTimestampUtc": "2026-10-04T14:04:00Z",
+        "latestTimestampUtc": "2026-10-04T18:19:00Z",
+        "mean": 550.0,
+        "lastFiveSampleMean": 550.0,
+        "latest": 550.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T17:59:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:04:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:09:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:14:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:19:00Z",
+            "average": 550.0
+          }
+        ],
+        "unit": "Count"
+      },
+      "1|aks-nodepool1-37028789-vmss_0": {
+        "lun": "1",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_0",
+        "sampleCount": 52,
+        "firstTimestampUtc": "2026-10-04T14:04:00Z",
+        "latestTimestampUtc": "2026-10-04T18:19:00Z",
+        "mean": 550.0,
+        "lastFiveSampleMean": 550.0,
+        "latest": 550.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T17:59:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:04:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:09:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:14:00Z",
+            "average": 550.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:19:00Z",
+            "average": 550.0
+          }
+        ],
+        "unit": "Count"
+      }
+    },
+    "Data Disk Target Bandwidth": {
+      "1|aks-nodepool1-37028789-vmss_1": {
+        "lun": "1",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_1",
+        "sampleCount": 52,
+        "firstTimestampUtc": "2026-10-04T14:03:00Z",
+        "latestTimestampUtc": "2026-10-04T18:18:00Z",
+        "mean": 100000000.0,
+        "lastFiveSampleMean": 100000000.0,
+        "latest": 100000000.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T17:58:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:03:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:08:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:13:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:18:00Z",
+            "average": 100000000.0
+          }
+        ],
+        "unit": "Count"
+      },
+      "0|aks-nodepool1-37028789-vmss_0": {
+        "lun": "0",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_0",
+        "sampleCount": 52,
+        "firstTimestampUtc": "2026-10-04T14:04:00Z",
+        "latestTimestampUtc": "2026-10-04T18:19:00Z",
+        "mean": 100000000.0,
+        "lastFiveSampleMean": 100000000.0,
+        "latest": 100000000.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T17:59:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:04:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:09:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:14:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:19:00Z",
+            "average": 100000000.0
+          }
+        ],
+        "unit": "Count"
+      },
+      "1|aks-nodepool1-37028789-vmss_0": {
+        "lun": "1",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_0",
+        "sampleCount": 52,
+        "firstTimestampUtc": "2026-10-04T14:04:00Z",
+        "latestTimestampUtc": "2026-10-04T18:19:00Z",
+        "mean": 100000000.0,
+        "lastFiveSampleMean": 100000000.0,
+        "latest": 100000000.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T17:59:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:04:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:09:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:14:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:19:00Z",
+            "average": 100000000.0
+          }
+        ],
+        "unit": "Count"
+      },
+      "0|aks-nodepool1-37028789-vmss_1": {
+        "lun": "0",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_1",
+        "sampleCount": 52,
+        "firstTimestampUtc": "2026-10-04T14:03:00Z",
+        "latestTimestampUtc": "2026-10-04T18:18:00Z",
+        "mean": 100000000.0,
+        "lastFiveSampleMean": 100000000.0,
+        "latest": 100000000.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T17:58:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:03:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:08:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:13:00Z",
+            "average": 100000000.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:18:00Z",
+            "average": 100000000.0
+          }
+        ],
+        "unit": "Count"
+      }
+    },
+    "Data Disk IOPS Consumed Percentage": {
+      "0|aks-nodepool1-37028789-vmss_1": {
+        "lun": "0",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_1",
+        "sampleCount": 261,
+        "firstTimestampUtc": "2026-10-04T14:01:00Z",
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "mean": 96.04980842911877,
+        "lastFiveSampleMean": 97.0,
+        "latest": 97.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T18:17:00Z",
+            "average": 97.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:18:00Z",
+            "average": 97.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:19:00Z",
+            "average": 97.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:20:00Z",
+            "average": 97.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:21:00Z",
+            "average": 97.0
+          }
+        ],
+        "unit": "Percent"
+      },
+      "0|aks-nodepool1-37028789-vmss_0": {
+        "lun": "0",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_0",
+        "sampleCount": 261,
+        "firstTimestampUtc": "2026-10-04T14:01:00Z",
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "mean": 23.367816091954023,
+        "lastFiveSampleMean": 39.4,
+        "latest": 42.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T18:17:00Z",
+            "average": 30.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:18:00Z",
+            "average": 43.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:19:00Z",
+            "average": 41.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:20:00Z",
+            "average": 41.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:21:00Z",
+            "average": 42.0
+          }
+        ],
+        "unit": "Percent"
+      },
+      "1|aks-nodepool1-37028789-vmss_1": {
+        "lun": "1",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_1",
+        "sampleCount": 261,
+        "firstTimestampUtc": "2026-10-04T14:01:00Z",
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "mean": 17.988505747126435,
+        "lastFiveSampleMean": 18.2,
+        "latest": 22.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T18:17:00Z",
+            "average": 13.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:18:00Z",
+            "average": 12.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:19:00Z",
+            "average": 22.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:20:00Z",
+            "average": 22.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:21:00Z",
+            "average": 22.0
+          }
+        ],
+        "unit": "Percent"
+      },
+      "1|aks-nodepool1-37028789-vmss_0": {
+        "lun": "1",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_0",
+        "sampleCount": 261,
+        "firstTimestampUtc": "2026-10-04T14:01:00Z",
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "mean": 10.71647509578544,
+        "lastFiveSampleMean": 15.0,
+        "latest": 19.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T18:17:00Z",
+            "average": 5.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:18:00Z",
+            "average": 13.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:19:00Z",
+            "average": 19.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:20:00Z",
+            "average": 19.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:21:00Z",
+            "average": 19.0
+          }
+        ],
+        "unit": "Percent"
+      }
+    },
+    "Data Disk Bandwidth Consumed Percentage": {
+      "0|aks-nodepool1-37028789-vmss_0": {
+        "lun": "0",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_0",
+        "sampleCount": 261,
+        "firstTimestampUtc": "2026-10-04T14:01:00Z",
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "mean": 29.233716475095786,
+        "lastFiveSampleMean": 46.0,
+        "latest": 51.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T18:17:00Z",
+            "average": 28.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:18:00Z",
+            "average": 44.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:19:00Z",
+            "average": 53.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:20:00Z",
+            "average": 54.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:21:00Z",
+            "average": 51.0
+          }
+        ],
+        "unit": "Percent"
+      },
+      "1|aks-nodepool1-37028789-vmss_1": {
+        "lun": "1",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_1",
+        "sampleCount": 261,
+        "firstTimestampUtc": "2026-10-04T14:01:00Z",
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "mean": 24.81226053639847,
+        "lastFiveSampleMean": 24.0,
+        "latest": 29.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T18:17:00Z",
+            "average": 20.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:18:00Z",
+            "average": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:19:00Z",
+            "average": 28.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:20:00Z",
+            "average": 29.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:21:00Z",
+            "average": 29.0
+          }
+        ],
+        "unit": "Percent"
+      },
+      "1|aks-nodepool1-37028789-vmss_0": {
+        "lun": "1",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_0",
+        "sampleCount": 261,
+        "firstTimestampUtc": "2026-10-04T14:01:00Z",
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "mean": 11.114942528735632,
+        "lastFiveSampleMean": 11.4,
+        "latest": 14.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T18:17:00Z",
+            "average": 6.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:18:00Z",
+            "average": 9.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:19:00Z",
+            "average": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:20:00Z",
+            "average": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:21:00Z",
+            "average": 14.0
+          }
+        ],
+        "unit": "Percent"
+      },
+      "0|aks-nodepool1-37028789-vmss_1": {
+        "lun": "0",
+        "vmssInstance": "aks-nodepool1-37028789-vmss_1",
+        "sampleCount": 261,
+        "firstTimestampUtc": "2026-10-04T14:01:00Z",
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "mean": 8.11111111111111,
+        "lastFiveSampleMean": 8.2,
+        "latest": 9.0,
+        "lastFive": [
+          {
+            "timestampUtc": "2026-10-04T18:17:00Z",
+            "average": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:18:00Z",
+            "average": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:19:00Z",
+            "average": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:20:00Z",
+            "average": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-04T18:21:00Z",
+            "average": 9.0
+          }
+        ],
+        "unit": "Percent"
+      }
+    }
+  },
+  "perLunSummary": [
+    {
+      "lun": 0,
+      "vmssInstance": "aks-nodepool1-37028789-vmss_0",
+      "role": "primary",
+      "disk": "DATA",
+      "targetIOPS": {
+        "mean": 550.0,
+        "latest": 550.0,
+        "latestTimestampUtc": "2026-10-04T18:19:00Z",
+        "samples": 52
+      },
+      "targetBandwidthBytesPerSecond": {
+        "mean": 100000000.0,
+        "latest": 100000000.0,
+        "latestTimestampUtc": "2026-10-04T18:19:00Z",
+        "samples": 52
+      },
+      "iopsConsumedPercent": {
+        "mean": 23.367816091954023,
+        "lastFiveSampleMean": 39.4,
+        "latest": 42.0,
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "sampleCount": 261
+      },
+      "bandwidthConsumedPercent": {
+        "mean": 29.233716475095786,
+        "lastFiveSampleMean": 46.0,
+        "latest": 51.0,
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "sampleCount": 261
+      },
+      "estimatedMeanIOPS": 128.52298850574712,
+      "estimatedLatestIOPS": 231.0,
+      "estimatedMeanBytesPerSecond": 29233716.475095786,
+      "estimatedLatestBytesPerSecond": 51000000.0,
+      "estimatedMeanMBPerSecondDecimal": 29.233716475095786,
+      "estimatedLatestMBPerSecondDecimal": 51.0,
+      "nodeName": "aks-nodepool1-37028789-vmss000000",
+      "vmssVmName": "aks-nodepool1-37028789-vmss_0",
+      "vmssInstanceId": "0",
+      "vmId": "b42cfd28-8475-4639-a300-387cfa60fe43",
+      "claim": "hdd-pg-1",
+      "pv": "pvc-b10487ad-93ff-4649-985d-7ee7a4488187",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/microsoft.compute/disks/pvc-b10487ad-93ff-4649-985d-7ee7a4488187",
+      "diskSizeGB": 512,
+      "diskSku": "Standard_LRS",
+      "caching": "None",
+      "controllerType": "SCSI"
+    },
+    {
+      "lun": 0,
+      "vmssInstance": "aks-nodepool1-37028789-vmss_1",
+      "role": "replica",
+      "disk": "DATA",
+      "targetIOPS": {
+        "mean": 550.0,
+        "latest": 550.0,
+        "latestTimestampUtc": "2026-10-04T18:18:00Z",
+        "samples": 52
+      },
+      "targetBandwidthBytesPerSecond": {
+        "mean": 100000000.0,
+        "latest": 100000000.0,
+        "latestTimestampUtc": "2026-10-04T18:18:00Z",
+        "samples": 52
+      },
+      "iopsConsumedPercent": {
+        "mean": 96.04980842911877,
+        "lastFiveSampleMean": 97.0,
+        "latest": 97.0,
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "sampleCount": 261
+      },
+      "bandwidthConsumedPercent": {
+        "mean": 8.11111111111111,
+        "lastFiveSampleMean": 8.2,
+        "latest": 9.0,
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "sampleCount": 261
+      },
+      "estimatedMeanIOPS": 528.2739463601532,
+      "estimatedLatestIOPS": 533.5,
+      "estimatedMeanBytesPerSecond": 8111111.11111111,
+      "estimatedLatestBytesPerSecond": 9000000.0,
+      "estimatedMeanMBPerSecondDecimal": 8.11111111111111,
+      "estimatedLatestMBPerSecondDecimal": 9.0,
+      "nodeName": "aks-nodepool1-37028789-vmss000001",
+      "vmssVmName": "aks-nodepool1-37028789-vmss_1",
+      "vmssInstanceId": "1",
+      "vmId": "d818c6a4-8e98-4462-b670-a36ce77de2f9",
+      "claim": "hdd-pg-2",
+      "pv": "pvc-3b7742d3-59d4-4a51-b9cb-c1818ec7dbaf",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/microsoft.compute/disks/pvc-3b7742d3-59d4-4a51-b9cb-c1818ec7dbaf",
+      "diskSizeGB": 512,
+      "diskSku": "Standard_LRS",
+      "caching": "None",
+      "controllerType": "SCSI"
+    },
+    {
+      "lun": 1,
+      "vmssInstance": "aks-nodepool1-37028789-vmss_0",
+      "role": "primary",
+      "disk": "WAL",
+      "targetIOPS": {
+        "mean": 550.0,
+        "latest": 550.0,
+        "latestTimestampUtc": "2026-10-04T18:19:00Z",
+        "samples": 52
+      },
+      "targetBandwidthBytesPerSecond": {
+        "mean": 100000000.0,
+        "latest": 100000000.0,
+        "latestTimestampUtc": "2026-10-04T18:19:00Z",
+        "samples": 52
+      },
+      "iopsConsumedPercent": {
+        "mean": 10.71647509578544,
+        "lastFiveSampleMean": 15.0,
+        "latest": 19.0,
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "sampleCount": 261
+      },
+      "bandwidthConsumedPercent": {
+        "mean": 11.114942528735632,
+        "lastFiveSampleMean": 11.4,
+        "latest": 14.0,
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "sampleCount": 261
+      },
+      "estimatedMeanIOPS": 58.94061302681993,
+      "estimatedLatestIOPS": 104.5,
+      "estimatedMeanBytesPerSecond": 11114942.528735632,
+      "estimatedLatestBytesPerSecond": 14000000.0,
+      "estimatedMeanMBPerSecondDecimal": 11.114942528735632,
+      "estimatedLatestMBPerSecondDecimal": 14.0,
+      "nodeName": "aks-nodepool1-37028789-vmss000000",
+      "vmssVmName": "aks-nodepool1-37028789-vmss_0",
+      "vmssInstanceId": "0",
+      "vmId": "b42cfd28-8475-4639-a300-387cfa60fe43",
+      "claim": "hdd-pg-1-wal",
+      "pv": "pvc-a13e4b08-de7f-4b92-b504-85856421e5fe",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/microsoft.compute/disks/pvc-a13e4b08-de7f-4b92-b504-85856421e5fe",
+      "diskSizeGB": 512,
+      "diskSku": "Standard_LRS",
+      "caching": "None",
+      "controllerType": "SCSI"
+    },
+    {
+      "lun": 1,
+      "vmssInstance": "aks-nodepool1-37028789-vmss_1",
+      "role": "replica",
+      "disk": "WAL",
+      "targetIOPS": {
+        "mean": 550.0,
+        "latest": 550.0,
+        "latestTimestampUtc": "2026-10-04T18:18:00Z",
+        "samples": 52
+      },
+      "targetBandwidthBytesPerSecond": {
+        "mean": 100000000.0,
+        "latest": 100000000.0,
+        "latestTimestampUtc": "2026-10-04T18:18:00Z",
+        "samples": 52
+      },
+      "iopsConsumedPercent": {
+        "mean": 17.988505747126435,
+        "lastFiveSampleMean": 18.2,
+        "latest": 22.0,
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "sampleCount": 261
+      },
+      "bandwidthConsumedPercent": {
+        "mean": 24.81226053639847,
+        "lastFiveSampleMean": 24.0,
+        "latest": 29.0,
+        "latestTimestampUtc": "2026-10-04T18:21:00Z",
+        "sampleCount": 261
+      },
+      "estimatedMeanIOPS": 98.93678160919539,
+      "estimatedLatestIOPS": 121.0,
+      "estimatedMeanBytesPerSecond": 24812260.536398467,
+      "estimatedLatestBytesPerSecond": 29000000.0,
+      "estimatedMeanMBPerSecondDecimal": 24.812260536398465,
+      "estimatedLatestMBPerSecondDecimal": 29.0,
+      "nodeName": "aks-nodepool1-37028789-vmss000001",
+      "vmssVmName": "aks-nodepool1-37028789-vmss_1",
+      "vmssInstanceId": "1",
+      "vmId": "d818c6a4-8e98-4462-b670-a36ce77de2f9",
+      "claim": "hdd-pg-2-wal",
+      "pv": "pvc-620fb663-31c7-4cd8-a241-f60774c157b4",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/microsoft.compute/disks/pvc-620fb663-31c7-4cd8-a241-f60774c157b4",
+      "diskSizeGB": 512,
+      "diskSku": "Standard_LRS",
+      "caching": "None",
+      "controllerType": "SCSI"
+    }
+  ],
+  "interpretation": {
+    "units": "Consumed percentages are Azure Monitor minute aggregates; target bandwidth is bytes/s. Estimated rates multiply mean consumed percentage by mean target, or latest consumed percentage by latest target.",
+    "limits": "These are per-minute consumed/target estimates, not hard-cap proof, burst-credit accounting, or per-I/O latency/percentile measurements.",
+    "roles": "vmss _0 is primary and _1 is replica, confirmed by the local sampler; LUN0 is DATA and LUN1 is WAL, confirmed by local PV/device mappings."
+  },
+  "mappingBasis": {
+    "roleAndLun": "Local sampler maps vmss _0/node aks-nodepool1-37028789-vmss000000 to primary and vmss _1/node aks-nodepool1-37028789-vmss000001 to replica; LUN0 is DATA and LUN1 is WAL.",
+    "diskIds": "Exact PV volume handles/disk IDs are cross-checked against the saved preflight storage map and Azure disk metadata captured earlier; all four are separate 512-GiB Standard_LRS disks with caching None.",
+    "latestSamplerSampleUtc": "2026-10-04T18:21:19Z"
+  }
+}

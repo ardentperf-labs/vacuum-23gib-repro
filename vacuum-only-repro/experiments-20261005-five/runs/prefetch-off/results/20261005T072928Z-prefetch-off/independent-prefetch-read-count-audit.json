@@ -1,0 +1,706 @@
+{
+  "auditTimeUtc": "2026-10-06T03:54:54Z",
+  "configurationAndHistory": {
+    "allSamplesAppSessionsZero": true,
+    "applicationClientCreated": false,
+    "cacheState": "CachingMode=None confirms Azure managed-disk host caching disabled. The archived evidence neither clears nor measures guest Linux page cache or PostgreSQL shared-buffer residency; no cold-cache claim is justified. Snapshot startup, seed/catch-up, and checkpoint activity precede capture. Device counters are completed guest block I/O, not logical PostgreSQL block accesses. PostgreSQL shared_buffers was configured at 256 MB per role, but occupancy was not measured.",
+    "clusterPrefetchOverride": null,
+    "cnpgBootstrapJobs": [],
+    "fixtureHeapBytes": 24696061952,
+    "fixtureSnapshotConsistency": "online primary disk snapshot after checkpoint; crash-consistent",
+    "fixtureSourceRegion": "eastus",
+    "initialReplicaCatchupLsn": "4E/53000000",
+    "measurementRegion": "westus3",
+    "prefetchCounterDeltas": {
+      "primary": {
+        "available": true,
+        "counterDelta": {
+          "hit": 0,
+          "prefetch": 0,
+          "skip_fpw": 0,
+          "skip_init": 0,
+          "skip_new": 0,
+          "skip_rep": 0
+        },
+        "gauges": {
+          "block_distance": {
+            "after": 0,
+            "before": 0
+          },
+          "io_depth": {
+            "after": 0,
+            "before": 0
+          },
+          "wal_distance": {
+            "after": 0,
+            "before": 0
+          }
+        },
+        "statsReset": "2026-10-05T07:14:53.284891+00:00"
+      },
+      "replica": {
+        "available": true,
+        "counterDelta": {
+          "hit": 0,
+          "prefetch": 0,
+          "skip_fpw": 0,
+          "skip_init": 0,
+          "skip_new": 0,
+          "skip_rep": 0
+        },
+        "gauges": {
+          "block_distance": {
+            "after": 0,
+            "before": 0
+          },
+          "io_depth": {
+            "after": 0,
+            "before": 0
+          },
+          "wal_distance": {
+            "after": 0,
+            "before": 0
+          }
+        },
+        "statsReset": "2026-10-05T07:14:19.328645+00:00"
+      }
+    },
+    "preflightAppSessions": {
+      "primary": 0,
+      "replica": 0
+    },
+    "prepareSourceKind": "regional_copy",
+    "primaryRecoveryPrefetch": {
+      "pendingRestart": false,
+      "setting": "try",
+      "source": "default",
+      "sourceFile": null,
+      "unit": null,
+      "value": "try"
+    },
+    "regionalSourceSnapshotId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-only-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/keeper-35e99cb5",
+    "restoredReplicaSnapshotPair": {
+      "data": "vacuum-backup-35e99cb5",
+      "wal": "vacuum-backup-35e99cb5-wal"
+    },
+    "sharedBuffersConfigured": {
+      "primary": {
+        "pendingRestart": false,
+        "setting": "32768",
+        "source": "configuration file",
+        "sourceFile": "/var/lib/postgresql/data/pgdata/custom.conf",
+        "unit": "8kB",
+        "value": "256MB"
+      },
+      "replica": {
+        "pendingRestart": false,
+        "setting": "32768",
+        "source": "configuration file",
+        "sourceFile": "/var/lib/postgresql/data/pgdata/custom.conf",
+        "unit": "8kB",
+        "value": "256MB"
+      }
+    },
+    "standbyRecoveryPrefetch": {
+      "pendingRestart": false,
+      "setting": "off",
+      "source": "configuration file",
+      "sourceFile": "/var/lib/postgresql/data/pgdata/postgresql.auto.conf",
+      "unit": null,
+      "value": "off"
+    },
+    "storageClass": {
+      "cachingMode": "None",
+      "kind": "Managed",
+      "skuName": "Standard_LRS"
+    }
+  },
+  "deviceCrossCheck": {
+    "interpretation": "The small DATA read count is on the mounted hdd-pg-2 DATA PVC at /var/lib/postgresql/data, LUN 0, sdc 8:32. The separate WAL claim is /var/lib/postgresql/wal, LUN 1, sdb 8:16; it logged ~93,734 read ops in the entire sample span. They cannot be confused by a role-level device swap.",
+    "standbyDataRawFirstToLastReadBytes": 14475264,
+    "standbyDataRawFirstToLastReadOps": 339,
+    "standbyDataRawFirstToLastWriteBytes": 49531342848,
+    "standbyDataRawFirstToLastWriteOps": 67782,
+    "standbyWalRawFirstToLastReadBytes": 423215104,
+    "standbyWalRawFirstToLastReadOps": 93734,
+    "standbyWalRawFirstToLastWriteBytes": 49228558336,
+    "standbyWalRawFirstToLastWriteOps": 177411
+  },
+  "fullCatchup": {
+    "allThreeAtCurrentFlushAndReceiverStreaming": true,
+    "finalLagBytes": 0,
+    "finalPrimaryFlushLsn": "56/F63C27A0",
+    "finalReplicaReplayLsn": "56/F63C27A0",
+    "initialSeedCatchupLsn": "4E/53000000",
+    "lastThreeRawSamples": [
+      {
+        "lagBytes": 0,
+        "primaryFlushLsn": "56/F63C26B8",
+        "receiverStatus": "streaming",
+        "replicaReplayLsn": "56/F63C26B8",
+        "rowIndex": 311,
+        "timestamp": "2026-10-05T07:55:26.914254108Z"
+      },
+      {
+        "lagBytes": 0,
+        "primaryFlushLsn": "56/F63C2768",
+        "receiverStatus": "streaming",
+        "replicaReplayLsn": "56/F63C2768",
+        "rowIndex": 312,
+        "timestamp": "2026-10-05T07:55:31.940966758Z"
+      },
+      {
+        "lagBytes": 0,
+        "primaryFlushLsn": "56/F63C27A0",
+        "receiverStatus": "streaming",
+        "replicaReplayLsn": "56/F63C27A0",
+        "rowIndex": 313,
+        "timestamp": "2026-10-05T07:55:36.885110617Z"
+      }
+    ],
+    "remoteVacuumExitCode": 0,
+    "replayCaughtUp": true,
+    "replayDrainSeconds": 10.81511671899898,
+    "replayEnd": "2026-10-05T07:55:36.885110617Z",
+    "replicationEventsDuringRun": [],
+    "testComplete": true,
+    "vacuumComplete": "2026-10-05T07:55:24.056614Z",
+    "vacuumCompletionTargetLsn": "56/F63A92F0",
+    "vacuumStart": "2026-10-05T07:29:38.716537Z"
+  },
+  "mechanismAssessment": {
+    "confound": "The prefetch-off stack is West US 3, while the unchanged default-prefetch run is East US. Without a same-region on/off pair, the difference is observational and cannot be attributed solely to recovery_prefetch.",
+    "notMeasured": "The counter delta for pg_stat_recovery_prefetch is zero while the replica setting is off; this does not count FPI redo paths or data reads avoided. No relation-level logical block-read counter or replay-operation-to-page-read attribution was collected. The diskstats result is valid for block-device reads, but not a claim of only ~336 logical PostgreSQL reads.",
+    "plausibleButUnproven": "PostgreSQL 16.15 source shows applicable WAL full-page images can be restored to a zeroed buffer rather than requiring the old data page to be read first. Given full_page_writes=on and ~6.07M FPIs, that is a plausible path for low standby DATA device reads during WAL replay."
+  },
+  "primarySources": [
+    {
+      "title": "PostgreSQL 16 recovery_prefetch configuration",
+      "url": "https://www.postgresql.org/docs/16/runtime-config-wal.html#GUC-RECOVERY-PREFETCH"
+    },
+    {
+      "title": "PostgreSQL 16 pg_stat_recovery_prefetch and skip_fpw semantics",
+      "url": "https://www.postgresql.org/docs/16/monitoring-stats.html#MONITORING-PG-STAT-RECOVERY-PREFETCH"
+    },
+    {
+      "title": "PostgreSQL 16.15 recovery prefetcher source",
+      "url": "https://github.com/postgres/postgres/blob/REL_16_15/src/backend/access/transam/xlogprefetcher.c"
+    },
+    {
+      "title": "PostgreSQL 16.15 redo/FPI restore source",
+      "url": "https://github.com/postgres/postgres/blob/REL_16_15/src/backend/access/transam/xlogutils.c"
+    }
+  ],
+  "rawWindows": {
+    "vacuum": {
+      "primary_data": {
+        "coverage": 1.0,
+        "coveredSeconds": 1545.3400769233704,
+        "durationSeconds": 1545.3400769233704,
+        "maxIntervalSeconds": 5.6778857707977295,
+        "readAwaitMs": 4.956832711274783,
+        "readBytes": 49198973820.063095,
+        "readIops": 243.8116505547938,
+        "readMBps": 31.836988216867912,
+        "readOperations": 376771.91482315894,
+        "rejectedIntervals": [],
+        "summaryAbsoluteDifferences": {
+          "readAwaitMs": 8.881784197001252e-16,
+          "readIops": 0.0,
+          "readMBps": 0.0,
+          "writeAwaitMs": 2.842170943040401e-14,
+          "writeIops": 7.105427357601002e-15,
+          "writeMBps": 0.0
+        },
+        "validIntervals": 310,
+        "writeAwaitMs": 128.89085505352503,
+        "writeBytes": 49571012887.708664,
+        "writeIops": 36.019498083296185,
+        "writeMBps": 32.07773721005151,
+        "writeOperations": 55662.37393878212
+      },
+      "primary_wal": {
+        "coverage": 1.0,
+        "coveredSeconds": 1545.3400769233704,
+        "durationSeconds": 1545.3400769233704,
+        "maxIntervalSeconds": 5.6778857707977295,
+        "readAwaitMs": 3.1666666666666665,
+        "readBytes": 643072.0,
+        "readIops": 0.003882640520101858,
+        "readMBps": 0.0004161362340904903,
+        "readOperations": 6.0,
+        "rejectedIntervals": [],
+        "summaryAbsoluteDifferences": {
+          "readAwaitMs": 0.0,
+          "readIops": 0.0,
+          "readMBps": 0.0,
+          "writeAwaitMs": 0.0,
+          "writeIops": 0.0,
+          "writeMBps": 0.0
+        },
+        "validIntervals": 310,
+        "writeAwaitMs": 2.6012503600875214,
+        "writeBytes": 38967628663.582184,
+        "writeIops": 131.9609457848696,
+        "writeMBps": 25.21621567025113,
+        "writeOperations": 203924.5381100711
+      },
+      "replica_data": {
+        "coverage": 1.0,
+        "coveredSeconds": 1545.3400769233704,
+        "durationSeconds": 1545.3400769233704,
+        "maxIntervalSeconds": 5.680282831192017,
+        "readAwaitMs": 91.99737435968107,
+        "readBytes": 14434104.060949884,
+        "readIops": 0.21741839291162288,
+        "readMBps": 0.0093404062164018,
+        "readOperations": 335.98535602660286,
+        "rejectedIntervals": [],
+        "summaryAbsoluteDifferences": {
+          "readAwaitMs": 0.0,
+          "readIops": 0.0,
+          "readMBps": 0.0,
+          "writeAwaitMs": 0.0,
+          "writeIops": 0.0,
+          "writeMBps": 0.0
+        },
+        "validIntervals": 310,
+        "writeAwaitMs": 482.78211900491755,
+        "writeBytes": 49318347847.317696,
+        "writeIops": 43.69131319586809,
+        "writeMBps": 31.914235956078986,
+        "writeOperations": 67517.93729498587
+      },
+      "replica_wal": {
+        "coverage": 1.0,
+        "coveredSeconds": 1545.3400769233704,
+        "durationSeconds": 1545.3400769233704,
+        "maxIntervalSeconds": 5.680282831192017,
+        "readAwaitMs": 2.550643148120382,
+        "readBytes": 422860820.50618327,
+        "readIops": 60.6038682033555,
+        "readMBps": 0.2736360926768043,
+        "readOperations": 93653.58635122719,
+        "rejectedIntervals": [],
+        "summaryAbsoluteDifferences": {
+          "readAwaitMs": 0.0,
+          "readIops": 0.0,
+          "readMBps": 0.0,
+          "writeAwaitMs": 0.0,
+          "writeIops": 0.0,
+          "writeMBps": 0.0
+        },
+        "validIntervals": 310,
+        "writeAwaitMs": 6.716936780370778,
+        "writeBytes": 49205571018.42976,
+        "writeIops": 114.75756982458468,
+        "writeMBps": 31.841257308484174,
+        "writeOperations": 177339.47178026274
+      }
+    },
+    "vacuumAndReplay": {
+      "primary_data": {
+        "coverage": 1.0,
+        "coveredSeconds": 1558.1685729026794,
+        "durationSeconds": 1558.1685729026794,
+        "maxIntervalSeconds": 5.6778857707977295,
+        "readAwaitMs": 4.956300192716937,
+        "readBytes": 49216321654.05097,
+        "readIops": 241.8895864033201,
+        "readMBps": 31.58600584683012,
+        "readOperations": 376904.75164608064,
+        "rejectedIntervals": [],
+        "summaryAbsoluteDifferences": {
+          "readAwaitMs": 0.0,
+          "readIops": 2.842170943040401e-14,
+          "readMBps": 0.0,
+          "writeAwaitMs": 0.0,
+          "writeIops": 0.0,
+          "writeMBps": 0.0
+        },
+        "validIntervals": 313,
+        "writeAwaitMs": 130.17411849361235,
+        "writeBytes": 49764491030.74044,
+        "writeIops": 35.847515151636635,
+        "writeMBps": 31.93780948747748,
+        "writeOperations": 55856.47152593283
+      },
+      "primary_wal": {
+        "coverage": 1.0,
+        "coveredSeconds": 1558.1685729026794,
+        "durationSeconds": 1558.1685729026794,
+        "maxIntervalSeconds": 5.6778857707977295,
+        "readAwaitMs": 3.1666666666666665,
+        "readBytes": 643072.0,
+        "readIops": 0.003850674506175366,
+        "readMBps": 0.0004127101593392008,
+        "readOperations": 6.0,
+        "rejectedIntervals": [],
+        "summaryAbsoluteDifferences": {
+          "readAwaitMs": 0.0,
+          "readIops": 0.0,
+          "readMBps": 0.0,
+          "writeAwaitMs": 0.0,
+          "writeIops": 0.0,
+          "writeMBps": 0.0
+        },
+        "validIntervals": 313,
+        "writeAwaitMs": 2.600900448810022,
+        "writeBytes": 38978120993.47555,
+        "writeIops": 130.95783687761642,
+        "writeMBps": 25.015342801365854,
+        "writeOperations": 204054.38579801747
+      },
+      "replica_data": {
+        "coverage": 0.9999995242855135,
+        "coveredSeconds": 1558.167831659317,
+        "durationSeconds": 1558.1685729026794,
+        "maxIntervalSeconds": 5.680282831192017,
+        "readAwaitMs": 91.99737435968107,
+        "readBytes": 14434104.060949884,
+        "readIops": 0.21562847672757232,
+        "readMBps": 0.009263510494616479,
+        "readOperations": 335.98535602660286,
+        "rejectedIntervals": [],
+        "summaryAbsoluteDifferences": {
+          "readAwaitMs": 0.0,
+          "readIops": 0.0,
+          "readMBps": 0.0,
+          "writeAwaitMs": 0.0,
+          "writeIops": 0.0,
+          "writeMBps": 0.0
+        },
+        "validIntervals": 313,
+        "writeAwaitMs": 482.1336933109085,
+        "writeBytes": 49531342848.0,
+        "writeIops": 43.50109059036208,
+        "writeMBps": 31.788194982342375,
+        "writeOperations": 67782.0
+      },
+      "replica_wal": {
+        "coverage": 0.9999995242855135,
+        "coveredSeconds": 1558.167831659317,
+        "durationSeconds": 1558.1685729026794,
+        "maxIntervalSeconds": 5.680282831192017,
+        "readAwaitMs": 2.550597286867073,
+        "readBytes": 423044290.252942,
+        "readIops": 60.1317201942428,
+        "readMBps": 0.271501106400352,
+        "readOperations": 93695.31206900807,
+        "rejectedIntervals": [],
+        "summaryAbsoluteDifferences": {
+          "readAwaitMs": 0.0,
+          "readIops": 0.0,
+          "readMBps": 0.0,
+          "writeAwaitMs": 0.0,
+          "writeIops": 0.0,
+          "writeMBps": 0.0
+        },
+        "validIntervals": 313,
+        "writeAwaitMs": 6.716895377663023,
+        "writeBytes": 49219404365.55525,
+        "writeIops": 113.85227417885937,
+        "writeMBps": 31.58799929346555,
+        "writeOperations": 177400.95118675535
+      }
+    }
+  },
+  "readCountReconciliation": {
+    "directCoveredReadOperationRatio": 0.0008917473484834994,
+    "measuredByteRatioAcrossFullWindow": 0.0002932788062141133,
+    "primaryDataVacuumReadIops": 243.8116505547938,
+    "primaryEstimatedCompletedDataReads": 376771.91482315894,
+    "primaryVacuumSeconds": 1545.3400769233704,
+    "primaryWholeWindowDataReadBytes": 49216321654.05097,
+    "ratioRoundsTo": "0.000892x",
+    "replicaDataIopsOverVacuumStartToCatchup": 0.21562847672757232,
+    "replicaEstimatedCompletedDataReads": 335.98551585978,
+    "replicaToPrimaryTotalReadOperationRatio": 0.0008917477727008331,
+    "replicaWholeSeconds": 1558.1685729026794,
+    "standbyDataReadBytesProratedOverObservedCoverage": 14434104.060949884,
+    "standbyDataReadOperationsProratedOverObservedCoverage": 335.98535602660286,
+    "standbyWholeWindowDataReadBytes": 14434104.060949884,
+    "summaryParity": "All 6 role/device IOPS, MB/s and operation-weighted await values for both VACUUM and whole windows recomputed from raw counters match summary.json to floating-point precision."
+  },
+  "sampleIntegrity": {
+    "allMappingChecks": {
+      "primary": {
+        "data": true,
+        "wal": true
+      },
+      "replica": {
+        "data": true,
+        "wal": true
+      }
+    },
+    "allRoleDeviceMappingsStableAndCountersMonotonic": true,
+    "allowedMaxGapSeconds": 12.5,
+    "firstToLastCounters": {
+      "primary": {
+        "data": {
+          "counterResets": [],
+          "distinctIdentities": 1,
+          "finalCounters": {
+            "r": 978957,
+            "rm": 8247324,
+            "rs": 243095176,
+            "w": 416909,
+            "wm": 67682041,
+            "ws": 535192056
+          },
+          "finalSampleTime": "2026-10-05T07:55:36.905382878Z",
+          "firstToLastDelta": {
+            "r": 377030,
+            "rm": 1868404,
+            "rs": 96156656,
+            "w": 55857,
+            "wm": 7271068,
+            "ws": 97196280
+          },
+          "firstToLastReadBytes": 49232207872,
+          "firstToLastWriteBytes": 49764495360,
+          "identityChanges": 0,
+          "initialCounters": {
+            "r": 601927,
+            "rm": 6378920,
+            "rs": 146938520,
+            "w": 361052,
+            "wm": 60410973,
+            "ws": 437995776
+          },
+          "initialSampleTime": "2026-10-05T07:29:37.973311726Z",
+          "missingDiskstatsOrNameMismatchRows": []
+        },
+        "wal": {
+          "counterResets": [],
+          "distinctIdentities": 1,
+          "finalCounters": {
+            "r": 2219,
+            "rm": 14296,
+            "rs": 54260,
+            "w": 215084,
+            "wm": 1361165,
+            "ws": 97364088
+          },
+          "finalSampleTime": "2026-10-05T07:55:36.905382878Z",
+          "firstToLastDelta": {
+            "r": 6,
+            "rm": 19,
+            "rs": 1256,
+            "w": 204121,
+            "wm": 530898,
+            "ws": 76160784
+          },
+          "firstToLastReadBytes": 643072,
+          "firstToLastWriteBytes": 38994321408,
+          "identityChanges": 0,
+          "initialCounters": {
+            "r": 2213,
+            "rm": 14277,
+            "rs": 53004,
+            "w": 10963,
+            "wm": 830267,
+            "ws": 21203304
+          },
+          "initialSampleTime": "2026-10-05T07:29:37.973311726Z",
+          "missingDiskstatsOrNameMismatchRows": []
+        }
+      },
+      "replica": {
+        "data": {
+          "counterResets": [],
+          "distinctIdentities": 1,
+          "finalCounters": {
+            "r": 5060,
+            "rm": 112795,
+            "rs": 176326,
+            "w": 68192,
+            "wm": 32681455,
+            "ws": 96755056
+          },
+          "finalSampleTime": "2026-10-05T07:55:36.885110617Z",
+          "firstToLastDelta": {
+            "r": 339,
+            "rm": 30957,
+            "rs": 28272,
+            "w": 67782,
+            "wm": 32679986,
+            "ws": 96740904
+          },
+          "firstToLastReadBytes": 14475264,
+          "firstToLastWriteBytes": 49531342848,
+          "identityChanges": 0,
+          "initialCounters": {
+            "r": 4721,
+            "rm": 81838,
+            "rs": 148054,
+            "w": 410,
+            "wm": 1469,
+            "ws": 14152
+          },
+          "initialSampleTime": "2026-10-05T07:29:37.994110199Z",
+          "missingDiskstatsOrNameMismatchRows": []
+        },
+        "wal": {
+          "counterResets": [],
+          "distinctIdentities": 1,
+          "finalCounters": {
+            "r": 97447,
+            "rm": 286031,
+            "rs": 893814,
+            "w": 184901,
+            "wm": 1241957,
+            "ws": 110794104
+          },
+          "finalSampleTime": "2026-10-05T07:55:36.885110617Z",
+          "firstToLastDelta": {
+            "r": 93734,
+            "rm": 239286,
+            "rs": 826592,
+            "w": 177411,
+            "wm": 1191660,
+            "ws": 96149528
+          },
+          "firstToLastReadBytes": 423215104,
+          "firstToLastWriteBytes": 49228558336,
+          "identityChanges": 0,
+          "initialCounters": {
+            "r": 3713,
+            "rm": 46745,
+            "rs": 67222,
+            "w": 7490,
+            "wm": 50297,
+            "ws": 14644576
+          },
+          "initialSampleTime": "2026-10-05T07:29:37.994110199Z",
+          "missingDiskstatsOrNameMismatchRows": []
+        }
+      }
+    },
+    "observedMaxRoleGapSeconds": 5.680282831192017,
+    "preflightStorageClaimMatches": {
+      "primary": {
+        "data": {
+          "claimMatch": true,
+          "lunMatch": true,
+          "mountMatch": true,
+          "pvMatch": true,
+          "volumeHandleContainsPv": true
+        },
+        "wal": {
+          "claimMatch": true,
+          "lunMatch": true,
+          "mountMatch": true,
+          "pvMatch": true,
+          "volumeHandleContainsPv": true
+        }
+      },
+      "replica": {
+        "data": {
+          "claimMatch": true,
+          "lunMatch": true,
+          "mountMatch": true,
+          "pvMatch": true,
+          "volumeHandleContainsPv": true
+        },
+        "wal": {
+          "claimMatch": true,
+          "lunMatch": true,
+          "mountMatch": true,
+          "pvMatch": true,
+          "volumeHandleContainsPv": true
+        }
+      }
+    },
+    "roleDeviceMappings": {
+      "primary": {
+        "data": {
+          "claim": "hdd-pg-1",
+          "device": "sdb",
+          "expectedMount": "/var/lib/postgresql/data",
+          "filesystem": "ext4",
+          "lun": 0,
+          "majorMinor": "8:16",
+          "mount": "/var/lib/postgresql/data",
+          "mountMajorMinor": "8:16",
+          "node": "aks-nodepool1-13349151-vmss000001",
+          "path": "/var/lib/postgresql/data/pgdata",
+          "pv": "pvc-a4aaa041-02e0-4924-831d-0a62a37b8507",
+          "source": "/dev/sdb"
+        },
+        "wal": {
+          "claim": "hdd-pg-1-wal",
+          "device": "sdc",
+          "expectedMount": "/var/lib/postgresql/wal",
+          "filesystem": "ext4",
+          "lun": 1,
+          "majorMinor": "8:32",
+          "mount": "/var/lib/postgresql/wal",
+          "mountMajorMinor": "8:32",
+          "node": "aks-nodepool1-13349151-vmss000001",
+          "path": "/var/lib/postgresql/wal/pg_wal",
+          "pv": "pvc-dcee1d34-1e20-42c3-a5a5-1702dcbdb7f7",
+          "source": "/dev/sdc"
+        }
+      },
+      "replica": {
+        "data": {
+          "claim": "hdd-pg-2",
+          "device": "sdc",
+          "expectedMount": "/var/lib/postgresql/data",
+          "filesystem": "ext4",
+          "lun": 0,
+          "majorMinor": "8:32",
+          "mount": "/var/lib/postgresql/data",
+          "mountMajorMinor": "8:32",
+          "node": "aks-nodepool1-13349151-vmss000000",
+          "path": "/var/lib/postgresql/data/pgdata",
+          "pv": "pvc-199b4169-1be7-47fb-8cee-129e0a2ce6e1",
+          "source": "/dev/sdc"
+        },
+        "wal": {
+          "claim": "hdd-pg-2-wal",
+          "device": "sdb",
+          "expectedMount": "/var/lib/postgresql/wal",
+          "filesystem": "ext4",
+          "lun": 1,
+          "majorMinor": "8:16",
+          "mount": "/var/lib/postgresql/wal",
+          "mountMajorMinor": "8:16",
+          "node": "aks-nodepool1-13349151-vmss000000",
+          "path": "/var/lib/postgresql/wal/pg_wal",
+          "pv": "pvc-6d7a8c1e-9715-4926-b03a-a745ad592af8",
+          "source": "/dev/sdb"
+        }
+      }
+    }
+  },
+  "scope": "Independent raw diskstats recount for the completed standby recovery_prefetch=off experiment. Local evidence only; no Azure/Kubernetes queries or mutations.",
+  "sources": {
+    "collector": "03-test.py executes cat /proc/diskstats; parse_sample stores raw cumulative r, rs, rm, w, ws, wm values keyed by major:minor after cross-checking findmnt/stat/sysfs device, and validating Azure CSI LUN. No separate unparsed /proc/diskstats text capture was retained.",
+    "rawSamples": "samples.jsonl",
+    "rawSamplesSha256": "d0450fe2eeabee3ec841a58232f92c6a2f72fe85db8db44bf1b6bede1a3beafc",
+    "recountMethod": "Calculated interval deltas directly from adjacent samples.jsonl raw parsed counters, prorated by timing-window overlap. summary.json was only used for a post-calculation parity check. Diskstats sectors were converted at 512 bytes each.",
+    "rowCount": 314,
+    "run": "results/20261005T072928Z-prefetch-off"
+  },
+  "status": "pass",
+  "walAndFpi": {
+    "baselineSameRunMarkerDelta": {
+      "walBytes": 36932319438,
+      "walFpi": 6071356,
+      "walRecords": 15115451
+    },
+    "interpretation": "Vacuum WAL bytes/records/FPI deltas are essentially equal in the unchanged baseline and prefetch-off runs (same 6,071,356 FPIs; 700-byte and 14-record differences). This supports comparable generated WAL volume, not equal physical reads.",
+    "offMinusBaseline": {
+      "walBytes": -700,
+      "walFpi": 0,
+      "walRecords": -14
+    },
+    "prefetchOffVacuumMarkerDelta": {
+      "walBytes": 36932318738,
+      "walFpi": 6071356,
+      "walRecords": 15115437
+    }
+  }
+}

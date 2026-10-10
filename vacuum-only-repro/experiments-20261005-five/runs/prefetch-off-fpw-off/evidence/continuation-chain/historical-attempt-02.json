@@ -1,0 +1,20 @@
+{
+  "executionStageLog": ".state/continuation-execution.jsonl",
+  "exitCode": 1,
+  "failureReason": "Azure ScopeLocked blocked deletion of exact DATA snapshot-scoped role assignment under its CanNotDelete retention lock. No PostgreSQL treatment/configuration/checkpoint or seed backup/replica was started.",
+  "failureStep": "before_exact_source_grant_removal",
+  "finishedAtUtc": "2026-10-06T05:46:16.435161Z",
+  "launchObservedAtUtc": "2026-10-06T05:45:28.840027Z",
+  "launchedAtUtc": "2026-10-06T05:45:28.839099Z",
+  "pid": "[REDACTED]",
+  "preservation": "all pre-existing snapshots are retained; no teardown is invoked.",
+  "priorFailure": "initial 02-prepare attempt stopped after successful native paired-snapshot primary bootstrap; its DREF/WREF jq commands omitted captured PVC JSON stdin. No VACUUM or PostgreSQL tuning was performed in that attempt.",
+  "processGroupDetached": true,
+  "script": ".state/continue-after-source-pair-restore.sh",
+  "scriptSha256": "38eab7574954981d3e152b93ae07a5e20d7ce72cd90770af9e2ffb5ff2561321",
+  "stackToken": "9daba6b61cdb3b2f6eca73f2f8e15c3c",
+  "status": "failed_before_post_restore_mutation",
+  "stderrLog": ".state/continuation.log",
+  "stdoutLog": ".state/continuation.log",
+  "version": 1
+}

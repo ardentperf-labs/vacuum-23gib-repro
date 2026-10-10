@@ -1,0 +1,89 @@
+{
+  "apiVersion": "2025-01-02",
+  "backupUID": "597e0f7d-c87e-4455-b01a-42120f969859",
+  "capturedAtUtc": "2026-10-07T07:19:40.025062+00:00",
+  "filesSha256": {
+    "arm-data-snapshot.json": "f0192fe44f071bd7460b630dc64cb1d84a1e88263223ab3e438c1d00fd914be3",
+    "arm-data-source-disk.json": "1756819e1a297e27a4be3c13347c63307153c03c86aef7b4a1c2a06acdb3e0be",
+    "arm-wal-snapshot.json": "778fe5f7cf24e0ff29824333407dd2aa77d0f8470ec90c21896f6f98a2b9d874",
+    "arm-wal-source-disk.json": "247e47207f1b87e57999821d226336a418a98462a2f9f40e336d9270bebf0e66",
+    "public-kubernetes-lineage.json": "6980c84c762174b331b4b9f53b713cd5aa7510a34783f564c9d26e4d57bc36c0"
+  },
+  "nodeResourceGroup": "rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf",
+  "pairIdentity": [
+    {
+      "backupElementType": "PG_DATA",
+      "snapshotAccessState": "Available",
+      "snapshotCompletionPercent": 100.0,
+      "snapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+      "snapshotOwnerTags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "premiumv2-vacuum-backup",
+        "reprotoken": "f1b90aec9e24f6a2008d6991738742cf",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1"
+      },
+      "snapshotUniqueId": "b530378c-e2ce-43e0-a464-209842f00958",
+      "sourceDiskCreationData": {
+        "createOption": "Copy",
+        "logicalSectorSize": 512,
+        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376",
+        "sourceUniqueId": "1f260967-6558-4934-a4b6-6574a2ef4db2"
+      },
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourceDiskLogicalSectorSize": 512,
+      "sourceDiskState": "Succeeded",
+      "sourceDiskTags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "kubernetes.io-created-for-pv-name": "pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+        "kubernetes.io-created-for-pvc-name": "hdd-pg-1",
+        "kubernetes.io-created-for-pvc-namespace": "repro"
+      },
+      "sourceDiskUniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+      "sourcePV": "pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourcePVC": "hdd-pg-1",
+      "sourcePVCUID": "a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "sourcePVUID": "996ceefd-6677-4c7b-8374-ca7029db8c97",
+      "volumeSnapshotContentName": "snapcontent-604b8cee-1a94-4df6-b846-be245038a795",
+      "volumeSnapshotContentUID": "46dcf188-df95-4561-a4ef-23bd0d7fb416",
+      "volumeSnapshotName": "vacuum-backup-f1b90aec",
+      "volumeSnapshotUID": "604b8cee-1a94-4df6-b846-be245038a795"
+    },
+    {
+      "backupElementType": "PG_WAL",
+      "snapshotAccessState": "Available",
+      "snapshotCompletionPercent": 100.0,
+      "snapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "snapshotOwnerTags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "premiumv2-vacuum-backup",
+        "reprotoken": "f1b90aec9e24f6a2008d6991738742cf",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632"
+      },
+      "snapshotUniqueId": "5d6164bd-68b6-455a-ada8-cfb4c9f95022",
+      "sourceDiskCreationData": {
+        "createOption": "Empty",
+        "logicalSectorSize": 512
+      },
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourceDiskLogicalSectorSize": 512,
+      "sourceDiskState": "Succeeded",
+      "sourceDiskTags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "kubernetes.io-created-for-pv-name": "pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+        "kubernetes.io-created-for-pvc-name": "hdd-pg-1-wal",
+        "kubernetes.io-created-for-pvc-namespace": "repro"
+      },
+      "sourceDiskUniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18",
+      "sourcePV": "pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourcePVC": "hdd-pg-1-wal",
+      "sourcePVCUID": "316a1094-6e0e-4dd5-a32b-070319573632",
+      "sourcePVUID": "b173d379-88dc-482d-a506-a95e965a55ee",
+      "volumeSnapshotContentName": "snapcontent-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "volumeSnapshotContentUID": "61bc9a55-1e2a-40cc-905c-d74058149dae",
+      "volumeSnapshotName": "vacuum-backup-f1b90aec-wal",
+      "volumeSnapshotUID": "ebeff553-ca6f-487c-8517-e803b02337ca"
+    }
+  ],
+  "snapshotResourceGroup": "rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf",
+  "tokenHandling": "ARM management token held in memory only; no credential output or file"
+}

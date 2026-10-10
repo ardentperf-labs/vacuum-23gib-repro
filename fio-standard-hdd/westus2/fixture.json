@@ -1,0 +1,14 @@
+{
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "location": "westus2",
+  "retainedSnapshot": {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-keeper-westus2-168d63b3cf97eb87fa9f88d9/providers/Microsoft.Compute/snapshots/prepared-full",
+    "diskSizeGiB": 512,
+    "incremental": false
+  },
+  "originalSourceSnapshot": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+  "keeperResourceGroup": "rg-fio-hdd-keeper-westus2-168d63b3cf97eb87fa9f88d9",
+  "keeperOwnerToken": "168d63b3cf97eb87fa9f88d9",
+  "preparedAtUtc": "2026-10-09T09:54:30.550043+00:00",
+  "method": "VHD export/AzCopy/import"
+}

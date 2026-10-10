@@ -1,0 +1,29 @@
+{
+  "properties": {
+    "error": {
+      "code": "QuotaNotAvailableForResource",
+      "message": "Request failed."
+    },
+    "message": "Request failed.",
+    "provisioningState": "Failed",
+    "requestSubmitTime": "2026-10-06T15:30:21Z",
+    "value": [
+      {
+        "limit": {
+          "limitObjectType": "LimitValue",
+          "limitType": "Independent",
+          "value": 12
+        },
+        "message": "Request failed.",
+        "name": {
+          "value": "STANDARDDSV4FAMILY"
+        },
+        "provisioningState": "Failed",
+        "subRequestId": "6502198f-4712-46ea-88f8-84222ae3f573"
+      }
+    ]
+  },
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Compute/locations/eastus/providers/Microsoft.Quota/quotaRequests/6502198f-4712-46ea-88f8-84222ae3f573",
+  "type": "Microsoft.Quota/QuotaRequests",
+  "name": "6502198f-4712-46ea-88f8-84222ae3f573"
+}

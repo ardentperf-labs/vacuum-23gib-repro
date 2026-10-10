@@ -1,0 +1,34 @@
+{
+  "auditPassed": true,
+  "captureErrors": [],
+  "captureMethod": "collector kubectl logs --since-time=VACUUM-start at completion",
+  "collectorSourceSha256": "e1132c857d956df47ac2f57821c65dbc8280a6ba48dc658928f2a09ad9cc84cb",
+  "continuousFollowerFlushed": false,
+  "continuousFollowerLaunched": false,
+  "files": {
+    "primary": {
+      "bytes": 6628,
+      "firstLogUtc": "2026-10-06T06:24:10.376560166Z",
+      "lastLogUtc": "2026-10-06T06:49:51.785018217Z",
+      "lineCount": 12,
+      "path": "raw/primary-postgres.log",
+      "sha256": "f27806729f14c61f2a8e6f8c402e2e8ebfda8f9e0e9bf96aa5dd7ab8846cfe17"
+    },
+    "replica": {
+      "bytes": 10027,
+      "firstLogUtc": "2026-10-06T06:19:16.561486825Z",
+      "lastLogUtc": "2026-10-06T06:56:01.717827711Z",
+      "lineCount": 19,
+      "path": "raw/replica-postgres.log",
+      "sha256": "0d5a3ad2862652fc516b9220bff299c0d3851f4dc41a16793530b2a9d8b4134e"
+    }
+  },
+  "limitation": "No independent continuous follower was launched. Retained container logs were fetched at completion; this does not independently prove that no earlier log lines were rotated or lost. The raw OS-counter capture and verified full catchup remain complete.",
+  "measurementWindow": {
+    "end": "2026-10-06T06:59:38.649981943Z",
+    "start": "2026-10-06T06:19:15.770198Z"
+  },
+  "replicationEventCount": 0,
+  "replicationEventsSha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+  "verifiedAtUtc": "2026-10-06T07:02:06.890471+00:00"
+}

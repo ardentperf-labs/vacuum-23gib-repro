@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-07T02:15:28Z",
+  "checkpoint": "20261007T021528Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "supervisorPid": 126516,
+      "childPid": 126519,
+      "activeFixturePhase": "replica-snapshot-recovery-job",
+      "clusterPhase": "Creating a new replica",
+      "clusterInstances": 2,
+      "clusterReadyInstances": 1,
+      "primary": "hdd-pg-1",
+      "primaryReady": true,
+      "snapshotRecoveryJob": {
+        "name": "hdd-pg-2-snapshot-recovery",
+        "status": "Running",
+        "ageSeconds": 107,
+        "completion": "0/1"
+      },
+      "snapshotRecoveryPod": {
+        "name": "hdd-pg-2-snapshot-recovery-9vxpj",
+        "phase": "Pending",
+        "ready": false,
+        "initState": "PodInitializing",
+        "readyToStartContainers": false,
+        "restartCount": 0
+      },
+      "replicaPvcs": {
+        "data": "Bound",
+        "wal": "Bound"
+      },
+      "bothDisksAttached": true,
+      "latestRelevantEvents": [
+        {
+          "atUtc": "2026-10-07T02:14:05Z",
+          "reason": "SuccessfulAttachVolume",
+          "count": 2
+        }
+      ],
+      "archiveFailures": 0,
+      "backup": "vacuum-backup-5c241a19",
+      "backupPhase": "completed"
+    },
+    "100gib": {
+      "processStatus": "running",
+      "supervisorPid": 126517,
+      "childPid": 126518,
+      "assignedTargetHeapBytes": 107374182400,
+      "activeFixturePhase": "create-index",
+      "indexPhase": "building index: scanning table",
+      "indexBlocksDone": 10536159,
+      "indexBlocksTotal": 13107200,
+      "indexScanFraction": 0.8037239074707031,
+      "activeWaits": [
+        {
+          "type": "LWLock",
+          "event": "WALWrite"
+        }
+      ],
+      "stageRelationBytes": 107374182400,
+      "pod": "hdd-pg-1",
+      "podReady": true
+    }
+  }
+}

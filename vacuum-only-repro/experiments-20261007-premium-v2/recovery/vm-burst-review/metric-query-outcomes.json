@@ -1,0 +1,29 @@
+{
+  "checkedAtUtc": "2026-10-06T22:49:36Z",
+  "readOnly": true,
+  "perInstanceVmssChildMetrics": {
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+    "apiVersionsTried": [
+      "2018-01-01",
+      "2023-10-01"
+    ],
+    "metricNamespace": "microsoft.compute/virtualmachinescalesets/virtualmachines",
+    "httpStatus": 404,
+    "errorCode": "NotFound",
+    "errorMessage": "Failed to find resource mapping for provider: Microsoft.Compute, resourceType: virtualMachineScaleSets/virtualMachines",
+    "instanceCount": 6
+  },
+  "parentVmssMetrics": {
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "apiVersion": "2023-10-01",
+    "metricNamespace": "microsoft.compute/virtualmachinescalesets",
+    "httpStatus": 200,
+    "scope": "scale-set aggregate; one time series per metric"
+  },
+  "perInstanceMetricDefinitions": {
+    "httpStatus": 200,
+    "definitionsPerInstance": 64,
+    "instanceCount": 6
+  },
+  "note": "Metric definitions are discoverable for VMSS child instances, but Metrics - List does not resolve their child resource type in this subscription/provider mapping. Parent VMSS metrics are available; the returned aggregate cannot identify which of its two instances generated a datapoint."
+}

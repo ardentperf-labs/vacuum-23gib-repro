@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "/workspace/vacuum-only-repro/experiments-20261009-pgbench-baseline/recovery/restore-pending-disks.py", line 951, in <module>
+    
+  File "/workspace/vacuum-only-repro/experiments-20261009-pgbench-baseline/recovery/restore-pending-disks.py", line 942, in main
+    raise GuardError("--wait-timeout-seconds must be positive.")
+^^^^^^^^^^^^^^
+  File "/workspace/vacuum-only-repro/experiments-20261009-pgbench-baseline/recovery/restore-pending-disks.py", line 892, in apply
+    # Hydrate and verify both disks before creating either PV. This leaves
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/vacuum-only-repro/experiments-20261009-pgbench-baseline/recovery/restore-pending-disks.py", line 629, in create_or_reuse_disk
+    last_sig = None
+               ^^^^^
+  File "/workspace/vacuum-only-repro/experiments-20261009-pgbench-baseline/recovery/restore-pending-disks.py", line 573, in show_disk
+    
+    
+  File "/usr/lib/python3.12/subprocess.py", line 550, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 1209, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/subprocess.py", line 2116, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.12/subprocess.py", line 1253, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['az', 'disk', 'show', '--subscription', '00000000-0000-0000-0000-000000000000', '--ids', '/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5203346e38bc77fbedc14b472f6e4775/providers/Microsoft.Compute/disks/restore-wal-5203346e', '--only-show-errors', '--output', 'json']' timed out after 180 seconds

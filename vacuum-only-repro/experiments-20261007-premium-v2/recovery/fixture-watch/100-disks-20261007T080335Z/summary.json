@@ -1,0 +1,90 @@
+{
+  "capturedAtUtc": "2026-10-07T08:03:41.289998+00:00",
+  "stack": "100gib",
+  "expectedNodeResourceGroup": "rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf",
+  "apiVersion": "2024-03-02",
+  "disks": [
+    {
+      "claim": "hdd-pg-1",
+      "pvcUID": "a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "pv": "pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "pvUID": "996ceefd-6677-4c7b-8374-ca7029db8c97",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "diskUniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+      "provisioningState": "Succeeded",
+      "diskState": "Attached",
+      "completionPercent": 100.0,
+      "sku": "PremiumV2_LRS",
+      "diskSizeGB": 512,
+      "diskIOPSReadWrite": 3000,
+      "diskMBpsReadWrite": 125,
+      "creationData": {
+        "createOption": "Copy",
+        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376",
+        "sourceUniqueId": "1f260967-6558-4934-a4b6-6574a2ef4db2",
+        "logicalSectorSize": 512
+      }
+    },
+    {
+      "claim": "hdd-pg-1-wal",
+      "pvcUID": "316a1094-6e0e-4dd5-a32b-070319573632",
+      "pv": "pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "pvUID": "b173d379-88dc-482d-a506-a95e965a55ee",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "diskUniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18",
+      "provisioningState": "Succeeded",
+      "diskState": "Attached",
+      "completionPercent": null,
+      "sku": "PremiumV2_LRS",
+      "diskSizeGB": 512,
+      "diskIOPSReadWrite": 3000,
+      "diskMBpsReadWrite": 125,
+      "creationData": {
+        "createOption": "Empty",
+        "logicalSectorSize": 512
+      }
+    },
+    {
+      "claim": "hdd-pg-2",
+      "pvcUID": "33bde4d4-2c77-4dae-afe6-6e8895633723",
+      "pv": "pvc-33bde4d4-2c77-4dae-afe6-6e8895633723",
+      "pvUID": "73271900-d044-44f2-823c-79f7d1d27795",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-33bde4d4-2c77-4dae-afe6-6e8895633723",
+      "diskUniqueId": "10e1034f-e5cc-416b-9562-78df54c71f22",
+      "provisioningState": "Succeeded",
+      "diskState": "Attached",
+      "completionPercent": 25.0,
+      "sku": "PremiumV2_LRS",
+      "diskSizeGB": 512,
+      "diskIOPSReadWrite": 3000,
+      "diskMBpsReadWrite": 125,
+      "creationData": {
+        "createOption": "Copy",
+        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+        "sourceUniqueId": "b530378c-e2ce-43e0-a464-209842f00958",
+        "logicalSectorSize": 512
+      }
+    },
+    {
+      "claim": "hdd-pg-2-wal",
+      "pvcUID": "e5d5f186-de82-4348-9a5a-c6ab8c7439dc",
+      "pv": "pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc",
+      "pvUID": "73689a6c-e0c8-4760-b179-6b6c4d90910d",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc",
+      "diskUniqueId": "d72d595b-525f-4f1f-8e86-2ff40a9f8d3a",
+      "provisioningState": "Succeeded",
+      "diskState": "Attached",
+      "completionPercent": 100.0,
+      "sku": "PremiumV2_LRS",
+      "diskSizeGB": 512,
+      "diskIOPSReadWrite": 3000,
+      "diskMBpsReadWrite": 125,
+      "creationData": {
+        "createOption": "Copy",
+        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+        "sourceUniqueId": "5d6164bd-68b6-455a-ada8-cfb4c9f95022",
+        "logicalSectorSize": 512
+      }
+    }
+  ]
+}

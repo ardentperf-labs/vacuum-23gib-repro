@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "kubectl",
+    "--kubeconfig",
+    "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/.state/kubeconfig",
+    "exec",
+    "-n",
+    "kube-system",
+    "csi-azuredisk-node-4lrnv",
+    "-c",
+    "azuredisk",
+    "--",
+    "sh",
+    "-c",
+    "set -eu\ndev=$(cat /sys/class/block/sdb/dev); sys=$(readlink -f /sys/class/block/sdb/device)\n[ \"$dev\" = 8:16 ]; case \"$sys\" in */1:0:0:0) ;; *) exit 41 ;; esac\n[ \"$(cat /sys/class/block/sdb/device/queue_depth)\" = 316 ]\n[ \"$(cat /sys/class/block/sdb/queue/nr_requests)\" = 1024 ]\ncase \"$(cat /sys/class/block/sdb/queue/scheduler)\" in *'[mq-deadline]'*) ;; *) exit 42 ;; esac\n[ \"$(cat /sys/class/block/sdb/queue/iosched/async_depth)\" = 256 ]\nprintf 'dev=%s|sys=%s|nr_requests=%s|depth=%s|scheduler=%s|async_depth=%s\\n' \"$dev\" \"$sys\" \\\n  \"$(cat /sys/class/block/sdb/queue/nr_requests)\" \"$(cat /sys/class/block/sdb/device/queue_depth)\" \\\n  \"$(cat /sys/class/block/sdb/queue/scheduler)\" \"$(cat /sys/class/block/sdb/queue/iosched/async_depth)\"\n"
+  ],
+  "completedAtHost": "2026-10-06T00:48:54.302Z",
+  "returnCode": 0,
+  "stderr": "",
+  "stdout": "dev=8:16|sys=/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb/host1/target1:0:0/1:0:0:0|nr_requests=1024|depth=316|scheduler=none [mq-deadline] |async_depth=256\n"
+}

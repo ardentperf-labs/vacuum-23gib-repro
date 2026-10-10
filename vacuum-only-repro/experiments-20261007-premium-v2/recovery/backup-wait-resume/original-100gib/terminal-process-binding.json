@@ -1,0 +1,31 @@
+{
+  "bindingHelperPath": "recovery/backup-wait-resume/bind_terminal_process.py",
+  "bindingHelperSha256": "1a7e1b48ffe91a64ec7cdd90f8c520bb4ee5eb14edf60aa1e13e02e3e260dc3d",
+  "captureAtUtc": "2026-10-07T06:11:51.712917+00:00",
+  "captureReceiptPath": "recovery/backup-wait-resume/original-100gib/prebackup-capture.json",
+  "captureReceiptSha256": "92fdfa006e10260090957b52c48fb77b59778046285c2445689d179872e67364",
+  "evidenceScope": "recorded local receipt chain; corroborating provenance, not a signed execution attestation",
+  "phase": "terminal-bound",
+  "runIdentity": {
+    "childPid": 126518,
+    "command": [
+      "bash",
+      "/workspace/vacuum-only-repro/experiments-20261007-premium-v2/100gib/02-prepare.sh"
+    ],
+    "phase": "prepare",
+    "scriptSha256": {
+      "02-prepare.sh": "7b24d869c7ef362653f38201402f5e4f297c874f66253658f884ced15055b20f"
+    },
+    "sourceStageHelperSha256": "0eacb0a81b30703a3b788aa745d3eca8c079e3e4e0cfca9921f500b6f5c8918b",
+    "stack": "100gib",
+    "startedAtUtc": "2026-10-06T20:53:32.307852+00:00",
+    "supervisorPid": 126517
+  },
+  "runningProcessReceiptPath": "recovery/backup-wait-resume/original-100gib/original-process-running.json",
+  "runningProcessReceiptSha256": "68472626da0721b22247773d4782d1940e5b992b1d3c5af3ba422249aeb4205e",
+  "terminalObservedAtUtc": "2026-10-07T07:12:09.321353+00:00",
+  "terminalProcessReceiptPath": "recovery/backup-wait-resume/original-100gib/original-process-terminal.json",
+  "terminalProcessReceiptSha256": "8996c771a22b946b2d37a5f5590b730937a841de41d503b4fdb702c9a358b568",
+  "terminalStatus": "failed",
+  "version": 1
+}

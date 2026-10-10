@@ -1,0 +1,101 @@
+{
+  "sourceSamples": "results/20261004T065423Z/samples.jsonl",
+  "sampleCount": 1742,
+  "latestSequence": 1741,
+  "latestSampleTime": {
+    "primary": "2026-10-04T10:48:05.668324866Z",
+    "replica": "2026-10-04T10:48:05.694045601Z"
+  },
+  "nominalWindow": {
+    "start": "2026-10-04T10:43:05.693343Z",
+    "end": "2026-10-04T10:48:05.693343Z",
+    "seconds": 300,
+    "maxAllowedSampleGapSeconds": 12.5,
+    "validCounterCoverageSeconds": 300.0,
+    "coverageFraction": 1,
+    "rejectedIntervals": [],
+    "method": "disk counter deltas from valid intervals only; valid deltas prorated at window edges"
+  },
+  "ratesFromValidIntervalsOnly": {
+    "primary_data": {
+      "coveredSeconds": 299.9742558002472,
+      "coverage": 0.9999141860008239,
+      "rejectedIntervals": 0,
+      "boundaryMethod": "valid counter deltas prorated by overlap duration",
+      "readIops": 0.0,
+      "writeIops": 0.0,
+      "readMBps": 0.0,
+      "writeMBps": 0.0,
+      "readAwaitMs": null,
+      "writeAwaitMs": null,
+      "operationWeightedAwaitMs": null,
+      "maxIntervalReadAwaitMs": null,
+      "maxIntervalWriteAwaitMs": null
+    },
+    "primary_wal": {
+      "coveredSeconds": 299.9742558002472,
+      "coverage": 0.9999141860008239,
+      "rejectedIntervals": 0,
+      "boundaryMethod": "valid counter deltas prorated by overlap duration",
+      "readIops": 0.0,
+      "writeIops": 0.0,
+      "readMBps": 0.0,
+      "writeMBps": 0.0,
+      "readAwaitMs": null,
+      "writeAwaitMs": null,
+      "operationWeightedAwaitMs": null,
+      "maxIntervalReadAwaitMs": null,
+      "maxIntervalWriteAwaitMs": null
+    },
+    "replica_data": {
+      "coveredSeconds": 300.0,
+      "coverage": 1,
+      "rejectedIntervals": 0,
+      "boundaryMethod": "valid counter deltas prorated by overlap duration",
+      "readIops": 532.4783076198921,
+      "writeIops": 23.012293751655918,
+      "readMBps": 4.3698173893554895,
+      "writeMBps": 4.364638803832294,
+      "readAwaitMs": 126.18044304385091,
+      "writeAwaitMs": 108.992151130293,
+      "operationWeightedAwaitMs": 125.46838415099586,
+      "maxIntervalReadAwaitMs": 201.89698492462313,
+      "maxIntervalWriteAwaitMs": 386.45631067961165
+    },
+    "replica_wal": {
+      "coveredSeconds": 300.0,
+      "coverage": 1,
+      "rejectedIntervals": 0,
+      "boundaryMethod": "valid counter deltas prorated by overlap duration",
+      "readIops": 8.911326559748117,
+      "writeIops": 0.5719635978242226,
+      "readMBps": 2.1939707528751944,
+      "writeMBps": 0.007814944345032023,
+      "readAwaitMs": 13.464816502815697,
+      "writeAwaitMs": 10.054125619516087,
+      "operationWeightedAwaitMs": 13.259108252170153,
+      "maxIntervalReadAwaitMs": 45.0,
+      "maxIntervalWriteAwaitMs": 559.5
+    }
+  },
+  "latestContiguousReplayProgress": {
+    "start": "2026-10-04T10:42:05.279761930Z",
+    "end": "2026-10-04T10:48:05.694045601Z",
+    "elapsedSeconds": 360.4143261909485,
+    "sampleCount": 56,
+    "startReplayLsn": "42/C06C5748",
+    "endReplayLsn": "42/EF92E850",
+    "replayBytes": 791056648,
+    "replayDecimalMBps": 2.1948535075181668,
+    "latestPrimaryFlushLsn": "60/E1000000",
+    "latestReplicaReplayLsn": "42/EF92E850",
+    "unreplayedBytesAtLatestSample": 128604510128,
+    "unreplayedGiBAtLatestSample": 119.77228347957134
+  },
+  "interpretation": [
+    "The nominal five-minute window is partial: intervals above 12.5 seconds were rejected.",
+    "Primary DATA and WAL had no completed operations in valid intervals, so await is undefined.",
+    "The replay-rate interval is the latest uninterrupted sample segment, not a full five-minute rate.",
+    "LSN backlog is a logical byte distance; it is not a physical disk-write measurement."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "applicationName": "repro-readonly-audit",
+  "currentFlushLsn": "56/FB000000",
+  "interpretation": "Replica streaming slot is currently inactive, but retains WAL from51/24000000 with unlimited max_slot_wal_keep_size. Continued replay of local WAL does not demonstrate reception of the later primary WAL; receiver reconnection remains necessary for full catch-up.",
+  "maxSlotWalKeepSize": "-1",
+  "scope": "single read-only primary pg_replication_slots query; no mutations or treatment changes",
+  "slots": [
+    {
+      "active": false,
+      "restartLsn": "51/24000000",
+      "safeWalBytes": null,
+      "slotName": "_cnpg_hdd_pg_2",
+      "walStatus": "extended"
+    }
+  ],
+  "time": "2026-10-06T03:30:00.922574+00:00"
+}

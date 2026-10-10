@@ -1,0 +1,766 @@
+{
+  "checkedAtUtc": "2026-10-07T12:16:11.184397+00:00",
+  "preservedPriorSnapshots": true,
+  "allSnapshotsProtected": true,
+  "priorSnapshotCount": 32,
+  "currentSnapshotCount": 42,
+  "missing": [],
+  "changedIdentities": [],
+  "unprotected": [],
+  "snapshots": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-AZ-HDD-REPRO-SNAPSHOT-KEEPER/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+      "name": "azhr-keep-scsi-prepared-7a297601434285b1",
+      "uniqueId": "c05eba46-c2d2-4600-9a5c-fbd1c2671f22",
+      "location": "eastus",
+      "incremental": false,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "reprotoken": "93494924de3e081fc5803031e15d5587",
+        "reproPurpose": "retained-primary-pg-snapshot",
+        "candidateToken": "2e23e93101111749a496b2a58ac1f2ad",
+        "candidateSourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/snapshots/vacuum-copy-804391dc",
+        "createdBy": "parallel-keeper-validation-20261004",
+        "reproSourceSetId": "scsi-prepared",
+        "reproSourceToken": "804391dc0a7b56b597915163951aed1a"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/snapshot-406392c2-75ac-4caa-b329-e620bddbf5ce",
+      "name": "snapshot-406392c2-75ac-4caa-b329-e620bddbf5ce",
+      "uniqueId": "42adef30-e04b-4184-a925-2bd55e9dcbe3",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-0aaf271768f70a4fd06a9cb05e75a4ea/providers/Microsoft.Compute/disks/pvc-8914e88b-e123-4117-88b7-7493896698b7"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/snapshot-c8982298-a32d-4955-a144-205ddf80a3e7",
+      "name": "snapshot-c8982298-a32d-4955-a144-205ddf80a3e7",
+      "uniqueId": "02b16683-32fa-4b19-8191-249278e64ad7",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-0aaf271768f70a4fd06a9cb05e75a4ea/providers/Microsoft.Compute/disks/pvc-e159778d-37d9-4cab-9793-e46878b79275"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/vacuum-copy-0aaf2717",
+      "name": "vacuum-copy-0aaf2717",
+      "uniqueId": "e67d85dc-5603-49d9-bd18-61046fb9b8d6",
+      "location": "eastus",
+      "incremental": false,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "reprotoken": "0aaf271768f70a4fd06a9cb05e75a4ea",
+        "reproPurpose": "restore-source-copy",
+        "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-NODES-C370BE15909DE6A69298CB6713D85226/providers/Microsoft.Compute/snapshots/snapshot-84308a63-e3ce-4617-9cac-813ff5226aaf",
+      "name": "snapshot-84308a63-e3ce-4617-9cac-813ff5226aaf",
+      "uniqueId": "0032f007-0404-46aa-94fe-c2af943b37f4",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-c370be15909de6a69298cb6713d85226/providers/Microsoft.Compute/disks/pvc-600e6a38-0fd4-4244-bfcb-549bf4990a75"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-NODES-C370BE15909DE6A69298CB6713D85226/providers/Microsoft.Compute/snapshots/snapshot-d61fbe90-30e4-4556-80ce-6eade4540bdb",
+      "name": "snapshot-d61fbe90-30e4-4556-80ce-6eade4540bdb",
+      "uniqueId": "30fb9bcd-cfe2-4379-adc6-a3bc6bee4dff",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-c370be15909de6a69298cb6713d85226/providers/Microsoft.Compute/disks/pvc-3935e7c1-d5a4-499f-80e1-30cdf1b86836"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-NODES-C370BE15909DE6A69298CB6713D85226/providers/Microsoft.Compute/snapshots/vacuum-copy-c370be15",
+      "name": "vacuum-copy-c370be15",
+      "uniqueId": "afe6f38c-8403-4071-ad16-41f4c58c7df9",
+      "location": "eastus",
+      "incremental": false,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "reprotoken": "c370be15909de6a69298cb6713d85226",
+        "reproPurpose": "restore-source-copy",
+        "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-ONLY-35E99CB5FEBDA94C55CCF8B1BED3704C/providers/Microsoft.Compute/snapshots/keeper-base-35e99cb5",
+      "name": "keeper-base-35e99cb5",
+      "uniqueId": "1f7451b8-2c9b-48e3-9137-cceedee2650d",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "reprotoken": "35e99cb5febda94c55ccf8b1bed3704c",
+        "reproPurpose": "regional-snapshot-base"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-4B1163091C697351E7725163A5A28E2E/providers/Microsoft.Compute/snapshots/keeper-pv2-4b116309",
+      "name": "keeper-pv2-4b116309",
+      "uniqueId": "3ca0f9b7-d5ce-4310-b411-389b3f8d2dc1",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": 100.0,
+      "tags": {
+        "reprotoken": "4b1163091c697351e7725163a5a28e2e",
+        "reproPurpose": "premiumv2-keeper-copy",
+        "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": true
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-4B1163091C697351E7725163A5A28E2E/providers/Microsoft.Compute/snapshots/snapshot-53ea286c-28a7-4225-b58f-ddd91ed93f57",
+      "name": "snapshot-53ea286c-28a7-4225-b58f-ddd91ed93f57",
+      "uniqueId": "1f377a1d-93eb-411b-8c91-e73955201414",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": 100.0,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "premiumv2-vacuum-backup",
+        "reprotoken": "4b1163091c697351e7725163a5a28e2e",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-4a55da2c-5dbc-42be-bdcd-e5f4d6352742"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": true
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-4B1163091C697351E7725163A5A28E2E/providers/Microsoft.Compute/snapshots/snapshot-caf74210-9ce8-4f42-8c47-9ee8076a0201",
+      "name": "snapshot-caf74210-9ce8-4f42-8c47-9ee8076a0201",
+      "uniqueId": "65caa339-28ed-4173-b9eb-804eac40aa49",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": 100.0,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "premiumv2-vacuum-backup",
+        "reprotoken": "4b1163091c697351e7725163a5a28e2e",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/disks/pvc-9c7f12e9-c595-4e56-bbaa-7fc9dcbf7460"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": true
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-F1B90AEC9E24F6A2008D6991738742CF/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec",
+      "name": "keeper-pv2-f1b90aec",
+      "uniqueId": "d5308af1-929d-453b-af27-1db62f949f07",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": null,
+      "state": "Failed",
+      "accessState": "Unknown",
+      "completionPercent": 0.0,
+      "tags": {
+        "reprotoken": "f1b90aec9e24f6a2008d6991738742cf",
+        "reproPurpose": "premiumv2-keeper-copy",
+        "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c"
+      },
+      "directCanNotDelete": false,
+      "groupCanNotDelete": true
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-F1B90AEC9E24F6A2008D6991738742CF/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376",
+      "name": "keeper-pv2-f1b90aec-ef6f2376",
+      "uniqueId": "1f260967-6558-4934-a4b6-6574a2ef4db2",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "reprotoken": "f1b90aec9e24f6a2008d6991738742cf",
+        "reproPurpose": "premiumv2-keeper-copy",
+        "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c",
+        "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/restore-stage-f1b90aec-ef6f2376"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": true
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-F1B90AEC9E24F6A2008D6991738742CF/providers/Microsoft.Compute/snapshots/snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+      "name": "snapshot-604b8cee-1a94-4df6-b846-be245038a795",
+      "uniqueId": "b530378c-e2ce-43e0-a464-209842f00958",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": 100.0,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "premiumv2-vacuum-backup",
+        "reprotoken": "f1b90aec9e24f6a2008d6991738742cf",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": true
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-F1B90AEC9E24F6A2008D6991738742CF/providers/Microsoft.Compute/snapshots/snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "name": "snapshot-ebeff553-ca6f-487c-8517-e803b02337ca",
+      "uniqueId": "5d6164bd-68b6-455a-ada8-cfb4c9f95022",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": 100.0,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "premiumv2-vacuum-backup",
+        "reprotoken": "f1b90aec9e24f6a2008d6991738742cf",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": true
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D/providers/Microsoft.Compute/snapshots/snapshot-48de84ee-7815-4c0c-a96f-e7d0751e08a5",
+      "name": "snapshot-48de84ee-7815-4c0c-a96f-e7d0751e08a5",
+      "uniqueId": "6d5b4c3f-9732-47cb-a453-a13889a065df",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "cnpg-pre-vacuum-snapshot",
+        "reprotoken": "e92bdc2762775aa5ecbb33bf383e563d",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-e92bdc2762775aa5ecbb33bf383e563d/providers/Microsoft.Compute/disks/pvc-5c79be5a-d9c2-4a47-bdd5-68a340ef3717"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D/providers/Microsoft.Compute/snapshots/snapshot-4bfa0dd4-8ccb-4a22-a514-fe4770e83e1a",
+      "name": "snapshot-4bfa0dd4-8ccb-4a22-a514-fe4770e83e1a",
+      "uniqueId": "eb1d242f-fe57-4510-9f87-ba3a21fa6a5a",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "cnpg-pre-vacuum-snapshot",
+        "reprotoken": "e92bdc2762775aa5ecbb33bf383e563d",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-e92bdc2762775aa5ecbb33bf383e563d/providers/Microsoft.Compute/disks/pvc-8f26dea5-ef91-44b0-ac47-519af8fceef1"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D/providers/Microsoft.Compute/snapshots/snapshot-90446491-f3b1-4bbe-a527-93ee6066d102",
+      "name": "snapshot-90446491-f3b1-4bbe-a527-93ee6066d102",
+      "uniqueId": "38854738-dd82-4e52-aac6-5b82fae58672",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "cnpg-pre-vacuum-snapshot",
+        "reprotoken": "e92bdc2762775aa5ecbb33bf383e563d",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-e92bdc2762775aa5ecbb33bf383e563d/providers/Microsoft.Compute/disks/pvc-8f26dea5-ef91-44b0-ac47-519af8fceef1"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D/providers/Microsoft.Compute/snapshots/snapshot-bf28fdba-ac33-4a6d-82ff-03f66821489f",
+      "name": "snapshot-bf28fdba-ac33-4a6d-82ff-03f66821489f",
+      "uniqueId": "0fe26368-d5ec-44eb-b066-f287a1c6c577",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "cnpg-pre-vacuum-snapshot",
+        "reprotoken": "e92bdc2762775aa5ecbb33bf383e563d",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-e92bdc2762775aa5ecbb33bf383e563d/providers/Microsoft.Compute/disks/pvc-5c79be5a-d9c2-4a47-bdd5-68a340ef3717"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-RETAINED-E92BDC2762775AA5ECBB33BF383E563D/providers/Microsoft.Compute/snapshots/vacuum-copy-e92bdc27",
+      "name": "vacuum-copy-e92bdc27",
+      "uniqueId": "a670ae8a-41bd-44d2-9e69-5cd093e09dc7",
+      "location": "eastus",
+      "incremental": false,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "reprotoken": "e92bdc2762775aa5ecbb33bf383e563d",
+        "reproPurpose": "restore-source-copy",
+        "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-base-16244c2c",
+      "name": "keeper-base-16244c2c",
+      "uniqueId": "5ba7640c-4e34-4227-be0d-d428baeaf2cf",
+      "location": "eastus",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "reprotoken": "16244c2c1353a0fc1b108ec455fd70c8",
+        "reproPurpose": "regional-snapshot-base"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-ONLY-35E99CB5FEBDA94C55CCF8B1BED3704C/providers/Microsoft.Compute/snapshots/keeper-35e99cb5",
+      "name": "keeper-35e99cb5",
+      "uniqueId": "1d8dbf74-481a-40a4-accb-cd0a358f4a3c",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": 100.0,
+      "tags": {
+        "reprotoken": "35e99cb5febda94c55ccf8b1bed3704c",
+        "reproPurpose": "regional-prepared-source"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5C241A190A85F40B788038945C9744F6/providers/Microsoft.Compute/snapshots/keeper-pv2-5c241a19-4b554415",
+      "name": "keeper-pv2-5c241a19-4b554415",
+      "uniqueId": "737fc1c3-dfd9-4db1-b1c9-1d09a45d95cc",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "reprotoken": "5c241a190a85f40b788038945c9744f6",
+        "reproPurpose": "premiumv2-keeper-copy",
+        "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-16244c2c",
+        "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/restore-stage-5c241a19-4b554415"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": true
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5C241A190A85F40B788038945C9744F6/providers/Microsoft.Compute/snapshots/snapshot-5915d49f-e4ce-41da-b157-40e0043dcdb2",
+      "name": "snapshot-5915d49f-e4ce-41da-b157-40e0043dcdb2",
+      "uniqueId": "27c79312-8ec5-4499-9bd8-106d312b26d9",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": 100.0,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "premiumv2-vacuum-backup",
+        "reprotoken": "5c241a190a85f40b788038945c9744f6",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-8c6afc42-60ef-409d-b8a4-f53c3c3145d2"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": true
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5C241A190A85F40B788038945C9744F6/providers/Microsoft.Compute/snapshots/snapshot-f60780dd-a9b5-4401-a1c7-30a64acd114e",
+      "name": "snapshot-f60780dd-a9b5-4401-a1c7-30a64acd114e",
+      "uniqueId": "357803e4-0309-40c1-8834-60d34ad1dbff",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": 100.0,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "premiumv2-vacuum-backup",
+        "reprotoken": "5c241a190a85f40b788038945c9744f6",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-d1307045-4698-46ba-b0bf-7c380fa13fb2"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": true
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-16244c2c",
+      "name": "keeper-16244c2c",
+      "uniqueId": "5ba409da-55b4-4e77-a47f-346ccc7b44ff",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": 100.0,
+      "tags": {
+        "reprotoken": "16244c2c1353a0fc1b108ec455fd70c8",
+        "reproPurpose": "regional-prepared-source"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-1970d44d-cec9-4483-b853-9e7b9a7e0064",
+      "name": "snapshot-1970d44d-cec9-4483-b853-9e7b9a7e0064",
+      "uniqueId": "72754e51-3dd6-49b0-9607-4f9a663e45fb",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-a4b98a63-5daf-4240-b4d2-7bb700235b70"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-248b72da-1b4a-41bf-9cd9-65723367580b",
+      "name": "snapshot-248b72da-1b4a-41bf-9cd9-65723367580b",
+      "uniqueId": "a7111039-84bf-4111-9524-d251a63a7804",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-e2e0b6e2-b24b-477d-846d-c4c8b27f24e5"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-28737878-e0aa-4cee-923a-a37578094b30",
+      "name": "snapshot-28737878-e0aa-4cee-923a-a37578094b30",
+      "uniqueId": "386e7271-dc2c-4c8b-82e5-c5febff4cd23",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-a6744b6b-840c-4209-8e69-bfd952cc5d93"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-4d712e3d-bc99-42ab-8874-3bc99089aa5a",
+      "name": "snapshot-4d712e3d-bc99-42ab-8874-3bc99089aa5a",
+      "uniqueId": "852c9efb-7bab-42ab-b917-36cc96475d2b",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-fdb04c8e-09f2-44c7-8020-aa71c34097e5"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-60ee0174-0046-4022-8b22-eb0ecd09fd75",
+      "name": "snapshot-60ee0174-0046-4022-8b22-eb0ecd09fd75",
+      "uniqueId": "4760bf85-3fba-426b-981c-ed1396afd884",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-c79cd248-c1d4-466e-85f8-48aa321e7be0"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-69176264-19e3-445a-be3b-113c0b180cd9",
+      "name": "snapshot-69176264-19e3-445a-be3b-113c0b180cd9",
+      "uniqueId": "76ad7e46-6204-4757-b21b-255cef807fba",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-3dd661b3-792f-47db-944a-378657abd364"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-9b94e91a-817f-4bbb-ad10-962a063bae49",
+      "name": "snapshot-9b94e91a-817f-4bbb-ad10-962a063bae49",
+      "uniqueId": "91415293-7b94-4f99-be55-febdb4f3eed3",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-3dd661b3-792f-47db-944a-378657abd364"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-9c783acb-2d07-4feb-bce6-6ae9e764cf27",
+      "name": "snapshot-9c783acb-2d07-4feb-bce6-6ae9e764cf27",
+      "uniqueId": "964280a3-35ba-44e4-85a3-a7b1e606f3ae",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-e048477c-b49f-449c-8547-01bef8d8cf3a"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-d370b592-1c96-438d-a161-4a6557e656ae",
+      "name": "snapshot-d370b592-1c96-438d-a161-4a6557e656ae",
+      "uniqueId": "5d749bf0-7c0a-4ca6-9d53-56d3a5b7a996",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-ccfcfb07-5571-4505-9056-3de2e825e060"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/snapshot-efd44f62-4b4c-4e83-abd6-e3496281c58c",
+      "name": "snapshot-efd44f62-4b4c-4e83-abd6-e3496281c58c",
+      "uniqueId": "19a9e2a6-8be6-4eb4-b95b-866b58d2d1dd",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-e2e0b6e2-b24b-477d-846d-c4c8b27f24e5"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/vacuum-copy-16244c2c",
+      "name": "vacuum-copy-16244c2c",
+      "uniqueId": "523f3e2d-d133-4441-bdb3-304821b2f6f0",
+      "location": "westus3",
+      "incremental": false,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "reprotoken": "16244c2c1353a0fc1b108ec455fd70c8",
+        "reproPurpose": "restore-source-copy",
+        "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/snapshots/keeper-16244c2c"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-35E99CB5FEBDA94C55CCF8B1BED3704C/providers/Microsoft.Compute/snapshots/snapshot-01605f86-3d24-4371-81cc-9a908a426b18",
+      "name": "snapshot-01605f86-3d24-4371-81cc-9a908a426b18",
+      "uniqueId": "74f4d862-be76-43f8-bf26-393d26def9ff",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/disks/pvc-dcee1d34-1e20-42c3-a5a5-1702dcbdb7f7"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-35E99CB5FEBDA94C55CCF8B1BED3704C/providers/Microsoft.Compute/snapshots/snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01",
+      "name": "snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01",
+      "uniqueId": "d838e22b-a0e2-44d5-953c-819ed43dc87f",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/disks/pvc-a4aaa041-02e0-4924-831d-0a62a37b8507"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-35E99CB5FEBDA94C55CCF8B1BED3704C/providers/Microsoft.Compute/snapshots/vacuum-copy-35e99cb5",
+      "name": "vacuum-copy-35e99cb5",
+      "uniqueId": "d5705afb-f7be-4bce-9fb3-c7b6f6eb17a0",
+      "location": "westus3",
+      "incremental": false,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "reprotoken": "35e99cb5febda94c55ccf8b1bed3704c",
+        "reproPurpose": "restore-source-copy",
+        "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-35e99cb5febda94c55ccf8b1bed3704c/providers/Microsoft.Compute/snapshots/keeper-35e99cb5"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-9DABA6B61CDB3B2F6ECA73F2F8E15C3C/providers/Microsoft.Compute/snapshots/snapshot-0396f821-5881-4ccd-bc9c-0d754b88a19e",
+      "name": "snapshot-0396f821-5881-4ccd-bc9c-0d754b88a19e",
+      "uniqueId": "df0dd7ae-76a7-4313-9bfa-526fa83baa90",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "fpw-off-seed-paired-replica",
+        "reprotoken": "9daba6b61cdb3b2f6eca73f2f8e15c3c",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/disks/pvc-a9dca03f-b331-4913-944f-c14043b83b72"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-9DABA6B61CDB3B2F6ECA73F2F8E15C3C/providers/Microsoft.Compute/snapshots/snapshot-8c3724c4-0d3e-481d-bfea-ec27196cb40c",
+      "name": "snapshot-8c3724c4-0d3e-481d-bfea-ec27196cb40c",
+      "uniqueId": "183a4d80-2374-4b1e-bd90-c29aa372dab2",
+      "location": "westus3",
+      "incremental": true,
+      "sizeGiB": 512,
+      "state": "Succeeded",
+      "accessState": "Available",
+      "completionPercent": null,
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "fpw-off-seed-paired-replica",
+        "reprotoken": "9daba6b61cdb3b2f6eca73f2f8e15c3c",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-9daba6b61cdb3b2f6eca73f2f8e15c3c/providers/Microsoft.Compute/disks/pvc-b31d2f04-499a-4c9a-9ef5-fb29d5c59272"
+      },
+      "directCanNotDelete": true,
+      "groupCanNotDelete": false
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "accessTier": "Hot",
+  "accountMigrationInProgress": null,
+  "allowBlobPublicAccess": false,
+  "allowCrossTenantReplication": false,
+  "allowSharedKeyAccess": null,
+  "allowSharedKeyAccessForServices": null,
+  "allowedCopyScope": null,
+  "azureFilesIdentityBasedAuthentication": null,
+  "blobRestoreStatus": null,
+  "creationTime": "2026-10-09T08:28:29.864478+00:00",
+  "customDomain": null,
+  "dataCollaborationPolicyProperties": null,
+  "defaultToOAuthAuthentication": null,
+  "dnsEndpointType": null,
+  "dualStackEndpointPreference": null,
+  "enableExtendedGroups": null,
+  "enableHttpsTrafficOnly": true,
+  "enableNfsV3": null,
+  "encryption": {
+    "encryptionIdentity": null,
+    "keySource": "Microsoft.Storage",
+    "keyVaultProperties": null,
+    "requireInfrastructureEncryption": null,
+    "services": {
+      "blob": {
+        "enabled": true,
+        "keyType": "Account",
+        "lastEnabledTime": "2026-10-09T08:28:30.093242+00:00"
+      },
+      "file": {
+        "enabled": true,
+        "keyType": "Account",
+        "lastEnabledTime": "2026-10-09T08:28:30.093242+00:00"
+      },
+      "queue": null,
+      "table": null
+    }
+  },
+  "extendedLocation": null,
+  "failoverInProgress": null,
+  "geoPriorityReplicationStatus": null,
+  "geoReplicationStats": null,
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-transport-168d63b3cf97eb87fa9f88d9/providers/Microsoft.Storage/storageAccounts/fiow2168d63b3cf97eb87",
+  "identity": null,
+  "immutableStorageWithVersioning": null,
+  "isHnsEnabled": null,
+  "isLocalUserEnabled": null,
+  "isSftpEnabled": null,
+  "isSkuConversionBlocked": null,
+  "keyCreationTime": {
+    "key1": "2026-10-09T08:28:30.083032+00:00",
+    "key2": "2026-10-09T08:28:30.083032+00:00"
+  },
+  "keyPolicy": null,
+  "kind": "StorageV2",
+  "largeFileSharesState": null,
+  "lastGeoFailoverTime": null,
+  "location": "westus2",
+  "minimumTlsVersion": "TLS1_2",
+  "name": "fiow2168d63b3cf97eb87",
+  "networkRuleSet": {
+    "bypass": "None",
+    "defaultAction": "Allow",
+    "ipRules": [],
+    "ipv6Rules": [],
+    "resourceAccessRules": null,
+    "virtualNetworkRules": []
+  },
+  "placement": null,
+  "primaryEndpoints": {
+    "blob": "https://fiow2168d63b3cf97eb87.blob.core.windows.net/",
+    "dfs": "https://fiow2168d63b3cf97eb87.dfs.core.windows.net/",
+    "file": "https://fiow2168d63b3cf97eb87.file.core.windows.net/",
+    "internetEndpoints": null,
+    "ipv6Endpoints": null,
+    "microsoftEndpoints": null,
+    "queue": "https://fiow2168d63b3cf97eb87.queue.core.windows.net/",
+    "table": "https://fiow2168d63b3cf97eb87.table.core.windows.net/",
+    "web": "https://fiow2168d63b3cf97eb87.z5.web.core.windows.net/"
+  },
+  "primaryLocation": "westus2",
+  "privateEndpointConnections": [],
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": null,
+  "resourceGroup": "rg-fio-hdd-transport-168d63b3cf97eb87fa9f88d9",
+  "routingPreference": null,
+  "sasPolicy": null,
+  "secondaryEndpoints": null,
+  "secondaryLocation": null,
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "statusOfPrimary": "available",
+  "statusOfSecondary": null,
+  "storageAccountSkuConversionStatus": null,
+  "systemData": null,
+  "tags": {
+    "reprotoken": "168d63b3cf97eb87fa9f88d9"
+  },
+  "type": "Microsoft.Storage/storageAccounts",
+  "zones": null
+}

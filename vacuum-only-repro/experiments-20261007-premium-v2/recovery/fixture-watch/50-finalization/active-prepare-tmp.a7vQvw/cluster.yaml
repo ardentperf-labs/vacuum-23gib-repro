@@ -1,0 +1,21 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata: {name: hdd-pg, namespace: repro, labels: {repro.stack.token: "5c241a190a85f40b788038945c9744f6"}, annotations: {vacuum-only-repro/source-snapshot-id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsoft.Compute/snapshots/keeper-16244c2c", vacuum-only-repro/restore-copy-id: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/snapshots/keeper-pv2-5c241a19-4b554415"}}
+spec:
+  instances: 1
+  imageName: ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215
+  storage: {storageClass: azure-premiumv2, size: 512Gi}
+  bootstrap:
+    recovery:
+      database: repro
+      owner: app
+      volumeSnapshots: {storage: {name: vacuum-data-5c241a19, kind: VolumeSnapshot, apiGroup: snapshot.storage.k8s.io}}
+  affinity: {enablePodAntiAffinity: true, podAntiAffinityType: required, topologyKey: kubernetes.io/hostname}
+  resources: {requests: {cpu: "1", memory: 2Gi}, limits: {cpu: "2", memory: 3Gi}}
+  postgresql: {parameters: {shared_buffers: 256MB, track_io_timing: "on", track_wal_io_timing: "on"}}
+  backup:
+    barmanObjectStore:
+      destinationPath: https://cnpgwal5c241a190a85f40b7.blob.core.windows.net/wal-5c241a190a85/cnpg-vacuum-only/5c241a190a85f40b788038945c9744f6/
+      serverName: hdd-pg
+      azureCredentials: {connectionString: {name: azure-barman-credentials, key: connection-string}}
+    volumeSnapshot: {className: vacuum-backup-snap-5c241a19, walClassName: vacuum-backup-snap-5c241a19, online: true, onlineConfiguration: {waitForArchive: true, immediateCheckpoint: false}}

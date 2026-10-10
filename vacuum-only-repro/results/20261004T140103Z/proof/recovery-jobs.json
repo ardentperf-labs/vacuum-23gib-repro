@@ -1,0 +1,333 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "batch/v1",
+            "kind": "Job",
+            "metadata": {
+                "annotations": {
+                    "cnpg.io/operatorVersion": "1.30.1"
+                },
+                "creationTimestamp": "2026-10-04T13:48:47Z",
+                "generation": 1,
+                "labels": {
+                    "app.kubernetes.io/component": "database",
+                    "app.kubernetes.io/instance": "hdd-pg",
+                    "app.kubernetes.io/managed-by": "cloudnative-pg",
+                    "app.kubernetes.io/name": "postgresql",
+                    "app.kubernetes.io/version": "16",
+                    "cnpg.io/cluster": "hdd-pg",
+                    "cnpg.io/instanceName": "hdd-pg-2",
+                    "cnpg.io/jobRole": "snapshot-recovery"
+                },
+                "name": "hdd-pg-2-snapshot-recovery",
+                "namespace": "repro",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "postgresql.cnpg.io/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Cluster",
+                        "name": "hdd-pg",
+                        "uid": "b86e5daa-290d-4ee9-8d0d-dd2a59a0dd9b"
+                    }
+                ],
+                "resourceVersion": "18407",
+                "uid": "891e850d-6126-4107-a391-03ce404f4bb7"
+            },
+            "spec": {
+                "backoffLimit": 6,
+                "completionMode": "NonIndexed",
+                "completions": 1,
+                "manualSelector": false,
+                "parallelism": 1,
+                "podReplacementPolicy": "TerminatingOrFailed",
+                "selector": {
+                    "matchLabels": {
+                        "batch.kubernetes.io/controller-uid": "891e850d-6126-4107-a391-03ce404f4bb7"
+                    }
+                },
+                "suspend": false,
+                "template": {
+                    "metadata": {
+                        "annotations": {
+                            "cnpg.io/operatorVersion": "1.30.1"
+                        },
+                        "labels": {
+                            "app.kubernetes.io/component": "database",
+                            "app.kubernetes.io/instance": "hdd-pg",
+                            "app.kubernetes.io/managed-by": "cloudnative-pg",
+                            "app.kubernetes.io/name": "postgresql",
+                            "app.kubernetes.io/version": "16",
+                            "batch.kubernetes.io/controller-uid": "891e850d-6126-4107-a391-03ce404f4bb7",
+                            "batch.kubernetes.io/job-name": "hdd-pg-2-snapshot-recovery",
+                            "cnpg.io/cluster": "hdd-pg",
+                            "cnpg.io/instanceName": "hdd-pg-2",
+                            "cnpg.io/jobRole": "snapshot-recovery",
+                            "controller-uid": "891e850d-6126-4107-a391-03ce404f4bb7",
+                            "job-name": "hdd-pg-2-snapshot-recovery"
+                        }
+                    },
+                    "spec": {
+                        "affinity": {
+                            "podAntiAffinity": {
+                                "requiredDuringSchedulingIgnoredDuringExecution": [
+                                    {
+                                        "labelSelector": {
+                                            "matchExpressions": [
+                                                {
+                                                    "key": "cnpg.io/cluster",
+                                                    "operator": "In",
+                                                    "values": [
+                                                        "hdd-pg"
+                                                    ]
+                                                },
+                                                {
+                                                    "key": "cnpg.io/podRole",
+                                                    "operator": "In",
+                                                    "values": [
+                                                        "instance"
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        "topologyKey": "kubernetes.io/hostname"
+                                    }
+                                ]
+                            }
+                        },
+                        "containers": [
+                            {
+                                "command": [
+                                    "/controller/manager",
+                                    "instance",
+                                    "restoresnapshot",
+                                    "--immediate",
+                                    "--pg-wal",
+                                    "/var/lib/postgresql/wal/pg_wal",
+                                    "--log-level=info"
+                                ],
+                                "env": [
+                                    {
+                                        "name": "PGDATA",
+                                        "value": "/var/lib/postgresql/data/pgdata"
+                                    },
+                                    {
+                                        "name": "POD_NAME",
+                                        "value": "hdd-pg-2-snapshot-recovery"
+                                    },
+                                    {
+                                        "name": "NAMESPACE",
+                                        "value": "repro"
+                                    },
+                                    {
+                                        "name": "CLUSTER_NAME",
+                                        "value": "hdd-pg"
+                                    },
+                                    {
+                                        "name": "PSQL_HISTORY",
+                                        "value": "/controller/tmp/.psql_history"
+                                    },
+                                    {
+                                        "name": "PGPORT",
+                                        "value": "5432"
+                                    },
+                                    {
+                                        "name": "PGHOST",
+                                        "value": "/controller/run"
+                                    },
+                                    {
+                                        "name": "TMPDIR",
+                                        "value": "/controller/tmp"
+                                    }
+                                ],
+                                "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+                                "imagePullPolicy": "IfNotPresent",
+                                "name": "snapshot-recovery",
+                                "resources": {
+                                    "limits": {
+                                        "cpu": "2",
+                                        "memory": "3Gi"
+                                    },
+                                    "requests": {
+                                        "cpu": "1",
+                                        "memory": "2Gi"
+                                    }
+                                },
+                                "securityContext": {
+                                    "allowPrivilegeEscalation": false,
+                                    "capabilities": {
+                                        "drop": [
+                                            "ALL"
+                                        ]
+                                    },
+                                    "privileged": false,
+                                    "readOnlyRootFilesystem": true,
+                                    "runAsNonRoot": true,
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/var/lib/postgresql/data",
+                                        "name": "pgdata"
+                                    },
+                                    {
+                                        "mountPath": "/run",
+                                        "name": "scratch-data"
+                                    },
+                                    {
+                                        "mountPath": "/controller",
+                                        "name": "scratch-data"
+                                    },
+                                    {
+                                        "mountPath": "/dev/shm",
+                                        "name": "shm"
+                                    },
+                                    {
+                                        "mountPath": "/var/lib/postgresql/wal",
+                                        "name": "pg-wal"
+                                    }
+                                ]
+                            }
+                        ],
+                        "dnsPolicy": "ClusterFirst",
+                        "hostname": "hdd-pg-2-snapshot-recovery",
+                        "initContainers": [
+                            {
+                                "command": [
+                                    "/manager",
+                                    "bootstrap",
+                                    "/controller/manager",
+                                    "--log-level=info"
+                                ],
+                                "image": "ghcr.io/cloudnative-pg/cloudnative-pg:1.30.1",
+                                "imagePullPolicy": "IfNotPresent",
+                                "name": "bootstrap-controller",
+                                "resources": {
+                                    "limits": {
+                                        "cpu": "2",
+                                        "memory": "3Gi"
+                                    },
+                                    "requests": {
+                                        "cpu": "1",
+                                        "memory": "2Gi"
+                                    }
+                                },
+                                "securityContext": {
+                                    "allowPrivilegeEscalation": false,
+                                    "capabilities": {
+                                        "drop": [
+                                            "ALL"
+                                        ]
+                                    },
+                                    "privileged": false,
+                                    "readOnlyRootFilesystem": true,
+                                    "runAsNonRoot": true,
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "volumeMounts": [
+                                    {
+                                        "mountPath": "/var/lib/postgresql/data",
+                                        "name": "pgdata"
+                                    },
+                                    {
+                                        "mountPath": "/run",
+                                        "name": "scratch-data"
+                                    },
+                                    {
+                                        "mountPath": "/controller",
+                                        "name": "scratch-data"
+                                    },
+                                    {
+                                        "mountPath": "/dev/shm",
+                                        "name": "shm"
+                                    },
+                                    {
+                                        "mountPath": "/var/lib/postgresql/wal",
+                                        "name": "pg-wal"
+                                    }
+                                ]
+                            }
+                        ],
+                        "restartPolicy": "Never",
+                        "schedulerName": "default-scheduler",
+                        "securityContext": {
+                            "fsGroup": 26,
+                            "runAsGroup": 26,
+                            "runAsNonRoot": true,
+                            "runAsUser": 26,
+                            "seccompProfile": {
+                                "type": "RuntimeDefault"
+                            }
+                        },
+                        "serviceAccount": "hdd-pg",
+                        "serviceAccountName": "hdd-pg",
+                        "terminationGracePeriodSeconds": 30,
+                        "volumes": [
+                            {
+                                "name": "pgdata",
+                                "persistentVolumeClaim": {
+                                    "claimName": "hdd-pg-2"
+                                }
+                            },
+                            {
+                                "emptyDir": {},
+                                "name": "scratch-data"
+                            },
+                            {
+                                "emptyDir": {
+                                    "medium": "Memory"
+                                },
+                                "name": "shm"
+                            },
+                            {
+                                "name": "pg-wal",
+                                "persistentVolumeClaim": {
+                                    "claimName": "hdd-pg-2-wal"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "status": {
+                "completionTime": "2026-10-04T13:50:35Z",
+                "conditions": [
+                    {
+                        "lastProbeTime": "2026-10-04T13:50:35Z",
+                        "lastTransitionTime": "2026-10-04T13:50:35Z",
+                        "message": "Reached expected number of succeeded pods",
+                        "reason": "CompletionsReached",
+                        "status": "True",
+                        "type": "SuccessCriteriaMet"
+                    },
+                    {
+                        "lastProbeTime": "2026-10-04T13:50:35Z",
+                        "lastTransitionTime": "2026-10-04T13:50:35Z",
+                        "message": "Reached expected number of succeeded pods",
+                        "reason": "CompletionsReached",
+                        "status": "True",
+                        "type": "Complete"
+                    }
+                ],
+                "ready": 0,
+                "startTime": "2026-10-04T13:48:47Z",
+                "succeeded": 1,
+                "terminating": 0,
+                "uncountedTerminatedPods": {}
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

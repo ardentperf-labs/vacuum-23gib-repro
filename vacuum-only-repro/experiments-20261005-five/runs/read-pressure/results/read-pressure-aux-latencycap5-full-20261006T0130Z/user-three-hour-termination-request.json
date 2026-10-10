@@ -1,0 +1,10 @@
+{
+  "controllerCmdline": "${PROJECT_ROOT}/vacuum-only-repro/.venv/bin/python ${PROJECT_ROOT}/experiments/20261005-four/read-pressure/.state/run_full_auxiliary_pressure_latencycap5_v2.py --out ${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z --database repro --interval 5 --safety-hours 24 --catchup-hours 336 --read-pressure-workers 5 --read-pressure-depth 32 --read-pressure-block-bytes 1048576 --kubeconfig ${PROJECT_ROOT}/experiments/20261005-four/read-pressure/.state/kubeconfig --kubectl kubectl ",
+  "controllerPid": 978222,
+  "deadlineUtc": "2026-10-06T04:30:00.114348+00:00",
+  "launchUtc": "2026-10-06T01:30:00.114348+00:00",
+  "reason": "User requested termination at three hours; preserve partial replay progress and extrapolate remaining duration.",
+  "scope": "Only the verified controller PID; its existing finally block stops readers and restores queues. PostgreSQL is not signalled.",
+  "signal": "SIGINT",
+  "signalSentUtc": "2026-10-06T04:30:00.114632+00:00"
+}

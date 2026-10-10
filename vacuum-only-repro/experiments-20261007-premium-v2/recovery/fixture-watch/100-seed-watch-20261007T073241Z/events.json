@@ -1,0 +1,600 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:30:12Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-lglld",
+                "namespace": "repro",
+                "resourceVersion": "289550",
+                "uid": "216b7f79-eaa9-411d-ae40-6df31bfea5ce"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:30:12Z",
+            "message": "Successfully assigned repro/hdd-pg-2-snapshot-recovery-lglld to aks-nodepool1-15388874-vmss000000",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:30:12Z",
+                "name": "hdd-pg-2-snapshot-recovery-lglld.18dc2ecdb2f23c82",
+                "namespace": "repro",
+                "resourceVersion": "289655",
+                "uid": "40bb741c-d97a-43b6-9685-2c3d064f8f48"
+            },
+            "reason": "Scheduled",
+            "reportingComponent": "default-scheduler",
+            "reportingInstance": "",
+            "source": {
+                "component": "default-scheduler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:30:26Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-lglld",
+                "namespace": "repro",
+                "resourceVersion": "289654",
+                "uid": "216b7f79-eaa9-411d-ae40-6df31bfea5ce"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:30:26Z",
+            "message": "AttachVolume.Attach succeeded for volume \"pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc\" ",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:30:26Z",
+                "name": "hdd-pg-2-snapshot-recovery-lglld.18dc2ed0d6657c41",
+                "namespace": "repro",
+                "resourceVersion": "289739",
+                "uid": "9358a0e7-2193-4559-b45c-e151f8f9f921"
+            },
+            "reason": "SuccessfulAttachVolume",
+            "reportingComponent": "attachdetach-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "attachdetach-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:30:26Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-lglld",
+                "namespace": "repro",
+                "resourceVersion": "289654",
+                "uid": "216b7f79-eaa9-411d-ae40-6df31bfea5ce"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:30:26Z",
+            "message": "AttachVolume.Attach succeeded for volume \"pvc-33bde4d4-2c77-4dae-afe6-6e8895633723\" ",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:30:26Z",
+                "name": "hdd-pg-2-snapshot-recovery-lglld.18dc2ed0e03520f1",
+                "namespace": "repro",
+                "resourceVersion": "289741",
+                "uid": "95f5cc04-3388-4fb7-9d7d-25d388a5d085"
+            },
+            "reason": "SuccessfulAttachVolume",
+            "reportingComponent": "attachdetach-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "attachdetach-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:32:26Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-lglld",
+                "namespace": "repro",
+                "resourceVersion": "289654",
+                "uid": "216b7f79-eaa9-411d-ae40-6df31bfea5ce"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:32:26Z",
+            "message": "MountVolume.MountDevice failed for volume \"pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc\" : rpc error: code = DeadlineExceeded desc = context deadline exceeded",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:32:26Z",
+                "name": "hdd-pg-2-snapshot-recovery-lglld.18dc2eecd417dcb1",
+                "namespace": "repro",
+                "resourceVersion": "290378",
+                "uid": "e668cd70-40b2-4eb8-8546-fc03d239b8f5"
+            },
+            "reason": "FailedMount",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-15388874-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-15388874-vmss000000"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 5,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:32:27Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "Pod",
+                "name": "hdd-pg-2-snapshot-recovery-lglld",
+                "namespace": "repro",
+                "resourceVersion": "289654",
+                "uid": "216b7f79-eaa9-411d-ae40-6df31bfea5ce"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:32:42Z",
+            "message": "MountVolume.MountDevice failed for volume \"pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc\" : rpc error: code = Aborted desc = An operation with the given Volume ID /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc already exists",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:32:27Z",
+                "name": "hdd-pg-2-snapshot-recovery-lglld.18dc2eecf48a1012",
+                "namespace": "repro",
+                "resourceVersion": "290469",
+                "uid": "451a06d5-8ddb-40bb-84af-e97d9c6e7202"
+            },
+            "reason": "FailedMount",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-15388874-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-15388874-vmss000000"
+            },
+            "type": "Warning"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:29:59Z",
+            "involvedObject": {
+                "apiVersion": "batch/v1",
+                "kind": "Job",
+                "name": "hdd-pg-2-snapshot-recovery",
+                "namespace": "repro",
+                "resourceVersion": "289543",
+                "uid": "aecfcd65-ba99-4667-9ef6-1bb75558bb26"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:29:59Z",
+            "message": "Created pod: hdd-pg-2-snapshot-recovery-lglld",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:29:59Z",
+                "name": "hdd-pg-2-snapshot-recovery.18dc2ecaa823e937",
+                "namespace": "repro",
+                "resourceVersion": "289551",
+                "uid": "670fbd68-0051-42c7-9dfd-5086f74badc1"
+            },
+            "reason": "SuccessfulCreate",
+            "reportingComponent": "job-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "job-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:29:59Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "resourceVersion": "289545",
+                "uid": "e5d5f186-de82-4348-9a5a-c6ab8c7439dc"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:29:59Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:29:59Z",
+                "name": "hdd-pg-2-wal.18dc2eca9ab8c821",
+                "namespace": "repro",
+                "resourceVersion": "289547",
+                "uid": "c6416080-84bd-4bea-85bd-7bac7988d735"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:29:59Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "resourceVersion": "289560",
+                "uid": "e5d5f186-de82-4348-9a5a-c6ab8c7439dc"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:29:59Z",
+            "message": "External provisioner is provisioning volume for claim \"repro/hdd-pg-2-wal\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:29:59Z",
+                "name": "hdd-pg-2-wal.18dc2ecaac5d103a",
+                "namespace": "repro",
+                "resourceVersion": "289561",
+                "uid": "b9b518ec-e630-4d81-84a9-11ecfd5e3154"
+            },
+            "reason": "Provisioning",
+            "reportingComponent": "disk.csi.azure.com_csi-azuredisk-controller-5c78c77cdb-8s2pg_5aed5711-ccd3-41fc-91f9-3e7849c29020",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com_csi-azuredisk-controller-5c78c77cdb-8s2pg_5aed5711-ccd3-41fc-91f9-3e7849c29020"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 3,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:29:59Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "resourceVersion": "289560",
+                "uid": "e5d5f186-de82-4348-9a5a-c6ab8c7439dc"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:30:11Z",
+            "message": "Waiting for a volume to be created either by the external provisioner 'disk.csi.azure.com' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:29:59Z",
+                "name": "hdd-pg-2-wal.18dc2ecaac630ec8",
+                "namespace": "repro",
+                "resourceVersion": "289639",
+                "uid": "a5d5bd86-e6c7-4de3-909b-78ed601542bc"
+            },
+            "reason": "ExternalProvisioning",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:30:12Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "resourceVersion": "289563",
+                "uid": "e5d5f186-de82-4348-9a5a-c6ab8c7439dc"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:30:12Z",
+            "message": "Successfully provisioned volume pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:30:12Z",
+                "name": "hdd-pg-2-wal.18dc2ecdabb26117",
+                "namespace": "repro",
+                "resourceVersion": "289651",
+                "uid": "4908ae1b-19d4-4fe3-a91f-db1c0393b655"
+            },
+            "reason": "ProvisioningSucceeded",
+            "reportingComponent": "disk.csi.azure.com_csi-azuredisk-controller-5c78c77cdb-8s2pg_5aed5711-ccd3-41fc-91f9-3e7849c29020",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com_csi-azuredisk-controller-5c78c77cdb-8s2pg_5aed5711-ccd3-41fc-91f9-3e7849c29020"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:31:12Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "resourceVersion": "289653",
+                "uid": "e5d5f186-de82-4348-9a5a-c6ab8c7439dc"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:31:12Z",
+            "message": "Started monitoring SKU migration from Standard_ZRS to PremiumV2_LRS for volume pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc (timeout: 10h0m0s)",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:31:12Z",
+                "name": "hdd-pg-2-wal.18dc2edba2388107",
+                "namespace": "repro",
+                "resourceVersion": "289986",
+                "uid": "6b51e4a1-5a05-4e20-8a22-9c6354c4383e"
+            },
+            "reason": "SKUMigrationStarted",
+            "reportingComponent": "disk.csi.azure.com",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:31:12Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2-wal",
+                "namespace": "repro",
+                "resourceVersion": "289653",
+                "uid": "e5d5f186-de82-4348-9a5a-c6ab8c7439dc"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:31:12Z",
+            "message": "Migration progress: 27.0% complete for volume pvc-e5d5f186-de82-4348-9a5a-c6ab8c7439dc (elapsed: 1m0.298930267s)",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:31:12Z",
+                "name": "hdd-pg-2-wal.18dc2edbb1c43e18",
+                "namespace": "repro",
+                "resourceVersion": "289989",
+                "uid": "f0a7874b-a934-4aad-bb56-2bb4525aa57d"
+            },
+            "reason": "SKUMigrationProgress",
+            "reportingComponent": "disk.csi.azure.com",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:29:59Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "289544",
+                "uid": "33bde4d4-2c77-4dae-afe6-6e8895633723"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:29:59Z",
+            "message": "waiting for first consumer to be created before binding",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:29:59Z",
+                "name": "hdd-pg-2.18dc2eca99e9c7df",
+                "namespace": "repro",
+                "resourceVersion": "289546",
+                "uid": "d6224c18-fcdc-4117-b579-7e427be281eb"
+            },
+            "reason": "WaitForFirstConsumer",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:29:59Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "289556",
+                "uid": "33bde4d4-2c77-4dae-afe6-6e8895633723"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:30:10Z",
+            "message": "External provisioner is provisioning volume for claim \"repro/hdd-pg-2\"",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:29:59Z",
+                "name": "hdd-pg-2.18dc2ecaab8401b5",
+                "namespace": "repro",
+                "resourceVersion": "289634",
+                "uid": "81138ec6-b54b-4855-83d6-2bdd58fe77cc"
+            },
+            "reason": "Provisioning",
+            "reportingComponent": "disk.csi.azure.com_csi-azuredisk-controller-5c78c77cdb-8s2pg_5aed5711-ccd3-41fc-91f9-3e7849c29020",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com_csi-azuredisk-controller-5c78c77cdb-8s2pg_5aed5711-ccd3-41fc-91f9-3e7849c29020"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 3,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:29:59Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "289556",
+                "uid": "33bde4d4-2c77-4dae-afe6-6e8895633723"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:29:59Z",
+            "message": "Waiting for a volume to be created either by the external provisioner 'disk.csi.azure.com' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:29:59Z",
+                "name": "hdd-pg-2.18dc2ecaab8d61e6",
+                "namespace": "repro",
+                "resourceVersion": "289564",
+                "uid": "f1b3f58c-132c-439c-9390-7a3453bc991c"
+            },
+            "reason": "ExternalProvisioning",
+            "reportingComponent": "persistentvolume-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "persistentvolume-controller"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 2,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:30:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "289558",
+                "uid": "33bde4d4-2c77-4dae-afe6-6e8895633723"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:30:11Z",
+            "message": "Successfully provisioned volume pvc-33bde4d4-2c77-4dae-afe6-6e8895633723",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:30:10Z",
+                "name": "hdd-pg-2.18dc2ecd474edede",
+                "namespace": "repro",
+                "resourceVersion": "289641",
+                "uid": "22205e18-cb3b-4dec-abac-b40863ad53b3"
+            },
+            "reason": "ProvisioningSucceeded",
+            "reportingComponent": "disk.csi.azure.com_csi-azuredisk-controller-5c78c77cdb-8s2pg_5aed5711-ccd3-41fc-91f9-3e7849c29020",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com_csi-azuredisk-controller-5c78c77cdb-8s2pg_5aed5711-ccd3-41fc-91f9-3e7849c29020"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:31:10Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "kind": "PersistentVolumeClaim",
+                "name": "hdd-pg-2",
+                "namespace": "repro",
+                "resourceVersion": "289635",
+                "uid": "33bde4d4-2c77-4dae-afe6-6e8895633723"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:31:10Z",
+            "message": "Started monitoring SKU migration from Standard_ZRS to PremiumV2_LRS for volume pvc-33bde4d4-2c77-4dae-afe6-6e8895633723 (timeout: 10h0m0s)",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:31:10Z",
+                "name": "hdd-pg-2.18dc2edb3e8fc92f",
+                "namespace": "repro",
+                "resourceVersion": "289977",
+                "uid": "34cb384b-f7bf-44f2-b366-2c3c860b326e"
+            },
+            "reason": "SKUMigrationStarted",
+            "reportingComponent": "disk.csi.azure.com",
+            "reportingInstance": "",
+            "source": {
+                "component": "disk.csi.azure.com"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:29:59Z",
+            "involvedObject": {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "kind": "Cluster",
+                "name": "hdd-pg",
+                "namespace": "repro",
+                "resourceVersion": "289539",
+                "uid": "cbd63e61-de31-4991-8c4a-fe7206407486"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:29:59Z",
+            "message": "Creating instance hdd-pg-2",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:29:59Z",
+                "name": "hdd-pg.18dc2eca913e29b2",
+                "namespace": "repro",
+                "resourceVersion": "289541",
+                "uid": "a9e68d97-cf77-4c0b-8ad5-ec724bc0f973"
+            },
+            "reason": "CreatingInstance",
+            "reportingComponent": "cloudnative-pg",
+            "reportingInstance": "",
+            "source": {
+                "component": "cloudnative-pg"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-07T07:13:20Z",
+            "involvedObject": {
+                "apiVersion": "snapshot.storage.k8s.io/v1",
+                "kind": "VolumeSnapshot",
+                "name": "vacuum-backup-f1b90aec",
+                "namespace": "repro",
+                "resourceVersion": "264816",
+                "uid": "604b8cee-1a94-4df6-b846-be245038a795"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-07T07:13:20Z",
+            "message": "Snapshot repro/vacuum-backup-f1b90aec is ready to use.",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:13:20Z",
+                "name": "vacuum-backup-f1b90aec.18dc2de1e555388c",
+                "namespace": "repro",
+                "resourceVersion": "284285",
+                "uid": "498be183-fefc-42fc-8b17-9d9ab6deae83"
+            },
+            "reason": "SnapshotReady",
+            "reportingComponent": "snapshot-controller",
+            "reportingInstance": "",
+            "source": {
+                "component": "snapshot-controller"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

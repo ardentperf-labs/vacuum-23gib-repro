@@ -1,0 +1,141 @@
+[
+  {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper",
+    "location": "eastus2",
+    "managedBy": null,
+    "name": "rg-az-hdd-repro-snapshot-keeper",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": {
+      "managed-by": "local-repro-script",
+      "reproPurpose": "prepared-snapshot-keeper"
+    },
+    "type": "Microsoft.Resources/resourceGroups"
+  },
+  {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-c370be15909de6a69298cb6713d85226",
+    "location": "eastus",
+    "managedBy": null,
+    "name": "rg-vacuum-only-c370be15909de6a69298cb6713d85226",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": {
+      "managed-by": "vacuum-only-repro"
+    },
+    "type": "Microsoft.Resources/resourceGroups"
+  },
+  {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-c370be15909de6a69298cb6713d85226",
+    "location": "eastus",
+    "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-only-c370be15909de6a69298cb6713d85226/providers/Microsoft.ContainerService/managedClusters/aks-vacuum-only-c370be15909d",
+    "name": "rg-vacuum-nodes-c370be15909de6a69298cb6713d85226",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": {
+      "aks-managed-cluster-name": "aks-vacuum-only-c370be15909d",
+      "aks-managed-cluster-rg": "rg-vacuum-only-c370be15909de6a69298cb6713d85226",
+      "managed-by": "vacuum-only-repro"
+    },
+    "type": "Microsoft.Resources/resourceGroups"
+  },
+  {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-0aaf271768f70a4fd06a9cb05e75a4ea",
+    "location": "eastus",
+    "managedBy": null,
+    "name": "rg-vacuum-only-0aaf271768f70a4fd06a9cb05e75a4ea",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": {
+      "managed-by": "vacuum-only-repro"
+    },
+    "type": "Microsoft.Resources/resourceGroups"
+  },
+  {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-0aaf271768f70a4fd06a9cb05e75a4ea",
+    "location": "eastus",
+    "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-only-0aaf271768f70a4fd06a9cb05e75a4ea/providers/Microsoft.ContainerService/managedClusters/aks-vacuum-only-0aaf271768f7",
+    "name": "rg-vacuum-nodes-0aaf271768f70a4fd06a9cb05e75a4ea",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": {
+      "aks-managed-cluster-name": "aks-vacuum-only-0aaf271768f7",
+      "aks-managed-cluster-rg": "rg-vacuum-only-0aaf271768f70a4fd06a9cb05e75a4ea",
+      "managed-by": "vacuum-only-repro"
+    },
+    "type": "Microsoft.Resources/resourceGroups"
+  },
+  {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-retained-e92bdc2762775aa5ecbb33bf383e563d",
+    "location": "eastus",
+    "managedBy": null,
+    "name": "rg-vacuum-retained-e92bdc2762775aa5ecbb33bf383e563d",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": {
+      "managed-by": "vacuum-only-repro",
+      "reproPurpose": "retained-cnpg-volume-snapshots"
+    },
+    "type": "Microsoft.Resources/resourceGroups"
+  },
+  {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-35e99cb5febda94c55ccf8b1bed3704c",
+    "location": "westus3",
+    "managedBy": null,
+    "name": "rg-vacuum-only-35e99cb5febda94c55ccf8b1bed3704c",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": {
+      "managed-by": "vacuum-only-repro"
+    },
+    "type": "Microsoft.Resources/resourceGroups"
+  },
+  {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "location": "westus3",
+    "managedBy": null,
+    "name": "rg-vacuum-snapshots-16244c2c1353a0fc1b108ec455fd70c8",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": {
+      "managed-by": "vacuum-only-repro",
+      "reproPurpose": "retained-snapshots"
+    },
+    "type": "Microsoft.Resources/resourceGroups"
+  },
+  {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c",
+    "location": "westus3",
+    "managedBy": null,
+    "name": "rg-vacuum-snapshots-35e99cb5febda94c55ccf8b1bed3704c",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": {
+      "managed-by": "vacuum-only-repro",
+      "reproPurpose": "experiment-snapshots"
+    },
+    "type": "Microsoft.Resources/resourceGroups"
+  },
+  {
+    "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c",
+    "location": "westus3",
+    "managedBy": null,
+    "name": "rg-vacuum-snapshots-9daba6b61cdb3b2f6eca73f2f8e15c3c",
+    "properties": {
+      "provisioningState": "Succeeded"
+    },
+    "tags": {
+      "managed-by": "vacuum-only-repro",
+      "reproPurpose": "experiment-snapshots"
+    },
+    "type": "Microsoft.Resources/resourceGroups"
+  }
+]

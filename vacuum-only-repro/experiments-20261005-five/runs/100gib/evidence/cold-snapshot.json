@@ -1,0 +1,462 @@
+{
+  "cacheEffect": "Offline primary checkpoint restarted the PostgreSQL postmaster (12:46:30 UTC to 12:52:03 UTC), resetting shared_buffers. A few small indexed sentinel checks were run after the snapshot and before measurement.",
+  "fixtureAtSnapshot": {
+    "archiveMode": "on",
+    "expectedDeadTuples": 32768000,
+    "expectedLiveTuples": 32768000,
+    "fullPageWrites": "on",
+    "hasIndex": true,
+    "heapBytes": 107374182400,
+    "highAdjacentOddAbsent": true,
+    "highIdIsEven": true,
+    "highLiveIdPresent": true,
+    "highestLiveId": 131071998,
+    "inRecovery": false,
+    "indexedSentinelPlan": {
+      "highId": [
+        {
+          "Plan": {
+            "Async Capable": false,
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Plan Rows": 1,
+            "Plan Width": 8,
+            "Plans": [
+              {
+                "Alias": "vacuum_target",
+                "Async Capable": false,
+                "Index Name": "vacuum_target_id_idx",
+                "Node Type": "Index Only Scan",
+                "Parallel Aware": false,
+                "Parent Relationship": "Outer",
+                "Plan Rows": 65536000,
+                "Plan Width": 8,
+                "Relation Name": "vacuum_target",
+                "Scan Direction": "Backward",
+                "Startup Cost": 0.56,
+                "Total Cost": 253543508.56
+              }
+            ],
+            "Startup Cost": 0.56,
+            "Total Cost": 4.43
+          }
+        }
+      ],
+      "lowId": [
+        {
+          "Plan": {
+            "Async Capable": false,
+            "Node Type": "Limit",
+            "Parallel Aware": false,
+            "Plan Rows": 1,
+            "Plan Width": 8,
+            "Plans": [
+              {
+                "Alias": "vacuum_target",
+                "Async Capable": false,
+                "Index Name": "vacuum_target_id_idx",
+                "Node Type": "Index Only Scan",
+                "Parallel Aware": false,
+                "Parent Relationship": "Outer",
+                "Plan Rows": 65536000,
+                "Plan Width": 8,
+                "Relation Name": "vacuum_target",
+                "Scan Direction": "Forward",
+                "Startup Cost": 0.56,
+                "Total Cost": 253543508.56
+              }
+            ],
+            "Startup Cost": 0.56,
+            "Total Cost": 4.43
+          }
+        }
+      ]
+    },
+    "lowAdjacentOddAbsent": true,
+    "lowIdIsEven": true,
+    "lowLiveIdPresent": true,
+    "lowestLiveId": 4,
+    "payloadBytes": 1536,
+    "payloadStoragePlain": true,
+    "postmasterStartTime": "2026-10-05T12:52:03.42172+00:00",
+    "recoveryPrefetch": "try",
+    "restoreCommand": "/controller/manager wal-restore --log-destination /controller/log/postgres.json %f %p",
+    "statsDeadTuplesEstimate": 32768000,
+    "statsLastAnalyze": null,
+    "statsLiveTuplesEstimate": 32768000,
+    "systemIdentifier": "7692518806614212629",
+    "tableAutovacuumDisabled": true,
+    "totalBytes": 108872679424,
+    "tupleStatisticsNote": "pg_stat_user_tables values are advisory estimates and may reset or become stale after restart/restore; expected live/dead counts come from recorded fixture insert/delete operations",
+    "vacuumCostDelay": "0",
+    "walLevel": "logical"
+  },
+  "method": "volumeSnapshot",
+  "name": "vacuum-cold-e92bdc27",
+  "online": false,
+  "phase": "completed",
+  "primaryPodUidAfter": "ca4797d4-19ad-441d-9e66-0cdfce899812",
+  "primaryPodUidBefore": "ca4797d4-19ad-441d-9e66-0cdfce899812",
+  "primaryPostmasterRestarted": true,
+  "primaryPostmasterStartTimeAfter": "2026-10-05 12:52:03.42172+00",
+  "primaryPostmasterStartTimeBefore": "2026-10-05 12:46:30 UTC",
+  "restoreValidation": {
+    "archiveDependency": {
+      "archiveMode": "on",
+      "barmanObjectStoreConfigured": false,
+      "externalClustersConfigured": false,
+      "restoreCommand": "/controller/manager wal-restore --log-destination /controller/log/postgres.json %f %p",
+      "successfulColdSnapshotRecoveryWithoutObjectStore": true,
+      "temporaryCredentialSecretPresent": false
+    },
+    "azureSnapshotPair": {
+      "data": "vacuum-cold-e92bdc27",
+      "wal": "vacuum-cold-e92bdc27-wal"
+    },
+    "bootstrap": {
+      "bootstrapJobLog": "${PROJECT_ROOT}/experiments/20261005-four/100gib/.state/cold-recovery-job.log",
+      "measurementImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+      "measurementImagePostgresLog": "${PROJECT_ROOT}/experiments/20261005-four/100gib/.state/cold-recovery-postgres.log",
+      "pvcSnapshotRefsVerified": true,
+      "recoveryImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+      "recoveryJobName": "hdd-pg-cold-check-e92bdc27-1-snapshot-recovery",
+      "recoveryJobUid": "0e2b3345-f15e-45da-84f2-a7fbc50c3de3",
+      "snapshotRecoveryCompletedEvent": {
+        "apiVersion": "v1",
+        "count": 1,
+        "eventTime": null,
+        "firstTimestamp": "2026-10-06T02:54:33Z",
+        "involvedObject": {
+          "apiVersion": "batch/v1",
+          "kind": "Job",
+          "name": "hdd-pg-cold-check-e92bdc27-1-snapshot-recovery",
+          "namespace": "repro",
+          "resourceVersion": "411858",
+          "uid": "0e2b3345-f15e-45da-84f2-a7fbc50c3de3"
+        },
+        "kind": "Event",
+        "lastTimestamp": "2026-10-06T02:54:33Z",
+        "message": "Job completed",
+        "metadata": {
+          "creationTimestamp": "2026-10-06T02:54:33Z",
+          "name": "hdd-pg-cold-check-e92bdc27-1-snapshot-recovery.18dbd12e6137e902",
+          "namespace": "repro",
+          "resourceVersion": "411862",
+          "uid": "8a70bfe4-7a74-4fa8-8502-1370dd83d1df"
+        },
+        "reason": "Completed",
+        "reportingComponent": "job-controller",
+        "reportingInstance": "",
+        "source": {
+          "component": "job-controller"
+        },
+        "type": "Normal"
+      },
+      "snapshotRecoveryEventJson": "${PROJECT_ROOT}/experiments/20261005-four/100gib/.state/cold-snapshot-recovery-completed-event.json",
+      "snapshotRecoveryJobEvidence": "job-status-succeeded",
+      "snapshotRecoveryJobJson": "${PROJECT_ROOT}/experiments/20261005-four/100gib/.state/cold-snapshot-recovery-job.json",
+      "snapshotRecoveryPVCRefsJson": "${PROJECT_ROOT}/experiments/20261005-four/100gib/.state/cold-restore-pvcs.json",
+      "snapshotRestoreJobCompleted": true,
+      "systemImagePostgresLog": "${PROJECT_ROOT}/experiments/20261005-four/100gib/.state/cold-recovery-system-image.log"
+    },
+    "coldBackup": "vacuum-cold-e92bdc27",
+    "fixture": {
+      "expectedHeapBytes": 107374182400,
+      "expectedSystemIdentifier": "7692518806614212629",
+      "fullFixtureDetails": {
+        "archiveMode": "on",
+        "barmanConfig": false,
+        "expectedDeadTuples": 32768000,
+        "expectedLiveTuples": 32768000,
+        "fullPageWrites": "on",
+        "hasIndex": true,
+        "heapBytes": 107374182400,
+        "highAdjacentOddAbsent": true,
+        "highIdIsEven": true,
+        "highLiveIdPresent": true,
+        "highestLiveId": 131071998,
+        "inRecovery": false,
+        "indexedSentinelPlan": {
+          "highId": [
+            {
+              "Plan": {
+                "Async Capable": false,
+                "Node Type": "Limit",
+                "Parallel Aware": false,
+                "Plan Rows": 1,
+                "Plan Width": 8,
+                "Plans": [
+                  {
+                    "Alias": "vacuum_target",
+                    "Async Capable": false,
+                    "Index Name": "vacuum_target_id_idx",
+                    "Node Type": "Index Only Scan",
+                    "Parallel Aware": false,
+                    "Parent Relationship": "Outer",
+                    "Plan Rows": 65536000,
+                    "Plan Width": 8,
+                    "Relation Name": "vacuum_target",
+                    "Scan Direction": "Backward",
+                    "Startup Cost": 0.56,
+                    "Total Cost": 253543508.56
+                  }
+                ],
+                "Startup Cost": 0.56,
+                "Total Cost": 4.43
+              }
+            }
+          ],
+          "lowId": [
+            {
+              "Plan": {
+                "Async Capable": false,
+                "Node Type": "Limit",
+                "Parallel Aware": false,
+                "Plan Rows": 1,
+                "Plan Width": 8,
+                "Plans": [
+                  {
+                    "Alias": "vacuum_target",
+                    "Async Capable": false,
+                    "Index Name": "vacuum_target_id_idx",
+                    "Node Type": "Index Only Scan",
+                    "Parallel Aware": false,
+                    "Parent Relationship": "Outer",
+                    "Plan Rows": 65536000,
+                    "Plan Width": 8,
+                    "Relation Name": "vacuum_target",
+                    "Scan Direction": "Forward",
+                    "Startup Cost": 0.56,
+                    "Total Cost": 253543508.56
+                  }
+                ],
+                "Startup Cost": 0.56,
+                "Total Cost": 4.43
+              }
+            }
+          ]
+        },
+        "lowAdjacentOddAbsent": true,
+        "lowIdIsEven": true,
+        "lowLiveIdPresent": true,
+        "lowestLiveId": 4,
+        "payloadBytes": 1536,
+        "payloadStoragePlain": true,
+        "recoveryPrefetch": "try",
+        "restoreCommand": "/controller/manager wal-restore --log-destination /controller/log/postgres.json %f %p",
+        "statsDeadTuplesEstimate": 32768000,
+        "statsLastAnalyze": null,
+        "statsLiveTuplesEstimate": 32768000,
+        "systemIdentifier": "7692518806614212629",
+        "tableAutovacuumDisabled": true,
+        "totalBytes": 108872679424,
+        "tupleStatisticsNote": "pg_stat_user_tables live/dead values are advisory estimates and can reset or be stale after restart/restore; expected counts come from recorded fixture insert/delete operations",
+        "vacuumCostDelay": "0",
+        "walLevel": "logical"
+      },
+      "hasIndex": true,
+      "heapBytes": 107374182400,
+      "payloadBytes": 1536,
+      "systemIdentifier": "7692518806614212629",
+      "tableAutovacuumDisabled": true,
+      "totalBytes": 108872679424
+    },
+    "measurementLogMonitor": "${PROJECT_ROOT}/experiments/20261005-four/100gib/results/100gib-20261005T130618Z/monitoring/monitor-summary.json",
+    "restoreCluster": "repro/hdd-pg-cold-check-e92bdc27",
+    "restorePVCRefs": {
+      "apiVersion": "v1",
+      "items": [
+        {
+          "apiVersion": "v1",
+          "kind": "PersistentVolumeClaim",
+          "metadata": {
+            "annotations": {
+              "cnpg.io/nodeSerial": "1",
+              "cnpg.io/operatorVersion": "1.30.1",
+              "cnpg.io/pvcStatus": "ready",
+              "pv.kubernetes.io/bind-completed": "yes",
+              "pv.kubernetes.io/bound-by-controller": "yes",
+              "volume.beta.kubernetes.io/storage-provisioner": "disk.csi.azure.com",
+              "volume.kubernetes.io/selected-node": "aks-nodepool1-11223260-vmss000001",
+              "volume.kubernetes.io/storage-provisioner": "disk.csi.azure.com"
+            },
+            "creationTimestamp": "2026-10-06T02:53:35Z",
+            "finalizers": [
+              "kubernetes.io/pvc-protection"
+            ],
+            "labels": {
+              "app.kubernetes.io/component": "database",
+              "app.kubernetes.io/managed-by": "cloudnative-pg",
+              "app.kubernetes.io/name": "postgresql",
+              "cnpg.io/cluster": "hdd-pg-cold-check-e92bdc27",
+              "cnpg.io/instanceName": "hdd-pg-cold-check-e92bdc27-1",
+              "cnpg.io/instanceRole": "primary",
+              "cnpg.io/pvcRole": "PG_DATA",
+              "role": "primary"
+            },
+            "name": "hdd-pg-cold-check-e92bdc27-1",
+            "namespace": "repro",
+            "ownerReferences": [
+              {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "controller": true,
+                "kind": "Cluster",
+                "name": "hdd-pg-cold-check-e92bdc27",
+                "uid": "760922d3-c3b3-4240-bbee-1c25d46d510c"
+              }
+            ],
+            "resourceVersion": "412070",
+            "uid": "166fb81d-6e68-47bc-b851-d990f706984d"
+          },
+          "spec": {
+            "accessModes": [
+              "ReadWriteOnce"
+            ],
+            "dataSource": {
+              "apiGroup": "snapshot.storage.k8s.io",
+              "kind": "VolumeSnapshot",
+              "name": "vacuum-cold-e92bdc27"
+            },
+            "dataSourceRef": {
+              "apiGroup": "snapshot.storage.k8s.io",
+              "kind": "VolumeSnapshot",
+              "name": "vacuum-cold-e92bdc27"
+            },
+            "resources": {
+              "requests": {
+                "storage": "512Gi"
+              }
+            },
+            "storageClassName": "azure-standard-hdd",
+            "volumeMode": "Filesystem",
+            "volumeName": "pvc-166fb81d-6e68-47bc-b851-d990f706984d"
+          },
+          "status": {
+            "accessModes": [
+              "ReadWriteOnce"
+            ],
+            "capacity": {
+              "storage": "512Gi"
+            },
+            "phase": "Bound"
+          }
+        },
+        {
+          "apiVersion": "v1",
+          "kind": "PersistentVolumeClaim",
+          "metadata": {
+            "annotations": {
+              "cnpg.io/nodeSerial": "1",
+              "cnpg.io/operatorVersion": "1.30.1",
+              "cnpg.io/pvcStatus": "ready",
+              "pv.kubernetes.io/bind-completed": "yes",
+              "pv.kubernetes.io/bound-by-controller": "yes",
+              "volume.beta.kubernetes.io/storage-provisioner": "disk.csi.azure.com",
+              "volume.kubernetes.io/selected-node": "aks-nodepool1-11223260-vmss000001",
+              "volume.kubernetes.io/storage-provisioner": "disk.csi.azure.com"
+            },
+            "creationTimestamp": "2026-10-06T02:53:35Z",
+            "finalizers": [
+              "kubernetes.io/pvc-protection"
+            ],
+            "labels": {
+              "app.kubernetes.io/component": "database",
+              "app.kubernetes.io/managed-by": "cloudnative-pg",
+              "app.kubernetes.io/name": "postgresql",
+              "cnpg.io/cluster": "hdd-pg-cold-check-e92bdc27",
+              "cnpg.io/instanceName": "hdd-pg-cold-check-e92bdc27-1",
+              "cnpg.io/instanceRole": "primary",
+              "cnpg.io/pvcRole": "PG_WAL",
+              "role": "primary"
+            },
+            "name": "hdd-pg-cold-check-e92bdc27-1-wal",
+            "namespace": "repro",
+            "ownerReferences": [
+              {
+                "apiVersion": "postgresql.cnpg.io/v1",
+                "controller": true,
+                "kind": "Cluster",
+                "name": "hdd-pg-cold-check-e92bdc27",
+                "uid": "760922d3-c3b3-4240-bbee-1c25d46d510c"
+              }
+            ],
+            "resourceVersion": "412071",
+            "uid": "ae910b9e-ae07-4e5d-86b6-f5b56daf422c"
+          },
+          "spec": {
+            "accessModes": [
+              "ReadWriteOnce"
+            ],
+            "dataSource": {
+              "apiGroup": "snapshot.storage.k8s.io",
+              "kind": "VolumeSnapshot",
+              "name": "vacuum-cold-e92bdc27-wal"
+            },
+            "dataSourceRef": {
+              "apiGroup": "snapshot.storage.k8s.io",
+              "kind": "VolumeSnapshot",
+              "name": "vacuum-cold-e92bdc27-wal"
+            },
+            "resources": {
+              "requests": {
+                "storage": "512Gi"
+              }
+            },
+            "storageClassName": "azure-standard-hdd",
+            "volumeMode": "Filesystem",
+            "volumeName": "pvc-ae910b9e-ae07-4e5d-86b6-f5b56daf422c"
+          },
+          "status": {
+            "accessModes": [
+              "ReadWriteOnce"
+            ],
+            "capacity": {
+              "storage": "512Gi"
+            },
+            "phase": "Bound"
+          }
+        }
+      ],
+      "kind": "List",
+      "metadata": {
+        "resourceVersion": ""
+      }
+    },
+    "sourceSnapshotsPreserved": true,
+    "status": "passed",
+    "validatedAtUtc": "2026-10-06T02:55:39Z",
+    "validationClusterCleanup": "deleted; only its Cluster and token-labeled PVCs were removed"
+  },
+  "snapshotOwnerReference": "none",
+  "snapshotPair": [
+    {
+      "azureSku": "Standard_ZRS",
+      "azureSnapshotId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-retained-e92bdc2762775aa5ecbb33bf383e563d/providers/Microsoft.Compute/snapshots/snapshot-bf28fdba-ac33-4a6d-82ff-03f66821489f",
+      "deletionPolicy": "Retain",
+      "diskSizeGiB": 512,
+      "sourceDiskId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-e92bdc2762775aa5ecbb33bf383e563d/providers/Microsoft.Compute/disks/pvc-5c79be5a-d9c2-4a47-bdd5-68a340ef3717",
+      "sourcePV": "pvc-5c79be5a-d9c2-4a47-bdd5-68a340ef3717",
+      "sourcePVC": "hdd-pg-1",
+      "type": "PG_DATA",
+      "volumeSnapshot": "vacuum-cold-e92bdc27",
+      "volumeSnapshotContent": "snapcontent-bf28fdba-ac33-4a6d-82ff-03f66821489f"
+    },
+    {
+      "azureSku": "Standard_ZRS",
+      "azureSnapshotId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-retained-e92bdc2762775aa5ecbb33bf383e563d/providers/Microsoft.Compute/snapshots/snapshot-90446491-f3b1-4bbe-a527-93ee6066d102",
+      "deletionPolicy": "Retain",
+      "diskSizeGiB": 512,
+      "sourceDiskId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-e92bdc2762775aa5ecbb33bf383e563d/providers/Microsoft.Compute/disks/pvc-8f26dea5-ef91-44b0-ac47-519af8fceef1",
+      "sourcePV": "pvc-8f26dea5-ef91-44b0-ac47-519af8fceef1",
+      "sourcePVC": "hdd-pg-1-wal",
+      "type": "PG_WAL",
+      "volumeSnapshot": "vacuum-cold-e92bdc27-wal",
+      "volumeSnapshotContent": "snapcontent-90446491-f3b1-4bbe-a527-93ee6066d102"
+    }
+  ],
+  "sourceInstance": "hdd-pg-1",
+  "startedAt": "2026-10-05T12:51:23Z",
+  "stoppedAt": "2026-10-05T12:52:03Z",
+  "target": "primary",
+  "uid": "bf9b5c50-ea1b-493c-850b-f6923f223dcc"
+}

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-07T00:58:10Z",
+  "stack": "50gib",
+  "diagnostic": "read-only WAL migration accounting; no filenames or contents collected",
+  "measurementStarted": false,
+  "sourcePgWal": {
+    "apparentBytes": 45080379730,
+    "allocatedBytes": 45081350144,
+    "filesystemTotalBytes": 539978293248,
+    "filesystemUsedBytes": 99552350208,
+    "filesystemFreeBytes": 440409165824
+  },
+  "destinationPgWal": {
+    "apparentBytes": 21838364672,
+    "allocatedBytes": 21838434304,
+    "filesystemTotalBytes": 539978293248,
+    "filesystemUsedBytes": 21840560128,
+    "filesystemFreeBytes": 518120955904
+  },
+  "managerProcess": {
+    "pid": 1,
+    "state": "Ssl",
+    "elapsed": "00:08:21",
+    "comm": "manager"
+  },
+  "separateMoveCopyProcess": false,
+  "managerLog": "Moving data from data-volume pg_wal path to WAL-volume pg_wal path",
+  "priorAdjacentDestinationApparentBytes": 21072183296,
+  "priorAdjacentObservationUtc": null,
+  "notes": "Prior adjacent scan had a smaller destination total by 766,181,376 bytes; use a later timed sample to establish multi-minute progress."
+}

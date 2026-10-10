@@ -1,0 +1,85 @@
+{
+  "clusterSpecRecoveryPrefetch": null,
+  "recoveryPrefetchStatsCounterDelta": {
+    "primary": {
+      "available": true,
+      "counterDelta": {
+        "hit": 0,
+        "prefetch": 0,
+        "skip_fpw": 0,
+        "skip_init": 0,
+        "skip_new": 0,
+        "skip_rep": 0
+      },
+      "gauges": {
+        "block_distance": {
+          "after": 0,
+          "before": 0
+        },
+        "io_depth": {
+          "after": 0,
+          "before": 0
+        },
+        "wal_distance": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "statsReset": "2026-10-05T07:14:53.284891+00:00"
+    },
+    "replica": {
+      "available": true,
+      "counterDelta": {
+        "hit": 0,
+        "prefetch": 0,
+        "skip_fpw": 0,
+        "skip_init": 0,
+        "skip_new": 0,
+        "skip_rep": 0
+      },
+      "gauges": {
+        "block_distance": {
+          "after": 0,
+          "before": 0
+        },
+        "io_depth": {
+          "after": 0,
+          "before": 0
+        },
+        "wal_distance": {
+          "after": 0,
+          "before": 0
+        }
+      },
+      "statsReset": "2026-10-05T07:14:19.328645+00:00"
+    }
+  },
+  "roles": {
+    "primary": {
+      "pod": "hdd-pg-1",
+      "recovery": false,
+      "recoveryPrefetch": {
+        "pendingRestart": false,
+        "setting": "try",
+        "source": "default",
+        "sourceFile": null,
+        "unit": null,
+        "value": "try"
+      },
+      "uid": "e3a1cd29-3f43-47f5-982a-52aa02ff5316"
+    },
+    "replica": {
+      "pod": "hdd-pg-2",
+      "recovery": true,
+      "recoveryPrefetch": {
+        "pendingRestart": false,
+        "setting": "off",
+        "source": "configuration file",
+        "sourceFile": "/var/lib/postgresql/data/pgdata/postgresql.auto.conf",
+        "unit": null,
+        "value": "off"
+      },
+      "uid": "1d7fe331-20b0-423d-a983-fb32bf823258"
+    }
+  }
+}

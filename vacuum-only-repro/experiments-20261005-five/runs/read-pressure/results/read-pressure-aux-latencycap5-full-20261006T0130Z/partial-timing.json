@@ -1,0 +1,57 @@
+{
+  "observationEnd": "2026-10-06T04:29:59.557093725Z",
+  "readPressure": {
+    "blockBytes": 1048576,
+    "ioDepthPerProcess": 32,
+    "lostAt": null,
+    "startedAt": "2026-10-06T01:30:19.845Z",
+    "stoppedAt": "2026-10-06T04:30:03.808Z",
+    "workers": 5
+  },
+  "replayCaughtUp": false,
+  "replicationEvents": [
+    {
+      "applicationName": "hdd-pg-2",
+      "backendType": "walsender",
+      "event": "sender_timeout",
+      "message": "terminating walsender process due to replication timeout",
+      "processId": "115",
+      "role": "primary",
+      "sessionId": "6ac44954.73",
+      "time": "2026-10-06T01:30:59.633759839Z"
+    },
+    {
+      "backendType": "walreceiver",
+      "event": "receiver_connected",
+      "message": "started streaming WAL from primary at 4E/8A000000 on timeline 1",
+      "processId": "4401",
+      "role": "replica",
+      "sessionId": "6ac44fed.1131",
+      "time": "2026-10-06T01:33:33.513672782Z"
+    },
+    {
+      "applicationName": "hdd-pg-2",
+      "backendType": "walsender",
+      "event": "sender_timeout",
+      "message": "terminating walsender process due to replication timeout",
+      "processId": "4467",
+      "role": "primary",
+      "sessionId": "6ac44fed.1173",
+      "time": "2026-10-06T01:38:59.30177602Z"
+    },
+    {
+      "backendType": "walreceiver",
+      "event": "receiver_disconnect",
+      "message": "could not receive data from WAL stream: SSL error: unexpected eof while reading",
+      "processId": "4401",
+      "role": "replica",
+      "sessionId": "6ac44fed.1131",
+      "time": "2026-10-06T01:39:00.681811512Z"
+    }
+  ],
+  "terminationSignalSentAt": "2026-10-06T04:30:00.114632+00:00",
+  "testComplete": false,
+  "userTerminatedEarly": true,
+  "vacuumComplete": "2026-10-06T02:05:00.957639Z",
+  "vacuumStart": "2026-10-06T01:30:20.939005Z"
+}

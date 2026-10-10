@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-07T01:15:07Z",
+  "checkpoint": "20261007T011507Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "supervisorPid": 126516,
+      "childPid": 126519,
+      "activeFixturePhase": "cnpg-volume-snapshot-backup-finalizing",
+      "clusterPhase": "Cluster in healthy state",
+      "clusterReadyInstances": 1,
+      "pod": "hdd-pg-1",
+      "podPhase": "Running",
+      "podReady": true,
+      "podRestarts": 0,
+      "backup": "vacuum-backup-5c241a19",
+      "backupPhase": "finalizing",
+      "snapshots": [
+        {
+          "name": "vacuum-backup-5c241a19",
+          "sourcePVC": "hdd-pg-1",
+          "readyToUse": false,
+          "volumeSnapshotContent": "snapcontent-5915d49f-e4ce-41da-b157-40e0043dcdb2"
+        },
+        {
+          "name": "vacuum-backup-5c241a19-wal",
+          "sourcePVC": "hdd-pg-1-wal",
+          "readyToUse": false,
+          "volumeSnapshotContent": "snapcontent-f60780dd-a9b5-4401-a1c7-30a64acd114e"
+        }
+      ]
+    },
+    "100gib": {
+      "processStatus": "running",
+      "supervisorPid": 126517,
+      "childPid": 126518,
+      "assignedTargetHeapBytes": 107374182400,
+      "activeFixturePhase": "create-index",
+      "indexPhase": "building index: scanning table",
+      "indexBlocksDone": 5135006,
+      "indexBlocksTotal": 13107200,
+      "indexScanFraction": 0.3917698669433594,
+      "activeWaits": [
+        {
+          "type": "IO",
+          "event": "DataFileRead"
+        }
+      ],
+      "stageRelationBytes": 107374182400,
+      "pod": "hdd-pg-1",
+      "podReady": true
+    }
+  }
+}

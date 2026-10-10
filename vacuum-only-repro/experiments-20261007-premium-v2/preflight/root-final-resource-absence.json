@@ -1,0 +1,55 @@
+{
+  "checkedAtUtc": "2026-10-07T12:42:15.576054+00:00",
+  "checks": [
+    {
+      "scope": "baseline-23gib",
+      "resourceGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-4b1163091c697351e7725163a5a28e2e",
+      "httpStatus": 404,
+      "absent": true
+    },
+    {
+      "scope": "baseline-23gib",
+      "resourceGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e",
+      "httpStatus": 404,
+      "absent": true
+    },
+    {
+      "scope": "50gib",
+      "resourceGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-5c241a190a85f40b788038945c9744f6",
+      "httpStatus": 404,
+      "absent": true
+    },
+    {
+      "scope": "50gib",
+      "resourceGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6",
+      "httpStatus": 404,
+      "absent": true
+    },
+    {
+      "scope": "100gib",
+      "resourceGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-f1b90aec9e24f6a2008d6991738742cf",
+      "httpStatus": 404,
+      "absent": true
+    },
+    {
+      "scope": "100gib",
+      "resourceGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf",
+      "httpStatus": 404,
+      "absent": true
+    },
+    {
+      "scope": "shared-watcher-eastus",
+      "resourceGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-pv2-watcher-eastus-b17207790a71",
+      "httpStatus": 404,
+      "absent": true
+    },
+    {
+      "scope": "shared-watcher-westus3",
+      "resourceGroupId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-pv2-watcher-westus3-b17207790a71",
+      "httpStatus": 404,
+      "absent": true
+    }
+  ],
+  "allEightOwnedComputeAndWatcherGroupsAbsent": true,
+  "noCloudMutations": true
+}

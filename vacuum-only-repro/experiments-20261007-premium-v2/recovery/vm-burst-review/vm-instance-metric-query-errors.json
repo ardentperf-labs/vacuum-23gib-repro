@@ -1,0 +1,83 @@
+{
+  "checkedAtUtc": "2026-10-06T22:49:02.941560+00:00",
+  "metricApiVersion": "2018-01-01",
+  "aggregation": "Average",
+  "interval": "PT5M",
+  "metrics": [
+    "VM Remote Used Burst IO Credits Percentage",
+    "VM Remote Used Burst BPS Credits Percentage",
+    "VM Uncached IOPS Consumed Percentage",
+    "VM Uncached Bandwidth Consumed Percentage"
+  ],
+  "stacks": [
+    {
+      "name": "baseline-23gib",
+      "timespanStartUtc": "2026-10-06T15:36:09Z",
+      "timespanEndUtc": "2026-10-06T22:49:02Z",
+      "vmInstances": [
+        {
+          "scaleSet": "aks-nodepool1-34976006-vmss",
+          "instanceId": "0",
+          "vmSize": "Standard_D2s_v4",
+          "httpStatus": 404,
+          "metricSummaries": [],
+          "error": "{\"code\":\"NotFound\",\"message\":\"Failed to find resource mapping for provider: Microsoft.Compute, resourceType: virtualMachineScaleSets/virtualMachines, id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-34976006-vmss/virtualMachines/0, traceId: 7a1af650-2060-4d3c-b3ed-bc591b51c81e\"}"
+        },
+        {
+          "scaleSet": "aks-nodepool1-34976006-vmss",
+          "instanceId": "1",
+          "vmSize": "Standard_D2s_v4",
+          "httpStatus": 404,
+          "metricSummaries": [],
+          "error": "{\"code\":\"NotFound\",\"message\":\"Failed to find resource mapping for provider: Microsoft.Compute, resourceType: virtualMachineScaleSets/virtualMachines, id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-4b1163091c697351e7725163a5a28e2e/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-34976006-vmss/virtualMachines/1, traceId: 43c30668-7262-49b2-8fff-b8a49104a942\"}"
+        }
+      ]
+    },
+    {
+      "name": "50gib",
+      "timespanStartUtc": "2026-10-06T15:36:09Z",
+      "timespanEndUtc": "2026-10-06T22:49:02Z",
+      "vmInstances": [
+        {
+          "scaleSet": "aks-nodepool1-30685692-vmss",
+          "instanceId": "0",
+          "vmSize": "Standard_D2s_v4",
+          "httpStatus": 404,
+          "metricSummaries": [],
+          "error": "{\"code\":\"NotFound\",\"message\":\"Failed to find resource mapping for provider: Microsoft.Compute, resourceType: virtualMachineScaleSets/virtualMachines, id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-30685692-vmss/virtualMachines/0, traceId: 33f53ea8-b5eb-4a63-9485-6f409f83e304\"}"
+        },
+        {
+          "scaleSet": "aks-nodepool1-30685692-vmss",
+          "instanceId": "1",
+          "vmSize": "Standard_D2s_v4",
+          "httpStatus": 404,
+          "metricSummaries": [],
+          "error": "{\"code\":\"NotFound\",\"message\":\"Failed to find resource mapping for provider: Microsoft.Compute, resourceType: virtualMachineScaleSets/virtualMachines, id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-30685692-vmss/virtualMachines/1, traceId: ff57829f-50a3-416e-bf9f-86094a886155\"}"
+        }
+      ]
+    },
+    {
+      "name": "100gib",
+      "timespanStartUtc": "2026-10-06T15:36:09Z",
+      "timespanEndUtc": "2026-10-06T22:49:02Z",
+      "vmInstances": [
+        {
+          "scaleSet": "aks-nodepool1-15388874-vmss",
+          "instanceId": "0",
+          "vmSize": "Standard_D2s_v4",
+          "httpStatus": 404,
+          "metricSummaries": [],
+          "error": "{\"code\":\"NotFound\",\"message\":\"Failed to find resource mapping for provider: Microsoft.Compute, resourceType: virtualMachineScaleSets/virtualMachines, id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/virtualMachines/0, traceId: 3db99f75-9142-41ea-92df-50882f1fd294\"}"
+        },
+        {
+          "scaleSet": "aks-nodepool1-15388874-vmss",
+          "instanceId": "1",
+          "vmSize": "Standard_D2s_v4",
+          "httpStatus": 404,
+          "metricSummaries": [],
+          "error": "{\"code\":\"NotFound\",\"message\":\"Failed to find resource mapping for provider: Microsoft.Compute, resourceType: virtualMachineScaleSets/virtualMachines, id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/virtualMachines/1, traceId: 0f037bf1-8bdf-45de-ab0b-ae0651921974\"}"
+        }
+      ]
+    }
+  ]
+}

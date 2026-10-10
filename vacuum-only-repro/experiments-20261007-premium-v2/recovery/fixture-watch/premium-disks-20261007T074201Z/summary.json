@@ -1,0 +1,102 @@
+{
+  "capturedAtUtc": "2026-10-07T07:42:07.016225+00:00",
+  "apiVersion": "2024-03-02",
+  "disks": [
+    {
+      "stack": "50gib",
+      "claim": "hdd-pg-1",
+      "claimUID": "8c6afc42-60ef-409d-b8a4-f53c3c3145d2",
+      "pv": "pvc-8c6afc42-60ef-409d-b8a4-f53c3c3145d2",
+      "pvUID": "0ff8c29b-466e-4b71-b88b-6dfab3a3c0a7",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-8c6afc42-60ef-409d-b8a4-f53c3c3145d2",
+      "diskUniqueId": "ef0922e8-e64f-437c-a31e-8906242c1b95",
+      "resourceGroup": "rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6",
+      "expectedOwnerToken": "5c241a190a85f40b788038945c9744f6",
+      "provisioningState": "Succeeded",
+      "diskState": "Attached",
+      "completionPercent": 100.0,
+      "sku": "PremiumV2_LRS",
+      "diskSizeGB": 512,
+      "diskIOPSReadWrite": 3000,
+      "diskMBpsReadWrite": 125,
+      "creationData": {
+        "createOption": "Copy",
+        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/snapshots/keeper-pv2-5c241a19-4b554415",
+        "sourceUniqueId": "737fc1c3-dfd9-4db1-b1c9-1d09a45d95cc",
+        "logicalSectorSize": 512
+      },
+      "managedBy": null
+    },
+    {
+      "stack": "50gib",
+      "claim": "hdd-pg-1-wal",
+      "claimUID": "d1307045-4698-46ba-b0bf-7c380fa13fb2",
+      "pv": "pvc-d1307045-4698-46ba-b0bf-7c380fa13fb2",
+      "pvUID": "f7b9cfa7-4052-4492-bec8-3cd747c69b14",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-d1307045-4698-46ba-b0bf-7c380fa13fb2",
+      "diskUniqueId": "21fa4781-e955-4980-b7bf-521d4662bec7",
+      "resourceGroup": "rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6",
+      "expectedOwnerToken": "5c241a190a85f40b788038945c9744f6",
+      "provisioningState": "Succeeded",
+      "diskState": "Attached",
+      "completionPercent": null,
+      "sku": "PremiumV2_LRS",
+      "diskSizeGB": 512,
+      "diskIOPSReadWrite": 3000,
+      "diskMBpsReadWrite": 125,
+      "creationData": {
+        "createOption": "Empty",
+        "logicalSectorSize": 512
+      },
+      "managedBy": null
+    },
+    {
+      "stack": "100gib",
+      "claim": "hdd-pg-1",
+      "claimUID": "a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "pv": "pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "pvUID": "996ceefd-6677-4c7b-8374-ca7029db8c97",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+      "diskUniqueId": "badf5ca6-bba6-46e5-9a99-b191bdc4fdc2",
+      "resourceGroup": "rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf",
+      "expectedOwnerToken": "f1b90aec9e24f6a2008d6991738742cf",
+      "provisioningState": "Succeeded",
+      "diskState": "Attached",
+      "completionPercent": 100.0,
+      "sku": "PremiumV2_LRS",
+      "diskSizeGB": 512,
+      "diskIOPSReadWrite": 3000,
+      "diskMBpsReadWrite": 125,
+      "creationData": {
+        "createOption": "Copy",
+        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/snapshots/keeper-pv2-f1b90aec-ef6f2376",
+        "sourceUniqueId": "1f260967-6558-4934-a4b6-6574a2ef4db2",
+        "logicalSectorSize": 512
+      },
+      "managedBy": null
+    },
+    {
+      "stack": "100gib",
+      "claim": "hdd-pg-1-wal",
+      "claimUID": "316a1094-6e0e-4dd5-a32b-070319573632",
+      "pv": "pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "pvUID": "b173d379-88dc-482d-a506-a95e965a55ee",
+      "diskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+      "diskUniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18",
+      "resourceGroup": "rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf",
+      "expectedOwnerToken": "f1b90aec9e24f6a2008d6991738742cf",
+      "provisioningState": "Succeeded",
+      "diskState": "Attached",
+      "completionPercent": null,
+      "sku": "PremiumV2_LRS",
+      "diskSizeGB": 512,
+      "diskIOPSReadWrite": 3000,
+      "diskMBpsReadWrite": 125,
+      "creationData": {
+        "createOption": "Empty",
+        "logicalSectorSize": 512
+      },
+      "managedBy": null
+    }
+  ]
+}

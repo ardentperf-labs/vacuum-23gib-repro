@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-07T00:09:46Z",
+  "checkpoint": "20261007T000946Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "supervisorPid": 126516,
+      "childPid": 126519,
+      "assignedTargetHeapBytes": 53687091200,
+      "sourceInputHeapBytes": 118128640000,
+      "activeFixturePhase": "delete-odd-rows",
+      "deleteElapsedSeconds": 3574,
+      "activeWaits": [
+        {
+          "type": "IO",
+          "event": "DataFileRead"
+        }
+      ],
+      "stageRelationBytes": 53687091200,
+      "pod": "hdd-pg-1",
+      "podReady": true
+    },
+    "100gib": {
+      "processStatus": "running",
+      "supervisorPid": 126517,
+      "childPid": 126518,
+      "assignedTargetHeapBytes": 107374182400,
+      "sourceInputHeapBytes": 118128640000,
+      "activeFixturePhase": "insert",
+      "insertElapsedSeconds": 11244,
+      "stageRelationBytes": 104476426240,
+      "stageRelationGiB": 97.30125427246094,
+      "activeWaits": [
+        {
+          "type": "IO",
+          "event": "DataFileRead"
+        }
+      ],
+      "pod": "hdd-pg-1",
+      "podReady": true
+    }
+  }
+}

@@ -1,0 +1,619 @@
+{
+  "actualReplayPressurePass": true,
+  "cooldownProofPath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/.state/post-abort-calibration-cooldown-proof.json",
+  "coreIntervalsOver2000msReportedByReadPressure": 0,
+  "createdAtHost": "2026-10-06T00:48:52.304Z",
+  "deviceWriteProgress": true,
+  "exitCode": 0,
+  "fixtureManifestPath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-fill-final-20261005T205429Z/generated-fixture-manifest.json",
+  "interpretation": "same-DATA-device read-await includes replay and deliberate external readers; random files are outside PGDATA; reader completion latency is a separate metric",
+  "intervalCoverageValid": true,
+  "maximumIntervalSeconds": 6.5418219566345215,
+  "maximumWholeArmGuestDataAwaitMs": 4000,
+  "measuredSeconds": 91.11010217666626,
+  "measurement": {
+    "averageDeviceBytesPerReadOperation": 838510.8912049734,
+    "averageDeviceSectorsPerReadOperation": 1637.7165843847138,
+    "deviceQueueGeometry": {
+      "maxHwSectorsKb": 2048,
+      "maxSectorsKb": 1280,
+      "nrRequests": 1024,
+      "scheduler": "none [mq-deadline] ",
+      "scsiDeviceQueueDepth": 316
+    },
+    "end": "2026-10-06T00:48:48.155504123Z",
+    "intervalCount": 15,
+    "intervals": [
+      {
+        "end": "2026-10-06T00:47:23.192305837Z",
+        "readAwaitMs": 1793.0707395498391,
+        "readIops": 151.77436735496792,
+        "readMBps": 96.41381412780215,
+        "readOps": 933,
+        "readSectors": 1157584,
+        "seconds": 6.14728307723999,
+        "start": "2026-10-06T00:47:17.045063992Z",
+        "writeAwaitMs": 1896.4285714285713,
+        "writeIops": 1.1387144388904347,
+        "writeMBps": 0.40111899338578894,
+        "writeOps": 7,
+        "writeSectors": 4816
+      },
+      {
+        "end": "2026-10-06T00:47:29.292177632Z",
+        "readAwaitMs": 1690.2447466007416,
+        "readIops": 132.62890389838128,
+        "readMBps": 100.02746680492334,
+        "readOps": 809,
+        "readSectors": 1191680,
+        "seconds": 6.09972620010376,
+        "start": "2026-10-06T00:47:23.192305837Z",
+        "writeAwaitMs": 1753.75,
+        "writeIops": 1.311534278352349,
+        "writeMBps": 0.5365329348626058,
+        "writeOps": 8,
+        "writeSectors": 6392
+      },
+      {
+        "end": "2026-10-06T00:47:35.568507867Z",
+        "readAwaitMs": 1690.6572528883185,
+        "readIops": 124.11464899245442,
+        "readMBps": 99.49765455322836,
+        "readOps": 779,
+        "readSectors": 1219712,
+        "seconds": 6.276454925537109,
+        "start": "2026-10-06T00:47:29.292177632Z",
+        "writeAwaitMs": 1696.625,
+        "writeIops": 1.2746048677017143,
+        "writeMBps": 0.5749385668839477,
+        "writeOps": 8,
+        "writeSectors": 7048
+      },
+      {
+        "end": "2026-10-06T00:47:41.697425431Z",
+        "readAwaitMs": 1665.8615782664942,
+        "readIops": 126.13256590882018,
+        "readMBps": 101.03266436827352,
+        "readOps": 773,
+        "readSectors": 1209328,
+        "seconds": 6.128472805023193,
+        "start": "2026-10-06T00:47:35.568507867Z",
+        "writeAwaitMs": 1661.888888888889,
+        "writeIops": 1.4685551011376217,
+        "writeMBps": 0.7612571921957552,
+        "writeOps": 9,
+        "writeSectors": 9112
+      },
+      {
+        "end": "2026-10-06T00:47:47.826017579Z",
+        "readAwaitMs": 1651.3855072463768,
+        "readIops": 112.57944887191809,
+        "readMBps": 101.58258910566724,
+        "readOps": 690,
+        "readSectors": 1216016,
+        "seconds": 6.129004955291748,
+        "start": "2026-10-06T00:47:41.697425431Z",
+        "writeAwaitMs": 1644.0,
+        "writeIops": 1.305268972428036,
+        "writeMBps": 0.23390419985910404,
+        "writeOps": 8,
+        "writeSectors": 2800
+      },
+      {
+        "end": "2026-10-06T00:47:53.936289020Z",
+        "readAwaitMs": 1651.7213855421687,
+        "readIops": 108.67079943424433,
+        "readMBps": 101.34960316061013,
+        "readOps": 664,
+        "readSectors": 1209504,
+        "seconds": 6.110197067260742,
+        "start": "2026-10-06T00:47:47.826017579Z",
+        "writeAwaitMs": 1634.4,
+        "writeIops": 1.636608425214523,
+        "writeMBps": 0.47729262540912243,
+        "writeOps": 10,
+        "writeSectors": 5696
+      },
+      {
+        "end": "2026-10-06T00:48:00.269052653Z",
+        "readAwaitMs": 1659.982326951399,
+        "readIops": 107.2193267422754,
+        "readMBps": 101.25755067040724,
+        "readOps": 679,
+        "readSectors": 1252432,
+        "seconds": 6.332813501358032,
+        "start": "2026-10-06T00:47:53.936289020Z",
+        "writeAwaitMs": 1655.5454545454545,
+        "writeIops": 1.7369846747644027,
+        "writeMBps": 1.0031711811247341,
+        "writeOps": 11,
+        "writeSectors": 12408
+      },
+      {
+        "end": "2026-10-06T00:48:06.686709778Z",
+        "readAwaitMs": 1659.4865671641792,
+        "readIops": 104.39984563206966,
+        "readMBps": 101.04255601951621,
+        "readOps": 670,
+        "readSectors": 1266512,
+        "seconds": 6.417634010314941,
+        "start": "2026-10-06T00:48:00.269052653Z",
+        "writeAwaitMs": 1650.111111111111,
+        "writeIops": 1.4023859861024282,
+        "writeMBps": 0.7856752179846663,
+        "writeOps": 9,
+        "writeSectors": 9848
+      },
+      {
+        "end": "2026-10-06T00:48:13.228457219Z",
+        "readAwaitMs": 1653.4865629420085,
+        "readIops": 108.07386759937445,
+        "readMBps": 101.71655364682607,
+        "readOps": 707,
+        "readSectors": 1299632,
+        "seconds": 6.5418219566345215,
+        "start": "2026-10-06T00:48:06.686709778Z",
+        "writeAwaitMs": 1652.4545454545455,
+        "writeIops": 1.6814887462420354,
+        "writeMBps": 0.33560314153359583,
+        "writeOps": 11,
+        "writeSectors": 4288
+      },
+      {
+        "end": "2026-10-06T00:48:19.383927745Z",
+        "readAwaitMs": 1650.095305832148,
+        "readIops": 114.2089756935864,
+        "readMBps": 101.85129809008355,
+        "readOps": 703,
+        "readSectors": 1224480,
+        "seconds": 6.155383110046387,
+        "start": "2026-10-06T00:48:13.228457219Z",
+        "writeAwaitMs": 1644.875,
+        "writeIops": 1.2996753990735295,
+        "writeMBps": 0.2934563077076104,
+        "writeOps": 8,
+        "writeSectors": 3528
+      },
+      {
+        "end": "2026-10-06T00:48:25.505931873Z",
+        "readAwaitMs": 1653.393811533052,
+        "readIops": 116.13765334305383,
+        "readMBps": 101.72616689535114,
+        "readOps": 711,
+        "readSectors": 1216352,
+        "seconds": 6.122045516967773,
+        "start": "2026-10-06T00:48:19.383927745Z",
+        "writeAwaitMs": 1654.4,
+        "writeIops": 1.6334409752890833,
+        "writeMBps": 0.4736926558227132,
+        "writeOps": 10,
+        "writeSectors": 5664
+      },
+      {
+        "end": "2026-10-06T00:48:31.619671989Z",
+        "readAwaitMs": 1682.9612121212122,
+        "readIops": 134.94120389691918,
+        "readMBps": 99.63416273757021,
+        "readOps": 825,
+        "readSectors": 1189728,
+        "seconds": 6.113773822784424,
+        "start": "2026-10-06T00:48:25.505931873Z",
+        "writeAwaitMs": 1656.125,
+        "writeIops": 1.3085207650610344,
+        "writeMBps": 0.5614286853740272,
+        "writeOps": 8,
+        "writeSectors": 6704
+      },
+      {
+        "end": "2026-10-06T00:48:37.834086957Z",
+        "readAwaitMs": 1667.500638569604,
+        "readIops": 125.99814095444816,
+        "readMBps": 100.86067570844138,
+        "readOps": 783,
+        "readSectors": 1224192,
+        "seconds": 6.214377403259277,
+        "start": "2026-10-06T00:48:31.619671989Z",
+        "writeAwaitMs": 1668.5,
+        "writeIops": 1.2873373277593683,
+        "writeMBps": 0.05207022023321093,
+        "writeOps": 8,
+        "writeSectors": 632
+      },
+      {
+        "end": "2026-10-06T00:48:43.984210254Z",
+        "readAwaitMs": 1670.564606741573,
+        "readIops": 115.76942971175497,
+        "readMBps": 100.84296755335244,
+        "readOps": 712,
+        "readSectors": 1211328,
+        "seconds": 6.150155544281006,
+        "start": "2026-10-06T00:48:37.834086957Z",
+        "writeAwaitMs": 1741.375,
+        "writeIops": 1.3007801091208422,
+        "writeMBps": 0.20046582417683126,
+        "writeOps": 8,
+        "writeSectors": 2408
+      },
+      {
+        "end": "2026-10-06T00:48:48.155504123Z",
+        "readAwaitMs": 1645.968,
+        "readIops": 119.87652869365718,
+        "readMBps": 101.2549969555096,
+        "readOps": 500,
+        "readSectors": 824864,
+        "seconds": 4.1709582805633545,
+        "start": "2026-10-06T00:48:43.984210254Z",
+        "writeAwaitMs": 1634.0,
+        "writeIops": 1.6782714017112006,
+        "writeMBps": 0.09525676673666865,
+        "writeOps": 7,
+        "writeSectors": 776
+      }
+    ],
+    "intervalsOver2000ms": 0,
+    "maxIntervalReadAwaitMs": 1793.0707395498391,
+    "readAwaitMs": 1675.9349058328762,
+    "readIops": 120.05254893459306,
+    "readMBps": 100.66536979857432,
+    "replicaCombinedRemoteReadMBps": 101.04372450542293,
+    "replicaCombinedRemoteReadWriteMBps": 101.50556360992101,
+    "replicaCombinedRemoteWriteMBps": 0.46183910449807875,
+    "replicaDataWriteIops": 1.4268450687051653,
+    "replicaDataWriteMBps": 0.46147945173491467,
+    "replicaWalQueueGeometry": {
+      "maxHwSectorsKb": 2048,
+      "maxSectorsKb": 1280,
+      "nrRequests": 316,
+      "scheduler": "[none] mq-deadline ",
+      "scsiDeviceQueueDepth": 316
+    },
+    "replicaWalReadIops": 2.952471719089919,
+    "replicaWalReadMBps": 0.37835470684861583,
+    "replicaWalWriteIops": 0.06585438778639224,
+    "replicaWalWriteMBps": 0.00035965276316408354,
+    "samples": 16,
+    "start": "2026-10-06T00:47:17.045063992Z"
+  },
+  "minimumWholeArmGuestDataAwaitMs": 1500,
+  "operationWeightedGuestDataReadAwaitMs": 1675.9349058328762,
+  "ownerToken": "[REDACTED]",
+  "positiveBacklogAtBothEnds": true,
+  "rawSamplesPath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm-latencycap-5--20261006T004632Z/raw-disk-replay-checkpointer-samples.jsonl",
+  "readIntervalsAtLeast1500ms": 15,
+  "readIntervalsAtLeast2000ms": 0,
+  "readerOperationWeightedCompletionMs": 1667.7757237744304,
+  "readerReadBytes": 9571401728,
+  "readerReadOps": 9128,
+  "remainingReaderPods": [],
+  "replayAdvancedDuringArm": true,
+  "replayEvidenceWithinArm": [
+    {
+      "backlogBytes": 26716358952,
+      "capturedAtUtc": "2026-10-06T00:47:17.690770+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:47:17.045063992Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C194B6D8",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26699330624,
+      "capturedAtUtc": "2026-10-06T00:47:23.821668+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:47:23.192305837Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C2988BC0",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26695335944,
+      "capturedAtUtc": "2026-10-06T00:47:29.924320+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:47:29.292177632Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C2D57FF8",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26693391464,
+      "capturedAtUtc": "2026-10-06T00:47:36.214500+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:47:35.568507867Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C2F32B98",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26692488376,
+      "capturedAtUtc": "2026-10-06T00:47:42.324914+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:47:41.697425431Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C300F348",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26691878176,
+      "capturedAtUtc": "2026-10-06T00:47:48.443072+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:47:47.826017579Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C30A42E0",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26691357496,
+      "capturedAtUtc": "2026-10-06T00:47:54.586507+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:47:53.936289020Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C31234C8",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26690812384,
+      "capturedAtUtc": "2026-10-06T00:48:00.925087+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:48:00.269052653Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C31A8620",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26690234752,
+      "capturedAtUtc": "2026-10-06T00:48:07.742240+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:48:06.686709778Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C3235680",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26689583872,
+      "capturedAtUtc": "2026-10-06T00:48:13.883911+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:48:13.228457219Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C32D4500",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26688762160,
+      "capturedAtUtc": "2026-10-06T00:48:20.028472+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:48:19.383927745Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C339CED0",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26687769592,
+      "capturedAtUtc": "2026-10-06T00:48:26.145829+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:48:25.505931873Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C348F408",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26685638008,
+      "capturedAtUtc": "2026-10-06T00:48:32.274431+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:48:31.619671989Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C3697A88",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26683717936,
+      "capturedAtUtc": "2026-10-06T00:48:38.465882+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:48:37.834086957Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C386C6D0",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26682245368,
+      "capturedAtUtc": "2026-10-06T00:48:44.637055+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:48:43.984210254Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C39D3F08",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    },
+    {
+      "backlogBytes": 26681806024,
+      "capturedAtUtc": "2026-10-06T00:48:48.789778+00:00",
+      "checkpointer": {
+        "pid": "[REDACTED]",
+        "waitEvent": "CheckpointWriteDelay",
+        "waitEventType": "Timeout"
+      },
+      "controlFileMtime": "2026-10-06T00:47:09+00:00",
+      "diskSampleTimestamp": "2026-10-06T00:48:48.155504123Z",
+      "receiveLsn": "56/FA000000",
+      "replayLsn": "50/C3A3F338",
+      "startup": {
+        "pid": "[REDACTED]",
+        "waitEvent": "DataFileWrite",
+        "waitEventType": "IO"
+      }
+    }
+  ],
+  "resultPath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm-latencycap-5--20261006T004632Z/reader-calibration.json",
+  "secondsInIntervalsAtLeast1500msGuestDataAwait": 91.11010217666626,
+  "secondsInIntervalsAtLeast2000msGuestDataAwait": 0,
+  "status": "positive",
+  "targetWorkerCount": 5,
+  "telemetryErrors": [],
+  "usableIntervalCount": 15,
+  "workerProcessesHealthy": true,
+  "workerReadBytesPositive": true,
+  "workerReadOpsPositive": true,
+  "workerStart": {
+    "blockBytes": 1048576,
+    "directIo": true,
+    "eligibleRelationBytes": 4294967296,
+    "eligibleSegments": 4,
+    "event": "started",
+    "excludedRelationBytes": 0,
+    "excludedSegmentsForReadSize": 0,
+    "ioDepthPerProcess": 32,
+    "maxOutstandingReads": 160,
+    "pid": "[REDACTED]",
+    "readOnly": true,
+    "readyWorkers": 5,
+    "relationBytes": 4294967296,
+    "requestedWorkers": 5,
+    "segments": 4,
+    "startedWorkers": 5,
+    "subPageBytesSkipped": 0,
+    "subPageSegmentsSkipped": 0,
+    "zeroLengthSegmentsSkipped": 0
+  },
+  "workerSummary": {
+    "maxReadLatencyMs": 2593.566886,
+    "operationWeightedMeanReadLatencyMs": 1667.7757237744304,
+    "readBytes": 9571401728,
+    "readErrors": 0,
+    "readOps": 9128,
+    "workerProcessesReported": 5
+  },
+  "workersRequested": 5
+}

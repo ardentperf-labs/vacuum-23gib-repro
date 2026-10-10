@@ -1,0 +1,215 @@
+{
+  "auditVersion": 1,
+  "auditedAtUtc": "2026-10-05T17:32:33.778004+00:00",
+  "findings": [
+    {
+      "detail": "Historical baseline plan lists vacuum-copy-0aaf2717 in fullSnapshotsToMove even though the then-running helper skipped all full moves when nodeRG had incrementals; before/after evidence confirms it remained in nodeRG, and all three uniqueIds survived. The revised helper now computes fullSnapshotsToMove=[] when initial nodeRG snapshots exist, so future plan artifacts accurately show no full moves in that case. This did not cause snapshot loss.",
+      "evidence": {
+        "beforeAfterUniqueIds": {
+          "added": [],
+          "afterCount": 3,
+          "beforeCount": 3,
+          "missing": [],
+          "preserved": true,
+          "sameSet": true
+        },
+        "cleanupResult": {
+          "allSnapshotsPreserved": true,
+          "cleanupComplete": false,
+          "completedAtUtc": "2026-10-05T09:30:51.301784+00:00",
+          "remainingNonSnapshotResources": [
+            "AKS control plane blocked by preservation of incremental snapshots in node RG",
+            "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-only-0aaf271768f70a4fd06a9cb05e75a4ea/providers/Microsoft.ContainerService/managedClusters/aks-vacuum-only-0aaf271768f7"
+          ],
+          "snapshotCount": 3
+        },
+        "fullSnapshotAfter": [
+          {
+            "id": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/vacuum-copy-0aaf2717",
+            "incremental": false,
+            "name": "vacuum-copy-0aaf2717",
+            "provisioningState": "Succeeded",
+            "resourceGroup": "RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA",
+            "uniqueId": "e67d85dc-5603-49d9-bd18-61046fb9b8d6"
+          }
+        ],
+        "incrementalNodeSnapshots": [
+          "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/snapshot-406392c2-75ac-4caa-b329-e620bddbf5ce",
+          "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/snapshot-c8982298-a32d-4955-a144-205ddf80a3e7"
+        ],
+        "plannedFullSnapshot": [
+          "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/RG-VACUUM-NODES-0AAF271768F70A4FD06A9CB05E75A4EA/providers/Microsoft.Compute/snapshots/vacuum-copy-0aaf2717"
+        ]
+      },
+      "severity": "historical",
+      "source": "Historical baseline/cleanup/plan.json and snapshots-before/after.json; revised retain-and-clean.py lines 44-45",
+      "status": "resolved_for_future_helper; historical_baseline_artifact_unchanged",
+      "title": "Baseline plan lists a full snapshot as movable, but the global incremental guard skips it"
+    },
+    {
+      "detail": "The revised helper stops AKS and verifies Stopped/Succeeded before fresh inventory, locks every fresh owned snapshot, blocks AKS deletion if any snapshot kind is in nodeRG, then immediately re-lists snapshots before AKS deletion. It requires no nodeRG snapshots and exact equality between the pre-delete and fresh locked uniqueId sets, catching both additions and disappearance before teardown.",
+      "severity": "resolved",
+      "source": "Revised retain-and-clean.py lines 69-88, 102-106",
+      "status": "resolved_in_revised_helper",
+      "title": "No final incremental-snapshot re-inventory immediately before AKS delete"
+    },
+    {
+      "detail": "The script verifies the nodeRG name/tag and AKS linkage, then deletes every resource of seven allowlisted types within that group without checking each resource ID/name/tag against the active cluster. The random token-owned nodeRG is a substantial scope boundary, and unknown types are not deleted, but resource-level identity checks would better protect against an unrelated resource manually placed in the group.",
+      "severity": "low",
+      "source": "retain-and-clean.py lines 22-25, 32, 89-100",
+      "status": "low residual",
+      "title": "Stopped-AKS nodeRG cleanup relies on owned-RG scope, not per-resource token validation"
+    },
+    {
+      "detail": "At audit time, baseline and prefetch-off have finished cleanup; read-pressure and 100gib lack finalization/cleanup result files. Therefore finish-shared-cleanup.py would stop at its initial assertions before making Azure calls. No shared watcher-cleanup before/after evidence exists yet.",
+      "evidence": {
+        "100gib": {
+          "cleanupAllSnapshotsPreserved": null,
+          "cleanupComplete": null,
+          "finalizationStatus": null
+        },
+        "baseline": {
+          "cleanupAllSnapshotsPreserved": true,
+          "cleanupComplete": false,
+          "finalizationStatus": "finished"
+        },
+        "prefetch-off/attempt-westus3": {
+          "cleanupAllSnapshotsPreserved": true,
+          "cleanupComplete": true,
+          "finalizationStatus": "finished"
+        },
+        "read-pressure": {
+          "cleanupAllSnapshotsPreserved": null,
+          "cleanupComplete": null,
+          "finalizationStatus": null
+        }
+      },
+      "severity": "info",
+      "source": "finish-shared-cleanup.py lines 15-18",
+      "status": "state at original audit time; not rechecked in this code-only follow-up",
+      "title": "Shared cleanup gate is not currently satisfied by local stack state"
+    }
+  ],
+  "followup_review": {
+    "review": "Independent AST parse passed; owner reports py_compile passed. Source confirms plan accuracy for blocked snapshots, stop-before-fresh-inventory, fresh per-snapshot locks, any-nodeRG-snapshot block, and exact pre-delete uniqueId-set equality. No Azure calls.",
+    "revisedHelperSha256": "26d1cbe5046c98e6c856d8836b27cbd953554277b18e6792d2a728db7a6e3744"
+  },
+  "helpers": {
+    "finish-shared-cleanup.py": {
+      "sha256": "ceebae95597605071c8bbc4386ad66361c84bed4a04d11e612bed1d44471704d",
+      "syntax": "valid"
+    },
+    "retain-and-clean.py": {
+      "sha256": "26d1cbe5046c98e6c856d8836b27cbd953554277b18e6792d2a728db7a6e3744",
+      "syntax": "valid (independent AST parse; owner reports py_compile passed)"
+    }
+  },
+  "hundredGiBCompletedCleanup": {
+    "allFiveSnapshotUniqueIdsPreserved": true,
+    "checkedAtUtc": "2026-10-06T03:17:17.423767+00:00",
+    "freshAzureAudit": "100gib/cleanup/root-fresh-azure-audit.json",
+    "mainAndNodeGroupsAbsent": true,
+    "result": {
+      "allSnapshotsPreserved": true,
+      "cleanupComplete": true,
+      "completedAtUtc": "2026-10-06T03:14:54.640951+00:00",
+      "remainingNonSnapshotResources": [],
+      "snapshotCount": 5
+    },
+    "retentionGroupSnapshotsOnly": true
+  },
+  "local_evidence": {
+    "baseline": {
+      "cleanupComplete": false,
+      "incrementalNodeSnapshots": [
+        "snapshot-406392c2-75ac-4caa-b329-e620bddbf5ce",
+        "snapshot-c8982298-a32d-4955-a144-205ddf80a3e7"
+      ],
+      "remaining": [
+        "AKS control plane blocked by preservation of incremental snapshots in node RG",
+        "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-only-0aaf271768f70a4fd06a9cb05e75a4ea/providers/Microsoft.ContainerService/managedClusters/aks-vacuum-only-0aaf271768f7"
+      ],
+      "snapshotCount": 3,
+      "snapshotStatesSucceeded": true,
+      "uniqueIds": {
+        "added": [],
+        "afterCount": 3,
+        "beforeCount": 3,
+        "missing": [],
+        "preserved": true,
+        "sameSet": true
+      }
+    },
+    "prefetchOff": {
+      "cleanupResult": {
+        "allSnapshotsPreserved": true,
+        "cleanupComplete": true,
+        "completedAtUtc": "2026-10-05T08:10:41.976876+00:00",
+        "remainingNonSnapshotResources": [],
+        "snapshotCount": 5
+      },
+      "roleAssignmentRemoved": true,
+      "snapshotCount": 5,
+      "snapshotStatesSucceeded": true,
+      "uniqueIds": {
+        "added": [],
+        "afterCount": 5,
+        "beforeCount": 5,
+        "missing": [],
+        "preserved": true,
+        "sameSet": true
+      }
+    }
+  },
+  "overall": "The revised helper now addresses both cleanup findings for future runs: its plan suppresses full moves when nodeRG snapshots are present; it stops and verifies AKS before fresh inventory and locks; any snapshot kind in nodeRG blocks AKS deletion; and the immediate pre-delete inventory must have exactly the same uniqueId set as the fresh locked inventory. Historical baseline plan evidence remains unchanged and all three snapshot uniqueIds were preserved. Remaining observations are low-risk ownership hardening for individually deleted worker resources and the shared-cleanup gate status from the earlier audit.",
+  "readPressureUserTerminatedCleanup": {
+    "allSnapshotsCanNotDeleteLocked": true,
+    "allSnapshotsPreserved": true,
+    "cleanupComplete": true,
+    "completedAtUtc": "2026-10-06T05:12:39.327955+00:00",
+    "freshAzureAudit": "read-pressure/cleanup/root-fresh-azure-audit.json",
+    "measurementComplete": false,
+    "outcomeAudit": "read-pressure/root-outcome-audit.json",
+    "remainingNonSnapshotResources": [],
+    "replayCaughtUp": false,
+    "snapshotCount": 13,
+    "termination": "User requested a stop at three hours; measured partial outcome is preserved without claiming full replay completion.",
+    "uniqueIdSetsBeforeAfterAndFreshMatch": true
+  },
+  "scope": "Final read-only review of revised retain-and-clean.py. No Azure calls or resource mutations were made. Only this audit artifact was updated.",
+  "sharedCleanupObserved": "Not run/verified by this audit; no Azure access used.",
+  "verified_controls": [
+    {
+      "control": "Snapshot inventories are scoped to token-derived main/node/retention RGs; keeper is re-read and checked Succeeded plus owner token before cleanup.",
+      "source": "retain-and-clean.py lines 34-45"
+    },
+    {
+      "control": "Plan suppresses fullSnapshotsToMove when initial inventory finds snapshots in nodeRG; otherwise full snapshots move (never delete) and destination objects are verified by uniqueId and Succeeded state.",
+      "source": "retain-and-clean.py lines 44-56"
+    },
+    {
+      "control": "The helper locks initial snapshots, then stops AKS and verifies Stopped/Succeeded before fresh inventory; it locks every fresh snapshot and blocks AKS deletion if any snapshot kind is in nodeRG.",
+      "source": "retain-and-clean.py lines 57-60 and 67-88"
+    },
+    {
+      "control": "Immediately before AKS delete, the helper re-lists snapshots, requires nodeRG to remain snapshot-free, and requires exact equality of the current and fresh-locked uniqueId sets.",
+      "source": "retain-and-clean.py lines 102-106"
+    },
+    {
+      "control": "When any snapshot exists in nodeRG after AKS is stopped, the helper individually removes selected nodeRG worker resources and never calls AKS delete; snapshot-bearing groups are retained.",
+      "source": "retain-and-clean.py lines 87-101, 112-118, 149-162"
+    },
+    {
+      "control": "Storage account deletion requires exact state-file account name, derived token-based name, subscription/RG/token match, exact account resource ID, and live account tags; other account names are skipped.",
+      "source": "retain-and-clean.py lines 128-148"
+    },
+    {
+      "control": "AKS role assignments are removed only for the captured AKS principal, at the exact owned retention RG scope, and only for Contributor or Disk Snapshot Contributor.",
+      "source": "retain-and-clean.py lines 61-66"
+    },
+    {
+      "control": "Shared watcher cleanup requires all four finalization files to say finished and their cleanup results to assert allSnapshotsPreserved; it then checks all remaining AKS clusters from those and legacy states are owned, Stopped and Succeeded. Watcher group/resource tags and singleton resource ID are verified before RG delete. Subscription-wide snapshot uniqueIds are compared before/after.",
+      "source": "finish-shared-cleanup.py lines 15-74"
+    }
+  ]
+}

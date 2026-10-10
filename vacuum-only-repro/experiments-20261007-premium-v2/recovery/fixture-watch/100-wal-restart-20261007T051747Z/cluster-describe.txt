@@ -1,0 +1,220 @@
+Name:         hdd-pg
+Namespace:    repro
+Labels:       repro.stack.token=f1b90aec9e24f6a2008d6991738742cf
+Annotations:  vacuum-only-repro/restore-copy-id:
+                /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft...
+              vacuum-only-repro/source-snapshot-id:
+                /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-SNAPSHOTS-16244C2C1353A0FC1B108EC455FD70C8/providers/Microsof...
+API Version:  postgresql.cnpg.io/v1
+Kind:         Cluster
+Metadata:
+  Creation Timestamp:  2026-10-06T20:54:10Z
+  Generation:          2
+  Resource Version:    247672
+  UID:                 cbd63e61-de31-4991-8c4a-fe7206407486
+Spec:
+  Affinity:
+    Enable Pod Anti Affinity:  true
+    Pod Anti Affinity Type:    required
+    Topology Key:              kubernetes.io/hostname
+  Backup:
+    Barman Object Store:
+      Azure Credentials:
+        Connection String:
+          Key:           connection-string
+          Name:          azure-barman-credentials
+      Destination Path:  https://cnpgwalf1b90aec9e24f6a20.blob.core.windows.net/wal-f1b90aec9e24/cnpg-vacuum-only/f1b90aec9e24f6a2008d6991738742cf/
+      Server Name:       hdd-pg
+    Target:              prefer-standby
+    Volume Snapshot:
+      Class Name:  vacuum-backup-snap-f1b90aec
+      Online:      true
+      Online Configuration:
+        Immediate Checkpoint:    false
+        Wait For Archive:        true
+      Snapshot Owner Reference:  none
+      Wal Class Name:            vacuum-backup-snap-f1b90aec
+  Bootstrap:
+    Recovery:
+      Database:  repro
+      Owner:     app
+      Volume Snapshots:
+        Storage:
+          API Group:        snapshot.storage.k8s.io
+          Kind:             VolumeSnapshot
+          Name:             vacuum-data-f1b90aec
+  Enable PDB:               true
+  Enable Superuser Access:  false
+  Failover Delay:           0
+  Image Name:               ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215
+  Instances:                1
+  Log Level:                info
+  Max Sync Replicas:        0
+  Min Sync Replicas:        0
+  Monitoring:
+    Custom Queries Config Map:
+      Key:                    queries
+      Name:                   cnpg-default-monitoring
+    Disable Default Queries:  false
+    Enable Pod Monitor:       false
+  Postgres GID:               26
+  Postgres UID:               26
+  Postgresql:
+    Parameters:
+      archive_mode:                on
+      archive_timeout:             5min
+      dynamic_shared_memory_type:  posix
+      full_page_writes:            on
+      log_destination:             csvlog
+      log_directory:               /controller/log
+      log_filename:                postgres
+      log_rotation_age:            0
+      log_rotation_size:           0
+      log_truncate_on_rotation:    false
+      logging_collector:           on
+      max_parallel_workers:        32
+      max_replication_slots:       32
+      max_worker_processes:        32
+      shared_buffers:              256MB
+      shared_memory_type:          mmap
+      shared_preload_libraries:    
+      ssl_max_protocol_version:    TLSv1.3
+      ssl_min_protocol_version:    TLSv1.3
+      track_io_timing:             on
+      track_wal_io_timing:         on
+      wal_keep_size:               512MB
+      wal_level:                   logical
+      wal_log_hints:               on
+      wal_receiver_timeout:        5s
+      wal_sender_timeout:          5s
+    Sync Replica Election Constraint:
+      Enabled:              false
+  Primary Update Method:    restart
+  Primary Update Strategy:  unsupervised
+  Probes:
+    Liveness:
+      Isolation Check:
+        Connection Timeout:  1000
+        Enabled:             true
+        Request Timeout:     1000
+  Replication Slots:
+    High Availability:
+      Enabled:      true
+      Slot Prefix:  _cnpg_
+    Synchronize Replicas:
+      Enabled:        true
+    Update Interval:  30
+  Resources:
+    Limits:
+      Cpu:     2
+      Memory:  3Gi
+    Requests:
+      Cpu:                 1
+      Memory:              2Gi
+  Smart Shutdown Timeout:  180
+  Start Delay:             3600
+  Stop Delay:              1800
+  Storage:
+    Resize In Use Volumes:  true
+    Size:                   512Gi
+    Storage Class:          azure-premiumv2
+  Switchover Delay:         3600
+  Wal Storage:
+    Resize In Use Volumes:  false
+    Size:                   512Gi
+    Storage Class:          azure-premiumv2
+Status:
+  Available Architectures:
+    Go Arch:  amd64
+    Hash:     6d915657dadd72f66b0cdeca4d8f357d00de769bee14d4f6ea8adb501dab80d4
+    Go Arch:  arm64
+    Hash:     37e47ffea358929899c8fd2b54139307934492108f5a0cde76e491248145fd4d
+  Certificates:
+    Client CASecret:  hdd-pg-ca
+    Expirations:
+      Hdd - Pg - Ca:           2027-01-04 20:49:10 +0000 UTC
+      Hdd - Pg - Replication:  2027-01-04 20:49:10 +0000 UTC
+      Hdd - Pg - Server:       2027-01-04 20:49:10 +0000 UTC
+    Replication TLSSecret:     hdd-pg-replication
+    Server Alt DNSNames:
+      hdd-pg-rw
+      hdd-pg-rw.repro
+      hdd-pg-rw.repro.svc
+      hdd-pg-rw.repro.svc.cluster.local
+      hdd-pg-r
+      hdd-pg-r.repro
+      hdd-pg-r.repro.svc
+      hdd-pg-r.repro.svc.cluster.local
+      hdd-pg-ro
+      hdd-pg-ro.repro
+      hdd-pg-ro.repro.svc
+      hdd-pg-ro.repro.svc.cluster.local
+    Server CASecret:             hdd-pg-ca
+    Server TLSSecret:            hdd-pg-server
+  Cloud Native PGCommit Hash:    2a35abb46
+  Cloud Native PGOperator Hash:  6d915657dadd72f66b0cdeca4d8f357d00de769bee14d4f6ea8adb501dab80d4
+  Conditions:
+    Last Transition Time:  2026-10-06T20:54:11Z
+    Message:               Cluster has been bootstrapped
+    Reason:                BootstrapCompleted
+    Status:                True
+    Type:                  Initialized
+    Last Transition Time:  2026-10-07T05:15:34Z
+    Message:               No instances are present in the cluster to report a system ID.
+    Reason:                NotFound
+    Status:                False
+    Type:                  ConsistentSystemID
+    Last Transition Time:  2026-10-07T05:15:34Z
+    Message:               Cluster Is Not Ready
+    Reason:                ClusterIsNotReady
+    Status:                False
+    Type:                  Ready
+    Last Transition Time:  2026-10-06T21:02:21Z
+    Message:               Continuous archiving is working
+    Reason:                ContinuousArchivingSuccess
+    Status:                True
+    Type:                  ContinuousArchiving
+  Config Map Resource Version:
+    Metrics:
+      Cnpg - Default - Monitoring:  89615
+  Current Primary:                  hdd-pg-1
+  Current Primary Timestamp:        2026-10-06T21:01:55.720851Z
+  Dangling PVC:
+    hdd-pg-1-wal
+  Healthy PVC:
+    hdd-pg-1
+  Image:  ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215
+  Instance Names:
+    hdd-pg-1
+  Instances:  1
+  Managed Roles Status:
+  Operator Certificate Fingerprint:  8bbb1a2fc0a9d8e4581a8092a66ad65628675707dcf61b90325ea36d5d45f677
+  Pg Data Image Info:
+    Image:          ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215
+    Major Version:  16
+  Phase:            Primary instance is being restarted without a switchover
+  Pooler Integrations:
+    Pg Bouncer Integration:
+  Pvc Count:     2
+  Read Service:  hdd-pg-r
+  Secrets Resource Version:
+    Application Secret Version:  89591
+    Client Ca Secret Version:    89588
+    Replication Secret Version:  89590
+    Server Ca Secret Version:    89588
+    Server Secret Version:       89589
+  Selector:                      cnpg.io/cluster=hdd-pg,cnpg.io/podRole=instance
+  Switch Replica Cluster Status:
+  Target Primary:            hdd-pg-1
+  Target Primary Timestamp:  2026-10-06T20:54:11.019388Z
+  Timeline ID:               1
+  Topology:
+    Instances:
+      hdd-pg-1:
+    Nodes Used:              1
+    Successfully Extracted:  true
+  Write Service:             hdd-pg-rw
+Events:
+  Type    Reason             Age    From            Message
+  ----    ------             ----   ----            -------
+  Normal  UpgradingInstance  2m19s  cloudnative-pg  Upgrading instance hdd-pg-1

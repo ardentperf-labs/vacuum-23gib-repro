@@ -1,0 +1,63 @@
+{
+  "finishedAt": "2026-10-06T02:36:48.289751+00:00",
+  "followerRestarts": [
+    {
+      "exit": 0,
+      "role": "replica",
+      "time": "2026-10-05T17:06:20.459526+00:00"
+    },
+    {
+      "exit": 0,
+      "role": "primary",
+      "time": "2026-10-05T17:06:20.459587+00:00"
+    },
+    {
+      "exit": 0,
+      "role": "primary",
+      "time": "2026-10-05T21:06:24.378089+00:00"
+    },
+    {
+      "exit": 0,
+      "role": "replica",
+      "time": "2026-10-05T21:06:24.378240+00:00"
+    },
+    {
+      "exit": 0,
+      "role": "primary",
+      "time": "2026-10-06T01:06:28.239195+00:00"
+    },
+    {
+      "exit": 0,
+      "role": "replica",
+      "time": "2026-10-06T01:06:28.239273+00:00"
+    }
+  ],
+  "logFiles": {
+    "primary": {
+      "bytes": 1739668,
+      "path": "${PROJECT_ROOT}/experiments/20261005-four/100gib/results/100gib-20261005T130618Z/monitoring/primary-postgres-live.log"
+    },
+    "replica": {
+      "bytes": 821263,
+      "path": "${PROJECT_ROOT}/experiments/20261005-four/100gib/results/100gib-20261005T130618Z/monitoring/replica-postgres-live.log"
+    }
+  },
+  "measurementWindow": {
+    "end": "2026-10-06T02:36:24.697250138Z",
+    "start": "2026-10-05T13:06:29.794989Z"
+  },
+  "replicationEvents": {
+    "events": [],
+    "total": 0
+  },
+  "startedAt": "2026-10-05T13:06:19Z",
+  "testState": {
+    "error": null,
+    "output": "${PROJECT_ROOT}/experiments/20261005-four/100gib/results/100gib-20261005T130618Z",
+    "phase": "complete",
+    "replayCaughtUp": true,
+    "runId": "100gib-20261005T130618Z",
+    "testComplete": true,
+    "updatedAt": "2026-10-06T02:36:47.498Z"
+  }
+}

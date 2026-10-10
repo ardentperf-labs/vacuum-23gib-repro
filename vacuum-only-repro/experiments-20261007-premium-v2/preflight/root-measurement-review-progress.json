@@ -1,0 +1,65 @@
+{
+  "reviewedAtUtc": "2026-10-07T12:15:24.552926+00:00",
+  "runs": {
+    "baseline-23gib": {
+      "processCompleteExitZero": true,
+      "timingTestComplete": true,
+      "summaryTestComplete": true,
+      "coverageValid": true,
+      "replicaLagBytes": 0,
+      "flushLsn": "56/F9000000",
+      "replayLsn": "56/F9000000",
+      "runtimeSourceHashesVerified": true,
+      "heapEndSeparatelyObserved": false
+    },
+    "50gib": {
+      "processCompleteExitZero": true,
+      "timingTestComplete": true,
+      "summaryTestComplete": true,
+      "coverageValid": true,
+      "replicaLagBytes": 0,
+      "flushLsn": "7B/D5000000",
+      "replayLsn": "7B/D5000000",
+      "runtimeSourceHashesVerified": true,
+      "heapEndSeparatelyObserved": false
+    },
+    "100gib": {
+      "processCompleteExitZero": true,
+      "timingTestComplete": true,
+      "summaryTestComplete": true,
+      "coverageValid": true,
+      "replicaLagBytes": 0,
+      "flushLsn": "C0/15000000",
+      "replayLsn": "C0/15000000",
+      "runtimeSourceHashesVerified": true,
+      "all2597RawSampleIdentitiesCountersAndNoAppWorkloadVerified": true,
+      "recordedFourMinimumProvisionedHydratedDiskSettingsVerified": true,
+      "heapEndSeparatelyObserved": false,
+      "maxSampleGapSeconds": 5.9032392501831055
+    }
+  },
+  "plotsVisuallyReviewed": {
+    "baseline-23gib": [
+      "await.png",
+      "iops.png",
+      "throughput.png"
+    ],
+    "50gib": [
+      "await.png",
+      "iops.png",
+      "throughput.png"
+    ],
+    "100gib": [
+      "await.png",
+      "iops.png",
+      "throughput.png"
+    ]
+  },
+  "allThreeComplete": true,
+  "cleanupAuthorizedNow": true,
+  "updatedAtUtc": "2026-10-07T10:38:29.109911+00:00",
+  "allThreeRequiredBackupWalExportsRootVerified": true,
+  "cleanupComplete": true,
+  "finalVerificationReceipt": "preflight/root-final-verification.json",
+  "finalizedAtUtc": "2026-10-07T12:44:20.051714+00:00"
+}

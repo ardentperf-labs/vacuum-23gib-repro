@@ -1,0 +1,22 @@
+{
+  "consistency": "online primary disk snapshot after checkpoint; crash-consistent",
+  "createdAtUtc": "2026-10-04T14:10:10.0747777+00:00",
+  "diskSizeGiB": 512,
+  "heapBytes": 118128640000,
+  "keeperOwnerToken": "[REDACTED]",
+  "location": "eastus",
+  "originalKeeperSnapshotId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-amplification-prepared-05d212886d",
+  "preparedDeadTuplesEstimate": 36050000,
+  "preparedLiveTuplesEstimate": 36050000,
+  "resourceGroup": "rg-az-hdd-repro-snapshot-keeper",
+  "snapshotId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+  "sourceDiskId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/MC_rg-az-hdd-repro-14495d19_aks-az-hdd-14495d19_eastus2/providers/Microsoft.Compute/disks/pvc-[REDACTED]",
+  "sourceNodeResourceGroup": "MC_rg-az-hdd-repro-14495d19_aks-az-hdd-14495d19_eastus2",
+  "sourceOwnerToken": "[REDACTED]",
+  "sourceSetId": "scsi-prepared",
+  "sourceSnapshotId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-804391dc0a7b56b597915163951aed1a/providers/Microsoft.Compute/snapshots/vacuum-copy-804391dc",
+  "sourceTopology": "combined PGDATA/pg_wal",
+  "subscriptionId": "[REDACTED]",
+  "systemIdentifier": "7692518806614212629",
+  "tableBytes": 119777173504
+}

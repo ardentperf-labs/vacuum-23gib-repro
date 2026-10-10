@@ -1,0 +1,29 @@
+{
+  "verifiedAtUtc": "2026-10-06T16:13:08.042581+00:00",
+  "coordinatorPid": 51095,
+  "preparations": [
+    {
+      "stack": "baseline-23gib",
+      "status": "running",
+      "supervisorPid": 41759,
+      "childPid": 41761,
+      "scriptMatchesLaunchReceipt": true
+    },
+    {
+      "stack": "50gib",
+      "status": "running",
+      "supervisorPid": 45687,
+      "childPid": 45689,
+      "scriptMatchesLaunchReceipt": true
+    },
+    {
+      "stack": "100gib",
+      "status": "running",
+      "supervisorPid": 45686,
+      "childPid": 45688,
+      "scriptMatchesLaunchReceipt": true
+    }
+  ],
+  "measurementBarrier": "waiting for all three preparations",
+  "cleanup": "approved only after successful measurement and coverage; preserve every snapshot"
+}

@@ -1,0 +1,91 @@
+{
+  "etag": "\"3\"",
+  "hardwareProfile": {
+    "vmSize": "Standard_E2bs_v5"
+  },
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/virtualMachines/fio-vm",
+  "location": "westus2",
+  "name": "fio-vm",
+  "networkProfile": {
+    "networkInterfaces": [
+      {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Network/networkInterfaces/fio-vmVMNic",
+        "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa"
+      }
+    ]
+  },
+  "osProfile": {
+    "adminUsername": "fioadmin",
+    "allowExtensionOperations": true,
+    "computerName": "fio-vm",
+    "linuxConfiguration": {
+      "disablePasswordAuthentication": true,
+      "enableVMAgentPlatformUpdates": true,
+      "patchSettings": {
+        "assessmentMode": "ImageDefault",
+        "patchMode": "ImageDefault"
+      },
+      "provisionVMAgent": true,
+      "ssh": {
+        "publicKeys": [
+          {
+            "keyData": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGipuDOPyJzv886Gu/Go9QvbyyflV50fiBdfVo4UHCTO worker@wb-b919d381-5f75-45e1-9540-db97470e1aef\n",
+            "path": "/home/fioadmin/.ssh/authorized_keys"
+          }
+        ]
+      }
+    },
+    "requireGuestProvisionSignal": true,
+    "secrets": []
+  },
+  "provisioningState": "Succeeded",
+  "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa",
+  "securityProfile": {
+    "securityType": "Standard"
+  },
+  "storageProfile": {
+    "dataDisks": [
+      {
+        "caching": "None",
+        "createOption": "Attach",
+        "deleteOption": "Detach",
+        "diskSizeGB": 512,
+        "lun": 0,
+        "managedDisk": {
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/disks/fio-data",
+          "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa",
+          "storageAccountType": "Standard_LRS"
+        },
+        "name": "fio-data",
+        "toBeDetached": false
+      }
+    ],
+    "diskControllerType": "SCSI",
+    "imageReference": {
+      "exactVersion": "22.04.202608060",
+      "offer": "0001-com-ubuntu-server-jammy",
+      "publisher": "Canonical",
+      "sku": "22_04-lts-gen2",
+      "version": "latest"
+    },
+    "osDisk": {
+      "caching": "ReadWrite",
+      "createOption": "FromImage",
+      "deleteOption": "Detach",
+      "diskSizeGB": 32,
+      "managedDisk": {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-e2883f380ab57959f76530aa/providers/Microsoft.Compute/disks/fio-vm_OsDisk_1_284e7c595d2f4df7938659ac90c73531",
+        "resourceGroup": "rg-fio-hdd-e2883f380ab57959f76530aa",
+        "storageAccountType": "StandardSSD_LRS"
+      },
+      "name": "fio-vm_OsDisk_1_284e7c595d2f4df7938659ac90c73531",
+      "osType": "Linux"
+    }
+  },
+  "tags": {
+    "reprotoken": "e2883f380ab57959f76530aa"
+  },
+  "timeCreated": "2026-10-09T09:02:42.9315345+00:00",
+  "type": "Microsoft.Compute/virtualMachines",
+  "vmId": "f52b8e11-6b2f-4331-8dff-1c34706ec1b6"
+}

@@ -1,0 +1,23 @@
+[
+  "fio",
+  "--name=read-scaling",
+  "--readonly",
+  "--rw=randread",
+  "--bs=1m",
+  "--ioengine=psync",
+  "--iodepth=1",
+  "--direct=1",
+  "--thread=1",
+  "--numjobs=1",
+  "--group_reporting=1",
+  "--filename=/mnt/fio-data/pgdata/base/16385/16430.14:/mnt/fio-data/pgdata/base/16385/16430.20:/mnt/fio-data/pgdata/base/16385/16430.101:/mnt/fio-data/pgdata/base/16385/16430.11:/mnt/fio-data/pgdata/base/16385/16430.83:/mnt/fio-data/pgdata/base/16385/16430.18:/mnt/fio-data/pgdata/base/16385/16430.38:/mnt/fio-data/pgdata/base/16385/16430.53:/mnt/fio-data/pgdata/base/16385/16430.68:/mnt/fio-data/pgdata/base/16385/16430.103:/mnt/fio-data/pgdata/base/16385/16430.29:/mnt/fio-data/pgdata/base/16385/16430.27:/mnt/fio-data/pgdata/base/16385/16430.3:/mnt/fio-data/pgdata/base/16385/16430.69:/mnt/fio-data/pgdata/base/16385/16430.90:/mnt/fio-data/pgdata/base/16385/16430.9",
+  "--file_service_type=random",
+  "--norandommap=1",
+  "--randrepeat=0",
+  "--invalidate=0",
+  "--time_based=1",
+  "--ramp_time=30",
+  "--runtime=180",
+  "--output-format=json",
+  "--output=/home/fioadmin/repeat-single/run-1/fio.json"
+]

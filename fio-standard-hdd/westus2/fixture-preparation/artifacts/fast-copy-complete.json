@@ -1,0 +1,18 @@
+{
+  "status": "Succeeded",
+  "completedAtUtc": "2026-10-09T09:32:47.975597+00:00",
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "ownershipToken": "168d63b3cf97eb87fa9f88d9",
+  "location": "westus2",
+  "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-az-hdd-repro-snapshot-keeper/providers/Microsoft.Compute/snapshots/azhr-keep-scsi-prepared-7a297601434285b1",
+  "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-transport-168d63b3cf97eb87fa9f88d9/providers/Microsoft.Compute/disks/fixture-export",
+  "sourceCopyId": "9ffc5f96-5382-4a8c-8877-a326895b2a83",
+  "sourceCopyStatusAtStart": "failed",
+  "storageAccountId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-transport-168d63b3cf97eb87fa9f88d9/providers/Microsoft.Storage/storageAccounts/fiow2168d63b3cf97eb87",
+  "container": "vhds",
+  "destinationBlob": "prepared-azcopy-retry.vhd",
+  "destinationBlobUri": "https://fiow2168d63b3cf97eb87.blob.core.windows.net/vhds/prepared-azcopy-retry.vhd",
+  "contentLengthBytes": 549755814400,
+  "vhdSizeGiB": 512,
+  "method": "AzCopy BlobBlob PageBlob from owned read-only managed-disk export SAS"
+}

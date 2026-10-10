@@ -1,0 +1,32 @@
+{
+  "armOutput": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm--20261005T201648Z",
+  "azureDiskId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/disks/pvc-81f6648d-4535-49f9-96a8-ac5c7aa7334b",
+  "controllerOutput": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/auxiliary-random-arm-controller-20261005T201648Z",
+  "createdAtHost": "2026-10-05T20:16:50.687Z",
+  "csiPod": "csi-azuredisk-node-4lrnv",
+  "dataClaim": "hdd-pg-2",
+  "dataLun": "0",
+  "dataMajorMinor": "8:16",
+  "dataPv": "pvc-81f6648d-4535-49f9-96a8-ac5c7aa7334b",
+  "fixtureProofPath": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/.state/auxiliary-random-cooldown-proof.json",
+  "namespace": "repro",
+  "ownerToken": "[REDACTED]",
+  "queueBefore": {
+    "maxHwSectorsKb": 2048,
+    "maxSectorsKb": 1280,
+    "nrRequests": 316,
+    "scheduler": "[none] mq-deadline ",
+    "scsiDeviceQueueDepth": 316
+  },
+  "region": "westus3",
+  "replicaNode": "aks-nodepool1-35454189-vmss000001",
+  "replicaPod": "hdd-pg-2",
+  "replicaPodUid": "3c42a44a-2761-41a2-88c2-faf856d8c9b9",
+  "sourceSha256": {
+    ".state/apply_async512_mq_deadline_1024_data_only.sh": "052b24e0d0bfb41f2bccd68110e56021284bf5aa55771dc94c1fbc18e006a934",
+    ".state/calibrate_random_auxiliary_capture_retry2.py": "e1db7dbcf81e16a0c044b74d5f9d024e48ae1b7e3a1055222eec36d092d4d223",
+    ".state/restore_async_depth_256_data_only.sh": "456be2d15077e7b46ecb8d002bcec38541e26675844cea9a62d37d8a79057a7b",
+    ".state/restore_data_queue_defaults.sh": "03ec329d3406e2db61ee42a0015c767d7f2564523dd64f95d44e7fde6eea6550"
+  },
+  "status": "running"
+}

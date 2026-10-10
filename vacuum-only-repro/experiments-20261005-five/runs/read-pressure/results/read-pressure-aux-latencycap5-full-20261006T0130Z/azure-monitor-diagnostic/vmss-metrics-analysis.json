@@ -1,0 +1,1704 @@
+{
+  "analysisWrittenAtUtc": "2026-10-06T05:03:28.761383+00:00",
+  "interpretation": {
+    "inferencesNotProof": [
+      "This pattern is consistent with an aggregate VM uncached-throughput bottleneck after the initial burst: D2s_v4 documentation lists 48 MB/s uncached throughput and 200 MB/s uncached burst throughput; the replay-tail DATA LUN median was about 48.8 MB/s while the VM-level bandwidth metric was saturated.",
+      "The per-disk DATA bandwidth metric was only around 47% on the replay tail and WAL LUN throughput use was near zero, while the VM-wide bandwidth metric was saturated. This is consistent with shared VM-path contention affecting replay/WAL I/O, rather than a single replay process being the sole limiter, but it cannot prove the exact causal mechanism."
+    ],
+    "limits": [
+      "Azure Monitor platform metrics are minute-level aggregates. VM uncached bandwidth is VM-wide and does not attribute traffic to PostgreSQL or external reader processes; disk LUN metrics show device activity but not process ownership. Do not subtract external-reader I/O from the observed guest/OS device totals.",
+      "D2s_v4 documentation expresses the 48 MB/s/200 MB/s figures for uncached Premium SSD. This stack used Standard_LRS HDD. The size-level cap is a strong consistency check, not a guarantee that each Standard HDD workload maps exactly to that spec row.",
+      "The run ended at 3 hours with replay incomplete. Existing WAL-slot evidence says later local replay is not proof that new WAL was received."
+    ],
+    "observations": [
+      "During the 144-minute replay tail, VM uncached bandwidth consumed averaged 99.71% (median 100.0%, 144/144 minute buckets); VM uncached IOPS consumed averaged 1.28% (median 1.0%).",
+      "Replica DATA LUN 0 read bandwidth was 96.94 MB/s mean during VACUUM and 53.56 MB/s mean (48.79 MB/s median) during replay tail; its per-disk bandwidth-consumed metric fell from 95.5% to 51.7% while VM-wide uncached bandwidth stayed near 100%.",
+      "Replica WAL LUN 1 replay-tail read throughput was 69.8 kB/s mean; its bandwidth/IOPS consumed percentages averaged 0.0%/0.0%. Yet Azure Data Disk Latency for WAL LUN 1 averaged 3090 ms (median 3428 ms), with queue depth 1.80 mean. The PostgreSQL guest monitor separately showed WAL read-await around 3.4 s.",
+      "The Azure API returned 195 one-minute buckets through 04:34Z for the requested 01:20Z\u201304:35Z window. After the SIGINT, only five extra buckets remain; they are observational tail and do not establish continued WAL reception or completed replay."
+    ],
+    "officialReferences": [
+      {
+        "title": "Dsv4 size series: D2s_v4 uncached limits",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/dsv4-series"
+      },
+      {
+        "title": "Azure VM monitoring metric definitions and units",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/monitor-vm-reference"
+      },
+      {
+        "title": "Azure disk metrics: VM/disk cap metrics and burst credits",
+        "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/disks-metrics"
+      }
+    ]
+  },
+  "metricApi": {
+    "authCli": "az resolved to /opt/workbench/credential-bin/az, the credential-receiver wrapper first on PATH; no direct /usr/bin/az calls or credentials were used.",
+    "cost": {
+      "dataDisks": 3104,
+      "vm": 1552
+    },
+    "endpointNotes": [
+      "The exact VMSS-instance metric definition query returned definitions, but historical metric listing at that child resource returned NotFound resource mapping. The parent VMSS metric dimensions were used as the supported fallback.",
+      "An initial combined query applied LUN to VM-level metrics and received BadRequest; VM and disk metric families were then queried separately with their supported dimensions.",
+      "Azure CLI help states --dimension and --filter cannot be combined. The final queries used dimensions over only this VMSS and selected the exact VMName series locally.",
+      "VM burst-credit metrics were present only at accumulated 5-minute samples. The per-disk burst-credit query returned zero time series."
+    ],
+    "failedAttemptsPreserved": [
+      "metrics-query.stderr",
+      "metrics-query-no-dimension.stderr",
+      "vm-metrics-query.stderr"
+    ],
+    "metricDefinitions": {
+      "parentDefinitionsForQueriedMetrics": [
+        {
+          "dimensions": [
+            "LUN",
+            "VMName"
+          ],
+          "metricAvailabilities": [
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT5M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT15M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT30M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT6H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT12H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "P1D"
+            }
+          ],
+          "name": "Data Disk Read Bytes/sec",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "None",
+            "Average",
+            "Minimum",
+            "Maximum",
+            "Total",
+            "Count"
+          ],
+          "unit": "BytesPerSecond"
+        },
+        {
+          "dimensions": [
+            "LUN",
+            "VMName"
+          ],
+          "metricAvailabilities": [
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT5M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT15M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT30M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT6H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT12H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "P1D"
+            }
+          ],
+          "name": "Data Disk Read Operations/Sec",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "None",
+            "Average",
+            "Minimum",
+            "Maximum",
+            "Total",
+            "Count"
+          ],
+          "unit": "CountPerSecond"
+        },
+        {
+          "dimensions": [
+            "LUN",
+            "VMName"
+          ],
+          "metricAvailabilities": [
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT5M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT15M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT30M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT6H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT12H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "P1D"
+            }
+          ],
+          "name": "Data Disk Queue Depth",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "None",
+            "Average",
+            "Minimum",
+            "Maximum",
+            "Total",
+            "Count"
+          ],
+          "unit": "Count"
+        },
+        {
+          "dimensions": [
+            "LUN",
+            "VMName"
+          ],
+          "metricAvailabilities": [
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT5M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT15M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT30M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT6H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT12H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "P1D"
+            }
+          ],
+          "name": "Data Disk Latency",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "None",
+            "Average",
+            "Minimum",
+            "Maximum",
+            "Total",
+            "Count"
+          ],
+          "unit": "MilliSeconds"
+        },
+        {
+          "dimensions": [
+            "LUN",
+            "VMName"
+          ],
+          "metricAvailabilities": [
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT5M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT15M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT30M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT6H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT12H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "P1D"
+            }
+          ],
+          "name": "Data Disk Bandwidth Consumed Percentage",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "None",
+            "Average",
+            "Minimum",
+            "Maximum",
+            "Total",
+            "Count"
+          ],
+          "unit": "Percent"
+        },
+        {
+          "dimensions": [
+            "LUN",
+            "VMName"
+          ],
+          "metricAvailabilities": [
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT5M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT15M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT30M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT6H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT12H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "P1D"
+            }
+          ],
+          "name": "Data Disk IOPS Consumed Percentage",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "None",
+            "Average",
+            "Minimum",
+            "Maximum",
+            "Total",
+            "Count"
+          ],
+          "unit": "Percent"
+        },
+        {
+          "dimensions": [
+            "LUN",
+            "VMName"
+          ],
+          "metricAvailabilities": [
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT5M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT15M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT30M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT6H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT12H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "P1D"
+            }
+          ],
+          "name": "Data Disk Used Burst BPS Credits Percentage",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "None",
+            "Average",
+            "Minimum",
+            "Maximum",
+            "Total",
+            "Count"
+          ],
+          "unit": "Percent"
+        },
+        {
+          "dimensions": [
+            "LUN",
+            "VMName"
+          ],
+          "metricAvailabilities": [
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT5M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT15M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT30M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT6H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT12H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "P1D"
+            }
+          ],
+          "name": "Data Disk Used Burst IO Credits Percentage",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "None",
+            "Average",
+            "Minimum",
+            "Maximum",
+            "Total",
+            "Count"
+          ],
+          "unit": "Percent"
+        },
+        {
+          "dimensions": [
+            "VMName"
+          ],
+          "metricAvailabilities": [
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT5M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT15M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT30M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT6H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT12H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "P1D"
+            }
+          ],
+          "name": "VM Uncached Bandwidth Consumed Percentage",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "None",
+            "Average",
+            "Minimum",
+            "Maximum",
+            "Total",
+            "Count"
+          ],
+          "unit": "Percent"
+        },
+        {
+          "dimensions": [
+            "VMName"
+          ],
+          "metricAvailabilities": [
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT5M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT15M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT30M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT6H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT12H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "P1D"
+            }
+          ],
+          "name": "VM Uncached IOPS Consumed Percentage",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "None",
+            "Average",
+            "Minimum",
+            "Maximum",
+            "Total",
+            "Count"
+          ],
+          "unit": "Percent"
+        },
+        {
+          "dimensions": [
+            "VMName"
+          ],
+          "metricAvailabilities": [
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT5M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT15M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT30M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT6H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT12H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "P1D"
+            }
+          ],
+          "name": "VM Remote Used Burst IO Credits Percentage",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "Average",
+            "Minimum",
+            "Maximum"
+          ],
+          "unit": "Percent"
+        },
+        {
+          "dimensions": [
+            "VMName"
+          ],
+          "metricAvailabilities": [
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT5M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT15M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT30M"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT1H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT6H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "PT12H"
+            },
+            {
+              "retention": "P93D",
+              "timeGrain": "P1D"
+            }
+          ],
+          "name": "VM Remote Used Burst BPS Credits Percentage",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "Average",
+            "Minimum",
+            "Maximum"
+          ],
+          "unit": "Percent"
+        }
+      ],
+      "vmssInstanceRaw": "metric-definitions.json",
+      "vmssParentRaw": "vmss-metric-definitions.json"
+    },
+    "namespace": "Microsoft.Compute/virtualMachineScaleSets",
+    "rawFilesAndSha256": {
+      "data-disk-metrics-01-20-to-04-35.json": {
+        "bytes": 676167,
+        "modifiedUtc": "2026-10-06T04:57:03.083066+00:00",
+        "sha256": "5457a26b3898f730a8acf262bc8ade19b629b99c8c33048f38496d81f5fa2170"
+      },
+      "data-disk-metrics-query.stderr": {
+        "bytes": 0,
+        "modifiedUtc": "2026-10-06T04:57:02.153070+00:00",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "metric-definitions.json": {
+        "bytes": 116417,
+        "modifiedUtc": "2026-10-06T04:55:01.071574+00:00",
+        "sha256": "d335456b9464906af9acf7e91e7455961aa9a95bfe1b664b63769b92d1888f83"
+      },
+      "metrics-01-20-to-04-35.json": {
+        "bytes": 0,
+        "modifiedUtc": "2026-10-06T04:55:31.585448+00:00",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "metrics-query-no-dimension.stderr": {
+        "bytes": 812,
+        "modifiedUtc": "2026-10-06T04:55:32.866443+00:00",
+        "sha256": "c02acee4cd750023d7754fa0753c1bd8d234b819962d0c2946f30abf778c8ab7"
+      },
+      "metrics-query.stderr": {
+        "bytes": 392,
+        "modifiedUtc": "2026-10-06T04:55:12.464527+00:00",
+        "sha256": "944360c7710a3b10bf2ff8a3ad4be3c0a9aa934c574a3b84ad5fe003e491cd33"
+      },
+      "resource-ownership-readback.json": {
+        "bytes": 2968,
+        "modifiedUtc": "2026-10-06T05:05:26.797726+00:00",
+        "sha256": "4ae02e0d3c07c79734914293a38ce07da6384f6e0d6ef17dd146ba159a931157"
+      },
+      "vm-metrics-01-20-to-04-35.json": {
+        "bytes": 181104,
+        "modifiedUtc": "2026-10-06T04:56:57.822088+00:00",
+        "sha256": "44c41952d3982ba9f6c9ce5861d5e530934b9e09eef243cf9e564907558a7602"
+      },
+      "vm-metrics-query-no-filter.stderr": {
+        "bytes": 0,
+        "modifiedUtc": "2026-10-06T04:56:56.825093+00:00",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "vm-metrics-query.stderr": {
+        "bytes": 74,
+        "modifiedUtc": "2026-10-06T04:56:48.260128+00:00",
+        "sha256": "d07393beb376805c4acfe67c51d6e395f78f151dee254e48cb1d7a7482655a3b"
+      },
+      "vmss-metric-definitions.json": {
+        "bytes": 119256,
+        "modifiedUtc": "2026-10-06T04:56:17.507257+00:00",
+        "sha256": "bfe95a21db51c8b10f384402bc020075736ec25bd5e8eec2ca426ef982755493"
+      }
+    },
+    "seriesScope": "Queried only this experiment-owned 2-instance VMSS. Retained the VMName dimension matching replica node instance 1, and DATA LUN 0 / WAL LUN 1 for disk series.",
+    "successfulQueries": {
+      "perDisk": "data-disk-metrics-01-20-to-04-35.json; 8 metrics; dimensions VMName and LUN; Average and Maximum; PT1M; 01:20\u201304:35Z (stderr empty; see data-disk-metrics-query.stderr)",
+      "vmLevel": "vm-metrics-01-20-to-04-35.json; 4 metrics; dimension VMName; Average and Maximum; PT1M; 01:20\u201304:35Z (stderr empty; see vm-metrics-query-no-filter.stderr)"
+    }
+  },
+  "queryWindowUtc": {
+    "dataDiskMetricFirstTimestamp": "2026-10-06T01:20:00Z",
+    "dataDiskMetricLastTimestamp": "2026-10-06T04:34:00Z",
+    "dataDiskMetricTimestampCount": 195,
+    "endExclusive": "2026-10-06T04:35:00Z",
+    "phases": {
+      "post_signal_telemetry": [
+        "2026-10-06T04:30:00.114632+00:00",
+        "2026-10-06T04:35:00Z"
+      ],
+      "replay_tail_to_last_sample": [
+        "2026-10-06T02:05:00.957639Z",
+        "2026-10-06T04:29:59.557093725Z"
+      ],
+      "requested_01_20_to_04_35": [
+        "2026-10-06T01:20:00Z",
+        "2026-10-06T04:35:00Z"
+      ],
+      "vacuum": [
+        "2026-10-06T01:30:20.939005Z",
+        "2026-10-06T02:05:00.957639Z"
+      ],
+      "whole_observed_test": [
+        "2026-10-06T01:30:20.939005Z",
+        "2026-10-06T04:29:59.557093725Z"
+      ]
+    },
+    "requestedGrain": "PT1M",
+    "startInclusive": "2026-10-06T01:20:00Z",
+    "vmMetricFirstTimestamp": "2026-10-06T01:20:00Z",
+    "vmMetricLastTimestamp": "2026-10-06T04:34:00Z",
+    "vmMetricTimestampCount": 195
+  },
+  "resourceAndOwnership": {
+    "aksName": "aks-vacuum-only-16244c2c1353",
+    "aksReproTokenMatchedExperimentState": true,
+    "aksResourceGroup": "rg-vacuum-only-16244c2c1353a0fc1b108ec455fd70c8",
+    "nodeResourceGroup": "rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8",
+    "ownerToken": "[REDACTED]",
+    "ownershipBinding": "AKS resource tags match the experiment owner token and its nodeResourceGroup is the queried node RG; that owned node RG contained exactly one VMSS, with the replica pod mapped to instance 1. VMSS itself had only AKS-managed tags.",
+    "readbackArtifact": "resource-ownership-readback.json",
+    "region": "westus3",
+    "replicaDataLun": "0",
+    "replicaPod": {
+      "claims": [
+        {
+          "claim": "hdd-pg-2",
+          "path": "/var/lib/postgresql/data"
+        },
+        {
+          "claim": "hdd-pg-2-wal",
+          "path": "/var/lib/postgresql/wal"
+        }
+      ],
+      "name": "hdd-pg-2",
+      "node": "aks-nodepool1-35454189-vmss000001",
+      "uid": "c46f8b20-07d9-4558-87cb-77d8124092e9"
+    },
+    "replicaVmId": "69e74d9b-ed78-477b-8149-b5684f797940",
+    "replicaVmssInstanceResourceId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-35454189-vmss/virtualMachines/1",
+    "replicaVmssNode": "aks-nodepool1-35454189-vmss000001",
+    "replicaWalLun": "1",
+    "sourceEvidence": {
+      "podNodeAndDiskLunMap": "preflight.pods.replica.node and preflight.storage.roles.replica.{data,wal}",
+      "preflight": "${PROJECT_ROOT}/experiments/20261005-four/read-pressure/results/read-pressure-aux-latencycap5-full-20261006T0130Z/preflight.json",
+      "stackState": "experiments/20261005-four/read-pressure/.state/state.json"
+    },
+    "subscriptionId": "[REDACTED]",
+    "vmSku": "Standard_D2s_v4",
+    "vmssCapacity": 2,
+    "vmssCountInOwnedNodeResourceGroup": 1,
+    "vmssHasExperimentReproTokenTag": false,
+    "vmssInstanceId": "1",
+    "vmssMetricDimensionValue": "aks-nodepool1-35454189-vmss_1",
+    "vmssResourceId": "/subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/rg-vacuum-nodes-16244c2c1353a0fc1b108ec455fd70c8/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-35454189-vmss"
+  },
+  "runId": "read-pressure-aux-latencycap5-full-20261006T0130Z",
+  "runTiming": {
+    "observationEnd": "2026-10-06T04:29:59.557093725Z",
+    "replayCaughtUp": false,
+    "terminationSignalSentAt": "2026-10-06T04:30:00.114632+00:00",
+    "userTerminatedEarly": true,
+    "vacuumComplete": "2026-10-06T02:05:00.957639Z",
+    "vacuumStart": "2026-10-06T01:30:20.939005Z"
+  },
+  "schemaVersion": 1,
+  "seriesSummary": {
+    "disk": {
+      "Data Disk Bandwidth Consumed Percentage": {
+        "data_LUN0": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 4,
+              "max": 40.0,
+              "mean": 15.25,
+              "min": 6.0,
+              "p50": 7.5,
+              "p95": 8.0,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 144,
+              "max": 99.0,
+              "mean": 51.701388888888886,
+              "min": 46.0,
+              "p50": 47.0,
+              "p95": 98.0,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 195,
+              "max": 99.0,
+              "mean": 55.87692307692308,
+              "min": 0.0,
+              "p50": 47.0,
+              "p95": 99.0,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 35,
+              "max": 99.0,
+              "mean": 95.51428571428572,
+              "min": 0.0,
+              "p50": 99.0,
+              "p95": 99.0,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 179,
+              "max": 99.0,
+              "mean": 60.26815642458101,
+              "min": 0.0,
+              "p50": 47.0,
+              "p95": 99.0,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 195,
+          "queryTimestampBuckets": 195,
+          "unit": "Percent"
+        },
+        "wal_LUN1": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 4,
+              "max": 4.0,
+              "mean": 3.25,
+              "min": 1.0,
+              "p50": 4.0,
+              "p95": 4.0,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 144,
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 195,
+              "max": 97.0,
+              "mean": 2.0615384615384613,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 1.0,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 35,
+              "max": 97.0,
+              "mean": 11.114285714285714,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 62.0,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 179,
+              "max": 97.0,
+              "mean": 2.1731843575418996,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 195,
+          "queryTimestampBuckets": 195,
+          "unit": "Percent"
+        }
+      },
+      "Data Disk IOPS Consumed Percentage": {
+        "data_LUN0": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 4,
+              "max": 98.0,
+              "mean": 80.0,
+              "min": 27.0,
+              "p50": 97.5,
+              "p95": 98.0,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 144,
+              "max": 26.0,
+              "mean": 10.520833333333334,
+              "min": 9.0,
+              "p50": 9.0,
+              "p95": 23.0,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 195,
+              "max": 98.0,
+              "mean": 13.148717948717948,
+              "min": 0.0,
+              "p50": 9.0,
+              "p95": 24.0,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 35,
+              "max": 24.0,
+              "mean": 20.571428571428573,
+              "min": 0.0,
+              "p50": 21.0,
+              "p95": 24.0,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 179,
+              "max": 26.0,
+              "mean": 12.486033519553073,
+              "min": 0.0,
+              "p50": 9.0,
+              "p95": 24.0,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 195,
+          "queryTimestampBuckets": 195,
+          "unit": "Percent"
+        },
+        "wal_LUN1": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 4,
+              "max": 6.0,
+              "mean": 5.0,
+              "min": 2.0,
+              "p50": 6.0,
+              "p95": 6.0,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 144,
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 195,
+              "max": 28.0,
+              "mean": 0.9076923076923077,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 2.0,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 35,
+              "max": 28.0,
+              "mean": 4.485714285714286,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 27.0,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 179,
+              "max": 28.0,
+              "mean": 0.8770949720670391,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 1.0,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 195,
+          "queryTimestampBuckets": 195,
+          "unit": "Percent"
+        }
+      },
+      "Data Disk Latency": {
+        "data_LUN0": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 4,
+              "max": 1196.72943,
+              "mean": 535.4748775,
+              "min": 311.80818,
+              "p50": 316.68095,
+              "p95": 319.35102,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 144,
+              "max": 3510.24541,
+              "mean": 3275.5160989583333,
+              "min": 1662.99994,
+              "p50": 3440.70068,
+              "p95": 3449.44079,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 195,
+              "max": 3510.24541,
+              "mean": 2738.9783351282053,
+              "min": 0.0,
+              "p50": 3437.84379,
+              "p95": 3448.72477,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 35,
+              "max": 1847.38852,
+              "mean": 1624.6311157142857,
+              "min": 13.83467,
+              "p50": 1660.51683,
+              "p95": 1701.46714,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 179,
+              "max": 3510.24541,
+              "mean": 2952.717359217877,
+              "min": 13.83467,
+              "p50": 3438.55698,
+              "p95": 3449.00973,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 195,
+          "queryTimestampBuckets": 195,
+          "unit": "Milliseconds"
+        },
+        "wal_LUN1": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 4,
+              "max": 103.23809,
+              "mean": 28.346235,
+              "min": 3.34147,
+              "p50": 3.4026899999999998,
+              "p95": 3.43434,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 144,
+              "max": 3452.00468,
+              "mean": 3089.6703442361113,
+              "min": 2.5167,
+              "p50": 3428.3538550000003,
+              "p95": 3439.52189,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 195,
+              "max": 3452.00468,
+              "mean": 2300.847887384615,
+              "min": 0.0,
+              "p50": 3421.9923,
+              "p95": 3439.28023,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 35,
+              "max": 29.77502,
+              "mean": 6.514946,
+              "min": 0.0,
+              "p50": 3.17645,
+              "p95": 24.51757,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 179,
+              "max": 3452.00468,
+              "mean": 2486.818730055866,
+              "min": 0.0,
+              "p50": 3424.42673,
+              "p95": 3439.4641,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 195,
+          "queryTimestampBuckets": 195,
+          "unit": "Milliseconds"
+        }
+      },
+      "Data Disk Queue Depth": {
+        "data_LUN0": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 4,
+              "max": 187.9,
+              "mean": 176.8375,
+              "min": 172.2,
+              "p50": 173.625,
+              "p95": 174.53,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 144,
+              "max": 263.67,
+              "mean": 192.84375,
+              "min": 179.68,
+              "p50": 189.60000000000002,
+              "p95": 226.94,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 195,
+              "max": 263.67,
+              "mean": 182.30599999999998,
+              "min": 0.0,
+              "p50": 189.47,
+              "p95": 229.08,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 35,
+              "max": 237.76,
+              "mean": 196.76085714285713,
+              "min": 0.0,
+              "p50": 201.12,
+              "p95": 229.35,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 179,
+              "max": 263.67,
+              "mean": 193.60966480446925,
+              "min": 0.0,
+              "p50": 189.94,
+              "p95": 229.35,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 195,
+          "queryTimestampBuckets": 195,
+          "unit": "Count"
+        },
+        "wal_LUN1": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 4,
+              "max": 1.75,
+              "mean": 0.5275,
+              "min": 0.11,
+              "p50": 0.125,
+              "p95": 0.13,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 144,
+              "max": 4.62,
+              "mean": 1.7958333333333334,
+              "min": 0.0,
+              "p50": 1.93,
+              "p95": 2.33,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 195,
+              "max": 4.99,
+              "mean": 1.4362051282051282,
+              "min": 0.0,
+              "p50": 1.77,
+              "p95": 2.33,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 35,
+              "max": 4.99,
+              "mean": 0.5025714285714286,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 1.92,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 179,
+              "max": 4.99,
+              "mean": 1.5429608938547485,
+              "min": 0.0,
+              "p50": 1.82,
+              "p95": 3.36,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 195,
+          "queryTimestampBuckets": 195,
+          "unit": "Count"
+        }
+      },
+      "Data Disk Read Bytes/sec": {
+        "data_LUN0": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 4,
+              "max": 47891024.0,
+              "mean": 15460864.0,
+              "min": 4429788.0,
+              "p50": 4761322.0,
+              "p95": 5063900.0,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 144,
+              "max": 101027050.0,
+              "mean": 53555460.29861111,
+              "min": 47903301.0,
+              "p50": 48793933.0,
+              "p95": 99842650.0,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 195,
+              "max": 101983963.0,
+              "mean": 57515359.071794875,
+              "min": 0.0,
+              "p50": 48798786.0,
+              "p95": 101382137.0,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 35,
+              "max": 101983963.0,
+              "mean": 96938390.82857142,
+              "min": 0.0,
+              "p50": 100892216.0,
+              "p95": 101746553.0,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 179,
+              "max": 101983963.0,
+              "mean": 62038156.2122905,
+              "min": 0.0,
+              "p50": 48812111.0,
+              "p95": 101446395.0,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 195,
+          "queryTimestampBuckets": 195,
+          "unit": "BytesPerSecond"
+        },
+        "wal_LUN1": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 4,
+              "max": 4884095.0,
+              "mean": 3589424.75,
+              "min": 657767.0,
+              "p50": 4407918.5,
+              "p95": 4425638.0,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 144,
+              "max": 529656.0,
+              "mean": 69832.72916666667,
+              "min": 0.0,
+              "p50": 67709.5,
+              "p95": 78637.0,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 195,
+              "max": 4884095.0,
+              "mean": 168512.57435897435,
+              "min": 0.0,
+              "p50": 65534.0,
+              "p95": 657767.0,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 35,
+              "max": 1845846.0,
+              "mean": 239389.34285714285,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 937052.0,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 179,
+              "max": 1845846.0,
+              "mean": 102986.25698324022,
+              "min": 0.0,
+              "p50": 66074.0,
+              "p95": 386636.0,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 195,
+          "queryTimestampBuckets": 195,
+          "unit": "BytesPerSecond"
+        }
+      },
+      "Data Disk Read Operations/Sec": {
+        "data_LUN0": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 4,
+              "max": 544.03,
+              "mean": 422.5775,
+              "min": 65.07,
+              "p50": 540.605,
+              "p95": 540.74,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 144,
+              "max": 150.94,
+              "mean": 61.94277777777778,
+              "min": 51.63,
+              "p50": 54.379999999999995,
+              "p95": 133.8,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 195,
+              "max": 544.03,
+              "mean": 75.54564102564102,
+              "min": 0.0,
+              "p50": 54.66,
+              "p95": 137.27,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 35,
+              "max": 138.61,
+              "mean": 116.214,
+              "min": 0.0,
+              "p50": 120.38,
+              "p95": 135.44,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 179,
+              "max": 150.94,
+              "mean": 72.55446927374301,
+              "min": 0.0,
+              "p50": 54.75,
+              "p95": 135.44,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 195,
+          "queryTimestampBuckets": 195,
+          "unit": "CountPerSecond"
+        },
+        "wal_LUN1": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 4,
+              "max": 38.16,
+              "mean": 28.0325,
+              "min": 5.13,
+              "p50": 34.42,
+              "p95": 34.52,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 144,
+              "max": 4.18,
+              "mean": 0.5399305555555556,
+              "min": 0.0,
+              "p50": 0.53,
+              "p95": 0.59,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 195,
+              "max": 38.16,
+              "mean": 1.426051282051282,
+              "min": 0.0,
+              "p50": 0.53,
+              "p95": 5.69,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 35,
+              "max": 22.83,
+              "mean": 2.5054285714285713,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 7.46,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 179,
+              "max": 22.83,
+              "mean": 0.9242458100558659,
+              "min": 0.0,
+              "p50": 0.53,
+              "p95": 4.18,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 195,
+          "queryTimestampBuckets": 195,
+          "unit": "CountPerSecond"
+        }
+      },
+      "Data Disk Used Burst BPS Credits Percentage": {
+        "data_LUN0": {
+          "present": false,
+          "unit": "Percent accumulated burst use"
+        },
+        "wal_LUN1": {
+          "present": false,
+          "unit": "Percent accumulated burst use"
+        }
+      },
+      "Data Disk Used Burst IO Credits Percentage": {
+        "data_LUN0": {
+          "present": false,
+          "unit": "Percent accumulated burst use"
+        },
+        "wal_LUN1": {
+          "present": false,
+          "unit": "Percent accumulated burst use"
+        }
+      }
+    },
+    "vm": {
+      "VM Remote Used Burst BPS Credits Percentage": {
+        "vm": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 1,
+              "max": 55.0,
+              "mean": 55.0,
+              "min": 55.0,
+              "p50": 55.0,
+              "p95": 55.0,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 29,
+              "max": 70.0,
+              "mean": 63.241379310344826,
+              "min": 56.0,
+              "p50": 63.0,
+              "p95": 69.0,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 39,
+              "max": 70.0,
+              "mean": 55.02564102564103,
+              "min": 0.0,
+              "p50": 61.0,
+              "p95": 69.0,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 7,
+              "max": 54.0,
+              "mean": 36.714285714285715,
+              "min": 15.0,
+              "p50": 38.0,
+              "p95": 49.0,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 36,
+              "max": 70.0,
+              "mean": 58.083333333333336,
+              "min": 15.0,
+              "p50": 61.5,
+              "p95": 69.0,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 39,
+          "queryTimestampBuckets": 195,
+          "unit": "Percent accumulated burst use"
+        }
+      },
+      "VM Remote Used Burst IO Credits Percentage": {
+        "vm": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 0,
+              "max": null,
+              "mean": null,
+              "min": null,
+              "p50": null,
+              "p95": null,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 27,
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 34,
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 5,
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 32,
+              "max": 0.0,
+              "mean": 0.0,
+              "min": 0.0,
+              "p50": 0.0,
+              "p95": 0.0,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 34,
+          "queryTimestampBuckets": 195,
+          "unit": "Percent accumulated burst use"
+        }
+      },
+      "VM Uncached Bandwidth Consumed Percentage": {
+        "vm": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 4,
+              "max": 100.0,
+              "mean": 60.0,
+              "min": 25.0,
+              "p50": 57.5,
+              "p95": 88.0,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 144,
+              "max": 100.0,
+              "mean": 99.70833333333333,
+              "min": 96.0,
+              "p50": 100.0,
+              "p95": 100.0,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 195,
+              "max": 100.0,
+              "mean": 92.2974358974359,
+              "min": 0.0,
+              "p50": 100.0,
+              "p95": 100.0,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 35,
+              "max": 100.0,
+              "mean": 94.28571428571429,
+              "min": 0.0,
+              "p50": 100.0,
+              "p95": 100.0,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 179,
+              "max": 100.0,
+              "mean": 98.64804469273743,
+              "min": 0.0,
+              "p50": 100.0,
+              "p95": 100.0,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 195,
+          "queryTimestampBuckets": 195,
+          "unit": "Percent"
+        }
+      },
+      "VM Uncached IOPS Consumed Percentage": {
+        "vm": {
+          "phases": {
+            "post_signal_telemetry": {
+              "bucketsWithAverage": 4,
+              "max": 18.0,
+              "mean": 10.25,
+              "min": 1.0,
+              "p50": 11.0,
+              "p95": 17.0,
+              "timestampBuckets": 4
+            },
+            "replay_tail_to_last_sample": {
+              "bucketsWithAverage": 144,
+              "max": 4.0,
+              "mean": 1.2847222222222223,
+              "min": 1.0,
+              "p50": 1.0,
+              "p95": 4.0,
+              "timestampBuckets": 144
+            },
+            "requested_01_20_to_04_35": {
+              "bucketsWithAverage": 195,
+              "max": 18.0,
+              "mean": 1.8615384615384616,
+              "min": 0.0,
+              "p50": 1.0,
+              "p95": 4.0,
+              "timestampBuckets": 195
+            },
+            "vacuum": {
+              "bucketsWithAverage": 35,
+              "max": 8.0,
+              "mean": 3.8857142857142857,
+              "min": 0.0,
+              "p50": 3.0,
+              "p95": 8.0,
+              "timestampBuckets": 35
+            },
+            "whole_observed_test": {
+              "bucketsWithAverage": 179,
+              "max": 8.0,
+              "mean": 1.7932960893854748,
+              "min": 0.0,
+              "p50": 1.0,
+              "p95": 4.0,
+              "timestampBuckets": 179
+            }
+          },
+          "present": true,
+          "queryBucketsWithAverage": 195,
+          "queryTimestampBuckets": 195,
+          "unit": "Percent"
+        }
+      }
+    }
+  },
+  "status": "historical Azure Monitor diagnostic; read-only; pressure run remains user-terminated and replay-incomplete"
+}

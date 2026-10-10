@@ -1,0 +1,44 @@
+{
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+  "location": "eastus",
+  "managedBy": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-15388874-vmss/virtualMachines/aks-nodepool1-15388874-vmss_1",
+  "name": "pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+  "properties": {
+    "LastOwnershipUpdateTime": "2026-10-07T05:44:43.3829081+00:00",
+    "creationData": {
+      "createOption": "Empty",
+      "logicalSectorSize": 512
+    },
+    "diskIOPSReadOnly": 3000,
+    "diskIOPSReadWrite": 3000,
+    "diskMBpsReadOnly": 125,
+    "diskMBpsReadWrite": 125,
+    "diskSizeBytes": 549755813888,
+    "diskSizeGB": 512,
+    "diskState": "Attached",
+    "encryption": {
+      "type": "EncryptionAtRestWithPlatformKey"
+    },
+    "maxShares": 1,
+    "networkAccessPolicy": "DenyAll",
+    "provisioningState": "Succeeded",
+    "publicNetworkAccess": "Disabled",
+    "readOnly": false,
+    "timeCreated": "2026-10-07T05:44:19.2029565+00:00",
+    "uniqueId": "8013d382-64a3-4ac5-b568-0cde9df7ef18"
+  },
+  "sku": {
+    "name": "PremiumV2_LRS",
+    "tier": "Premium"
+  },
+  "tags": {
+    "k8s-azure-created-by": "kubernetes-azure-dd",
+    "kubernetes.io-created-for-pv-name": "pvc-316a1094-6e0e-4dd5-a32b-070319573632",
+    "kubernetes.io-created-for-pvc-name": "hdd-pg-1-wal",
+    "kubernetes.io-created-for-pvc-namespace": "repro"
+  },
+  "type": "Microsoft.Compute/disks",
+  "zones": [
+    "1"
+  ]
+}

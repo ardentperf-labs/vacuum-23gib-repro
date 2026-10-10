@@ -1,0 +1,14 @@
+{
+  "reviewedAtUtc": "2026-10-06T22:20:00.623830+00:00",
+  "retirementScript": "recovery/staging-retirement/retire_staging_disks.py",
+  "retirementScriptSha256": "4530981b432bace666ff94e90b29a403154a78c74cb349570313ca6fcc889ce7",
+  "retirementFocusedTestsPassed": 20,
+  "hydrationBarrierSha256": "3e2cce41c4b420543c2902b48e49de1e9483d59e2d1b699bbce41b4968001b47",
+  "hydrationFocusedProductionTestsPassed": 13,
+  "baselineReadOnlyLiveReadinessPassed": true,
+  "applyDeferredUntilAllPreparationsCompleteAndConcretePlanReviewed": true,
+  "snapshotDeletionAuthorized": false,
+  "measuredScriptChanges": false,
+  "preparedScriptAndHelperChanges": false,
+  "guaranteeScope": "All measured PremiumV2 disk restores explicit100; two exact owned staging disks absent; all snapshot IDs/UIDs/lock protection preserved. Standard-origin snapshot backend copy completion is unobservable and is not claimed."
+}

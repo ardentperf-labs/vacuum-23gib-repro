@@ -1,0 +1,1031 @@
+{
+  "cost": 216,
+  "interval": "PT1M",
+  "namespace": "Microsoft.Compute/virtualMachines",
+  "resourceregion": "eastus",
+  "timespan": "2026-10-09T06:21:00Z/2026-10-09T06:40:32Z",
+  "value": [
+    {
+      "displayDescription": "Average time to complete each IO during monitoring period for Data Disk. Values are in milliseconds.",
+      "errorCode": "Success",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-02c9d85c083701e812d4fb83/providers/Microsoft.Compute/virtualMachines/fio-vm/providers/Microsoft.Insights/metrics/Data Disk Latency",
+      "name": {
+        "localizedValue": "Data Disk Latency",
+        "value": "Data Disk Latency"
+      },
+      "resourceGroup": "rg-fio-hdd-02c9d85c083701e812d4fb83",
+      "timeseries": [
+        {
+          "data": [
+            {
+              "average": 17.35931,
+              "timeStamp": "2026-10-09T06:21:00Z"
+            },
+            {
+              "average": 40.55421,
+              "timeStamp": "2026-10-09T06:22:00Z"
+            },
+            {
+              "average": 40.77431,
+              "timeStamp": "2026-10-09T06:23:00Z"
+            },
+            {
+              "average": 40.7678,
+              "timeStamp": "2026-10-09T06:24:00Z"
+            },
+            {
+              "average": 40.76538,
+              "timeStamp": "2026-10-09T06:25:00Z"
+            },
+            {
+              "average": 40.75674,
+              "timeStamp": "2026-10-09T06:26:00Z"
+            },
+            {
+              "average": 40.76434,
+              "timeStamp": "2026-10-09T06:27:00Z"
+            },
+            {
+              "average": 40.77447,
+              "timeStamp": "2026-10-09T06:28:00Z"
+            },
+            {
+              "average": 40.76132,
+              "timeStamp": "2026-10-09T06:29:00Z"
+            },
+            {
+              "average": 40.77115,
+              "timeStamp": "2026-10-09T06:30:00Z"
+            },
+            {
+              "average": 40.76453,
+              "timeStamp": "2026-10-09T06:31:00Z"
+            },
+            {
+              "average": 40.77071,
+              "timeStamp": "2026-10-09T06:32:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:33:00Z"
+            },
+            {
+              "average": 1444.90118,
+              "timeStamp": "2026-10-09T06:34:00Z"
+            },
+            {
+              "average": 1480.10398,
+              "timeStamp": "2026-10-09T06:35:00Z"
+            },
+            {
+              "average": 1480.03525,
+              "timeStamp": "2026-10-09T06:36:00Z"
+            },
+            {
+              "average": 1479.50828,
+              "timeStamp": "2026-10-09T06:37:00Z"
+            },
+            {
+              "average": 1600.38702,
+              "timeStamp": "2026-10-09T06:38:00Z"
+            },
+            {
+              "average": 1644.50453,
+              "timeStamp": "2026-10-09T06:39:00Z"
+            }
+          ],
+          "metadatavalues": [
+            {
+              "name": {
+                "localizedValue": "lun",
+                "value": "lun"
+              },
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "type": "Microsoft.Insights/metrics",
+      "unit": "MilliSeconds"
+    },
+    {
+      "displayDescription": "Data Disk Queue Depth(or Queue Length)",
+      "errorCode": "Success",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-02c9d85c083701e812d4fb83/providers/Microsoft.Compute/virtualMachines/fio-vm/providers/Microsoft.Insights/metrics/Data Disk Queue Depth",
+      "name": {
+        "localizedValue": "Data Disk Queue Depth",
+        "value": "Data Disk Queue Depth"
+      },
+      "resourceGroup": "rg-fio-hdd-02c9d85c083701e812d4fb83",
+      "timeseries": [
+        {
+          "data": [
+            {
+              "average": 0.27,
+              "timeStamp": "2026-10-09T06:21:00Z"
+            },
+            {
+              "average": 1.19,
+              "timeStamp": "2026-10-09T06:22:00Z"
+            },
+            {
+              "average": 3.96,
+              "timeStamp": "2026-10-09T06:23:00Z"
+            },
+            {
+              "average": 3.97,
+              "timeStamp": "2026-10-09T06:24:00Z"
+            },
+            {
+              "average": 3.97,
+              "timeStamp": "2026-10-09T06:25:00Z"
+            },
+            {
+              "average": 3.96,
+              "timeStamp": "2026-10-09T06:26:00Z"
+            },
+            {
+              "average": 3.96,
+              "timeStamp": "2026-10-09T06:27:00Z"
+            },
+            {
+              "average": 3.96,
+              "timeStamp": "2026-10-09T06:28:00Z"
+            },
+            {
+              "average": 3.97,
+              "timeStamp": "2026-10-09T06:29:00Z"
+            },
+            {
+              "average": 3.97,
+              "timeStamp": "2026-10-09T06:30:00Z"
+            },
+            {
+              "average": 3.96,
+              "timeStamp": "2026-10-09T06:31:00Z"
+            },
+            {
+              "average": 3.96,
+              "timeStamp": "2026-10-09T06:32:00Z"
+            },
+            {
+              "average": 0.79,
+              "timeStamp": "2026-10-09T06:33:00Z"
+            },
+            {
+              "average": 41.31,
+              "timeStamp": "2026-10-09T06:34:00Z"
+            },
+            {
+              "average": 143.94,
+              "timeStamp": "2026-10-09T06:35:00Z"
+            },
+            {
+              "average": 144.04,
+              "timeStamp": "2026-10-09T06:36:00Z"
+            },
+            {
+              "average": 143.99,
+              "timeStamp": "2026-10-09T06:37:00Z"
+            },
+            {
+              "average": 79.59,
+              "timeStamp": "2026-10-09T06:38:00Z"
+            },
+            {
+              "average": 159.96,
+              "timeStamp": "2026-10-09T06:39:00Z"
+            }
+          ],
+          "metadatavalues": [
+            {
+              "name": {
+                "localizedValue": "lun",
+                "value": "lun"
+              },
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "type": "Microsoft.Insights/metrics",
+      "unit": "Count"
+    },
+    {
+      "displayDescription": "Read IOPS from a single disk during monitoring period",
+      "errorCode": "Success",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-02c9d85c083701e812d4fb83/providers/Microsoft.Compute/virtualMachines/fio-vm/providers/Microsoft.Insights/metrics/Data Disk Read Operations/Sec",
+      "name": {
+        "localizedValue": "Data Disk Read Operations/Sec",
+        "value": "Data Disk Read Operations/Sec"
+      },
+      "resourceGroup": "rg-fio-hdd-02c9d85c083701e812d4fb83",
+      "timeseries": [
+        {
+          "data": [
+            {
+              "average": 15.31,
+              "timeStamp": "2026-10-09T06:21:00Z"
+            },
+            {
+              "average": 30.35,
+              "timeStamp": "2026-10-09T06:22:00Z"
+            },
+            {
+              "average": 97.24,
+              "timeStamp": "2026-10-09T06:23:00Z"
+            },
+            {
+              "average": 97.25,
+              "timeStamp": "2026-10-09T06:24:00Z"
+            },
+            {
+              "average": 97.31,
+              "timeStamp": "2026-10-09T06:25:00Z"
+            },
+            {
+              "average": 97.26,
+              "timeStamp": "2026-10-09T06:26:00Z"
+            },
+            {
+              "average": 97.27,
+              "timeStamp": "2026-10-09T06:27:00Z"
+            },
+            {
+              "average": 97.24,
+              "timeStamp": "2026-10-09T06:28:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:29:00Z"
+            },
+            {
+              "average": 97.285,
+              "timeStamp": "2026-10-09T06:30:00Z"
+            },
+            {
+              "average": 97.29,
+              "timeStamp": "2026-10-09T06:31:00Z"
+            },
+            {
+              "average": 97.22,
+              "timeStamp": "2026-10-09T06:32:00Z"
+            },
+            {
+              "average": 19.54,
+              "timeStamp": "2026-10-09T06:33:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:34:00Z"
+            },
+            {
+              "average": 63.215,
+              "timeStamp": "2026-10-09T06:35:00Z"
+            },
+            {
+              "average": 97.32,
+              "timeStamp": "2026-10-09T06:36:00Z"
+            },
+            {
+              "average": 97.28,
+              "timeStamp": "2026-10-09T06:37:00Z"
+            },
+            {
+              "average": 52.15,
+              "timeStamp": "2026-10-09T06:38:00Z"
+            },
+            {
+              "average": 97.26,
+              "timeStamp": "2026-10-09T06:39:00Z"
+            }
+          ],
+          "metadatavalues": [
+            {
+              "name": {
+                "localizedValue": "lun",
+                "value": "lun"
+              },
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "type": "Microsoft.Insights/metrics",
+      "unit": "CountPerSecond"
+    },
+    {
+      "displayDescription": "Bytes/Sec read from a single disk during monitoring period",
+      "errorCode": "Success",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-02c9d85c083701e812d4fb83/providers/Microsoft.Compute/virtualMachines/fio-vm/providers/Microsoft.Insights/metrics/Data Disk Read Bytes/sec",
+      "name": {
+        "localizedValue": "Data Disk Read Bytes/Sec",
+        "value": "Data Disk Read Bytes/sec"
+      },
+      "resourceGroup": "rg-fio-hdd-02c9d85c083701e812d4fb83",
+      "timeseries": [
+        {
+          "data": [
+            {
+              "average": 139023.0,
+              "timeStamp": "2026-10-09T06:21:00Z"
+            },
+            {
+              "average": 30388255.0,
+              "timeStamp": "2026-10-09T06:22:00Z"
+            },
+            {
+              "average": 101966180.0,
+              "timeStamp": "2026-10-09T06:23:00Z"
+            },
+            {
+              "average": 101978244.0,
+              "timeStamp": "2026-10-09T06:24:00Z"
+            },
+            {
+              "average": 102037454.0,
+              "timeStamp": "2026-10-09T06:25:00Z"
+            },
+            {
+              "average": 101990162.0,
+              "timeStamp": "2026-10-09T06:26:00Z"
+            },
+            {
+              "average": 101999225.0,
+              "timeStamp": "2026-10-09T06:27:00Z"
+            },
+            {
+              "average": 101971156.0,
+              "timeStamp": "2026-10-09T06:28:00Z"
+            },
+            {
+              "average": 102001074.0,
+              "timeStamp": "2026-10-09T06:29:00Z"
+            },
+            {
+              "average": 102031426.0,
+              "timeStamp": "2026-10-09T06:30:00Z"
+            },
+            {
+              "average": 102020956.0,
+              "timeStamp": "2026-10-09T06:31:00Z"
+            },
+            {
+              "average": 101952346.0,
+              "timeStamp": "2026-10-09T06:32:00Z"
+            },
+            {
+              "average": 20495955.0,
+              "timeStamp": "2026-10-09T06:33:00Z"
+            },
+            {
+              "average": 30603692.0,
+              "timeStamp": "2026-10-09T06:34:00Z"
+            },
+            {
+              "average": 101976799.0,
+              "timeStamp": "2026-10-09T06:35:00Z"
+            },
+            {
+              "average": 102049205.0,
+              "timeStamp": "2026-10-09T06:36:00Z"
+            },
+            {
+              "average": 102015890.0,
+              "timeStamp": "2026-10-09T06:37:00Z"
+            },
+            {
+              "average": 54685331.0,
+              "timeStamp": "2026-10-09T06:38:00Z"
+            },
+            {
+              "average": 101992884.0,
+              "timeStamp": "2026-10-09T06:39:00Z"
+            }
+          ],
+          "metadatavalues": [
+            {
+              "name": {
+                "localizedValue": "lun",
+                "value": "lun"
+              },
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "type": "Microsoft.Insights/metrics",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "displayDescription": "Write IOPS from a single disk during monitoring period",
+      "errorCode": "Success",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-02c9d85c083701e812d4fb83/providers/Microsoft.Compute/virtualMachines/fio-vm/providers/Microsoft.Insights/metrics/Data Disk Write Operations/Sec",
+      "name": {
+        "localizedValue": "Data Disk Write Operations/Sec",
+        "value": "Data Disk Write Operations/Sec"
+      },
+      "resourceGroup": "rg-fio-hdd-02c9d85c083701e812d4fb83",
+      "timeseries": [
+        {
+          "data": [
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:21:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:22:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:23:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:24:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:25:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:26:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:27:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:28:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:29:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:30:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:31:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:32:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:33:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:34:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:35:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:36:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:37:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:38:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:39:00Z"
+            }
+          ],
+          "metadatavalues": [
+            {
+              "name": {
+                "localizedValue": "lun",
+                "value": "lun"
+              },
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "type": "Microsoft.Insights/metrics",
+      "unit": "CountPerSecond"
+    },
+    {
+      "displayDescription": "Bytes/Sec written to a single disk during monitoring period",
+      "errorCode": "Success",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-02c9d85c083701e812d4fb83/providers/Microsoft.Compute/virtualMachines/fio-vm/providers/Microsoft.Insights/metrics/Data Disk Write Bytes/sec",
+      "name": {
+        "localizedValue": "Data Disk Write Bytes/Sec",
+        "value": "Data Disk Write Bytes/sec"
+      },
+      "resourceGroup": "rg-fio-hdd-02c9d85c083701e812d4fb83",
+      "timeseries": [
+        {
+          "data": [
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:21:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:22:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:23:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:24:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:25:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:26:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:27:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:28:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:29:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:30:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:31:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:32:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:33:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:34:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:35:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:36:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:37:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:38:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:39:00Z"
+            }
+          ],
+          "metadatavalues": [
+            {
+              "name": {
+                "localizedValue": "lun",
+                "value": "lun"
+              },
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "type": "Microsoft.Insights/metrics",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "displayDescription": "Percentage of data disk I/Os consumed per minute. Only available on VM series that support premium storage.",
+      "errorCode": "Success",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-02c9d85c083701e812d4fb83/providers/Microsoft.Compute/virtualMachines/fio-vm/providers/Microsoft.Insights/metrics/Data Disk IOPS Consumed Percentage",
+      "name": {
+        "localizedValue": "Data Disk IOPS Consumed Percentage",
+        "value": "Data Disk IOPS Consumed Percentage"
+      },
+      "resourceGroup": "rg-fio-hdd-02c9d85c083701e812d4fb83",
+      "timeseries": [
+        {
+          "data": [
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:21:00Z"
+            },
+            {
+              "average": 2.0,
+              "timeStamp": "2026-10-09T06:22:00Z"
+            },
+            {
+              "average": 9.0,
+              "timeStamp": "2026-10-09T06:23:00Z"
+            },
+            {
+              "average": 17.0,
+              "timeStamp": "2026-10-09T06:24:00Z"
+            },
+            {
+              "average": 17.0,
+              "timeStamp": "2026-10-09T06:25:00Z"
+            },
+            {
+              "average": 17.0,
+              "timeStamp": "2026-10-09T06:26:00Z"
+            },
+            {
+              "average": 17.0,
+              "timeStamp": "2026-10-09T06:27:00Z"
+            },
+            {
+              "average": 17.0,
+              "timeStamp": "2026-10-09T06:28:00Z"
+            },
+            {
+              "average": 17.0,
+              "timeStamp": "2026-10-09T06:29:00Z"
+            },
+            {
+              "average": 17.0,
+              "timeStamp": "2026-10-09T06:30:00Z"
+            },
+            {
+              "average": 17.0,
+              "timeStamp": "2026-10-09T06:31:00Z"
+            },
+            {
+              "average": 17.0,
+              "timeStamp": "2026-10-09T06:32:00Z"
+            },
+            {
+              "average": 16.0,
+              "timeStamp": "2026-10-09T06:33:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:34:00Z"
+            },
+            {
+              "average": 9.0,
+              "timeStamp": "2026-10-09T06:35:00Z"
+            },
+            {
+              "average": 17.0,
+              "timeStamp": "2026-10-09T06:36:00Z"
+            },
+            {
+              "average": 17.0,
+              "timeStamp": "2026-10-09T06:37:00Z"
+            },
+            {
+              "average": 17.0,
+              "timeStamp": "2026-10-09T06:38:00Z"
+            },
+            {
+              "average": 9.0,
+              "timeStamp": "2026-10-09T06:39:00Z"
+            }
+          ],
+          "metadatavalues": [
+            {
+              "name": {
+                "localizedValue": "lun",
+                "value": "lun"
+              },
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "type": "Microsoft.Insights/metrics",
+      "unit": "Percent"
+    },
+    {
+      "displayDescription": "Percentage of data disk bandwidth consumed per minute. Only available on VM series that support premium storage.",
+      "errorCode": "Success",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-02c9d85c083701e812d4fb83/providers/Microsoft.Compute/virtualMachines/fio-vm/providers/Microsoft.Insights/metrics/Data Disk Bandwidth Consumed Percentage",
+      "name": {
+        "localizedValue": "Data Disk Bandwidth Consumed Percentage",
+        "value": "Data Disk Bandwidth Consumed Percentage"
+      },
+      "resourceGroup": "rg-fio-hdd-02c9d85c083701e812d4fb83",
+      "timeseries": [
+        {
+          "data": [
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:21:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:22:00Z"
+            },
+            {
+              "average": 55.0,
+              "timeStamp": "2026-10-09T06:23:00Z"
+            },
+            {
+              "average": 99.0,
+              "timeStamp": "2026-10-09T06:24:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T06:25:00Z"
+            },
+            {
+              "average": 99.0,
+              "timeStamp": "2026-10-09T06:26:00Z"
+            },
+            {
+              "average": 99.0,
+              "timeStamp": "2026-10-09T06:27:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T06:28:00Z"
+            },
+            {
+              "average": 99.0,
+              "timeStamp": "2026-10-09T06:29:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T06:30:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T06:31:00Z"
+            },
+            {
+              "average": 99.0,
+              "timeStamp": "2026-10-09T06:32:00Z"
+            },
+            {
+              "average": 94.0,
+              "timeStamp": "2026-10-09T06:33:00Z"
+            },
+            {
+              "average": 0.0,
+              "timeStamp": "2026-10-09T06:34:00Z"
+            },
+            {
+              "average": 55.0,
+              "timeStamp": "2026-10-09T06:35:00Z"
+            },
+            {
+              "average": 100.0,
+              "timeStamp": "2026-10-09T06:36:00Z"
+            },
+            {
+              "average": 99.0,
+              "timeStamp": "2026-10-09T06:37:00Z"
+            },
+            {
+              "average": 98.0,
+              "timeStamp": "2026-10-09T06:38:00Z"
+            },
+            {
+              "average": 55.0,
+              "timeStamp": "2026-10-09T06:39:00Z"
+            }
+          ],
+          "metadatavalues": [
+            {
+              "name": {
+                "localizedValue": "lun",
+                "value": "lun"
+              },
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "type": "Microsoft.Insights/metrics",
+      "unit": "Percent"
+    },
+    {
+      "displayDescription": "Baseline IOPS Data Disk can achieve without bursting",
+      "errorCode": "Success",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-02c9d85c083701e812d4fb83/providers/Microsoft.Compute/virtualMachines/fio-vm/providers/Microsoft.Insights/metrics/Data Disk Target IOPS",
+      "name": {
+        "localizedValue": "Data Disk Target IOPS",
+        "value": "Data Disk Target IOPS"
+      },
+      "resourceGroup": "rg-fio-hdd-02c9d85c083701e812d4fb83",
+      "timeseries": [
+        {
+          "data": [
+            {
+              "timeStamp": "2026-10-09T06:21:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:22:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:23:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:24:00Z"
+            },
+            {
+              "average": 550.0,
+              "timeStamp": "2026-10-09T06:25:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:26:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:27:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:28:00Z"
+            },
+            {
+              "average": 550.0,
+              "timeStamp": "2026-10-09T06:29:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:30:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:31:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:32:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:33:00Z"
+            },
+            {
+              "average": 550.0,
+              "timeStamp": "2026-10-09T06:34:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:35:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:36:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:37:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:38:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:39:00Z"
+            }
+          ],
+          "metadatavalues": [
+            {
+              "name": {
+                "localizedValue": "lun",
+                "value": "lun"
+              },
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "type": "Microsoft.Insights/metrics",
+      "unit": "Count"
+    },
+    {
+      "displayDescription": "Baseline bytes per second throughput Data Disk can achieve without bursting",
+      "errorCode": "Success",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-02c9d85c083701e812d4fb83/providers/Microsoft.Compute/virtualMachines/fio-vm/providers/Microsoft.Insights/metrics/Data Disk Target Bandwidth",
+      "name": {
+        "localizedValue": "Data Disk Target Bandwidth",
+        "value": "Data Disk Target Bandwidth"
+      },
+      "resourceGroup": "rg-fio-hdd-02c9d85c083701e812d4fb83",
+      "timeseries": [
+        {
+          "data": [
+            {
+              "timeStamp": "2026-10-09T06:21:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:22:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:23:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:24:00Z"
+            },
+            {
+              "average": 100000000.0,
+              "timeStamp": "2026-10-09T06:25:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:26:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:27:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:28:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:29:00Z"
+            },
+            {
+              "average": 100000000.0,
+              "timeStamp": "2026-10-09T06:30:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:31:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:32:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:33:00Z"
+            },
+            {
+              "average": 100000000.0,
+              "timeStamp": "2026-10-09T06:34:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:35:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:36:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:37:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:38:00Z"
+            },
+            {
+              "timeStamp": "2026-10-09T06:39:00Z"
+            }
+          ],
+          "metadatavalues": [
+            {
+              "name": {
+                "localizedValue": "lun",
+                "value": "lun"
+              },
+              "value": "0"
+            }
+          ]
+        }
+      ],
+      "type": "Microsoft.Insights/metrics",
+      "unit": "Count"
+    },
+    {
+      "displayDescription": "Maximum bytes per second throughput Data Disk can achieve with bursting",
+      "errorCode": "Success",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-02c9d85c083701e812d4fb83/providers/Microsoft.Compute/virtualMachines/fio-vm/providers/Microsoft.Insights/metrics/Data Disk Max Burst Bandwidth",
+      "name": {
+        "localizedValue": "Data Disk Max Burst Bandwidth",
+        "value": "Data Disk Max Burst Bandwidth"
+      },
+      "resourceGroup": "rg-fio-hdd-02c9d85c083701e812d4fb83",
+      "timeseries": [],
+      "type": "Microsoft.Insights/metrics",
+      "unit": "Count"
+    },
+    {
+      "displayDescription": "Percentage of Data Disk burst bandwidth credits used so far",
+      "errorCode": "Success",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-fio-hdd-02c9d85c083701e812d4fb83/providers/Microsoft.Compute/virtualMachines/fio-vm/providers/Microsoft.Insights/metrics/Data Disk Used Burst BPS Credits Percentage",
+      "name": {
+        "localizedValue": "Data Disk Used Burst BPS Credits Percentage",
+        "value": "Data Disk Used Burst BPS Credits Percentage"
+      },
+      "resourceGroup": "rg-fio-hdd-02c9d85c083701e812d4fb83",
+      "timeseries": [],
+      "type": "Microsoft.Insights/metrics",
+      "unit": "Percent"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-06T22:08:54Z",
+  "checkpoint": "20261006T220854Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "activeFixturePhase": "create-index",
+      "indexPhase": "building index: scanning table",
+      "indexBlocksDone": 1207998,
+      "indexBlocksTotal": 6553600,
+      "indexScanFraction": 0.18432586669921874,
+      "indexElapsedSeconds": 524,
+      "fixtureHeapBytes": 53687091200,
+      "fixtureHeapGiB": 50,
+      "primaryDataDisk": {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5c241a190a85f40b788038945c9744f6/providers/Microsoft.Compute/disks/pvc-8c6afc42-60ef-409d-b8a4-f53c3c3145d2",
+        "provisioningState": "Succeeded",
+        "createOption": "Copy",
+        "completionPercent": 100,
+        "sku": "PremiumV2_LRS",
+        "sizeGiB": 512,
+        "iops": 3000,
+        "throughputMBps": 125,
+        "logicalSectorSize": 512,
+        "zone": "1"
+      }
+    },
+    "100gib": {
+      "processStatus": "running",
+      "activeFixturePhase": "insert",
+      "insertElapsedSeconds": 3987,
+      "fixtureHeapBytes": 60262440960,
+      "fixtureHeapGiB": 56.12377166748047,
+      "primaryDataDisk": {
+        "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-f1b90aec9e24f6a2008d6991738742cf/providers/Microsoft.Compute/disks/pvc-a0e5e9a4-51b2-4b34-90e8-f1e79a7439c1",
+        "provisioningState": "Succeeded",
+        "createOption": "Copy",
+        "completionPercent": 100,
+        "sku": "PremiumV2_LRS",
+        "sizeGiB": 512,
+        "iops": 3000,
+        "throughputMBps": 125,
+        "logicalSectorSize": 512,
+        "zone": "1"
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "observedAtUtc": "2026-10-07T00:42:18Z",
+  "checkpoint": "20261007T004218Z",
+  "source": "read-only live observation",
+  "phase": "prepare",
+  "measurementStarted": false,
+  "stacks": {
+    "50gib": {
+      "processStatus": "running",
+      "supervisorPid": 126516,
+      "childPid": 126519,
+      "assignedTargetHeapBytes": 53687091200,
+      "activeFixturePhase": "wal-storage-primary-restart",
+      "clusterPhase": "Primary instance is being restarted without a switchover",
+      "clusterReadyInstances": null,
+      "pod": "hdd-pg-1",
+      "podUid": "9ddbf8e7-eb71-49f7-952d-d0be0190bf3b",
+      "podPhase": "Running",
+      "podReady": false,
+      "podDeletionTimestamp": "2026-10-07T00:54:45Z",
+      "podObservedAtUtc": "2026-10-07T00:42:18Z",
+      "activeQuery": null
+    },
+    "100gib": {
+      "processStatus": "running",
+      "supervisorPid": 126517,
+      "childPid": 126518,
+      "assignedTargetHeapBytes": 107374182400,
+      "activeFixturePhase": "create-index",
+      "indexPhase": "building index: scanning table",
+      "indexBlocksDone": 2181743,
+      "indexBlocksTotal": 13107200,
+      "indexScanFraction": 0.1664537811279297,
+      "indexElapsedSeconds": 1440,
+      "activeWaits": [
+        {
+          "type": "LWLock",
+          "event": "WALWrite"
+        }
+      ],
+      "stageRelationBytes": 107374182400,
+      "pod": "hdd-pg-1",
+      "podReady": true
+    }
+  }
+}

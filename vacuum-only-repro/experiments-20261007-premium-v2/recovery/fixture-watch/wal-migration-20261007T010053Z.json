@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "stack": "50gib",
+  "measurementStarted": false,
+  "diagnostic": "read-only WAL migration totals; no filenames or contents collected",
+  "previousSample": {
+    "observedAtUtc": "2026-10-07T00:57:46Z",
+    "sourceApparentBytes": 45080379730,
+    "sourceAllocatedBytes": 45081350144,
+    "destinationApparentBytes": 21838364672,
+    "destinationAllocatedBytes": 21838434304,
+    "sourceFsFreeBytes": 440409165824,
+    "destinationFsFreeBytes": 518120955904
+  },
+  "currentSample": {
+    "observedAtUtc": "2026-10-07T01:00:53Z",
+    "sourceApparentBytes": 45080379730,
+    "sourceAllocatedBytes": 45081350144,
+    "destinationApparentBytes": 26764443648,
+    "destinationAllocatedBytes": 26764513280,
+    "sourceFilesystemTotalBytes": 539978293248,
+    "sourceFilesystemUsedBytes": 99552350208,
+    "sourceFsFreeBytes": 440409165824,
+    "destinationFilesystemTotalBytes": 539978293248,
+    "destinationFilesystemUsedBytes": 26766671872,
+    "destinationFsFreeBytes": 513194844160
+  },
+  "intervalSeconds": 187,
+  "destinationApparentDeltaBytes": 4926078976,
+  "destinationApparentDeltaGiB": 4.5877685546875,
+  "averageApparentCopyRateMiBps": 25.122326203208555,
+  "sourceBytesRemainingByTotals": 18315936082,
+  "destinationFractionOfSource": 0.5937049290245631,
+  "processTable": [
+    {
+      "pid": 1,
+      "state": "Ssl",
+      "elapsed": "00:11:42",
+      "comm": "manager"
+    }
+  ],
+  "separateMoveCopyProcess": false,
+  "managerLog": "Moving data from data-volume pg_wal path to WAL-volume pg_wal path"
+}

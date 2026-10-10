@@ -1,0 +1,473 @@
+{
+  "capturedAtUtc": "2026-10-07T12:14:44.188416+00:00",
+  "interpretationNotes": [
+    "VACUUM tuple counts are reported exactly as PostgreSQL logged them; they need not equal prepared dead/live tuple estimates or DML command counts.",
+    "For baseline-23gib and 50gib, raw original INSERT/DELETE psql output is not retained; only prepared estimate metadata is shown.",
+    "For 100gib, the separate captured psql output proves DELETE 32768000 and CHECKPOINT with status 0; INSERT output is unavailable. Do not conflate that DELETE count or the prepared estimate with VACUUM\u2019s 32767995 removed-tuple count.",
+    "WAL marker deltas are cluster pg_stat_wal bytes/records/full_page_images across the logged VACUUM start/end; they include background WAL and are not physical disk-write measurements.",
+    "This is a local read-only evidence note; it does not change frozen reports, runtime scripts, or the report publisher.",
+    "Each backendWalUsage value comes from the target-table VACUUM INFO line; clusterWalMarkerDelta is the separate cluster pg_stat_wal difference. Neither is a physical disk-write counter.",
+    "Measurement-completion receipts are included separately from VACUUM log markers; the latter bound the command window, while replica replay completion may occur later."
+  ],
+  "purpose": "Compact evidence from the three measured PostgreSQL VACUUM logs, with fixture estimates/DML evidence kept separate and cluster WAL counters labeled by scope.",
+  "runs": {
+    "100gib": {
+      "backendWalUsage": {
+        "bytes": 160575194979,
+        "fullPageImages": 26397194,
+        "records": 65718290,
+        "scope": "target relation VACUUM backend INFO line for repro.public.vacuum_target",
+        "source": {
+          "lineNumber": 14,
+          "path": "100gib/results/vacuum.log",
+          "sha256": "30117dd9eccf3ecc566b8bc801bb25ddbcd162cf0993fc240d75e31bdde9e075"
+        }
+      },
+      "clusterWalMarkerDelta": {
+        "bytes": 160575264573,
+        "fullPageImages": 26397194,
+        "records": 65719302,
+        "scope": "cluster pg_stat_wal counters sampled at VACUUM markers; include background WAL and are not physical disk-write counters"
+      },
+      "complete": {
+        "clusterWalBytes": 635905026315,
+        "clusterWalFullPageImages": 72614703,
+        "clusterWalRecords": 210245128,
+        "lineNumber": 30,
+        "lsn": "C0/140EBE90",
+        "timeUtc": "2026-10-07T10:34:28.321130Z"
+      },
+      "durationSeconds": 7107.337351,
+      "measurementCompletion": {
+        "allWindowsValid": true,
+        "coverageValid": true,
+        "exitCode": 0,
+        "finalLagBytes": 0,
+        "finalPrimaryFlushLsn": "C0/15000000",
+        "finalReplicaReplayLsn": "C0/15000000",
+        "finishedAtUtc": "2026-10-07T12:12:20.645378+00:00",
+        "maximumAllowedSampleGapSeconds": 12.5,
+        "maximumSampleGapSeconds": 5.9032392501831055,
+        "replayCaughtUp": true,
+        "replayEnd": "2026-10-07T12:12:15.664417135Z",
+        "sampleCount": 2597,
+        "scriptSha256": {
+          "03-test.py": "59e3eb442dc2fa0d52df6eb97b8addd728f21b5742635d842afbf857f5c5a8a3",
+          "plot.py": "70155d4c5b5d1685600c431805feb305e7235aebb4081155668390e4467aca52"
+        },
+        "status": "complete",
+        "summaryReceipt": {
+          "path": "100gib/results/summary.json",
+          "sha256": "1282ddb8f4909fdad9b7f2fe4a1ec1c6dbbeab40b6e52165ba62db9dd79e70c0"
+        },
+        "targetLsn": "C0/140EBE90",
+        "testComplete": true,
+        "testProcessReceipt": {
+          "path": "100gib/.state/test-process.json",
+          "sha256": "231127ff3e23be4364f5176e3886dd8704f2bea7965e7cff6a7bfc8862bd6083"
+        },
+        "testStatePhase": "complete",
+        "testStateReceipt": {
+          "path": "100gib/.state/test-state.json",
+          "sha256": "3cf1ad04202783dd994be698453e1d0993458c3b52cc86353d6a83f2d683f760"
+        },
+        "timingReceipt": {
+          "path": "100gib/results/timing.json",
+          "sha256": "6804642b6443d9f928093fae424a61e563d53f723e85e6db23e59bc02398205d"
+        },
+        "vacuumComplete": "2026-10-07T10:34:28.321130Z",
+        "vacuumExitCode": 0,
+        "vacuumStart": "2026-10-07T08:36:00.983779Z"
+      },
+      "preparedFixtureAndDmlEvidence": {
+        "captureManifest": {
+          "path": "recovery/fixture-watch/100-dml-output/final-20261007T051507Z/capture-manifest.json",
+          "sha256": "5aa531c946803b3936b068fc2a48fac5f83a3828291487997b6c27e9a24448b4"
+        },
+        "capturedAtUtc": "2026-10-07T05:15:07.274796Z",
+        "capturedOutput": {
+          "path": "recovery/fixture-watch/100-dml-output/final-20261007T051507Z/out",
+          "sha256": "a20fccfbfdeaa7de3929eaebb554b42aec408acdf7da3965354d9717372849cb"
+        },
+        "capturedOutputLines": [
+          "CREATE INDEX",
+          "DELETE 32768000",
+          "CHECKPOINT"
+        ],
+        "capturedPsqlStatus": "0",
+        "capturedStatus": {
+          "path": "recovery/fixture-watch/100-dml-output/final-20261007T051507Z/status",
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        "estimateSource": {
+          "jsonPath": "prepare.preparedDeadTuplesEstimate / prepare.preparedLiveTuplesEstimate",
+          "path": "100gib/results/preflight.json",
+          "sha256": "5a329897a8ce2bfb9bd2e83006f99463c2189655a29d5e7b1eb5376e2e9499aa"
+        },
+        "insertOutputCaptureStatus": "not captured; captured output is CREATE INDEX / DELETE / CHECKPOINT only",
+        "insertOutputCaptured": false,
+        "preparedDeadTuplesEstimate": 32768000,
+        "preparedLiveTuplesEstimate": 32768000,
+        "status": "captured read-only psql output and status"
+      },
+      "sources": {
+        "preflight": {
+          "path": "100gib/results/preflight.json",
+          "sha256": "5a329897a8ce2bfb9bd2e83006f99463c2189655a29d5e7b1eb5376e2e9499aa"
+        },
+        "timing": {
+          "note": "03-test writes final timing after replay drainage completes",
+          "path": "100gib/results/timing.json",
+          "present": false
+        },
+        "vacuumLog": {
+          "backendWalUsageLine": 14,
+          "path": "100gib/results/vacuum.log",
+          "sha256": "30117dd9eccf3ecc566b8bc801bb25ddbcd162cf0993fc240d75e31bdde9e075",
+          "tableSummaryLines": "3-9"
+        }
+      },
+      "start": {
+        "clusterWalBytes": 475329761742,
+        "clusterWalFullPageImages": 46217509,
+        "clusterWalRecords": 144525826,
+        "lineNumber": 1,
+        "lsn": "9A/86000110",
+        "timeUtc": "2026-10-07T08:36:00.983779Z"
+      },
+      "tableOutput": {
+        "deadButNotYetRemovable": 0,
+        "deadItemIdentifiersRemoved": 32768000,
+        "frozenPagePercent": "100.00%",
+        "frozenPages": 13107200,
+        "indexScans": 3,
+        "pagesRemaining": 13107200,
+        "pagesRemoved": 0,
+        "pagesScanned": 13107200,
+        "pagesWithDeadItemIdentifiersRemoved": 13107200,
+        "scanPercent": "100.00%",
+        "sourceLines": {
+          "backendWalUsage": 14,
+          "deadItemIdentifiers": 9,
+          "frozen": 8,
+          "indexScans": 3,
+          "pages": 4,
+          "removableCutoff": 6,
+          "tuples": 5
+        },
+        "table": "repro.public.vacuum_target",
+        "tuplesFrozen": 32768000,
+        "tuplesRemaining": 32768000,
+        "tuplesRemoved": 32767995
+      },
+      "vacuumCommand": "VACUUM (VERBOSE, FREEZE) public.vacuum_target;",
+      "vacuumProcessReceipt": {
+        "applicationName": "vacuum-only-62c5b6026dfc4c9db69f4fa58d0a087e",
+        "path": "100gib/results/vacuum-process.json",
+        "pod": "hdd-pg-1",
+        "remoteExitCode": 0,
+        "sha256": "766f21ec85984bb5a2e03c53a6e5de5ecf2c72ba8a0d154808838905d858c25a",
+        "status": "0"
+      }
+    },
+    "50gib": {
+      "backendWalUsage": {
+        "bytes": 80287594673,
+        "fullPageImages": 13198598,
+        "records": 32859145,
+        "scope": "target relation VACUUM backend INFO line for repro.public.vacuum_target",
+        "source": {
+          "lineNumber": 14,
+          "path": "50gib/results/vacuum.log",
+          "sha256": "31a7f7b1ab7bd729f891e3a0c7c41b622b27be71714de51e4e3a58137b71f776"
+        }
+      },
+      "clusterWalMarkerDelta": {
+        "bytes": 80287624673,
+        "fullPageImages": 13198598,
+        "records": 32859552,
+        "scope": "cluster pg_stat_wal counters sampled at VACUUM markers; include background WAL and are not physical disk-write counters"
+      },
+      "complete": {
+        "clusterWalBytes": 318019430479,
+        "clusterWalFullPageImages": 36315755,
+        "clusterWalRecords": 105130836,
+        "lineNumber": 30,
+        "lsn": "7B/D406CFD8",
+        "timeUtc": "2026-10-07T09:06:27.031178Z"
+      },
+      "durationSeconds": 1830.522142,
+      "measurementCompletion": {
+        "allWindowsValid": true,
+        "coverageValid": true,
+        "exitCode": 0,
+        "finalLagBytes": 0,
+        "finalPrimaryFlushLsn": "7B/D5000000",
+        "finalReplicaReplayLsn": "7B/D5000000",
+        "finishedAtUtc": "2026-10-07T09:48:07.495116+00:00",
+        "maximumAllowedSampleGapSeconds": 12.5,
+        "maximumSampleGapSeconds": 12.05941367149353,
+        "replayCaughtUp": true,
+        "replayEnd": "2026-10-07T09:48:04.651234207Z",
+        "sampleCount": 868,
+        "scriptSha256": {
+          "03-test.py": "59e3eb442dc2fa0d52df6eb97b8addd728f21b5742635d842afbf857f5c5a8a3",
+          "plot.py": "70155d4c5b5d1685600c431805feb305e7235aebb4081155668390e4467aca52"
+        },
+        "status": "complete",
+        "summaryReceipt": {
+          "path": "50gib/results/summary.json",
+          "sha256": "95d00c5fae44c0f92194dceea6cd6cda6fa64139ef026000ff4b4cca89180a30"
+        },
+        "targetLsn": "7B/D406CFD8",
+        "testComplete": true,
+        "testProcessReceipt": {
+          "path": "50gib/.state/test-process.json",
+          "sha256": "3da481af0cdbbc190aaeaef8d745877f69426729b647c406e9705567ebbd8570"
+        },
+        "testStatePhase": "complete",
+        "testStateReceipt": {
+          "path": "50gib/.state/test-state.json",
+          "sha256": "f66aeffc9f83ef319e32cf28c5078678afb9c86bc745ea7342b05f9854e75eea"
+        },
+        "timingReceipt": {
+          "path": "50gib/results/timing.json",
+          "sha256": "732ff5ee6c3ca6e93a68febbf38ac56fb0e10b8c813087c76f124a3d2ac5b742"
+        },
+        "vacuumComplete": "2026-10-07T09:06:27.031178Z",
+        "vacuumExitCode": 0,
+        "vacuumStart": "2026-10-07T08:35:56.509036Z"
+      },
+      "preparedFixtureAndDmlEvidence": {
+        "dmlTranscriptAvailabilityEvidence": {
+          "jsonPath": "limitations[0]",
+          "note": "The audit explicitly says original INSERT/DELETE output was command-substituted and removed.",
+          "path": "50gib/.state/recovery/numeric-finalize-audit.json",
+          "sha256": "4be86574bed3bb3ce573876740d5e6f0eca708729cbcf50fa2d0daae6c4a0767"
+        },
+        "estimateSource": {
+          "jsonPath": "prepare.preparedDeadTuplesEstimate / prepare.preparedLiveTuplesEstimate",
+          "path": "50gib/results/preflight.json",
+          "sha256": "00ad2f20dfd93d040ab4ba434fea64ef6adf67d9e5a645d41d59ef1d179c79f7"
+        },
+        "preparedDeadTuplesEstimate": 16384000,
+        "preparedLiveTuplesEstimate": 16384000,
+        "status": "raw fixture DML output not retained"
+      },
+      "sources": {
+        "preflight": {
+          "path": "50gib/results/preflight.json",
+          "sha256": "00ad2f20dfd93d040ab4ba434fea64ef6adf67d9e5a645d41d59ef1d179c79f7"
+        },
+        "timing": {
+          "path": "50gib/results/timing.json",
+          "present": true,
+          "remoteVacuumExitCode": 0,
+          "sha256": "732ff5ee6c3ca6e93a68febbf38ac56fb0e10b8c813087c76f124a3d2ac5b742",
+          "testComplete": true,
+          "walDeltaVacuumMarkers": null
+        },
+        "vacuumLog": {
+          "backendWalUsageLine": 14,
+          "path": "50gib/results/vacuum.log",
+          "sha256": "31a7f7b1ab7bd729f891e3a0c7c41b622b27be71714de51e4e3a58137b71f776",
+          "tableSummaryLines": "3-9"
+        }
+      },
+      "start": {
+        "clusterWalBytes": 237731805806,
+        "clusterWalFullPageImages": 23117157,
+        "clusterWalRecords": 72271284,
+        "lineNumber": 1,
+        "lsn": "69/D000110",
+        "timeUtc": "2026-10-07T08:35:56.509036Z"
+      },
+      "tableOutput": {
+        "deadButNotYetRemovable": 0,
+        "deadItemIdentifiersRemoved": 16384000,
+        "frozenPagePercent": "100.00%",
+        "frozenPages": 6553600,
+        "indexScans": 2,
+        "pagesRemaining": 6553600,
+        "pagesRemoved": 0,
+        "pagesScanned": 6553600,
+        "pagesWithDeadItemIdentifiersRemoved": 6553600,
+        "scanPercent": "100.00%",
+        "sourceLines": {
+          "backendWalUsage": 14,
+          "deadItemIdentifiers": 9,
+          "frozen": 8,
+          "indexScans": 3,
+          "pages": 4,
+          "removableCutoff": 6,
+          "tuples": 5
+        },
+        "table": "repro.public.vacuum_target",
+        "tuplesFrozen": 16384000,
+        "tuplesRemaining": 16384000,
+        "tuplesRemoved": 16383995
+      },
+      "vacuumCommand": "VACUUM (VERBOSE, FREEZE) public.vacuum_target;",
+      "vacuumProcessReceipt": {
+        "applicationName": "vacuum-only-fec11e8286ed44c9b5d573a0da0eb029",
+        "path": "50gib/results/vacuum-process.json",
+        "pod": "hdd-pg-1",
+        "remoteExitCode": 0,
+        "sha256": "a23cd2e16176f54c488cf8fbb9f15c67cfb0c241d576abbc455d7f11f2c1338d",
+        "status": "0"
+      }
+    },
+    "baseline-23gib": {
+      "backendWalUsage": {
+        "bytes": 36932307417,
+        "fullPageImages": 6071357,
+        "records": 15115207,
+        "scope": "target relation VACUUM backend INFO line for repro.public.vacuum_target",
+        "source": {
+          "lineNumber": 14,
+          "path": "baseline-23gib/results/vacuum.log",
+          "sha256": "52c17d63d5e1a6e44d31c1cc25b03115aaa8ad7b00c8fda455d93437ec31f124"
+        }
+      },
+      "clusterWalMarkerDelta": {
+        "bytes": 36932321461,
+        "fullPageImages": 6071357,
+        "records": 15115396,
+        "scope": "cluster pg_stat_wal counters sampled at VACUUM markers; include background WAL and are not physical disk-write counters"
+      },
+      "complete": {
+        "clusterWalBytes": 146323817221,
+        "clusterWalFullPageImages": 16709637,
+        "clusterWalRecords": 48364493,
+        "lineNumber": 30,
+        "lsn": "56/F83AAFD0",
+        "timeUtc": "2026-10-07T08:50:04.738699Z"
+      },
+      "durationSeconds": 844.313042,
+      "measurementCompletion": {
+        "allWindowsValid": true,
+        "coverageValid": true,
+        "exitCode": 0,
+        "finalLagBytes": 0,
+        "finalPrimaryFlushLsn": "56/F9000000",
+        "finalReplicaReplayLsn": "56/F9000000",
+        "finishedAtUtc": "2026-10-07T09:09:03.833844+00:00",
+        "maximumAllowedSampleGapSeconds": 12.5,
+        "maximumSampleGapSeconds": 5.83652925491333,
+        "replayCaughtUp": true,
+        "replayEnd": "2026-10-07T09:09:00.254700003Z",
+        "sampleCount": 398,
+        "scriptSha256": {
+          "03-test.py": "59e3eb442dc2fa0d52df6eb97b8addd728f21b5742635d842afbf857f5c5a8a3",
+          "plot.py": "70155d4c5b5d1685600c431805feb305e7235aebb4081155668390e4467aca52"
+        },
+        "status": "complete",
+        "summaryReceipt": {
+          "path": "baseline-23gib/results/summary.json",
+          "sha256": "f57505a3f819bcb684657beaa21f9da26fc26f8448ba3cd4d7c148814e6a8145"
+        },
+        "targetLsn": "56/F83AAFD0",
+        "testComplete": true,
+        "testProcessReceipt": {
+          "path": "baseline-23gib/.state/test-process.json",
+          "sha256": "372282e6604911d15511410fdf0b07f4f10696207bd25e8056be7a7904ef5d8a"
+        },
+        "testStatePhase": "complete",
+        "testStateReceipt": {
+          "path": "baseline-23gib/.state/test-state.json",
+          "sha256": "f2c962b727937d523cfdf96882cd08c796c255381064af78eb30d945d299747a"
+        },
+        "timingReceipt": {
+          "path": "baseline-23gib/results/timing.json",
+          "sha256": "01a84b29ad3be33e5bf9f6a23704ca8458f5f7fafb21cfb81d1d56772669f768"
+        },
+        "vacuumComplete": "2026-10-07T08:50:04.738699Z",
+        "vacuumExitCode": 0,
+        "vacuumStart": "2026-10-07T08:36:00.425657Z"
+      },
+      "preparedFixtureAndDmlEvidence": {
+        "dmlTranscriptAvailabilityEvidence": {
+          "note": "The retained baseline finalization audit contains prepared estimates and finalization checks, not raw INSERT/DELETE output.",
+          "path": "baseline-23gib/.state/recovery/baseline-finalize-audit.json",
+          "sha256": "758af7cd4804ce809bd7d81d3a4d41294eb7bc79bc46f5631039d573fe3c8b8e"
+        },
+        "estimateSource": {
+          "jsonPath": "prepare.preparedDeadTuplesEstimate / prepare.preparedLiveTuplesEstimate",
+          "path": "baseline-23gib/results/preflight.json",
+          "sha256": "11be8c33ecc819fc47da93a067f1dc7bc9298bd026df997a459c3cb8fa2a6ea5"
+        },
+        "prepareScript": {
+          "note": "Source path for the completed baseline fixture preparation.",
+          "path": "baseline-23gib/02-prepare.sh",
+          "sha256": "8b6c2f1f902987c4c81449127128702f289f8942474083e88b01d32c10ac0e4d"
+        },
+        "preparedDeadTuplesEstimate": 7536640,
+        "preparedLiveTuplesEstimate": 7536640,
+        "status": "raw fixture DML output not retained"
+      },
+      "sources": {
+        "preflight": {
+          "path": "baseline-23gib/results/preflight.json",
+          "sha256": "11be8c33ecc819fc47da93a067f1dc7bc9298bd026df997a459c3cb8fa2a6ea5"
+        },
+        "timing": {
+          "path": "baseline-23gib/results/timing.json",
+          "present": true,
+          "remoteVacuumExitCode": 0,
+          "sha256": "01a84b29ad3be33e5bf9f6a23704ca8458f5f7fafb21cfb81d1d56772669f768",
+          "testComplete": true,
+          "walDeltaVacuumMarkers": null
+        },
+        "vacuumLog": {
+          "backendWalUsageLine": 14,
+          "path": "baseline-23gib/results/vacuum.log",
+          "sha256": "52c17d63d5e1a6e44d31c1cc25b03115aaa8ad7b00c8fda455d93437ec31f124",
+          "tableSummaryLines": "3-9"
+        }
+      },
+      "start": {
+        "clusterWalBytes": 109391495760,
+        "clusterWalFullPageImages": 10638280,
+        "clusterWalRecords": 33249097,
+        "lineNumber": 1,
+        "lsn": "4E/55000110",
+        "timeUtc": "2026-10-07T08:36:00.425657Z"
+      },
+      "tableOutput": {
+        "deadButNotYetRemovable": 0,
+        "deadItemIdentifiersRemoved": 7536640,
+        "frozenPagePercent": "100.00%",
+        "frozenPages": 3014656,
+        "indexScans": 1,
+        "pagesRemaining": 3014656,
+        "pagesRemoved": 0,
+        "pagesScanned": 3014656,
+        "pagesWithDeadItemIdentifiersRemoved": 3014656,
+        "scanPercent": "100.00%",
+        "sourceLines": {
+          "backendWalUsage": 14,
+          "deadItemIdentifiers": 9,
+          "frozen": 8,
+          "indexScans": 3,
+          "pages": 4,
+          "removableCutoff": 6,
+          "tuples": 5
+        },
+        "table": "repro.public.vacuum_target",
+        "tuplesFrozen": 7536640,
+        "tuplesRemaining": 7536640,
+        "tuplesRemoved": 7536638
+      },
+      "vacuumCommand": "VACUUM (VERBOSE, FREEZE) public.vacuum_target;",
+      "vacuumProcessReceipt": {
+        "applicationName": "vacuum-only-94936ec334614b7eaf1e82d806aa4fb4",
+        "path": "baseline-23gib/results/vacuum-process.json",
+        "pod": "hdd-pg-1",
+        "remoteExitCode": 0,
+        "sha256": "ba1453fefe4324ee58d7d9baa6ae309f50eb1b93644b251e8b79e774d1a364ae",
+        "status": "0"
+      }
+    }
+  },
+  "schemaVersion": 1
+}

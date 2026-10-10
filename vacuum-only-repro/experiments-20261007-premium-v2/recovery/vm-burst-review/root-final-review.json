@@ -1,0 +1,30 @@
+{
+  "reviewedAtUtc": "2026-10-07T12:26:38.030093+00:00",
+  "captureCount": 46,
+  "wholeObservationAvailableCounts": {
+    "baseline-23gib": {
+      "VM Remote Used Burst IO Credits Percentage": 5,
+      "VM Remote Used Burst BPS Credits Percentage": 5,
+      "VM Uncached IOPS Consumed Percentage": 5,
+      "VM Uncached Bandwidth Consumed Percentage": 5
+    },
+    "50gib": {
+      "VM Remote Used Burst IO Credits Percentage": 13,
+      "VM Remote Used Burst BPS Credits Percentage": 13,
+      "VM Uncached IOPS Consumed Percentage": 13,
+      "VM Uncached Bandwidth Consumed Percentage": 13
+    },
+    "100gib": {
+      "VM Remote Used Burst IO Credits Percentage": 42,
+      "VM Remote Used Burst BPS Credits Percentage": 42,
+      "VM Uncached IOPS Consumed Percentage": 42,
+      "VM Uncached Bandwidth Consumed Percentage": 42
+    }
+  },
+  "sourceHashes": {
+    "recovery/vm-burst-review/analyze_full_run.py": "52de55e5cb712717601851d596bffe023ebc1c66c4495c332170576799112d6c",
+    "recovery/vm-burst-review/measurement-calculations.json": "cb2da8506fb84216fa9c07f3a1fd65674c4551865225dbd7e5b6f6dc8cf3d578",
+    "recovery/vm-burst-review/MEASUREMENT-SUPPLEMENT.md": "b5bda1e7a161158e73dc0ad1e1a77235ee7125c66839b470c8f04cf29007ed21"
+  },
+  "review": "Root reviewed phase boundaries, fully-contained Azure PT5M selection, latest-capture timestamp deduplication, successful exact-owned-stack scope and whole-run metric counts. Guest series remain separate primary/replica DATA/WAL. VMSS percentages are descriptive aggregate averages; no burst or Premium-v2 VM limit causality claimed."
+}
