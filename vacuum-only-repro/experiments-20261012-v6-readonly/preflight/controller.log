@@ -1,0 +1,10 @@
+{"phase": "verifying_attachments", "atUtc": "2026-10-12T04:02:19.208392+00:00", "runId": "20261012T040219Z"}
+{"phase": "verifying_guest_controllers_and_queues", "atUtc": "2026-10-12T04:02:24.226960+00:00", "runId": "20261012T040219Z"}
+{"phase": "clearing_verified_guest_caches", "atUtc": "2026-10-12T04:02:25.566692+00:00", "runId": "20261012T040219Z", "preparationChange": "guest Linux drop_caches=3; Azure ReadOnly host cache remains enabled"}
+{"phase": "guest_caches_cleared", "atUtc": "2026-10-12T04:02:41.118671+00:00", "runId": "20261012T040219Z", "preparationChange": "Cleared Linux guest page cache on both verified PostgreSQL nodes with sync and drop_caches=3.", "azureReadOnlyHostCachePurged": false}
+{"phase": "instrumentation_preflight", "atUtc": "2026-10-12T04:02:41.119261+00:00", "runId": "20261012T040219Z"}
+{"phase": "instrumentation_preflight", "atUtc": "2026-10-12T04:03:15.747740+00:00", "runId": "20261012T040219Z", "readinessCheckpointPerformed": true}
+{"phase": "measuring", "atUtc": "2026-10-12T04:04:13.762391+00:00", "runId": "20261012T040219Z"}
+{"phase": "harvesting", "atUtc": "2026-10-12T04:17:13.794373+00:00", "runId": "20261012T040219Z", "testExitCode": 0}
+{"phase": "tearing_down", "atUtc": "2026-10-12T04:17:19.731655+00:00", "runId": "20261012T040219Z", "testExitCode": 0, "instrumentationExitCode": 0}
+{"phase": "complete", "atUtc": "2026-10-12T04:24:34.201374+00:00", "runId": "20261012T040219Z", "testExitCode": 0, "instrumentationExitCode": 0, "infraDeleted": true}

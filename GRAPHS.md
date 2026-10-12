@@ -2,7 +2,7 @@
 
 [Back to the repository index](README.md).
 
-This catalog links all 86 graph files in the repository. Open a section from the
+This catalog links all 92 graph files in the repository. Open a section from the
 top-level README, then choose a graph: every figure is within two clicks.
 Archived copies, superseded analyses, and original collector captures are labeled separately.
 All experiment graphs use linear y-axes.
@@ -239,3 +239,17 @@ Separate larger-VM validation with 4, 144, and 160 workers.
 - [Latency](fio-standard-hdd/eastus/fio-hdd-1m-headroom/artifacts/analysis/latency.png)
 - [Throughput at low thread counts](fio-standard-hdd/eastus/fio-hdd-1m-headroom/artifacts/analysis/throughput-low-threads.png)
 - [Throughput](fio-standard-hdd/eastus/fio-hdd-1m-headroom/artifacts/analysis/throughput.png)
+
+<a id="hdd-v6-readonly"></a>
+
+## Standard HDD 23-GiB D16as_v6 ReadOnly-cache rerun
+
+[Report](vacuum-only-repro/experiments-20261012-v6-readonly/REPORT.md). Guest diskstats metrics with ReadOnly host caching;
+BCC latency histograms are incomplete and are not plotted as representative distributions.
+
+- [Primary/replica DATA/WAL await](vacuum-only-repro/experiments-20261012-v6-readonly/results/20261012T040219Z/measurement/await.png)
+- [Primary/replica DATA/WAL IOPS](vacuum-only-repro/experiments-20261012-v6-readonly/results/20261012T040219Z/measurement/iops.png)
+- [Primary/replica DATA/WAL throughput](vacuum-only-repro/experiments-20261012-v6-readonly/results/20261012T040219Z/measurement/throughput.png)
+- [Replica average outstanding I/O](vacuum-only-repro/experiments-20261012-v6-readonly/results/20261012T040219Z/replica-average-queue-depth.png)
+- [Replica sampled in-flight I/O](vacuum-only-repro/experiments-20261012-v6-readonly/results/20261012T040219Z/replica-inflight-io.png)
+- [Replica VM uncached IOPS consumed percentage](vacuum-only-repro/experiments-20261012-v6-readonly/results/20261012T040219Z/replica-azure-uncached-iops-percent.png)

@@ -1,0 +1,100 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "name": "bcc-kernel-probe-0396ecfa13",
+    "namespace": "repro",
+    "labels": {
+      "app.kubernetes.io/name": "az-hdd-biolatency",
+      "az-hdd-repro/run": "bcc-kernel-probe-0396ecfa13",
+      "repro.stack.token": "00000000000000000000000000000002"
+    }
+  },
+  "spec": {
+    "nodeName": "aks-nodepool1-33061360-vmss000000",
+    "restartPolicy": "Never",
+    "hostPID": true,
+    "hostNetwork": true,
+    "dnsPolicy": "ClusterFirstWithHostNet",
+    "containers": [
+      {
+        "name": "biolatency",
+        "image": "ubuntu:24.04",
+        "imagePullPolicy": "IfNotPresent",
+        "command": [
+          "/bin/sh",
+          "-c"
+        ],
+        "args": [
+          "set -eu\nexport DEBIAN_FRONTEND=noninteractive\n\n# BCC reads the kprobe blacklist from debugfs and available_filter_functions\n# from tracefs. HostPath mounts use Kubernetes' default private propagation,\n# so mounting either pseudo-filesystem here does not alter the host mount table.\nmount_pseudo_fs() {\n fstype=$1; target=$2\n current=$(awk -v target=\"$target\" '$2 == target { print $3; exit }' /proc/mounts)\n if [ \"$current\" != \"$fstype\" ]; then mount -t \"$fstype\" \"$fstype\" \"$target\"; fi\n current=$(awk -v target=\"$target\" '$2 == target { print $3; exit }' /proc/mounts)\n [ \"$current\" = \"$fstype\" ] || { echo \"failed to mount $fstype at $target (found ${current:-no mount})\" >&2; exit 70; }\n}\nrequire_readable() {\n file=$1\n [ -r \"$file\" ] && head -c 1 \"$file\" >/dev/null 2>&1 || {\n  echo \"required BCC kernel metadata is missing or unreadable: $file\" >&2; exit 71;\n }\n}\n\nmount_pseudo_fs debugfs /sys/kernel/debug\nmount_pseudo_fs tracefs /sys/kernel/tracing\n# BCC prefers debugfs/tracing whenever that path exists. On kernels that\n# expose an empty directory there, bind the tracefs mount over it in this\n# pod's private mount namespace so BCC sees the same files either way.\nif [ -d /sys/kernel/debug/tracing ] && [ ! -r /sys/kernel/debug/tracing/available_filter_functions ]; then\n mount --bind /sys/kernel/tracing /sys/kernel/debug/tracing\nfi\nrequire_readable /sys/kernel/debug/kprobes/blacklist\ntrace_filter=/sys/kernel/debug/tracing/available_filter_functions\nif [ ! -r \"$trace_filter\" ]; then trace_filter=/sys/kernel/tracing/available_filter_functions; fi\nrequire_readable \"$trace_filter\"\nprintf '__BCC_TRACEFS_PREFLIGHT__\\nblacklist=%s\\navailable_filter_functions=%s\\n' \\\n /sys/kernel/debug/kprobes/blacklist \"$trace_filter\"\n\napt-get update -qq\napt-get install -y --no-install-recommends bpfcc-tools python3-bpfcc\ntool=$(command -v biolatency-bpfcc || command -v biolatency || true)\n[ -n \"$tool\" ] || { echo \"biolatency is absent after installing bpfcc-tools\" >&2; exit 127; }\nhelp=$(\"$tool\" --help 2>&1 || true)\nprintf '%s\\n' \"$help\" | grep -Eq -- '(^|[[:space:]])-j([,[:space:]]|$)|--json' || {\n echo \"installed biolatency lacks JSON histogram support (-j); refusing non-machine-readable run\" >&2; exit 65;\n}\nprintf '__BCC_TOOL_START__\\n'\n\"$tool\" -mTD -j 1 20 >/tmp/probe.log 2>&1 &\ntrace_pid=$!\nsleep 12\ndd if=/proc/1/root/dev/nvme0n1 of=/dev/null bs=4096 count=4 iflag=direct\ntrace_rc=0\nwait \"$trace_pid\" || trace_rc=$?\ncat /tmp/probe.log\nexit \"$trace_rc\"\n\n"
+        ],
+        "resources": {
+          "requests": {
+            "cpu": "50m",
+            "memory": "96Mi"
+          },
+          "limits": {
+            "cpu": "500m",
+            "memory": "512Mi"
+          }
+        },
+        "securityContext": {
+          "privileged": true,
+          "runAsUser": 0
+        },
+        "volumeMounts": [
+          {
+            "name": "modules",
+            "mountPath": "/lib/modules",
+            "readOnly": true
+          },
+          {
+            "name": "src",
+            "mountPath": "/usr/src",
+            "readOnly": true
+          },
+          {
+            "name": "debugfs",
+            "mountPath": "/sys/kernel/debug",
+            "readOnly": false
+          },
+          {
+            "name": "tracefs",
+            "mountPath": "/sys/kernel/tracing",
+            "readOnly": false
+          }
+        ]
+      }
+    ],
+    "volumes": [
+      {
+        "name": "modules",
+        "hostPath": {
+          "path": "/lib/modules",
+          "type": "Directory"
+        }
+      },
+      {
+        "name": "src",
+        "hostPath": {
+          "path": "/usr/src",
+          "type": "Directory"
+        }
+      },
+      {
+        "name": "debugfs",
+        "hostPath": {
+          "path": "/sys/kernel/debug",
+          "type": "Directory"
+        }
+      },
+      {
+        "name": "tracefs",
+        "hostPath": {
+          "path": "/sys/kernel/tracing",
+          "type": "Directory"
+        }
+      }
+    ]
+  }
+}

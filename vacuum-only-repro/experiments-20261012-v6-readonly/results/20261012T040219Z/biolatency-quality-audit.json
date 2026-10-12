@@ -1,0 +1,11 @@
+{
+  "representativeLatencyDistribution": false,
+  "fullRunDiskstatsValid": true,
+  "dataVacuumHistogramEvents": 633959,
+  "dataVacuumDiskstatsCompletions": 6169070,
+  "walVacuumHistogramEvents": 29863,
+  "walVacuumDiskstatsCompletions": 321167,
+  "positiveHistogramGap": "DATA 04:05:39 to 04:12:39 UTC; WAL 04:05:33 to 04:12:39 UTC",
+  "tailNotPersisted": "approximately last 3 minutes 47 seconds",
+  "interpretation": "BCC histograms are diagnostic only. Stdout buffering explains delayed delivery and lost tail, but does not explain blank histogram cycles during sustained I/O. Exact tracing failure cause remains unproven. Automatic presence checks did not validate event-count parity."
+}

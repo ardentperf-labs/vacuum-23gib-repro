@@ -9,7 +9,7 @@ The original 23-GiB test's dedicated README is preserved unchanged in
 prerequisites, results, and validation caveats.
 
 Every experiment below links directly to its report or recorded validation.
-The [complete graph catalog](GRAPHS.md) links all 86 graph files,
+The [complete graph catalog](GRAPHS.md) links all 92 graph files,
 including repeats, archived copies, and superseded analyses: every graph is
 at most two clicks from this README. The graph links in the tables open the
 relevant catalog section. All experiment graphs use linear y-axes.
@@ -29,6 +29,21 @@ The NVMe run has a recorded summary and comparison discussion rather than a
 separate standalone report. The [historical reproduction README](vacuum-only-repro/README.md)
 documents the archived scripts; the [archived 23-GiB report](vacuum-only-repro/REPORT-23GIB.md)
 and [graph copies](GRAPHS.md#archived-original-23-gib-hdd) preserve the original follow-up.
+
+## 16-vCPU Standard HDD rerun with ReadOnly host caching
+
+| Test | Report and evidence | Graphs |
+| --- | --- | --- |
+| October 12: original 23-GiB fixture on D16as_v6 / NVMe, separate DATA/WAL HDDs with ReadOnly host caching; VACUUM and replica catch-up completed | [Report](vacuum-only-repro/experiments-20261012-v6-readonly/REPORT.md) · [Offline analysis and execution archive](vacuum-only-repro/experiments-20261012-v6-readonly/README.md) · [Raw results](vacuum-only-repro/experiments-20261012-v6-readonly/results/20261012T040219Z/) | [Six graphs](GRAPHS.md#hdd-v6-readonly) |
+
+Replica DATA guest reads averaged **7,942 IOPS versus 275 on the primary (28.9×)**,
+with nearly equal bytes read. The low guest read latency and **0–2% VM uncached
+IOPS consumption** strongly suggest host-cache service; this is not evidence
+of equivalent physical HDD read amplification. A 2% bucket converts to approximately
+**608 VM-wide uncached IOPS** using the recorded 30,400-IOPS VM limit.
+[The BCC latency histograms are incomplete](vacuum-only-repro/experiments-20261012-v6-readonly/results/20261012T040219Z/biolatency-quality-audit.json)
+and diagnostic only; diskstats, PostgreSQL and Azure metric coverage are retained.
+All test infrastructure was deleted after data download, with all snapshots preserved.
 
 ## Five Standard HDD follow-up experiments
 

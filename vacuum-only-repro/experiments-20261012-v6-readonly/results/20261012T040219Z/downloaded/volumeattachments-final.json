@@ -1,0 +1,125 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "storage.k8s.io/v1",
+            "kind": "VolumeAttachment",
+            "metadata": {
+                "annotations": {
+                    "csi.alpha.kubernetes.io/node-id": "aks-nodepool1-33061360-vmss000000"
+                },
+                "creationTimestamp": "2026-10-12T03:54:14Z",
+                "finalizers": [
+                    "external-attacher/disk-csi-azure-com"
+                ],
+                "name": "csi-35a2ad54b9bdbf95ef85e188df64991a7431af2bcbd78e3ed7d0d3fe185a8608",
+                "resourceVersion": "4172",
+                "uid": "cd310b9a-bfd1-458a-aa58-18a966b704fe"
+            },
+            "spec": {
+                "attacher": "disk.csi.azure.com",
+                "nodeName": "aks-nodepool1-33061360-vmss000000",
+                "source": {
+                    "persistentVolumeName": "pvc-ce6b33ef-8539-4c57-babd-3147b9f2e5c8"
+                }
+            },
+            "status": {
+                "attached": true,
+                "attachmentMetadata": {
+                    "LUN": "0"
+                }
+            }
+        },
+        {
+            "apiVersion": "storage.k8s.io/v1",
+            "kind": "VolumeAttachment",
+            "metadata": {
+                "annotations": {
+                    "csi.alpha.kubernetes.io/node-id": "aks-nodepool1-33061360-vmss000000"
+                },
+                "creationTimestamp": "2026-10-12T03:54:14Z",
+                "finalizers": [
+                    "external-attacher/disk-csi-azure-com"
+                ],
+                "name": "csi-6efea18efc62c6885fe9b2df551009673aacc72d750f0e10e0fd40ac5dbf78c4",
+                "resourceVersion": "4171",
+                "uid": "5b98edd3-1ab9-4e14-95a6-cb715a55a0b7"
+            },
+            "spec": {
+                "attacher": "disk.csi.azure.com",
+                "nodeName": "aks-nodepool1-33061360-vmss000000",
+                "source": {
+                    "persistentVolumeName": "pvc-7b547d34-82ea-4c45-981f-c1d3a11fa6ae"
+                }
+            },
+            "status": {
+                "attached": true,
+                "attachmentMetadata": {
+                    "LUN": "1"
+                }
+            }
+        },
+        {
+            "apiVersion": "storage.k8s.io/v1",
+            "kind": "VolumeAttachment",
+            "metadata": {
+                "annotations": {
+                    "csi.alpha.kubernetes.io/node-id": "aks-nodepool1-33061360-vmss000001"
+                },
+                "creationTimestamp": "2026-10-12T03:52:17Z",
+                "finalizers": [
+                    "external-attacher/disk-csi-azure-com"
+                ],
+                "name": "csi-8a2b7a38e46e36df9b566d34f25c730a3da56463c7a068f063d9814b5eba18dd",
+                "resourceVersion": "3364",
+                "uid": "5d9e8741-cf20-4fa0-88be-fb169f70f5bb"
+            },
+            "spec": {
+                "attacher": "disk.csi.azure.com",
+                "nodeName": "aks-nodepool1-33061360-vmss000001",
+                "source": {
+                    "persistentVolumeName": "pvc-abc6e946-a78b-4782-9560-86a36d6c46c4"
+                }
+            },
+            "status": {
+                "attached": true,
+                "attachmentMetadata": {
+                    "LUN": "0"
+                }
+            }
+        },
+        {
+            "apiVersion": "storage.k8s.io/v1",
+            "kind": "VolumeAttachment",
+            "metadata": {
+                "annotations": {
+                    "csi.alpha.kubernetes.io/node-id": "aks-nodepool1-33061360-vmss000001"
+                },
+                "creationTimestamp": "2026-10-12T03:52:17Z",
+                "finalizers": [
+                    "external-attacher/disk-csi-azure-com"
+                ],
+                "name": "csi-d910b7f6ac65c3576eb96a43e052d9502f723af7fc07996fb1b7547ceb84b843",
+                "resourceVersion": "3365",
+                "uid": "419ade49-b476-43d4-bc7b-bae66732572c"
+            },
+            "spec": {
+                "attacher": "disk.csi.azure.com",
+                "nodeName": "aks-nodepool1-33061360-vmss000001",
+                "source": {
+                    "persistentVolumeName": "pvc-64a907ea-de65-4491-9287-6b89c1952a8c"
+                }
+            },
+            "status": {
+                "attached": true,
+                "attachmentMetadata": {
+                    "LUN": "1"
+                }
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

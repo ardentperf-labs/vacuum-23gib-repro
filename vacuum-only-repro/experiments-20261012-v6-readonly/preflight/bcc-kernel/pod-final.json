@@ -1,0 +1,306 @@
+{
+  "apiVersion": "v1",
+  "kind": "Pod",
+  "metadata": {
+    "creationTimestamp": "2026-10-12T03:49:02Z",
+    "generation": 1,
+    "labels": {
+      "app.kubernetes.io/name": "az-hdd-biolatency",
+      "az-hdd-repro/run": "bcc-kernel-probe-0396ecfa13",
+      "repro.stack.token": "00000000000000000000000000000002",
+      "topology.kubernetes.io/region": "westus3",
+      "topology.kubernetes.io/zone": "0"
+    },
+    "name": "bcc-kernel-probe-0396ecfa13",
+    "namespace": "repro",
+    "resourceVersion": "2530",
+    "uid": "f100b018-0eb2-46f6-b4ca-cd89d1ed71c1"
+  },
+  "spec": {
+    "containers": [
+      {
+        "args": [
+          "set -eu\nexport DEBIAN_FRONTEND=noninteractive\n\n# BCC reads the kprobe blacklist from debugfs and available_filter_functions\n# from tracefs. HostPath mounts use Kubernetes' default private propagation,\n# so mounting either pseudo-filesystem here does not alter the host mount table.\nmount_pseudo_fs() {\n fstype=$1; target=$2\n current=$(awk -v target=\"$target\" '$2 == target { print $3; exit }' /proc/mounts)\n if [ \"$current\" != \"$fstype\" ]; then mount -t \"$fstype\" \"$fstype\" \"$target\"; fi\n current=$(awk -v target=\"$target\" '$2 == target { print $3; exit }' /proc/mounts)\n [ \"$current\" = \"$fstype\" ] || { echo \"failed to mount $fstype at $target (found ${current:-no mount})\" >&2; exit 70; }\n}\nrequire_readable() {\n file=$1\n [ -r \"$file\" ] && head -c 1 \"$file\" >/dev/null 2>&1 || {\n  echo \"required BCC kernel metadata is missing or unreadable: $file\" >&2; exit 71;\n }\n}\n\nmount_pseudo_fs debugfs /sys/kernel/debug\nmount_pseudo_fs tracefs /sys/kernel/tracing\n# BCC prefers debugfs/tracing whenever that path exists. On kernels that\n# expose an empty directory there, bind the tracefs mount over it in this\n# pod's private mount namespace so BCC sees the same files either way.\nif [ -d /sys/kernel/debug/tracing ] && [ ! -r /sys/kernel/debug/tracing/available_filter_functions ]; then\n mount --bind /sys/kernel/tracing /sys/kernel/debug/tracing\nfi\nrequire_readable /sys/kernel/debug/kprobes/blacklist\ntrace_filter=/sys/kernel/debug/tracing/available_filter_functions\nif [ ! -r \"$trace_filter\" ]; then trace_filter=/sys/kernel/tracing/available_filter_functions; fi\nrequire_readable \"$trace_filter\"\nprintf '__BCC_TRACEFS_PREFLIGHT__\\nblacklist=%s\\navailable_filter_functions=%s\\n' \\\n /sys/kernel/debug/kprobes/blacklist \"$trace_filter\"\n\napt-get update -qq\napt-get install -y --no-install-recommends bpfcc-tools python3-bpfcc\ntool=$(command -v biolatency-bpfcc || command -v biolatency || true)\n[ -n \"$tool\" ] || { echo \"biolatency is absent after installing bpfcc-tools\" >&2; exit 127; }\nhelp=$(\"$tool\" --help 2>&1 || true)\nprintf '%s\\n' \"$help\" | grep -Eq -- '(^|[[:space:]])-j([,[:space:]]|$)|--json' || {\n echo \"installed biolatency lacks JSON histogram support (-j); refusing non-machine-readable run\" >&2; exit 65;\n}\nprintf '__BCC_TOOL_START__\\n'\n\"$tool\" -mTD -j 1 20 >/tmp/probe.log 2>&1 &\ntrace_pid=$!\nsleep 12\ndd if=/proc/1/root/dev/nvme0n1 of=/dev/null bs=4096 count=4 iflag=direct\ntrace_rc=0\nwait \"$trace_pid\" || trace_rc=$?\ncat /tmp/probe.log\nexit \"$trace_rc\"\n\n"
+        ],
+        "command": [
+          "/bin/sh",
+          "-c"
+        ],
+        "image": "ubuntu:24.04",
+        "imagePullPolicy": "IfNotPresent",
+        "name": "biolatency",
+        "resources": {
+          "limits": {
+            "cpu": "500m",
+            "memory": "512Mi"
+          },
+          "requests": {
+            "cpu": "50m",
+            "memory": "96Mi"
+          }
+        },
+        "securityContext": {
+          "privileged": true,
+          "runAsUser": 0
+        },
+        "terminationMessagePath": "/dev/termination-log",
+        "terminationMessagePolicy": "File",
+        "volumeMounts": [
+          {
+            "mountPath": "/lib/modules",
+            "name": "modules",
+            "readOnly": true
+          },
+          {
+            "mountPath": "/usr/src",
+            "name": "src",
+            "readOnly": true
+          },
+          {
+            "mountPath": "/sys/kernel/debug",
+            "name": "debugfs"
+          },
+          {
+            "mountPath": "/sys/kernel/tracing",
+            "name": "tracefs"
+          },
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-zk5hz",
+            "readOnly": true
+          }
+        ]
+      }
+    ],
+    "dnsPolicy": "ClusterFirstWithHostNet",
+    "enableServiceLinks": true,
+    "hostNetwork": true,
+    "hostPID": true,
+    "nodeName": "aks-nodepool1-33061360-vmss000000",
+    "preemptionPolicy": "PreemptLowerPriority",
+    "priority": 0,
+    "restartPolicy": "Never",
+    "schedulerName": "default-scheduler",
+    "securityContext": {},
+    "serviceAccount": "default",
+    "serviceAccountName": "default",
+    "terminationGracePeriodSeconds": 30,
+    "tolerations": [
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/not-ready",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      },
+      {
+        "effect": "NoExecute",
+        "key": "node.kubernetes.io/unreachable",
+        "operator": "Exists",
+        "tolerationSeconds": 300
+      },
+      {
+        "effect": "NoSchedule",
+        "key": "node.kubernetes.io/memory-pressure",
+        "operator": "Exists"
+      }
+    ],
+    "volumes": [
+      {
+        "hostPath": {
+          "path": "/lib/modules",
+          "type": "Directory"
+        },
+        "name": "modules"
+      },
+      {
+        "hostPath": {
+          "path": "/usr/src",
+          "type": "Directory"
+        },
+        "name": "src"
+      },
+      {
+        "hostPath": {
+          "path": "/sys/kernel/debug",
+          "type": "Directory"
+        },
+        "name": "debugfs"
+      },
+      {
+        "hostPath": {
+          "path": "/sys/kernel/tracing",
+          "type": "Directory"
+        },
+        "name": "tracefs"
+      },
+      {
+        "name": "kube-api-access-zk5hz",
+        "projected": {
+          "defaultMode": 420,
+          "sources": [
+            {
+              "serviceAccountToken": {
+                "expirationSeconds": 3607,
+                "path": "token"
+              }
+            },
+            {
+              "configMap": {
+                "items": [
+                  {
+                    "key": "ca.crt",
+                    "path": "ca.crt"
+                  }
+                ],
+                "name": "kube-root-ca.crt"
+              }
+            },
+            {
+              "downwardAPI": {
+                "items": [
+                  {
+                    "fieldRef": {
+                      "apiVersion": "v1",
+                      "fieldPath": "metadata.namespace"
+                    },
+                    "path": "namespace"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "status": {
+    "conditions": [
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-10-12T03:49:59Z",
+        "observedGeneration": 1,
+        "status": "False",
+        "type": "PodReadyToStartContainers"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-10-12T03:49:02Z",
+        "observedGeneration": 1,
+        "reason": "PodCompleted",
+        "status": "True",
+        "type": "Initialized"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-10-12T03:49:58Z",
+        "observedGeneration": 1,
+        "reason": "PodCompleted",
+        "status": "False",
+        "type": "Ready"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-10-12T03:49:58Z",
+        "observedGeneration": 1,
+        "reason": "PodCompleted",
+        "status": "False",
+        "type": "ContainersReady"
+      },
+      {
+        "lastProbeTime": null,
+        "lastTransitionTime": "2026-10-12T03:49:02Z",
+        "observedGeneration": 1,
+        "status": "True",
+        "type": "PodScheduled"
+      }
+    ],
+    "containerStatuses": [
+      {
+        "allocatedResources": {
+          "cpu": "50m",
+          "memory": "96Mi"
+        },
+        "containerID": "containerd://753615b02c7b70096dbf37ebed352985b5e77bed6a2c95e3deca5d7335ab8bf4",
+        "image": "docker.io/library/ubuntu:24.04",
+        "imageID": "docker.io/library/ubuntu@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55",
+        "lastState": {},
+        "name": "biolatency",
+        "ready": false,
+        "resources": {
+          "limits": {
+            "cpu": "500m",
+            "memory": "512Mi"
+          },
+          "requests": {
+            "cpu": "50m",
+            "memory": "96Mi"
+          }
+        },
+        "restartCount": 0,
+        "started": false,
+        "state": {
+          "terminated": {
+            "containerID": "containerd://753615b02c7b70096dbf37ebed352985b5e77bed6a2c95e3deca5d7335ab8bf4",
+            "exitCode": 0,
+            "finishedAt": "2026-10-12T03:49:57Z",
+            "reason": "Completed",
+            "startedAt": "2026-10-12T03:49:05Z"
+          }
+        },
+        "user": {
+          "linux": {
+            "gid": 0,
+            "supplementalGroups": [
+              0
+            ],
+            "uid": 0
+          }
+        },
+        "volumeMounts": [
+          {
+            "mountPath": "/lib/modules",
+            "name": "modules",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          },
+          {
+            "mountPath": "/usr/src",
+            "name": "src",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          },
+          {
+            "mountPath": "/sys/kernel/debug",
+            "name": "debugfs"
+          },
+          {
+            "mountPath": "/sys/kernel/tracing",
+            "name": "tracefs"
+          },
+          {
+            "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+            "name": "kube-api-access-zk5hz",
+            "readOnly": true,
+            "recursiveReadOnly": "Disabled"
+          }
+        ]
+      }
+    ],
+    "hostIP": "192.0.2.2",
+    "hostIPs": [
+      {
+        "ip": "192.0.2.2"
+      }
+    ],
+    "observedGeneration": 1,
+    "phase": "Succeeded",
+    "podIP": "192.0.2.2",
+    "podIPs": [
+      {
+        "ip": "192.0.2.2"
+      }
+    ],
+    "qosClass": "Burstable",
+    "startTime": "2026-10-12T03:49:02Z"
+  }
+}

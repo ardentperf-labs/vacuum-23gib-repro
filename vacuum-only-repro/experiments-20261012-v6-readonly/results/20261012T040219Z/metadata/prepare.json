@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "status": "complete",
+  "verifiedAtUtc": "2026-10-12T03:59:57Z",
+  "ownerToken": "00000000000000000000000000000002",
+  "location": "westus3",
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "resourceGroup": "rg-vacuum-only-00000000000000000000000000000002",
+  "clusterName": "aks-vacuum-only-d32d5b4ca4f8",
+  "cluster": "repro/hdd-pg",
+  "instances": 2,
+  "measurementImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+  "sourceKind": "reused-prepared-paired-snapshot",
+  "fixtureTargetHeapGiB": 23,
+  "fixtureTargetHeapBytes": 24696061952,
+  "systemIdentifier": "7692518806614212629",
+  "heapBytes": 24696061952,
+  "tableBytes": 25040748544,
+  "preparedLiveTuplesEstimate": 7536640,
+  "preparedDeadTuplesEstimate": 7536640,
+  "fixture": {
+    "sourceKind": "reused-prepared-paired-snapshot",
+    "heapBytes": 24696061952,
+    "tableBytes": 25040748544,
+    "liveTuplesEstimate": 7536640,
+    "deadTuplesEstimate": 7536640,
+    "payloadBytes": 1536,
+    "indexName": "vacuum_target_id_idx",
+    "tableAutovacuumDisabled": true,
+    "snapshotBeforeVacuum": true
+  },
+  "sourcePair": {
+    "manifest": "/workspace/experiments/20261012-v6-readonly-retry/westus3-source-pair.json",
+    "backupName": "vacuum-backup-35e99cb5",
+    "originalEastUs": null,
+    "originalWestUs3": {
+      "resourceGroup": "rg-vacuum-snapshots-00000000000000000000000000000001",
+      "dataSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-snapshots-00000000000000000000000000000001/providers/Microsoft.Compute/snapshots/snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01",
+      "walSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-snapshots-00000000000000000000000000000001/providers/Microsoft.Compute/snapshots/snapshot-01605f86-3d24-4371-81cc-9a908a426b18",
+      "dataUniqueId": "d838e22b-a0e2-44d5-953c-819ed43dc87f",
+      "walUniqueId": "74f4d862-be76-43f8-bf26-393d26def9ff"
+    },
+    "regionalRetained": {
+      "resourceGroup": "rg-vacuum-snapshots-00000000000000000000000000000001",
+      "dataSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-snapshots-00000000000000000000000000000001/providers/Microsoft.Compute/snapshots/snapshot-9cf409a6-542c-4c9f-8ce3-c8eb2c08cd01",
+      "walSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-snapshots-00000000000000000000000000000001/providers/Microsoft.Compute/snapshots/snapshot-01605f86-3d24-4371-81cc-9a908a426b18",
+      "liveAzureVerification": []
+    },
+    "reuseOriginal": true,
+    "bootstrapMode": "CNPG recovery from both static DATA and WAL VolumeSnapshots",
+    "recoveryArchiveSourceRemoved": true,
+    "regionalSnapshotsCreatedByTestStack": false
+  },
+  "walArchive": {
+    "importedAndDownloadedHashVerified": false,
+    "objects": [],
+    "receiptSha256": null,
+    "serverName": null,
+    "notRequiredForProvenPairedSnapshotRestore": true
+  },
+  "sourceSnapshotRoleAssignments": {
+    "status": "removed",
+    "evidence": ".state/source-snapshot-role-assignments.json"
+  },
+  "replicaSeed": {
+    "method": "CNPG streaming join/basebackup from the restored primary",
+    "completedJobs": [],
+    "receiverStatus": "streaming",
+    "primaryFlushLsn": "4E/52000110",
+    "replicaReplayLsn": "4E/52000110",
+    "caughtUp": true
+  },
+  "finalRoles": {
+    "primary": "hdd-pg-1",
+    "replica": "hdd-pg-2"
+  },
+  "clientCreated": false,
+  "snapshotDeletionPolicy": "Retain",
+  "noBackupCRCreated": true
+}

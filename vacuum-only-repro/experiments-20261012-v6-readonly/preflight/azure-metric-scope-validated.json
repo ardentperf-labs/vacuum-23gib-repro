@@ -1,0 +1,93 @@
+{
+  "dimensions": [
+    "vmname"
+  ],
+  "failedCandidates": [
+    {
+      "definitionCommand": [
+        "az",
+        "monitor",
+        "metrics",
+        "list-definitions",
+        "--resource",
+        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0",
+        "--output",
+        "json",
+        "--only-show-errors"
+      ],
+      "definitionExitCode": 0,
+      "liveQueryCommand": [
+        "az",
+        "monitor",
+        "metrics",
+        "list",
+        "--resource",
+        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0",
+        "--metric",
+        "VM Uncached IOPS Consumed Percentage",
+        "--namespace",
+        "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+        "--interval",
+        "PT1M",
+        "--aggregation",
+        "Average",
+        "--start-time",
+        "2026-10-12T03:51:38.565Z",
+        "--end-time",
+        "2026-10-12T04:01:38.565Z",
+        "--output",
+        "json",
+        "--only-show-errors"
+      ],
+      "liveQueryExitCode": 3,
+      "liveQueryStderr": "ERROR: (NotFound) Failed to find resource mapping for provider: Microsoft.Compute, resourceType: virtualMachineScaleSets/virtualMachines, id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0, traceId: 27ffcdd9-e825-4509-8962-e4f1d3704eab\nCode: NotFound\nMessage: Failed to find resource mapping for provider: Microsoft.Compute, resourceType: virtualMachineScaleSets/virtualMachines, id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0, traceId: 27ffcdd9-e825-4509-8962-e4f1d3704eab\n",
+      "liveQueryStdoutTail": "",
+      "liveValidation": {},
+      "liveValidationError": "live metric query returned no JSON object",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0",
+      "scope": "vmss-instance"
+    }
+  ],
+  "liveQuery": {
+    "allSeriesMatchExpectedVmName": true,
+    "command": [
+      "az",
+      "monitor",
+      "metrics",
+      "list",
+      "--resource",
+      "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss",
+      "--metric",
+      "VM Uncached IOPS Consumed Percentage",
+      "--namespace",
+      "Microsoft.Compute/virtualMachineScaleSets",
+      "--interval",
+      "PT1M",
+      "--aggregation",
+      "Average",
+      "--start-time",
+      "2026-10-12T03:51:38.565Z",
+      "--end-time",
+      "2026-10-12T04:01:38.565Z",
+      "--output",
+      "json",
+      "--only-show-errors",
+      "--filter",
+      "VMName eq 'aks-nodepool1-33061360-vmss_0'"
+    ],
+    "dataPointCount": 10,
+    "exitCode": 0,
+    "interval": "PT1M",
+    "metricSeriesCount": 1,
+    "observedVmNames": [
+      "aks-nodepool1-33061360-vmss_0"
+    ],
+    "timespan": "2026-10-12T03:51:38Z/2026-10-12T04:01:38Z",
+    "validatedAtUtc": "2026-10-12T04:01:38.565Z"
+  },
+  "metric": "VM Uncached IOPS Consumed Percentage",
+  "namespace": "Microsoft.Compute/virtualMachineScaleSets",
+  "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss",
+  "selectedScope": "vmss-filtered",
+  "vmNameFilter": "aks-nodepool1-33061360-vmss_0"
+}

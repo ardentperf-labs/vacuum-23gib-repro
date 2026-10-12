@@ -1,0 +1,205 @@
+{
+  "checksumsVerified": true,
+  "remoteLogsVerified": true,
+  "experimentComplete": true,
+  "missingDatasets": [],
+  "counts": {
+    "pgStatSamples": 783,
+    "diskstatsSamples": 780,
+    "biolatencyHistograms": 313,
+    "azureMetricPoints": 23
+  },
+  "measurementTestComplete": true,
+  "incompleteExperimentRecorded": false,
+  "collectorCoverage": {
+    "azureMetricDrain": {
+      "attempted": true,
+      "complete": true,
+      "latestTimestamp": "2026-10-12T04:16:00.000Z",
+      "targetLatestTimestamp": "2026-10-12T04:16:00.000Z",
+      "timeoutSeconds": 120
+    },
+    "azureMonitor": {
+      "errors": 0,
+      "firstPoint": "2026-10-12T03:54:00Z",
+      "lastPoint": "2026-10-12T04:16:00Z",
+      "metric": "VM Uncached IOPS Consumed Percentage",
+      "metricDiscovery": {
+        "dimensions": [
+          "vmname"
+        ],
+        "failedCandidates": [
+          {
+            "definitionCommand": [
+              "az",
+              "monitor",
+              "metrics",
+              "list-definitions",
+              "--resource",
+              "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0",
+              "--output",
+              "json",
+              "--only-show-errors"
+            ],
+            "definitionExitCode": 0,
+            "liveQueryCommand": [
+              "az",
+              "monitor",
+              "metrics",
+              "list",
+              "--resource",
+              "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0",
+              "--metric",
+              "VM Uncached IOPS Consumed Percentage",
+              "--namespace",
+              "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+              "--interval",
+              "PT1M",
+              "--aggregation",
+              "Average",
+              "--start-time",
+              "2026-10-12T03:54:08.601Z",
+              "--end-time",
+              "2026-10-12T04:04:08.601Z",
+              "--output",
+              "json",
+              "--only-show-errors"
+            ],
+            "liveQueryExitCode": 3,
+            "liveQueryStderr": "ERROR: (NotFound) Failed to find resource mapping for provider: Microsoft.Compute, resourceType: virtualMachineScaleSets/virtualMachines, id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0, traceId: 146139bf-f2ef-4568-8c6f-c17d05a4770d\nCode: NotFound\nMessage: Failed to find resource mapping for provider: Microsoft.Compute, resourceType: virtualMachineScaleSets/virtualMachines, id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0, traceId: 146139bf-f2ef-4568-8c6f-c17d05a4770d\n",
+            "liveQueryStdoutTail": "",
+            "liveValidation": {},
+            "liveValidationError": "live metric query returned no JSON object",
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0",
+            "scope": "vmss-instance"
+          }
+        ],
+        "liveQuery": {
+          "allSeriesMatchExpectedVmName": true,
+          "command": [
+            "az",
+            "monitor",
+            "metrics",
+            "list",
+            "--resource",
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss",
+            "--metric",
+            "VM Uncached IOPS Consumed Percentage",
+            "--namespace",
+            "Microsoft.Compute/virtualMachineScaleSets",
+            "--interval",
+            "PT1M",
+            "--aggregation",
+            "Average",
+            "--start-time",
+            "2026-10-12T03:54:08.601Z",
+            "--end-time",
+            "2026-10-12T04:04:08.601Z",
+            "--output",
+            "json",
+            "--only-show-errors",
+            "--filter",
+            "VMName eq 'aks-nodepool1-33061360-vmss_0'"
+          ],
+          "dataPointCount": 10,
+          "exitCode": 0,
+          "interval": "PT1M",
+          "metricSeriesCount": 1,
+          "observedVmNames": [
+            "aks-nodepool1-33061360-vmss_0"
+          ],
+          "timespan": "2026-10-12T03:54:08Z/2026-10-12T04:04:08Z",
+          "validatedAtUtc": "2026-10-12T04:04:08.601Z"
+        },
+        "metric": "VM Uncached IOPS Consumed Percentage",
+        "namespace": "Microsoft.Compute/virtualMachineScaleSets",
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss",
+        "selectedScope": "vmss-filtered",
+        "vmNameFilter": "aks-nodepool1-33061360-vmss_0"
+      },
+      "metricNamespace": "Microsoft.Compute/virtualMachineScaleSets",
+      "nativeInterval": "PT1M",
+      "polls": 16,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss",
+      "resourceScope": "vmss-filtered",
+      "uniquePoints": 23,
+      "vmNameDimension": "aks-nodepool1-33061360-vmss_0"
+    },
+    "biolatency": {
+      "dataDevice": "nvme0n2",
+      "dataDeviceObservedInHistogram": true,
+      "deviceHistogramsParsed": 313,
+      "exit": {
+        "atUtc": "2026-10-12T04:17:14.324Z",
+        "exitCode": 1
+      },
+      "image": "ubuntu:24.04",
+      "unparsedLines": 0,
+      "walDevice": "nvme0n3",
+      "walDeviceObservedInHistogram": true
+    },
+    "diskstats": {
+      "errors": 0,
+      "first": "2026-10-12T04:04:12.920Z",
+      "intervalSeconds": {
+        "max": 1.003611,
+        "median": 1.002515,
+        "min": 1.002036
+      },
+      "intervalsOver1_5s": 0,
+      "last": "2026-10-12T04:17:13.904Z",
+      "successfulSamples": 780,
+      "targetIntervalSeconds": 1
+    },
+    "fatalErrors": [],
+    "pgStatActivityAndWalReceiver": {
+      "first": "2026-10-12T04:04:12.935Z",
+      "intervalSeconds": {
+        "max": 1.000702,
+        "median": 1.000001,
+        "min": 0.001175
+      },
+      "intervalsOver1_5s": 0,
+      "last": "2026-10-12T04:17:13.936Z",
+      "samplesWithoutWalReceiverBackend": 0,
+      "streamErrors": 0,
+      "successfulSamples": 783,
+      "targetIntervalSeconds": 1,
+      "unparsedLines": 0
+    },
+    "replica": {
+      "devices": {
+        "data": {
+          "controller": {
+            "driver": "nvme",
+            "driverChain": "c05b:00:00.0:nvme,7ad35d50-c05b-47ab-b3a0-56a9a845852b:hv_pci",
+            "name": "nvme0",
+            "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/7ad35d50-c05b-47ab-b3a0-56a9a845852b/pcic05b:00/c05b:00:00.0/nvme/nvme0",
+            "type": "nvme"
+          },
+          "device": "nvme0n2",
+          "majorMinor": "259:5",
+          "path": "/var/lib/postgresql/data/pgdata"
+        },
+        "wal": {
+          "controller": {
+            "driver": "nvme",
+            "driverChain": "c05b:00:00.0:nvme,7ad35d50-c05b-47ab-b3a0-56a9a845852b:hv_pci",
+            "name": "nvme0",
+            "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/7ad35d50-c05b-47ab-b3a0-56a9a845852b/pcic05b:00/c05b:00:00.0/nvme/nvme0",
+            "type": "nvme"
+          },
+          "device": "nvme0n3",
+          "majorMinor": "259:6",
+          "path": "/var/lib/postgresql/wal/pg_wal"
+        }
+      },
+      "node": "aks-nodepool1-33061360-vmss000000",
+      "pod": "hdd-pg-2"
+    },
+    "startedAtUtc": "2026-10-12T04:04:12.390Z",
+    "stoppedAtUtc": "2026-10-12T04:17:15.624Z"
+  },
+  "azureValidPointsCoverRun": true,
+  "bothDevicesObservedInHistograms": true
+}

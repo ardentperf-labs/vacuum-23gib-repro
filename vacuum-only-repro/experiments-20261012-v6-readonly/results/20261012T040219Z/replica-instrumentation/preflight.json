@@ -1,0 +1,204 @@
+{
+  "attachmentVerificationPath": "/workspace/experiments/20261012-v6-readonly-retry/.state/attachment-verification/verified.json",
+  "azureMetric": "VM Uncached IOPS Consumed Percentage",
+  "azureMetricDiscovery": {
+    "dimensions": [
+      "vmname"
+    ],
+    "failedCandidates": [
+      {
+        "definitionCommand": [
+          "az",
+          "monitor",
+          "metrics",
+          "list-definitions",
+          "--resource",
+          "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0",
+          "--output",
+          "json",
+          "--only-show-errors"
+        ],
+        "definitionExitCode": 0,
+        "liveQueryCommand": [
+          "az",
+          "monitor",
+          "metrics",
+          "list",
+          "--resource",
+          "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0",
+          "--metric",
+          "VM Uncached IOPS Consumed Percentage",
+          "--namespace",
+          "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+          "--interval",
+          "PT1M",
+          "--aggregation",
+          "Average",
+          "--start-time",
+          "2026-10-12T03:54:08.601Z",
+          "--end-time",
+          "2026-10-12T04:04:08.601Z",
+          "--output",
+          "json",
+          "--only-show-errors"
+        ],
+        "liveQueryExitCode": 3,
+        "liveQueryStderr": "ERROR: (NotFound) Failed to find resource mapping for provider: Microsoft.Compute, resourceType: virtualMachineScaleSets/virtualMachines, id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0, traceId: 146139bf-f2ef-4568-8c6f-c17d05a4770d\nCode: NotFound\nMessage: Failed to find resource mapping for provider: Microsoft.Compute, resourceType: virtualMachineScaleSets/virtualMachines, id: /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0, traceId: 146139bf-f2ef-4568-8c6f-c17d05a4770d\n",
+        "liveQueryStdoutTail": "",
+        "liveValidation": {},
+        "liveValidationError": "live metric query returned no JSON object",
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0",
+        "scope": "vmss-instance"
+      }
+    ],
+    "liveQuery": {
+      "allSeriesMatchExpectedVmName": true,
+      "command": [
+        "az",
+        "monitor",
+        "metrics",
+        "list",
+        "--resource",
+        "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss",
+        "--metric",
+        "VM Uncached IOPS Consumed Percentage",
+        "--namespace",
+        "Microsoft.Compute/virtualMachineScaleSets",
+        "--interval",
+        "PT1M",
+        "--aggregation",
+        "Average",
+        "--start-time",
+        "2026-10-12T03:54:08.601Z",
+        "--end-time",
+        "2026-10-12T04:04:08.601Z",
+        "--output",
+        "json",
+        "--only-show-errors",
+        "--filter",
+        "VMName eq 'aks-nodepool1-33061360-vmss_0'"
+      ],
+      "dataPointCount": 10,
+      "exitCode": 0,
+      "interval": "PT1M",
+      "metricSeriesCount": 1,
+      "observedVmNames": [
+        "aks-nodepool1-33061360-vmss_0"
+      ],
+      "timespan": "2026-10-12T03:54:08Z/2026-10-12T04:04:08Z",
+      "validatedAtUtc": "2026-10-12T04:04:08.601Z"
+    },
+    "metric": "VM Uncached IOPS Consumed Percentage",
+    "namespace": "Microsoft.Compute/virtualMachineScaleSets",
+    "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss",
+    "selectedScope": "vmss-filtered",
+    "vmNameFilter": "aks-nodepool1-33061360-vmss_0"
+  },
+  "azureMetricNamespace": "Microsoft.Compute/virtualMachineScaleSets",
+  "azureMetricResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss",
+  "azureMetricResourceScope": "vmss-filtered",
+  "azurePreflightPoll": {
+    "exitCode": 0,
+    "pointCount": 10,
+    "pollId": "ab5b433fc2fe",
+    "responseInterval": "PT1M",
+    "timespan": "2026-10-12T03:54:11Z/2026-10-12T04:04:11Z"
+  },
+  "azureVmNameDimension": "aks-nodepool1-33061360-vmss_0",
+  "bccCommand": [
+    "biolatency",
+    "-mTD",
+    "-j",
+    "1"
+  ],
+  "bccImage": "ubuntu:24.04",
+  "bccImageId": "docker.io/library/ubuntu@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55",
+  "bccPreflightDevices": [
+    "nvme0n1",
+    "nvme0n2",
+    "nvme0n3"
+  ],
+  "bccPreflightSampleCount": 40,
+  "bccPreflightTargetDeviceObserved": true,
+  "bccPreflightTargetDevicesObserved": {
+    "data": true,
+    "wal": true
+  },
+  "database": "repro",
+  "devices": {
+    "data": {
+      "controller": {
+        "driver": "nvme",
+        "driverChain": "c05b:00:00.0:nvme,7ad35d50-c05b-47ab-b3a0-56a9a845852b:hv_pci",
+        "name": "nvme0",
+        "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/7ad35d50-c05b-47ab-b3a0-56a9a845852b/pcic05b:00/c05b:00:00.0/nvme/nvme0",
+        "type": "nvme"
+      },
+      "device": "nvme0n2",
+      "majorMinor": "259:5",
+      "path": "/var/lib/postgresql/data/pgdata"
+    },
+    "wal": {
+      "controller": {
+        "driver": "nvme",
+        "driverChain": "c05b:00:00.0:nvme,7ad35d50-c05b-47ab-b3a0-56a9a845852b:hv_pci",
+        "name": "nvme0",
+        "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/7ad35d50-c05b-47ab-b3a0-56a9a845852b/pcic05b:00/c05b:00:00.0/nvme/nvme0",
+        "type": "nvme"
+      },
+      "device": "nvme0n3",
+      "majorMinor": "259:6",
+      "path": "/var/lib/postgresql/wal/pg_wal"
+    }
+  },
+  "diskstatsInitialDeviceNames": [
+    "loop0",
+    "loop1",
+    "loop2",
+    "loop3",
+    "loop4",
+    "loop5",
+    "loop6",
+    "loop7",
+    "nvme0n1",
+    "nvme0n1p1",
+    "nvme0n1p14",
+    "nvme0n1p15",
+    "nvme0n1p16",
+    "nvme0n2",
+    "nvme0n3",
+    "sr0"
+  ],
+  "diskstatsInitialTargetDevices": {
+    "data": {
+      "device": "nvme0n2",
+      "majorMinor": "259:5",
+      "present": true
+    },
+    "wal": {
+      "device": "nvme0n3",
+      "majorMinor": "259:6",
+      "present": true
+    }
+  },
+  "liveDiskstatsSamplesAtReady": 1,
+  "livePgStatSamplesAtReady": 2,
+  "namespace": "repro",
+  "phase": "ready",
+  "providerId": "azure:///subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0",
+  "psqlPreflight": {
+    "activityRows": 1,
+    "isReplica": true,
+    "receiverRows": 1,
+    "serverVersion": "16.15 (Debian 16.15-1.pgdg13+2)"
+  },
+  "readyAtUtc": "2026-10-12T04:04:12.958Z",
+  "replicaNode": "aks-nodepool1-33061360-vmss000000",
+  "replicaPod": "hdd-pg-2",
+  "replicaPodUid": "3650ae98-e590-41cb-b571-2a4c725b6d18",
+  "sampling": {
+    "azureMetricNativeInterval": "PT1M",
+    "diskstatsIntervalSeconds": 1,
+    "pgStatIntervalSeconds": 1
+  }
+}

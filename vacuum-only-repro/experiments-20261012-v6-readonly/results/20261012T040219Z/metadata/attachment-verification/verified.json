@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "roles": {
+    "primary": {
+      "pod": "hdd-pg-1",
+      "node": "aks-nodepool1-33061360-vmss000001",
+      "vmResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/1",
+      "disks": {
+        "data": {
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/disks/pvc-64a907ea-de65-4491-9287-6b89c1952a8c",
+          "lun": 1,
+          "caching": "ReadOnly",
+          "sku": "Standard_LRS"
+        },
+        "wal": {
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/disks/pvc-abc6e946-a78b-4782-9560-86a36d6c46c4",
+          "lun": 0,
+          "caching": "ReadOnly",
+          "sku": "Standard_LRS"
+        }
+      }
+    },
+    "replica": {
+      "pod": "hdd-pg-2",
+      "node": "aks-nodepool1-33061360-vmss000000",
+      "vmResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-33061360-vmss/virtualMachines/0",
+      "disks": {
+        "data": {
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/disks/pvc-ce6b33ef-8539-4c57-babd-3147b9f2e5c8",
+          "lun": 0,
+          "caching": "ReadOnly",
+          "sku": "Standard_LRS"
+        },
+        "wal": {
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-00000000000000000000000000000002/providers/Microsoft.Compute/disks/pvc-7b547d34-82ea-4c45-981f-c1d3a11fa6ae",
+          "lun": 1,
+          "caching": "ReadOnly",
+          "sku": "Standard_LRS"
+        }
+      }
+    }
+  }
+}

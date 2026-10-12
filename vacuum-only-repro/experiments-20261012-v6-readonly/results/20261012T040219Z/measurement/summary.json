@@ -1,0 +1,867 @@
+{
+  "coverage": {
+    "maxIntervalSeconds": 12.5,
+    "valid": true,
+    "windows": {
+      "replayDrain": {
+        "series": {
+          "primary_data": {
+            "coverage": 1,
+            "coveredSeconds": 18.235013008117676,
+            "rejectedIntervals": 0
+          },
+          "primary_wal": {
+            "coverage": 1,
+            "coveredSeconds": 18.235013008117676,
+            "rejectedIntervals": 0
+          },
+          "replica_data": {
+            "coverage": 0.9999633514230605,
+            "coveredSeconds": 18.234344720840454,
+            "rejectedIntervals": 0
+          },
+          "replica_wal": {
+            "coverage": 0.9999633514230605,
+            "coveredSeconds": 18.234344720840454,
+            "rejectedIntervals": 0
+          }
+        },
+        "valid": true
+      },
+      "vacuum": {
+        "series": {
+          "primary_data": {
+            "coverage": 1,
+            "coveredSeconds": 750.3116238117218,
+            "rejectedIntervals": 0
+          },
+          "primary_wal": {
+            "coverage": 1,
+            "coveredSeconds": 750.3116238117218,
+            "rejectedIntervals": 0
+          },
+          "replica_data": {
+            "coverage": 1,
+            "coveredSeconds": 750.3116238117218,
+            "rejectedIntervals": 0
+          },
+          "replica_wal": {
+            "coverage": 1,
+            "coveredSeconds": 750.3116238117218,
+            "rejectedIntervals": 0
+          }
+        },
+        "valid": true
+      },
+      "vacuumAndReplay": {
+        "series": {
+          "primary_data": {
+            "coverage": 1,
+            "coveredSeconds": 768.5466368198395,
+            "rejectedIntervals": 0
+          },
+          "primary_wal": {
+            "coverage": 1,
+            "coveredSeconds": 768.5466368198395,
+            "rejectedIntervals": 0
+          },
+          "replica_data": {
+            "coverage": 0.9999991304531889,
+            "coveredSeconds": 768.5459685325623,
+            "rejectedIntervals": 0
+          },
+          "replica_wal": {
+            "coverage": 0.9999991304531889,
+            "coveredSeconds": 768.5459685325623,
+            "rejectedIntervals": 0
+          }
+        },
+        "valid": true
+      }
+    }
+  },
+  "maximumAllowedSampleGapSeconds": 12.5,
+  "maximumSampleGapSeconds": 8.987395763397217,
+  "sampleCount": 156,
+  "status": {
+    "error": null,
+    "replayCaughtUp": true,
+    "replayDrainSeconds": 16.119493938051164,
+    "replicaLagBytesAtObservationEnd": 0,
+    "testComplete": true,
+    "vacuumComplete": true,
+    "vacuumExitCode": 0,
+    "vacuumWindowCoverageValid": true
+  },
+  "topology": {
+    "primary_data": {
+      "attachmentDevicePath": "",
+      "claim": "hdd-pg-1",
+      "controller": {
+        "driver": "nvme",
+        "driverChain": "c05b:00:00.0:nvme,7ad35d50-c05b-47ab-b3a0-56a9a845852b:hv_pci",
+        "name": "nvme0",
+        "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/7ad35d50-c05b-47ab-b3a0-56a9a845852b/pcic05b:00/c05b:00:00.0/nvme/nvme0",
+        "type": "nvme"
+      },
+      "device": "nvme0n3",
+      "expectedMount": "/var/lib/postgresql/data",
+      "filesystem": "ext4",
+      "lun": 1,
+      "lunPath": "",
+      "lunPathVisible": false,
+      "majorMinor": "259:6",
+      "mount": "/var/lib/postgresql/data",
+      "mountMajorMinor": "259:6",
+      "node": "aks-nodepool1-33061360-vmss000001",
+      "path": "/var/lib/postgresql/data/pgdata",
+      "pv": "pvc-64a907ea-de65-4491-9287-6b89c1952a8c",
+      "queue": {
+        "blkMq": [
+          {
+            "cpuList": "0",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "0"
+          },
+          {
+            "cpuList": "1",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "1"
+          },
+          {
+            "cpuList": "10",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "10"
+          },
+          {
+            "cpuList": "11",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "11"
+          },
+          {
+            "cpuList": "12",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "12"
+          },
+          {
+            "cpuList": "13",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "13"
+          },
+          {
+            "cpuList": "14",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "14"
+          },
+          {
+            "cpuList": "15",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "15"
+          },
+          {
+            "cpuList": "2",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "2"
+          },
+          {
+            "cpuList": "3",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "3"
+          },
+          {
+            "cpuList": "4",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "4"
+          },
+          {
+            "cpuList": "5",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "5"
+          },
+          {
+            "cpuList": "6",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "6"
+          },
+          {
+            "cpuList": "7",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "7"
+          },
+          {
+            "cpuList": "8",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "8"
+          },
+          {
+            "cpuList": "9",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "9"
+          }
+        ],
+        "ioPoll": 0,
+        "ioPollDelay": null,
+        "maxHwSectorsKb": 256,
+        "maxSectorsKb": 256,
+        "nomerges": 0,
+        "nrRequests": 255,
+        "readAheadKb": 65536,
+        "rotational": 0,
+        "rqAffinity": 1,
+        "scheduler": "[none] mq-deadline ",
+        "wbtLatUsec": 2000
+      },
+      "scsi": {
+        "hctl": null,
+        "queueDepth": null
+      },
+      "source": "/dev/nvme0n3",
+      "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/7ad35d50-c05b-47ab-b3a0-56a9a845852b/pcic05b:00/c05b:00:00.0/nvme/nvme0"
+    },
+    "primary_wal": {
+      "attachmentDevicePath": "",
+      "claim": "hdd-pg-1-wal",
+      "controller": {
+        "driver": "nvme",
+        "driverChain": "c05b:00:00.0:nvme,7ad35d50-c05b-47ab-b3a0-56a9a845852b:hv_pci",
+        "name": "nvme0",
+        "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/7ad35d50-c05b-47ab-b3a0-56a9a845852b/pcic05b:00/c05b:00:00.0/nvme/nvme0",
+        "type": "nvme"
+      },
+      "device": "nvme0n2",
+      "expectedMount": "/var/lib/postgresql/wal",
+      "filesystem": "ext4",
+      "lun": 0,
+      "lunPath": "",
+      "lunPathVisible": false,
+      "majorMinor": "259:5",
+      "mount": "/var/lib/postgresql/wal",
+      "mountMajorMinor": "259:5",
+      "node": "aks-nodepool1-33061360-vmss000001",
+      "path": "/var/lib/postgresql/wal/pg_wal",
+      "pv": "pvc-abc6e946-a78b-4782-9560-86a36d6c46c4",
+      "queue": {
+        "blkMq": [
+          {
+            "cpuList": "0",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "0"
+          },
+          {
+            "cpuList": "1",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "1"
+          },
+          {
+            "cpuList": "10",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "10"
+          },
+          {
+            "cpuList": "11",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "11"
+          },
+          {
+            "cpuList": "12",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "12"
+          },
+          {
+            "cpuList": "13",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "13"
+          },
+          {
+            "cpuList": "14",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "14"
+          },
+          {
+            "cpuList": "15",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "15"
+          },
+          {
+            "cpuList": "2",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "2"
+          },
+          {
+            "cpuList": "3",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "3"
+          },
+          {
+            "cpuList": "4",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "4"
+          },
+          {
+            "cpuList": "5",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "5"
+          },
+          {
+            "cpuList": "6",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "6"
+          },
+          {
+            "cpuList": "7",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "7"
+          },
+          {
+            "cpuList": "8",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "8"
+          },
+          {
+            "cpuList": "9",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "9"
+          }
+        ],
+        "ioPoll": 0,
+        "ioPollDelay": null,
+        "maxHwSectorsKb": 256,
+        "maxSectorsKb": 256,
+        "nomerges": 0,
+        "nrRequests": 255,
+        "readAheadKb": 65536,
+        "rotational": 0,
+        "rqAffinity": 1,
+        "scheduler": "[none] mq-deadline ",
+        "wbtLatUsec": 2000
+      },
+      "scsi": {
+        "hctl": null,
+        "queueDepth": null
+      },
+      "source": "/dev/nvme0n2",
+      "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/7ad35d50-c05b-47ab-b3a0-56a9a845852b/pcic05b:00/c05b:00:00.0/nvme/nvme0"
+    },
+    "replica_data": {
+      "attachmentDevicePath": "",
+      "claim": "hdd-pg-2",
+      "controller": {
+        "driver": "nvme",
+        "driverChain": "c05b:00:00.0:nvme,7ad35d50-c05b-47ab-b3a0-56a9a845852b:hv_pci",
+        "name": "nvme0",
+        "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/7ad35d50-c05b-47ab-b3a0-56a9a845852b/pcic05b:00/c05b:00:00.0/nvme/nvme0",
+        "type": "nvme"
+      },
+      "device": "nvme0n2",
+      "expectedMount": "/var/lib/postgresql/data",
+      "filesystem": "ext4",
+      "lun": 0,
+      "lunPath": "",
+      "lunPathVisible": false,
+      "majorMinor": "259:5",
+      "mount": "/var/lib/postgresql/data",
+      "mountMajorMinor": "259:5",
+      "node": "aks-nodepool1-33061360-vmss000000",
+      "path": "/var/lib/postgresql/data/pgdata",
+      "pv": "pvc-ce6b33ef-8539-4c57-babd-3147b9f2e5c8",
+      "queue": {
+        "blkMq": [
+          {
+            "cpuList": "0",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "0"
+          },
+          {
+            "cpuList": "1",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "1"
+          },
+          {
+            "cpuList": "10",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "10"
+          },
+          {
+            "cpuList": "11",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "11"
+          },
+          {
+            "cpuList": "12",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "12"
+          },
+          {
+            "cpuList": "13",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "13"
+          },
+          {
+            "cpuList": "14",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "14"
+          },
+          {
+            "cpuList": "15",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "15"
+          },
+          {
+            "cpuList": "2",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "2"
+          },
+          {
+            "cpuList": "3",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "3"
+          },
+          {
+            "cpuList": "4",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "4"
+          },
+          {
+            "cpuList": "5",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "5"
+          },
+          {
+            "cpuList": "6",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "6"
+          },
+          {
+            "cpuList": "7",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "7"
+          },
+          {
+            "cpuList": "8",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "8"
+          },
+          {
+            "cpuList": "9",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "9"
+          }
+        ],
+        "ioPoll": 0,
+        "ioPollDelay": null,
+        "maxHwSectorsKb": 256,
+        "maxSectorsKb": 256,
+        "nomerges": 0,
+        "nrRequests": 255,
+        "readAheadKb": 65536,
+        "rotational": 0,
+        "rqAffinity": 1,
+        "scheduler": "[none] mq-deadline ",
+        "wbtLatUsec": 2000
+      },
+      "scsi": {
+        "hctl": null,
+        "queueDepth": null
+      },
+      "source": "/dev/nvme0n2",
+      "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/7ad35d50-c05b-47ab-b3a0-56a9a845852b/pcic05b:00/c05b:00:00.0/nvme/nvme0"
+    },
+    "replica_wal": {
+      "attachmentDevicePath": "",
+      "claim": "hdd-pg-2-wal",
+      "controller": {
+        "driver": "nvme",
+        "driverChain": "c05b:00:00.0:nvme,7ad35d50-c05b-47ab-b3a0-56a9a845852b:hv_pci",
+        "name": "nvme0",
+        "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/7ad35d50-c05b-47ab-b3a0-56a9a845852b/pcic05b:00/c05b:00:00.0/nvme/nvme0",
+        "type": "nvme"
+      },
+      "device": "nvme0n3",
+      "expectedMount": "/var/lib/postgresql/wal",
+      "filesystem": "ext4",
+      "lun": 1,
+      "lunPath": "",
+      "lunPathVisible": false,
+      "majorMinor": "259:6",
+      "mount": "/var/lib/postgresql/wal",
+      "mountMajorMinor": "259:6",
+      "node": "aks-nodepool1-33061360-vmss000000",
+      "path": "/var/lib/postgresql/wal/pg_wal",
+      "pv": "pvc-7b547d34-82ea-4c45-981f-c1d3a11fa6ae",
+      "queue": {
+        "blkMq": [
+          {
+            "cpuList": "0",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "0"
+          },
+          {
+            "cpuList": "1",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "1"
+          },
+          {
+            "cpuList": "10",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "10"
+          },
+          {
+            "cpuList": "11",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "11"
+          },
+          {
+            "cpuList": "12",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "12"
+          },
+          {
+            "cpuList": "13",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "13"
+          },
+          {
+            "cpuList": "14",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "14"
+          },
+          {
+            "cpuList": "15",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "15"
+          },
+          {
+            "cpuList": "2",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "2"
+          },
+          {
+            "cpuList": "3",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "3"
+          },
+          {
+            "cpuList": "4",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "4"
+          },
+          {
+            "cpuList": "5",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "5"
+          },
+          {
+            "cpuList": "6",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "6"
+          },
+          {
+            "cpuList": "7",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "7"
+          },
+          {
+            "cpuList": "8",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "8"
+          },
+          {
+            "cpuList": "9",
+            "nrReservedTags": 0,
+            "nrTags": 255,
+            "queueId": "9"
+          }
+        ],
+        "ioPoll": 0,
+        "ioPollDelay": null,
+        "maxHwSectorsKb": 256,
+        "maxSectorsKb": 256,
+        "nomerges": 0,
+        "nrRequests": 255,
+        "readAheadKb": 65536,
+        "rotational": 0,
+        "rqAffinity": 1,
+        "scheduler": "[none] mq-deadline ",
+        "wbtLatUsec": 2000
+      },
+      "scsi": {
+        "hctl": null,
+        "queueDepth": null
+      },
+      "source": "/dev/nvme0n3",
+      "sysfsDevicePath": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/7ad35d50-c05b-47ab-b3a0-56a9a845852b/pcic05b:00/c05b:00:00.0/nvme/nvme0"
+    }
+  },
+  "units": {
+    "await": "ms per completed operation",
+    "throughput": "decimal MB/s"
+  },
+  "vacuumDataReadAmplification": {
+    "basis": "full VACUUM command window, including any final replication wait",
+    "incidentRatio": 7.066666666666666,
+    "primaryReadIops": 274.77089740815444,
+    "ratio": 28.902872664742535,
+    "replicaReadIops": 7941.668259764922
+  },
+  "walCounterDeltaFromBeforeVacuum": {
+    "walBytes": 36932307699,
+    "walFpi": 6071355,
+    "walRecords": 15115384
+  },
+  "walDeltaVacuumMarkers": {
+    "walBytes": 36932307649,
+    "walFpi": 6071355,
+    "walRecords": 15115383
+  },
+  "windows": {
+    "replayDrain": {
+      "primary_data": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 1,
+        "coveredSeconds": 18.235013008117676,
+        "maxIntervalReadAwaitMs": 5.387470997679815,
+        "maxIntervalWriteAwaitMs": 106.65147198480531,
+        "operationWeightedAwaitMs": 96.98675781668688,
+        "readAwaitMs": 5.387470997679814,
+        "readIops": 5.6063527475234425,
+        "readMBps": 1.3473944495897099,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 104.33282062873283,
+        "writeIops": 69.90655082431867,
+        "writeMBps": 16.11642066019052
+      },
+      "primary_wal": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 1,
+        "coveredSeconds": 18.235013008117676,
+        "maxIntervalReadAwaitMs": 4.077464788732394,
+        "maxIntervalWriteAwaitMs": 2.5,
+        "operationWeightedAwaitMs": 1.6935876312783618,
+        "readAwaitMs": 4.077464788732394,
+        "readIops": 0.923552308756762,
+        "readMBps": 0.21823431790578712,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 1.5612246985563119,
+        "writeIops": 16.63332178641293,
+        "writeMBps": 1.069310002636698
+      },
+      "replica_data": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 0.9999633514230605,
+        "coveredSeconds": 18.234344720840454,
+        "maxIntervalReadAwaitMs": 0.16326530612244897,
+        "maxIntervalWriteAwaitMs": 108.91628614916286,
+        "operationWeightedAwaitMs": 5.497277038677334,
+        "readAwaitMs": 0.11031406551516806,
+        "readIops": 3619.294563258456,
+        "readMBps": 29.679109376710787,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 90.37851244916222,
+        "writeIops": 229.6974791537033,
+        "writeMBps": 48.769562512290015
+      },
+      "replica_wal": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 0.9999633514230605,
+        "coveredSeconds": 18.234344720840454,
+        "maxIntervalReadAwaitMs": null,
+        "maxIntervalWriteAwaitMs": 58.38392857142857,
+        "operationWeightedAwaitMs": 56.49432842452028,
+        "readAwaitMs": null,
+        "readIops": 0.0,
+        "readMBps": 0.0,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 56.49432842452028,
+        "writeIops": 135.77380449100906,
+        "writeMBps": 29.89080803994096
+      }
+    },
+    "vacuum": {
+      "primary_data": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 1,
+        "coveredSeconds": 750.3116238117218,
+        "maxIntervalReadAwaitMs": 13.806826997672614,
+        "maxIntervalWriteAwaitMs": 213.59410430839003,
+        "operationWeightedAwaitMs": 59.10026237721824,
+        "readAwaitMs": 4.496175385074769,
+        "readIops": 274.77089740815444,
+        "readMBps": 66.17203617992935,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 105.55556208371196,
+        "writeIops": 322.9688341217811,
+        "writeMBps": 65.91426835218887
+      },
+      "primary_wal": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 1,
+        "coveredSeconds": 750.3116238117218,
+        "maxIntervalReadAwaitMs": 4.077464788732394,
+        "maxIntervalWriteAwaitMs": 13.807145115396775,
+        "operationWeightedAwaitMs": 3.206897228640415,
+        "readAwaitMs": 0.9304821311578455,
+        "readIops": 153.98423181116547,
+        "readMBps": 37.262423461254905,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 3.743731262467786,
+        "writeIops": 652.9616380132726,
+        "writeMBps": 58.58477764117616
+      },
+      "replica_data": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 1,
+        "coveredSeconds": 750.3116238117218,
+        "maxIntervalReadAwaitMs": 6.0885624137251035,
+        "maxIntervalWriteAwaitMs": 183.53342428376536,
+        "operationWeightedAwaitMs": 3.2738781864037327,
+        "readAwaitMs": 0.36316115624527057,
+        "readIops": 7941.668259764922,
+        "readMBps": 65.15269159599457,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 81.89848610292061,
+        "writeIops": 294.00399778287033,
+        "writeMBps": 64.83323487665041
+      },
+      "replica_wal": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 1,
+        "coveredSeconds": 750.3116238117218,
+        "maxIntervalReadAwaitMs": 6.0,
+        "maxIntervalWriteAwaitMs": 63.43788379782711,
+        "operationWeightedAwaitMs": 55.77685175128104,
+        "readAwaitMs": 0.8,
+        "readIops": 0.013327795655354706,
+        "readMBps": 5.459065100433288e-05,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 55.77856248889047,
+        "writeIops": 428.3066215863241,
+        "writeMBps": 98.42568831867418
+      }
+    },
+    "vacuumAndReplay": {
+      "primary_data": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 1,
+        "coveredSeconds": 768.5466368198395,
+        "maxIntervalReadAwaitMs": 13.806826997672614,
+        "maxIntervalWriteAwaitMs": 213.59410430839003,
+        "operationWeightedAwaitMs": 59.21622727077691,
+        "readAwaitMs": 4.4966171391411125,
+        "readIops": 268.38453288833773,
+        "readMBps": 64.6339666229658,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 105.54916359057766,
+        "writeIops": 316.9645218176015,
+        "writeMBps": 64.73273380771761
+      },
+      "primary_wal": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 1,
+        "coveredSeconds": 768.5466368198395,
+        "maxIntervalReadAwaitMs": 4.077464788732394,
+        "maxIntervalWriteAwaitMs": 13.807145115396775,
+        "operationWeightedAwaitMs": 3.206097458106229,
+        "readAwaitMs": 0.9309407804211055,
+        "readIops": 150.35261943002635,
+        "readMBps": 36.38349011024931,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 3.742380924439228,
+        "writeIops": 637.8637186835567,
+        "writeMBps": 57.220130070930416
+      },
+      "replica_data": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 0.9999991304531889,
+        "coveredSeconds": 768.5459685325623,
+        "maxIntervalReadAwaitMs": 6.0885624137251035,
+        "maxIntervalWriteAwaitMs": 183.53342428376536,
+        "operationWeightedAwaitMs": 3.2988476359299224,
+        "readAwaitMs": 0.3603914412750035,
+        "readIops": 7839.116616504233,
+        "readMBps": 64.31105355070686,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 82.05649448579297,
+        "writeIops": 292.4782761260119,
+        "writeMBps": 64.45211188418497
+      },
+      "replica_wal": {
+        "boundaryMethod": "valid counter deltas prorated by overlap duration",
+        "coverage": 0.9999991304531889,
+        "coveredSeconds": 768.5459685325623,
+        "maxIntervalReadAwaitMs": 6.0,
+        "maxIntervalWriteAwaitMs": 63.43788379782711,
+        "operationWeightedAwaitMs": 55.78233668177167,
+        "readAwaitMs": 0.8,
+        "readIops": 0.013011583443855269,
+        "readMBps": 5.329544578603119e-05,
+        "rejectedIntervals": 0,
+        "writeAwaitMs": 55.78403451018631,
+        "writeIops": 421.36605531250785,
+        "writeMBps": 96.79964552673805
+      }
+    }
+  }
+}

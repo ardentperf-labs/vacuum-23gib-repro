@@ -1,0 +1,77 @@
+{
+  "vmSize": "Standard_D16as_v6",
+  "uncachedIopsLimit": 30400,
+  "limitSource": "metadata/sku-at-provision.json: capabilities.UncachedDiskIOPS",
+  "formula": "recordedAveragePercent / 100 * uncachedIopsLimit",
+  "scope": "replica VM, all disks, reads and writes; native one-minute Average",
+  "maximumObservedBucketIopsEstimate": 608.0,
+  "vacuumOverlappingBucketMeanIopsEstimate": 444.30769230769226,
+  "caveat": "Recorded percentages appear quantized to whole percentage points; estimated budget-equivalent IOPS, not exact read counts. Boundary minutes include time outside VACUUM.",
+  "points": [
+    {
+      "time": "2026-10-12T04:04:00.000Z",
+      "recordedAveragePercent": 0.0,
+      "uncachedIopsEstimate": 0.0
+    },
+    {
+      "time": "2026-10-12T04:05:00.000Z",
+      "recordedAveragePercent": 0.0,
+      "uncachedIopsEstimate": 0.0
+    },
+    {
+      "time": "2026-10-12T04:06:00.000Z",
+      "recordedAveragePercent": 0.0,
+      "uncachedIopsEstimate": 0.0
+    },
+    {
+      "time": "2026-10-12T04:07:00.000Z",
+      "recordedAveragePercent": 1.0,
+      "uncachedIopsEstimate": 304.0
+    },
+    {
+      "time": "2026-10-12T04:08:00.000Z",
+      "recordedAveragePercent": 2.0,
+      "uncachedIopsEstimate": 608.0
+    },
+    {
+      "time": "2026-10-12T04:09:00.000Z",
+      "recordedAveragePercent": 2.0,
+      "uncachedIopsEstimate": 608.0
+    },
+    {
+      "time": "2026-10-12T04:10:00.000Z",
+      "recordedAveragePercent": 2.0,
+      "uncachedIopsEstimate": 608.0
+    },
+    {
+      "time": "2026-10-12T04:11:00.000Z",
+      "recordedAveragePercent": 2.0,
+      "uncachedIopsEstimate": 608.0
+    },
+    {
+      "time": "2026-10-12T04:12:00.000Z",
+      "recordedAveragePercent": 2.0,
+      "uncachedIopsEstimate": 608.0
+    },
+    {
+      "time": "2026-10-12T04:13:00.000Z",
+      "recordedAveragePercent": 2.0,
+      "uncachedIopsEstimate": 608.0
+    },
+    {
+      "time": "2026-10-12T04:14:00.000Z",
+      "recordedAveragePercent": 2.0,
+      "uncachedIopsEstimate": 608.0
+    },
+    {
+      "time": "2026-10-12T04:15:00.000Z",
+      "recordedAveragePercent": 2.0,
+      "uncachedIopsEstimate": 608.0
+    },
+    {
+      "time": "2026-10-12T04:16:00.000Z",
+      "recordedAveragePercent": 2.0,
+      "uncachedIopsEstimate": 608.0
+    }
+  ]
+}

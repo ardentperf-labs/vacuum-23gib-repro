@@ -1,0 +1,722 @@
+{
+  "measurementValuesChanged": false,
+  "rules": [
+    "Anonymize Azure subscription UUID to all-zero UUID",
+    "Replace source workspace prefixes with /workspace",
+    "Redact text members inside controller-log tar archives",
+    "Replace historical resource-group ownership nonces with example tokens",
+    "Replace retired RFC1918 addresses with RFC5737 documentation addresses"
+  ],
+  "excluded": [
+    "live .state and credentials",
+    "private source snapshot manifests/proofs",
+    "private database/WAL exports",
+    "private original data tarball and hash manifest"
+  ],
+  "scriptAdaptations": [
+    "Require explicit SUB rather than private subscription default; default region westus3",
+    "Use running Python interpreter rather than old workspace venv",
+    "Repair stale offline commands and document BCC coverage failure"
+  ],
+  "receiptHashScope": "Original harvest receipts describe private originals; published file hashes below describe public versions. Derived hash/provenance fields are not measurement values.",
+  "files": [
+    {
+      "path": "01-provision.sh",
+      "originalSha256": "c3049dced4f59e349eb01cb5229c02e61da188a140f5ba5ba45f4c3796adbff5",
+      "publishedSha256": "45761fe9172f5ee8ef2e8780403dc3e03f53b07e0592a113c3646b9fbd9afae5",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "02-prepare.sh",
+      "originalSha256": "65b04e0afb40360af3f9c3476f26e411d97d71200aa810aa2feabd8b9cc7d2c9",
+      "publishedSha256": "65b04e0afb40360af3f9c3476f26e411d97d71200aa810aa2feabd8b9cc7d2c9",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "03-test.py",
+      "originalSha256": "c7cca4d6f31929c53f2794398230f7fe6db6d8e63a06425526522232645bf6a9",
+      "publishedSha256": "c7cca4d6f31929c53f2794398230f7fe6db6d8e63a06425526522232645bf6a9",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "04-teardown.sh",
+      "originalSha256": "4b30101cd8ecd8aae0115acae0d53e253dff7bd7139a0be655e9a3b0d988e342",
+      "publishedSha256": "4b30101cd8ecd8aae0115acae0d53e253dff7bd7139a0be655e9a3b0d988e342",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "analyze-instrumentation.py",
+      "originalSha256": "8aad5a0d20a941e82e95c8bf586f5518709867465c2fe22bb444a4275c468d36",
+      "publishedSha256": "a7b3d8046a9766ab6475cdebb6c8093c8ef7618cd8e068d6817529743cc58c8e",
+      "redacted": false,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "bcc-kernel-preflight.py",
+      "originalSha256": "b313b4b2b98140f1252b1fda50f842daa483fc752ce2185e8a7819eb2ab3b3f3",
+      "publishedSha256": "b313b4b2b98140f1252b1fda50f842daa483fc752ce2185e8a7819eb2ab3b3f3",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "clear-guest-cache.py",
+      "originalSha256": "e39182c63e58346dcda6ec57636ddf8b50c0361be9f0ca35f41139adc05f3a0c",
+      "publishedSha256": "e39182c63e58346dcda6ec57636ddf8b50c0361be9f0ca35f41139adc05f3a0c",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "controller-probe.sh",
+      "originalSha256": "ad69ca5176615fad4546f8638ba1c4cd0489dc4d44e09beed46c35d3181110d5",
+      "publishedSha256": "ad69ca5176615fad4546f8638ba1c4cd0489dc4d44e09beed46c35d3181110d5",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "harvest.py",
+      "originalSha256": "6c64811241977df96c56d5b057c8bd5049dbb91478c52dc4804201a6279a4374",
+      "publishedSha256": "6c64811241977df96c56d5b057c8bd5049dbb91478c52dc4804201a6279a4374",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "plot.py",
+      "originalSha256": "d0ac35439ba17dcfe6f50e9484dd12274575755451258d82d7b12210c91317ec",
+      "publishedSha256": "d0ac35439ba17dcfe6f50e9484dd12274575755451258d82d7b12210c91317ec",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "run-measurement.py",
+      "originalSha256": "7d65e1046a2f27e0bdfac96971affa473c6c27f61362d9513c2ecf3db224b3a7",
+      "publishedSha256": "e1e64c8536cc825b8e1dc3be29d9e1c0f8e2ffd40f295b0708a88574855bd19d",
+      "redacted": false,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "teardown.py",
+      "originalSha256": "7dadfe8a68fcf649915714808b7a4388445c34a234edc13476b400627f44a9ea",
+      "publishedSha256": "7dadfe8a68fcf649915714808b7a4388445c34a234edc13476b400627f44a9ea",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "test_teardown_safety.py",
+      "originalSha256": "5072bcb4781a8fde6ad46887408e0df068e3fe38e77b4c340fbdae10f1d844da",
+      "publishedSha256": "5072bcb4781a8fde6ad46887408e0df068e3fe38e77b4c340fbdae10f1d844da",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "verify-attachments.py",
+      "originalSha256": "1cfdabf2208fc944746189e50ed29e9778de543a878b643a42c03ec5cd2de730",
+      "publishedSha256": "1cfdabf2208fc944746189e50ed29e9778de543a878b643a42c03ec5cd2de730",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "verify-harvest.py",
+      "originalSha256": "2681d5da00d483c1159a6516810438f62846838bedad09292a4c5e3dc149856b",
+      "publishedSha256": "2681d5da00d483c1159a6516810438f62846838bedad09292a4c5e3dc149856b",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "instrumentation/test_collect.py",
+      "originalSha256": "2a807359f872cd78676d96a9e119c3b51c056c7083ad7622b07ff22c1ffe0692",
+      "publishedSha256": "2a807359f872cd78676d96a9e119c3b51c056c7083ad7622b07ff22c1ffe0692",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "instrumentation/collect.py",
+      "originalSha256": "d13eddce84b445e4322eae6833f90e503e6b2951eb121aedb5fc0798b3fc5275",
+      "publishedSha256": "d13eddce84b445e4322eae6833f90e503e6b2951eb121aedb5fc0798b3fc5275",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "instrumentation/test_device_mapping.py",
+      "originalSha256": "d9334eb6be969c60a7283c1f91b4d941bc6aa2aafc955ecc727cb3a34e53b90d",
+      "publishedSha256": "d9334eb6be969c60a7283c1f91b4d941bc6aa2aafc955ecc727cb3a34e53b90d",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "instrumentation/README.md",
+      "originalSha256": "64ea434025bb0f2758fde9ea38363781e9baf4f0a20d87d0bdaf08ee892b002b",
+      "publishedSha256": "b86eb3c7d8507f45c352af8eea1e50c744065535e2ed984caa127e7f381ee07a",
+      "redacted": false,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "preflight/azure-metric-parent-live.json",
+      "originalSha256": "90ea8559ab516e180127e99f26f4acb47dc8132f27df05f917e03de39ff8e8fe",
+      "publishedSha256": "b9997a93912e7aa99af0d923fb86b5cc230022ecd1a50a242c62a7f0c60b1b7f",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "preflight/azure-metric-live.json",
+      "originalSha256": "6cdc48a22bdfebab41cc131f9b4f4566598f95d01d1e56ea7e4c69635c3c5508",
+      "publishedSha256": "6ffc7038250b0e3044516faa5fffc31e30e03f8cc6178871e3a50b771a16bb4e",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "preflight/azure-metric-parent-definitions.json",
+      "originalSha256": "c1699a09810f772824718fb63920c97d08126e1f168300718e5babdabbcc0276",
+      "publishedSha256": "b2f40a9341ea2a99641bb95e6cff0c184bd007d4b78379b8d5593452dc69f9ea",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "preflight/provision.log",
+      "originalSha256": "b5b379915a11bedfe4e13764cc6ae18b4754fb3ffb0d70e2ef31209fcb2d16de",
+      "publishedSha256": "06a200a9beba85ed06c30f3bb80a01a8b58b2fa40343e237bf20c73d6c7e9454",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "preflight/azure-metric-scope.json",
+      "originalSha256": "bbbd3254f1bdc0c966be349b73c8c674efbbb3d88dbd496eb6ba98e0d7156e2c",
+      "publishedSha256": "98a5baf217683403692bc57e21af319fa9abc5fb125b78311906c1d81b0d9861",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "preflight/prepare.log",
+      "originalSha256": "967d97b420e03283ba14d96ef805cd52309dd8f2606f37b5d8cb578b0403c590",
+      "publishedSha256": "967d97b420e03283ba14d96ef805cd52309dd8f2606f37b5d8cb578b0403c590",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "preflight/azure-metric-scope-validated.json",
+      "originalSha256": "51b9c6e2f3002ea23baee04ad324d2d33f3a743784b01d035394a18283b58b3d",
+      "publishedSha256": "d12e05fc47bcaee9d84db839b46f804d0fcb0a3552a8fcd83bad7fb9533ffcac",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "preflight/bcc-kernel-controller.log",
+      "originalSha256": "de5f327d1469511c23e0a9d199784889b193b9fe0c9cab63d41e882169416356",
+      "publishedSha256": "de5f327d1469511c23e0a9d199784889b193b9fe0c9cab63d41e882169416356",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "preflight/controller.log",
+      "originalSha256": "826352691a47ae74313686434aed567efbd8e61cba5abbd829abf683cb548e12",
+      "publishedSha256": "826352691a47ae74313686434aed567efbd8e61cba5abbd829abf683cb548e12",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "preflight/bcc-kernel/verified.json",
+      "originalSha256": "dd36a624991e3881eef83d2c2f0f8605968ef6ea2df44b603a5a4c10cc0982a2",
+      "publishedSha256": "dd36a624991e3881eef83d2c2f0f8605968ef6ea2df44b603a5a4c10cc0982a2",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "preflight/bcc-kernel/pod-final.json",
+      "originalSha256": "fc3bbf9438e7d961fdc318e67cdf291608784ec7c0b5eda719908e31fe87c891",
+      "publishedSha256": "3827ab1a63b79286a1210f772c8b23360ae7b013d28d21024a51cf55215cee90",
+      "redacted": false,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "preflight/bcc-kernel/probe.log",
+      "originalSha256": "08bd948c720283f7f4743238f965d656db7c1bc7c276684accbf448b7f72ab5c",
+      "publishedSha256": "08bd948c720283f7f4743238f965d656db7c1bc7c276684accbf448b7f72ab5c",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "preflight/bcc-kernel/pod-manifest.json",
+      "originalSha256": "fa1ff9a5cf5370c77c1cb89559da11db46852da7174f946d2f64eb9a9ce18455",
+      "publishedSha256": "3840757a8a883eb8106c9940273832bb62dbe91da25165aab2e74452b2cf3eeb",
+      "redacted": false,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/biolatency-quality-audit.json",
+      "originalSha256": "19649e268382624d810cb927198013469014cc0b58a4ff3f4a15a2dd865df4c1",
+      "publishedSha256": "19649e268382624d810cb927198013469014cc0b58a4ff3f4a15a2dd865df4c1",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/download-verification.json",
+      "originalSha256": "45bc8047c2047d79eebd0533097befe73cf0f8edc9910116952cbeb28ba5bc48",
+      "publishedSha256": "9b9fc559f6c3e9d7e018b885efd4ea3621f7766d51deb9065bcebcdb888a73ca",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/analysis.log",
+      "originalSha256": "a2e099c3600825e127130e7e6578f562ac383082bef3ae18857b5e6b55488c0d",
+      "publishedSha256": "26ecaccffc0aa59eb07913d7731fbb1b8eec20f149c68fe260ba2b782d9be350",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/replica-inflight-io.png",
+      "originalSha256": "7cbfa509b6c4bbc4d606ee87fdf7736919d5c5c6d57c3aa5172794d5f86f5ce1",
+      "publishedSha256": "7cbfa509b6c4bbc4d606ee87fdf7736919d5c5c6d57c3aa5172794d5f86f5ce1",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/attachment-verification.log",
+      "originalSha256": "c5c85e2df3317f0f695d0fa0e72fd2ee412371ec3e58aaf17fa47284a1cc67ef",
+      "publishedSha256": "b682d70379482a05f6ea6fadb593872d0d6d67f0f1c14aaa967a74da01a2ccbf",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/replica-controller-queues.log",
+      "originalSha256": "2ca56b341ea91c507f3021fca58258ec24482f655f9418bdc10d497ff3462769",
+      "publishedSha256": "2ca56b341ea91c507f3021fca58258ec24482f655f9418bdc10d497ff3462769",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/guest-cache-clearing.json",
+      "originalSha256": "9ad70286f11d07dd3bf7d280d3252502c871950be2658b21250a6f24cf34de1f",
+      "publishedSha256": "75680569fc12536f7d866637456d69fe9baf5275a1e2b38fe130ce47ac7cf906",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/primary-guest-cache.log",
+      "originalSha256": "a4040508b7c6c203b462e450735c1f2a1bd35fd1a4a10e41e0275db4375e89b1",
+      "publishedSha256": "a4040508b7c6c203b462e450735c1f2a1bd35fd1a4a10e41e0275db4375e89b1",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/harvest.log",
+      "originalSha256": "409eeb6787495569edde296a944a7d766af62414392d2151d9d24172d36d97b9",
+      "publishedSha256": "409eeb6787495569edde296a944a7d766af62414392d2151d9d24172d36d97b9",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/guest-cache-clear.log",
+      "originalSha256": "f2becd2d7d542507ba1093645a77496f9445c5d3de5c2f6bb6f9b2fdc4ffc698",
+      "publishedSha256": "f033a24382c222b3c681cf7fd094930f4b4ff79b29c29c5aeff552d6a099a00e",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/replica-azure-uncached-iops-percent.png",
+      "originalSha256": "32b0c4084fee6831c325119ebca0b2156b840d809e0a73a89c9c08a962912f6c",
+      "publishedSha256": "32b0c4084fee6831c325119ebca0b2156b840d809e0a73a89c9c08a962912f6c",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/replica-average-queue-depth.png",
+      "originalSha256": "c2f80ef4a762a86a82c5d4c7ae2de9e5090953683800f3be699bea230872ad31",
+      "publishedSha256": "c2f80ef4a762a86a82c5d4c7ae2de9e5090953683800f3be699bea230872ad31",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/teardown.log",
+      "originalSha256": "3c9ebd3d717b14aee9c67dae3666ec39825a8114aaaf0fa7f40e7742e361c7ee",
+      "publishedSha256": "3c9ebd3d717b14aee9c67dae3666ec39825a8114aaaf0fa7f40e7742e361c7ee",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/instrumentation-readiness-checkpoint.log",
+      "originalSha256": "a252f87b9c2c34a647b34d77d08f3ce2491f24e3fe1df75bfe607d70d374803a",
+      "publishedSha256": "a252f87b9c2c34a647b34d77d08f3ce2491f24e3fe1df75bfe607d70d374803a",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/download-verification.log",
+      "originalSha256": "5a33019ec2b11c29888666d7f79f891bd334ea26ee1eb7effb2af26e11a4071b",
+      "publishedSha256": "5a33019ec2b11c29888666d7f79f891bd334ea26ee1eb7effb2af26e11a4071b",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/analysis.json",
+      "originalSha256": "d913b10ca098d266f00c6df4a2262d588eb84ea5ef79759b5558ca6dacff3ac8",
+      "publishedSha256": "97136783ceac860c6686f247133be242473915a0d43ff4597fa580c097356a6a",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/primary-controller-queues.log",
+      "originalSha256": "416602fccfd75e6b1a963ad5658eca739c665b3313b245b450947e2c0b812422",
+      "publishedSha256": "416602fccfd75e6b1a963ad5658eca739c665b3313b245b450947e2c0b812422",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/test.log",
+      "originalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "publishedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/instrumentation.log",
+      "originalSha256": "8830965d29cda99b2993eaaa9ad9db3669ea94d06af0a3c773f38a0e307a51ee",
+      "publishedSha256": "585c820ac0ced6d5bdd2ca6f6ede29d20b7aad62059f1ea3f082a74c05b5b521",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/replica-guest-cache.log",
+      "originalSha256": "3ba33002380007b6770ec8a9124d78f59dc64d78dde5ac0c4c6ba1ab42afe282",
+      "publishedSha256": "3ba33002380007b6770ec8a9124d78f59dc64d78dde5ac0c4c6ba1ab42afe282",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/downloaded/kubernetes-events-final.json",
+      "originalSha256": "88838c8ddaa50b39ab656b2d2337665d760fa596f6ec0f388aafbb0bf78e322c",
+      "publishedSha256": "7afb6ea555be80d45c0348b7a515af8f827948c0482b6d347daf78ba9e05aaf9",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/downloaded/pods-final.json",
+      "originalSha256": "44a55acdb3b455e038e6dfcdc16384530e07dc7079ef4f8552cfb721a5323769",
+      "publishedSha256": "00d67c3d8c4de3f7875918133a0da229f5ef7cd4393a5e51adeb907ec25d4c83",
+      "redacted": false,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/downloaded/hdd-pg-2-postgres.log",
+      "originalSha256": "653bcaf305d69788855bffeefdfcb5e6c1e264772f2bd15bd95a243ea037593c",
+      "publishedSha256": "653bcaf305d69788855bffeefdfcb5e6c1e264772f2bd15bd95a243ea037593c",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/downloaded/cluster-final.json",
+      "originalSha256": "0e5d9809c3b43079f3ea63fe40cad2d9d7b9ef2a64605d2035c49a133603fe67",
+      "publishedSha256": "adf145d0202b21387041a1aae19ad24d3f78afeb8590619b8362be2b4a88f7f5",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/downloaded/pvcs-final.json",
+      "originalSha256": "bf055b82a41e6cc0202f682cc5b6e4d3562ce0d9759828a017a2316d9c5fd4e7",
+      "publishedSha256": "3b5a81bb63675f2dfd29d3d5222ca39c758e0879f9b618ac7b16b1265f8e6291",
+      "redacted": false,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/downloaded/hdd-pg-1-controller-logs.tar.gz",
+      "originalSha256": "9b837dd7de2754807b33a7f48e1dadcacc84cbf3581961cd78c7f2d3ac21159c",
+      "publishedSha256": "1a6dbfd56737e80c84b5ad7fc8e2ed75e43e55435f528c7e557f3d9d54e3ccfe",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/downloaded/volumeattachments-final.json",
+      "originalSha256": "a9ad1643d1ca95fca18325baa4f789a9a59b780e6ec17c8d060b231deb342856",
+      "publishedSha256": "a9ad1643d1ca95fca18325baa4f789a9a59b780e6ec17c8d060b231deb342856",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/downloaded/hdd-pg-2-controller-logs.tar.gz",
+      "originalSha256": "4747015284b4e379d5616d45473c8b4e16b20391349a468d892af1fc3430cf55",
+      "publishedSha256": "1a6dbfd56737e80c84b5ad7fc8e2ed75e43e55435f528c7e557f3d9d54e3ccfe",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/downloaded/pvs-final.json",
+      "originalSha256": "97bb7b4de9685ac333fa60a57f18dc5ba49242584082460930802e34e17fb824",
+      "publishedSha256": "5a301dab07fdbe09e2cfe9920a48893ebde9b6799156868583bea23148d5b9bc",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/downloaded/hdd-pg-1-postgres.log",
+      "originalSha256": "f80d217eb6413dde99ebaf64c5a13f7856dcfb5aca806a3b8ffdbbd42bfb801c",
+      "publishedSha256": "a36bfcf6118d0af3c44ff3355f6c8ff9bdc8a6d33dc58c2b2c754ac089aadd95",
+      "redacted": false,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/replica-instrumentation/azure-monitor-polls.jsonl",
+      "originalSha256": "4f536ac0df89a24b05cb85813ae478cf917389da0198f294482f7bd4cb282465",
+      "publishedSha256": "08fb7c2f6b8bc23a418cec57d65a03df3ed608d800d811bb66cbd8d94b552059",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/replica-instrumentation/collector-status.json",
+      "originalSha256": "7c8c76dd4018337b336793cb76341cb26b07f44632479d070ea20870bcd70d03",
+      "publishedSha256": "f07cf6791168bc864dfae818f65261a3cea4853f8b9a000bc508f6ccb165de67",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/replica-instrumentation/diskstats.raw.log",
+      "originalSha256": "b902ddadca091b96a1e151f7827193b6b044a999a3d06cceba9089f0a377b8a9",
+      "publishedSha256": "b902ddadca091b96a1e151f7827193b6b044a999a3d06cceba9089f0a377b8a9",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/replica-instrumentation/coverage.json",
+      "originalSha256": "0c2763e790edce4ed1a88376ab2134f9f95bff9008a2e1a15b7ffb3797ef8087",
+      "publishedSha256": "5633c5c4b18fbb9d41ba3ac8023800c60ffb1cd632ea2551290f221323569912",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/replica-instrumentation/biolatency.raw.log",
+      "originalSha256": "950ee2d8bd5cce87b5d103295dc0f2625491123502fb4dac8b00941a5ff07f8e",
+      "publishedSha256": "950ee2d8bd5cce87b5d103295dc0f2625491123502fb4dac8b00941a5ff07f8e",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/replica-instrumentation/pgstat-receiver.raw.log",
+      "originalSha256": "9950e4b55132c7f1d0252832b8bd986920be3d1641524eb700bc5f90640e2ad4",
+      "publishedSha256": "9950e4b55132c7f1d0252832b8bd986920be3d1641524eb700bc5f90640e2ad4",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/replica-instrumentation/pgstat-psql.stderr.log",
+      "originalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "publishedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/replica-instrumentation/diskstats-kubectl.stderr.log",
+      "originalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "publishedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/replica-instrumentation/pgstat-receiver.jsonl",
+      "originalSha256": "0b4b11f75e00f4108ca93304a6413ed59c9284a657134cd267d5bb7c7a1c92b7",
+      "publishedSha256": "0b4b11f75e00f4108ca93304a6413ed59c9284a657134cd267d5bb7c7a1c92b7",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/replica-instrumentation/biolatency-histograms.jsonl",
+      "originalSha256": "1bbb75b6a7db1ed3fb79aefb15966d382bde3ef94cb4e1f271b67d75d94ecd0c",
+      "publishedSha256": "1bbb75b6a7db1ed3fb79aefb15966d382bde3ef94cb4e1f271b67d75d94ecd0c",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/replica-instrumentation/diskstats.jsonl",
+      "originalSha256": "a6504ac3f04e5294e5cd0ae88f6aae03cff240a141a75ea79b2dbdb74fccd464",
+      "publishedSha256": "a6504ac3f04e5294e5cd0ae88f6aae03cff240a141a75ea79b2dbdb74fccd464",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/replica-instrumentation/biolatency-kubectl.stderr.log",
+      "originalSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "publishedSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/replica-instrumentation/azure-vm-uncached-iops.jsonl",
+      "originalSha256": "4743b48b28651016bab3e866e21e5ba29814eea8abe2976cccceba044c87ecef",
+      "publishedSha256": "4743b48b28651016bab3e866e21e5ba29814eea8abe2976cccceba044c87ecef",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/replica-instrumentation/preflight.json",
+      "originalSha256": "181213437f1ee3fc83c94bb722b37825bdd6d65f7b7940b978bc67210fade4b2",
+      "publishedSha256": "56ad986d244374b504dd143362bf5b09443e6523bd577ad2bdf80ed30c196beb",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/metadata/prepare.json",
+      "originalSha256": "b21aef7132816feca1b0d0661fd72c40ac974ae0a5c6ee7001d6f91c43ec1bcf",
+      "publishedSha256": "9f5cb51f8590482948a198823fd253f6d7a20d1819d113e2a44af3d24a68cbce",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/metadata/downloads.json",
+      "originalSha256": "d3b01f3f5cce1d61cfdc730139be4ee7dad79994677e8ce4242508f5797ee878",
+      "publishedSha256": "d3b01f3f5cce1d61cfdc730139be4ee7dad79994677e8ce4242508f5797ee878",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/metadata/cleanup.json",
+      "originalSha256": "1ffdbf53c085bff3cb63ac6708be742c48b857ee3fb9f0d86a39ba10d8b60789",
+      "publishedSha256": "1c28c7b5bc27ad082d3bcea87c0235ee222c162b8408dc862726b52da97a04ac",
+      "redacted": false,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/metadata/attachment-verification.stdout.json",
+      "originalSha256": "c5c85e2df3317f0f695d0fa0e72fd2ee412371ec3e58aaf17fa47284a1cc67ef",
+      "publishedSha256": "b682d70379482a05f6ea6fadb593872d0d6d67f0f1c14aaa967a74da01a2ccbf",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/measurement/summary.json",
+      "originalSha256": "ba430544f1225538f34391adfb0f1279775298c7ed861e6133ec15fa2223dc23",
+      "publishedSha256": "ba430544f1225538f34391adfb0f1279775298c7ed861e6133ec15fa2223dc23",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/measurement/vacuum-process.json",
+      "originalSha256": "004c69cb6a5b7dbe0eeb37c0888d7241560980cf5d9b99e0c9323d33a4d35ea4",
+      "publishedSha256": "004c69cb6a5b7dbe0eeb37c0888d7241560980cf5d9b99e0c9323d33a4d35ea4",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/measurement/await.png",
+      "originalSha256": "44c2dd25e199853bb26cdc08ae9629ec3c4dda32e0a387fad8647e0be4cf52e8",
+      "publishedSha256": "44c2dd25e199853bb26cdc08ae9629ec3c4dda32e0a387fad8647e0be4cf52e8",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/measurement/iops.png",
+      "originalSha256": "474fabaf49cc0d499ba744f08388fc9a3747c7093e1249753b5dfe79f337b73e",
+      "publishedSha256": "474fabaf49cc0d499ba744f08388fc9a3747c7093e1249753b5dfe79f337b73e",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/measurement/throughput.png",
+      "originalSha256": "e2e049dd4b3ad5f2107b26b4db1e44d30c350b7944e2f29b0567b79da56a739a",
+      "publishedSha256": "e2e049dd4b3ad5f2107b26b4db1e44d30c350b7944e2f29b0567b79da56a739a",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/measurement/events.jsonl",
+      "originalSha256": "7625efd530670cf039ef3a4ad66dd5a96315525a2f0fc0fce3389a72a7662b93",
+      "publishedSha256": "7625efd530670cf039ef3a4ad66dd5a96315525a2f0fc0fce3389a72a7662b93",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/measurement/samples.jsonl",
+      "originalSha256": "78158f4712499d8149da8d9cf9286dd9b9332c8c24291e272f3d03fe5b2b366c",
+      "publishedSha256": "78158f4712499d8149da8d9cf9286dd9b9332c8c24291e272f3d03fe5b2b366c",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/measurement/replication-events.json",
+      "originalSha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "publishedSha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/measurement/vacuum.log",
+      "originalSha256": "5f5315f2ac1fccab49f3faa7c5793a9fd3c27ac4823afc6c3badb370d4f1b9f3",
+      "publishedSha256": "5f5315f2ac1fccab49f3faa7c5793a9fd3c27ac4823afc6c3badb370d4f1b9f3",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/measurement/timing.json",
+      "originalSha256": "ef18b0990f2c37d7081c700c65ca759efd8820a014d30502297c31d8f74977b8",
+      "publishedSha256": "ef18b0990f2c37d7081c700c65ca759efd8820a014d30502297c31d8f74977b8",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/measurement/preflight.json",
+      "originalSha256": "4776826ce9a1a85e17a57652b95f3556790d3f4b7806f1efd1a516d565a37d96",
+      "publishedSha256": "eb1813045d2198e0db7099e9e7b1d2f869cc35aa5659b25ec3ffcbf363fb41ff",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": "results/20261012T040219Z/measurement/raw/primary-postgres.log",
+      "originalSha256": "3763921b4e9e95ef95536e077e2af2abad1b19ff13f42136258a97d60cdd7969",
+      "publishedSha256": "3763921b4e9e95ef95536e077e2af2abad1b19ff13f42136258a97d60cdd7969",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/measurement/raw/replica-postgres.log",
+      "originalSha256": "031bf3a7bb35e7f8cf91b713cbf0490293d179c8275587e25dbdba73344e8265",
+      "publishedSha256": "031bf3a7bb35e7f8cf91b713cbf0490293d179c8275587e25dbdba73344e8265",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/metadata/sku-at-provision.json",
+      "originalSha256": "3363d6c459032cd1e57d7762a39c55cffdcb0ebd587526fa3e1bf06086c0fbfc",
+      "publishedSha256": "3363d6c459032cd1e57d7762a39c55cffdcb0ebd587526fa3e1bf06086c0fbfc",
+      "redacted": false,
+      "redactedOrAdapted": false
+    },
+    {
+      "path": "results/20261012T040219Z/metadata/attachment-verification/verified.json",
+      "originalSha256": "7ebd273d86b4848bed954bb8e8140e1789c2cd23a1dcabcc4284bb45f05cb1a4",
+      "publishedSha256": "d4c7a60474f8782544d8d0bde59b2a66131122bb49c4b1f4ec7e5f8c91405495",
+      "redacted": true,
+      "redactedOrAdapted": true
+    },
+    {
+      "path": ".gitignore",
+      "publishedSha256": "86670cb441d02a61cd5d976c0ddddbfb0eecb5bfa35a1183271593efaa317ca4",
+      "generatedForPublication": true
+    },
+    {
+      "path": "README.md",
+      "publishedSha256": "e65fe2ac270ebf921c0a8e500206567b60814568be0c7acc92d751dbfc5d3e12",
+      "generatedForPublication": true
+    },
+    {
+      "path": "REPORT.md",
+      "publishedSha256": "6a3667bee0e453b45e450f8ce11814799725b3c528e0e1a0ab9a7e15a6f1d742",
+      "generatedForPublication": true
+    },
+    {
+      "path": "requirements.txt",
+      "publishedSha256": "de950d3b75e4ad1a760c121533e06390c84574f7dd0b53c0eaa742ab6d5c2f38",
+      "generatedForPublication": true
+    },
+    {
+      "path": "results/20261012T040219Z/uncached-iops-estimate.json",
+      "publishedSha256": "cf2b81c51ea80a6810ac1a8fdb406a1b110013efd2175a252ee92668b2949e85",
+      "generatedForPublication": true
+    },
+    {
+      "path": ".gitattributes",
+      "publishedSha256": "d6783f111c7c939ac415a92d7f09ba907aa44d2b671f6d9c96e5cba4e5387f33",
+      "generatedForPublication": true
+    }
+  ],
+  "anonymizedOwnerTokenCount": 2,
+  "anonymizedInternalAddressCount": 7,
+  "manifestScope": "Every published regular file except this self-referential provenance manifest and validation.json, which records checks performed after hashing."
+}

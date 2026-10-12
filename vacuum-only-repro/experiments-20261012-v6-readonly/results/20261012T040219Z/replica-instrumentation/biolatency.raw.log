@@ -1,0 +1,1808 @@
+2026-10-12T04:02:44.487051856Z __BCC_TRACEFS_PREFLIGHT__
+2026-10-12T04:02:44.487066979Z blacklist=/sys/kernel/debug/kprobes/blacklist
+2026-10-12T04:02:44.487069502Z available_filter_functions=/sys/kernel/debug/tracing/available_filter_functions
+2026-10-12T04:02:51.884689521Z Reading package lists...
+2026-10-12T04:02:52.199273956Z Building dependency tree...
+2026-10-12T04:02:52.199491775Z Reading state information...
+2026-10-12T04:02:52.499916727Z The following additional packages will be installed:
+2026-10-12T04:02:52.499951991Z   ieee-data libbpf1 libbpfcc libbsd0 libclang-cpp18 libedit2 libelf1t64
+2026-10-12T04:02:52.500034375Z   libexpat1 libicu74 libllvm18 libpsl5t64 libpython3-stdlib
+2026-10-12T04:02:52.500290832Z   libpython3.12-minimal libpython3.12-stdlib libreadline8t64 libsqlite3-0
+2026-10-12T04:02:52.500480032Z   libxml2 media-types netbase python3 python3-importlib-resources
+2026-10-12T04:02:52.500496924Z   python3-minimal python3-more-itertools python3-netaddr python3-zipp
+2026-10-12T04:02:52.500581866Z   python3.12 python3.12-minimal readline-common tzdata wget
+2026-10-12T04:02:52.501110264Z Suggested packages:
+2026-10-12T04:02:52.501116072Z   python3-doc python3-tk python3-venv ipython3 python-netaddr-docs
+2026-10-12T04:02:52.501119738Z   python3.12-venv python3.12-doc binutils binfmt-support readline-doc
+2026-10-12T04:02:52.501123103Z Recommended packages:
+2026-10-12T04:02:52.501130264Z   publicsuffix ca-certificates
+2026-10-12T04:02:52.615575883Z The following NEW packages will be installed:
+2026-10-12T04:02:52.615823387Z   bpfcc-tools ieee-data libbpf1 libbpfcc libbsd0 libclang-cpp18 libedit2
+2026-10-12T04:02:52.654500746Z   libelf1t64 libexpat1 libicu74 libllvm18 libpsl5t64 libpython3-stdlib
+2026-10-12T04:02:52.654936199Z   libpython3.12-minimal libpython3.12-stdlib libreadline8t64 libsqlite3-0
+2026-10-12T04:02:52.655347840Z   libxml2 media-types netbase python3 python3-bpfcc
+2026-10-12T04:02:52.655354420Z   python3-importlib-resources python3-minimal python3-more-itertools
+2026-10-12T04:02:52.655569545Z   python3-netaddr python3-zipp python3.12 python3.12-minimal readline-common
+2026-10-12T04:02:52.655597597Z   tzdata wget
+2026-10-12T04:02:52.981228465Z 0 upgraded, 32 newly installed, 0 to remove and 3 not upgraded.
+2026-10-12T04:02:52.981256668Z Need to get 64.6 MB of archives.
+2026-10-12T04:02:52.981264740Z After this operation, 278 MB of additional disk space will be used.
+2026-10-12T04:02:52.981270298Z Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-minimal amd64 3.12.3-1ubuntu0.17 [839 kB]
+2026-10-12T04:02:54.032636778Z Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1 amd64 2.6.1-2ubuntu0.6 [98.9 kB]
+2026-10-12T04:02:54.044027563Z Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12-minimal amd64 3.12.3-1ubuntu0.17 [2335 kB]
+2026-10-12T04:02:54.339222791Z Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-minimal amd64 3.12.3-0ubuntu2.1 [27.4 kB]
+2026-10-12T04:02:54.340028858Z Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 media-types all 10.1.0 [27.5 kB]
+2026-10-12T04:02:54.341811109Z Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 netbase all 6.4 [13.1 kB]
+2026-10-12T04:02:54.342677226Z Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 tzdata all 2026c-0ubuntu0.24.04.1 [280 kB]
+2026-10-12T04:02:54.359007563Z Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 readline-common all 8.2-4build1 [56.5 kB]
+2026-10-12T04:02:54.362403064Z Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 libreadline8t64 amd64 8.2-4build1 [153 kB]
+2026-10-12T04:02:54.370909556Z Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsqlite3-0 amd64 3.45.1-1ubuntu2.8 [702 kB]
+2026-10-12T04:02:54.411903379Z Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-stdlib amd64 3.12.3-1ubuntu0.17 [2071 kB]
+2026-10-12T04:02:54.505064935Z Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12 amd64 3.12.3-1ubuntu0.17 [651 kB]
+2026-10-12T04:02:54.523555728Z Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3-stdlib amd64 3.12.3-0ubuntu2.1 [10.1 kB]
+2026-10-12T04:02:54.628473152Z Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3 amd64 3.12.3-0ubuntu2.1 [23.0 kB]
+2026-10-12T04:02:54.628801598Z Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libelf1t64 amd64 0.190-1.1ubuntu0.1 [57.8 kB]
+2026-10-12T04:02:54.629482696Z Get:16 http://archive.ubuntu.com/ubuntu noble/main amd64 libbpf1 amd64 1:1.3.0-2build2 [166 kB]
+2026-10-12T04:02:54.632034818Z Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libbsd0 amd64 0.12.1-1build1.1 [41.2 kB]
+2026-10-12T04:02:54.632937206Z Get:18 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libicu74 amd64 74.2-1ubuntu3.1 [10.9 MB]
+2026-10-12T04:02:54.959582725Z Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxml2 amd64 2.9.14+dfsg-1.3ubuntu3.10 [764 kB]
+2026-10-12T04:02:54.969678545Z Get:20 http://archive.ubuntu.com/ubuntu noble/main amd64 libedit2 amd64 3.1-20230828-1build1 [97.6 kB]
+2026-10-12T04:02:54.971319713Z Get:21 http://archive.ubuntu.com/ubuntu noble/main amd64 libpsl5t64 amd64 0.21.2-1.1build1 [57.1 kB]
+2026-10-12T04:02:54.972063095Z Get:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 wget amd64 1.21.4-1ubuntu4.5 [334 kB]
+2026-10-12T04:02:54.977221903Z Get:23 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libllvm18 amd64 1:18.1.3-1ubuntu1 [27.5 MB]
+2026-10-12T04:02:55.965014552Z Get:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libclang-cpp18 amd64 1:18.1.3-1ubuntu1 [13.5 MB]
+2026-10-12T04:02:56.407687676Z Get:25 http://archive.ubuntu.com/ubuntu noble/main amd64 libbpfcc amd64 0.29.1+ds-1ubuntu7 [663 kB]
+2026-10-12T04:02:56.423643583Z Get:26 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-bpfcc all 0.29.1+ds-1ubuntu7 [40.2 kB]
+2026-10-12T04:02:56.424979059Z Get:27 http://archive.ubuntu.com/ubuntu noble/main amd64 ieee-data all 20220827.1 [2113 kB]
+2026-10-12T04:02:56.482514534Z Get:28 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-more-itertools all 10.2.0-1 [52.9 kB]
+2026-10-12T04:02:56.483450236Z Get:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-zipp all 1.0.0-6ubuntu0.1 [6774 B]
+2026-10-12T04:02:56.483627213Z Get:30 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-importlib-resources all 6.0.1-1 [22.1 kB]
+2026-10-12T04:02:56.484141800Z Get:31 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-netaddr all 0.8.0-2ubuntu1 [319 kB]
+2026-10-12T04:02:56.495167545Z Get:32 http://archive.ubuntu.com/ubuntu noble/main amd64 bpfcc-tools all 0.29.1+ds-1ubuntu7 [687 kB]
+2026-10-12T04:02:56.683218394Z debconf: delaying package configuration, since apt-utils is not installed
+2026-10-12T04:02:56.712871177Z Fetched 64.6 MB in 4s (16.8 MB/s)
+2026-10-12T04:02:56.881253025Z Selecting previously unselected package libpython3.12-minimal:amd64.
+2026-10-12T04:02:56.897295242Z (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 4381 files and directories currently installed.)
+2026-10-12T04:02:56.897633858Z Preparing to unpack .../libpython3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb ...
+2026-10-12T04:02:56.909881442Z Unpacking libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.17) ...
+2026-10-12T04:02:57.089909916Z Selecting previously unselected package libexpat1:amd64.
+2026-10-12T04:02:57.090793024Z Preparing to unpack .../libexpat1_2.6.1-2ubuntu0.6_amd64.deb ...
+2026-10-12T04:02:57.118197994Z Unpacking libexpat1:amd64 (2.6.1-2ubuntu0.6) ...
+2026-10-12T04:02:57.215223593Z Selecting previously unselected package python3.12-minimal.
+2026-10-12T04:02:57.216113046Z Preparing to unpack .../python3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb ...
+2026-10-12T04:02:57.242949387Z Unpacking python3.12-minimal (3.12.3-1ubuntu0.17) ...
+2026-10-12T04:02:57.372233764Z Setting up libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.17) ...
+2026-10-12T04:02:57.462080776Z Setting up libexpat1:amd64 (2.6.1-2ubuntu0.6) ...
+2026-10-12T04:02:57.512195733Z Setting up python3.12-minimal (3.12.3-1ubuntu0.17) ...
+2026-10-12T04:02:58.687781293Z Selecting previously unselected package python3-minimal.
+2026-10-12T04:02:58.691239528Z (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 4700 files and directories currently installed.)
+2026-10-12T04:02:58.691526532Z Preparing to unpack .../0-python3-minimal_3.12.3-0ubuntu2.1_amd64.deb ...
+2026-10-12T04:02:58.700594836Z Unpacking python3-minimal (3.12.3-0ubuntu2.1) ...
+2026-10-12T04:02:58.767380730Z Selecting previously unselected package media-types.
+2026-10-12T04:02:58.768241190Z Preparing to unpack .../1-media-types_10.1.0_all.deb ...
+2026-10-12T04:02:58.778208942Z Unpacking media-types (10.1.0) ...
+2026-10-12T04:02:58.848868914Z Selecting previously unselected package netbase.
+2026-10-12T04:02:58.849720620Z Preparing to unpack .../2-netbase_6.4_all.deb ...
+2026-10-12T04:02:58.858882170Z Unpacking netbase (6.4) ...
+2026-10-12T04:02:58.948983176Z Selecting previously unselected package tzdata.
+2026-10-12T04:02:58.949836354Z Preparing to unpack .../3-tzdata_2026c-0ubuntu0.24.04.1_all.deb ...
+2026-10-12T04:02:58.960166959Z Unpacking tzdata (2026c-0ubuntu0.24.04.1) ...
+2026-10-12T04:02:59.148283587Z Selecting previously unselected package readline-common.
+2026-10-12T04:02:59.149253977Z Preparing to unpack .../4-readline-common_8.2-4build1_all.deb ...
+2026-10-12T04:02:59.161008131Z Unpacking readline-common (8.2-4build1) ...
+2026-10-12T04:02:59.264675185Z Selecting previously unselected package libreadline8t64:amd64.
+2026-10-12T04:02:59.265577012Z Preparing to unpack .../5-libreadline8t64_8.2-4build1_amd64.deb ...
+2026-10-12T04:02:59.282250252Z Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8 to /lib/x86_64-linux-gnu/libhistory.so.8.usr-is-merged by libreadline8t64'
+2026-10-12T04:02:59.301081870Z Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8.2 to /lib/x86_64-linux-gnu/libhistory.so.8.2.usr-is-merged by libreadline8t64'
+2026-10-12T04:02:59.309934043Z Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8 to /lib/x86_64-linux-gnu/libreadline.so.8.usr-is-merged by libreadline8t64'
+2026-10-12T04:02:59.319033009Z Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8.2 to /lib/x86_64-linux-gnu/libreadline.so.8.2.usr-is-merged by libreadline8t64'
+2026-10-12T04:02:59.326578700Z Unpacking libreadline8t64:amd64 (8.2-4build1) ...
+2026-10-12T04:02:59.407115397Z Selecting previously unselected package libsqlite3-0:amd64.
+2026-10-12T04:02:59.408049862Z Preparing to unpack .../6-libsqlite3-0_3.45.1-1ubuntu2.8_amd64.deb ...
+2026-10-12T04:02:59.417476788Z Unpacking libsqlite3-0:amd64 (3.45.1-1ubuntu2.8) ...
+2026-10-12T04:02:59.484779252Z Selecting previously unselected package libpython3.12-stdlib:amd64.
+2026-10-12T04:02:59.485597452Z Preparing to unpack .../7-libpython3.12-stdlib_3.12.3-1ubuntu0.17_amd64.deb ...
+2026-10-12T04:02:59.495835327Z Unpacking libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.17) ...
+2026-10-12T04:02:59.674758713Z Selecting previously unselected package python3.12.
+2026-10-12T04:02:59.675709914Z Preparing to unpack .../8-python3.12_3.12.3-1ubuntu0.17_amd64.deb ...
+2026-10-12T04:02:59.685328193Z Unpacking python3.12 (3.12.3-1ubuntu0.17) ...
+2026-10-12T04:02:59.754746682Z Selecting previously unselected package libpython3-stdlib:amd64.
+2026-10-12T04:02:59.755668238Z Preparing to unpack .../9-libpython3-stdlib_3.12.3-0ubuntu2.1_amd64.deb ...
+2026-10-12T04:02:59.765892697Z Unpacking libpython3-stdlib:amd64 (3.12.3-0ubuntu2.1) ...
+2026-10-12T04:02:59.828223251Z Setting up python3-minimal (3.12.3-0ubuntu2.1) ...
+2026-10-12T04:03:00.135397743Z Selecting previously unselected package python3.
+2026-10-12T04:03:00.139066491Z (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 5706 files and directories currently installed.)
+2026-10-12T04:03:00.139331882Z Preparing to unpack .../00-python3_3.12.3-0ubuntu2.1_amd64.deb ...
+2026-10-12T04:03:00.156894915Z Unpacking python3 (3.12.3-0ubuntu2.1) ...
+2026-10-12T04:03:00.236095600Z Selecting previously unselected package libelf1t64:amd64.
+2026-10-12T04:03:00.237000742Z Preparing to unpack .../01-libelf1t64_0.190-1.1ubuntu0.1_amd64.deb ...
+2026-10-12T04:03:00.247084995Z Unpacking libelf1t64:amd64 (0.190-1.1ubuntu0.1) ...
+2026-10-12T04:03:00.318639377Z Selecting previously unselected package libbpf1:amd64.
+2026-10-12T04:03:00.319520262Z Preparing to unpack .../02-libbpf1_1%3a1.3.0-2build2_amd64.deb ...
+2026-10-12T04:03:00.329829505Z Unpacking libbpf1:amd64 (1:1.3.0-2build2) ...
+2026-10-12T04:03:00.397421857Z Selecting previously unselected package libbsd0:amd64.
+2026-10-12T04:03:00.398314689Z Preparing to unpack .../03-libbsd0_0.12.1-1build1.1_amd64.deb ...
+2026-10-12T04:03:00.410409412Z Unpacking libbsd0:amd64 (0.12.1-1build1.1) ...
+2026-10-12T04:03:00.484967099Z Selecting previously unselected package libicu74:amd64.
+2026-10-12T04:03:00.485872816Z Preparing to unpack .../04-libicu74_74.2-1ubuntu3.1_amd64.deb ...
+2026-10-12T04:03:00.494716541Z Unpacking libicu74:amd64 (74.2-1ubuntu3.1) ...
+2026-10-12T04:03:00.863210440Z Selecting previously unselected package libxml2:amd64.
+2026-10-12T04:03:00.864214396Z Preparing to unpack .../05-libxml2_2.9.14+dfsg-1.3ubuntu3.10_amd64.deb ...
+2026-10-12T04:03:00.873119760Z Unpacking libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3.10) ...
+2026-10-12T04:03:00.957722875Z Selecting previously unselected package libedit2:amd64.
+2026-10-12T04:03:00.958619279Z Preparing to unpack .../06-libedit2_3.1-20230828-1build1_amd64.deb ...
+2026-10-12T04:03:00.968692405Z Unpacking libedit2:amd64 (3.1-20230828-1build1) ...
+2026-10-12T04:03:01.045909270Z Selecting previously unselected package libpsl5t64:amd64.
+2026-10-12T04:03:01.046792469Z Preparing to unpack .../07-libpsl5t64_0.21.2-1.1build1_amd64.deb ...
+2026-10-12T04:03:01.056269460Z Unpacking libpsl5t64:amd64 (0.21.2-1.1build1) ...
+2026-10-12T04:03:01.122800865Z Selecting previously unselected package wget.
+2026-10-12T04:03:01.123956290Z Preparing to unpack .../08-wget_1.21.4-1ubuntu4.5_amd64.deb ...
+2026-10-12T04:03:01.132761732Z Unpacking wget (1.21.4-1ubuntu4.5) ...
+2026-10-12T04:03:01.201581631Z Selecting previously unselected package libllvm18:amd64.
+2026-10-12T04:03:01.202533268Z Preparing to unpack .../09-libllvm18_1%3a18.1.3-1ubuntu1_amd64.deb ...
+2026-10-12T04:03:01.212088133Z Unpacking libllvm18:amd64 (1:18.1.3-1ubuntu1) ...
+2026-10-12T04:03:02.178843320Z Selecting previously unselected package libclang-cpp18.
+2026-10-12T04:03:02.180041208Z Preparing to unpack .../10-libclang-cpp18_1%3a18.1.3-1ubuntu1_amd64.deb ...
+2026-10-12T04:03:02.190525210Z Unpacking libclang-cpp18 (1:18.1.3-1ubuntu1) ...
+2026-10-12T04:03:02.699187836Z Selecting previously unselected package libbpfcc:amd64.
+2026-10-12T04:03:02.700097674Z Preparing to unpack .../11-libbpfcc_0.29.1+ds-1ubuntu7_amd64.deb ...
+2026-10-12T04:03:02.710237655Z Unpacking libbpfcc:amd64 (0.29.1+ds-1ubuntu7) ...
+2026-10-12T04:03:02.904090629Z Selecting previously unselected package python3-bpfcc.
+2026-10-12T04:03:02.905003898Z Preparing to unpack .../12-python3-bpfcc_0.29.1+ds-1ubuntu7_all.deb ...
+2026-10-12T04:03:02.916851858Z Unpacking python3-bpfcc (0.29.1+ds-1ubuntu7) ...
+2026-10-12T04:03:03.016899421Z Selecting previously unselected package ieee-data.
+2026-10-12T04:03:03.017771222Z Preparing to unpack .../13-ieee-data_20220827.1_all.deb ...
+2026-10-12T04:03:03.033272957Z Unpacking ieee-data (20220827.1) ...
+2026-10-12T04:03:03.161020764Z Selecting previously unselected package python3-more-itertools.
+2026-10-12T04:03:03.161902595Z Preparing to unpack .../14-python3-more-itertools_10.2.0-1_all.deb ...
+2026-10-12T04:03:03.176445142Z Unpacking python3-more-itertools (10.2.0-1) ...
+2026-10-12T04:03:03.249163111Z Selecting previously unselected package python3-zipp.
+2026-10-12T04:03:03.250098132Z Preparing to unpack .../15-python3-zipp_1.0.0-6ubuntu0.1_all.deb ...
+2026-10-12T04:03:03.259552208Z Unpacking python3-zipp (1.0.0-6ubuntu0.1) ...
+2026-10-12T04:03:03.332787509Z Selecting previously unselected package python3-importlib-resources.
+2026-10-12T04:03:03.333717502Z Preparing to unpack .../16-python3-importlib-resources_6.0.1-1_all.deb ...
+2026-10-12T04:03:03.343429923Z Unpacking python3-importlib-resources (6.0.1-1) ...
+2026-10-12T04:03:03.419131726Z Selecting previously unselected package python3-netaddr.
+2026-10-12T04:03:03.420057424Z Preparing to unpack .../17-python3-netaddr_0.8.0-2ubuntu1_all.deb ...
+2026-10-12T04:03:03.430095546Z Unpacking python3-netaddr (0.8.0-2ubuntu1) ...
+2026-10-12T04:03:03.498652554Z Selecting previously unselected package bpfcc-tools.
+2026-10-12T04:03:03.499529397Z Preparing to unpack .../18-bpfcc-tools_0.29.1+ds-1ubuntu7_all.deb ...
+2026-10-12T04:03:03.509877548Z Unpacking bpfcc-tools (0.29.1+ds-1ubuntu7) ...
+2026-10-12T04:03:03.640699585Z Setting up media-types (10.1.0) ...
+2026-10-12T04:03:03.692737297Z Setting up libsqlite3-0:amd64 (3.45.1-1ubuntu2.8) ...
+2026-10-12T04:03:03.734793902Z Setting up libpsl5t64:amd64 (0.21.2-1.1build1) ...
+2026-10-12T04:03:03.771127608Z Setting up libelf1t64:amd64 (0.190-1.1ubuntu0.1) ...
+2026-10-12T04:03:03.797886491Z Setting up tzdata (2026c-0ubuntu0.24.04.1) ...
+2026-10-12T04:03:03.884581448Z 
+2026-10-12T04:03:03.884608539Z Current default time zone: 'Etc/UTC'
+2026-10-12T04:03:03.896877970Z Local time is now:      Mon Oct 12 04:03:03 UTC 2026.
+2026-10-12T04:03:03.896892041Z Universal Time is now:  Mon Oct 12 04:03:03 UTC 2026.
+2026-10-12T04:03:03.896895346Z Run 'dpkg-reconfigure tzdata' if you wish to change it.
+2026-10-12T04:03:03.896897810Z 
+2026-10-12T04:03:03.926265731Z Setting up libicu74:amd64 (74.2-1ubuntu3.1) ...
+2026-10-12T04:03:03.953304146Z Setting up netbase (6.4) ...
+2026-10-12T04:03:04.028943525Z Setting up libbsd0:amd64 (0.12.1-1build1.1) ...
+2026-10-12T04:03:04.065063528Z Setting up readline-common (8.2-4build1) ...
+2026-10-12T04:03:04.101203912Z Setting up libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3.10) ...
+2026-10-12T04:03:04.133182334Z Setting up libbpf1:amd64 (1:1.3.0-2build2) ...
+2026-10-12T04:03:04.164310853Z Setting up wget (1.21.4-1ubuntu4.5) ...
+2026-10-12T04:03:04.209460377Z Setting up libedit2:amd64 (3.1-20230828-1build1) ...
+2026-10-12T04:03:04.238644881Z Setting up libreadline8t64:amd64 (8.2-4build1) ...
+2026-10-12T04:03:04.267555462Z Setting up ieee-data (20220827.1) ...
+2026-10-12T04:03:04.299318379Z Setting up libllvm18:amd64 (1:18.1.3-1ubuntu1) ...
+2026-10-12T04:03:04.329316471Z Setting up libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.17) ...
+2026-10-12T04:03:04.361906096Z Setting up python3.12 (3.12.3-1ubuntu0.17) ...
+2026-10-12T04:03:05.633380083Z Setting up libclang-cpp18 (1:18.1.3-1ubuntu1) ...
+2026-10-12T04:03:05.660949058Z Setting up libbpfcc:amd64 (0.29.1+ds-1ubuntu7) ...
+2026-10-12T04:03:05.691390134Z Setting up libpython3-stdlib:amd64 (3.12.3-0ubuntu2.1) ...
+2026-10-12T04:03:05.720600768Z Setting up python3 (3.12.3-0ubuntu2.1) ...
+2026-10-12T04:03:05.868075158Z Setting up python3-netaddr (0.8.0-2ubuntu1) ...
+2026-10-12T04:03:06.104650892Z Setting up python3-bpfcc (0.29.1+ds-1ubuntu7) ...
+2026-10-12T04:03:06.335162983Z Setting up python3-more-itertools (10.2.0-1) ...
+2026-10-12T04:03:06.577497750Z Setting up python3-zipp (1.0.0-6ubuntu0.1) ...
+2026-10-12T04:03:06.712494680Z Setting up bpfcc-tools (0.29.1+ds-1ubuntu7) ...
+2026-10-12T04:03:06.747537994Z Setting up python3-importlib-resources (6.0.1-1) ...
+2026-10-12T04:03:06.993421423Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+2026-10-12T04:03:07.268313927Z __BCC_TOOL_START__
+2026-10-12T04:04:08.576237870Z 
+2026-10-12T04:04:08.576271931Z 04:03:15
+2026-10-12T04:04:08.576276919Z 
+2026-10-12T04:04:08.576281065Z 04:03:16
+2026-10-12T04:04:08.576285181Z {'ts': '2026-10-12 04:03:16', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 3}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:08.576289468Z {'ts': '2026-10-12 04:03:16', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 4}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576292933Z 
+2026-10-12T04:04:08.576296298Z 04:03:17
+2026-10-12T04:04:08.576300214Z {'ts': '2026-10-12 04:03:17', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576303529Z 
+2026-10-12T04:04:08.576307114Z 04:03:18
+2026-10-12T04:04:08.576310930Z 
+2026-10-12T04:04:08.576314415Z 04:03:19
+2026-10-12T04:04:08.576318502Z {'ts': '2026-10-12 04:03:19', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576321827Z 
+2026-10-12T04:04:08.576325282Z 04:03:20
+2026-10-12T04:04:08.576338382Z {'ts': '2026-10-12 04:03:20', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576340885Z 
+2026-10-12T04:04:08.576343159Z 04:03:21
+2026-10-12T04:04:08.576345502Z {'ts': '2026-10-12 04:03:21', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 2}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:08.576347886Z {'ts': '2026-10-12 04:03:21', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576350169Z 
+2026-10-12T04:04:08.576352423Z 04:03:22
+2026-10-12T04:04:08.576354726Z {'ts': '2026-10-12 04:03:22', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576359263Z 
+2026-10-12T04:04:08.576361647Z 04:03:23
+2026-10-12T04:04:08.576364080Z {'ts': '2026-10-12 04:03:23', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 14}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576366364Z 
+2026-10-12T04:04:08.576368657Z 04:03:24
+2026-10-12T04:04:08.576371151Z {'ts': '2026-10-12 04:03:24', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 50}, {'interval-start': 2, 'interval-end': 3, 'count': 10}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576373435Z 
+2026-10-12T04:04:08.576375688Z 04:03:25
+2026-10-12T04:04:08.576378041Z {'ts': '2026-10-12 04:03:25', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:08.576380265Z 
+2026-10-12T04:04:08.576382588Z 04:03:26
+2026-10-12T04:04:08.576384922Z {'ts': '2026-10-12 04:03:26', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576387245Z 
+2026-10-12T04:04:08.576389529Z 04:03:27
+2026-10-12T04:04:08.576391792Z 
+2026-10-12T04:04:08.576394116Z 04:03:28
+2026-10-12T04:04:08.576396469Z {'ts': '2026-10-12 04:03:28', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 4}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576398733Z 
+2026-10-12T04:04:08.576400996Z 04:03:29
+2026-10-12T04:04:08.576403330Z {'ts': '2026-10-12 04:03:29', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 29}, {'interval-start': 2, 'interval-end': 3, 'count': 15}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576405573Z 
+2026-10-12T04:04:08.576407826Z 04:03:30
+2026-10-12T04:04:08.576410150Z {'ts': '2026-10-12 04:03:30', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:08.576412373Z 
+2026-10-12T04:04:08.576414617Z 04:03:31
+2026-10-12T04:04:08.576417040Z {'ts': '2026-10-12 04:03:31', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576419304Z 
+2026-10-12T04:04:08.576421557Z 04:03:32
+2026-10-12T04:04:08.576423851Z {'ts': '2026-10-12 04:03:32', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576426284Z 
+2026-10-12T04:04:08.576428558Z 04:03:33
+2026-10-12T04:04:08.576430871Z {'ts': '2026-10-12 04:03:33', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 19}, {'interval-start': 2, 'interval-end': 3, 'count': 60}, {'interval-start': 4, 'interval-end': 7, 'count': 21}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576436910Z {'ts': '2026-10-12 04:03:33', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:08.576439264Z 
+2026-10-12T04:04:08.576441537Z 04:03:34
+2026-10-12T04:04:08.576443871Z {'ts': '2026-10-12 04:03:34', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 33}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576446064Z 
+2026-10-12T04:04:08.576462038Z 04:03:35
+2026-10-12T04:04:08.576470361Z {'ts': '2026-10-12 04:03:35', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:08.576472985Z {'ts': '2026-10-12 04:03:35', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576475288Z 
+2026-10-12T04:04:08.576477552Z 04:03:36
+2026-10-12T04:04:08.576479805Z 
+2026-10-12T04:04:08.576482169Z 04:03:37
+2026-10-12T04:04:08.576484532Z {'ts': '2026-10-12 04:03:37', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 41}, {'interval-start': 4, 'interval-end': 7, 'count': 4}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576494167Z 
+2026-10-12T04:04:08.576496510Z 04:03:38
+2026-10-12T04:04:08.576498904Z {'ts': '2026-10-12 04:03:38', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576501137Z 
+2026-10-12T04:04:08.576503411Z 04:03:39
+2026-10-12T04:04:08.576506305Z {'ts': '2026-10-12 04:03:39', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 16}, {'interval-start': 2, 'interval-end': 3, 'count': 41}, {'interval-start': 4, 'interval-end': 7, 'count': 18}, {'interval-start': 8, 'interval-end': 15, 'count': 5}, {'interval-start': 16, 'interval-end': 31, 'count': 3}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576508699Z 
+2026-10-12T04:04:08.576510962Z 04:03:40
+2026-10-12T04:04:08.576513266Z 
+2026-10-12T04:04:08.576515569Z 04:03:41
+2026-10-12T04:04:08.576517903Z {'ts': '2026-10-12 04:03:41', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576520146Z 
+2026-10-12T04:04:08.576522449Z 04:03:42
+2026-10-12T04:04:08.576524873Z {'ts': '2026-10-12 04:03:42', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 7}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576527106Z 
+2026-10-12T04:04:08.576529390Z 04:03:43
+2026-10-12T04:04:08.576531804Z {'ts': '2026-10-12 04:03:43', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 40}, {'interval-start': 4, 'interval-end': 7, 'count': 16}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576534067Z 
+2026-10-12T04:04:08.576536421Z 04:03:44
+2026-10-12T04:04:08.576538864Z {'ts': '2026-10-12 04:03:44', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576541088Z 
+2026-10-12T04:04:08.576543421Z 04:03:45
+2026-10-12T04:04:08.576545735Z 
+2026-10-12T04:04:08.576548158Z 04:03:46
+2026-10-12T04:04:08.576550722Z {'ts': '2026-10-12 04:03:46', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576556952Z 
+2026-10-12T04:04:08.576559395Z 04:03:47
+2026-10-12T04:04:08.576561709Z {'ts': '2026-10-12 04:03:47', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576567928Z 
+2026-10-12T04:04:08.576570252Z 04:03:48
+2026-10-12T04:04:08.576572495Z 
+2026-10-12T04:04:08.576574788Z 04:03:49
+2026-10-12T04:04:08.576577162Z {'ts': '2026-10-12 04:03:49', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576579395Z 
+2026-10-12T04:04:08.576581629Z 04:03:50
+2026-10-12T04:04:08.576584022Z {'ts': '2026-10-12 04:03:50', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576586236Z 
+2026-10-12T04:04:08.576588489Z 04:03:51
+2026-10-12T04:04:08.576590783Z {'ts': '2026-10-12 04:03:51', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 4}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576593096Z 
+2026-10-12T04:04:08.576595370Z 04:03:52
+2026-10-12T04:04:08.576597683Z {'ts': '2026-10-12 04:03:52', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 220}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576604704Z 
+2026-10-12T04:04:08.576606997Z 04:03:53
+2026-10-12T04:04:08.576613096Z {'ts': '2026-10-12 04:03:53', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 562}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576615400Z 
+2026-10-12T04:04:08.576617743Z 04:03:54
+2026-10-12T04:04:08.576620147Z 
+2026-10-12T04:04:08.576622661Z 04:03:55
+2026-10-12T04:04:08.576625235Z {'ts': '2026-10-12 04:03:55', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 101}, {'interval-start': 2, 'interval-end': 3, 'count': 7}, {'interval-start': 4, 'interval-end': 7, 'count': 2}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576627478Z 
+2026-10-12T04:04:08.576629751Z 04:03:56
+2026-10-12T04:04:08.576632285Z {'ts': '2026-10-12 04:03:56', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576634569Z 
+2026-10-12T04:04:08.576636832Z 04:03:57
+2026-10-12T04:04:08.576639055Z 
+2026-10-12T04:04:08.576641359Z 04:03:58
+2026-10-12T04:04:08.576643652Z 
+2026-10-12T04:04:08.576645916Z 04:03:59
+2026-10-12T04:04:08.576648139Z 
+2026-10-12T04:04:08.576650423Z 04:04:00
+2026-10-12T04:04:08.576652606Z 
+2026-10-12T04:04:08.576654939Z 04:04:01
+2026-10-12T04:04:08.576657173Z 
+2026-10-12T04:04:08.576659496Z 04:04:02
+2026-10-12T04:04:08.576661830Z {'ts': '2026-10-12 04:04:02', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576664133Z 
+2026-10-12T04:04:08.576666397Z 04:04:03
+2026-10-12T04:04:08.576668670Z {'ts': '2026-10-12 04:04:03', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:08.576670883Z 
+2026-10-12T04:04:08.576673127Z 04:04:04
+2026-10-12T04:04:08.576675320Z 
+2026-10-12T04:04:08.576677584Z 04:04:05
+2026-10-12T04:04:08.576684133Z 
+2026-10-12T04:04:08.576686447Z 04:04:06
+2026-10-12T04:04:08.576691875Z 
+2026-10-12T04:04:08.576694169Z 04:04:07
+2026-10-12T04:04:08.576696422Z 
+2026-10-12T04:04:08.576698705Z 04:04:08
+2026-10-12T04:04:27.581719026Z {'ts': '2026-10-12 04:04:08', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}, {'interval-start': 4, 'interval-end': 7, 'count': 2}, {'interval-start': 8, 'interval-end': 15, 'count': 2}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:27.581753388Z 
+2026-10-12T04:04:27.581758115Z 04:04:09
+2026-10-12T04:04:27.581761740Z 
+2026-10-12T04:04:27.581765115Z 04:04:10
+2026-10-12T04:04:27.581768490Z 
+2026-10-12T04:04:27.581771825Z 04:04:11
+2026-10-12T04:04:27.581775731Z {'ts': '2026-10-12 04:04:11', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:27.581779567Z 
+2026-10-12T04:04:27.581783022Z 04:04:12
+2026-10-12T04:04:27.581786928Z {'ts': '2026-10-12 04:04:12', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:27.581790524Z 
+2026-10-12T04:04:27.581794089Z 04:04:13
+2026-10-12T04:04:27.581798185Z {'ts': '2026-10-12 04:04:13', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 3}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:27.581801861Z {'ts': '2026-10-12 04:04:13', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:27.581805436Z 
+2026-10-12T04:04:27.581808921Z 04:04:14
+2026-10-12T04:04:27.581812537Z {'ts': '2026-10-12 04:04:14', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 15}, {'interval-start': 4, 'interval-end': 7, 'count': 13}, {'interval-start': 8, 'interval-end': 15, 'count': 7}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:27.581816062Z 
+2026-10-12T04:04:27.581819607Z 04:04:15
+2026-10-12T04:04:27.581823153Z 
+2026-10-12T04:04:27.581826668Z 04:04:16
+2026-10-12T04:04:27.581833699Z {'ts': '2026-10-12 04:04:16', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 3}, {'interval-start': 2, 'interval-end': 3, 'count': 27}, {'interval-start': 4, 'interval-end': 7, 'count': 7}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 5}, {'interval-start': 32, 'interval-end': 63, 'count': 26}, {'interval-start': 64, 'interval-end': 127, 'count': 1}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:27.581838636Z {'ts': '2026-10-12 04:04:16', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 10}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:27.581845927Z 
+2026-10-12T04:04:27.581850704Z 04:04:17
+2026-10-12T04:04:27.581873659Z {'ts': '2026-10-12 04:04:17', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}, {'interval-start': 4, 'interval-end': 7, 'count': 15}, {'interval-start': 8, 'interval-end': 15, 'count': 4}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:27.581880409Z 
+2026-10-12T04:04:27.581885507Z 04:04:18
+2026-10-12T04:04:27.581890515Z {'ts': '2026-10-12 04:04:18', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 11}, {'interval-start': 2, 'interval-end': 3, 'count': 14}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:27.581894801Z {'ts': '2026-10-12 04:04:18', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 8}, {'interval-start': 4, 'interval-end': 7, 'count': 16}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 12}, {'interval-start': 32, 'interval-end': 63, 'count': 14}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:27.581907450Z 
+2026-10-12T04:04:27.581910014Z 04:04:19
+2026-10-12T04:04:27.581912468Z 
+2026-10-12T04:04:27.581914931Z 04:04:20
+2026-10-12T04:04:27.581917545Z {'ts': '2026-10-12 04:04:20', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 51}, {'interval-start': 4, 'interval-end': 7, 'count': 5}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:27.581926789Z {'ts': '2026-10-12 04:04:20', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1257}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:27.581929473Z {'ts': '2026-10-12 04:04:20', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 3}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:27.581932668Z 
+2026-10-12T04:04:27.581938497Z 04:04:21
+2026-10-12T04:04:27.581944125Z {'ts': '2026-10-12 04:04:21', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 61}, {'interval-start': 4, 'interval-end': 7, 'count': 67}, {'interval-start': 8, 'interval-end': 15, 'count': 23}, {'interval-start': 16, 'interval-end': 31, 'count': 20}, {'interval-start': 32, 'interval-end': 63, 'count': 116}, {'interval-start': 64, 'interval-end': 127, 'count': 101}, {'interval-start': 128, 'interval-end': 255, 'count': 21}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:27.581956514Z {'ts': '2026-10-12 04:04:21', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 4695}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:27.581960320Z 
+2026-10-12T04:04:27.581963625Z 04:04:22
+2026-10-12T04:04:27.581967190Z {'ts': '2026-10-12 04:04:22', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 32}, {'interval-start': 4, 'interval-end': 7, 'count': 55}, {'interval-start': 8, 'interval-end': 15, 'count': 3}, {'interval-start': 16, 'interval-end': 31, 'count': 61}, {'interval-start': 32, 'interval-end': 63, 'count': 59}, {'interval-start': 64, 'interval-end': 127, 'count': 127}, {'interval-start': 128, 'interval-end': 255, 'count': 53}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:27.581970706Z {'ts': '2026-10-12 04:04:22', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6023}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:27.581974211Z 
+2026-10-12T04:04:27.581977876Z 04:04:23
+2026-10-12T04:04:27.581981732Z {'ts': '2026-10-12 04:04:23', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 25}, {'interval-start': 4, 'interval-end': 7, 'count': 82}, {'interval-start': 8, 'interval-end': 15, 'count': 3}, {'interval-start': 16, 'interval-end': 31, 'count': 40}, {'interval-start': 32, 'interval-end': 63, 'count': 85}, {'interval-start': 64, 'interval-end': 127, 'count': 125}, {'interval-start': 128, 'interval-end': 255, 'count': 43}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:27.581985538Z {'ts': '2026-10-12 04:04:23', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6009}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:27.581988893Z {'ts': '2026-10-12 04:04:23', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:27.581992248Z 
+2026-10-12T04:04:27.581995583Z 04:04:24
+2026-10-12T04:04:27.581998988Z {'ts': '2026-10-12 04:04:24', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 10}, {'interval-start': 2, 'interval-end': 3, 'count': 16}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:27.582007371Z {'ts': '2026-10-12 04:04:24', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 32}, {'interval-start': 4, 'interval-end': 7, 'count': 26}, {'interval-start': 8, 'interval-end': 15, 'count': 20}, {'interval-start': 16, 'interval-end': 31, 'count': 19}, {'interval-start': 32, 'interval-end': 63, 'count': 85}, {'interval-start': 64, 'interval-end': 127, 'count': 133}, {'interval-start': 128, 'interval-end': 255, 'count': 50}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:27.582010826Z {'ts': '2026-10-12 04:04:24', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5936}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:27.582014211Z 
+2026-10-12T04:04:27.582017917Z 04:04:25
+2026-10-12T04:04:27.582021322Z {'ts': '2026-10-12 04:04:25', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 33}, {'interval-start': 4, 'interval-end': 7, 'count': 56}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 20}, {'interval-start': 32, 'interval-end': 63, 'count': 97}, {'interval-start': 64, 'interval-end': 127, 'count': 129}, {'interval-start': 128, 'interval-end': 255, 'count': 66}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:27.582025358Z {'ts': '2026-10-12 04:04:25', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5800}, {'interval-start': 2, 'interval-end': 3, 'count': 16}, {'interval-start': 4, 'interval-end': 7, 'count': 8}, {'interval-start': 8, 'interval-end': 15, 'count': 61}, {'interval-start': 16, 'interval-end': 31, 'count': 49}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:27.582028883Z 
+2026-10-12T04:04:27.582032579Z 04:04:26
+2026-10-12T04:04:27.582035664Z {'ts': '2026-10-12 04:04:26', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:27.582058844Z {'ts': '2026-10-12 04:04:26', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 37}, {'interval-start': 4, 'interval-end': 7, 'count': 47}, {'interval-start': 8, 'interval-end': 15, 'count': 20}, {'interval-start': 16, 'interval-end': 31, 'count': 31}, {'interval-start': 32, 'interval-end': 63, 'count': 97}, {'interval-start': 64, 'interval-end': 127, 'count': 111}, {'interval-start': 128, 'interval-end': 255, 'count': 59}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:27.582073446Z {'ts': '2026-10-12 04:04:26', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5907}, {'interval-start': 2, 'interval-end': 3, 'count': 30}, {'interval-start': 4, 'interval-end': 7, 'count': 15}, {'interval-start': 8, 'interval-end': 15, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:27.582076481Z 
+2026-10-12T04:04:27.582079085Z 04:04:27
+2026-10-12T04:04:35.584752299Z {'ts': '2026-10-12 04:04:27', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 36}, {'interval-start': 4, 'interval-end': 7, 'count': 46}, {'interval-start': 8, 'interval-end': 15, 'count': 20}, {'interval-start': 16, 'interval-end': 31, 'count': 39}, {'interval-start': 32, 'interval-end': 63, 'count': 85}, {'interval-start': 64, 'interval-end': 127, 'count': 141}, {'interval-start': 128, 'interval-end': 255, 'count': 40}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:35.584786661Z {'ts': '2026-10-12 04:04:27', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5976}, {'interval-start': 2, 'interval-end': 3, 'count': 17}, {'interval-start': 4, 'interval-end': 7, 'count': 25}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 2}, {'interval-start': 32, 'interval-end': 63, 'count': 18}, {'interval-start': 64, 'interval-end': 127, 'count': 117}, {'interval-start': 128, 'interval-end': 255, 'count': 16}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:35.584801002Z 
+2026-10-12T04:04:35.584804407Z 04:04:28
+2026-10-12T04:04:35.584807162Z {'ts': '2026-10-12 04:04:28', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 33}, {'interval-start': 4, 'interval-end': 7, 'count': 78}, {'interval-start': 8, 'interval-end': 15, 'count': 5}, {'interval-start': 16, 'interval-end': 31, 'count': 41}, {'interval-start': 32, 'interval-end': 63, 'count': 66}, {'interval-start': 64, 'interval-end': 127, 'count': 165}, {'interval-start': 128, 'interval-end': 255, 'count': 9}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:35.584810156Z {'ts': '2026-10-12 04:04:28', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5872}, {'interval-start': 2, 'interval-end': 3, 'count': 19}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 96}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:35.584812580Z 
+2026-10-12T04:04:35.584814973Z 04:04:29
+2026-10-12T04:04:35.584818088Z {'ts': '2026-10-12 04:04:29', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:35.584820712Z {'ts': '2026-10-12 04:04:29', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 32}, {'interval-start': 4, 'interval-end': 7, 'count': 36}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 20}, {'interval-start': 32, 'interval-end': 63, 'count': 96}, {'interval-start': 64, 'interval-end': 127, 'count': 199}, {'interval-start': 128, 'interval-end': 255, 'count': 9}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:35.584823636Z {'ts': '2026-10-12 04:04:29', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5890}, {'interval-start': 2, 'interval-end': 3, 'count': 45}, {'interval-start': 4, 'interval-end': 7, 'count': 35}, {'interval-start': 8, 'interval-end': 15, 'count': 22}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:35.584825940Z 
+2026-10-12T04:04:35.584828233Z 04:04:30
+2026-10-12T04:04:35.584830587Z {'ts': '2026-10-12 04:04:30', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 42}, {'interval-start': 4, 'interval-end': 7, 'count': 64}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 62}, {'interval-start': 32, 'interval-end': 63, 'count': 79}, {'interval-start': 64, 'interval-end': 127, 'count': 136}, {'interval-start': 128, 'interval-end': 255, 'count': 19}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:35.584833471Z {'ts': '2026-10-12 04:04:30', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6016}, {'interval-start': 2, 'interval-end': 3, 'count': 31}, {'interval-start': 4, 'interval-end': 7, 'count': 2}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:35.584835735Z 
+2026-10-12T04:04:35.584838188Z 04:04:31
+2026-10-12T04:04:35.584846431Z {'ts': '2026-10-12 04:04:31', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 31}, {'interval-start': 4, 'interval-end': 7, 'count': 38}, {'interval-start': 8, 'interval-end': 15, 'count': 28}, {'interval-start': 16, 'interval-end': 31, 'count': 65}, {'interval-start': 32, 'interval-end': 63, 'count': 59}, {'interval-start': 64, 'interval-end': 127, 'count': 126}, {'interval-start': 128, 'interval-end': 255, 'count': 36}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:35.584849025Z {'ts': '2026-10-12 04:04:31', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6069}, {'interval-start': 2, 'interval-end': 3, 'count': 36}, {'interval-start': 4, 'interval-end': 7, 'count': 3}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:35.584876907Z {'ts': '2026-10-12 04:04:31', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:35.584880632Z 
+2026-10-12T04:04:35.584884989Z 04:04:32
+2026-10-12T04:04:35.584888805Z {'ts': '2026-10-12 04:04:32', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 35}, {'interval-start': 4, 'interval-end': 7, 'count': 47}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 59}, {'interval-start': 32, 'interval-end': 63, 'count': 58}, {'interval-start': 64, 'interval-end': 127, 'count': 141}, {'interval-start': 128, 'interval-end': 255, 'count': 64}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:35.584891168Z {'ts': '2026-10-12 04:04:32', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5956}, {'interval-start': 2, 'interval-end': 3, 'count': 21}, {'interval-start': 4, 'interval-end': 7, 'count': 16}, {'interval-start': 8, 'interval-end': 15, 'count': 1}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 20}, {'interval-start': 64, 'interval-end': 127, 'count': 19}, {'interval-start': 128, 'interval-end': 255, 'count': 40}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:35.584893582Z {'ts': '2026-10-12 04:04:32', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:35.584895845Z 
+2026-10-12T04:04:35.584898139Z 04:04:33
+2026-10-12T04:04:35.584901404Z {'ts': '2026-10-12 04:04:33', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 39}, {'interval-start': 4, 'interval-end': 7, 'count': 50}, {'interval-start': 8, 'interval-end': 15, 'count': 19}, {'interval-start': 16, 'interval-end': 31, 'count': 37}, {'interval-start': 32, 'interval-end': 63, 'count': 62}, {'interval-start': 64, 'interval-end': 127, 'count': 123}, {'interval-start': 128, 'interval-end': 255, 'count': 74}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:35.584903807Z {'ts': '2026-10-12 04:04:33', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6121}, {'interval-start': 2, 'interval-end': 3, 'count': 35}, {'interval-start': 4, 'interval-end': 7, 'count': 6}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 104}, {'interval-start': 64, 'interval-end': 127, 'count': 97}, {'interval-start': 128, 'interval-end': 255, 'count': 166}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:35.584906101Z 
+2026-10-12T04:04:35.584908374Z 04:04:34
+2026-10-12T04:04:35.584910708Z {'ts': '2026-10-12 04:04:34', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 19}, {'interval-start': 4, 'interval-end': 7, 'count': 50}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 38}, {'interval-start': 32, 'interval-end': 63, 'count': 79}, {'interval-start': 64, 'interval-end': 127, 'count': 137}, {'interval-start': 128, 'interval-end': 255, 'count': 58}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:35.584921234Z {'ts': '2026-10-12 04:04:34', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5946}, {'interval-start': 2, 'interval-end': 3, 'count': 50}, {'interval-start': 4, 'interval-end': 7, 'count': 48}, {'interval-start': 8, 'interval-end': 15, 'count': 7}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 100}, {'interval-start': 64, 'interval-end': 127, 'count': 108}, {'interval-start': 128, 'interval-end': 255, 'count': 159}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:35.584927163Z 
+2026-10-12T04:04:35.584929546Z 04:04:35
+2026-10-12T04:04:35.584932050Z {'ts': '2026-10-12 04:04:35', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 31}, {'interval-start': 4, 'interval-end': 7, 'count': 57}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 40}, {'interval-start': 32, 'interval-end': 63, 'count': 82}, {'interval-start': 64, 'interval-end': 127, 'count': 112}, {'interval-start': 128, 'interval-end': 255, 'count': 56}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:43.587879836Z {'ts': '2026-10-12 04:04:35', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6018}, {'interval-start': 2, 'interval-end': 3, 'count': 9}, {'interval-start': 4, 'interval-end': 7, 'count': 29}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 62}, {'interval-start': 64, 'interval-end': 127, 'count': 66}, {'interval-start': 128, 'interval-end': 255, 'count': 234}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:43.587908058Z {'ts': '2026-10-12 04:04:35', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 3}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:43.587913096Z 
+2026-10-12T04:04:43.587916911Z 04:04:36
+2026-10-12T04:04:43.587921448Z {'ts': '2026-10-12 04:04:36', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2}, {'interval-start': 2, 'interval-end': 3, 'count': 27}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:43.587925244Z {'ts': '2026-10-12 04:04:36', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 43}, {'interval-start': 4, 'interval-end': 7, 'count': 71}, {'interval-start': 8, 'interval-end': 15, 'count': 16}, {'interval-start': 16, 'interval-end': 31, 'count': 23}, {'interval-start': 32, 'interval-end': 63, 'count': 79}, {'interval-start': 64, 'interval-end': 127, 'count': 119}, {'interval-start': 128, 'interval-end': 255, 'count': 46}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:43.587929220Z {'ts': '2026-10-12 04:04:36', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 4729}, {'interval-start': 2, 'interval-end': 3, 'count': 27}, {'interval-start': 4, 'interval-end': 7, 'count': 21}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 107}, {'interval-start': 64, 'interval-end': 127, 'count': 92}, {'interval-start': 128, 'interval-end': 255, 'count': 159}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:43.587932645Z 
+2026-10-12T04:04:43.587936171Z 04:04:37
+2026-10-12T04:04:43.587939776Z {'ts': '2026-10-12 04:04:37', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 43}, {'interval-start': 4, 'interval-end': 7, 'count': 32}, {'interval-start': 8, 'interval-end': 15, 'count': 28}, {'interval-start': 16, 'interval-end': 31, 'count': 23}, {'interval-start': 32, 'interval-end': 63, 'count': 114}, {'interval-start': 64, 'interval-end': 127, 'count': 115}, {'interval-start': 128, 'interval-end': 255, 'count': 44}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:43.587943271Z {'ts': '2026-10-12 04:04:37', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 7293}, {'interval-start': 2, 'interval-end': 3, 'count': 23}, {'interval-start': 4, 'interval-end': 7, 'count': 4}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 19}, {'interval-start': 64, 'interval-end': 127, 'count': 25}, {'interval-start': 128, 'interval-end': 255, 'count': 38}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:43.587956431Z 
+2026-10-12T04:04:43.587958915Z 04:04:38
+2026-10-12T04:04:43.587961599Z {'ts': '2026-10-12 04:04:38', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:43.587964223Z {'ts': '2026-10-12 04:04:38', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 11}, {'interval-start': 4, 'interval-end': 7, 'count': 34}, {'interval-start': 8, 'interval-end': 15, 'count': 28}, {'interval-start': 16, 'interval-end': 31, 'count': 54}, {'interval-start': 32, 'interval-end': 63, 'count': 66}, {'interval-start': 64, 'interval-end': 127, 'count': 134}, {'interval-start': 128, 'interval-end': 255, 'count': 57}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:43.587967167Z {'ts': '2026-10-12 04:04:38', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6031}, {'interval-start': 2, 'interval-end': 3, 'count': 4}, {'interval-start': 4, 'interval-end': 7, 'count': 16}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:43.587969821Z 
+2026-10-12T04:04:43.587972565Z 04:04:39
+2026-10-12T04:04:43.587981158Z {'ts': '2026-10-12 04:04:39', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:43.587984123Z {'ts': '2026-10-12 04:04:39', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 11}, {'interval-start': 4, 'interval-end': 7, 'count': 58}, {'interval-start': 8, 'interval-end': 15, 'count': 24}, {'interval-start': 16, 'interval-end': 31, 'count': 37}, {'interval-start': 32, 'interval-end': 63, 'count': 65}, {'interval-start': 64, 'interval-end': 127, 'count': 156}, {'interval-start': 128, 'interval-end': 255, 'count': 28}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:43.587986567Z {'ts': '2026-10-12 04:04:39', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6028}, {'interval-start': 2, 'interval-end': 3, 'count': 12}, {'interval-start': 4, 'interval-end': 7, 'count': 10}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:43.587988940Z 
+2026-10-12T04:04:43.587991264Z 04:04:40
+2026-10-12T04:04:43.587993657Z {'ts': '2026-10-12 04:04:40', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 15}, {'interval-start': 4, 'interval-end': 7, 'count': 59}, {'interval-start': 8, 'interval-end': 15, 'count': 2}, {'interval-start': 16, 'interval-end': 31, 'count': 74}, {'interval-start': 32, 'interval-end': 63, 'count': 45}, {'interval-start': 64, 'interval-end': 127, 'count': 146}, {'interval-start': 128, 'interval-end': 255, 'count': 54}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:43.587996081Z {'ts': '2026-10-12 04:04:40', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 4007}, {'interval-start': 2, 'interval-end': 3, 'count': 8}, {'interval-start': 4, 'interval-end': 7, 'count': 11}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:43.587998404Z 
+2026-10-12T04:04:43.588000678Z 04:04:41
+2026-10-12T04:04:43.588002991Z {'ts': '2026-10-12 04:04:41', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:43.588005335Z {'ts': '2026-10-12 04:04:41', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 22}, {'interval-start': 4, 'interval-end': 7, 'count': 49}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 58}, {'interval-start': 32, 'interval-end': 63, 'count': 61}, {'interval-start': 64, 'interval-end': 127, 'count': 158}, {'interval-start': 128, 'interval-end': 255, 'count': 49}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:43.588011634Z {'ts': '2026-10-12 04:04:41', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6048}, {'interval-start': 2, 'interval-end': 3, 'count': 24}, {'interval-start': 4, 'interval-end': 7, 'count': 30}, {'interval-start': 8, 'interval-end': 15, 'count': 6}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 28}, {'interval-start': 64, 'interval-end': 127, 'count': 59}, {'interval-start': 128, 'interval-end': 255, 'count': 136}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:43.588013968Z 
+2026-10-12T04:04:43.588016251Z 04:04:42
+2026-10-12T04:04:43.588018835Z {'ts': '2026-10-12 04:04:42', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 19}, {'interval-start': 4, 'interval-end': 7, 'count': 59}, {'interval-start': 8, 'interval-end': 15, 'count': 11}, {'interval-start': 16, 'interval-end': 31, 'count': 1}, {'interval-start': 32, 'interval-end': 63, 'count': 98}, {'interval-start': 64, 'interval-end': 127, 'count': 102}, {'interval-start': 128, 'interval-end': 255, 'count': 29}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:43.588030423Z {'ts': '2026-10-12 04:04:42', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6010}, {'interval-start': 2, 'interval-end': 3, 'count': 26}, {'interval-start': 4, 'interval-end': 7, 'count': 14}, {'interval-start': 8, 'interval-end': 15, 'count': 1}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 107}, {'interval-start': 64, 'interval-end': 127, 'count': 123}, {'interval-start': 128, 'interval-end': 255, 'count': 168}, {'interval-start': 256, 'interval-end': 511, 'count': 6}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:43.588032967Z 
+2026-10-12T04:04:43.588035681Z 04:04:43
+2026-10-12T04:04:51.590874282Z {'ts': '2026-10-12 04:04:43', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 30}, {'interval-start': 4, 'interval-end': 7, 'count': 79}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 38}, {'interval-start': 32, 'interval-end': 63, 'count': 83}, {'interval-start': 64, 'interval-end': 127, 'count': 107}, {'interval-start': 128, 'interval-end': 255, 'count': 48}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:51.590902735Z {'ts': '2026-10-12 04:04:43', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6034}, {'interval-start': 2, 'interval-end': 3, 'count': 79}, {'interval-start': 4, 'interval-end': 7, 'count': 11}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 167}, {'interval-start': 64, 'interval-end': 127, 'count': 151}, {'interval-start': 128, 'interval-end': 255, 'count': 93}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:51.590907702Z 
+2026-10-12T04:04:51.590911458Z 04:04:44
+2026-10-12T04:04:51.590916035Z {'ts': '2026-10-12 04:04:44', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 3}, {'interval-start': 2, 'interval-end': 3, 'count': 11}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:51.590919720Z {'ts': '2026-10-12 04:04:44', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 38}, {'interval-start': 4, 'interval-end': 7, 'count': 50}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 39}, {'interval-start': 32, 'interval-end': 63, 'count': 94}, {'interval-start': 64, 'interval-end': 127, 'count': 137}, {'interval-start': 128, 'interval-end': 255, 'count': 50}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:51.590933982Z {'ts': '2026-10-12 04:04:44', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5920}, {'interval-start': 2, 'interval-end': 3, 'count': 42}, {'interval-start': 4, 'interval-end': 7, 'count': 24}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 82}, {'interval-start': 64, 'interval-end': 127, 'count': 112}, {'interval-start': 128, 'interval-end': 255, 'count': 172}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:51.590936746Z 
+2026-10-12T04:04:51.590939270Z 04:04:45
+2026-10-12T04:04:51.590942004Z {'ts': '2026-10-12 04:04:45', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2}, {'interval-start': 2, 'interval-end': 3, 'count': 49}, {'interval-start': 4, 'interval-end': 7, 'count': 44}, {'interval-start': 8, 'interval-end': 15, 'count': 23}, {'interval-start': 16, 'interval-end': 31, 'count': 20}, {'interval-start': 32, 'interval-end': 63, 'count': 111}, {'interval-start': 64, 'interval-end': 127, 'count': 162}, {'interval-start': 128, 'interval-end': 255, 'count': 28}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:51.590944568Z {'ts': '2026-10-12 04:04:45', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5992}, {'interval-start': 2, 'interval-end': 3, 'count': 40}, {'interval-start': 4, 'interval-end': 7, 'count': 20}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 42}, {'interval-start': 64, 'interval-end': 127, 'count': 41}, {'interval-start': 128, 'interval-end': 255, 'count': 115}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:51.590949004Z {'ts': '2026-10-12 04:04:45', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 8}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:51.590951418Z 
+2026-10-12T04:04:51.590954002Z 04:04:46
+2026-10-12T04:04:51.590956516Z {'ts': '2026-10-12 04:04:46', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 26}, {'interval-start': 4, 'interval-end': 7, 'count': 68}, {'interval-start': 8, 'interval-end': 15, 'count': 19}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 112}, {'interval-start': 64, 'interval-end': 127, 'count': 134}, {'interval-start': 128, 'interval-end': 255, 'count': 8}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:51.590966291Z {'ts': '2026-10-12 04:04:46', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6040}, {'interval-start': 2, 'interval-end': 3, 'count': 16}, {'interval-start': 4, 'interval-end': 7, 'count': 5}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:51.590977038Z 
+2026-10-12T04:04:51.590980172Z 04:04:47
+2026-10-12T04:04:51.590983277Z {'ts': '2026-10-12 04:04:47', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 5}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:51.590986852Z {'ts': '2026-10-12 04:04:47', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 23}, {'interval-start': 4, 'interval-end': 7, 'count': 53}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 58}, {'interval-start': 32, 'interval-end': 63, 'count': 61}, {'interval-start': 64, 'interval-end': 127, 'count': 189}, {'interval-start': 128, 'interval-end': 255, 'count': 21}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:51.591000273Z {'ts': '2026-10-12 04:04:47', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6016}, {'interval-start': 2, 'interval-end': 3, 'count': 23}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:51.591004239Z 
+2026-10-12T04:04:51.591007183Z 04:04:48
+2026-10-12T04:04:51.591010618Z {'ts': '2026-10-12 04:04:48', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 40}, {'interval-start': 4, 'interval-end': 7, 'count': 81}, {'interval-start': 8, 'interval-end': 15, 'count': 6}, {'interval-start': 16, 'interval-end': 31, 'count': 41}, {'interval-start': 32, 'interval-end': 63, 'count': 66}, {'interval-start': 64, 'interval-end': 127, 'count': 141}, {'interval-start': 128, 'interval-end': 255, 'count': 28}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:51.591014654Z {'ts': '2026-10-12 04:04:48', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5901}, {'interval-start': 2, 'interval-end': 3, 'count': 66}, {'interval-start': 4, 'interval-end': 7, 'count': 14}, {'interval-start': 8, 'interval-end': 15, 'count': 31}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:51.591018290Z 
+2026-10-12T04:04:51.591022787Z 04:04:49
+2026-10-12T04:04:51.591026062Z {'ts': '2026-10-12 04:04:49', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 59}, {'interval-start': 4, 'interval-end': 7, 'count': 19}, {'interval-start': 8, 'interval-end': 15, 'count': 1}, {'interval-start': 16, 'interval-end': 31, 'count': 39}, {'interval-start': 32, 'interval-end': 63, 'count': 97}, {'interval-start': 64, 'interval-end': 127, 'count': 148}, {'interval-start': 128, 'interval-end': 255, 'count': 44}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:51.591029226Z {'ts': '2026-10-12 04:04:49', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6029}, {'interval-start': 2, 'interval-end': 3, 'count': 18}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 2}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:51.591032872Z 
+2026-10-12T04:04:51.591035936Z 04:04:50
+2026-10-12T04:04:51.591038310Z {'ts': '2026-10-12 04:04:50', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 32}, {'interval-start': 4, 'interval-end': 7, 'count': 32}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 37}, {'interval-start': 32, 'interval-end': 63, 'count': 69}, {'interval-start': 64, 'interval-end': 127, 'count': 214}, {'interval-start': 128, 'interval-end': 255, 'count': 4}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:51.591040704Z {'ts': '2026-10-12 04:04:50', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 3978}, {'interval-start': 2, 'interval-end': 3, 'count': 20}, {'interval-start': 4, 'interval-end': 7, 'count': 26}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 14}, {'interval-start': 32, 'interval-end': 63, 'count': 27}, {'interval-start': 64, 'interval-end': 127, 'count': 25}, {'interval-start': 128, 'interval-end': 255, 'count': 49}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:51.591059262Z {'ts': '2026-10-12 04:04:50', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 519}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:51.591062877Z 
+2026-10-12T04:04:51.591066402Z 04:04:51
+2026-10-12T04:04:58.593533950Z {'ts': '2026-10-12 04:04:51', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 31}, {'interval-start': 4, 'interval-end': 7, 'count': 37}, {'interval-start': 8, 'interval-end': 15, 'count': 3}, {'interval-start': 16, 'interval-end': 31, 'count': 59}, {'interval-start': 32, 'interval-end': 63, 'count': 62}, {'interval-start': 64, 'interval-end': 127, 'count': 187}, {'interval-start': 128, 'interval-end': 255, 'count': 20}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:58.593584446Z {'ts': '2026-10-12 04:04:51', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5959}, {'interval-start': 2, 'interval-end': 3, 'count': 38}, {'interval-start': 4, 'interval-end': 7, 'count': 14}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 62}, {'interval-start': 64, 'interval-end': 127, 'count': 68}, {'interval-start': 128, 'interval-end': 255, 'count': 235}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:58.593589484Z {'ts': '2026-10-12 04:04:51', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:58.593591998Z 
+2026-10-12T04:04:58.593594431Z 04:04:52
+2026-10-12T04:04:58.593597416Z {'ts': '2026-10-12 04:04:52', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:58.593599980Z {'ts': '2026-10-12 04:04:52', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 65}, {'interval-start': 4, 'interval-end': 7, 'count': 28}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 60}, {'interval-start': 32, 'interval-end': 63, 'count': 60}, {'interval-start': 64, 'interval-end': 127, 'count': 160}, {'interval-start': 128, 'interval-end': 255, 'count': 44}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:58.593602524Z {'ts': '2026-10-12 04:04:52', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5954}, {'interval-start': 2, 'interval-end': 3, 'count': 23}, {'interval-start': 4, 'interval-end': 7, 'count': 13}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 59}, {'interval-start': 64, 'interval-end': 127, 'count': 59}, {'interval-start': 128, 'interval-end': 255, 'count': 247}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:58.593605027Z 
+2026-10-12T04:04:58.593607351Z 04:04:53
+2026-10-12T04:04:58.593609724Z {'ts': '2026-10-12 04:04:53', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 34}, {'interval-start': 4, 'interval-end': 7, 'count': 23}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 24}, {'interval-start': 32, 'interval-end': 63, 'count': 75}, {'interval-start': 64, 'interval-end': 127, 'count': 139}, {'interval-start': 128, 'interval-end': 255, 'count': 59}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:58.593612278Z {'ts': '2026-10-12 04:04:53', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5999}, {'interval-start': 2, 'interval-end': 3, 'count': 20}, {'interval-start': 4, 'interval-end': 7, 'count': 2}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 26}, {'interval-start': 64, 'interval-end': 127, 'count': 21}, {'interval-start': 128, 'interval-end': 255, 'count': 99}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:58.593614572Z 
+2026-10-12T04:04:58.593616895Z 04:04:54
+2026-10-12T04:04:58.593619239Z {'ts': '2026-10-12 04:04:54', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 41}, {'interval-start': 4, 'interval-end': 7, 'count': 53}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 57}, {'interval-start': 32, 'interval-end': 63, 'count': 69}, {'interval-start': 64, 'interval-end': 127, 'count': 115}, {'interval-start': 128, 'interval-end': 255, 'count': 71}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:58.593637096Z {'ts': '2026-10-12 04:04:54', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5945}, {'interval-start': 2, 'interval-end': 3, 'count': 44}, {'interval-start': 4, 'interval-end': 7, 'count': 15}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:58.593640851Z 
+2026-10-12T04:04:58.593644467Z 04:04:55
+2026-10-12T04:04:58.593647862Z {'ts': '2026-10-12 04:04:55', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 36}, {'interval-start': 4, 'interval-end': 7, 'count': 42}, {'interval-start': 8, 'interval-end': 15, 'count': 14}, {'interval-start': 16, 'interval-end': 31, 'count': 75}, {'interval-start': 32, 'interval-end': 63, 'count': 76}, {'interval-start': 64, 'interval-end': 127, 'count': 136}, {'interval-start': 128, 'interval-end': 255, 'count': 30}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:58.593652058Z {'ts': '2026-10-12 04:04:55', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5920}, {'interval-start': 2, 'interval-end': 3, 'count': 56}, {'interval-start': 4, 'interval-end': 7, 'count': 35}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 20}, {'interval-start': 64, 'interval-end': 127, 'count': 20}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:58.593654452Z 
+2026-10-12T04:04:58.593656936Z 04:04:56
+2026-10-12T04:04:58.593660541Z {'ts': '2026-10-12 04:04:56', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 52}, {'interval-start': 4, 'interval-end': 7, 'count': 38}, {'interval-start': 8, 'interval-end': 15, 'count': 20}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 120}, {'interval-start': 64, 'interval-end': 127, 'count': 113}, {'interval-start': 128, 'interval-end': 255, 'count': 47}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:58.593664327Z {'ts': '2026-10-12 04:04:56', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 4527}, {'interval-start': 2, 'interval-end': 3, 'count': 16}, {'interval-start': 4, 'interval-end': 7, 'count': 2}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 168}, {'interval-start': 64, 'interval-end': 127, 'count': 41}, {'interval-start': 128, 'interval-end': 255, 'count': 157}, {'interval-start': 256, 'interval-end': 511, 'count': 142}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:58.593666730Z 
+2026-10-12T04:04:58.593669164Z 04:04:57
+2026-10-12T04:04:58.593671718Z {'ts': '2026-10-12 04:04:57', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:04:58.593674222Z {'ts': '2026-10-12 04:04:57', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 43}, {'interval-start': 4, 'interval-end': 7, 'count': 32}, {'interval-start': 8, 'interval-end': 15, 'count': 20}, {'interval-start': 16, 'interval-end': 31, 'count': 40}, {'interval-start': 32, 'interval-end': 63, 'count': 60}, {'interval-start': 64, 'interval-end': 127, 'count': 131}, {'interval-start': 128, 'interval-end': 255, 'count': 41}], 'disk': 'nvme0n3'}
+2026-10-12T04:04:58.593680451Z {'ts': '2026-10-12 04:04:57', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 7363}, {'interval-start': 2, 'interval-end': 3, 'count': 12}, {'interval-start': 4, 'interval-end': 7, 'count': 1}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 21}, {'interval-start': 64, 'interval-end': 127, 'count': 20}, {'interval-start': 128, 'interval-end': 255, 'count': 249}, {'interval-start': 256, 'interval-end': 511, 'count': 95}], 'disk': 'nvme0n2'}
+2026-10-12T04:04:58.593682895Z 
+2026-10-12T04:04:58.593685278Z 04:04:58
+2026-10-12T04:04:58.593695274Z {'ts': '2026-10-12 04:04:58', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 89}, {'interval-start': 4, 'interval-end': 7, 'count': 44}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 66}, {'interval-start': 32, 'interval-end': 63, 'count': 19}, {'interval-start': 64, 'interval-end': 127, 'count': 136}, {'interval-start': 128, 'interval-end': 255, 'count': 20}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:06.596536993Z {'ts': '2026-10-12 04:04:58', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2900}, {'interval-start': 2, 'interval-end': 3, 'count': 37}, {'interval-start': 4, 'interval-end': 7, 'count': 45}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 71}, {'interval-start': 64, 'interval-end': 127, 'count': 78}, {'interval-start': 128, 'interval-end': 255, 'count': 108}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:06.596561270Z 
+2026-10-12T04:05:06.596567068Z 04:04:59
+2026-10-12T04:05:06.596571635Z {'ts': '2026-10-12 04:04:59', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}, {'interval-start': 4, 'interval-end': 7, 'count': 2}], 'disk': 'nvme0n1'}
+2026-10-12T04:05:06.596575581Z {'ts': '2026-10-12 04:04:59', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 43}, {'interval-start': 4, 'interval-end': 7, 'count': 52}, {'interval-start': 8, 'interval-end': 15, 'count': 1}, {'interval-start': 16, 'interval-end': 31, 'count': 76}, {'interval-start': 32, 'interval-end': 63, 'count': 58}, {'interval-start': 64, 'interval-end': 127, 'count': 150}, {'interval-start': 128, 'interval-end': 255, 'count': 17}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:06.596579467Z {'ts': '2026-10-12 04:04:59', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6977}, {'interval-start': 2, 'interval-end': 3, 'count': 62}, {'interval-start': 4, 'interval-end': 7, 'count': 50}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 128}, {'interval-start': 64, 'interval-end': 127, 'count': 93}, {'interval-start': 128, 'interval-end': 255, 'count': 135}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:06.596583313Z 
+2026-10-12T04:05:06.596586738Z 04:05:00
+2026-10-12T04:05:06.596590263Z {'ts': '2026-10-12 04:05:00', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 45}, {'interval-start': 4, 'interval-end': 7, 'count': 37}, {'interval-start': 8, 'interval-end': 15, 'count': 24}, {'interval-start': 16, 'interval-end': 31, 'count': 54}, {'interval-start': 32, 'interval-end': 63, 'count': 50}, {'interval-start': 64, 'interval-end': 127, 'count': 180}, {'interval-start': 128, 'interval-end': 255, 'count': 10}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:06.596593879Z {'ts': '2026-10-12 04:05:00', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5828}, {'interval-start': 2, 'interval-end': 3, 'count': 70}, {'interval-start': 4, 'interval-end': 7, 'count': 64}, {'interval-start': 8, 'interval-end': 15, 'count': 56}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 28}, {'interval-start': 64, 'interval-end': 127, 'count': 26}, {'interval-start': 128, 'interval-end': 255, 'count': 9}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:06.596606328Z 
+2026-10-12T04:05:06.596608872Z 04:05:01
+2026-10-12T04:05:06.596611355Z {'ts': '2026-10-12 04:05:01', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 45}, {'interval-start': 4, 'interval-end': 7, 'count': 21}, {'interval-start': 8, 'interval-end': 15, 'count': 32}, {'interval-start': 16, 'interval-end': 31, 'count': 7}, {'interval-start': 32, 'interval-end': 63, 'count': 118}, {'interval-start': 64, 'interval-end': 127, 'count': 138}, {'interval-start': 128, 'interval-end': 255, 'count': 39}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:06.596614250Z {'ts': '2026-10-12 04:05:01', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5975}, {'interval-start': 2, 'interval-end': 3, 'count': 18}, {'interval-start': 4, 'interval-end': 7, 'count': 2}, {'interval-start': 8, 'interval-end': 15, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:06.596617214Z {'ts': '2026-10-12 04:05:01', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 51}], 'disk': 'nvme0n1'}
+2026-10-12T04:05:06.596619428Z 
+2026-10-12T04:05:06.596621771Z 04:05:02
+2026-10-12T04:05:06.596627199Z {'ts': '2026-10-12 04:05:02', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 39}, {'interval-start': 4, 'interval-end': 7, 'count': 52}, {'interval-start': 8, 'interval-end': 15, 'count': 3}, {'interval-start': 16, 'interval-end': 31, 'count': 69}, {'interval-start': 32, 'interval-end': 63, 'count': 57}, {'interval-start': 64, 'interval-end': 127, 'count': 143}, {'interval-start': 128, 'interval-end': 255, 'count': 45}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:06.596629743Z {'ts': '2026-10-12 04:05:02', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6023}, {'interval-start': 2, 'interval-end': 3, 'count': 18}, {'interval-start': 4, 'interval-end': 7, 'count': 2}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:06.596632157Z 
+2026-10-12T04:05:06.596634470Z 04:05:03
+2026-10-12T04:05:06.596637264Z {'ts': '2026-10-12 04:05:03', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:05:06.596639748Z {'ts': '2026-10-12 04:05:03', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 42}, {'interval-start': 4, 'interval-end': 7, 'count': 36}, {'interval-start': 8, 'interval-end': 15, 'count': 39}, {'interval-start': 16, 'interval-end': 31, 'count': 22}, {'interval-start': 32, 'interval-end': 63, 'count': 96}, {'interval-start': 64, 'interval-end': 127, 'count': 141}, {'interval-start': 128, 'interval-end': 255, 'count': 27}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:06.596642262Z {'ts': '2026-10-12 04:05:03', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6062}, {'interval-start': 2, 'interval-end': 3, 'count': 26}, {'interval-start': 4, 'interval-end': 7, 'count': 4}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:06.596644505Z 
+2026-10-12T04:05:06.596646759Z 04:05:04
+2026-10-12T04:05:06.596652417Z {'ts': '2026-10-12 04:05:04', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:05:06.596661711Z {'ts': '2026-10-12 04:05:04', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 47}, {'interval-start': 4, 'interval-end': 7, 'count': 59}, {'interval-start': 8, 'interval-end': 15, 'count': 1}, {'interval-start': 16, 'interval-end': 31, 'count': 92}, {'interval-start': 32, 'interval-end': 63, 'count': 27}, {'interval-start': 64, 'interval-end': 127, 'count': 163}, {'interval-start': 128, 'interval-end': 255, 'count': 36}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:06.596664866Z {'ts': '2026-10-12 04:05:04', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5977}, {'interval-start': 2, 'interval-end': 3, 'count': 35}, {'interval-start': 4, 'interval-end': 7, 'count': 35}, {'interval-start': 8, 'interval-end': 15, 'count': 27}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:06.596667931Z 
+2026-10-12T04:05:06.596671446Z 04:05:05
+2026-10-12T04:05:06.596678316Z {'ts': '2026-10-12 04:05:05', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 45}, {'interval-start': 4, 'interval-end': 7, 'count': 29}, {'interval-start': 8, 'interval-end': 15, 'count': 12}, {'interval-start': 16, 'interval-end': 31, 'count': 55}, {'interval-start': 32, 'interval-end': 63, 'count': 78}, {'interval-start': 64, 'interval-end': 127, 'count': 159}, {'interval-start': 128, 'interval-end': 255, 'count': 5}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:06.596681621Z {'ts': '2026-10-12 04:05:05', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5976}, {'interval-start': 2, 'interval-end': 3, 'count': 37}, {'interval-start': 4, 'interval-end': 7, 'count': 50}, {'interval-start': 8, 'interval-end': 15, 'count': 4}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 143}, {'interval-start': 64, 'interval-end': 127, 'count': 117}, {'interval-start': 128, 'interval-end': 255, 'count': 85}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:06.596684376Z 
+2026-10-12T04:05:06.596687731Z 04:05:06
+2026-10-12T04:05:06.596701091Z {'ts': '2026-10-12 04:05:06', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 37}, {'interval-start': 4, 'interval-end': 7, 'count': 62}, {'interval-start': 8, 'interval-end': 15, 'count': 8}, {'interval-start': 16, 'interval-end': 31, 'count': 79}, {'interval-start': 32, 'interval-end': 63, 'count': 56}, {'interval-start': 64, 'interval-end': 127, 'count': 167}, {'interval-start': 128, 'interval-end': 255, 'count': 11}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:14.599629070Z {'ts': '2026-10-12 04:05:06', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5964}, {'interval-start': 2, 'interval-end': 3, 'count': 40}, {'interval-start': 4, 'interval-end': 7, 'count': 24}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 60}, {'interval-start': 64, 'interval-end': 127, 'count': 83}, {'interval-start': 128, 'interval-end': 255, 'count': 242}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:14.599662170Z 
+2026-10-12T04:05:14.599666827Z 04:05:07
+2026-10-12T04:05:14.599671333Z {'ts': '2026-10-12 04:05:07', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 18}, {'interval-start': 2, 'interval-end': 3, 'count': 14}, {'interval-start': 4, 'interval-end': 7, 'count': 2}], 'disk': 'nvme0n1'}
+2026-10-12T04:05:14.599674879Z {'ts': '2026-10-12 04:05:07', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 38}, {'interval-start': 4, 'interval-end': 7, 'count': 51}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 40}, {'interval-start': 32, 'interval-end': 63, 'count': 88}, {'interval-start': 64, 'interval-end': 127, 'count': 135}, {'interval-start': 128, 'interval-end': 255, 'count': 44}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:14.599686587Z {'ts': '2026-10-12 04:05:07', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6024}, {'interval-start': 2, 'interval-end': 3, 'count': 29}, {'interval-start': 4, 'interval-end': 7, 'count': 8}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 60}, {'interval-start': 64, 'interval-end': 127, 'count': 53}, {'interval-start': 128, 'interval-end': 255, 'count': 26}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:14.599688950Z 
+2026-10-12T04:05:14.599691334Z 04:05:08
+2026-10-12T04:05:14.599695830Z {'ts': '2026-10-12 04:05:08', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 40}, {'interval-start': 4, 'interval-end': 7, 'count': 44}, {'interval-start': 8, 'interval-end': 15, 'count': 20}, {'interval-start': 16, 'interval-end': 31, 'count': 23}, {'interval-start': 32, 'interval-end': 63, 'count': 93}, {'interval-start': 64, 'interval-end': 127, 'count': 137}, {'interval-start': 128, 'interval-end': 255, 'count': 41}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:14.599698244Z {'ts': '2026-10-12 04:05:08', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6018}, {'interval-start': 2, 'interval-end': 3, 'count': 24}, {'interval-start': 4, 'interval-end': 7, 'count': 18}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 20}, {'interval-start': 64, 'interval-end': 127, 'count': 20}, {'interval-start': 128, 'interval-end': 255, 'count': 20}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:14.599700618Z 
+2026-10-12T04:05:14.599703482Z 04:05:09
+2026-10-12T04:05:14.599706006Z {'ts': '2026-10-12 04:05:09', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}, {'interval-start': 4, 'interval-end': 7, 'count': 2}], 'disk': 'nvme0n1'}
+2026-10-12T04:05:14.599708610Z {'ts': '2026-10-12 04:05:09', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 31}, {'interval-start': 4, 'interval-end': 7, 'count': 23}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 21}, {'interval-start': 32, 'interval-end': 63, 'count': 54}, {'interval-start': 64, 'interval-end': 127, 'count': 110}, {'interval-start': 128, 'interval-end': 255, 'count': 27}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:14.599719506Z {'ts': '2026-10-12 04:05:09', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 4041}, {'interval-start': 2, 'interval-end': 3, 'count': 22}, {'interval-start': 4, 'interval-end': 7, 'count': 8}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 20}, {'interval-start': 64, 'interval-end': 127, 'count': 149}, {'interval-start': 128, 'interval-end': 255, 'count': 116}, {'interval-start': 256, 'interval-end': 511, 'count': 99}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:14.599721930Z 
+2026-10-12T04:05:14.599724364Z 04:05:10
+2026-10-12T04:05:14.599726707Z {'ts': '2026-10-12 04:05:10', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 70}, {'interval-start': 4, 'interval-end': 7, 'count': 31}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 67}, {'interval-start': 32, 'interval-end': 63, 'count': 52}, {'interval-start': 64, 'interval-end': 127, 'count': 157}, {'interval-start': 128, 'interval-end': 255, 'count': 31}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:14.599733427Z {'ts': '2026-10-12 04:05:10', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6280}, {'interval-start': 2, 'interval-end': 3, 'count': 18}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 2}, {'interval-start': 64, 'interval-end': 127, 'count': 128}, {'interval-start': 128, 'interval-end': 255, 'count': 61}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:14.599735761Z 
+2026-10-12T04:05:14.599738104Z 04:05:11
+2026-10-12T04:05:14.599740428Z {'ts': '2026-10-12 04:05:11', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 70}, {'interval-start': 4, 'interval-end': 7, 'count': 46}, {'interval-start': 8, 'interval-end': 15, 'count': 38}, {'interval-start': 16, 'interval-end': 31, 'count': 43}, {'interval-start': 32, 'interval-end': 63, 'count': 76}, {'interval-start': 64, 'interval-end': 127, 'count': 117}, {'interval-start': 128, 'interval-end': 255, 'count': 33}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:14.599742922Z {'ts': '2026-10-12 04:05:11', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5726}, {'interval-start': 2, 'interval-end': 3, 'count': 26}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:14.599745145Z 
+2026-10-12T04:05:14.599747428Z 04:05:12
+2026-10-12T04:05:14.599750333Z {'ts': '2026-10-12 04:05:12', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'nvme0n1'}
+2026-10-12T04:05:14.599752696Z {'ts': '2026-10-12 04:05:12', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 45}, {'interval-start': 4, 'interval-end': 7, 'count': 15}, {'interval-start': 8, 'interval-end': 15, 'count': 22}, {'interval-start': 16, 'interval-end': 31, 'count': 75}, {'interval-start': 32, 'interval-end': 63, 'count': 33}, {'interval-start': 64, 'interval-end': 127, 'count': 178}, {'interval-start': 128, 'interval-end': 255, 'count': 35}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:14.599755070Z {'ts': '2026-10-12 04:05:12', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5746}, {'interval-start': 2, 'interval-end': 3, 'count': 59}, {'interval-start': 4, 'interval-end': 7, 'count': 88}, {'interval-start': 8, 'interval-end': 15, 'count': 102}, {'interval-start': 16, 'interval-end': 31, 'count': 20}, {'interval-start': 32, 'interval-end': 63, 'count': 20}, {'interval-start': 64, 'interval-end': 127, 'count': 19}, {'interval-start': 128, 'interval-end': 255, 'count': 61}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:14.599757383Z 
+2026-10-12T04:05:14.599759667Z 04:05:13
+2026-10-12T04:05:14.599769942Z {'ts': '2026-10-12 04:05:13', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 38}, {'interval-start': 4, 'interval-end': 7, 'count': 38}, {'interval-start': 8, 'interval-end': 15, 'count': 3}, {'interval-start': 16, 'interval-end': 31, 'count': 61}, {'interval-start': 32, 'interval-end': 63, 'count': 78}, {'interval-start': 64, 'interval-end': 127, 'count': 141}, {'interval-start': 128, 'interval-end': 255, 'count': 38}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:14.599772586Z {'ts': '2026-10-12 04:05:13', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5947}, {'interval-start': 2, 'interval-end': 3, 'count': 17}, {'interval-start': 4, 'interval-end': 7, 'count': 21}, {'interval-start': 8, 'interval-end': 15, 'count': 8}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 84}, {'interval-start': 64, 'interval-end': 127, 'count': 112}, {'interval-start': 128, 'interval-end': 255, 'count': 130}, {'interval-start': 256, 'interval-end': 511, 'count': 2}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:14.599778285Z 
+2026-10-12T04:05:14.599780628Z 04:05:14
+2026-10-12T04:05:23.602640988Z {'ts': '2026-10-12 04:05:14', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2}, {'interval-start': 2, 'interval-end': 3, 'count': 7}], 'disk': 'nvme0n1'}
+2026-10-12T04:05:23.602668289Z {'ts': '2026-10-12 04:05:14', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 16}, {'interval-start': 4, 'interval-end': 7, 'count': 37}, {'interval-start': 8, 'interval-end': 15, 'count': 36}, {'interval-start': 16, 'interval-end': 31, 'count': 68}, {'interval-start': 32, 'interval-end': 63, 'count': 80}, {'interval-start': 64, 'interval-end': 127, 'count': 113}, {'interval-start': 128, 'interval-end': 255, 'count': 51}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:23.602673167Z {'ts': '2026-10-12 04:05:14', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5925}, {'interval-start': 2, 'interval-end': 3, 'count': 35}, {'interval-start': 4, 'interval-end': 7, 'count': 31}, {'interval-start': 8, 'interval-end': 15, 'count': 50}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:23.602676862Z 
+2026-10-12T04:05:23.602680458Z 04:05:15
+2026-10-12T04:05:23.602684123Z {'ts': '2026-10-12 04:05:15', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:05:23.602687698Z {'ts': '2026-10-12 04:05:15', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 17}, {'interval-start': 4, 'interval-end': 7, 'count': 75}, {'interval-start': 8, 'interval-end': 15, 'count': 22}, {'interval-start': 16, 'interval-end': 31, 'count': 82}, {'interval-start': 32, 'interval-end': 63, 'count': 75}, {'interval-start': 64, 'interval-end': 127, 'count': 136}, {'interval-start': 128, 'interval-end': 255, 'count': 29}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:23.602691664Z {'ts': '2026-10-12 04:05:15', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5936}, {'interval-start': 2, 'interval-end': 3, 'count': 29}, {'interval-start': 4, 'interval-end': 7, 'count': 4}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:23.602695250Z 
+2026-10-12T04:05:23.602698705Z 04:05:16
+2026-10-12T04:05:23.602702280Z {'ts': '2026-10-12 04:05:16', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 20}, {'interval-start': 4, 'interval-end': 7, 'count': 69}, {'interval-start': 8, 'interval-end': 15, 'count': 2}, {'interval-start': 16, 'interval-end': 31, 'count': 15}, {'interval-start': 32, 'interval-end': 63, 'count': 110}, {'interval-start': 64, 'interval-end': 127, 'count': 161}, {'interval-start': 128, 'interval-end': 255, 'count': 33}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:23.602705926Z {'ts': '2026-10-12 04:05:16', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6354}, {'interval-start': 2, 'interval-end': 3, 'count': 26}, {'interval-start': 4, 'interval-end': 7, 'count': 39}, {'interval-start': 8, 'interval-end': 15, 'count': 56}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:23.602710002Z {'ts': '2026-10-12 04:05:16', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 23}], 'disk': 'nvme0n1'}
+2026-10-12T04:05:23.602713417Z 
+2026-10-12T04:05:23.602716832Z 04:05:17
+2026-10-12T04:05:23.602729932Z {'ts': '2026-10-12 04:05:17', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 21}, {'interval-start': 4, 'interval-end': 7, 'count': 42}, {'interval-start': 8, 'interval-end': 15, 'count': 18}, {'interval-start': 16, 'interval-end': 31, 'count': 29}, {'interval-start': 32, 'interval-end': 63, 'count': 90}, {'interval-start': 64, 'interval-end': 127, 'count': 98}, {'interval-start': 128, 'interval-end': 255, 'count': 12}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:23.602732436Z {'ts': '2026-10-12 04:05:17', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 3721}, {'interval-start': 2, 'interval-end': 3, 'count': 13}, {'interval-start': 4, 'interval-end': 7, 'count': 5}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:23.602734719Z 
+2026-10-12T04:05:23.602737023Z 04:05:18
+2026-10-12T04:05:23.602739346Z {'ts': '2026-10-12 04:05:18', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 16}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:23.602741550Z 
+2026-10-12T04:05:23.602743903Z 04:05:19
+2026-10-12T04:05:23.602751685Z {'ts': '2026-10-12 04:05:19', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 12}, {'interval-start': 4, 'interval-end': 7, 'count': 1}, {'interval-start': 8, 'interval-end': 15, 'count': 1}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 1}, {'interval-start': 64, 'interval-end': 127, 'count': 3}, {'interval-start': 128, 'interval-end': 255, 'count': 11}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:23.602755140Z {'ts': '2026-10-12 04:05:19', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 0}, {'interval-start': 64, 'interval-end': 127, 'count': 1}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:23.602757534Z 
+2026-10-12T04:05:23.602759948Z 04:05:20
+2026-10-12T04:05:23.602762551Z {'ts': '2026-10-12 04:05:20', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 251}, {'interval-start': 2, 'interval-end': 3, 'count': 16}, {'interval-start': 4, 'interval-end': 7, 'count': 4}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 1}, {'interval-start': 64, 'interval-end': 127, 'count': 9}, {'interval-start': 128, 'interval-end': 255, 'count': 36}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:23.602764965Z {'ts': '2026-10-12 04:05:20', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 8}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 0}, {'interval-start': 64, 'interval-end': 127, 'count': 0}, {'interval-start': 128, 'interval-end': 255, 'count': 1}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:23.602767419Z {'ts': '2026-10-12 04:05:20', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:05:23.602769642Z 
+2026-10-12T04:05:23.602771956Z 04:05:21
+2026-10-12T04:05:23.602774389Z {'ts': '2026-10-12 04:05:21', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 3}, {'interval-start': 2, 'interval-end': 3, 'count': 4}], 'disk': 'nvme0n1'}
+2026-10-12T04:05:23.602776823Z {'ts': '2026-10-12 04:05:21', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 7}, {'interval-start': 4, 'interval-end': 7, 'count': 3}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 1}, {'interval-start': 64, 'interval-end': 127, 'count': 0}, {'interval-start': 128, 'interval-end': 255, 'count': 3}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:23.602783223Z {'ts': '2026-10-12 04:05:21', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 445}, {'interval-start': 2, 'interval-end': 3, 'count': 8}, {'interval-start': 4, 'interval-end': 7, 'count': 4}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 1}, {'interval-start': 64, 'interval-end': 127, 'count': 1}, {'interval-start': 128, 'interval-end': 255, 'count': 19}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:23.602785586Z 
+2026-10-12T04:05:23.602787880Z 04:05:22
+2026-10-12T04:05:23.602790323Z {'ts': '2026-10-12 04:05:22', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 222}, {'interval-start': 2, 'interval-end': 3, 'count': 20}, {'interval-start': 4, 'interval-end': 7, 'count': 1}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 3}, {'interval-start': 64, 'interval-end': 127, 'count': 2}, {'interval-start': 128, 'interval-end': 255, 'count': 8}], 'disk': 'nvme0n2'}
+2026-10-12T04:05:23.602799347Z {'ts': '2026-10-12 04:05:22', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 4}], 'disk': 'nvme0n3'}
+2026-10-12T04:05:23.602801761Z 
+2026-10-12T04:05:23.602804024Z 04:05:23
+2026-10-12T04:12:39.685941269Z {'ts': '2026-10-12 04:05:23', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 37}, {'interval-start': 2, 'interval-end': 3, 'count': 9}, {'interval-start': 4, 'interval-end': 7, 'count': 3}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 9}, {'interval-start': 64, 'interval-end': 127, 'count': 2}, {'interval-start': 128, 'interval-end': 255, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:39.685968861Z 
+2026-10-12T04:12:39.685974049Z 04:05:24
+2026-10-12T04:12:39.685977965Z {'ts': '2026-10-12 04:05:24', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 11}, {'interval-start': 2, 'interval-end': 3, 'count': 4}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 2}, {'interval-start': 64, 'interval-end': 127, 'count': 3}, {'interval-start': 128, 'interval-end': 255, 'count': 6}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:39.685985396Z {'ts': '2026-10-12 04:05:24', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 4}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 0}, {'interval-start': 64, 'interval-end': 127, 'count': 1}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:39.685990233Z 
+2026-10-12T04:12:39.685995251Z 04:05:25
+2026-10-12T04:12:39.686000319Z {'ts': '2026-10-12 04:05:25', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}, {'interval-start': 4, 'interval-end': 7, 'count': 3}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:39.686013989Z {'ts': '2026-10-12 04:05:25', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 21}, {'interval-start': 2, 'interval-end': 3, 'count': 3}, {'interval-start': 4, 'interval-end': 7, 'count': 1}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 0}, {'interval-start': 64, 'interval-end': 127, 'count': 1}, {'interval-start': 128, 'interval-end': 255, 'count': 5}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:39.686016363Z 
+2026-10-12T04:12:39.686018666Z 04:05:26
+2026-10-12T04:12:39.686020980Z 
+2026-10-12T04:12:39.686023313Z 04:05:27
+2026-10-12T04:12:39.686025587Z 
+2026-10-12T04:12:39.686027880Z 04:05:28
+2026-10-12T04:12:39.686030114Z 
+2026-10-12T04:12:39.686032397Z 04:05:29
+2026-10-12T04:12:39.686034710Z 
+2026-10-12T04:12:39.686037104Z 04:05:30
+2026-10-12T04:12:39.686039378Z 
+2026-10-12T04:12:39.686041721Z 04:05:31
+2026-10-12T04:12:39.686044145Z {'ts': '2026-10-12 04:05:31', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 39}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:39.686046388Z 
+2026-10-12T04:12:39.686048601Z 04:05:32
+2026-10-12T04:12:39.686050765Z 
+2026-10-12T04:12:39.686053168Z 04:05:33
+2026-10-12T04:12:39.686055632Z {'ts': '2026-10-12 04:05:33', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:39.686057996Z {'ts': '2026-10-12 04:05:33', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 37}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 1}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 1}, {'interval-start': 64, 'interval-end': 127, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:39.686060940Z {'ts': '2026-10-12 04:05:33', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:12:39.686063634Z 
+2026-10-12T04:12:39.686069142Z 04:05:34
+2026-10-12T04:12:39.686072478Z 
+2026-10-12T04:12:39.686075843Z 04:05:35
+2026-10-12T04:12:39.686079027Z 
+2026-10-12T04:12:39.686082272Z 04:05:36
+2026-10-12T04:12:39.686084526Z 
+2026-10-12T04:12:39.686086799Z 04:05:37
+2026-10-12T04:12:39.686089022Z 
+2026-10-12T04:12:39.686091286Z 04:05:38
+2026-10-12T04:12:39.686093489Z 
+2026-10-12T04:12:39.686095743Z 04:05:39
+2026-10-12T04:12:39.686098226Z {'ts': '2026-10-12 04:05:39', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 17}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 1}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 0}, {'interval-start': 64, 'interval-end': 127, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:39.686100530Z 
+2026-10-12T04:12:39.686102853Z 04:05:40
+2026-10-12T04:12:39.686105087Z 
+2026-10-12T04:12:39.686107370Z 04:05:41
+2026-10-12T04:12:39.686109584Z 
+2026-10-12T04:12:39.686111857Z 04:05:42
+2026-10-12T04:12:39.686114070Z 
+2026-10-12T04:12:39.686116324Z 04:05:43
+2026-10-12T04:12:39.686118507Z 
+2026-10-12T04:12:39.686120790Z 04:05:44
+2026-10-12T04:12:39.686122994Z 
+2026-10-12T04:12:39.686125237Z 04:05:45
+2026-10-12T04:12:39.686131286Z 
+2026-10-12T04:12:39.686133600Z 04:05:46
+2026-10-12T04:12:39.686135893Z 
+2026-10-12T04:12:39.686138227Z 04:05:47
+2026-10-12T04:12:39.686140430Z 
+2026-10-12T04:12:39.686142704Z 04:05:48
+2026-10-12T04:12:39.686147260Z 
+2026-10-12T04:12:39.686150856Z 04:05:49
+2026-10-12T04:12:39.686160450Z 
+2026-10-12T04:12:39.686163495Z 04:05:50
+2026-10-12T04:12:39.686165758Z 
+2026-10-12T04:12:39.686168032Z 04:05:51
+2026-10-12T04:12:39.686170225Z 
+2026-10-12T04:12:39.686172508Z 04:05:52
+2026-10-12T04:12:39.686174762Z 
+2026-10-12T04:12:39.686176995Z 04:05:53
+2026-10-12T04:12:39.686179169Z 
+2026-10-12T04:12:39.686181412Z 04:05:54
+2026-10-12T04:12:39.686183635Z 
+2026-10-12T04:12:39.686185889Z 04:05:55
+2026-10-12T04:12:39.686188052Z 
+2026-10-12T04:12:39.686190265Z 04:05:56
+2026-10-12T04:12:39.686192439Z 
+2026-10-12T04:12:39.686194682Z 04:05:57
+2026-10-12T04:12:39.686196845Z 
+2026-10-12T04:12:39.686199089Z 04:05:58
+2026-10-12T04:12:39.686202093Z 
+2026-10-12T04:12:39.686206780Z 04:05:59
+2026-10-12T04:12:39.686209705Z 
+2026-10-12T04:12:39.686212439Z 04:06:00
+2026-10-12T04:12:39.686215614Z 
+2026-10-12T04:12:39.686218788Z 04:06:01
+2026-10-12T04:12:39.686223696Z 
+2026-10-12T04:12:39.686227161Z 04:06:02
+2026-10-12T04:12:39.686230456Z 
+2026-10-12T04:12:39.686233711Z 04:06:03
+2026-10-12T04:12:39.686236515Z 
+2026-10-12T04:12:39.686239470Z 04:06:04
+2026-10-12T04:12:39.686242534Z 
+2026-10-12T04:12:39.686245559Z 04:06:05
+2026-10-12T04:12:39.686248363Z 
+2026-10-12T04:12:39.686251378Z 04:06:06
+2026-10-12T04:12:39.686254823Z 
+2026-10-12T04:12:39.686258008Z 04:06:07
+2026-10-12T04:12:39.686261293Z 
+2026-10-12T04:12:39.686264137Z 04:06:08
+2026-10-12T04:12:39.686266380Z 
+2026-10-12T04:12:39.686268674Z 04:06:09
+2026-10-12T04:12:39.686270897Z 
+2026-10-12T04:12:39.686273210Z 04:06:10
+2026-10-12T04:12:39.686275424Z 
+2026-10-12T04:12:39.686277677Z 04:06:11
+2026-10-12T04:12:39.686279871Z 
+2026-10-12T04:12:39.686282124Z 04:06:12
+2026-10-12T04:12:39.686284297Z 
+2026-10-12T04:12:39.686286561Z 04:06:13
+2026-10-12T04:12:39.686288764Z 
+2026-10-12T04:12:39.686290997Z 04:06:14
+2026-10-12T04:12:39.686293171Z 
+2026-10-12T04:12:39.686295414Z 04:06:15
+2026-10-12T04:12:39.686297627Z 
+2026-10-12T04:12:39.686299891Z 04:06:16
+2026-10-12T04:12:39.686302054Z 
+2026-10-12T04:12:39.686304327Z 04:06:17
+2026-10-12T04:12:39.686306531Z 
+2026-10-12T04:12:39.686308774Z 04:06:18
+2026-10-12T04:12:39.686310927Z 
+2026-10-12T04:12:39.686313191Z 04:06:19
+2026-10-12T04:12:39.686315374Z 
+2026-10-12T04:12:39.686317638Z 04:06:20
+2026-10-12T04:12:39.686319811Z 
+2026-10-12T04:12:39.686322074Z 04:06:21
+2026-10-12T04:12:39.686324929Z 
+2026-10-12T04:12:39.686330407Z 04:06:22
+2026-10-12T04:12:39.686333572Z 
+2026-10-12T04:12:39.686336947Z 04:06:23
+2026-10-12T04:12:39.686340111Z 
+2026-10-12T04:12:39.686342986Z 04:06:24
+2026-10-12T04:12:39.686345309Z 
+2026-10-12T04:12:39.686347563Z 04:06:25
+2026-10-12T04:12:39.686349776Z 
+2026-10-12T04:12:39.686352019Z 04:06:26
+2026-10-12T04:12:39.686354203Z 
+2026-10-12T04:12:39.686356456Z 04:06:27
+2026-10-12T04:12:39.686358629Z 
+2026-10-12T04:12:39.686360883Z 04:06:28
+2026-10-12T04:12:39.686363086Z 
+2026-10-12T04:12:39.686365320Z 04:06:29
+2026-10-12T04:12:39.686367543Z 
+2026-10-12T04:12:39.686369776Z 04:06:30
+2026-10-12T04:12:39.686371950Z 
+2026-10-12T04:12:39.686378349Z 04:06:31
+2026-10-12T04:12:39.686380603Z 
+2026-10-12T04:12:39.686382876Z 04:06:32
+2026-10-12T04:12:39.686385089Z 
+2026-10-12T04:12:39.686387393Z 04:06:33
+2026-10-12T04:12:39.686389576Z 
+2026-10-12T04:12:39.686391860Z 04:06:34
+2026-10-12T04:12:39.686394053Z 
+2026-10-12T04:12:39.686396326Z 04:06:35
+2026-10-12T04:12:39.686398510Z 
+2026-10-12T04:12:39.686400783Z 04:06:36
+2026-10-12T04:12:39.686403006Z 
+2026-10-12T04:12:39.686406021Z 04:06:37
+2026-10-12T04:12:39.686411079Z 
+2026-10-12T04:12:39.686414344Z 04:06:38
+2026-10-12T04:12:39.686417669Z 
+2026-10-12T04:12:39.686420893Z 04:06:39
+2026-10-12T04:12:39.686423718Z 
+2026-10-12T04:12:39.686426111Z 04:06:40
+2026-10-12T04:12:39.686428365Z 
+2026-10-12T04:12:39.686430638Z 04:06:41
+2026-10-12T04:12:39.686432861Z 
+2026-10-12T04:12:39.686435125Z 04:06:42
+2026-10-12T04:12:39.686437338Z 
+2026-10-12T04:12:39.686439622Z 04:06:43
+2026-10-12T04:12:39.686441825Z 
+2026-10-12T04:12:39.686444128Z 04:06:44
+2026-10-12T04:12:39.686446332Z 
+2026-10-12T04:12:39.686448585Z 04:06:45
+2026-10-12T04:12:39.686450779Z 
+2026-10-12T04:12:39.686453062Z 04:06:46
+2026-10-12T04:12:39.686455265Z 
+2026-10-12T04:12:39.686457519Z 04:06:47
+2026-10-12T04:12:39.686459722Z 
+2026-10-12T04:12:39.686461995Z 04:06:48
+2026-10-12T04:12:39.686464159Z 
+2026-10-12T04:12:39.686466392Z 04:06:49
+2026-10-12T04:12:39.686468605Z 
+2026-10-12T04:12:39.686470869Z 04:06:50
+2026-10-12T04:12:39.686473042Z 
+2026-10-12T04:12:39.686475316Z 04:06:51
+2026-10-12T04:12:39.686477499Z 
+2026-10-12T04:12:39.686479782Z 04:06:52
+2026-10-12T04:12:39.686481966Z 
+2026-10-12T04:12:39.686484229Z 04:06:53
+2026-10-12T04:12:39.686489227Z 
+2026-10-12T04:12:39.686492642Z 04:06:54
+2026-10-12T04:12:39.686495506Z 
+2026-10-12T04:12:39.686498911Z 04:06:55
+2026-10-12T04:12:39.686502206Z 
+2026-10-12T04:12:39.686504760Z 04:06:56
+2026-10-12T04:12:39.686507023Z 
+2026-10-12T04:12:39.686509307Z 04:06:57
+2026-10-12T04:12:39.686511550Z 
+2026-10-12T04:12:39.686513834Z 04:06:58
+2026-10-12T04:12:39.686516027Z 
+2026-10-12T04:12:39.686518310Z 04:06:59
+2026-10-12T04:12:39.686520534Z 
+2026-10-12T04:12:39.686522827Z 04:07:00
+2026-10-12T04:12:39.686525141Z 
+2026-10-12T04:12:39.686527374Z 04:07:01
+2026-10-12T04:12:39.686529638Z 
+2026-10-12T04:12:39.686532011Z 04:07:02
+2026-10-12T04:12:39.686534214Z 
+2026-10-12T04:12:39.686536458Z 04:07:03
+2026-10-12T04:12:39.686538731Z 
+2026-10-12T04:12:39.686540985Z 04:07:04
+2026-10-12T04:12:39.686543168Z 
+2026-10-12T04:12:39.686545441Z 04:07:05
+2026-10-12T04:12:39.686547665Z 
+2026-10-12T04:12:39.686549928Z 04:07:06
+2026-10-12T04:12:39.686552131Z 
+2026-10-12T04:12:39.686554395Z 04:07:07
+2026-10-12T04:12:39.686556598Z 
+2026-10-12T04:12:39.686558852Z 04:07:08
+2026-10-12T04:12:39.686561035Z 
+2026-10-12T04:12:39.686563348Z 04:07:09
+2026-10-12T04:12:39.686565542Z 
+2026-10-12T04:12:39.686570720Z 04:07:10
+2026-10-12T04:12:39.686574015Z 
+2026-10-12T04:12:39.686577490Z 04:07:11
+2026-10-12T04:12:39.686580625Z 
+2026-10-12T04:12:39.686583649Z 04:07:12
+2026-10-12T04:12:39.686585912Z 
+2026-10-12T04:12:39.686588166Z 04:07:13
+2026-10-12T04:12:39.686590389Z 
+2026-10-12T04:12:39.686592633Z 04:07:14
+2026-10-12T04:12:39.686594826Z 
+2026-10-12T04:12:39.686597109Z 04:07:15
+2026-10-12T04:12:39.686599343Z 
+2026-10-12T04:12:39.686601616Z 04:07:16
+2026-10-12T04:12:39.686607345Z 
+2026-10-12T04:12:39.686609628Z 04:07:17
+2026-10-12T04:12:39.686611842Z 
+2026-10-12T04:12:39.686614075Z 04:07:18
+2026-10-12T04:12:39.686616268Z 
+2026-10-12T04:12:39.686618512Z 04:07:19
+2026-10-12T04:12:39.686620715Z 
+2026-10-12T04:12:39.686622928Z 04:07:20
+2026-10-12T04:12:39.686625082Z 
+2026-10-12T04:12:39.686627335Z 04:07:21
+2026-10-12T04:12:39.686629488Z 
+2026-10-12T04:12:39.686631712Z 04:07:22
+2026-10-12T04:12:39.686633975Z 
+2026-10-12T04:12:39.686636299Z 04:07:23
+2026-10-12T04:12:39.686638572Z 
+2026-10-12T04:12:39.686640835Z 04:07:24
+2026-10-12T04:12:39.686642979Z 
+2026-10-12T04:12:39.686645222Z 04:07:25
+2026-10-12T04:12:39.686650430Z 
+2026-10-12T04:12:39.686653875Z 04:07:26
+2026-10-12T04:12:39.686657090Z 
+2026-10-12T04:12:39.686660445Z 04:07:27
+2026-10-12T04:12:39.686663419Z 
+2026-10-12T04:12:39.686665743Z 04:07:28
+2026-10-12T04:12:39.686668006Z 
+2026-10-12T04:12:39.686670290Z 04:07:29
+2026-10-12T04:12:39.686672513Z 
+2026-10-12T04:12:39.686676339Z 04:07:30
+2026-10-12T04:12:39.686678652Z 
+2026-10-12T04:12:39.686680976Z 04:07:31
+2026-10-12T04:12:39.686683229Z 
+2026-10-12T04:12:39.686685493Z 04:07:32
+2026-10-12T04:12:39.686687706Z 
+2026-10-12T04:12:39.686689980Z 04:07:33
+2026-10-12T04:12:39.686692253Z 
+2026-10-12T04:12:39.686694506Z 04:07:34
+2026-10-12T04:12:39.686696720Z 
+2026-10-12T04:12:39.686698993Z 04:07:35
+2026-10-12T04:12:39.686701217Z 
+2026-10-12T04:12:39.686703470Z 04:07:36
+2026-10-12T04:12:39.686705693Z 
+2026-10-12T04:12:39.686707947Z 04:07:37
+2026-10-12T04:12:39.686710140Z 
+2026-10-12T04:12:39.686712423Z 04:07:38
+2026-10-12T04:12:39.686714657Z 
+2026-10-12T04:12:39.686716900Z 04:07:39
+2026-10-12T04:12:39.686719124Z 
+2026-10-12T04:12:39.686721407Z 04:07:40
+2026-10-12T04:12:39.686723610Z 
+2026-10-12T04:12:39.686726415Z 04:07:41
+2026-10-12T04:12:39.686731022Z 
+2026-10-12T04:12:39.686734417Z 04:07:42
+2026-10-12T04:12:39.686737802Z 
+2026-10-12T04:12:39.686741077Z 04:07:43
+2026-10-12T04:12:39.686744001Z 
+2026-10-12T04:12:39.686746295Z 04:07:44
+2026-10-12T04:12:39.686748528Z 
+2026-10-12T04:12:39.686750781Z 04:07:45
+2026-10-12T04:12:39.686752975Z 
+2026-10-12T04:12:39.686755228Z 04:07:46
+2026-10-12T04:12:39.686757471Z 
+2026-10-12T04:12:39.686759725Z 04:07:47
+2026-10-12T04:12:39.686761938Z 
+2026-10-12T04:12:39.686764212Z 04:07:48
+2026-10-12T04:12:39.686766415Z 
+2026-10-12T04:12:39.686768698Z 04:07:49
+2026-10-12T04:12:39.686770912Z 
+2026-10-12T04:12:39.686773165Z 04:07:50
+2026-10-12T04:12:39.686775338Z 
+2026-10-12T04:12:39.686777612Z 04:07:51
+2026-10-12T04:12:39.686779785Z 
+2026-10-12T04:12:39.686782039Z 04:07:52
+2026-10-12T04:12:39.686784222Z 
+2026-10-12T04:12:39.686786475Z 04:07:53
+2026-10-12T04:12:39.686788648Z 
+2026-10-12T04:12:39.686790902Z 04:07:54
+2026-10-12T04:12:39.686793115Z 
+2026-10-12T04:12:39.686795469Z 04:07:55
+2026-10-12T04:12:39.686797642Z 
+2026-10-12T04:12:39.686799916Z 04:07:56
+2026-10-12T04:12:39.686802109Z 
+2026-10-12T04:12:39.686804352Z 04:07:57
+2026-10-12T04:12:39.686809210Z 
+2026-10-12T04:12:39.686812645Z 04:07:58
+2026-10-12T04:12:39.686815689Z 
+2026-10-12T04:12:39.686819014Z 04:07:59
+2026-10-12T04:12:39.686822169Z 
+2026-10-12T04:12:39.686824453Z 04:08:00
+2026-10-12T04:12:39.686826676Z 
+2026-10-12T04:12:39.686828919Z 04:08:01
+2026-10-12T04:12:39.686831103Z 
+2026-10-12T04:12:39.686836831Z 04:08:02
+2026-10-12T04:12:39.686839085Z 
+2026-10-12T04:12:39.686841318Z 04:08:03
+2026-10-12T04:12:39.686843491Z 
+2026-10-12T04:12:39.686845735Z 04:08:04
+2026-10-12T04:12:39.686847938Z 
+2026-10-12T04:12:39.686850171Z 04:08:05
+2026-10-12T04:12:39.686852365Z 
+2026-10-12T04:12:39.686871594Z 04:08:06
+2026-10-12T04:12:39.686874458Z 
+2026-10-12T04:12:39.686876701Z 04:08:07
+2026-10-12T04:12:39.686879015Z 
+2026-10-12T04:12:39.686881298Z 04:08:08
+2026-10-12T04:12:39.686883472Z 
+2026-10-12T04:12:39.686885705Z 04:08:09
+2026-10-12T04:12:39.686887998Z 
+2026-10-12T04:12:39.686890232Z 04:08:10
+2026-10-12T04:12:39.686892415Z 
+2026-10-12T04:12:39.686894638Z 04:08:11
+2026-10-12T04:12:39.686896782Z 
+2026-10-12T04:12:39.686899035Z 04:08:12
+2026-10-12T04:12:39.686901188Z 
+2026-10-12T04:12:39.686903422Z 04:08:13
+2026-10-12T04:12:39.686905595Z 
+2026-10-12T04:12:39.686907848Z 04:08:14
+2026-10-12T04:12:39.686910012Z 
+2026-10-12T04:12:39.686912255Z 04:08:15
+2026-10-12T04:12:39.686914518Z 
+2026-10-12T04:12:39.686916792Z 04:08:16
+2026-10-12T04:12:39.686918965Z 
+2026-10-12T04:12:39.686921229Z 04:08:17
+2026-10-12T04:12:39.686923392Z 
+2026-10-12T04:12:39.686925625Z 04:08:18
+2026-10-12T04:12:39.686927779Z 
+2026-10-12T04:12:39.686930042Z 04:08:19
+2026-10-12T04:12:39.686932235Z 
+2026-10-12T04:12:39.686934489Z 04:08:20
+2026-10-12T04:12:39.686939076Z 
+2026-10-12T04:12:39.686942751Z 04:08:21
+2026-10-12T04:12:39.686945906Z 
+2026-10-12T04:12:39.686949742Z 04:08:22
+2026-10-12T04:12:39.686953007Z 
+2026-10-12T04:12:39.686955801Z 04:08:23
+2026-10-12T04:12:39.686958174Z 
+2026-10-12T04:12:39.686960458Z 04:08:24
+2026-10-12T04:12:39.686962671Z 
+2026-10-12T04:12:39.686964915Z 04:08:25
+2026-10-12T04:12:39.686967098Z 
+2026-10-12T04:12:39.686969401Z 04:08:26
+2026-10-12T04:12:39.686971615Z 
+2026-10-12T04:12:39.686973858Z 04:08:27
+2026-10-12T04:12:39.686976081Z 
+2026-10-12T04:12:39.686978335Z 04:08:28
+2026-10-12T04:12:39.686980508Z 
+2026-10-12T04:12:39.686982741Z 04:08:29
+2026-10-12T04:12:39.686984955Z 
+2026-10-12T04:12:39.686987238Z 04:08:30
+2026-10-12T04:12:39.686989462Z 
+2026-10-12T04:12:39.686991725Z 04:08:31
+2026-10-12T04:12:39.686993908Z 
+2026-10-12T04:12:39.686996172Z 04:08:32
+2026-10-12T04:12:39.686998345Z 
+2026-10-12T04:12:39.687000568Z 04:08:33
+2026-10-12T04:12:39.687002772Z 
+2026-10-12T04:12:39.687005065Z 04:08:34
+2026-10-12T04:12:39.687007268Z 
+2026-10-12T04:12:39.687009552Z 04:08:35
+2026-10-12T04:12:39.687011765Z 
+2026-10-12T04:12:39.687014019Z 04:08:36
+2026-10-12T04:12:39.687016202Z 
+2026-10-12T04:12:39.687021350Z 04:08:37
+2026-10-12T04:12:39.687024685Z 
+2026-10-12T04:12:39.687028160Z 04:08:38
+2026-10-12T04:12:39.687031465Z 
+2026-10-12T04:12:39.687034550Z 04:08:39
+2026-10-12T04:12:39.687037073Z 
+2026-10-12T04:12:39.687039327Z 04:08:40
+2026-10-12T04:12:39.687041550Z 
+2026-10-12T04:12:39.687043834Z 04:08:41
+2026-10-12T04:12:39.687046037Z 
+2026-10-12T04:12:39.687048280Z 04:08:42
+2026-10-12T04:12:39.687050484Z 
+2026-10-12T04:12:39.687052757Z 04:08:43
+2026-10-12T04:12:39.687054930Z 
+2026-10-12T04:12:39.687057184Z 04:08:44
+2026-10-12T04:12:39.687059377Z 
+2026-10-12T04:12:39.687061631Z 04:08:45
+2026-10-12T04:12:39.687063814Z 
+2026-10-12T04:12:39.687066658Z 04:08:46
+2026-10-12T04:12:39.687071445Z 
+2026-10-12T04:12:39.687074640Z 04:08:47
+2026-10-12T04:12:39.687077895Z 
+2026-10-12T04:12:39.687085336Z 04:08:48
+2026-10-12T04:12:39.687087610Z 
+2026-10-12T04:12:39.687089943Z 04:08:49
+2026-10-12T04:12:39.687092177Z 
+2026-10-12T04:12:39.687094460Z 04:08:50
+2026-10-12T04:12:39.687097244Z 
+2026-10-12T04:12:39.687102592Z 04:08:51
+2026-10-12T04:12:39.687105797Z 
+2026-10-12T04:12:39.687109302Z 04:08:52
+2026-10-12T04:12:39.687112597Z 
+2026-10-12T04:12:39.687115462Z 04:08:53
+2026-10-12T04:12:39.687117695Z 
+2026-10-12T04:12:39.687119979Z 04:08:54
+2026-10-12T04:12:39.687122222Z 
+2026-10-12T04:12:39.687124525Z 04:08:55
+2026-10-12T04:12:39.687126719Z 
+2026-10-12T04:12:39.687128962Z 04:08:56
+2026-10-12T04:12:39.687131196Z 
+2026-10-12T04:12:39.687133469Z 04:08:57
+2026-10-12T04:12:39.687135662Z 
+2026-10-12T04:12:39.687137916Z 04:08:58
+2026-10-12T04:12:39.687140109Z 
+2026-10-12T04:12:39.687142433Z 04:08:59
+2026-10-12T04:12:39.687144646Z 
+2026-10-12T04:12:39.687146959Z 04:09:00
+2026-10-12T04:12:39.687149183Z 
+2026-10-12T04:12:39.687151466Z 04:09:01
+2026-10-12T04:12:39.687153689Z 
+2026-10-12T04:12:39.687155943Z 04:09:02
+2026-10-12T04:12:39.687158166Z 
+2026-10-12T04:12:39.687160440Z 04:09:03
+2026-10-12T04:12:39.687162673Z 
+2026-10-12T04:12:39.687164936Z 04:09:04
+2026-10-12T04:12:39.687167130Z 
+2026-10-12T04:12:39.687169413Z 04:09:05
+2026-10-12T04:12:39.687171617Z 
+2026-10-12T04:12:39.687173890Z 04:09:06
+2026-10-12T04:12:39.687176133Z 
+2026-10-12T04:12:39.687181141Z 04:09:07
+2026-10-12T04:12:39.687184466Z 
+2026-10-12T04:12:39.687187941Z 04:09:08
+2026-10-12T04:12:39.687191316Z 
+2026-10-12T04:12:39.687194541Z 04:09:09
+2026-10-12T04:12:39.687197265Z 
+2026-10-12T04:12:39.687199539Z 04:09:10
+2026-10-12T04:12:39.687201742Z 
+2026-10-12T04:12:39.687204015Z 04:09:11
+2026-10-12T04:12:39.687206229Z 
+2026-10-12T04:12:39.687208512Z 04:09:12
+2026-10-12T04:12:39.687210696Z 
+2026-10-12T04:12:39.687212979Z 04:09:13
+2026-10-12T04:12:39.687215182Z 
+2026-10-12T04:12:39.687217426Z 04:09:14
+2026-10-12T04:12:39.687219609Z 
+2026-10-12T04:12:39.687221852Z 04:09:15
+2026-10-12T04:12:39.687224016Z 
+2026-10-12T04:12:39.687226259Z 04:09:16
+2026-10-12T04:12:39.687228432Z 
+2026-10-12T04:12:39.687230676Z 04:09:17
+2026-10-12T04:12:39.687232849Z 
+2026-10-12T04:12:39.687235142Z 04:09:18
+2026-10-12T04:12:39.687237326Z 
+2026-10-12T04:12:39.687239549Z 04:09:19
+2026-10-12T04:12:39.687241762Z 
+2026-10-12T04:12:39.687244006Z 04:09:20
+2026-10-12T04:12:39.687246179Z 
+2026-10-12T04:12:39.687248422Z 04:09:21
+2026-10-12T04:12:39.687250626Z 
+2026-10-12T04:12:39.687252869Z 04:09:22
+2026-10-12T04:12:39.687255052Z 
+2026-10-12T04:12:39.687257797Z 04:09:23
+2026-10-12T04:12:39.687262714Z 
+2026-10-12T04:12:39.687266219Z 04:09:24
+2026-10-12T04:12:39.687269524Z 
+2026-10-12T04:12:39.687272889Z 04:09:25
+2026-10-12T04:12:39.687275463Z 
+2026-10-12T04:12:39.687277757Z 04:09:26
+2026-10-12T04:12:39.687279990Z 
+2026-10-12T04:12:39.687282264Z 04:09:27
+2026-10-12T04:12:39.687284527Z 
+2026-10-12T04:12:39.687286780Z 04:09:28
+2026-10-12T04:12:39.687288994Z 
+2026-10-12T04:12:39.687291257Z 04:09:29
+2026-10-12T04:12:39.687293450Z 
+2026-10-12T04:12:39.687295714Z 04:09:30
+2026-10-12T04:12:39.687297927Z 
+2026-10-12T04:12:39.687300271Z 04:09:31
+2026-10-12T04:12:39.687302564Z 
+2026-10-12T04:12:39.687304838Z 04:09:32
+2026-10-12T04:12:39.687307051Z 
+2026-10-12T04:12:39.687309324Z 04:09:33
+2026-10-12T04:12:39.687315043Z 
+2026-10-12T04:12:39.687317407Z 04:09:34
+2026-10-12T04:12:39.687319620Z 
+2026-10-12T04:12:39.687321903Z 04:09:35
+2026-10-12T04:12:39.687324087Z 
+2026-10-12T04:12:39.687326360Z 04:09:36
+2026-10-12T04:12:39.687328563Z 
+2026-10-12T04:12:39.687330787Z 04:09:37
+2026-10-12T04:12:39.687332970Z 
+2026-10-12T04:12:39.687335244Z 04:09:38
+2026-10-12T04:12:39.687337918Z 
+2026-10-12T04:12:39.687342945Z 04:09:39
+2026-10-12T04:12:39.687346120Z 
+2026-10-12T04:12:39.687349555Z 04:09:40
+2026-10-12T04:12:39.687353040Z 
+2026-10-12T04:12:39.687355704Z 04:09:41
+2026-10-12T04:12:39.687357938Z 
+2026-10-12T04:12:39.687360191Z 04:09:42
+2026-10-12T04:12:39.687362405Z 
+2026-10-12T04:12:39.687364678Z 04:09:43
+2026-10-12T04:12:39.687366881Z 
+2026-10-12T04:12:39.687369135Z 04:09:44
+2026-10-12T04:12:39.687371338Z 
+2026-10-12T04:12:39.687373611Z 04:09:45
+2026-10-12T04:12:39.687375815Z 
+2026-10-12T04:12:39.687378048Z 04:09:46
+2026-10-12T04:12:39.687380231Z 
+2026-10-12T04:12:39.687382475Z 04:09:47
+2026-10-12T04:12:39.687384628Z 
+2026-10-12T04:12:39.687386861Z 04:09:48
+2026-10-12T04:12:39.687389035Z 
+2026-10-12T04:12:39.687391268Z 04:09:49
+2026-10-12T04:12:39.687393421Z 
+2026-10-12T04:12:39.687395635Z 04:09:50
+2026-10-12T04:12:39.687397838Z 
+2026-10-12T04:12:39.687400071Z 04:09:51
+2026-10-12T04:12:39.687402215Z 
+2026-10-12T04:12:39.687404438Z 04:09:52
+2026-10-12T04:12:39.687406641Z 
+2026-10-12T04:12:39.687408865Z 04:09:53
+2026-10-12T04:12:39.687411048Z 
+2026-10-12T04:12:39.687413281Z 04:09:54
+2026-10-12T04:12:39.687415455Z 
+2026-10-12T04:12:39.687420232Z 04:09:55
+2026-10-12T04:12:39.687423617Z 
+2026-10-12T04:12:39.687426872Z 04:09:56
+2026-10-12T04:12:39.687430227Z 
+2026-10-12T04:12:39.687433542Z 04:09:57
+2026-10-12T04:12:39.687435936Z 
+2026-10-12T04:12:39.687438209Z 04:09:58
+2026-10-12T04:12:39.687440442Z 
+2026-10-12T04:12:39.687442696Z 04:09:59
+2026-10-12T04:12:39.687444919Z 
+2026-10-12T04:12:39.687447182Z 04:10:00
+2026-10-12T04:12:39.687449406Z 
+2026-10-12T04:12:39.687451709Z 04:10:01
+2026-10-12T04:12:39.687453923Z 
+2026-10-12T04:12:39.687456226Z 04:10:02
+2026-10-12T04:12:39.687458450Z 
+2026-10-12T04:12:39.687460773Z 04:10:03
+2026-10-12T04:12:39.687462976Z 
+2026-10-12T04:12:39.687465250Z 04:10:04
+2026-10-12T04:12:39.687467463Z 
+2026-10-12T04:12:39.687469706Z 04:10:05
+2026-10-12T04:12:39.687471930Z 
+2026-10-12T04:12:39.687474203Z 04:10:06
+2026-10-12T04:12:39.687476377Z 
+2026-10-12T04:12:39.687478640Z 04:10:07
+2026-10-12T04:12:39.687480843Z 
+2026-10-12T04:12:39.687483067Z 04:10:08
+2026-10-12T04:12:39.687485260Z 
+2026-10-12T04:12:39.687487523Z 04:10:09
+2026-10-12T04:12:39.687489687Z 
+2026-10-12T04:12:39.687491930Z 04:10:10
+2026-10-12T04:12:39.687494153Z 
+2026-10-12T04:12:39.687496417Z 04:10:11
+2026-10-12T04:12:39.687501384Z 
+2026-10-12T04:12:39.687504819Z 04:10:12
+2026-10-12T04:12:39.687508064Z 
+2026-10-12T04:12:39.687511299Z 04:10:13
+2026-10-12T04:12:39.687514073Z 
+2026-10-12T04:12:39.687516367Z 04:10:14
+2026-10-12T04:12:39.687518600Z 
+2026-10-12T04:12:39.687520884Z 04:10:15
+2026-10-12T04:12:39.687523087Z 
+2026-10-12T04:12:39.687525350Z 04:10:16
+2026-10-12T04:12:39.687527564Z 
+2026-10-12T04:12:39.687529897Z 04:10:17
+2026-10-12T04:12:39.687532111Z 
+2026-10-12T04:12:39.687534384Z 04:10:18
+2026-10-12T04:12:39.687536577Z 
+2026-10-12T04:12:39.687556227Z 04:10:19
+2026-10-12T04:12:39.687558571Z 
+2026-10-12T04:12:39.687560824Z 04:10:20
+2026-10-12T04:12:39.687563027Z 
+2026-10-12T04:12:39.687565291Z 04:10:21
+2026-10-12T04:12:39.687567464Z 
+2026-10-12T04:12:39.687569737Z 04:10:22
+2026-10-12T04:12:39.687571951Z 
+2026-10-12T04:12:39.687574194Z 04:10:23
+2026-10-12T04:12:39.687576848Z 
+2026-10-12T04:12:39.687582026Z 04:10:24
+2026-10-12T04:12:39.687585401Z 
+2026-10-12T04:12:39.687588876Z 04:10:25
+2026-10-12T04:12:39.687592302Z 
+2026-10-12T04:12:39.687594976Z 04:10:26
+2026-10-12T04:12:39.687597219Z 
+2026-10-12T04:12:39.687599522Z 04:10:27
+2026-10-12T04:12:39.687601736Z 
+2026-10-12T04:12:39.687605051Z 04:10:28
+2026-10-12T04:12:39.687607294Z 
+2026-10-12T04:12:39.687609618Z 04:10:29
+2026-10-12T04:12:39.687611921Z 
+2026-10-12T04:12:39.687614265Z 04:10:30
+2026-10-12T04:12:39.687616468Z 
+2026-10-12T04:12:39.687618731Z 04:10:31
+2026-10-12T04:12:39.687620945Z 
+2026-10-12T04:12:39.687623258Z 04:10:32
+2026-10-12T04:12:39.687625452Z 
+2026-10-12T04:12:39.687627785Z 04:10:33
+2026-10-12T04:12:39.687630049Z 
+2026-10-12T04:12:39.687632342Z 04:10:34
+2026-10-12T04:12:39.687634505Z 
+2026-10-12T04:12:39.687636769Z 04:10:35
+2026-10-12T04:12:39.687639002Z 
+2026-10-12T04:12:39.687641265Z 04:10:36
+2026-10-12T04:12:39.687643449Z 
+2026-10-12T04:12:39.687645712Z 04:10:37
+2026-10-12T04:12:39.687647915Z 
+2026-10-12T04:12:39.687650149Z 04:10:38
+2026-10-12T04:12:39.687652372Z 
+2026-10-12T04:12:39.687654666Z 04:10:39
+2026-10-12T04:12:39.687657520Z 
+2026-10-12T04:12:39.687662578Z 04:10:40
+2026-10-12T04:12:39.687665522Z 
+2026-10-12T04:12:39.687668947Z 04:10:41
+2026-10-12T04:12:39.687672322Z 
+2026-10-12T04:12:39.687675117Z 04:10:42
+2026-10-12T04:12:39.687677340Z 
+2026-10-12T04:12:39.687679623Z 04:10:43
+2026-10-12T04:12:39.687681927Z 
+2026-10-12T04:12:39.687684280Z 04:10:44
+2026-10-12T04:12:39.687686574Z 
+2026-10-12T04:12:39.687688827Z 04:10:45
+2026-10-12T04:12:39.687691051Z 
+2026-10-12T04:12:39.687693304Z 04:10:46
+2026-10-12T04:12:39.687695467Z 
+2026-10-12T04:12:39.687697711Z 04:10:47
+2026-10-12T04:12:39.687699884Z 
+2026-10-12T04:12:39.687702117Z 04:10:48
+2026-10-12T04:12:39.687704301Z 
+2026-10-12T04:12:39.687706634Z 04:10:49
+2026-10-12T04:12:39.687708898Z 
+2026-10-12T04:12:39.687711171Z 04:10:50
+2026-10-12T04:12:39.687713364Z 
+2026-10-12T04:12:39.687715598Z 04:10:51
+2026-10-12T04:12:39.687717841Z 
+2026-10-12T04:12:39.687720104Z 04:10:52
+2026-10-12T04:12:39.687722298Z 
+2026-10-12T04:12:39.687724571Z 04:10:53
+2026-10-12T04:12:39.687726754Z 
+2026-10-12T04:12:39.687729028Z 04:10:54
+2026-10-12T04:12:39.687731241Z 
+2026-10-12T04:12:39.687733515Z 04:10:55
+2026-10-12T04:12:39.687735708Z 
+2026-10-12T04:12:39.687741196Z 04:10:56
+2026-10-12T04:12:39.687744561Z 
+2026-10-12T04:12:39.687747876Z 04:10:57
+2026-10-12T04:12:39.687751051Z 
+2026-10-12T04:12:39.687754066Z 04:10:58
+2026-10-12T04:12:39.687756339Z 
+2026-10-12T04:12:39.687758613Z 04:10:59
+2026-10-12T04:12:39.687760846Z 
+2026-10-12T04:12:39.687763119Z 04:11:00
+2026-10-12T04:12:39.687765303Z 
+2026-10-12T04:12:39.687767566Z 04:11:01
+2026-10-12T04:12:39.687769789Z 
+2026-10-12T04:12:39.687772063Z 04:11:02
+2026-10-12T04:12:39.687774256Z 
+2026-10-12T04:12:39.687776640Z 04:11:03
+2026-10-12T04:12:39.687778863Z 
+2026-10-12T04:12:39.687781207Z 04:11:04
+2026-10-12T04:12:39.687787306Z 
+2026-10-12T04:12:39.687789659Z 04:11:05
+2026-10-12T04:12:39.687791863Z 
+2026-10-12T04:12:39.687794126Z 04:11:06
+2026-10-12T04:12:39.687796340Z 
+2026-10-12T04:12:39.687798613Z 04:11:07
+2026-10-12T04:12:39.687800816Z 
+2026-10-12T04:12:39.687803070Z 04:11:08
+2026-10-12T04:12:39.687805273Z 
+2026-10-12T04:12:39.687807546Z 04:11:09
+2026-10-12T04:12:39.687809760Z 
+2026-10-12T04:12:39.687812013Z 04:11:10
+2026-10-12T04:12:39.687814237Z 
+2026-10-12T04:12:39.687816961Z 04:11:11
+2026-10-12T04:12:39.687821778Z 
+2026-10-12T04:12:39.687825363Z 04:11:12
+2026-10-12T04:12:39.687828388Z 
+2026-10-12T04:12:39.687831753Z 04:11:13
+2026-10-12T04:12:39.687834337Z 
+2026-10-12T04:12:39.687836660Z 04:11:14
+2026-10-12T04:12:39.687838904Z 
+2026-10-12T04:12:39.687841177Z 04:11:15
+2026-10-12T04:12:39.687843371Z 
+2026-10-12T04:12:39.687845634Z 04:11:16
+2026-10-12T04:12:39.687847827Z 
+2026-10-12T04:12:39.687850111Z 04:11:17
+2026-10-12T04:12:39.687852364Z 
+2026-10-12T04:12:39.687866936Z 04:11:18
+2026-10-12T04:12:39.687870441Z 
+2026-10-12T04:12:39.687873826Z 04:11:19
+2026-10-12T04:12:39.687876541Z 
+2026-10-12T04:12:39.687878804Z 04:11:20
+2026-10-12T04:12:39.687881057Z 
+2026-10-12T04:12:39.687883331Z 04:11:21
+2026-10-12T04:12:39.687885524Z 
+2026-10-12T04:12:39.687887788Z 04:11:22
+2026-10-12T04:12:39.687889991Z 
+2026-10-12T04:12:39.687892264Z 04:11:23
+2026-10-12T04:12:39.687894458Z 
+2026-10-12T04:12:39.687896701Z 04:11:24
+2026-10-12T04:12:39.687898894Z 
+2026-10-12T04:12:39.687901368Z 04:11:25
+2026-10-12T04:12:39.687903672Z 
+2026-10-12T04:12:39.687906055Z 04:11:26
+2026-10-12T04:12:39.687908248Z 
+2026-10-12T04:12:39.687910532Z 04:11:27
+2026-10-12T04:12:39.687912725Z 
+2026-10-12T04:12:39.687914959Z 04:11:28
+2026-10-12T04:12:39.687917192Z 
+2026-10-12T04:12:39.687919475Z 04:11:29
+2026-10-12T04:12:39.687921669Z 
+2026-10-12T04:12:39.687924513Z 04:11:30
+2026-10-12T04:12:39.687926786Z 
+2026-10-12T04:12:39.687929140Z 04:11:31
+2026-10-12T04:12:39.687931403Z 
+2026-10-12T04:12:39.687933807Z 04:11:32
+2026-10-12T04:12:39.687936010Z 
+2026-10-12T04:12:39.687941098Z 04:11:33
+2026-10-12T04:12:39.687944573Z 
+2026-10-12T04:12:39.687947828Z 04:11:34
+2026-10-12T04:12:39.687951173Z 
+2026-10-12T04:12:39.687954458Z 04:11:35
+2026-10-12T04:12:39.687956912Z 
+2026-10-12T04:12:39.687959195Z 04:11:36
+2026-10-12T04:12:39.687961439Z 
+2026-10-12T04:12:39.687963722Z 04:11:37
+2026-10-12T04:12:39.687965925Z 
+2026-10-12T04:12:39.687968209Z 04:11:38
+2026-10-12T04:12:39.687970422Z 
+2026-10-12T04:12:39.687972676Z 04:11:39
+2026-10-12T04:12:39.687974879Z 
+2026-10-12T04:12:39.687977152Z 04:11:40
+2026-10-12T04:12:39.687979386Z 
+2026-10-12T04:12:39.687981619Z 04:11:41
+2026-10-12T04:12:39.687983802Z 
+2026-10-12T04:12:39.687986076Z 04:11:42
+2026-10-12T04:12:39.687988269Z 
+2026-10-12T04:12:39.687990493Z 04:11:43
+2026-10-12T04:12:39.687992696Z 
+2026-10-12T04:12:39.687994949Z 04:11:44
+2026-10-12T04:12:39.687997133Z 
+2026-10-12T04:12:39.687999386Z 04:11:45
+2026-10-12T04:12:39.688001559Z 
+2026-10-12T04:12:39.688003803Z 04:11:46
+2026-10-12T04:12:39.688005996Z 
+2026-10-12T04:12:39.688008249Z 04:11:47
+2026-10-12T04:12:39.688010453Z 
+2026-10-12T04:12:39.688012696Z 04:11:48
+2026-10-12T04:12:39.688014889Z 
+2026-10-12T04:12:39.688017724Z 04:11:49
+2026-10-12T04:12:39.688022691Z 
+2026-10-12T04:12:39.688030693Z 04:11:50
+2026-10-12T04:12:39.688033948Z 
+2026-10-12T04:12:39.688036212Z 04:11:51
+2026-10-12T04:12:39.688038465Z 
+2026-10-12T04:12:39.688040738Z 04:11:52
+2026-10-12T04:12:39.688042922Z 
+2026-10-12T04:12:39.688045185Z 04:11:53
+2026-10-12T04:12:39.688047449Z 
+2026-10-12T04:12:39.688049722Z 04:11:54
+2026-10-12T04:12:39.688051925Z 
+2026-10-12T04:12:39.688054199Z 04:11:55
+2026-10-12T04:12:39.688056402Z 
+2026-10-12T04:12:39.688058686Z 04:11:56
+2026-10-12T04:12:39.688060849Z 
+2026-10-12T04:12:39.688063122Z 04:11:57
+2026-10-12T04:12:39.688065316Z 
+2026-10-12T04:12:39.688067559Z 04:11:58
+2026-10-12T04:12:39.688069752Z 
+2026-10-12T04:12:39.688072006Z 04:11:59
+2026-10-12T04:12:39.688074179Z 
+2026-10-12T04:12:39.688076392Z 04:12:00
+2026-10-12T04:12:39.688078586Z 
+2026-10-12T04:12:39.688080839Z 04:12:01
+2026-10-12T04:12:39.688082982Z 
+2026-10-12T04:12:39.688085206Z 04:12:02
+2026-10-12T04:12:39.688087399Z 
+2026-10-12T04:12:39.688089642Z 04:12:03
+2026-10-12T04:12:39.688091826Z 
+2026-10-12T04:12:39.688094069Z 04:12:04
+2026-10-12T04:12:39.688096242Z 
+2026-10-12T04:12:39.688101100Z 04:12:05
+2026-10-12T04:12:39.688104505Z 
+2026-10-12T04:12:39.688108200Z 04:12:06
+2026-10-12T04:12:39.688111635Z 
+2026-10-12T04:12:39.688114430Z 04:12:07
+2026-10-12T04:12:39.688116653Z 
+2026-10-12T04:12:39.688118896Z 04:12:08
+2026-10-12T04:12:39.688121110Z 
+2026-10-12T04:12:39.688123433Z 04:12:09
+2026-10-12T04:12:39.688125667Z 
+2026-10-12T04:12:39.688127960Z 04:12:10
+2026-10-12T04:12:39.688130183Z 
+2026-10-12T04:12:39.688132437Z 04:12:11
+2026-10-12T04:12:39.688134620Z 
+2026-10-12T04:12:39.688136864Z 04:12:12
+2026-10-12T04:12:39.688139057Z 
+2026-10-12T04:12:39.688141290Z 04:12:13
+2026-10-12T04:12:39.688143463Z 
+2026-10-12T04:12:39.688145777Z 04:12:14
+2026-10-12T04:12:39.688148050Z 
+2026-10-12T04:12:39.688150354Z 04:12:15
+2026-10-12T04:12:39.688152587Z 
+2026-10-12T04:12:39.688154821Z 04:12:16
+2026-10-12T04:12:39.688157004Z 
+2026-10-12T04:12:39.688159277Z 04:12:17
+2026-10-12T04:12:39.688161481Z 
+2026-10-12T04:12:39.688163724Z 04:12:18
+2026-10-12T04:12:39.688166018Z 
+2026-10-12T04:12:39.688168291Z 04:12:19
+2026-10-12T04:12:39.688170484Z 
+2026-10-12T04:12:39.688172748Z 04:12:20
+2026-10-12T04:12:39.688174961Z 
+2026-10-12T04:12:39.688180009Z 04:12:21
+2026-10-12T04:12:39.688183314Z 
+2026-10-12T04:12:39.688186829Z 04:12:22
+2026-10-12T04:12:39.688189803Z 
+2026-10-12T04:12:39.688192818Z 04:12:23
+2026-10-12T04:12:39.688196123Z 
+2026-10-12T04:12:39.688199218Z 04:12:24
+2026-10-12T04:12:39.688202633Z 
+2026-10-12T04:12:39.688205808Z 04:12:25
+2026-10-12T04:12:39.688208952Z 
+2026-10-12T04:12:39.688212137Z 04:12:26
+2026-10-12T04:12:39.688216914Z 
+2026-10-12T04:12:39.688220249Z 04:12:27
+2026-10-12T04:12:39.688224786Z 
+2026-10-12T04:12:39.688228061Z 04:12:28
+2026-10-12T04:12:39.688231136Z 
+2026-10-12T04:12:39.688235723Z 04:12:29
+2026-10-12T04:12:39.688239208Z 
+2026-10-12T04:12:39.688242433Z 04:12:30
+2026-10-12T04:12:39.688247070Z 
+2026-10-12T04:12:39.688250625Z 04:12:31
+2026-10-12T04:12:39.688253399Z 
+2026-10-12T04:12:39.688255793Z 04:12:32
+2026-10-12T04:12:39.688258036Z 
+2026-10-12T04:12:39.688260310Z 04:12:33
+2026-10-12T04:12:39.688262533Z 
+2026-10-12T04:12:39.688264807Z 04:12:34
+2026-10-12T04:12:39.688267010Z 
+2026-10-12T04:12:39.688269333Z 04:12:35
+2026-10-12T04:12:39.688274772Z 
+2026-10-12T04:12:39.688282373Z 04:12:36
+2026-10-12T04:12:39.688285688Z 
+2026-10-12T04:12:39.688288713Z 04:12:37
+2026-10-12T04:12:39.688292068Z 
+2026-10-12T04:12:39.688295413Z 04:12:38
+2026-10-12T04:12:39.688298528Z 
+2026-10-12T04:12:39.688310345Z 04:12:39
+2026-10-12T04:12:39.688314862Z {'ts': '2026-10-12 04:12:39', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 11}, {'interval-start': 4, 'interval-end': 7, 'count': 5}, {'interval-start': 8, 'interval-end': 15, 'count': 9}, {'interval-start': 16, 'interval-end': 31, 'count': 18}, {'interval-start': 32, 'interval-end': 63, 'count': 13}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:47.689231714Z {'ts': '2026-10-12 04:12:39', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2723}, {'interval-start': 2, 'interval-end': 3, 'count': 671}, {'interval-start': 4, 'interval-end': 7, 'count': 458}, {'interval-start': 8, 'interval-end': 15, 'count': 1}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 0}, {'interval-start': 64, 'interval-end': 127, 'count': 3}, {'interval-start': 128, 'interval-end': 255, 'count': 55}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:47.689266857Z 
+2026-10-12T04:12:47.689271795Z 04:12:40
+2026-10-12T04:12:47.689276342Z {'ts': '2026-10-12 04:12:40', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 51}, {'interval-start': 4, 'interval-end': 7, 'count': 27}, {'interval-start': 8, 'interval-end': 15, 'count': 43}, {'interval-start': 16, 'interval-end': 31, 'count': 28}, {'interval-start': 32, 'interval-end': 63, 'count': 30}, {'interval-start': 64, 'interval-end': 127, 'count': 68}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:47.689280478Z {'ts': '2026-10-12 04:12:40', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 7291}, {'interval-start': 2, 'interval-end': 3, 'count': 38}, {'interval-start': 4, 'interval-end': 7, 'count': 34}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 139}, {'interval-start': 64, 'interval-end': 127, 'count': 116}, {'interval-start': 128, 'interval-end': 255, 'count': 131}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:47.689287579Z 
+2026-10-12T04:12:47.689291885Z 04:12:41
+2026-10-12T04:12:47.689296833Z {'ts': '2026-10-12 04:12:41', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 50}, {'interval-start': 4, 'interval-end': 7, 'count': 40}, {'interval-start': 8, 'interval-end': 15, 'count': 43}, {'interval-start': 16, 'interval-end': 31, 'count': 31}, {'interval-start': 32, 'interval-end': 63, 'count': 99}, {'interval-start': 64, 'interval-end': 127, 'count': 110}, {'interval-start': 128, 'interval-end': 255, 'count': 27}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:47.689301910Z {'ts': '2026-10-12 04:12:41', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 13676}, {'interval-start': 2, 'interval-end': 3, 'count': 30}, {'interval-start': 4, 'interval-end': 7, 'count': 58}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 136}, {'interval-start': 64, 'interval-end': 127, 'count': 110}, {'interval-start': 128, 'interval-end': 255, 'count': 105}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:47.689307228Z {'ts': '2026-10-12 04:12:41', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:12:47.689312035Z 
+2026-10-12T04:12:47.689316592Z 04:12:42
+2026-10-12T04:12:47.689320098Z {'ts': '2026-10-12 04:12:42', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 55}, {'interval-start': 4, 'interval-end': 7, 'count': 37}, {'interval-start': 8, 'interval-end': 15, 'count': 2}, {'interval-start': 16, 'interval-end': 31, 'count': 41}, {'interval-start': 32, 'interval-end': 63, 'count': 49}, {'interval-start': 64, 'interval-end': 127, 'count': 87}, {'interval-start': 128, 'interval-end': 255, 'count': 35}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:47.689338495Z {'ts': '2026-10-12 04:12:42', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 7957}, {'interval-start': 2, 'interval-end': 3, 'count': 15}, {'interval-start': 4, 'interval-end': 7, 'count': 24}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 41}, {'interval-start': 64, 'interval-end': 127, 'count': 34}, {'interval-start': 128, 'interval-end': 255, 'count': 306}, {'interval-start': 256, 'interval-end': 511, 'count': 3}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:47.689341330Z {'ts': '2026-10-12 04:12:42', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 4}], 'disk': 'nvme0n1'}
+2026-10-12T04:12:47.689344054Z 
+2026-10-12T04:12:47.689346578Z 04:12:43
+2026-10-12T04:12:47.689357744Z {'ts': '2026-10-12 04:12:43', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 15}, {'interval-start': 4, 'interval-end': 7, 'count': 41}, {'interval-start': 8, 'interval-end': 15, 'count': 77}, {'interval-start': 16, 'interval-end': 31, 'count': 24}, {'interval-start': 32, 'interval-end': 63, 'count': 96}, {'interval-start': 64, 'interval-end': 127, 'count': 141}, {'interval-start': 128, 'interval-end': 255, 'count': 36}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:47.689361200Z {'ts': '2026-10-12 04:12:43', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 11465}, {'interval-start': 2, 'interval-end': 3, 'count': 9}, {'interval-start': 4, 'interval-end': 7, 'count': 41}, {'interval-start': 8, 'interval-end': 15, 'count': 50}, {'interval-start': 16, 'interval-end': 31, 'count': 14}, {'interval-start': 32, 'interval-end': 63, 'count': 132}, {'interval-start': 64, 'interval-end': 127, 'count': 182}, {'interval-start': 128, 'interval-end': 255, 'count': 5}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:47.689364475Z 
+2026-10-12T04:12:47.689367890Z 04:12:44
+2026-10-12T04:12:47.689370664Z {'ts': '2026-10-12 04:12:44', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 18}, {'interval-start': 4, 'interval-end': 7, 'count': 53}, {'interval-start': 8, 'interval-end': 15, 'count': 54}, {'interval-start': 16, 'interval-end': 31, 'count': 38}, {'interval-start': 32, 'interval-end': 63, 'count': 40}, {'interval-start': 64, 'interval-end': 127, 'count': 138}, {'interval-start': 128, 'interval-end': 255, 'count': 9}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:47.689373098Z {'ts': '2026-10-12 04:12:44', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 9264}, {'interval-start': 2, 'interval-end': 3, 'count': 28}, {'interval-start': 4, 'interval-end': 7, 'count': 80}, {'interval-start': 8, 'interval-end': 15, 'count': 16}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 153}, {'interval-start': 64, 'interval-end': 127, 'count': 63}, {'interval-start': 128, 'interval-end': 255, 'count': 5}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:47.689375461Z 
+2026-10-12T04:12:47.689377875Z 04:12:45
+2026-10-12T04:12:47.689380289Z {'ts': '2026-10-12 04:12:45', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 28}, {'interval-start': 4, 'interval-end': 7, 'count': 52}, {'interval-start': 8, 'interval-end': 15, 'count': 34}, {'interval-start': 16, 'interval-end': 31, 'count': 52}, {'interval-start': 32, 'interval-end': 63, 'count': 58}, {'interval-start': 64, 'interval-end': 127, 'count': 59}, {'interval-start': 128, 'interval-end': 255, 'count': 3}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:47.689386668Z {'ts': '2026-10-12 04:12:45', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 10721}, {'interval-start': 2, 'interval-end': 3, 'count': 36}, {'interval-start': 4, 'interval-end': 7, 'count': 84}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 201}, {'interval-start': 64, 'interval-end': 127, 'count': 97}, {'interval-start': 128, 'interval-end': 255, 'count': 73}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:47.689389102Z 
+2026-10-12T04:12:47.689394079Z 04:12:46
+2026-10-12T04:12:47.689397244Z {'ts': '2026-10-12 04:12:46', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 26}, {'interval-start': 4, 'interval-end': 7, 'count': 36}, {'interval-start': 8, 'interval-end': 15, 'count': 21}, {'interval-start': 16, 'interval-end': 31, 'count': 49}, {'interval-start': 32, 'interval-end': 63, 'count': 29}, {'interval-start': 64, 'interval-end': 127, 'count': 54}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:47.689413829Z {'ts': '2026-10-12 04:12:46', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 8550}, {'interval-start': 2, 'interval-end': 3, 'count': 70}, {'interval-start': 4, 'interval-end': 7, 'count': 69}, {'interval-start': 8, 'interval-end': 15, 'count': 3}, {'interval-start': 16, 'interval-end': 31, 'count': 15}, {'interval-start': 32, 'interval-end': 63, 'count': 224}, {'interval-start': 64, 'interval-end': 127, 'count': 91}, {'interval-start': 128, 'interval-end': 255, 'count': 86}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:47.689416653Z 
+2026-10-12T04:12:47.689419067Z 04:12:47
+2026-10-12T04:12:47.689421961Z {'ts': '2026-10-12 04:12:47', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'nvme0n1'}
+2026-10-12T04:12:54.692048824Z {'ts': '2026-10-12 04:12:47', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 39}, {'interval-start': 4, 'interval-end': 7, 'count': 29}, {'interval-start': 8, 'interval-end': 15, 'count': 9}, {'interval-start': 16, 'interval-end': 31, 'count': 26}, {'interval-start': 32, 'interval-end': 63, 'count': 15}, {'interval-start': 64, 'interval-end': 127, 'count': 40}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:54.692078529Z {'ts': '2026-10-12 04:12:47', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 9409}, {'interval-start': 2, 'interval-end': 3, 'count': 22}, {'interval-start': 4, 'interval-end': 7, 'count': 34}, {'interval-start': 8, 'interval-end': 15, 'count': 5}, {'interval-start': 16, 'interval-end': 31, 'count': 8}, {'interval-start': 32, 'interval-end': 63, 'count': 96}, {'interval-start': 64, 'interval-end': 127, 'count': 74}, {'interval-start': 128, 'interval-end': 255, 'count': 6}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:54.692085539Z 
+2026-10-12T04:12:54.692091218Z 04:12:48
+2026-10-12T04:12:54.692096145Z {'ts': '2026-10-12 04:12:48', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 15}, {'interval-start': 4, 'interval-end': 7, 'count': 12}, {'interval-start': 8, 'interval-end': 15, 'count': 17}, {'interval-start': 16, 'interval-end': 31, 'count': 7}, {'interval-start': 32, 'interval-end': 63, 'count': 22}, {'interval-start': 64, 'interval-end': 127, 'count': 24}, {'interval-start': 128, 'interval-end': 255, 'count': 2}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:54.692113251Z {'ts': '2026-10-12 04:12:48', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 8691}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 1}, {'interval-start': 8, 'interval-end': 15, 'count': 4}, {'interval-start': 16, 'interval-end': 31, 'count': 1}, {'interval-start': 32, 'interval-end': 63, 'count': 123}, {'interval-start': 64, 'interval-end': 127, 'count': 25}, {'interval-start': 128, 'interval-end': 255, 'count': 57}, {'interval-start': 256, 'interval-end': 511, 'count': 2}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:54.692115895Z 
+2026-10-12T04:12:54.692118749Z 04:12:49
+2026-10-12T04:12:54.692121293Z {'ts': '2026-10-12 04:12:49', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 28}, {'interval-start': 4, 'interval-end': 7, 'count': 5}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 2}, {'interval-start': 32, 'interval-end': 63, 'count': 10}, {'interval-start': 64, 'interval-end': 127, 'count': 7}, {'interval-start': 128, 'interval-end': 255, 'count': 8}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:54.692123957Z {'ts': '2026-10-12 04:12:49', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5084}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 30}, {'interval-start': 32, 'interval-end': 63, 'count': 203}, {'interval-start': 64, 'interval-end': 127, 'count': 70}, {'interval-start': 128, 'interval-end': 255, 'count': 7}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:54.692126321Z 
+2026-10-12T04:12:54.692128714Z 04:12:50
+2026-10-12T04:12:54.692131208Z {'ts': '2026-10-12 04:12:50', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 25}, {'interval-start': 4, 'interval-end': 7, 'count': 5}, {'interval-start': 8, 'interval-end': 15, 'count': 2}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 0}, {'interval-start': 64, 'interval-end': 127, 'count': 3}, {'interval-start': 128, 'interval-end': 255, 'count': 13}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:54.692139761Z {'ts': '2026-10-12 04:12:50', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 11109}, {'interval-start': 2, 'interval-end': 3, 'count': 52}, {'interval-start': 4, 'interval-end': 7, 'count': 18}, {'interval-start': 8, 'interval-end': 15, 'count': 30}, {'interval-start': 16, 'interval-end': 31, 'count': 82}, {'interval-start': 32, 'interval-end': 63, 'count': 166}, {'interval-start': 64, 'interval-end': 127, 'count': 20}, {'interval-start': 128, 'interval-end': 255, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:54.692142285Z 
+2026-10-12T04:12:54.692144669Z 04:12:51
+2026-10-12T04:12:54.692147092Z {'ts': '2026-10-12 04:12:51', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 7578}, {'interval-start': 2, 'interval-end': 3, 'count': 22}, {'interval-start': 4, 'interval-end': 7, 'count': 4}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 27}, {'interval-start': 32, 'interval-end': 63, 'count': 129}, {'interval-start': 64, 'interval-end': 127, 'count': 47}, {'interval-start': 128, 'interval-end': 255, 'count': 120}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:54.692149566Z {'ts': '2026-10-12 04:12:51', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 20}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 2}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 0}, {'interval-start': 64, 'interval-end': 127, 'count': 1}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:54.692156176Z {'ts': '2026-10-12 04:12:51', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2}], 'disk': 'nvme0n1'}
+2026-10-12T04:12:54.692158600Z 
+2026-10-12T04:12:54.692161013Z 04:12:52
+2026-10-12T04:12:54.692163647Z {'ts': '2026-10-12 04:12:52', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 44}, {'interval-start': 4, 'interval-end': 7, 'count': 20}, {'interval-start': 8, 'interval-end': 15, 'count': 7}, {'interval-start': 16, 'interval-end': 31, 'count': 29}, {'interval-start': 32, 'interval-end': 63, 'count': 31}, {'interval-start': 64, 'interval-end': 127, 'count': 26}, {'interval-start': 128, 'interval-end': 255, 'count': 4}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:54.692166151Z {'ts': '2026-10-12 04:12:52', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 8902}, {'interval-start': 2, 'interval-end': 3, 'count': 1}, {'interval-start': 4, 'interval-end': 7, 'count': 1}, {'interval-start': 8, 'interval-end': 15, 'count': 3}, {'interval-start': 16, 'interval-end': 31, 'count': 30}, {'interval-start': 32, 'interval-end': 63, 'count': 0}, {'interval-start': 64, 'interval-end': 127, 'count': 6}, {'interval-start': 128, 'interval-end': 255, 'count': 334}, {'interval-start': 256, 'interval-end': 511, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:54.692168525Z 
+2026-10-12T04:12:54.692170928Z 04:12:53
+2026-10-12T04:12:54.692174534Z {'ts': '2026-10-12 04:12:53', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 46}, {'interval-start': 4, 'interval-end': 7, 'count': 8}, {'interval-start': 8, 'interval-end': 15, 'count': 17}, {'interval-start': 16, 'interval-end': 31, 'count': 10}, {'interval-start': 32, 'interval-end': 63, 'count': 18}, {'interval-start': 64, 'interval-end': 127, 'count': 40}, {'interval-start': 128, 'interval-end': 255, 'count': 19}], 'disk': 'nvme0n3'}
+2026-10-12T04:12:54.692177067Z {'ts': '2026-10-12 04:12:53', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 7361}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 0}, {'interval-start': 64, 'interval-end': 127, 'count': 7}, {'interval-start': 128, 'interval-end': 255, 'count': 382}], 'disk': 'nvme0n2'}
+2026-10-12T04:12:54.692179541Z {'ts': '2026-10-12 04:12:53', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:12:54.692181955Z 
+2026-10-12T04:12:54.692184328Z 04:12:54
+2026-10-12T04:12:54.692196497Z {'ts': '2026-10-12 04:12:54', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 92}, {'interval-start': 4, 'interval-end': 7, 'count': 17}, {'interval-start': 8, 'interval-end': 15, 'count': 20}, {'interval-start': 16, 'interval-end': 31, 'count': 44}, {'interval-start': 32, 'interval-end': 63, 'count': 85}, {'interval-start': 64, 'interval-end': 127, 'count': 76}, {'interval-start': 128, 'interval-end': 255, 'count': 37}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:02.695296603Z {'ts': '2026-10-12 04:12:54', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 9983}, {'interval-start': 2, 'interval-end': 3, 'count': 65}, {'interval-start': 4, 'interval-end': 7, 'count': 42}, {'interval-start': 8, 'interval-end': 15, 'count': 10}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 113}, {'interval-start': 64, 'interval-end': 127, 'count': 102}, {'interval-start': 128, 'interval-end': 255, 'count': 78}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:02.695337204Z 
+2026-10-12T04:13:02.695341070Z 04:12:55
+2026-10-12T04:13:02.695344004Z {'ts': '2026-10-12 04:12:55', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 100}, {'interval-start': 4, 'interval-end': 7, 'count': 22}, {'interval-start': 8, 'interval-end': 15, 'count': 33}, {'interval-start': 16, 'interval-end': 31, 'count': 34}, {'interval-start': 32, 'interval-end': 63, 'count': 57}, {'interval-start': 64, 'interval-end': 127, 'count': 32}, {'interval-start': 128, 'interval-end': 255, 'count': 4}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:02.695346728Z {'ts': '2026-10-12 04:12:55', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6160}, {'interval-start': 2, 'interval-end': 3, 'count': 57}, {'interval-start': 4, 'interval-end': 7, 'count': 16}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 174}, {'interval-start': 64, 'interval-end': 127, 'count': 127}, {'interval-start': 128, 'interval-end': 255, 'count': 39}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:02.695349032Z 
+2026-10-12T04:13:02.695351345Z 04:12:56
+2026-10-12T04:13:02.695353929Z {'ts': '2026-10-12 04:12:56', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 39}, {'interval-start': 4, 'interval-end': 7, 'count': 4}, {'interval-start': 8, 'interval-end': 15, 'count': 13}, {'interval-start': 16, 'interval-end': 31, 'count': 5}, {'interval-start': 32, 'interval-end': 63, 'count': 29}, {'interval-start': 64, 'interval-end': 127, 'count': 17}, {'interval-start': 128, 'interval-end': 255, 'count': 13}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:02.695356263Z {'ts': '2026-10-12 04:12:56', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 11302}, {'interval-start': 2, 'interval-end': 3, 'count': 82}, {'interval-start': 4, 'interval-end': 7, 'count': 49}, {'interval-start': 8, 'interval-end': 15, 'count': 4}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 114}, {'interval-start': 64, 'interval-end': 127, 'count': 47}, {'interval-start': 128, 'interval-end': 255, 'count': 20}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:02.695359147Z {'ts': '2026-10-12 04:12:56', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 3}], 'disk': 'nvme0n1'}
+2026-10-12T04:13:02.695361641Z 
+2026-10-12T04:13:02.695364265Z 04:12:57
+2026-10-12T04:13:02.695366839Z {'ts': '2026-10-12 04:12:57', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 44}, {'interval-start': 4, 'interval-end': 7, 'count': 22}, {'interval-start': 8, 'interval-end': 15, 'count': 23}, {'interval-start': 16, 'interval-end': 31, 'count': 25}, {'interval-start': 32, 'interval-end': 63, 'count': 17}, {'interval-start': 64, 'interval-end': 127, 'count': 38}, {'interval-start': 128, 'interval-end': 255, 'count': 10}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:02.695369553Z {'ts': '2026-10-12 04:12:57', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 10462}, {'interval-start': 2, 'interval-end': 3, 'count': 74}, {'interval-start': 4, 'interval-end': 7, 'count': 15}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 1}, {'interval-start': 32, 'interval-end': 63, 'count': 141}, {'interval-start': 64, 'interval-end': 127, 'count': 99}, {'interval-start': 128, 'interval-end': 255, 'count': 31}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:02.695375682Z 
+2026-10-12T04:13:02.695378456Z 04:12:58
+2026-10-12T04:13:02.695385146Z {'ts': '2026-10-12 04:12:58', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 32}, {'interval-start': 4, 'interval-end': 7, 'count': 9}, {'interval-start': 8, 'interval-end': 15, 'count': 21}, {'interval-start': 16, 'interval-end': 31, 'count': 23}, {'interval-start': 32, 'interval-end': 63, 'count': 13}, {'interval-start': 64, 'interval-end': 127, 'count': 39}, {'interval-start': 128, 'interval-end': 255, 'count': 5}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:02.695388001Z {'ts': '2026-10-12 04:12:58', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 5902}, {'interval-start': 2, 'interval-end': 3, 'count': 76}, {'interval-start': 4, 'interval-end': 7, 'count': 17}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 179}, {'interval-start': 64, 'interval-end': 127, 'count': 114}, {'interval-start': 128, 'interval-end': 255, 'count': 45}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:02.695390254Z 
+2026-10-12T04:13:02.695392517Z 04:12:59
+2026-10-12T04:13:02.695396323Z {'ts': '2026-10-12 04:12:59', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 39}, {'interval-start': 4, 'interval-end': 7, 'count': 25}, {'interval-start': 8, 'interval-end': 15, 'count': 42}, {'interval-start': 16, 'interval-end': 31, 'count': 42}, {'interval-start': 32, 'interval-end': 63, 'count': 34}, {'interval-start': 64, 'interval-end': 127, 'count': 126}, {'interval-start': 128, 'interval-end': 255, 'count': 11}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:02.695398737Z {'ts': '2026-10-12 04:12:59', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 10270}, {'interval-start': 2, 'interval-end': 3, 'count': 71}, {'interval-start': 4, 'interval-end': 7, 'count': 15}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 152}, {'interval-start': 64, 'interval-end': 127, 'count': 96}, {'interval-start': 128, 'interval-end': 255, 'count': 95}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:02.695401100Z {'ts': '2026-10-12 04:12:59', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:13:02.695403364Z 
+2026-10-12T04:13:02.695405617Z 04:13:00
+2026-10-12T04:13:02.695408001Z {'ts': '2026-10-12 04:13:00', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 75}, {'interval-start': 4, 'interval-end': 7, 'count': 24}, {'interval-start': 8, 'interval-end': 15, 'count': 2}, {'interval-start': 16, 'interval-end': 31, 'count': 64}, {'interval-start': 32, 'interval-end': 63, 'count': 63}, {'interval-start': 64, 'interval-end': 127, 'count': 159}, {'interval-start': 128, 'interval-end': 255, 'count': 2}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:02.695410495Z {'ts': '2026-10-12 04:13:00', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 13777}, {'interval-start': 2, 'interval-end': 3, 'count': 132}, {'interval-start': 4, 'interval-end': 7, 'count': 25}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 186}, {'interval-start': 64, 'interval-end': 127, 'count': 111}, {'interval-start': 128, 'interval-end': 255, 'count': 3}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:02.695412758Z 
+2026-10-12T04:13:02.695415021Z 04:13:01
+2026-10-12T04:13:02.695418637Z {'ts': '2026-10-12 04:13:01', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 2}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:13:02.695433029Z {'ts': '2026-10-12 04:13:01', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 63}, {'interval-start': 4, 'interval-end': 7, 'count': 30}, {'interval-start': 8, 'interval-end': 15, 'count': 13}, {'interval-start': 16, 'interval-end': 31, 'count': 68}, {'interval-start': 32, 'interval-end': 63, 'count': 44}, {'interval-start': 64, 'interval-end': 127, 'count': 102}, {'interval-start': 128, 'interval-end': 255, 'count': 7}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:02.695435633Z {'ts': '2026-10-12 04:13:01', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 9405}, {'interval-start': 2, 'interval-end': 3, 'count': 50}, {'interval-start': 4, 'interval-end': 7, 'count': 18}, {'interval-start': 8, 'interval-end': 15, 'count': 1}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 151}, {'interval-start': 64, 'interval-end': 127, 'count': 117}, {'interval-start': 128, 'interval-end': 255, 'count': 73}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:02.695437856Z 
+2026-10-12T04:13:02.695440129Z 04:13:02
+2026-10-12T04:13:09.697931814Z {'ts': '2026-10-12 04:13:02', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 47}, {'interval-start': 4, 'interval-end': 7, 'count': 16}, {'interval-start': 8, 'interval-end': 15, 'count': 42}, {'interval-start': 16, 'interval-end': 31, 'count': 28}, {'interval-start': 32, 'interval-end': 63, 'count': 50}, {'interval-start': 64, 'interval-end': 127, 'count': 75}, {'interval-start': 128, 'interval-end': 255, 'count': 20}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:09.697961168Z {'ts': '2026-10-12 04:13:02', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 9610}, {'interval-start': 2, 'interval-end': 3, 'count': 57}, {'interval-start': 4, 'interval-end': 7, 'count': 25}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 152}, {'interval-start': 64, 'interval-end': 127, 'count': 142}, {'interval-start': 128, 'interval-end': 255, 'count': 56}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:09.697969270Z {'ts': '2026-10-12 04:13:02', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:13:09.697974338Z 
+2026-10-12T04:13:09.697979506Z 04:13:03
+2026-10-12T04:13:09.697984874Z {'ts': '2026-10-12 04:13:03', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 54}, {'interval-start': 4, 'interval-end': 7, 'count': 29}, {'interval-start': 8, 'interval-end': 15, 'count': 2}, {'interval-start': 16, 'interval-end': 31, 'count': 86}, {'interval-start': 32, 'interval-end': 63, 'count': 61}, {'interval-start': 64, 'interval-end': 127, 'count': 108}, {'interval-start': 128, 'interval-end': 255, 'count': 50}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:09.697989751Z {'ts': '2026-10-12 04:13:03', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 12512}, {'interval-start': 2, 'interval-end': 3, 'count': 61}, {'interval-start': 4, 'interval-end': 7, 'count': 33}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 126}, {'interval-start': 64, 'interval-end': 127, 'count': 97}, {'interval-start': 128, 'interval-end': 255, 'count': 121}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:09.697993247Z 
+2026-10-12T04:13:09.697996662Z 04:13:04
+2026-10-12T04:13:09.698000127Z {'ts': '2026-10-12 04:13:04', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 52}, {'interval-start': 4, 'interval-end': 7, 'count': 23}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 5}, {'interval-start': 32, 'interval-end': 63, 'count': 71}, {'interval-start': 64, 'interval-end': 127, 'count': 51}, {'interval-start': 128, 'interval-end': 255, 'count': 9}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:09.698017283Z {'ts': '2026-10-12 04:13:04', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6589}, {'interval-start': 2, 'interval-end': 3, 'count': 95}, {'interval-start': 4, 'interval-end': 7, 'count': 43}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 100}, {'interval-start': 64, 'interval-end': 127, 'count': 70}, {'interval-start': 128, 'interval-end': 255, 'count': 114}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:09.698019666Z 
+2026-10-12T04:13:09.698021980Z 04:13:05
+2026-10-12T04:13:09.698024584Z {'ts': '2026-10-12 04:13:05', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n1'}
+2026-10-12T04:13:09.698026968Z {'ts': '2026-10-12 04:13:05', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 50}, {'interval-start': 4, 'interval-end': 7, 'count': 33}, {'interval-start': 8, 'interval-end': 15, 'count': 30}, {'interval-start': 16, 'interval-end': 31, 'count': 41}, {'interval-start': 32, 'interval-end': 63, 'count': 70}, {'interval-start': 64, 'interval-end': 127, 'count': 135}, {'interval-start': 128, 'interval-end': 255, 'count': 15}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:09.698035290Z {'ts': '2026-10-12 04:13:05', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 9052}, {'interval-start': 2, 'interval-end': 3, 'count': 143}, {'interval-start': 4, 'interval-end': 7, 'count': 58}, {'interval-start': 8, 'interval-end': 15, 'count': 35}, {'interval-start': 16, 'interval-end': 31, 'count': 30}, {'interval-start': 32, 'interval-end': 63, 'count': 175}, {'interval-start': 64, 'interval-end': 127, 'count': 76}, {'interval-start': 128, 'interval-end': 255, 'count': 113}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:09.698037824Z 
+2026-10-12T04:13:09.698040117Z 04:13:06
+2026-10-12T04:13:09.698043412Z {'ts': '2026-10-12 04:13:06', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 56}, {'interval-start': 4, 'interval-end': 7, 'count': 35}, {'interval-start': 8, 'interval-end': 15, 'count': 20}, {'interval-start': 16, 'interval-end': 31, 'count': 72}, {'interval-start': 32, 'interval-end': 63, 'count': 32}, {'interval-start': 64, 'interval-end': 127, 'count': 136}, {'interval-start': 128, 'interval-end': 255, 'count': 39}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:09.698046106Z {'ts': '2026-10-12 04:13:06', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 11638}, {'interval-start': 2, 'interval-end': 3, 'count': 148}, {'interval-start': 4, 'interval-end': 7, 'count': 7}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 237}, {'interval-start': 64, 'interval-end': 127, 'count': 115}, {'interval-start': 128, 'interval-end': 255, 'count': 41}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:09.698048921Z {'ts': '2026-10-12 04:13:06', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 7}], 'disk': 'nvme0n1'}
+2026-10-12T04:13:09.698053858Z 
+2026-10-12T04:13:09.698057183Z 04:13:07
+2026-10-12T04:13:09.698060939Z {'ts': '2026-10-12 04:13:07', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 55}, {'interval-start': 4, 'interval-end': 7, 'count': 17}, {'interval-start': 8, 'interval-end': 15, 'count': 28}, {'interval-start': 16, 'interval-end': 31, 'count': 69}, {'interval-start': 32, 'interval-end': 63, 'count': 60}, {'interval-start': 64, 'interval-end': 127, 'count': 83}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:09.698069311Z {'ts': '2026-10-12 04:13:07', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 10453}, {'interval-start': 2, 'interval-end': 3, 'count': 64}, {'interval-start': 4, 'interval-end': 7, 'count': 43}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 132}, {'interval-start': 64, 'interval-end': 127, 'count': 140}, {'interval-start': 128, 'interval-end': 255, 'count': 70}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:09.698071735Z 
+2026-10-12T04:13:09.698074049Z 04:13:08
+2026-10-12T04:13:09.698086537Z {'ts': '2026-10-12 04:13:08', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'nvme0n1'}
+2026-10-12T04:13:09.698089071Z {'ts': '2026-10-12 04:13:08', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 62}, {'interval-start': 4, 'interval-end': 7, 'count': 29}, {'interval-start': 8, 'interval-end': 15, 'count': 23}, {'interval-start': 16, 'interval-end': 31, 'count': 30}, {'interval-start': 32, 'interval-end': 63, 'count': 39}, {'interval-start': 64, 'interval-end': 127, 'count': 34}, {'interval-start': 128, 'interval-end': 255, 'count': 6}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:09.698095421Z {'ts': '2026-10-12 04:13:08', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 8360}, {'interval-start': 2, 'interval-end': 3, 'count': 97}, {'interval-start': 4, 'interval-end': 7, 'count': 51}, {'interval-start': 8, 'interval-end': 15, 'count': 31}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 169}, {'interval-start': 64, 'interval-end': 127, 'count': 74}, {'interval-start': 128, 'interval-end': 255, 'count': 41}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:09.698097724Z 
+2026-10-12T04:13:09.698100458Z 04:13:09
+2026-10-12T04:13:09.698111245Z {'ts': '2026-10-12 04:13:09', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 404}, {'interval-start': 2, 'interval-end': 3, 'count': 3}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 1}, {'interval-start': 64, 'interval-end': 127, 'count': 1}, {'interval-start': 128, 'interval-end': 255, 'count': 11}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:27.702967215Z {'ts': '2026-10-12 04:13:09', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:27.702997611Z 
+2026-10-12T04:13:27.703003590Z 04:13:10
+2026-10-12T04:13:27.703007907Z {'ts': '2026-10-12 04:13:10', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 10}, {'interval-start': 4, 'interval-end': 7, 'count': 3}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:27.703012714Z {'ts': '2026-10-12 04:13:10', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 593}, {'interval-start': 2, 'interval-end': 3, 'count': 12}, {'interval-start': 4, 'interval-end': 7, 'count': 3}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 2}, {'interval-start': 32, 'interval-end': 63, 'count': 8}, {'interval-start': 64, 'interval-end': 127, 'count': 6}, {'interval-start': 128, 'interval-end': 255, 'count': 5}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:27.703028308Z 
+2026-10-12T04:13:27.703030952Z 04:13:11
+2026-10-12T04:13:27.703034166Z {'ts': '2026-10-12 04:13:11', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}, {'interval-start': 4, 'interval-end': 7, 'count': 1}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 0}, {'interval-start': 64, 'interval-end': 127, 'count': 2}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:27.703038563Z {'ts': '2026-10-12 04:13:11', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 296}, {'interval-start': 2, 'interval-end': 3, 'count': 23}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 3}, {'interval-start': 32, 'interval-end': 63, 'count': 17}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:27.703041067Z 
+2026-10-12T04:13:27.703043551Z 04:13:12
+2026-10-12T04:13:27.703045894Z {'ts': '2026-10-12 04:13:12', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 140}, {'interval-start': 2, 'interval-end': 3, 'count': 4}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 5}, {'interval-start': 64, 'interval-end': 127, 'count': 2}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:27.703048308Z {'ts': '2026-10-12 04:13:12', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 7}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:27.703050551Z 
+2026-10-12T04:13:27.703052845Z 04:13:13
+2026-10-12T04:13:27.703055258Z {'ts': '2026-10-12 04:13:13', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:27.703057822Z {'ts': '2026-10-12 04:13:13', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 312}, {'interval-start': 2, 'interval-end': 3, 'count': 2}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 13}, {'interval-start': 64, 'interval-end': 127, 'count': 4}, {'interval-start': 128, 'interval-end': 255, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:27.703060076Z 
+2026-10-12T04:13:27.703062559Z 04:13:14
+2026-10-12T04:13:27.703064963Z {'ts': '2026-10-12 04:13:14', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 334}, {'interval-start': 2, 'interval-end': 3, 'count': 3}, {'interval-start': 4, 'interval-end': 7, 'count': 3}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 4}, {'interval-start': 64, 'interval-end': 127, 'count': 7}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:27.703067437Z {'ts': '2026-10-12 04:13:14', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:27.703069710Z 
+2026-10-12T04:13:27.703072054Z 04:13:15
+2026-10-12T04:13:27.703079855Z {'ts': '2026-10-12 04:13:15', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 127}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 2}, {'interval-start': 64, 'interval-end': 127, 'count': 1}, {'interval-start': 128, 'interval-end': 255, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:27.703085844Z {'ts': '2026-10-12 04:13:15', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:27.703088358Z 
+2026-10-12T04:13:27.703090682Z 04:13:16
+2026-10-12T04:13:27.703093075Z {'ts': '2026-10-12 04:13:16', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 14}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:27.703095409Z {'ts': '2026-10-12 04:13:16', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:27.703097792Z 
+2026-10-12T04:13:27.703100106Z 04:13:17
+2026-10-12T04:13:27.703102490Z {'ts': '2026-10-12 04:13:17', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 0}, {'interval-start': 64, 'interval-end': 127, 'count': 1}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:27.703104933Z {'ts': '2026-10-12 04:13:17', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 8}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:27.703107207Z 
+2026-10-12T04:13:27.703109560Z 04:13:18
+2026-10-12T04:13:27.703112024Z {'ts': '2026-10-12 04:13:18', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 8}, {'interval-start': 4, 'interval-end': 7, 'count': 1}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 1}, {'interval-start': 64, 'interval-end': 127, 'count': 0}, {'interval-start': 128, 'interval-end': 255, 'count': 1}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:27.703114508Z {'ts': '2026-10-12 04:13:18', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 19}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 1}, {'interval-start': 64, 'interval-end': 127, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:27.703116851Z 
+2026-10-12T04:13:27.703119125Z 04:13:19
+2026-10-12T04:13:27.703121779Z {'ts': '2026-10-12 04:13:19', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 49}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:27.703124002Z 
+2026-10-12T04:13:27.703126296Z 04:13:20
+2026-10-12T04:13:27.703128529Z 
+2026-10-12T04:13:27.703133166Z 04:13:21
+2026-10-12T04:13:27.703135570Z 
+2026-10-12T04:13:27.703137913Z 04:13:22
+2026-10-12T04:13:27.703140517Z {'ts': '2026-10-12 04:13:22', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 66}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 0}, {'interval-start': 64, 'interval-end': 127, 'count': 0}, {'interval-start': 128, 'interval-end': 255, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:27.703145965Z 
+2026-10-12T04:13:27.703149751Z 04:13:23
+2026-10-12T04:13:27.703152185Z 
+2026-10-12T04:13:27.703154518Z 04:13:24
+2026-10-12T04:13:27.703164323Z {'ts': '2026-10-12 04:13:24', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 1}], 'disk': 'nvme0n2'}
+2026-10-12T04:13:27.703166947Z {'ts': '2026-10-12 04:13:24', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}], 'disk': 'nvme0n3'}
+2026-10-12T04:13:27.703169210Z 
+2026-10-12T04:13:27.703171504Z 04:13:25
+2026-10-12T04:13:27.703173717Z 
+2026-10-12T04:13:27.703176011Z 04:13:26
+2026-10-12T04:13:27.703178274Z 
+2026-10-12T04:13:27.703180547Z 04:13:27
