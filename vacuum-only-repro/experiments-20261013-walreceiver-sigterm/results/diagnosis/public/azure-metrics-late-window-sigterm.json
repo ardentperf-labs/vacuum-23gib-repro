@@ -1,0 +1,3411 @@
+{
+  "generatedAtUtc": "2026-10-13T10:37:09.161704+00:00",
+  "knownEmptyNativeSeries": [
+    {
+      "metric": "Data Disk Max Burst IOPS",
+      "reason": "Azure returned no exact VMName/LUN timeseries in every poll",
+      "role": "primary",
+      "targetKind": "vm"
+    },
+    {
+      "metric": "Data Disk Max Burst Bandwidth",
+      "reason": "Azure returned no exact VMName/LUN timeseries in every poll",
+      "role": "primary",
+      "targetKind": "vm"
+    },
+    {
+      "metric": "Data Disk Used Burst IO Credits Percentage",
+      "reason": "Azure returned no exact VMName/LUN timeseries in every poll",
+      "role": "primary",
+      "targetKind": "vm"
+    },
+    {
+      "metric": "Data Disk Used Burst BPS Credits Percentage",
+      "reason": "Azure returned no exact VMName/LUN timeseries in every poll",
+      "role": "primary",
+      "targetKind": "vm"
+    },
+    {
+      "metric": "Data Disk Max Burst IOPS",
+      "reason": "Azure returned no exact VMName/LUN timeseries in every poll",
+      "role": "replica",
+      "targetKind": "vm"
+    },
+    {
+      "metric": "Data Disk Max Burst Bandwidth",
+      "reason": "Azure returned no exact VMName/LUN timeseries in every poll",
+      "role": "replica",
+      "targetKind": "vm"
+    },
+    {
+      "metric": "Data Disk Used Burst IO Credits Percentage",
+      "reason": "Azure returned no exact VMName/LUN timeseries in every poll",
+      "role": "replica",
+      "targetKind": "vm"
+    },
+    {
+      "metric": "Data Disk Used Burst BPS Credits Percentage",
+      "reason": "Azure returned no exact VMName/LUN timeseries in every poll",
+      "role": "replica",
+      "targetKind": "vm"
+    }
+  ],
+  "lane": "sigterm",
+  "lateWindowUtc": {
+    "endInclusive": "2026-10-13T10:28:00Z",
+    "startInclusive": "2026-10-13T08:27:00Z"
+  },
+  "limitations": [
+    "Missing native values remain missing; no zero was synthesized.",
+    "Disk burst/credit metrics were advertised but returned no exact-dimension series.",
+    "Azure Blob Transactions aggregates API requests by minute and does not identify individual WAL objects."
+  ],
+  "nativeIdentityContract": "asset alias + metric + complete normalized Azure dimension values + native timestamp; overlapping poll windows deduplicated by full native identity. resource IDs and node VM names are omitted.",
+  "nativeSamplingInterval": "PT1M",
+  "overlapIdentityContract": "resource ID + metric + complete casefolded native dimensions + native timestamp; public aliases preserve this identity while hiding Azure resource IDs and node names.",
+  "overlapPointIdentityMatchesOriginalCollector": 198,
+  "postInterventionAzureBlobTransactions": {
+    "byApiAndResponseType": [
+      {
+        "apiName": "CreateContainer",
+        "firstTimestampUtc": "2026-10-13T05:29:00Z",
+        "lastTimestampUtc": "2026-10-13T10:28:00Z",
+        "nativeBuckets": 300,
+        "nativeTotalSum": 0.0,
+        "nonzeroBuckets": [],
+        "responseType": "Success"
+      },
+      {
+        "apiName": "GetBlob",
+        "firstTimestampUtc": "2026-10-13T05:29:00Z",
+        "lastTimestampUtc": "2026-10-13T10:28:00Z",
+        "nativeBuckets": 300,
+        "nativeTotalSum": 2054.0,
+        "nonzeroBuckets": [
+          {
+            "timestampUtc": "2026-10-13T05:29:00Z",
+            "total": 9.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:30:00Z",
+            "total": 16.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:31:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:32:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:33:00Z",
+            "total": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:34:00Z",
+            "total": 16.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:35:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:36:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:37:00Z",
+            "total": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:38:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:39:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:40:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:41:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:42:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:43:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:44:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:45:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:46:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:47:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:48:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:49:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:50:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:51:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:52:00Z",
+            "total": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:53:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:54:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:55:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:56:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:57:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:58:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:59:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:00:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:01:00Z",
+            "total": 16.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:02:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:03:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:04:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:05:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:06:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:07:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:08:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:09:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:10:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:11:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:12:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:13:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:14:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:15:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:16:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:17:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:18:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:19:00Z",
+            "total": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:20:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:21:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:22:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:23:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:24:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:25:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:26:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:27:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:28:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:29:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:30:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:31:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:32:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:33:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:34:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:35:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:36:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:37:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:38:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:39:00Z",
+            "total": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:40:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:41:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:42:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:43:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:44:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:45:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:46:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:47:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:48:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:49:00Z",
+            "total": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:50:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:51:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:52:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:53:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:54:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:55:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:56:00Z",
+            "total": 20.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:57:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:58:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:59:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:00:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:01:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:02:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:03:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:04:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:05:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:06:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:07:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:08:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:09:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:10:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:11:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:12:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:13:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:14:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:15:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:16:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:17:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:18:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:19:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:20:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:21:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:22:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:23:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:24:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:25:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:26:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:27:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:28:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:29:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:30:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:31:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:32:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:33:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:34:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:35:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:36:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:37:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:38:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:39:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:40:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:41:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:42:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:43:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:44:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:45:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:46:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:47:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:48:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:49:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:50:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:51:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:52:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:53:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:54:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:55:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:56:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:57:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:58:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:59:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:00:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:01:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:02:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:03:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:04:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:05:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:06:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:07:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:08:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:09:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:10:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:11:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:12:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:13:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:14:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:15:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:16:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:17:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:18:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:19:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:20:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:21:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:22:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:23:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:24:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:25:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:26:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:27:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:28:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:29:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:30:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:31:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:32:00Z",
+            "total": 2.0
+          }
+        ],
+        "responseType": "Success"
+      },
+      {
+        "apiName": "GetContainerProperties",
+        "firstTimestampUtc": "2026-10-13T05:29:00Z",
+        "lastTimestampUtc": "2026-10-13T10:28:00Z",
+        "nativeBuckets": 300,
+        "nativeTotalSum": 0.0,
+        "nonzeroBuckets": [],
+        "responseType": "ClientOtherError"
+      },
+      {
+        "apiName": "GetContainerProperties",
+        "firstTimestampUtc": "2026-10-13T05:29:00Z",
+        "lastTimestampUtc": "2026-10-13T10:28:00Z",
+        "nativeBuckets": 300,
+        "nativeTotalSum": 0.0,
+        "nonzeroBuckets": [],
+        "responseType": "Success"
+      },
+      {
+        "apiName": "ListBlobs",
+        "firstTimestampUtc": "2026-10-13T05:29:00Z",
+        "lastTimestampUtc": "2026-10-13T10:28:00Z",
+        "nativeBuckets": 300,
+        "nativeTotalSum": 2056.0,
+        "nonzeroBuckets": [
+          {
+            "timestampUtc": "2026-10-13T05:29:00Z",
+            "total": 9.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:30:00Z",
+            "total": 16.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:31:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:32:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:33:00Z",
+            "total": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:34:00Z",
+            "total": 16.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:35:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:36:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:37:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:38:00Z",
+            "total": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:39:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:40:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:41:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:42:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:43:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:44:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:45:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:46:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:47:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:48:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:49:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:50:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:51:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:52:00Z",
+            "total": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:53:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:54:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:55:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:56:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:57:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:58:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:59:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:00:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:01:00Z",
+            "total": 16.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:02:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:03:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:04:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:05:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:06:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:07:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:08:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:09:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:10:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:11:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:12:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:13:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:14:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:15:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:16:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:17:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:18:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:19:00Z",
+            "total": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:20:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:21:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:22:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:23:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:24:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:25:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:26:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:27:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:28:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:29:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:30:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:31:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:32:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:33:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:34:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:35:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:36:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:37:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:38:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:39:00Z",
+            "total": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:40:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:41:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:42:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:43:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:44:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:45:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:46:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:47:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:48:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:49:00Z",
+            "total": 14.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:50:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:51:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:52:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:53:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:54:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:55:00Z",
+            "total": 15.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:56:00Z",
+            "total": 20.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:57:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:58:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:59:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:00:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:01:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:02:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:03:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:04:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:05:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:06:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:07:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:08:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:09:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:10:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:11:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:12:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:13:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:14:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:15:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:16:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:17:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:18:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:19:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:20:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:21:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:22:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:23:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:24:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:25:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:26:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:27:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:28:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:29:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:30:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:31:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:32:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:33:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:34:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:35:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:36:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:37:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:38:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:39:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:40:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:41:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:42:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:43:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:44:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:45:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:46:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:47:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:48:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:49:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:50:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:51:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:52:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:53:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:54:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:55:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:56:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:57:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:58:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T07:59:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:00:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:01:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:02:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:03:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:04:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:05:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:06:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:07:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:08:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:09:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:10:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:11:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:12:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:13:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:14:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:15:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:16:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:17:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:18:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:19:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:20:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:21:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:22:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:23:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:24:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:25:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:26:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:27:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:28:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:29:00Z",
+            "total": 7.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:30:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:31:00Z",
+            "total": 8.0
+          },
+          {
+            "timestampUtc": "2026-10-13T08:32:00Z",
+            "total": 4.0
+          }
+        ],
+        "responseType": "Success"
+      },
+      {
+        "apiName": "PutBlob",
+        "firstTimestampUtc": "2026-10-13T05:29:00Z",
+        "lastTimestampUtc": "2026-10-13T10:28:00Z",
+        "nativeBuckets": 300,
+        "nativeTotalSum": 1826.0,
+        "nonzeroBuckets": [
+          {
+            "timestampUtc": "2026-10-13T05:29:00Z",
+            "total": 39.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:30:00Z",
+            "total": 39.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:31:00Z",
+            "total": 38.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:32:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:33:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:34:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:35:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:36:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:37:00Z",
+            "total": 38.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:38:00Z",
+            "total": 36.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:39:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:40:00Z",
+            "total": 36.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:41:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:42:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:43:00Z",
+            "total": 36.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:44:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:45:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:46:00Z",
+            "total": 36.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:47:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:48:00Z",
+            "total": 38.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:49:00Z",
+            "total": 36.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:50:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:51:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:52:00Z",
+            "total": 36.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:53:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:54:00Z",
+            "total": 38.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:55:00Z",
+            "total": 37.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:56:00Z",
+            "total": 38.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:57:00Z",
+            "total": 36.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:58:00Z",
+            "total": 33.0
+          },
+          {
+            "timestampUtc": "2026-10-13T05:59:00Z",
+            "total": 43.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:00:00Z",
+            "total": 40.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:01:00Z",
+            "total": 42.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:02:00Z",
+            "total": 42.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:03:00Z",
+            "total": 43.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:04:00Z",
+            "total": 44.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:05:00Z",
+            "total": 42.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:06:00Z",
+            "total": 43.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:07:00Z",
+            "total": 43.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:08:00Z",
+            "total": 42.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:09:00Z",
+            "total": 41.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:10:00Z",
+            "total": 41.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:11:00Z",
+            "total": 42.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:12:00Z",
+            "total": 42.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:13:00Z",
+            "total": 43.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:14:00Z",
+            "total": 43.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:15:00Z",
+            "total": 39.0
+          },
+          {
+            "timestampUtc": "2026-10-13T06:20:00Z",
+            "total": 1.0
+          },
+          {
+            "timestampUtc": "2026-10-13T10:20:00Z",
+            "total": 1.0
+          },
+          {
+            "timestampUtc": "2026-10-13T10:25:00Z",
+            "total": 1.0
+          }
+        ],
+        "responseType": "Success"
+      }
+    ],
+    "conflictingDuplicateValues": 0,
+    "duplicateCopiesCollapsedBeforeTotals": 105690,
+    "identityContract": "resourceId + metric + casefolded complete dimension map + native timeStamp; duplicates across polls/windows select latest capturedAtUtc; native totals summed only after identity deduplication",
+    "markerUtc": "2026-10-13T05:28:14.076043501Z",
+    "nativeEndUtc": "2026-10-13T10:28:00Z"
+  },
+  "queryWindows": [
+    {
+      "failed": 0,
+      "queries": 16,
+      "queryEndUtc": "2026-10-13T10:20:00Z",
+      "queryStartUtc": "2026-10-13T08:27:00Z",
+      "sourceSegment": "tail0827",
+      "succeeded": 16
+    },
+    {
+      "failed": 0,
+      "queries": 16,
+      "queryEndUtc": "2026-10-13T10:24:00Z",
+      "queryStartUtc": "2026-10-13T10:19:00Z",
+      "sourceSegment": "tail1019",
+      "succeeded": 16
+    },
+    {
+      "failed": 0,
+      "queries": 16,
+      "queryEndUtc": "2026-10-13T10:29:00Z",
+      "queryStartUtc": "2026-10-13T10:23:00Z",
+      "sourceSegment": "tail1023",
+      "succeeded": 16
+    }
+  ],
+  "schemaVersion": 1,
+  "series": [
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "CreateContainer",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Availability",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 0,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Percent"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "GetBlob",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Availability",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 6,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Percent"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "GetContainerProperties",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Availability",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 0,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Percent"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "ListBlobs",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Availability",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 6,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Percent"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "PutBlob",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Availability",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 2,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Percent"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "CreateContainer",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Egress",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Bytes"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "GetBlob",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Egress",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Bytes"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "GetContainerProperties",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Egress",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Bytes"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "ListBlobs",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Egress",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Bytes"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "PutBlob",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Egress",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Bytes"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "CreateContainer",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Ingress",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Bytes"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "GetBlob",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Ingress",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Bytes"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "GetContainerProperties",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Ingress",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Bytes"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "ListBlobs",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Ingress",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Bytes"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "PutBlob",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Ingress",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Bytes"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "CreateContainer",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "SuccessE2ELatency",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 0,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "MilliSeconds"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "GetBlob",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "SuccessE2ELatency",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 6,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "MilliSeconds"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "GetContainerProperties",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "SuccessE2ELatency",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 0,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "MilliSeconds"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "ListBlobs",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "SuccessE2ELatency",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 6,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "MilliSeconds"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "PutBlob",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "SuccessE2ELatency",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 2,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "MilliSeconds"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "CreateContainer",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "SuccessServerLatency",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 0,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "MilliSeconds"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "GetBlob",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "SuccessServerLatency",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 6,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "MilliSeconds"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "GetContainerProperties",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "SuccessServerLatency",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 0,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "MilliSeconds"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "ListBlobs",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "SuccessServerLatency",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 6,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "MilliSeconds"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "PutBlob",
+        "authentication": "AccountKey",
+        "geotype": "Primary",
+        "tier": "Hot"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "SuccessServerLatency",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 2,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "MilliSeconds"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "CreateContainer",
+        "responsetype": "Success"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Transactions",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Count"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "GetBlob",
+        "responsetype": "Success"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Transactions",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Count"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "GetContainerProperties",
+        "responsetype": "ClientOtherError"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Transactions",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Count"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "GetContainerProperties",
+        "responsetype": "Success"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Transactions",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Count"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "ListBlobs",
+        "responsetype": "Success"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Transactions",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Count"
+    },
+    {
+      "asset": "archive-blob-service",
+      "dimensions": {
+        "apiname": "PutBlob",
+        "responsetype": "Success"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Transactions",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "archive",
+      "targetKind": "blob-service",
+      "unit": "Count"
+    },
+    {
+      "asset": "primary-data-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Read Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "primary",
+      "targetKind": "data-disk",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "primary-data-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Read Operations/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "primary",
+      "targetKind": "data-disk",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "primary-data-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Write Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "primary",
+      "targetKind": "data-disk",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "primary-data-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Write Operations/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "primary",
+      "targetKind": "data-disk",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Available Memory Bytes",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Bytes"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Bandwidth Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Bandwidth Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk IOPS Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk IOPS Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Latency",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "MilliSeconds"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Latency",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "MilliSeconds"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Queue Depth",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Count"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Queue Depth",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Count"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Read Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Read Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Read Operations/Sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Read Operations/Sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Target Bandwidth",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 23,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Count"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Target Bandwidth",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 23,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Count"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Target IOPS",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 23,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Count"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Target IOPS",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 23,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Count"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Write Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Write Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Write Operations/Sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Write Operations/Sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 121,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Percentage CPU",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "VM Cached Bandwidth Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "VM Cached IOPS Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "VM Uncached Bandwidth Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "primary-vm",
+      "dimensions": {
+        "vmname": "primary-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "VM Uncached IOPS Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "primary",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "primary-wal-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Read Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "primary",
+      "targetKind": "wal-disk",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "primary-wal-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Read Operations/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "primary",
+      "targetKind": "wal-disk",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "primary-wal-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Write Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "primary",
+      "targetKind": "wal-disk",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "primary-wal-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Write Operations/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "primary",
+      "targetKind": "wal-disk",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "replica-data-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Read Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "data-disk",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "replica-data-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Read Operations/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "data-disk",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "replica-data-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Write Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "data-disk",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "replica-data-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Write Operations/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "data-disk",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Available Memory Bytes",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Bytes"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Bandwidth Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 117,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Bandwidth Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 117,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk IOPS Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 117,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk IOPS Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 117,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Latency",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "MilliSeconds"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Latency",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "MilliSeconds"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Queue Depth",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Count"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Queue Depth",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Count"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Read Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Read Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Read Operations/Sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Read Operations/Sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Target Bandwidth",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 24,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Count"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Target Bandwidth",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 24,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Count"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Target IOPS",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 24,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Count"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Target IOPS",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 24,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Count"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Write Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Write Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "0",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Write Operations/Sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "lun": "1",
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Data Disk Write Operations/Sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Percentage CPU",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "VM Cached Bandwidth Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "VM Cached IOPS Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "VM Uncached Bandwidth Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "replica-vm",
+      "dimensions": {
+        "vmname": "replica-node"
+      },
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "VM Uncached IOPS Consumed Percentage",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "vm",
+      "unit": "Percent"
+    },
+    {
+      "asset": "replica-wal-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Read Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "wal-disk",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "replica-wal-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Read Operations/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "wal-disk",
+      "unit": "CountPerSecond"
+    },
+    {
+      "asset": "replica-wal-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Write Bytes/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "wal-disk",
+      "unit": "BytesPerSecond"
+    },
+    {
+      "asset": "replica-wal-disk",
+      "dimensions": {},
+      "firstTimestampUtc": "2026-10-13T08:27:00Z",
+      "lastTimestampUtc": "2026-10-13T10:28:00Z",
+      "metric": "Composite Disk Write Operations/sec",
+      "nativeInterval": "PT1M",
+      "pointCount": 122,
+      "pointsWithNumericValue": 122,
+      "role": "replica",
+      "targetKind": "wal-disk",
+      "unit": "CountPerSecond"
+    }
+  ],
+  "seriesCount": 99,
+  "supplementalNativePointsAfterWindowDedup": 12078,
+  "supplementalPointRowsBeforeWindowOverlapDedup": 12276
+}

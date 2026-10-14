@@ -1,0 +1,776 @@
+{
+  "azureMetricDrain": {
+    "attempted": true,
+    "complete": false,
+    "expectedLatestBucket": "2026-10-13T08:23:00.000Z",
+    "latestBucketByMetric": {
+      "archive|blob-service|Availability": "2026-10-13T08:28:00.000Z",
+      "archive|blob-service|Egress": "2026-10-13T08:28:00.000Z",
+      "archive|blob-service|Ingress": "2026-10-13T08:28:00.000Z",
+      "archive|blob-service|SuccessE2ELatency": "2026-10-13T08:28:00.000Z",
+      "archive|blob-service|SuccessServerLatency": "2026-10-13T08:28:00.000Z",
+      "archive|blob-service|Transactions": "2026-10-13T08:28:00.000Z",
+      "primary|data-disk|Composite Disk Read Bytes/sec": "2026-10-13T08:28:00.000Z",
+      "primary|data-disk|Composite Disk Read Operations/sec": "2026-10-13T08:28:00.000Z",
+      "primary|data-disk|Composite Disk Write Bytes/sec": "2026-10-13T08:28:00.000Z",
+      "primary|data-disk|Composite Disk Write Operations/sec": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Available Memory Bytes": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Bandwidth Consumed Percentage|lun=0": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Bandwidth Consumed Percentage|lun=1": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk IOPS Consumed Percentage|lun=0": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk IOPS Consumed Percentage|lun=1": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Latency|lun=0": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Latency|lun=1": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Queue Depth|lun=0": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Queue Depth|lun=1": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Read Bytes/sec|lun=0": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Read Bytes/sec|lun=1": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Read Operations/Sec|lun=0": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Read Operations/Sec|lun=1": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Target Bandwidth|lun=0": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Target Bandwidth|lun=1": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Target IOPS|lun=0": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Target IOPS|lun=1": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Write Bytes/sec|lun=0": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Write Bytes/sec|lun=1": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Write Operations/Sec|lun=0": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Data Disk Write Operations/Sec|lun=1": "2026-10-13T08:28:00.000Z",
+      "primary|vm|Percentage CPU": "2026-10-13T08:28:00.000Z",
+      "primary|vm|VM Cached Bandwidth Consumed Percentage": "2026-10-13T08:28:00.000Z",
+      "primary|vm|VM Cached IOPS Consumed Percentage": "2026-10-13T08:28:00.000Z",
+      "primary|vm|VM Uncached Bandwidth Consumed Percentage": "2026-10-13T08:28:00.000Z",
+      "primary|vm|VM Uncached IOPS Consumed Percentage": "2026-10-13T08:28:00.000Z",
+      "primary|wal-disk|Composite Disk Read Bytes/sec": "2026-10-13T08:28:00.000Z",
+      "primary|wal-disk|Composite Disk Read Operations/sec": "2026-10-13T08:28:00.000Z",
+      "primary|wal-disk|Composite Disk Write Bytes/sec": "2026-10-13T08:28:00.000Z",
+      "primary|wal-disk|Composite Disk Write Operations/sec": "2026-10-13T08:28:00.000Z",
+      "replica|data-disk|Composite Disk Read Bytes/sec": "2026-10-13T08:28:00.000Z",
+      "replica|data-disk|Composite Disk Read Operations/sec": "2026-10-13T08:28:00.000Z",
+      "replica|data-disk|Composite Disk Write Bytes/sec": "2026-10-13T08:28:00.000Z",
+      "replica|data-disk|Composite Disk Write Operations/sec": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Available Memory Bytes": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Bandwidth Consumed Percentage|lun=0": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Bandwidth Consumed Percentage|lun=1": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk IOPS Consumed Percentage|lun=0": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk IOPS Consumed Percentage|lun=1": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Latency|lun=0": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Latency|lun=1": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Queue Depth|lun=0": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Queue Depth|lun=1": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Read Bytes/sec|lun=0": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Read Bytes/sec|lun=1": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Read Operations/Sec|lun=0": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Read Operations/Sec|lun=1": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Target Bandwidth|lun=0": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Target Bandwidth|lun=1": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Target IOPS|lun=0": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Target IOPS|lun=1": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Write Bytes/sec|lun=0": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Write Bytes/sec|lun=1": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Write Operations/Sec|lun=0": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Data Disk Write Operations/Sec|lun=1": "2026-10-13T08:28:00.000Z",
+      "replica|vm|Percentage CPU": "2026-10-13T08:28:00.000Z",
+      "replica|vm|VM Cached Bandwidth Consumed Percentage": "2026-10-13T08:28:00.000Z",
+      "replica|vm|VM Cached IOPS Consumed Percentage": "2026-10-13T08:28:00.000Z",
+      "replica|vm|VM Uncached Bandwidth Consumed Percentage": "2026-10-13T08:28:00.000Z",
+      "replica|vm|VM Uncached IOPS Consumed Percentage": "2026-10-13T08:28:00.000Z",
+      "replica|wal-disk|Composite Disk Read Bytes/sec": "2026-10-13T08:28:00.000Z",
+      "replica|wal-disk|Composite Disk Read Operations/sec": "2026-10-13T08:28:00.000Z",
+      "replica|wal-disk|Composite Disk Write Bytes/sec": "2026-10-13T08:28:00.000Z",
+      "replica|wal-disk|Composite Disk Write Operations/sec": "2026-10-13T08:28:00.000Z"
+    },
+    "pendingMetricSeries": [
+      "primary|vm|Data Disk Max Burst IOPS|lun=0",
+      "primary|vm|Data Disk Max Burst Bandwidth|lun=0",
+      "primary|vm|Data Disk Used Burst IO Credits Percentage|lun=0",
+      "primary|vm|Data Disk Used Burst BPS Credits Percentage|lun=0",
+      "primary|vm|Data Disk Max Burst IOPS|lun=1",
+      "primary|vm|Data Disk Max Burst Bandwidth|lun=1",
+      "primary|vm|Data Disk Used Burst IO Credits Percentage|lun=1",
+      "primary|vm|Data Disk Used Burst BPS Credits Percentage|lun=1",
+      "replica|vm|Data Disk Max Burst IOPS|lun=0",
+      "replica|vm|Data Disk Max Burst Bandwidth|lun=0",
+      "replica|vm|Data Disk Used Burst IO Credits Percentage|lun=0",
+      "replica|vm|Data Disk Used Burst BPS Credits Percentage|lun=0",
+      "replica|vm|Data Disk Max Burst IOPS|lun=1",
+      "replica|vm|Data Disk Max Burst Bandwidth|lun=1",
+      "replica|vm|Data Disk Used Burst IO Credits Percentage|lun=1",
+      "replica|vm|Data Disk Used Burst BPS Credits Percentage|lun=1"
+    ],
+    "timeoutSeconds": 300
+  },
+  "azureMonitor": {
+    "gaps": [
+      {
+        "dimensionMismatches": [],
+        "firstSeenAtUtc": "2026-10-13T05:12:34.805Z",
+        "gap": "query returned no exact-dimension series",
+        "kind": "vm",
+        "lastSeenAtUtc": "2026-10-13T08:29:57.600Z",
+        "metric": "Data Disk Max Burst IOPS",
+        "occurrences": 404,
+        "role": "primary"
+      },
+      {
+        "dimensionMismatches": [],
+        "firstSeenAtUtc": "2026-10-13T05:12:34.805Z",
+        "gap": "query returned no exact-dimension series",
+        "kind": "vm",
+        "lastSeenAtUtc": "2026-10-13T08:29:57.600Z",
+        "metric": "Data Disk Max Burst Bandwidth",
+        "occurrences": 404,
+        "role": "primary"
+      },
+      {
+        "dimensionMismatches": [],
+        "firstSeenAtUtc": "2026-10-13T05:12:34.805Z",
+        "gap": "query returned no exact-dimension series",
+        "kind": "vm",
+        "lastSeenAtUtc": "2026-10-13T08:29:57.600Z",
+        "metric": "Data Disk Used Burst IO Credits Percentage",
+        "occurrences": 404,
+        "role": "primary"
+      },
+      {
+        "dimensionMismatches": [],
+        "firstSeenAtUtc": "2026-10-13T05:12:34.805Z",
+        "gap": "query returned no exact-dimension series",
+        "kind": "vm",
+        "lastSeenAtUtc": "2026-10-13T08:29:57.600Z",
+        "metric": "Data Disk Used Burst BPS Credits Percentage",
+        "occurrences": 404,
+        "role": "primary"
+      },
+      {
+        "dimensionMismatches": [],
+        "firstSeenAtUtc": "2026-10-13T05:12:40.136Z",
+        "gap": "query returned no exact-dimension series",
+        "kind": "vm",
+        "lastSeenAtUtc": "2026-10-13T08:30:00.347Z",
+        "metric": "Data Disk Max Burst IOPS",
+        "occurrences": 404,
+        "role": "replica"
+      },
+      {
+        "dimensionMismatches": [],
+        "firstSeenAtUtc": "2026-10-13T05:12:40.136Z",
+        "gap": "query returned no exact-dimension series",
+        "kind": "vm",
+        "lastSeenAtUtc": "2026-10-13T08:30:00.347Z",
+        "metric": "Data Disk Max Burst Bandwidth",
+        "occurrences": 404,
+        "role": "replica"
+      },
+      {
+        "dimensionMismatches": [],
+        "firstSeenAtUtc": "2026-10-13T05:12:40.136Z",
+        "gap": "query returned no exact-dimension series",
+        "kind": "vm",
+        "lastSeenAtUtc": "2026-10-13T08:30:00.347Z",
+        "metric": "Data Disk Used Burst IO Credits Percentage",
+        "occurrences": 404,
+        "role": "replica"
+      },
+      {
+        "dimensionMismatches": [],
+        "firstSeenAtUtc": "2026-10-13T05:12:40.136Z",
+        "gap": "query returned no exact-dimension series",
+        "kind": "vm",
+        "lastSeenAtUtc": "2026-10-13T08:30:00.347Z",
+        "metric": "Data Disk Used Burst BPS Credits Percentage",
+        "occurrences": 404,
+        "role": "replica"
+      }
+    ],
+    "nativeInterval": "PT1M",
+    "polls": 202,
+    "queryErrors": 0,
+    "targets": [
+      {
+        "availableMetrics": [
+          "Percentage CPU",
+          "Available Memory Bytes",
+          "VM Uncached IOPS Consumed Percentage",
+          "VM Uncached Bandwidth Consumed Percentage",
+          "VM Cached IOPS Consumed Percentage",
+          "VM Cached Bandwidth Consumed Percentage",
+          "Data Disk Read Bytes/sec",
+          "Data Disk Write Bytes/sec",
+          "Data Disk Read Operations/Sec",
+          "Data Disk Write Operations/Sec",
+          "Data Disk IOPS Consumed Percentage",
+          "Data Disk Bandwidth Consumed Percentage",
+          "Data Disk Queue Depth",
+          "Data Disk Latency",
+          "Data Disk Target IOPS",
+          "Data Disk Target Bandwidth",
+          "Data Disk Max Burst IOPS",
+          "Data Disk Max Burst Bandwidth",
+          "Data Disk Used Burst IO Credits Percentage",
+          "Data Disk Used Burst BPS Credits Percentage"
+        ],
+        "kind": "vm",
+        "missingMetrics": [],
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "primary",
+        "scope": "vmss-parent"
+      },
+      {
+        "availableMetrics": [
+          "Composite Disk Read Operations/sec",
+          "Composite Disk Write Operations/sec",
+          "Composite Disk Read Bytes/sec",
+          "Composite Disk Write Bytes/sec"
+        ],
+        "kind": "data-disk",
+        "missingMetrics": [],
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/disks/restore-data-3a142550",
+        "role": "primary",
+        "scope": "resource"
+      },
+      {
+        "availableMetrics": [
+          "Composite Disk Read Operations/sec",
+          "Composite Disk Write Operations/sec",
+          "Composite Disk Read Bytes/sec",
+          "Composite Disk Write Bytes/sec"
+        ],
+        "kind": "wal-disk",
+        "missingMetrics": [],
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/disks/restore-wal-3a142550",
+        "role": "primary",
+        "scope": "resource"
+      },
+      {
+        "availableMetrics": [
+          "Percentage CPU",
+          "Available Memory Bytes",
+          "VM Uncached IOPS Consumed Percentage",
+          "VM Uncached Bandwidth Consumed Percentage",
+          "VM Cached IOPS Consumed Percentage",
+          "VM Cached Bandwidth Consumed Percentage",
+          "Data Disk Read Bytes/sec",
+          "Data Disk Write Bytes/sec",
+          "Data Disk Read Operations/Sec",
+          "Data Disk Write Operations/Sec",
+          "Data Disk IOPS Consumed Percentage",
+          "Data Disk Bandwidth Consumed Percentage",
+          "Data Disk Queue Depth",
+          "Data Disk Latency",
+          "Data Disk Target IOPS",
+          "Data Disk Target Bandwidth",
+          "Data Disk Max Burst IOPS",
+          "Data Disk Max Burst Bandwidth",
+          "Data Disk Used Burst IO Credits Percentage",
+          "Data Disk Used Burst BPS Credits Percentage"
+        ],
+        "kind": "vm",
+        "missingMetrics": [],
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "replica",
+        "scope": "vmss-parent"
+      },
+      {
+        "availableMetrics": [
+          "Composite Disk Read Operations/sec",
+          "Composite Disk Write Operations/sec",
+          "Composite Disk Read Bytes/sec",
+          "Composite Disk Write Bytes/sec"
+        ],
+        "kind": "data-disk",
+        "missingMetrics": [],
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/disks/pvc-e1f29fed-703e-4c74-8775-524ce1858718",
+        "role": "replica",
+        "scope": "resource"
+      },
+      {
+        "availableMetrics": [
+          "Composite Disk Read Operations/sec",
+          "Composite Disk Write Operations/sec",
+          "Composite Disk Read Bytes/sec",
+          "Composite Disk Write Bytes/sec"
+        ],
+        "kind": "wal-disk",
+        "missingMetrics": [],
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/disks/pvc-c6e6f0b6-3b28-4e13-9e04-117224766945",
+        "role": "replica",
+        "scope": "resource"
+      },
+      {
+        "availableMetrics": [
+          "Transactions",
+          "SuccessE2ELatency",
+          "SuccessServerLatency",
+          "Availability",
+          "Ingress",
+          "Egress"
+        ],
+        "kind": "blob-service",
+        "missingMetrics": [],
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default",
+        "role": "archive",
+        "scope": "blob-service"
+      }
+    ]
+  },
+  "azureReadiness": {
+    "missingSeries": [],
+    "nativeInterval": "PT1M",
+    "passed": true,
+    "pollId": "874e67e724c3",
+    "requiredSeries": [
+      {
+        "exactDimensionMatched": true,
+        "expectedVmName": "aks-nodepool1-32566897-vmss_0",
+        "metric": "Percentage CPU",
+        "pointCount": 10,
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "primary",
+        "scope": "vmss-parent"
+      },
+      {
+        "exactDimensionMatched": true,
+        "expectedVmName": "aks-nodepool1-32566897-vmss_0",
+        "metric": "VM Uncached IOPS Consumed Percentage",
+        "pointCount": 10,
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "primary",
+        "scope": "vmss-parent"
+      },
+      {
+        "exactDimensionMatched": true,
+        "expectedVmName": "aks-nodepool1-32566897-vmss_0",
+        "metric": "VM Uncached Bandwidth Consumed Percentage",
+        "pointCount": 10,
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "primary",
+        "scope": "vmss-parent"
+      },
+      {
+        "exactDimensionsMatched": true,
+        "expectedVmName": "aks-nodepool1-32566897-vmss_0",
+        "lun": "0",
+        "metric": "Data Disk Latency",
+        "pointCount": 10,
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "primary",
+        "scope": "vmss-parent"
+      },
+      {
+        "exactDimensionsMatched": true,
+        "expectedVmName": "aks-nodepool1-32566897-vmss_0",
+        "lun": "0",
+        "metric": "Data Disk Queue Depth",
+        "pointCount": 10,
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "primary",
+        "scope": "vmss-parent"
+      },
+      {
+        "exactDimensionsMatched": true,
+        "expectedVmName": "aks-nodepool1-32566897-vmss_0",
+        "lun": "1",
+        "metric": "Data Disk Latency",
+        "pointCount": 10,
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "primary",
+        "scope": "vmss-parent"
+      },
+      {
+        "exactDimensionsMatched": true,
+        "expectedVmName": "aks-nodepool1-32566897-vmss_0",
+        "lun": "1",
+        "metric": "Data Disk Queue Depth",
+        "pointCount": 10,
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "primary",
+        "scope": "vmss-parent"
+      },
+      {
+        "exactDimensionMatched": true,
+        "expectedVmName": "aks-nodepool1-32566897-vmss_1",
+        "metric": "Percentage CPU",
+        "pointCount": 10,
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "replica",
+        "scope": "vmss-parent"
+      },
+      {
+        "exactDimensionMatched": true,
+        "expectedVmName": "aks-nodepool1-32566897-vmss_1",
+        "metric": "VM Uncached IOPS Consumed Percentage",
+        "pointCount": 10,
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "replica",
+        "scope": "vmss-parent"
+      },
+      {
+        "exactDimensionMatched": true,
+        "expectedVmName": "aks-nodepool1-32566897-vmss_1",
+        "metric": "VM Uncached Bandwidth Consumed Percentage",
+        "pointCount": 10,
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "replica",
+        "scope": "vmss-parent"
+      },
+      {
+        "exactDimensionsMatched": true,
+        "expectedVmName": "aks-nodepool1-32566897-vmss_1",
+        "lun": "0",
+        "metric": "Data Disk Latency",
+        "pointCount": 10,
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "replica",
+        "scope": "vmss-parent"
+      },
+      {
+        "exactDimensionsMatched": true,
+        "expectedVmName": "aks-nodepool1-32566897-vmss_1",
+        "lun": "0",
+        "metric": "Data Disk Queue Depth",
+        "pointCount": 10,
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "replica",
+        "scope": "vmss-parent"
+      },
+      {
+        "exactDimensionsMatched": true,
+        "expectedVmName": "aks-nodepool1-32566897-vmss_1",
+        "lun": "1",
+        "metric": "Data Disk Latency",
+        "pointCount": 10,
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "replica",
+        "scope": "vmss-parent"
+      },
+      {
+        "exactDimensionsMatched": true,
+        "expectedVmName": "aks-nodepool1-32566897-vmss_1",
+        "lun": "1",
+        "metric": "Data Disk Queue Depth",
+        "pointCount": 10,
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss",
+        "role": "replica",
+        "scope": "vmss-parent"
+      }
+    ],
+    "validatedAtUtc": "2026-10-13T05:12:58.683Z"
+  },
+  "fatalErrors": [],
+  "priorSegmentGap": null,
+  "roles": {
+    "primary": {
+      "bcc": {
+        "deviceHistogramSamples": 16728,
+        "deviceNamesObserved": [
+          "sda",
+          "sdb",
+          "sdc"
+        ],
+        "error": null,
+        "gaps": [
+          "data read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F.",
+          "wal read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F."
+        ],
+        "logStreamDuplicateLines": 0,
+        "logStreamGaps": [],
+        "logStreamReconnects": 0,
+        "logStreamSegments": 1,
+        "logStreamTimestampParseErrors": 63,
+        "pod": "wal-bcc-pr-93eb615b",
+        "readWriteHistogramSamples": 0,
+        "ready": true,
+        "requiredDataDevice": "sdb",
+        "requiredWalDevice": "sdc",
+        "tracepointGaps": [],
+        "tracepointPairCounters": {
+          "completions": 683409,
+          "keyCollisions": 57,
+          "mapUpdateFailures": 0,
+          "matchedCompletions": 683409,
+          "starts": 683649,
+          "unmatchedCompletions": 0
+        },
+        "tracepointReadWriteError": null,
+        "tracepointReadWriteHistogramBuckets": 39927,
+        "tracepointReadWriteHistogramEvents": 682933,
+        "tracepointReadWriteIntervals": 11300,
+        "tracepointReadWriteReady": true,
+        "unparsed": 23004,
+        "warnings": [
+          "BCC processes did not announce ready within 25 seconds"
+        ]
+      },
+      "devices": {
+        "data": {
+          "controller": {
+            "driver": "hv_storvsc",
+            "driverChain": "1:0:0:0:sd,f8b3781b-1e82-4818-a1c3-63d806ec15bb:hv_storvsc",
+            "name": "hv_storvsc",
+            "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb",
+            "type": "storvsc"
+          },
+          "device": "sdb",
+          "majorMinor": "8:16",
+          "mountMajorMinor": "8:16",
+          "path": "/var/lib/postgresql/data/pgdata",
+          "queue": {
+            "nrRequests": 316,
+            "scheduler": "[none] mq-deadline "
+          },
+          "scsi": {
+            "hctl": "1:0:0:0",
+            "queueDepth": 316
+          }
+        },
+        "wal": {
+          "controller": {
+            "driver": "hv_storvsc",
+            "driverChain": "1:0:0:1:sd,f8b3781b-1e82-4818-a1c3-63d806ec15bb:hv_storvsc",
+            "name": "hv_storvsc",
+            "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb",
+            "type": "storvsc"
+          },
+          "device": "sdc",
+          "majorMinor": "8:32",
+          "mountMajorMinor": "8:32",
+          "path": "/var/lib/postgresql/wal/pg_wal",
+          "queue": {
+            "nrRequests": 316,
+            "scheduler": "[none] mq-deadline "
+          },
+          "scsi": {
+            "hctl": "1:0:0:1",
+            "queueDepth": 316
+          }
+        }
+      },
+      "diskstats": {
+        "errors": 0,
+        "samples": 11478,
+        "span": {
+          "first": "2026-10-13T05:11:34.261Z",
+          "gapsOver1_5Seconds": 0,
+          "intervalSeconds": {
+            "max": 1.083143,
+            "median": 1.009296,
+            "min": 1.007509
+          },
+          "last": "2026-10-13T08:24:55.574Z",
+          "sampleCount": 11478
+        }
+      },
+      "hostStats": {
+        "errors": 0,
+        "pressureResources": [
+          "cpu",
+          "io",
+          "memory"
+        ],
+        "samples": 11478,
+        "span": {
+          "first": "2026-10-13T05:11:34.261Z",
+          "gapsOver1_5Seconds": 0,
+          "intervalSeconds": {
+            "max": 1.083143,
+            "median": 1.009296,
+            "min": 1.007509
+          },
+          "last": "2026-10-13T08:24:55.574Z",
+          "sampleCount": 11478
+        }
+      },
+      "node": "aks-nodepool1-32566897-vmss000000",
+      "pgStat": {
+        "errors": 0,
+        "pgStatCheckpointerAvailable": false,
+        "pgStatIOAvailable": true,
+        "recoveryPrefetchAvailable": true,
+        "samples": 11603,
+        "span": {
+          "first": "2026-10-13T05:11:34.710Z",
+          "gapsOver1_5Seconds": 0,
+          "intervalSeconds": {
+            "max": 1.051336,
+            "median": 1.000001,
+            "min": 0.019174
+          },
+          "last": "2026-10-13T08:24:55.723Z",
+          "sampleCount": 11603
+        }
+      },
+      "pod": "hdd-pg-1",
+      "vmResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0"
+    },
+    "replica": {
+      "bcc": {
+        "deviceHistogramSamples": 22690,
+        "deviceNamesObserved": [
+          "sda",
+          "sdb",
+          "sdc"
+        ],
+        "error": null,
+        "gaps": [
+          "data read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F.",
+          "wal read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F."
+        ],
+        "logStreamDuplicateLines": 0,
+        "logStreamGaps": [],
+        "logStreamReconnects": 0,
+        "logStreamSegments": 1,
+        "logStreamTimestampParseErrors": 63,
+        "pod": "wal-bcc-re-c454a9d4",
+        "readWriteHistogramSamples": 0,
+        "ready": true,
+        "requiredDataDevice": "sdc",
+        "requiredWalDevice": "sdb",
+        "tracepointGaps": [],
+        "tracepointPairCounters": {
+          "completions": 6673243,
+          "keyCollisions": 13262,
+          "mapUpdateFailures": 0,
+          "matchedCompletions": 6672666,
+          "starts": 6706865,
+          "unmatchedCompletions": 577
+        },
+        "tracepointReadWriteError": null,
+        "tracepointReadWriteHistogramBuckets": 113706,
+        "tracepointReadWriteHistogramEvents": 6668897,
+        "tracepointReadWriteIntervals": 11303,
+        "tracepointReadWriteReady": true,
+        "unparsed": 22960,
+        "warnings": [
+          "BCC processes did not announce ready within 25 seconds"
+        ]
+      },
+      "devices": {
+        "data": {
+          "controller": {
+            "driver": "hv_storvsc",
+            "driverChain": "1:0:0:0:sd,f8b3781b-1e82-4818-a1c3-63d806ec15bb:hv_storvsc",
+            "name": "hv_storvsc",
+            "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/VMBUS:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb",
+            "type": "storvsc"
+          },
+          "device": "sdc",
+          "majorMinor": "8:32",
+          "mountMajorMinor": "8:32",
+          "path": "/var/lib/postgresql/data/pgdata",
+          "queue": {
+            "nrRequests": 316,
+            "scheduler": "[none] mq-deadline "
+          },
+          "scsi": {
+            "hctl": "1:0:0:0",
+            "queueDepth": 316
+          }
+        },
+        "wal": {
+          "controller": {
+            "driver": "hv_storvsc",
+            "driverChain": "1:0:0:1:sd,f8b3781b-1e82-4818-a1c3-63d806ec15bb:hv_storvsc",
+            "name": "hv_storvsc",
+            "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/VMBUS:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb",
+            "type": "storvsc"
+          },
+          "device": "sdb",
+          "majorMinor": "8:16",
+          "mountMajorMinor": "8:16",
+          "path": "/var/lib/postgresql/wal/pg_wal",
+          "queue": {
+            "nrRequests": 316,
+            "scheduler": "[none] mq-deadline "
+          },
+          "scsi": {
+            "hctl": "1:0:0:1",
+            "queueDepth": 316
+          }
+        }
+      },
+      "diskstats": {
+        "errors": 0,
+        "samples": 11491,
+        "span": {
+          "first": "2026-10-13T05:11:34.242Z",
+          "gapsOver1_5Seconds": 0,
+          "intervalSeconds": {
+            "max": 1.053276,
+            "median": 1.009244,
+            "min": 1.007641
+          },
+          "last": "2026-10-13T08:24:57.787Z",
+          "sampleCount": 11491
+        }
+      },
+      "hostStats": {
+        "errors": 0,
+        "pressureResources": [
+          "cpu",
+          "io",
+          "memory"
+        ],
+        "samples": 11491,
+        "span": {
+          "first": "2026-10-13T05:11:34.242Z",
+          "gapsOver1_5Seconds": 0,
+          "intervalSeconds": {
+            "max": 1.053276,
+            "median": 1.009244,
+            "min": 1.007641
+          },
+          "last": "2026-10-13T08:24:57.787Z",
+          "sampleCount": 11491
+        }
+      },
+      "node": "aks-nodepool1-32566897-vmss000001",
+      "pgStat": {
+        "errors": 1,
+        "pgStatCheckpointerAvailable": false,
+        "pgStatIOAvailable": true,
+        "recoveryPrefetchAvailable": true,
+        "samples": 11602,
+        "span": {
+          "first": "2026-10-13T05:11:34.451Z",
+          "gapsOver1_5Seconds": 1,
+          "intervalSeconds": {
+            "max": 4.813515,
+            "median": 0.999996,
+            "min": 0.013584
+          },
+          "last": "2026-10-13T08:24:57.290Z",
+          "sampleCount": 11602
+        }
+      },
+      "pod": "hdd-pg-2",
+      "vmResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/1"
+    }
+  },
+  "sampling": {
+    "azureNativeGrain": "PT1M",
+    "diskstatsSeconds": 1,
+    "pgStatSeconds": 1
+  },
+  "startedAtUtc": "2026-10-13T05:11:21.395Z",
+  "stoppedAtUtc": "2026-10-13T08:24:58.630Z",
+  "streamGaps": [
+    {
+      "exitCode": 3,
+      "reason": "kubectl exec watcher stream ended; retrying",
+      "reconnectingAtUtc": "2026-10-13T08:24:39.488Z",
+      "role": "replica",
+      "startedAtUtc": "2026-10-13T05:11:33.912Z",
+      "stream": "postgres"
+    }
+  ],
+  "streamReconnectCounts": {
+    "primary": {
+      "diskstats": 0,
+      "postgres": 0
+    },
+    "replica": {
+      "diskstats": 0,
+      "postgres": 1
+    }
+  }
+}

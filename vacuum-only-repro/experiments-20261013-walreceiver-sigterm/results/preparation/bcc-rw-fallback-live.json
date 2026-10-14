@@ -1,0 +1,206 @@
+{
+  "collectorOrPostgresConfigurationChanged": false,
+  "commandDescription": "Within each already-running, identity-verified owned BCC pod: start the tracepoint helper detached under util-linux flock, using the recorded DATA/WAL block devices; append output to the collector-tailed log. No PostgreSQL command or signal was issued.",
+  "existingPodsOnly": true,
+  "instrumentationOnly": true,
+  "launchedAtUtc": "2026-10-13T05:16:33Z",
+  "postgresqlSignaledOrRestarted": false,
+  "purpose": "diagnostic per-device read/write latency fallback after biolatency -F probe failure",
+  "readinessEvidence": "The role-specific tracepoint ready and interval JSONL records are current readiness evidence; collector-status.json predates fallback launch and is intentionally not used for live readiness.",
+  "singleProcessGuard": "refused when per-pod pid file exists or exact python3 helper process already exists; detached process holds util-linux flock lock until exit",
+  "targets": [
+    {
+      "data": "sdb",
+      "dataMajorMinor": "8:16",
+      "lane": "sigterm",
+      "node": "aks-nodepool1-39638170-vmss000000",
+      "pod": "wal-bcc-pr-d3c8d827",
+      "returnCode": 0,
+      "role": "primary",
+      "stderr": "",
+      "stdout": "STARTED pid=101302 startTicks=544416 data=/dev/sdb dataMajorMinor=8:16 wal=/dev/sdc walMajorMinor=8:32",
+      "verification": {
+        "firstIntervalUtc": "2026-10-13T05:16:35.277Z",
+        "histogramCapturePath": "sigterm/results/instrumentation/bcc-read-write-histograms.jsonl",
+        "intervalCapturePath": "sigterm/results/instrumentation/bcc-rw-tracepoint-intervals.jsonl",
+        "intervalSampleCount": 172,
+        "lastIntervalUtc": "2026-10-13T05:19:26.276Z",
+        "latestDiagnosticPairCounters": {
+          "completions": 141,
+          "keyCollisions": 0,
+          "mapUpdateFailures": 0,
+          "matchedCompletions": 141,
+          "starts": 141,
+          "unmatchedCompletions": 0
+        },
+        "observedHistogramSeries": [
+          [
+            "data",
+            "read"
+          ],
+          [
+            "data",
+            "write"
+          ],
+          [
+            "wal",
+            "read"
+          ],
+          [
+            "wal",
+            "write"
+          ]
+        ],
+        "podPhaseAtVerification": "Running",
+        "podUid": "4d3a18f4-8e79-48c6-b8c0-1f299469cf0e",
+        "readyEventCapturedAtUtc": "2026-10-13T05:16:34.604Z",
+        "readyEventPath": "sigterm/results/instrumentation/primary-bcc-rw-tracepoint-status.jsonl"
+      },
+      "wal": "sdc",
+      "walMajorMinor": "8:32"
+    },
+    {
+      "data": "sdb",
+      "dataMajorMinor": "8:16",
+      "lane": "sigterm",
+      "node": "aks-nodepool1-39638170-vmss000001",
+      "pod": "wal-bcc-re-2b218af8",
+      "returnCode": 0,
+      "role": "replica",
+      "stderr": "",
+      "stdout": "STARTED pid=73726 startTicks=423117 data=/dev/sdb dataMajorMinor=8:16 wal=/dev/sdc walMajorMinor=8:32",
+      "verification": {
+        "firstIntervalUtc": "2026-10-13T05:16:35.287Z",
+        "histogramCapturePath": "sigterm/results/instrumentation/bcc-read-write-histograms.jsonl",
+        "intervalCapturePath": "sigterm/results/instrumentation/bcc-rw-tracepoint-intervals.jsonl",
+        "intervalSampleCount": 171,
+        "lastIntervalUtc": "2026-10-13T05:19:25.287Z",
+        "latestDiagnosticPairCounters": {
+          "completions": 616,
+          "keyCollisions": 0,
+          "mapUpdateFailures": 0,
+          "matchedCompletions": 616,
+          "starts": 710,
+          "unmatchedCompletions": 0
+        },
+        "observedHistogramSeries": [
+          [
+            "data",
+            "read"
+          ],
+          [
+            "data",
+            "write"
+          ],
+          [
+            "wal",
+            "write"
+          ]
+        ],
+        "podPhaseAtVerification": "Running",
+        "podUid": "6bca9e04-ec9f-4fed-97d2-c57bad9d2410",
+        "readyEventCapturedAtUtc": "2026-10-13T05:16:35.149Z",
+        "readyEventPath": "sigterm/results/instrumentation/replica-bcc-rw-tracepoint-status.jsonl"
+      },
+      "wal": "sdc",
+      "walMajorMinor": "8:32"
+    },
+    {
+      "data": "sdb",
+      "dataMajorMinor": "8:16",
+      "lane": "control",
+      "node": "aks-nodepool1-32566897-vmss000000",
+      "pod": "wal-bcc-pr-93eb615b",
+      "returnCode": 0,
+      "role": "primary",
+      "stderr": "",
+      "stdout": "STARTED pid=95692 startTicks=673718 data=/dev/sdb dataMajorMinor=8:16 wal=/dev/sdc walMajorMinor=8:32",
+      "verification": {
+        "firstIntervalUtc": "2026-10-13T05:16:35.591Z",
+        "histogramCapturePath": "control/results/instrumentation/bcc-read-write-histograms.jsonl",
+        "intervalCapturePath": "control/results/instrumentation/bcc-rw-tracepoint-intervals.jsonl",
+        "intervalSampleCount": 171,
+        "lastIntervalUtc": "2026-10-13T05:19:25.592Z",
+        "latestDiagnosticPairCounters": {
+          "completions": 148,
+          "keyCollisions": 0,
+          "mapUpdateFailures": 0,
+          "matchedCompletions": 148,
+          "starts": 148,
+          "unmatchedCompletions": 0
+        },
+        "observedHistogramSeries": [
+          [
+            "data",
+            "read"
+          ],
+          [
+            "data",
+            "write"
+          ],
+          [
+            "wal",
+            "read"
+          ],
+          [
+            "wal",
+            "write"
+          ]
+        ],
+        "podPhaseAtVerification": "Running",
+        "podUid": "60071772-d79e-4441-866e-5bc1bce72b90",
+        "readyEventCapturedAtUtc": "2026-10-13T05:16:35.155Z",
+        "readyEventPath": "control/results/instrumentation/primary-bcc-rw-tracepoint-status.jsonl"
+      },
+      "wal": "sdc",
+      "walMajorMinor": "8:32"
+    },
+    {
+      "data": "sdc",
+      "dataMajorMinor": "8:32",
+      "lane": "control",
+      "node": "aks-nodepool1-32566897-vmss000001",
+      "pod": "wal-bcc-re-c454a9d4",
+      "returnCode": 0,
+      "role": "replica",
+      "stderr": "",
+      "stdout": "STARTED pid=71609 startTicks=426958 data=/dev/sdc dataMajorMinor=8:32 wal=/dev/sdb walMajorMinor=8:16",
+      "verification": {
+        "firstIntervalUtc": "2026-10-13T05:16:35.346Z",
+        "histogramCapturePath": "control/results/instrumentation/bcc-read-write-histograms.jsonl",
+        "intervalCapturePath": "control/results/instrumentation/bcc-rw-tracepoint-intervals.jsonl",
+        "intervalSampleCount": 172,
+        "lastIntervalUtc": "2026-10-13T05:19:26.346Z",
+        "latestDiagnosticPairCounters": {
+          "completions": 627,
+          "keyCollisions": 0,
+          "mapUpdateFailures": 0,
+          "matchedCompletions": 627,
+          "starts": 570,
+          "unmatchedCompletions": 0
+        },
+        "observedHistogramSeries": [
+          [
+            "data",
+            "read"
+          ],
+          [
+            "data",
+            "write"
+          ],
+          [
+            "wal",
+            "write"
+          ]
+        ],
+        "podPhaseAtVerification": "Running",
+        "podUid": "dffa93eb-d2a1-4cf2-b36d-40c6474c9ac7",
+        "readyEventCapturedAtUtc": "2026-10-13T05:16:34.961Z",
+        "readyEventPath": "control/results/instrumentation/replica-bcc-rw-tracepoint-status.jsonl"
+      },
+      "wal": "sdb",
+      "walMajorMinor": "8:16"
+    }
+  ],
+  "verifiedAtUtc": "2026-10-13T05:19:26Z"
+}

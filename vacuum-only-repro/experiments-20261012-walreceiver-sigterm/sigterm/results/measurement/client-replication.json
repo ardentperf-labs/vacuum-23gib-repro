@@ -1,0 +1,132 @@
+{
+  "interpretation": [
+    "The execution-latency p95 series includes commit wait; the graph does not isolate or directly measure commit-wait duration.",
+    "The standby FLUSH backlog uses the flush LSN reported by the sole primary replication sender and is sampled concurrently with primary flush.",
+    "The replica REPLAY backlog compares concurrently sampled primary flush and replica replay positions; negative deltas are clamped to zero and counted because of sampling concurrency.",
+    "Missing/invalid LSN inputs produce gaps. Lines also break where adjacent timestamped samples are more than 10 seconds apart.",
+    "All four panels share elapsed minutes from the healthy client warm-up start and use linear y axes."
+  ],
+  "markers": [
+    {
+      "epoch": 1791855937.839937,
+      "kind": "vacuum-start",
+      "label": "VACUUM started",
+      "minutesFromZero": 17.02323041756948
+    },
+    {
+      "epoch": 1791858743.150343,
+      "kind": "vacuum-end",
+      "label": "VACUUM completed",
+      "minutesFromZero": 63.77840385039647
+    }
+  ],
+  "output": {
+    "allAxesLinear": true,
+    "plot": "client-replication.png",
+    "plotSha256": "2a671d8da75826e6dedfbf1f4fbf42fdc72e1ed34227eec59bf14b5d0f0c6839",
+    "plotTitle": "Client response and replication backlog across warm-up, VACUUM, and recovery",
+    "sharedTimeAxis": true,
+    "timeAxisLabel": "Minutes since healthy warm-up began (primary DB clock)"
+  },
+  "sampling": {
+    "inWindowRows": 1555,
+    "inputRows": 1556,
+    "lineBreakCounts": {
+      "replicaReplayLongGaps": 0,
+      "standbyFlushLongGaps": 0
+    },
+    "malformedJsonRowCount": 0,
+    "malformedJsonRows": [],
+    "ordering": {
+      "duplicateTimestamps": 0,
+      "reorderedRows": 0
+    },
+    "outsideWindowRows": 1,
+    "timestampedRows": 1556,
+    "unplaceableRows": []
+  },
+  "schemaVersion": 1,
+  "series": {
+    "completedTps": {
+      "bucketCount": 810,
+      "bucketSeconds": 10.0,
+      "emptyBuckets": 0,
+      "source": "client-impact.series[].completedTps",
+      "targetTps": 5.0,
+      "validBuckets": 810
+    },
+    "executionLatencyP95Ms": {
+      "bucketCount": 810,
+      "definition": "Native pgbench execution latency after subtracting schedule lag; includes commit wait.",
+      "emptyBuckets": 220,
+      "source": "client-impact.series[].executionMs.p95",
+      "validBuckets": 590
+    },
+    "replicaReplayBacklogGiB": {
+      "coverageFraction": 0.9584915755710331,
+      "coveredSeconds": 7763.642089128494,
+      "definition": "max(0, primary.flushLsn - replica.replayLsn), converted to GiB.",
+      "firstValidSampleEpoch": 1791855220.9708104,
+      "firstValidSampleUtc": "2026-10-13T01:33:40.970Z",
+      "gapRule": "A line is broken at missing/invalid LSNs and between samples more than 10 seconds apart.",
+      "invalidFieldCounts": {},
+      "invalidSamples": 0,
+      "lastValidSampleEpoch": 1791862984.6128995,
+      "lastValidSampleUtc": "2026-10-13T03:43:04.612Z",
+      "longSamplingGapCount": 0,
+      "longSamplingGaps": [],
+      "maximumBacklog": 23.090364389121532,
+      "maximumTimestampGapSeconds": 8.611081838607788,
+      "maximumValidSampleGapSeconds": 8.611081838607788,
+      "negativeConcurrentLagClampedSamples": 6,
+      "unobservedLeadingSeconds": 304.52469849586487,
+      "unobservedTrailingSeconds": 31.687490701675415,
+      "validSamples": 1555
+    },
+    "standbyFlushBacklogMiB": {
+      "coverageFraction": 0.7566420090743815,
+      "coveredSeconds": 6128.690014362335,
+      "definition": "max(0, primary.flushLsn - sole primary.senders[0].flushLsn), converted to MiB.",
+      "firstValidSampleEpoch": 1791855220.9708104,
+      "firstValidSampleUtc": "2026-10-13T01:33:40.970Z",
+      "gapRule": "A line is broken at missing/invalid LSNs and between samples more than 10 seconds apart.",
+      "invalidFieldCounts": {
+        "primary.senders (expected exactly one sender)": 326
+      },
+      "invalidSamples": 326,
+      "lastValidSampleEpoch": 1791862984.6128995,
+      "lastValidSampleUtc": "2026-10-13T03:43:04.612Z",
+      "longSamplingGapCount": 0,
+      "longSamplingGaps": [],
+      "maximumBacklog": 19610.200973510742,
+      "maximumTimestampGapSeconds": 8.611081838607788,
+      "maximumValidSampleGapSeconds": 1634.952074766159,
+      "negativeConcurrentLagClampedSamples": 0,
+      "unobservedLeadingSeconds": 304.52469849586487,
+      "unobservedTrailingSeconds": 31.687490701675415,
+      "validSamples": 1229
+    }
+  },
+  "sources": {
+    "clientImpact": {
+      "path": "client-impact.json",
+      "sha256": "b7880255b9ecdd78fa33bd5b2d110ec0c11f5e3abb8ffdb5fdd42efc9da9831f"
+    },
+    "rawSamples": {
+      "path": "samples.jsonl",
+      "sha256": "ee6eb9ea4cce50b06d232783800bfa0f5c2a185c8305f853d39653e6c32c644a"
+    }
+  },
+  "window": {
+    "activeWindowSeconds": 8099.854278326035,
+    "clientStopRequestEpoch": 1791863016.3003902,
+    "clientStopRequestUtc": "2026-10-13T03:43:36.300Z",
+    "minuteZeroEpoch": 1791854916.446112,
+    "minuteZeroSource": "client-impact.phases.pre_vacuum.startEpoch (healthy warm-up start)",
+    "minuteZeroUtc": "2026-10-13T01:28:36.446Z",
+    "rawSampleBoundaryRule": "Only samples with primary DB epoch from minute zero through the mapped client stop request are plotted.",
+    "sampleLineBreakThresholdSeconds": 10.0,
+    "sampleNominalPeriodSeconds": 5.0,
+    "stopSource": "client-impact.clockAlignment.clientStopRequest.dbEpoch"
+  }
+}

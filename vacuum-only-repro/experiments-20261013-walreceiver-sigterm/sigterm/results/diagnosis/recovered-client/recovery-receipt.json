@@ -1,0 +1,263 @@
+{
+  "archiveAndStreamingLogEvidence": {
+    "assessment": "The replica logs show WAL archive restore continuing before the 08:31:05.335Z streaming restart; that is consistent with the long synchronous-standby absence, but does not locate the first client completion.",
+    "azureWalRestoreEventsAfterIntervention": 2054,
+    "firstArchiveRestore": {
+      "message": "Restored WAL file",
+      "timeUtc": "2026-10-13T05:28:15.746751Z",
+      "walName": "000000020000004E000000FB"
+    },
+    "lastArchiveRestoreBeforeStreaming": {
+      "message": "Restored WAL file",
+      "timeUtc": "2026-10-13T08:31:02.116608Z",
+      "walName": "000000020000005700000000"
+    },
+    "latestMissingWalEvents": [
+      {
+        "message": "WAL file not found in the recovery object store",
+        "timeUtc": "2026-10-13T08:31:04.644258Z",
+        "walName": "000000020000005700000001"
+      },
+      {
+        "message": "WAL file not found in the recovery object store",
+        "timeUtc": "2026-10-13T08:31:05.216623Z",
+        "walName": "000000020000005700000001"
+      }
+    ],
+    "latestRestartpointEvents": [
+      {
+        "detail": "Last completed transaction was at log time 2026-10-13 05:28:26.595558+00.",
+        "message": "recovery restart point at 56/DF000B60",
+        "role": "replica",
+        "timeUtc": "2026-10-13T08:32:03.207952Z"
+      },
+      {
+        "detail": "Last completed transaction was at log time 2026-10-13 05:28:26.595558+00.",
+        "message": "recovery restart point at 57/20220",
+        "role": "replica",
+        "timeUtc": "2026-10-13T08:36:33.078753Z"
+      },
+      {
+        "detail": "Last completed transaction was at log time 2026-10-13 05:28:26.595558+00.",
+        "message": "recovery restart point at 57/1001198",
+        "role": "replica",
+        "timeUtc": "2026-10-13T10:19:52.923760Z"
+      }
+    ],
+    "streamingAndQuorumEvents": [
+      {
+        "message": "standby \"hdd-pg-2\" is now a candidate for quorum synchronous standby",
+        "role": "primary",
+        "timeUtc": "2026-10-13T08:31:05.336065Z"
+      },
+      {
+        "detail": null,
+        "message": "started streaming WAL from primary at 57/1000000 on timeline 2",
+        "role": "replica",
+        "timeUtc": "2026-10-13T08:31:05.335968Z"
+      }
+    ]
+  },
+  "artifactLoss": {
+    "originalClientProcessSha256": "583a6ea80d2a6902fc17128e23ad40493eb19596509b55b089660331fe498d85",
+    "originalFailureStateRetained": true,
+    "originalTestStateSha256": "312a7f8d1ff4aa7e2f45cbaf90da357e86c211b23238397caa9cad1ea5453fe2",
+    "originalTimingSha256": "dacd1e41c0c8794ee0a409dac8795bf4faa17771da5e16b0b8b2cbffb1d4629e",
+    "probableCause": "The run source unconditionally removes the remote client work directory at 03-test.py:1511 after the failed drain. This is an inference from source plus missing local/remote files; deletion time was not recorded.",
+    "remoteWorkdirAbsentAtProbe": true,
+    "treatmentRawPgbenchLogsFound": false
+  },
+  "capturedAtUtc": "2026-10-13T10:27:42.109511+00:00",
+  "clientSessionTelemetry": {
+    "committedTransactionsWhileAllTenBlocked": [
+      4610
+    ],
+    "firstQualifyingUtc": "2026-10-13T05:28:27.302017Z",
+    "lastQualifyingUtc": "2026-10-13T07:53:16.689624Z",
+    "lastSampleActiveSessions": 10,
+    "lastSampleCommittedTransactions": 4610,
+    "lastSampleWaitingSessions": 10,
+    "nonqualifyingSamplesAfterSignal": 13,
+    "parseErrors": 0,
+    "path": "sigterm/results/measurement/client/sessions.jsonl",
+    "qualifyingAll10ActiveIpcSyncRepSamples": 8689,
+    "sameTenPidsBackendQueryXactStarts": true,
+    "samplesAfterSignal": 8702,
+    "sha256": "75e0a7557a568ad4aa5d8988b5a7dbd99e196b4bf4f9eb2b737aef1faa7dfa53"
+  },
+  "currentReadOnlyDatabaseState": {
+    "captureFile": "sigterm/results/diagnosis/recovered-client/current-readonly-capture.json",
+    "clientSessions": 0,
+    "fixtureRows": [
+      {
+        "clientId": 0,
+        "updateCount": 475
+      },
+      {
+        "clientId": 1,
+        "updateCount": 476
+      },
+      {
+        "clientId": 2,
+        "updateCount": 465
+      },
+      {
+        "clientId": 3,
+        "updateCount": 440
+      },
+      {
+        "clientId": 4,
+        "updateCount": 456
+      },
+      {
+        "clientId": 5,
+        "updateCount": 487
+      },
+      {
+        "clientId": 6,
+        "updateCount": 428
+      },
+      {
+        "clientId": 7,
+        "updateCount": 479
+      },
+      {
+        "clientId": 8,
+        "updateCount": 441
+      },
+      {
+        "clientId": 9,
+        "updateCount": 473
+      }
+    ],
+    "fixtureUpdateCountSum": 4620,
+    "primaryCaptureUtc": "2026-10-13T10:22:52.729741+00:00",
+    "replayTimestampCaveat": "The last replayed xact timestamp is the WAL transaction timestamp; it is not a wall-clock time at which these client sessions resumed.",
+    "replicaCaptureUtc": "2026-10-13T10:22:53.057523+00:00",
+    "replicaInRecovery": true,
+    "replicaLastXactReplayTimestamp": "2026-10-13T05:28:26.595558+00:00",
+    "replicaReceiveLsn": "57/2000110",
+    "replicaReplayLsn": "57/2000110",
+    "replicaWalReceiver": {
+      "flushedLsn": "57/2000110",
+      "lastMsgReceiptUtc": "2026-10-13T10:22:52.524871+00:00",
+      "lastMsgSendUtc": "2026-10-13T10:22:52.524792+00:00",
+      "latestEndLsn": "57/2000110",
+      "latestEndUtc": "2026-10-13T10:19:57.351027+00:00",
+      "pid": 358139,
+      "receiveStartLsn": "57/1000000",
+      "receivedTli": 2,
+      "status": "streaming",
+      "writtenLsn": "57/2000110"
+    },
+    "replicationSenders": [
+      {
+        "applicationName": "hdd-pg-2",
+        "backendStartUtc": "2026-10-13T08:31:05.326969+00:00",
+        "flushLsn": "57/2000110",
+        "pid": 455982,
+        "replayLsn": "57/2000110",
+        "sentLsn": "57/2000110",
+        "state": "streaming",
+        "syncState": "quorum",
+        "writeLsn": "57/2000110"
+      }
+    ],
+    "settings": {
+      "synchronous_commit": "on",
+      "synchronous_standby_names": "ANY 1 (\"hdd-pg-2\")",
+      "wal_sender_timeout": "5s"
+    }
+  },
+  "intervention": {
+    "executedAtUtc": "2026-10-13T05:28:14.076043501Z",
+    "mode": "sigterm",
+    "receiverPid": 71,
+    "signal": "SIGTERM",
+    "signalSent": true,
+    "vacuumStartUtc": "2026-10-13T05:18:12.699771Z"
+  },
+  "nativeAggregateProgress": {
+    "bytes": 157359,
+    "firstZeroTpsUtc": "2026-10-13T05:28:22.186000Z",
+    "lastProgressLine": "progress: 1791877412.185 s, 0.0 tps, lat 0.000 ms stddev 0.000, 0 failed, lag 0.000 ms",
+    "lastZeroTpsUtc": "2026-10-13T07:43:32.185000Z",
+    "limitation": "This is aggregate -P progress output, not per-transaction native logs.",
+    "lineCount": 1807,
+    "path": ".state/ongoing-monitor/native-progress-full/sigterm-pgbench.out",
+    "progressBuckets": 1805,
+    "sha256": "6b7f0cf5d5142816733f7f831bac3d6ee076ef4cdfe83eaec65885861d307a07",
+    "zeroTpsBuckets": 1623,
+    "zeroTpsSpanSeconds": 8109.999
+  },
+  "originalRunState": {
+    "clientStopOrCaptureFailedUtc": "2026-10-13T07:53:16.827Z",
+    "error": "VACUUM not confirmed complete (exit=0)",
+    "minimumObservationSatisfied": true,
+    "phase": "failed",
+    "remoteVacuumExitCode": 0,
+    "runnerObservationEndUtc": "2026-10-13T07:38:14.222643348Z",
+    "testComplete": false,
+    "timingTestComplete": false,
+    "vacuumCompleteUtc": null,
+    "vacuumStartMarkerUtc": "2026-10-13T05:18:12.699771Z"
+  },
+  "primaryPgActivityTelemetry": {
+    "evidenceDetailsFile": "sigterm/results/diagnosis/recovered-client/stable-writer-evidence-through-last-sample.json",
+    "firstAll10BlockedUtc": "2026-10-13T05:28:26.709299Z",
+    "lastAll10BlockedUtc": "2026-10-13T08:24:55.707409Z",
+    "lastSampleTupleUpdates": 4605,
+    "lastSampleXactCommit": 39384,
+    "maxGapBetweenQualifyingSamplesSeconds": 1.05,
+    "nonqualifyingSamplesAfterSignal": 12,
+    "parseErrors": 0,
+    "path": "sigterm/results/instrumentation/primary-pgstat.jsonl",
+    "qualifyingAll10ActiveIpcSyncRepSamples": 10590,
+    "rowCount": 11604,
+    "sameTenPidsQueryStartXactStartThroughout": true,
+    "sha256": "103fba62ceaa098919c4249cde62176eea96cc681a3c6ba3ef6617a88220efc4",
+    "spanSeconds": 10588.998
+  },
+  "readOnlyProbeHistory": {
+    "firstAttempt": "Read-only SELECT probe with psql -U app failed peer authentication before executing its query; no SQL was executed.",
+    "firstAttemptFile": "sigterm/results/diagnosis/recovered-client/current-readonly-capture-peer-app-failed.json",
+    "successfulRetry": "Same SELECT-only diagnostic ran with the container-local postgres role and is saved as current-readonly-capture.json."
+  },
+  "remoteClientProcess": {
+    "assessment": "Local RUNNING status is stale: remote pgbench PID and workdir were absent at the read-only probe; no local treatment raw transaction log directory is present.",
+    "localClientPid": 6106,
+    "localClientProcessReceiptStatus": "RUNNING",
+    "localClientWorkDirectory": "/controller/tmp/pgbench-200e6729d06e409d9acf53824eb4f579",
+    "primaryControllerArchiveBytes": 188,
+    "probeAtUtc": "2026-10-13T10:25:40.974047+00:00",
+    "probeFile": "sigterm/results/diagnosis/recovered-client/remote-client-process-probe.json",
+    "probeOutput": "pid=6106 absent\npid=6103 present comm=sh ppid=1 lstart=Tue Oct 13 05:13:06 2026 cwd=\ndir=/controller/tmp/pgbench-200e6729d06e409d9acf53824eb4f579 absent\ndir=/controller/tmp/pgbench-auth-95b5c9db9b0c42f4aa18b28f9e01b1c9 absent",
+    "treatmentRawClientDirExists": false
+  },
+  "resumption": {
+    "caveat": "Streaming/quorum recovery at 08:31:05.335Z is the first logged condition consistent with releasing SyncRep waits, but no native transaction log or later client sampler establishes the first resumed commit timestamp.",
+    "currentPrimaryFixtureCountCaptureUtc": "2026-10-13T10:22:52.729741+00:00",
+    "differenceFromLastBlockedClientSampler": 10,
+    "firstCompletionUtc": null,
+    "lastBlockedClientSamplerCount": 4610,
+    "latestBlockedSampleUtc": "2026-10-13T08:24:55.707409Z",
+    "likelyCatchupBoundaryEvents": [
+      {
+        "message": "standby \"hdd-pg-2\" is now a candidate for quorum synchronous standby",
+        "role": "primary",
+        "timeUtc": "2026-10-13T08:31:05.336065Z"
+      },
+      {
+        "detail": null,
+        "message": "started streaming WAL from primary at 57/1000000 on timeline 2",
+        "role": "replica",
+        "timeUtc": "2026-10-13T08:31:05.335968Z"
+      }
+    ],
+    "noLaterThanUtc": "2026-10-13T10:22:52.729741+00:00",
+    "notBeforeExclusiveUtc": "2026-10-13T08:24:55.707409Z",
+    "primaryFixtureUpdateCountSumAtCapture": 4620,
+    "status": "unresolved_exact_time_not_measured_after_last_blocked_sample"
+  },
+  "scope": "Read-only recovery of local evidence and point-in-time read-only remote probes. No SQL writes, PostgreSQL signals, or cloud/resource mutations."
+}

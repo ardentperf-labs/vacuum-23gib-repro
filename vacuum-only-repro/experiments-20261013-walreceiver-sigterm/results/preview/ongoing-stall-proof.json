@@ -1,0 +1,156 @@
+{
+  "capturedAtUtc": "2026-10-13T07:43:33.659Z",
+  "status": "ongoing_not_final",
+  "claimStatus": "two_hour_all_writer_stall_observed_at_this_checkpoint",
+  "note": "Point-in-time diagnostic, not final native-log reconciliation. Full native progress output was captured read-only while clients remained running. Sampled wait states apply only at recorded sample instants; no wait status is inferred across gaps. Treatment remains running.",
+  "intervention": {
+    "treatmentMode": "sigterm",
+    "treatmentStatus": "sent",
+    "vacuumStartUtc": "2026-10-13T05:18:12.699771Z",
+    "scheduledAtUtc": "2026-10-13T05:28:12.699771Z",
+    "executedAtUtc": "2026-10-13T05:28:14.076043501Z",
+    "signalSent": true,
+    "pid": 71,
+    "controlMode": "control",
+    "controlStatus": "marked",
+    "controlVacuumStartUtc": "2026-10-13T05:18:14.223251Z",
+    "controlMarkerExecutedAtUtc": "2026-10-13T05:28:16.431125Z"
+  },
+  "treatmentObservedWriterStability": {
+    "qualifyingSamplesInCurrentIdentityStreak": 8106,
+    "firstObservedAtUtc": "2026-10-13T05:28:27.302017Z",
+    "lastObservedAtUtc": "2026-10-13T07:43:33.616301Z",
+    "spanSeconds": 8106.314,
+    "latestOfTenQueryStartUtc": "2026-10-13T05:28:26.595364Z",
+    "minimumAgeAcrossAllTenStatementsAtLatestSampleSeconds": 8107.021,
+    "twoHourAllWritersInFlightWithoutCompletionObserved": true,
+    "maximumGapBetweenQualifyingSamplesSeconds": 1.623,
+    "allTenSampledAsActiveIpcSyncRep": true,
+    "identities": [
+      {
+        "pid": 6119,
+        "backendStartUtc": "2026-10-13T05:13:07.183245Z",
+        "queryStartUtc": "2026-10-13T05:28:14.776063Z",
+        "xactStartUtc": "2026-10-13T05:28:14.776063Z"
+      },
+      {
+        "pid": 6120,
+        "backendStartUtc": "2026-10-13T05:13:07.183860Z",
+        "queryStartUtc": "2026-10-13T05:28:16.483865Z",
+        "xactStartUtc": "2026-10-13T05:28:16.483865Z"
+      },
+      {
+        "pid": 6121,
+        "backendStartUtc": "2026-10-13T05:13:07.184871Z",
+        "queryStartUtc": "2026-10-13T05:28:15.569545Z",
+        "xactStartUtc": "2026-10-13T05:28:15.569545Z"
+      },
+      {
+        "pid": 6122,
+        "backendStartUtc": "2026-10-13T05:13:07.185779Z",
+        "queryStartUtc": "2026-10-13T05:28:15.697217Z",
+        "xactStartUtc": "2026-10-13T05:28:15.697217Z"
+      },
+      {
+        "pid": 6123,
+        "backendStartUtc": "2026-10-13T05:13:07.186656Z",
+        "queryStartUtc": "2026-10-13T05:28:14.170077Z",
+        "xactStartUtc": "2026-10-13T05:28:14.170077Z"
+      },
+      {
+        "pid": 6124,
+        "backendStartUtc": "2026-10-13T05:13:07.187512Z",
+        "queryStartUtc": "2026-10-13T05:28:14.410374Z",
+        "xactStartUtc": "2026-10-13T05:28:14.410374Z"
+      },
+      {
+        "pid": 6125,
+        "backendStartUtc": "2026-10-13T05:13:07.190870Z",
+        "queryStartUtc": "2026-10-13T05:28:15.294031Z",
+        "xactStartUtc": "2026-10-13T05:28:15.294031Z"
+      },
+      {
+        "pid": 6126,
+        "backendStartUtc": "2026-10-13T05:13:07.192024Z",
+        "queryStartUtc": "2026-10-13T05:28:16.758857Z",
+        "xactStartUtc": "2026-10-13T05:28:16.758857Z"
+      },
+      {
+        "pid": 6127,
+        "backendStartUtc": "2026-10-13T05:13:07.202683Z",
+        "queryStartUtc": "2026-10-13T05:28:15.585800Z",
+        "xactStartUtc": "2026-10-13T05:28:15.585800Z"
+      },
+      {
+        "pid": 6128,
+        "backendStartUtc": "2026-10-13T05:13:07.196850Z",
+        "queryStartUtc": "2026-10-13T05:28:26.595364Z",
+        "xactStartUtc": "2026-10-13T05:28:26.595364Z"
+      }
+    ],
+    "committedTransactionsAtFirstAndLastSample": [
+      4610,
+      4610
+    ],
+    "successfulSamplesSinceIntervention": 8119,
+    "sampleErrorsSinceIntervention": 0
+  },
+  "lanes": {
+    "sigterm": {
+      "latestSampleUtc": "2026-10-13T07:43:33.616301Z",
+      "latestSampleStatus": "ok",
+      "committedTransactions": 4610,
+      "activeSessions": 10,
+      "waitingSessions": 10,
+      "sessionsLogSha256AtCapture": "2501f00b9d8c7db719b0b3f47665174b702b32d206d332b78d6512e03520242f",
+      "sampleCountAtCapture": 9026
+    },
+    "control": {
+      "latestSampleUtc": "2026-10-13T07:43:33.651605Z",
+      "latestSampleStatus": "ok",
+      "committedTransactions": 43670,
+      "activeSessions": 0,
+      "waitingSessions": 0,
+      "sessionsLogSha256AtCapture": "cf15e0cedc199ae5e556820e62a15c4c50e33d1ab3c7380fa6ba077b83233192",
+      "sampleCountAtCapture": 9025
+    }
+  },
+  "nativeFullProgressSnapshot": {
+    "sigterm": {
+      "privateSnapshotPath": ".state/ongoing-monitor/native-progress-full/sigterm-pgbench.out",
+      "captureSha256": "6b7f0cf5d5142816733f7f831bac3d6ee076ef4cdfe83eaec65885861d307a07",
+      "captureBytes": 157359,
+      "captureLineCount": 1807,
+      "progressBuckets": 1805,
+      "bucketsAfterSignal": 1624,
+      "failedBucketsTotal": 0,
+      "lastProgressLine": "progress: 1791877412.185 s, 0.0 tps, lat 0.000 ms stddev 0.000, 0 failed, lag 0.000 ms",
+      "nonzeroTpsBucketsAfterSignal": 1,
+      "zeroTpsBucketsAfterSignal": 1623,
+      "lastNonzeroBucketUtc": "2026-10-13T05:28:17.184000Z",
+      "firstZeroBucketAfterSignalUtc": "2026-10-13T05:28:22.186000Z",
+      "lastZeroBucketUtc": "2026-10-13T07:43:32.185000Z",
+      "zeroBucketsConsecutiveAtEnd": true,
+      "zeroBucketsFailedZero": true
+    },
+    "control": {
+      "privateSnapshotPath": ".state/ongoing-monitor/native-progress-full/control-pgbench.out",
+      "captureSha256": "c88162595b8d978bdbaaadf3d877e9341e654b913bd4b0ce05a2a39b6d9f059f",
+      "captureBytes": 153455,
+      "captureLineCount": 1758,
+      "progressBuckets": 1742,
+      "bucketsAfterSignal": 1561,
+      "failedBucketsTotal": 0,
+      "lastProgressLine": "progress: 1791877098.228 s, 4.0 tps, lat 9.442 ms stddev 5.305, 0 failed, lag 0.154 ms"
+    }
+  },
+  "treatmentNativeRecentTailZeroTps": true,
+  "sources": {
+    "treatmentSessionsJsonl": "sigterm/results/measurement/client/sessions.jsonl",
+    "controlSessionsJsonl": "control/results/measurement/client/sessions.jsonl",
+    "treatmentNativeProgress": "read-only full pgbench.out snapshot",
+    "controlNativeProgress": "read-only full pgbench.out snapshot",
+    "treatmentIntervention": "sigterm/results/measurement/walreceiver-intervention.json",
+    "controlMarker": "control/results/measurement/walreceiver-intervention.json"
+  }
+}

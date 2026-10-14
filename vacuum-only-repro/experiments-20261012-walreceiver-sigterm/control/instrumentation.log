@@ -1,0 +1,16 @@
+{"event": "READY", "preflight": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/preflight.json"}
+{"event": "READY", "preflight": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/preflight.json"}
+Exception in thread replica-pgstat:
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "<workspace>/experiments/20261012-walreceiver-sigterm/control/instrumentation/collect.py", line 487, in consume
+    self.status("failed", error=self.fatal_errors[-1])
+  File "<workspace>/experiments/20261012-walreceiver-sigterm/control/instrumentation/collect.py", line 365, in status
+    atomic_json(self.status_path, {"updatedAtUtc": iso(), "phase": phase,
+  File "<workspace>/experiments/20261012-walreceiver-sigterm/control/instrumentation/collect.py", line 47, in atomic_json
+    os.replace(tmp, path)
+FileNotFoundError: [Errno 2] No such file or directory: '<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/collector-status.json.tmp' -> '<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/collector-status.json'
+collector failed: required collector stopped: replica diskstats stream exited unexpectedly with 1; replica PostgreSQL watcher exited unexpectedly with 1; primary PostgreSQL watcher exited unexpectedly with 1; primary diskstats stream exited unexpectedly with 1

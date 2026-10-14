@@ -1,0 +1,164 @@
+{
+  "capturedAtUtc": "2026-10-13T10:29:58.335886+00:00",
+  "redactions": {
+    "ownerToken": true,
+    "podUids": true,
+    "privatePaths": true,
+    "resourceGroup": true,
+    "sourceSnapshotIds": true,
+    "subscriptionId": true
+  },
+  "roles": [
+    {
+      "appClientSessions": 0,
+      "checkpointLsn": "57/11000060",
+      "checkpointTimeline": 2,
+      "currentFlushLsn": "57/12000000",
+      "files": [
+        {
+          "bytes": 2282,
+          "path": "pg_controldata.txt",
+          "sha256": "aaf9811a17acc4eca5b0b93b8ff9cf673894afda4bfaefb9de2f415859cc58ce",
+          "status": "present"
+        },
+        {
+          "bytes": 8192,
+          "path": "global/pg_control",
+          "sha256": "a54954d457e2e31e7c2b9e9aa82fc49d9062bea6bee9327e812eb295515a412b",
+          "status": "present"
+        },
+        {
+          "bytes": 37,
+          "path": "history/00000002.history",
+          "sha256": "97ebe9b00433cc6d7b4945cccea3fa6e5efc695ae5dd2d97a533c3fa4d72b437",
+          "status": "present"
+        },
+        {
+          "bytes": 16777216,
+          "path": "wal/000000020000005700000011",
+          "sha256": "8fa7f890f45e6beb59ff1e8ab7f4f68da164125217593844a923d5fa716955d8",
+          "status": "present"
+        },
+        {
+          "bytes": 3708,
+          "path": "metadata.json",
+          "sha256": "9f81207d47eb62949bc4aed380a0923c9d0911cd1ccf3c54d7efeefe4853a4a8",
+          "status": "present"
+        }
+      ],
+      "isInRecovery": false,
+      "optionalRecoveryFiles": {
+        "backup_label": {
+          "bytes": 0,
+          "sha256": null,
+          "status": "absent"
+        },
+        "tablespace_map": {
+          "bytes": 0,
+          "sha256": null,
+          "status": "absent"
+        }
+      },
+      "pgControlBinary": {
+        "bytes": 8192,
+        "path": "global/pg_control",
+        "sha256": "a54954d457e2e31e7c2b9e9aa82fc49d9062bea6bee9327e812eb295515a412b",
+        "status": "present"
+      },
+      "receiveLsn": null,
+      "replayLsn": null,
+      "role": "primary",
+      "stableWalCapture": {
+        "file": {
+          "bytes": 16777216,
+          "path": "wal/000000020000005700000011",
+          "sha256": "8fa7f890f45e6beb59ff1e8ab7f4f68da164125217593844a923d5fa716955d8",
+          "status": "present"
+        },
+        "status": "captured"
+      },
+      "systemIdentifier": "7692518806614212629",
+      "timelineHex": "00000002",
+      "vacuumClientSessions": 0
+    },
+    {
+      "appClientSessions": 0,
+      "checkpointLsn": "57/11000060",
+      "checkpointTimeline": 2,
+      "currentFlushLsn": null,
+      "files": [
+        {
+          "bytes": 2296,
+          "path": "pg_controldata.txt",
+          "sha256": "a021d2fae3f8d371b4f811448769f6cead842f0e05aeaf004cb8c1446fcbfce5",
+          "status": "present"
+        },
+        {
+          "bytes": 8192,
+          "path": "global/pg_control",
+          "sha256": "e63ed79e66c869e66eb82cdd79bbf32e0f142c2585de61ce6533e6341369d97b",
+          "status": "present"
+        },
+        {
+          "bytes": 37,
+          "path": "history/00000002.history",
+          "sha256": "97ebe9b00433cc6d7b4945cccea3fa6e5efc695ae5dd2d97a533c3fa4d72b437",
+          "status": "present"
+        },
+        {
+          "bytes": 16777216,
+          "path": "wal/000000020000005700000011",
+          "sha256": "8fa7f890f45e6beb59ff1e8ab7f4f68da164125217593844a923d5fa716955d8",
+          "status": "present"
+        },
+        {
+          "bytes": 3932,
+          "path": "metadata.json",
+          "sha256": "7705f1df0c42e78470564b08f6060c6348f08543bd448dd1fce9c84c2014ea03",
+          "status": "present"
+        }
+      ],
+      "isInRecovery": true,
+      "optionalRecoveryFiles": {
+        "backup_label": {
+          "bytes": 0,
+          "sha256": null,
+          "status": "absent"
+        },
+        "tablespace_map": {
+          "bytes": 0,
+          "sha256": null,
+          "status": "absent"
+        }
+      },
+      "pgControlBinary": {
+        "bytes": 8192,
+        "path": "global/pg_control",
+        "sha256": "e63ed79e66c869e66eb82cdd79bbf32e0f142c2585de61ce6533e6341369d97b",
+        "status": "present"
+      },
+      "receiveLsn": "57/12000000",
+      "replayLsn": "57/12000000",
+      "role": "replica",
+      "stableWalCapture": {
+        "file": {
+          "bytes": 16777216,
+          "path": "wal/000000020000005700000011",
+          "sha256": "8fa7f890f45e6beb59ff1e8ab7f4f68da164125217593844a923d5fa716955d8",
+          "status": "present"
+        },
+        "status": "captured"
+      },
+      "systemIdentifier": "7692518806614212629",
+      "timelineHex": "00000002",
+      "vacuumClientSessions": 0
+    }
+  ],
+  "sourcePairProofSha256": "da7455ab25a1f8f413af494de64feb16f5dd3a25740dc74a4b7fa64ed28eec8a",
+  "sourceSnapshotsPreserved": true,
+  "stack": "control",
+  "status": "complete",
+  "systemIdentifier": "7692518806614212629",
+  "timeline": 2,
+  "version": 1
+}

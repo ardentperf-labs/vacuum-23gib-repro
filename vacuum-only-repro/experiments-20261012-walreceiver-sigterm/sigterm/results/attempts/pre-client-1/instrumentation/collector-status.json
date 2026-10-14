@@ -1,0 +1,25 @@
+{
+  "coveragePath": "<workspace>/experiments/20261012-walreceiver-sigterm/sigterm/results/instrumentation/coverage.json",
+  "fatalErrors": [],
+  "phase": "stopped",
+  "roles": {
+    "primary": {
+      "bccError": "BCC processes did not announce ready within 25 seconds",
+      "bccGaps": [],
+      "bccPod": "wal-bcc-pr-f1a5a321",
+      "bccReady": true,
+      "node": "aks-nodepool1-90183240-vmss000001",
+      "pod": "hdd-pg-1"
+    },
+    "replica": {
+      "bccError": "BCC processes did not announce ready within 25 seconds",
+      "bccGaps": [],
+      "bccPod": "wal-bcc-re-77543b55",
+      "bccReady": true,
+      "node": "aks-nodepool1-90183240-vmss000000",
+      "pod": "hdd-pg-2"
+    }
+  },
+  "stoppedAtUtc": "2026-10-13T01:17:39.272Z",
+  "updatedAtUtc": "2026-10-13T01:22:54.071Z"
+}

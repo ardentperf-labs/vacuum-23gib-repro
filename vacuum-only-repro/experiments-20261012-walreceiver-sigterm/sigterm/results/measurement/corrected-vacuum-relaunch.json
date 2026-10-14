@@ -1,0 +1,92 @@
+{
+  "actualVacuumStart": {
+    "applicationName": "vacuum-only-cbaa6b600a8c45e891c034fc868cb87a",
+    "backendPid": 46787,
+    "heapBlocksScannedAtVerification": 68768,
+    "heapBlocksTotal": 3014656,
+    "marker": "VACUUM_START|2026-10-13T01:45:37.839937Z|4E/5F00F150|923047|10715|52",
+    "markerTimeUtc": "2026-10-13T01:45:37.839937Z",
+    "phase": "scanning heap",
+    "query": "VACUUM (VERBOSE, FREEZE) public.vacuum_target;",
+    "state": "active",
+    "waitEvent": "DataFileRead",
+    "waitEventType": "IO"
+  },
+  "clientAndReplicationAtVerification": {
+    "primaryWalSender": {
+      "pid": 3254,
+      "state": "streaming",
+      "syncState": "quorum"
+    },
+    "replicaWalReceiver": {
+      "lastMessageReceiptTime": "2026-10-13T01:46:19.091703+00:00",
+      "pid": 74,
+      "status": "streaming"
+    },
+    "writerSessions": 10,
+    "writerUpdateCounter": 5370
+  },
+  "collectorGate": {
+    "azureNativeInterval": "PT1M",
+    "azurePollId": "189ace96feea",
+    "azureReadinessPassed": true,
+    "azureValidatedAtUtc": "2026-10-13T01:43:53.854Z",
+    "fatalErrors": [],
+    "phase": "collecting",
+    "updatedAtUtc": "2026-10-13T01:43:53.856Z"
+  },
+  "correctedRelaunch": {
+    "correctedSqlSha256": "90db3f6e6e956d16f55e6813d2c84510b2e566aa3647264cc7f836c375bda96f",
+    "launchAtUtc": "2026-10-13T01:45:37.801194089Z",
+    "markerPrograms": [
+      "cat > /controller/tmp/vacuum-86347b603d0947b48e88e176ae5c4ce5/vacuum-start.marker",
+      "cat > /controller/tmp/vacuum-86347b603d0947b48e88e176ae5c4ce5/vacuum-complete.marker"
+    ],
+    "oneShotGuard": "/controller/tmp/vacuum-86347b603d0947b48e88e176ae5c4ce5/corrected-relaunch-attempted",
+    "statusAtVerification": "RUNNING",
+    "workDirectory": "/controller/tmp/vacuum-86347b603d0947b48e88e176ae5c4ce5",
+    "wrapperPid": 46781
+  },
+  "createdAtUtc": "2026-10-13T01:46:38.443Z",
+  "interventionMode": "sigterm",
+  "interventionSchedule": "Existing measurement runner watches the actual remote VACUUM_START marker and schedules the selected mode at marker time plus 600 seconds; treatment SIGTERMs exactly one verified replica walreceiver, control records the matched time without signaling.",
+  "lane": "sigterm",
+  "notes": [
+    "Clients and original measurement runners were kept alive across relaunch.",
+    "Prelaunch failure did not start target VACUUM; the same existing work directory was reused once after corrected absolute paths.",
+    "Results demonstrate VACUUM was active at first verification; they do not yet establish the requested two-hour client-hang outcome."
+  ],
+  "prelaunchFailure": {
+    "archivePath": "results/preparation/failed-vacuum-launch/sigterm",
+    "archivedFiles": {
+      "run.sh": {
+        "bytes": 745,
+        "sha256": "6ba34acf847ded2c4bbc4b7cde8430a50679fb4be6a9719b0704244d53a92356"
+      },
+      "status": {
+        "bytes": 2,
+        "sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2"
+      },
+      "vacuum.log": {
+        "bytes": 213,
+        "sha256": "085c4fa096eec22e4848478f7eb2e41aeaa511ab927f3a35afa67bcd4f105e80"
+      },
+      "vacuum.sql": {
+        "bytes": 627,
+        "sha256": "1a909d44088c09d61042946707f67b6cbe734663636397d0acec27d5530297d5"
+      }
+    },
+    "clientWriterSessions": 10,
+    "exitCode": 3,
+    "originalLauncherPid": 11882,
+    "targetVacuumAppSessions": 0,
+    "targetVacuumProgressRows": 0
+  },
+  "relaunchReason": "The first detached psql launch failed before VACUUM: its COPY TO PROGRAM marker path was relative to PostgreSQL working directory rather than the absolute controller work directory. The failure artifacts were preserved; no target VACUUM/session/progress was active at relaunch.",
+  "schemaVersion": 1,
+  "warmup": {
+    "actualVacuumStartEpoch": 1791855937.839937,
+    "clientWarmupEndEpoch": 1791855218.1918557,
+    "steadyClientSecondsAfterFiveMinuteWarmupBeforeActualVacuum": 719.648
+  }
+}

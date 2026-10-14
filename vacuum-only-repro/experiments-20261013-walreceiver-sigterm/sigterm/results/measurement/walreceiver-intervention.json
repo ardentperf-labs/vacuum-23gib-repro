@@ -1,0 +1,59 @@
+{
+  "afterVacuumStartSeconds": 600,
+  "causalNote": "SIGTERM of the replica walreceiver simulates a stream disconnect; it does not itself cause a primary wal_sender_timeout.",
+  "executedAtUtc": "2026-10-13T05:28:14.076043501Z",
+  "mode": "sigterm",
+  "scheduledAtUtc": "2026-10-13T05:28:12.699771Z",
+  "schedulerDispatchLatenessSeconds": 0.0001361370086669922,
+  "schedulerDispatchStartedAtUtc": "2026-10-13T05:28:12.699Z",
+  "schedulerStartedAtUtc": "2026-10-13T05:18:13.630Z",
+  "signalResult": {
+    "inRecovery": true,
+    "mechanism": "kill -TERM after repeated SQL identity checks, stable /proc PID/starttime/UID/executable checks, and two walreceiver command-line type checks",
+    "pid": 71,
+    "processIdentity": {
+      "commandLine": "postgres: hdd-pg: walreceiver streaming 4F/F1DA18A8 ",
+      "commandLineAfter": "postgres: hdd-pg: walreceiver streaming 4F/F1DA18A8 ",
+      "commandLineBefore": "postgres: hdd-pg: walreceiver streaming 4F/F1C24250 ",
+      "commandLineSha256": "4cfc6b2220fbb45c91f7f5989c0bb7e5cb890aeb9b741bc673de5f51d37fc2af",
+      "commandLineSha256After": "4cfc6b2220fbb45c91f7f5989c0bb7e5cb890aeb9b741bc673de5f51d37fc2af",
+      "commandLineSha256Before": "faca106bf3afdcf18c3881ac034d966d0ff73de13f4ac8ecd29a5edd493abce5",
+      "executable": "/usr/lib/postgresql/16/bin/postgres",
+      "pid": 71,
+      "startTicks": 260696,
+      "uid": 26
+    },
+    "receiverCount": 1,
+    "receiverRecheck": {
+      "backendStart": "2026-10-13 04:49:28.886373+00",
+      "backendType": "walreceiver",
+      "count": 1,
+      "inRecovery": true,
+      "pid": 71,
+      "receiveStartLsn": "4E/56000000",
+      "status": "streaming"
+    },
+    "receivers": [
+      {
+        "applicationName": "",
+        "backendStart": "2026-10-13T04:49:28.886373+00:00",
+        "backendType": "walreceiver",
+        "pid": 71,
+        "receiveStartLsn": "4E/56000000",
+        "status": "streaming"
+      }
+    ],
+    "signal": "SIGTERM",
+    "signalAcceptedAtUtc": "2026-10-13T05:28:14.077112213Z",
+    "signalRequestedAtUtc": "2026-10-13T05:28:14.076043501Z",
+    "signalSent": true
+  },
+  "status": "sent",
+  "vacuumStartMarker": {
+    "flushLsn": "4E/5D024630",
+    "time": "2026-10-13T05:18:12.699771Z",
+    "walBytes": 320769,
+    "walFpi": 24,
+    "walRecords": 3324
+  }
+}

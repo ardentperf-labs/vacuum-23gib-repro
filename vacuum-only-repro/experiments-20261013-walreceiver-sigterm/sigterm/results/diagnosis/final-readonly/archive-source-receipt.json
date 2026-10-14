@@ -1,0 +1,59 @@
+{
+  "capturedAtUtc": "2026-10-13T10:33:07.164Z",
+  "clusterRead": {
+    "archiveSource": {
+      "backup": {
+        "barmanObjectStore": {
+          "configured": false
+        },
+        "configured": false,
+        "method": null,
+        "online": null,
+        "secretSelectors": []
+      },
+      "bootstrap": {
+        "pgBasebackupConfigured": false,
+        "recoveryConfigured": false,
+        "recoverySourceNames": []
+      },
+      "capturedAtUtc": "2026-10-13T10:33:07.842Z",
+      "cluster": {
+        "generation": null,
+        "name": null,
+        "namespace": null,
+        "uid": null
+      },
+      "externalClusters": [],
+      "plugins": [],
+      "rawClusterSpecWritten": false
+    },
+    "available": true
+  },
+  "namespace": "repro",
+  "resources": {
+    "backups": {
+      "apiAvailable": true,
+      "count": 0,
+      "items": []
+    },
+    "objectStores": {
+      "apiAvailable": false,
+      "count": null,
+      "error": "read failed; raw kubectl output omitted"
+    },
+    "scheduledBackups": {
+      "apiAvailable": true,
+      "count": 0,
+      "items": []
+    }
+  },
+  "safety": {
+    "commandValuesWritten": false,
+    "rawClusterSpecWritten": false,
+    "secretValuesQueried": false
+  },
+  "setupProof": {
+    "available": false,
+    "reason": "state directory not resolved"
+  }
+}

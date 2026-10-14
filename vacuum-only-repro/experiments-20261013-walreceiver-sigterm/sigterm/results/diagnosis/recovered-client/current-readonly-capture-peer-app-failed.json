@@ -1,0 +1,47 @@
+{
+  "pods": {
+    "capturedAtUtc": "2026-10-13T10:22:42.310090+00:00",
+    "exitCode": 0,
+    "items": [
+      {
+        "name": "hdd-pg-1",
+        "phase": "Running",
+        "restarts": [
+          0
+        ],
+        "uid": "237e5a50-de2f-4644-aca2-133234626c4d"
+      },
+      {
+        "name": "hdd-pg-2",
+        "phase": "Running",
+        "restarts": [
+          0
+        ],
+        "uid": "9839462c-f59e-413c-be2c-fcb47c94aa69"
+      }
+    ]
+  },
+  "primary": {
+    "endedAtUtc": "2026-10-13T10:22:41.513753+00:00",
+    "exitCode": 2,
+    "pod": "hdd-pg-1",
+    "startedAtUtc": "2026-10-13T10:22:41.190097+00:00",
+    "stderr": "Defaulted container \"postgres\" out of: postgres, bootstrap-controller (init)\npsql: error: connection to server on socket \"/controller/run/.s.PGSQL.5432\" failed: FATAL:  Peer authentication failed for user \"app\"\ncommand terminated with exit code 2",
+    "stdout": ""
+  },
+  "primaryClientProcessProbe": {
+    "endedAtUtc": "2026-10-13T10:22:42.200340+00:00",
+    "exitCode": 0,
+    "startedAtUtc": "2026-10-13T10:22:41.881466+00:00",
+    "stderr": "Defaulted container \"postgres\" out of: postgres, bootstrap-controller (init)",
+    "stdout": "pid=6106 absent\npid=6103 present comm=sh ppid=1 cwd= lstart=Tue Oct 13 05:13:06 2026\ndir=/controller/tmp/pgbench-200e6729d06e409d9acf53824eb4f579 absent\ndir=/controller/tmp/pgbench-auth-95b5c9db9b0c42f4aa18b28f9e01b1c9 absent"
+  },
+  "replica": {
+    "endedAtUtc": "2026-10-13T10:22:41.881424+00:00",
+    "exitCode": 2,
+    "pod": "hdd-pg-2",
+    "startedAtUtc": "2026-10-13T10:22:41.513818+00:00",
+    "stderr": "Defaulted container \"postgres\" out of: postgres, bootstrap-controller (init)\npsql: error: connection to server on socket \"/controller/run/.s.PGSQL.5432\" failed: FATAL:  Peer authentication failed for user \"app\"\ncommand terminated with exit code 2",
+    "stdout": ""
+  }
+}

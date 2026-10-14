@@ -1,0 +1,114 @@
+{
+  "capturedAtUtc": "2026-10-13T05:11:33.455Z",
+  "clusterRead": {
+    "archiveSource": {
+      "backup": {
+        "barmanObjectStore": {
+          "configured": false
+        },
+        "configured": false,
+        "method": null,
+        "online": null,
+        "secretSelectors": []
+      },
+      "bootstrap": {
+        "pgBasebackupConfigured": false,
+        "recoveryConfigured": false,
+        "recoverySourceNames": []
+      },
+      "capturedAtUtc": "2026-10-13T05:11:33.551Z",
+      "cluster": {
+        "generation": null,
+        "name": null,
+        "namespace": null,
+        "uid": null
+      },
+      "externalClusters": [],
+      "plugins": [],
+      "rawClusterSpecWritten": false
+    },
+    "available": true
+  },
+  "namespace": "repro",
+  "resources": {
+    "backups": {
+      "apiAvailable": true,
+      "count": 0,
+      "items": []
+    },
+    "objectStores": {
+      "apiAvailable": false,
+      "count": null,
+      "error": "read failed; raw kubectl output omitted"
+    },
+    "scheduledBackups": {
+      "apiAvailable": true,
+      "count": 0,
+      "items": []
+    }
+  },
+  "safety": {
+    "commandValuesWritten": false,
+    "rawClusterSpecWritten": false,
+    "secretValuesQueried": false
+  },
+  "setupProof": {
+    "archiveReceipt": {
+      "backend": "CNPG 1.30.1 in-tree BarmanObjectStore",
+      "destination": {
+        "configured": true,
+        "destinationSha256": "cc83db578786f4847be4dad996a34e4920013842c01a8f719900c4ff6843c15e",
+        "host": "cnpgwal3a1425506c60047d1.blob.core.windows.net",
+        "pathComponentCount": 3,
+        "queryOrFragmentOmitted": false,
+        "scheme": "https"
+      },
+      "postgresImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+      "secretReference": {
+        "key": "connection-string",
+        "name": "azure-barman-credentials"
+      },
+      "serverName": "hdd-pg",
+      "smokeReceiptConfigured": true,
+      "snapshotLineagePresent": true,
+      "sourceLockVerificationPresent": true,
+      "sourceSnapshotCount": null,
+      "status": "ready"
+    },
+    "available": true,
+    "ownerTokenCopied": false,
+    "secretValuesCopied": false,
+    "smokeReceipt": {
+      "archiveObject": {
+        "configured": true,
+        "destinationSha256": "3cf95bb2eace20ef9176a1ff690ba23d6d4755257a6357e88e0f0234e34b34c7",
+        "host": null,
+        "pathComponentCount": 6,
+        "queryOrFragmentOmitted": false,
+        "scheme": null
+      },
+      "archiver": {},
+      "bytes": 16777216,
+      "checks": {
+        "allThreeHashesMatch": true,
+        "blobDownloadedByAzureCli": true,
+        "blobListedByAzureCli": true,
+        "cnpgManagerWalRestoreSucceeded": true,
+        "livePgWalTargeted": false,
+        "restoreDestinationOutsidePgData": true,
+        "snapshotLineagePreserved": true,
+        "sourceLocksPreserved": true,
+        "sourceSnapshotsReadOnly": true
+      },
+      "hashes": {
+        "closedPrimarySegmentSha256": "8398188fa8f30ef2f862300a9409e0503ff4c2db5007211df8718a738c62d9bb",
+        "cnpgManagerWalRestoreSha256": "8398188fa8f30ef2f862300a9409e0503ff4c2db5007211df8718a738c62d9bb",
+        "independentAzureDownloadSha256": "8398188fa8f30ef2f862300a9409e0503ff4c2db5007211df8718a738c62d9bb"
+      },
+      "hashesAllEqual": true,
+      "status": "complete",
+      "walName": "000000020000004E00000059"
+    },
+    "snapshotIdsCopied": false
+  }
+}

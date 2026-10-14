@@ -1,0 +1,137 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-13T03:17:30Z",
+            "involvedObject": {
+                "apiVersion": "acn.azure.com/v1alpha",
+                "kind": "NodeNetworkConfig",
+                "name": "aks-nodepool1-12067992-vmss000000",
+                "namespace": "kube-system",
+                "resourceVersion": "779",
+                "uid": "af810e78-1e14-4915-a30a-fc0d6167abef"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-13T03:17:30Z",
+            "message": "Published NC 4565cb9c-58e0-40db-a2b3-808e1189566e",
+            "metadata": {
+                "creationTimestamp": "2026-10-13T03:17:30Z",
+                "name": "aks-nodepool1-12067992-vmss000000.18ddf87eca5a63c4",
+                "namespace": "kube-system",
+                "resourceVersion": "64644",
+                "uid": "ef80a69e-5dda-415c-998d-c67561e03206"
+            },
+            "reason": "UpdatedNC",
+            "reportingComponent": "dnc-rc/nnc-reconciler",
+            "reportingInstance": "",
+            "source": {
+                "component": "dnc-rc/nnc-reconciler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-13T03:17:30Z",
+            "involvedObject": {
+                "apiVersion": "acn.azure.com/v1alpha",
+                "kind": "NodeNetworkConfig",
+                "name": "aks-nodepool1-12067992-vmss000001",
+                "namespace": "kube-system",
+                "resourceVersion": "772",
+                "uid": "c0a71deb-dd1d-4465-a37d-0de5dcd50414"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-13T03:17:30Z",
+            "message": "Published NC 39916368-1e87-4bce-a907-1531be0748ff",
+            "metadata": {
+                "creationTimestamp": "2026-10-13T03:17:30Z",
+                "name": "aks-nodepool1-12067992-vmss000001.18ddf87eca5b5e2b",
+                "namespace": "kube-system",
+                "resourceVersion": "64645",
+                "uid": "aa1e88ca-c962-4b1a-87ea-74b12d743174"
+            },
+            "reason": "UpdatedNC",
+            "reportingComponent": "dnc-rc/nnc-reconciler",
+            "reportingInstance": "",
+            "source": {
+                "component": "dnc-rc/nnc-reconciler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-13T03:44:43Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{bcc}",
+                "kind": "Pod",
+                "name": "wal-bcc-pr-a5c5e12c",
+                "namespace": "repro",
+                "resourceVersion": "34793",
+                "uid": "27a9da56-7847-4f23-8920-11891d15d34f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-13T03:44:43Z",
+            "message": "Stopping container bcc",
+            "metadata": {
+                "creationTimestamp": "2026-10-13T03:44:43Z",
+                "name": "wal-bcc-pr-a5c5e12c.18ddf9fb0804c136",
+                "namespace": "repro",
+                "resourceVersion": "73218",
+                "uid": "8c89ba9f-a61f-4382-a4b9-4977e552840b"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-12067992-vmss000001",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-12067992-vmss000001"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-13T03:44:45Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{bcc}",
+                "kind": "Pod",
+                "name": "wal-bcc-re-71e8212f",
+                "namespace": "repro",
+                "resourceVersion": "34942",
+                "uid": "a0f3985d-6403-4d47-8eb8-9e367a84ea38"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-13T03:44:45Z",
+            "message": "Stopping container bcc",
+            "metadata": {
+                "creationTimestamp": "2026-10-13T03:44:45Z",
+                "name": "wal-bcc-re-71e8212f.18ddf9fb91b1ee0b",
+                "namespace": "repro",
+                "resourceVersion": "73240",
+                "uid": "ab2a9292-8446-4b80-9688-9a3af8b83c64"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-12067992-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-12067992-vmss000000"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

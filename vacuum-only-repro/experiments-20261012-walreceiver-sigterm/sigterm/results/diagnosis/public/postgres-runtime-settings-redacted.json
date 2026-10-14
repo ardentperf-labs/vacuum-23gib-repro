@@ -1,0 +1,637 @@
+{
+  "stack": "sigterm",
+  "capturedAtUtc": "2026-10-13T03:17:11.274359+00:00",
+  "roles": {
+    "primary": {
+      "pod": "hdd-pg-1",
+      "inRecovery": false,
+      "settings": [
+        {
+          "name": "archive_command",
+          "setting": "[configured; value redacted]",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 1,
+          "pending_restart": false
+        },
+        {
+          "name": "archive_library",
+          "setting": "",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "archive_mode",
+          "setting": "on",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 2,
+          "pending_restart": false
+        },
+        {
+          "name": "archive_timeout",
+          "setting": "300",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 3,
+          "pending_restart": false
+        },
+        {
+          "name": "config_file",
+          "setting": "/var/lib/postgresql/data/pgdata/postgresql.conf",
+          "source": "override",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "data_directory",
+          "setting": "/var/lib/postgresql/data/pgdata",
+          "source": "override",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "full_page_writes",
+          "setting": "on",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 7,
+          "pending_restart": false
+        },
+        {
+          "name": "hot_standby",
+          "setting": "on",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 8,
+          "pending_restart": false
+        },
+        {
+          "name": "primary_slot_name",
+          "setting": "_cnpg_",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/override.conf",
+          "sourceline": 2,
+          "pending_restart": false
+        },
+        {
+          "name": "recovery_prefetch",
+          "setting": "try",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 24,
+          "pending_restart": false
+        },
+        {
+          "name": "recovery_target",
+          "setting": "",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "recovery_target_action",
+          "setting": "pause",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "recovery_target_lsn",
+          "setting": "",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "recovery_target_name",
+          "setting": "",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "recovery_target_time",
+          "setting": "",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "recovery_target_xid",
+          "setting": "",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "restore_command",
+          "setting": "[configured; value redacted]",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/override.conf",
+          "sourceline": 4,
+          "pending_restart": false
+        },
+        {
+          "name": "synchronous_commit",
+          "setting": "on",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "synchronous_standby_names",
+          "setting": "ANY 1 (\"hdd-pg-2\")",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 35,
+          "pending_restart": false
+        },
+        {
+          "name": "wal_level",
+          "setting": "logical",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 41,
+          "pending_restart": false
+        },
+        {
+          "name": "wal_receiver_timeout",
+          "setting": "5000",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 43,
+          "pending_restart": false
+        },
+        {
+          "name": "wal_sender_timeout",
+          "setting": "5000",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 44,
+          "pending_restart": false
+        }
+      ],
+      "fileSettings": [
+        {
+          "name": "archive_command",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 1,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "archive_mode",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 2,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "archive_timeout",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 3,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "full_page_writes",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 7,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "recovery_prefetch",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 24,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "synchronous_standby_names",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 35,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "wal_level",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 41,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "wal_receiver_timeout",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 43,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "wal_sender_timeout",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 44,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "primary_slot_name",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/override.conf",
+          "sourceline": 2,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "restore_command",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/override.conf",
+          "sourceline": 4,
+          "applied": true,
+          "error": null
+        }
+      ],
+      "walReceiver": null,
+      "replication": [
+        {
+          "application_name": "hdd-pg-2",
+          "client_addr": "10.244.0.32",
+          "state": "streaming",
+          "sent_lsn": "57/A02E640",
+          "write_lsn": "57/A02E640",
+          "flush_lsn": "57/A02E640",
+          "replay_lsn": "53/F5488C28",
+          "sync_state": "quorum",
+          "reply_time": "2026-10-13T03:16:49.335769+00:00",
+          "write_lag": "00:00:00.000894",
+          "flush_lag": "00:00:00.004011",
+          "replay_lag": "00:52:47.711404",
+          "backend_start": "2026-10-13T02:24:01.611775+00:00"
+        }
+      ],
+      "archiver": {
+        "archived_count": 2231,
+        "last_archived_wal": "000000020000005700000009",
+        "last_archived_time": "2026-10-13T03:12:23.609622+00:00",
+        "failed_count": 0,
+        "last_failed_wal": null,
+        "last_failed_time": null,
+        "stats_reset": "2026-10-13T00:27:21.096625+00:00"
+      },
+      "commandClassification": {
+        "exitCode": 0,
+        "commands": [
+          {
+            "setting": "archive_command",
+            "configured": true,
+            "executableBasename": "manager",
+            "recognizedSubcommand": "wal-archive",
+            "classification": "CNPG/local/other; no cloud keyword in command",
+            "mentionsAzure": false,
+            "mentionsBarman": false,
+            "mentionsS3": false,
+            "mentionsPgBackRest": false
+          },
+          {
+            "setting": "restore_command",
+            "configured": true,
+            "executableBasename": "manager",
+            "recognizedSubcommand": "wal-restore",
+            "classification": "CNPG/local/other; no cloud keyword in command",
+            "mentionsAzure": false,
+            "mentionsBarman": false,
+            "mentionsS3": false,
+            "mentionsPgBackRest": false
+          }
+        ],
+        "stderrBytes": 0
+      }
+    },
+    "replica": {
+      "pod": "hdd-pg-2",
+      "inRecovery": true,
+      "settings": [
+        {
+          "name": "archive_command",
+          "setting": "[configured; value redacted]",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 1,
+          "pending_restart": false
+        },
+        {
+          "name": "archive_library",
+          "setting": "",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "archive_mode",
+          "setting": "on",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 2,
+          "pending_restart": false
+        },
+        {
+          "name": "archive_timeout",
+          "setting": "300",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 3,
+          "pending_restart": false
+        },
+        {
+          "name": "config_file",
+          "setting": "/var/lib/postgresql/data/pgdata/postgresql.conf",
+          "source": "override",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "data_directory",
+          "setting": "/var/lib/postgresql/data/pgdata",
+          "source": "override",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "full_page_writes",
+          "setting": "on",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 7,
+          "pending_restart": false
+        },
+        {
+          "name": "hot_standby",
+          "setting": "on",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 8,
+          "pending_restart": false
+        },
+        {
+          "name": "primary_slot_name",
+          "setting": "_cnpg_hdd_pg_2",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/override.conf",
+          "sourceline": 2,
+          "pending_restart": false
+        },
+        {
+          "name": "recovery_prefetch",
+          "setting": "try",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 24,
+          "pending_restart": false
+        },
+        {
+          "name": "recovery_target",
+          "setting": "",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "recovery_target_action",
+          "setting": "pause",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "recovery_target_lsn",
+          "setting": "",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "recovery_target_name",
+          "setting": "",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "recovery_target_time",
+          "setting": "",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "recovery_target_xid",
+          "setting": "",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "restore_command",
+          "setting": "[configured; value redacted]",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/override.conf",
+          "sourceline": 4,
+          "pending_restart": false
+        },
+        {
+          "name": "synchronous_commit",
+          "setting": "on",
+          "source": "default",
+          "sourcefile": null,
+          "sourceline": null,
+          "pending_restart": false
+        },
+        {
+          "name": "synchronous_standby_names",
+          "setting": "ANY 1 (\"hdd-pg-2\")",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 35,
+          "pending_restart": false
+        },
+        {
+          "name": "wal_level",
+          "setting": "logical",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 41,
+          "pending_restart": false
+        },
+        {
+          "name": "wal_receiver_timeout",
+          "setting": "5000",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 43,
+          "pending_restart": false
+        },
+        {
+          "name": "wal_sender_timeout",
+          "setting": "5000",
+          "source": "configuration file",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 44,
+          "pending_restart": false
+        }
+      ],
+      "fileSettings": [
+        {
+          "name": "archive_command",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 1,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "archive_mode",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 2,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "archive_timeout",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 3,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "full_page_writes",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 7,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "recovery_prefetch",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 24,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "synchronous_standby_names",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 35,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "wal_level",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 41,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "wal_receiver_timeout",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 43,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "wal_sender_timeout",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceline": 44,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "primary_slot_name",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/override.conf",
+          "sourceline": 2,
+          "applied": true,
+          "error": null
+        },
+        {
+          "name": "restore_command",
+          "sourcefile": "/var/lib/postgresql/data/pgdata/override.conf",
+          "sourceline": 4,
+          "applied": true,
+          "error": null
+        }
+      ],
+      "walReceiver": {
+        "status": "streaming",
+        "receive_start_lsn": "50/BA000000",
+        "receive_start_tli": 2,
+        "written_lsn": "57/A031550",
+        "flushed_lsn": "57/A031550",
+        "received_tli": 2,
+        "last_msg_send_time": "2026-10-13T03:17:06.982236+00:00",
+        "last_msg_receipt_time": "2026-10-13T03:17:06.983141+00:00",
+        "latest_end_lsn": "57/A031550",
+        "latest_end_time": "2026-10-13T03:17:06.982236+00:00",
+        "slot_name": "_cnpg_hdd_pg_2",
+        "sender_host": "hdd-pg-rw",
+        "sender_port": 5432
+      },
+      "replication": null,
+      "archiver": {
+        "archived_count": 0,
+        "last_archived_wal": null,
+        "last_archived_time": null,
+        "failed_count": 0,
+        "last_failed_wal": null,
+        "last_failed_time": null,
+        "stats_reset": "2026-10-13T00:54:25.077666+00:00"
+      },
+      "commandClassification": {
+        "exitCode": 0,
+        "commands": [
+          {
+            "setting": "archive_command",
+            "configured": true,
+            "executableBasename": "manager",
+            "recognizedSubcommand": "wal-archive",
+            "classification": "CNPG/local/other; no cloud keyword in command",
+            "mentionsAzure": false,
+            "mentionsBarman": false,
+            "mentionsS3": false,
+            "mentionsPgBackRest": false
+          },
+          {
+            "setting": "restore_command",
+            "configured": true,
+            "executableBasename": "manager",
+            "recognizedSubcommand": "wal-restore",
+            "classification": "CNPG/local/other; no cloud keyword in command",
+            "mentionsAzure": false,
+            "mentionsBarman": false,
+            "mentionsS3": false,
+            "mentionsPgBackRest": false
+          }
+        ],
+        "stderrBytes": 0
+      }
+    }
+  },
+  "note": "restore_command and archive_command raw values were never persisted; only placeholder, source, sourcefile/sourceline and in-memory command category are included."
+}

@@ -1,0 +1,284 @@
+{
+  "reviewedAtUtc": "2026-10-14T05:01:21.199364+00:00",
+  "verification": {
+    "offlineTestsPassed": 129,
+    "subtestsPassed": 44,
+    "credentialScanTextFiles": 305,
+    "credentialScanExceptions": 0,
+    "executedMeasurementSourcesPreserved": {
+      "sigterm": {
+        "03-test.py": true,
+        "instrumentation/collect.py": true
+      },
+      "control": {
+        "03-test.py": true,
+        "instrumentation/collect.py": true
+      }
+    },
+    "originalBothHarnessFlagsStillIncomplete": true,
+    "independentReportAndGraphReviewPassed": true,
+    "scopedUserDeclineAndRecoveryMetadataVerifiedForBothLanes": true,
+    "sigtermCleanupComplete": true,
+    "controlCleanupComplete": true,
+    "allOriginalSnapshotIdsPreserved": true
+  },
+  "sourceChangesApplyTo": "Future runner and postmeasurement evidence recovery only; actual measurement runner/collector copies preserved",
+  "files": [
+    {
+      "path": "shared/01-provision.sh",
+      "bytes": 13670,
+      "sha256": "885c415cfa669ed97d6681a117ff43b2dcbadf013e12ab342c05529b6bf91c0d"
+    },
+    {
+      "path": "shared/02-prepare-direct.sh",
+      "bytes": 28461,
+      "sha256": "2089793388d4ee7e05a19352f8bef584abc00701be8bca8a1ffeab85c4af156d"
+    },
+    {
+      "path": "shared/02-prepare.sh",
+      "bytes": 28461,
+      "sha256": "2089793388d4ee7e05a19352f8bef584abc00701be8bca8a1ffeab85c4af156d"
+    },
+    {
+      "path": "shared/03-test.py",
+      "bytes": 128336,
+      "sha256": "bb631f5ad50aaa93abe6efcba0d1b8d35249c5f413ae6d40b97ee3dd31491a3b"
+    },
+    {
+      "path": "shared/04-teardown.sh",
+      "bytes": 136,
+      "sha256": "4b30101cd8ecd8aae0115acae0d53e253dff7bd7139a0be655e9a3b0d988e342"
+    },
+    {
+      "path": "shared/analysis-restore-path-report.py",
+      "bytes": 20676,
+      "sha256": "25fc3825402294b836735de24e3c42843e9a2f66fa76986a386de9a6d389e210"
+    },
+    {
+      "path": "shared/build-recovered-comparison.py",
+      "bytes": 28198,
+      "sha256": "ab718a0f35589dc9fe2d868f72132f84f91174922350ef6f6de0f5449d6490a0"
+    },
+    {
+      "path": "shared/capture-diagnosis.py",
+      "bytes": 18675,
+      "sha256": "ea692d63d787916ee6d58cca057a4b90298311ad3ded70485df477c6da83b6df"
+    },
+    {
+      "path": "shared/capture-recovery-metadata.py",
+      "bytes": 34482,
+      "sha256": "a85950ab09fdb036609d3af3967b96f45878240f06e21bd372016210b0052f37"
+    },
+    {
+      "path": "shared/clear-guest-cache.py",
+      "bytes": 23203,
+      "sha256": "ccfbaf0311c5c0507c11e06f0a7a0a0a96a882fd8a99075ec23c87f5014d7ddb"
+    },
+    {
+      "path": "shared/client-replication.py",
+      "bytes": 22603,
+      "sha256": "f71c9577f57d9e9c6fc12a3d764a820099a020cec3d11225a9888ab9b437633d"
+    },
+    {
+      "path": "shared/client-report.py",
+      "bytes": 28165,
+      "sha256": "e4d38c51627cad37190238bdaa61d228ea231811d5b0dda6873483aff94dcaf6"
+    },
+    {
+      "path": "shared/controller-probe.sh",
+      "bytes": 4213,
+      "sha256": "6780e8f677e38b2296ee112fa65206b5537a8ac129a57a8d643fcf65ce7189f2"
+    },
+    {
+      "path": "shared/direct-restore-disks.py",
+      "bytes": 45950,
+      "sha256": "e3d2ad0e6670bfdf0172517cac66738efcf5d0f1d1f0328452081ac8ea6f5eb4"
+    },
+    {
+      "path": "shared/export-wal-archive.py",
+      "bytes": 76775,
+      "sha256": "02d709fd3520965a603a24f75cca967dc90b502dadbeb9839dac9da5b645dc08"
+    },
+    {
+      "path": "shared/finalize-restored-primary.py",
+      "bytes": 37476,
+      "sha256": "8307c73d12379ce7a1c3ac449f18d38e8c07962aca35f9d9d5bfbd34a26291e7"
+    },
+    {
+      "path": "shared/harvest.py",
+      "bytes": 10177,
+      "sha256": "93fea61baf355524a956e60f3e97e201ed1782d249d7e9e6d9cc96dac61e5827"
+    },
+    {
+      "path": "shared/instrumentation/README.md",
+      "bytes": 9650,
+      "sha256": "13b1ae02247432b7cb22509ce8b4e16269d4a228a078ee202f07a5a301ebab52"
+    },
+    {
+      "path": "shared/instrumentation/azure_metrics.py",
+      "bytes": 42490,
+      "sha256": "029721cea32cff5f8bfe908787f72d3fe4a6f3f7b21b323ce316bcfb44c402f7"
+    },
+    {
+      "path": "shared/instrumentation/bcc_rw_tracepoints.py",
+      "bytes": 9260,
+      "sha256": "1427a9b0e1ad5b30fb82034bd8d9a2955216dc6c5de68f00ce39945b27e2a224"
+    },
+    {
+      "path": "shared/instrumentation/collect.py",
+      "bytes": 103090,
+      "sha256": "2e963a37ff792a9a329cf435243dafc17ca5cb7d7dfe9ef32cd3a6c47460ab8f"
+    },
+    {
+      "path": "shared/instrumentation/test_azure_storage_metrics.py",
+      "bytes": 6082,
+      "sha256": "44ef1cc75daf47ca6527741934f95217f13f6ca0f24633af863c3a14e5605604"
+    },
+    {
+      "path": "shared/plot.py",
+      "bytes": 17065,
+      "sha256": "d0ac35439ba17dcfe6f50e9484dd12274575755451258d82d7b12210c91317ec"
+    },
+    {
+      "path": "shared/plot_archive_metrics.py",
+      "bytes": 29057,
+      "sha256": "6b49b00e4e09eafa99812f68d890f549e1056b87f77044e683a94f8b658cfeba"
+    },
+    {
+      "path": "shared/plot_azure_metrics.py",
+      "bytes": 21542,
+      "sha256": "d7d9f5c3622b999b05a18bc37960cd2f1e0f499be4254edca7c00b986b671668"
+    },
+    {
+      "path": "shared/plot_signal_comparison.py",
+      "bytes": 55046,
+      "sha256": "598ae1aaa98340e61fdcb6f80bae77a125096cb0e5f935c829b3a32b328cb149"
+    },
+    {
+      "path": "shared/recover-staged-wal-bundles.py",
+      "bytes": 15359,
+      "sha256": "5ac4cc2c25cbfba46c1c622eea5e361494dd2afd4d94a9accfae689fe55095a9"
+    },
+    {
+      "path": "shared/remote_chunk_download.py",
+      "bytes": 3927,
+      "sha256": "1c2fffe54d19d02f6bd3151b6fa641110e293943ee5f1fa8a0316ec43f20e138"
+    },
+    {
+      "path": "shared/render-recovered-graphs.py",
+      "bytes": 22167,
+      "sha256": "910aca73926fd186850abda2eca262cff7cd01802a7b862c4225aef6d55c560d"
+    },
+    {
+      "path": "shared/requirements-wal-archive-export.txt",
+      "bytes": 28,
+      "sha256": "d702103f38694da1101c6cb8ed923c661db3831787dcc92013f5949001f25714"
+    },
+    {
+      "path": "shared/setup-wal-archive.py",
+      "bytes": 65028,
+      "sha256": "b50076acfd715be8338280f001dcba8fa289176322857527ac4ad75b20d87822"
+    },
+    {
+      "path": "shared/stable-writer-evidence.py",
+      "bytes": 18976,
+      "sha256": "b9d509cfb21a2298c3da52f70d93a303a8b3852d3c2a8744bdd9aa13ee84a864"
+    },
+    {
+      "path": "shared/teardown.py",
+      "bytes": 32363,
+      "sha256": "d2cc98c740579df7bfe043b773e501f246849ea0a8593e0872a0106a81f11295"
+    },
+    {
+      "path": "shared/test_bcc_rw_tracepoints.py",
+      "bytes": 5448,
+      "sha256": "b5d7568f7453f08e27799c029c4e0a953c144284a01741b4a342964717794166"
+    },
+    {
+      "path": "shared/test_build_recovered_comparison.py",
+      "bytes": 3426,
+      "sha256": "e2a0b6953d90b6f1cdb456f9398641d26b3062bf779ca6de9092d2c9d51419a4"
+    },
+    {
+      "path": "shared/test_capture_diagnosis.py",
+      "bytes": 8706,
+      "sha256": "be87f64e88ea4f40e9ce86d882ccda47c75e8619bddbb43914fc2ef99ff29224"
+    },
+    {
+      "path": "shared/test_capture_recovery_metadata.py",
+      "bytes": 8622,
+      "sha256": "b11359f30c7c17869ca044e7dddd86a2b3337009fa62bb2705b98b4951c3a1b9"
+    },
+    {
+      "path": "shared/test_direct_restore_lineage.py",
+      "bytes": 4722,
+      "sha256": "6be289cdff932f8174525fbdaabeef45b0ce7f44c1d62547324a90e7a94aef82"
+    },
+    {
+      "path": "shared/test_export_wal_archive.py",
+      "bytes": 26092,
+      "sha256": "82a35710ddec53b60e7f57c5253091b0dce8f2154d060bdc3cde86cf787fb658"
+    },
+    {
+      "path": "shared/test_plot_archive_metrics.py",
+      "bytes": 7204,
+      "sha256": "ae2b81e3c01a439c6d578218da80c1582667a227bc51a9bf3ecae60a9a39ea34"
+    },
+    {
+      "path": "shared/test_plot_signal_comparison.py",
+      "bytes": 16568,
+      "sha256": "1e0a6e6366691d1df93143aeaa76eb116f5fa2885b18b14c0256ab740bcb63df"
+    },
+    {
+      "path": "shared/test_recover_staged_wal_bundles.py",
+      "bytes": 5029,
+      "sha256": "2a3b87828695e034b13cfdb40fa334b6c59672ecc8203bdb1cd9b1adbb75ba73"
+    },
+    {
+      "path": "shared/test_remote_chunk_download.py",
+      "bytes": 4336,
+      "sha256": "c48df99d46cc61319fe9055cf6271e7d37e248e0f9cead33cb3f8f72523042cd"
+    },
+    {
+      "path": "shared/test_setup_wal_archive.py",
+      "bytes": 25726,
+      "sha256": "ccafc23158dc7538d8e4b04170caebb756d78397cf2f16de3df369d4e1ade734"
+    },
+    {
+      "path": "shared/test_sigterm_intervention.py",
+      "bytes": 20787,
+      "sha256": "9147496c8fd69d271fa8f711134c387fc3acb8a733bc47474ce6df39a6a020ac"
+    },
+    {
+      "path": "shared/test_stable_writer_evidence.py",
+      "bytes": 6978,
+      "sha256": "6e98be799260800007c1900e69699305c5fa6b19c091c314f640b571f161ce10"
+    },
+    {
+      "path": "shared/test_teardown_recovery_metadata.py",
+      "bytes": 7526,
+      "sha256": "2eb89742192b7f2a833fd80b4b4f8748b191fe8fe6e227824fc8965323d03f1e"
+    },
+    {
+      "path": "shared/test_teardown_wal_export.py",
+      "bytes": 10976,
+      "sha256": "1c7294449fb11a9884d999cbed0e84a153c5faaabeffe2e85d5d99efacd6fdfb"
+    },
+    {
+      "path": "shared/verify-attachments.py",
+      "bytes": 5583,
+      "sha256": "70926e710ac4bfb61f91615dd86f1b41ac12b3e4d9aebffeae8efeea838894f8"
+    },
+    {
+      "path": "shared/verify-harvest.py",
+      "bytes": 5732,
+      "sha256": "8cdc45e18c516cc74d59e350b05195594b0fb9f26483b841de2ce0f3426abad1"
+    },
+    {
+      "path": "shared/watch-recovery.py",
+      "bytes": 4604,
+      "sha256": "9b5c91749edd5ee170b6a6fa433a6acb5bd990c265f65f314660450fd10d5b34"
+    }
+  ],
+  "cleanupVerifiedAtUtc": "2026-10-14T05:11:35.483936+00:00"
+}

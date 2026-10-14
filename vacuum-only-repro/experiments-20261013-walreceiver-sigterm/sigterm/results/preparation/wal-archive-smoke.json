@@ -1,0 +1,80 @@
+{
+  "archiveObject": "cnpg-wal-archive/9a66a148e388be98dedc394741b6c9d7/hdd-pg/wals/000000020000004E/000000020000004E0000005B",
+  "archiver": {
+    "after": {
+      "archivedCount": 10,
+      "failedCount": 1,
+      "lastArchivedTime": "2026-10-13T05:09:57.114066+00:00",
+      "lastWal": "000000020000004E0000005B"
+    },
+    "before": {
+      "activeAppSessions": 0,
+      "activeVacuum": 0,
+      "archivedCount": 9,
+      "failedCount": 1
+    }
+  },
+  "bytes": 16777216,
+  "checks": {
+    "allThreeHashesMatch": true,
+    "blobDownloadedByAzureCli": true,
+    "blobListedByAzureCli": true,
+    "cnpgManagerWalRestoreSucceeded": true,
+    "livePgWalTargeted": false,
+    "restoreDestinationOutsidePgData": true,
+    "snapshotLineagePreserved": true,
+    "sourceLocksPreserved": true,
+    "sourceSnapshotsReadOnly": true
+  },
+  "cluster": "repro/hdd-pg",
+  "hashes": {
+    "closedPrimarySegmentSha256": "843744a9f6a28e08162d19fd665d69aea58083b72e5ce29290abe504c5e64751",
+    "cnpgManagerWalRestoreSha256": "843744a9f6a28e08162d19fd665d69aea58083b72e5ce29290abe504c5e64751",
+    "independentAzureDownloadSha256": "843744a9f6a28e08162d19fd665d69aea58083b72e5ce29290abe504c5e64751"
+  },
+  "ownerToken": "9a66a148e388be98dedc394741b6c9d7",
+  "primaryImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+  "primaryPod": "hdd-pg-1",
+  "primaryPodUid": "237e5a50-de2f-4644-aca2-133234626c4d",
+  "restorePod": "hdd-pg-2",
+  "restorePodImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+  "restorePodRole": "replica",
+  "restorePodUid": "9839462c-f59e-413c-be2c-fcb47c94aa69",
+  "restoreSmokeDestination": "isolated writable /run scratch outside PGDATA",
+  "restoreSmokePrefetchDisabled": true,
+  "retainedLocalWALFile": "archived-wal/000000020000004E0000005B",
+  "retainedLocalWALSha256": "843744a9f6a28e08162d19fd665d69aea58083b72e5ce29290abe504c5e64751",
+  "secretAccessReadiness": {
+    "checkedServiceAccounts": [
+      "hdd-pg"
+    ],
+    "consecutiveReadOnlyAccessReviews": 2,
+    "secretReference": "repro/azure-barman-credentials",
+    "status": "ready"
+  },
+  "serverName": "hdd-pg",
+  "snapshotLineage": {
+    "data": {
+      "deletionPolicy": "Retain",
+      "snapshotHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+      "volumeSnapshot": "source-data-9a66a148",
+      "volumeSnapshotContent": "source-data-content-9a66a148",
+      "volumeSnapshotContentUid": "6885ac51-8b63-4dfd-bc18-5e05efc9dd2e",
+      "volumeSnapshotUid": "b3c9bd7f-973e-45c2-9326-e0cb2f628bb1"
+    },
+    "wal": {
+      "deletionPolicy": "Retain",
+      "snapshotHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+      "volumeSnapshot": "source-wal-9a66a148",
+      "volumeSnapshotContent": "source-wal-content-9a66a148",
+      "volumeSnapshotContentUid": "b5226b78-9944-4071-8504-9c6a3514a135",
+      "volumeSnapshotUid": "02a59719-11eb-43c6-a157-a727c12c2746"
+    }
+  },
+  "stack": "sigterm",
+  "status": "complete",
+  "systemIdentifier": "7692518806614212629",
+  "verifiedAtUtc": "2026-10-13T05:10:59.983317+00:00",
+  "version": 1,
+  "walName": "000000020000004E0000005B"
+}

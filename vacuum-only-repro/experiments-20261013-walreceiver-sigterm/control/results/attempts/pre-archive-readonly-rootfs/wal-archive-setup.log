@@ -1,0 +1,21 @@
+ERROR: Could not copy the just-closed WAL file from the primary.
+ERROR: Could not copy the exact 16-MiB closed WAL file after three bounded attempts; private copy receipts retained.
+ERROR: Command failed (2): kubectl --kubeconfig <workspace>/experiments/20261013-walreceiver-sigterm/control/.state/kubeconfig exec -n: ion(0x188ba07be6c0)
+	pkg/mod/github.com/cloudnative-pg/machinery@v0.6.0/pkg/log/flags.go:230 +0x114
+sigs.k8s.io/controller-runtime/pkg/log/zap.NewRaw({0x188ba0893b80, 0x5, 0x188ba0706b80?})
+	pkg/mod/sigs.k8s.io/controller-runtime@v0.25.1/pkg/log/zap/zap.go:232 +0x55
+sigs.k8s.io/controller-runtime/pkg/log/zap.New({0x188ba0893b80?, 0x3fc8dc8?, 0x188ba0706b70?})
+	pkg/mod/sigs.k8s.io/controller-runtime@v0.25.1/pkg/log/zap/zap.go:43 +0x18
+github.com/cloudnative-pg/machinery/pkg/log.(*Flags).ConfigureLogging(0x188ba07be2d0, {0x188ba04b5300, 0x1, 0x188ba04b52f8?})
+	pkg/mod/github.com/cloudnative-pg/machinery@v0.6.0/pkg/log/flags.go:133 +0x199
+main.newRootCmd.func1(0x188ba04b52f8?, {0x188ba0893b40?, 0x4?, 0x2145b0e?})
+	cmd/manager/main.go:60 +0x2f
+github.com/spf13/cobra.(*Command).execute(0x188ba0aacf08, {0x188ba0893b00, 0x4, 0x4})
+	pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:993 +0x96b
+github.com/spf13/cobra.(*Command).ExecuteC(0x188ba0505508)
+	pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1148 +0x450
+github.com/spf13/cobra.(*Command).Execute(...)
+	pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1071
+main.main()
+	cmd/manager/main.go:48 +0x1f
+command terminated with exit code 2

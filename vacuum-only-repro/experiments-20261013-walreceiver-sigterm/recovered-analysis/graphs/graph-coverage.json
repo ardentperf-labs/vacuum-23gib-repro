@@ -1,0 +1,98 @@
+{
+  "azureBlob": {
+    "charts": {
+      "requests": {
+        "lineCount": 6,
+        "linear": true,
+        "missingPanel": false
+      },
+      "successfulLatency": {
+        "lineCount": 12,
+        "linear": true,
+        "missingPanel": false
+      },
+      "traffic": {
+        "lineCount": 4,
+        "linear": true,
+        "missingPanel": false
+      }
+    },
+    "nativeGrain": "PT1M (Azure Blob service metrics)",
+    "nativePointCount": 10608
+  },
+  "azureMonitor": {
+    "charts": {
+      "azure-disk-iops": {
+        "linear": true,
+        "missingPanels": [],
+        "plottedLinePoints": 6284
+      },
+      "azure-disk-latency": {
+        "linear": true,
+        "missingPanels": [],
+        "plottedLinePoints": 1590
+      },
+      "azure-disk-queue-depth": {
+        "linear": true,
+        "missingPanels": [],
+        "plottedLinePoints": 1596
+      },
+      "azure-disk-throughput": {
+        "linear": true,
+        "missingPanels": [],
+        "plottedLinePoints": 6318
+      },
+      "azure-vm-uncached-consumed": {
+        "linear": true,
+        "missingPanels": [],
+        "plottedLinePoints": 1578
+      }
+    },
+    "nativePointCount": 39880
+  },
+  "bccReadWriteHistograms": {
+    "interpretation": "p95 displayed as log2-microsecond histogram bucket upper bound; figures do not imply exact individual-operation latency",
+    "rowsByLane": {
+      "control": {
+        "readWriteHistogramRows": 153633
+      },
+      "sigterm": {
+        "readWriteHistogramRows": 117508
+      }
+    }
+  },
+  "clientReplicationOverview": {
+    "caption": "Preview only. Treatment native per-transaction logs were unavailable; wait ages and replication telemetry come from sampled native measurements.",
+    "nativeClientLogValidation": {
+      "control": true,
+      "sigterm": false
+    }
+  },
+  "guestDiskstats": {
+    "graphs": [
+      "guest-iops.png",
+      "guest-await.png",
+      "guest-throughput.png"
+    ],
+    "intervalSeconds": 5,
+    "lastSampleByLane": {
+      "control": {
+        "lastSampleUtc": "2026-10-13T08:24:52.075933645Z",
+        "pairedSampleCount": 2241
+      },
+      "sigterm": {
+        "lastSampleUtc": "2026-10-13T07:38:14.222643348Z",
+        "pairedSampleCount": 1683
+      }
+    }
+  },
+  "linearAxes": true,
+  "schemaVersion": 1,
+  "scope": {
+    "azureNativeTimeEndUtc": "2026-10-13T08:36:00Z",
+    "azureNativeTimeStartUtc": "2026-10-13T05:13:00Z",
+    "postStreamContextSeconds": 300,
+    "rule": "Points are clipped by native timestamp for display. Source files remain unchanged; missing samples are not filled.",
+    "treatmentClientOfferProofCutoffUtc": "2026-10-13T07:38:14.222643Z"
+  }
+}

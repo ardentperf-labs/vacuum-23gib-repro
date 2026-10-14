@@ -1,0 +1,49 @@
+{
+  "coveragePath": "<workspace>/experiments/20261013-walreceiver-sigterm/sigterm/results/instrumentation/coverage.json",
+  "fatalErrors": [],
+  "phase": "stopped",
+  "roles": {
+    "primary": {
+      "bccError": null,
+      "bccGaps": [
+        "wal read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F.",
+        "data read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F."
+      ],
+      "bccLogStreamDuplicateLines": 0,
+      "bccLogStreamReconnects": 0,
+      "bccLogStreamSegments": 1,
+      "bccPod": "wal-bcc-pr-d3c8d827",
+      "bccReady": true,
+      "bccTracepointRWError": null,
+      "bccTracepointRWGaps": [],
+      "bccTracepointRWReady": true,
+      "bccWarnings": [
+        "BCC processes did not announce ready within 25 seconds"
+      ],
+      "node": "aks-nodepool1-39638170-vmss000000",
+      "pod": "hdd-pg-1"
+    },
+    "replica": {
+      "bccError": null,
+      "bccGaps": [
+        "wal read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F.",
+        "data read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F."
+      ],
+      "bccLogStreamDuplicateLines": 0,
+      "bccLogStreamReconnects": 0,
+      "bccLogStreamSegments": 1,
+      "bccPod": "wal-bcc-re-2b218af8",
+      "bccReady": true,
+      "bccTracepointRWError": null,
+      "bccTracepointRWGaps": [],
+      "bccTracepointRWReady": true,
+      "bccWarnings": [
+        "BCC processes did not announce ready within 25 seconds"
+      ],
+      "node": "aks-nodepool1-39638170-vmss000001",
+      "pod": "hdd-pg-2"
+    }
+  },
+  "stoppedAtUtc": "2026-10-13T08:25:07.690Z",
+  "updatedAtUtc": "2026-10-13T08:30:08.835Z"
+}

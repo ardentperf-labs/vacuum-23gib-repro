@@ -1,0 +1,156 @@
+{
+  "analysisType": "recovered-evidence-review; separate from original runner result",
+  "archiveRecovery": {
+    "archiveErrorCount": 0,
+    "controlAzureGetBlobSuccessTotal": 0.0,
+    "controlRestoreEventsAfterMarker": 0,
+    "getBlobCountEqualsRestoreLogCount": true,
+    "interpretation": "Archive restores and Azure GetBlob totals agree; this supports archive-backed recovery but does not map individual API calls to WAL filenames or identify the first resumed client transaction.",
+    "lastRestoreUtc": "2026-10-13T08:31:02.121197419Z",
+    "secondsFromLastRestoreToStreaming": 3.214969,
+    "streamingResumedUtc": "2026-10-13T08:31:05.336166710Z",
+    "treatmentAzureGetBlobSuccessTotal": 2054.0,
+    "treatmentRestoreEventsAfterSignal": 2054,
+    "uniqueContiguousWalSegments": 2054
+  },
+  "control": {
+    "clientServerCommitDifference": 0,
+    "clientTransactions": 43670,
+    "failedTransactions": 0,
+    "latencyMs": {
+      "max": 2145.598,
+      "p50": 7.479,
+      "p95": 41.705,
+      "p99": 172.928
+    },
+    "mode": "no walreceiver signal",
+    "vacuum": {
+      "completeUtc": "2026-10-13T06:08:03.497441Z",
+      "elapsedSeconds": 2989.274,
+      "exitCode": 0,
+      "markerEvidence": {
+        "bytes": 85,
+        "path": "results/preview/control-vacuum-completion/vacuum-complete.marker",
+        "sha256": "04a033a92b28ff4c33e0d8c5da20afd5bc25f279c3e2c5d7fe61011886fceb80"
+      },
+      "startUtc": "2026-10-13T05:18:14.223251Z"
+    }
+  },
+  "evidence": {
+    "archiveCorrelation": {
+      "bytes": 7142,
+      "path": "results/diagnosis/public/archive-restore-azure-client-correlation.json",
+      "sha256": "e2d4e19c8237a923c1e17269868026de816cdc46c869772e6bc700db2f9cf426"
+    },
+    "checkpointProof": {
+      "bytes": 6314,
+      "path": "results/preview/ongoing-stall-proof.json",
+      "sha256": "e3962eee887620d32bdb985a6ff28f4761717a082fc70bc86af20e4b18b7a2a7"
+    },
+    "controlClientSummary": {
+      "bytes": 3896,
+      "path": "control/results/measurement/client-summary.json",
+      "sha256": "fb3dd540d895b8aebed98eb1251d1e6824f2f665e53fc297086e95b8ea64d66f"
+    },
+    "controlNativeProgress": {
+      "bytes": 153455,
+      "path": "results/diagnosis/public/native-progress-snapshots/control-pgbench.out",
+      "sha256": "c88162595b8d978bdbaaadf3d877e9341e654b913bd4b0ce05a2a39b6d9f059f"
+    },
+    "recoveryReceipt": {
+      "bytes": 10773,
+      "path": "sigterm/results/diagnosis/recovered-client/recovery-receipt.json",
+      "sha256": "e99b55c67685f1f343c76ef6b4df3a289a35dcdf306e4a39f24f6ffb496a91f0"
+    }
+  },
+  "generatedAtUtc": "2026-10-13T10:50:16Z",
+  "incidentClaim": {
+    "committedTransactionsStayedAt": 4610,
+    "cutoffDefinition": "last runner observation before the recorded client stop/capture failure; no post-cutoff samples count toward the offered-load proof",
+    "durationSeconds": 7786.241,
+    "lastSampleUtc": "2026-10-13T07:38:13.543359Z",
+    "nativeProgress": {
+      "allFailureCountsZero": true,
+      "firstZeroBucketUtc": "2026-10-13T05:28:22.186000Z",
+      "lastZeroBucketUtc": "2026-10-13T07:38:12.186000Z",
+      "nonzeroTpsBuckets": 1,
+      "progressBucketsAfterSignalThroughCutoff": 1560,
+      "zeroTpsSpanSeconds": 7790.0,
+      "zeroTpsZeroFailureBuckets": 1559
+    },
+    "nativeZeroTPSNoFailuresAfterFirstPostSignalBucket": true,
+    "sampleEvidence": {
+      "allTenActiveIpcSyncRepAtEverySample": true,
+      "committedTransactionsAtEverySample": 4610,
+      "endUtc": "2026-10-13T07:38:13.543359Z",
+      "maxAllowedGapSeconds": 2.5,
+      "maximumGapSeconds": 1.623,
+      "parseErrorsOutsideProofRows": 0,
+      "qualifyingSamples": 7786,
+      "sameTenBackendQueryAndTransactionStarts": true,
+      "spanSeconds": 7786.241,
+      "startUtc": "2026-10-13T05:28:27.302017Z"
+    },
+    "startUtc": "2026-10-13T05:28:27.302017Z",
+    "status": "verified_over_two_hours_before_stop_cutoff",
+    "stopCutoffUtc": "2026-10-13T07:38:14.222643Z",
+    "wait": "IPC/SyncRep",
+    "writers": 10
+  },
+  "originalHarness": {
+    "controlTestComplete": false,
+    "failureUtc": "2026-10-13T07:53:16.827Z",
+    "limitation": "The original timing marker parser and client drain path failed to finalize the treatment run. This recovered analysis verifies the event independently; it does not alter timing.json, fabricate transaction logs, or mark the original run complete.",
+    "treatmentRecordedFailure": "VACUUM not confirmed complete (exit=0)",
+    "treatmentRemoteVacuumExitCode": 0,
+    "treatmentTestComplete": false,
+    "treatmentVacuumCompleteField": null
+  },
+  "schemaVersion": 1,
+  "setup": {
+    "clientWriters": 10,
+    "cnpgOperatorVersion": "1.30.1",
+    "dataAndWalDiskSizeGiB": 512,
+    "dataAndWalDiskSku": "Standard_LRS",
+    "dataset": "23 GiB PostgreSQL fixture restored from the same retained paired DATA/WAL source",
+    "hostCaching": "None",
+    "nodeVmSize": "Standard_D2s_v4",
+    "postgresImageVersion": "16.15",
+    "synchronousCommit": "on",
+    "synchronousStandbyNames": "ANY 1",
+    "targetAggregateRateTransactionsPerSecond": 5
+  },
+  "treatment": {
+    "clientRawTransactionLogsAvailable": false,
+    "eventualCounterDifference": 10,
+    "eventualFixtureUpdateCount": 4620,
+    "firstCompletionTime": null,
+    "lastBlockedSampleCommittedTransactions": 4610,
+    "mode": "verified replica walreceiver SIGTERM",
+    "nativeProgressEvidence": {
+      "bytes": 157359,
+      "path": "results/diagnosis/public/native-progress-snapshots/sigterm-pgbench.out",
+      "sha256": "6b7f0cf5d5142816733f7f831bac3d6ee076ef4cdfe83eaec65885861d307a07"
+    },
+    "schedulerLatenessSeconds": 0.0001361370086669922,
+    "secondsAfterVacuumStart": 601.377,
+    "signalAcceptedUtc": "2026-10-13T05:28:14.077112Z",
+    "signalRequestedUtc": "2026-10-13T05:28:14.076043Z",
+    "vacuum": {
+      "completeUtc": "2026-10-13T06:14:43.543859Z",
+      "elapsedSeconds": 3390.844,
+      "exitCode": 0,
+      "markerEvidence": {
+        "bytes": 83,
+        "path": "results/preview/sigterm-vacuum-completion/vacuum-complete.marker",
+        "sha256": "2763541cdbfdc2c51785699ac06664a604cfca2a3971d29658ab051a8c78ad95"
+      },
+      "startUtc": "2026-10-13T05:18:12.699771Z"
+    },
+    "writerTelemetryEvidence": {
+      "bytes": 31491066,
+      "path": "sigterm/results/measurement/client/sessions.jsonl",
+      "sha256": "75e0a7557a568ad4aa5d8988b5a7dbd99e196b4bf4f9eb2b737aef1faa7dfa53"
+    }
+  }
+}

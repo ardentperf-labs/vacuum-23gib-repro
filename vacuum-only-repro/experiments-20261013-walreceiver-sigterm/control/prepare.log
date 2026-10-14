@@ -1,0 +1,7 @@
+WARNING: option '--subscription' will be ignored due to use of '--ids'.
+WARNING: option '--subscription' will be ignored due to use of '--ids'.
+Verified direct restore DATA/WAL disks for control; no Kubernetes PV/PVC changes made.
+Bound the exact retained DATA/WAL snapshots to the existing primary PVC UIDs for control.
+Local binding receipt: <workspace>/experiments/20261013-walreceiver-sigterm/control/.state/direct-restore/binding.json
+Prepared restored primary and streaming replica; evidence: <workspace>/experiments/20261013-walreceiver-sigterm/control/.state/prepare.json
+Prepared the retained EastUS pre-VACUUM 23-GiB pair through caller-identity direct disk copies; no source RBAC, locks, or snapshots were changed.

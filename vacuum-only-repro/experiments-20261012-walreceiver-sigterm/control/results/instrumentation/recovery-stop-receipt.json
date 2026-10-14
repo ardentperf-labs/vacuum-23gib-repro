@@ -1,0 +1,69 @@
+{
+  "stoppedAtUtc": "2026-10-13T03:53:03.957415+00:00",
+  "launch": {
+    "archivePath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/attempts/instrumentation-segment1",
+    "argv": [
+      "/usr/bin/python3",
+      "<workspace>/experiments/20261012-walreceiver-sigterm/control/instrumentation/collect.py",
+      "--namespace",
+      "repro",
+      "--database",
+      "repro",
+      "--verified-attachments",
+      "<workspace>/experiments/20261012-walreceiver-sigterm/control/.state/attachment-verification/verified.json",
+      "--out",
+      "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation",
+      "--kubeconfig",
+      "<workspace>/experiments/20261012-walreceiver-sigterm/control/.state/kubeconfig",
+      "--client-app-name",
+      "vacuum-pgbench-",
+      "--metric-drain-seconds",
+      "300"
+    ],
+    "launchLog": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation-recovery.stdout.log",
+    "out": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation",
+    "pid": 102374,
+    "priorGapFromUtc": "2026-10-13T01:30:01Z",
+    "processGroupId": 102374,
+    "stack": "control",
+    "startedAtUtc": "2026-10-13T01:42:37.579Z",
+    "statusPath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/collector-status.json"
+  },
+  "finalStatus": {
+    "coveragePath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/coverage.json",
+    "fatalErrors": [],
+    "phase": "stopped",
+    "roles": {
+      "primary": {
+        "bccError": null,
+        "bccGaps": [
+          "wal read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F.",
+          "data read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F."
+        ],
+        "bccPod": "wal-bcc-pr-a5c5e12c",
+        "bccReady": true,
+        "bccWarnings": [
+          "BCC processes did not announce ready within 25 seconds"
+        ],
+        "node": "aks-nodepool1-12067992-vmss000001",
+        "pod": "hdd-pg-1"
+      },
+      "replica": {
+        "bccError": null,
+        "bccGaps": [
+          "wal read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F.",
+          "data read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F."
+        ],
+        "bccPod": "wal-bcc-re-71e8212f",
+        "bccReady": true,
+        "bccWarnings": [
+          "BCC processes did not announce ready within 25 seconds"
+        ],
+        "node": "aks-nodepool1-12067992-vmss000000",
+        "pod": "hdd-pg-2"
+      }
+    },
+    "stoppedAtUtc": "2026-10-13T03:44:46.275Z",
+    "updatedAtUtc": "2026-10-13T03:53:02.717Z"
+  }
+}

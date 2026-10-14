@@ -1,0 +1,32 @@
+COPY 1
+psql:/controller/tmp/vacuum-d1823c6d73a643f79198977ca995bf4f/vacuum.sql:2: INFO:  aggressively vacuuming "repro.public.vacuum_target"
+psql:/controller/tmp/vacuum-d1823c6d73a643f79198977ca995bf4f/vacuum.sql:2: INFO:  finished vacuuming "repro.public.vacuum_target": index scans: 1
+pages: 0 removed, 3014656 remain, 3014656 scanned (100.00% of total)
+tuples: 7536638 removed, 7536640 remain, 0 are dead but not yet removable
+removable cutoff: 6681, which was 18655 XIDs old when operation ended
+new relfrozenxid: 6681, which is 5204 XIDs ahead of previous value
+frozen: 3014656 pages from table (100.00% of total) had 7536640 tuples frozen
+index scan needed: 3014656 pages from table (100.00% of total) had 7536640 dead item identifiers removed
+index "vacuum_target_id_idx": pages: 41332 in total, 0 newly deleted, 0 currently deleted, 0 reusable
+I/O timings: read: 2798693.452 ms, write: 51739.011 ms
+avg read rate: 12.695 MB/s, avg write rate: 12.695 MB/s
+buffer usage: 3014989 hits, 6071381 misses, 6071337 dirtied
+WAL usage: 15115207 records, 6071356 full page images, 36932303148 bytes
+system usage: CPU: user: 55.87 s, system: 145.78 s, elapsed: 3736.32 s
+psql:/controller/tmp/vacuum-d1823c6d73a643f79198977ca995bf4f/vacuum.sql:2: INFO:  aggressively vacuuming "repro.pg_toast.pg_toast_24578"
+psql:/controller/tmp/vacuum-d1823c6d73a643f79198977ca995bf4f/vacuum.sql:2: INFO:  finished vacuuming "repro.pg_toast.pg_toast_24578": index scans: 0
+pages: 0 removed, 0 remain, 0 scanned (100.00% of total)
+tuples: 0 removed, 0 remain, 0 are dead but not yet removable
+removable cutoff: 25336, which was 1 XIDs old when operation ended
+new relfrozenxid: 25336, which is 23859 XIDs ahead of previous value
+frozen: 0 pages from table (100.00% of total) had 0 tuples frozen
+index scan not needed: 0 pages from table (100.00% of total) had 0 dead item identifiers removed
+I/O timings: read: 34.241 ms, write: 0.000 ms
+avg read rate: 0.226 MB/s, avg write rate: 0.000 MB/s
+buffer usage: 32 hits, 1 misses, 0 dirtied
+WAL usage: 1 records, 0 full page images, 188 bytes
+system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.03 s
+VACUUM
+COPY 1
+VACUUM_START|2026-10-13T01:45:37.857414Z|4E/5D014710|920877|10694|52
+VACUUM_COMPLETE|2026-10-13T02:47:54.220460Z|57/6925C0|36935946881|15163673|6071475

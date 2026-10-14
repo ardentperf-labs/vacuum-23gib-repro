@@ -1,0 +1,2709 @@
+{
+  "allMetricReadoutCapturedAtUtc": "2026-10-13T05:13:35Z",
+  "capturedAtUtc": "2026-10-13T05:12:21Z",
+  "lanes": {
+    "control": {
+      "apiFamiliesObserved": [
+        "GET",
+        "PUT"
+      ],
+      "archiveStatus": "ready",
+      "availableMetricDefinitions": [
+        "Availability",
+        "Egress",
+        "Ingress",
+        "SuccessE2ELatency",
+        "SuccessServerLatency",
+        "Transactions"
+      ],
+      "definitions": [
+        {
+          "dimensions": [
+            "ResponseType",
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "TransactionType",
+            "Tier"
+          ],
+          "metric": "Transactions",
+          "primaryAggregationType": "Total",
+          "supportedAggregationTypes": [
+            "Total"
+          ],
+          "unit": "Count"
+        },
+        {
+          "dimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "metric": "Ingress",
+          "primaryAggregationType": "Total",
+          "supportedAggregationTypes": [
+            "Average",
+            "Maximum",
+            "Minimum",
+            "Total"
+          ],
+          "unit": "Bytes"
+        },
+        {
+          "dimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "metric": "Egress",
+          "primaryAggregationType": "Total",
+          "supportedAggregationTypes": [
+            "Average",
+            "Maximum",
+            "Minimum",
+            "Total"
+          ],
+          "unit": "Bytes"
+        },
+        {
+          "dimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "metric": "SuccessServerLatency",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "Average",
+            "Maximum",
+            "Minimum"
+          ],
+          "unit": "MilliSeconds"
+        },
+        {
+          "dimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "metric": "SuccessE2ELatency",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "Average",
+            "Maximum",
+            "Minimum"
+          ],
+          "unit": "MilliSeconds"
+        },
+        {
+          "dimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "metric": "Availability",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "Average",
+            "Maximum",
+            "Minimum"
+          ],
+          "unit": "Percent"
+        }
+      ],
+      "definitionsError": null,
+      "familyOutcomeTotalRequestsInWindow": {
+        "GET.failure": 1.0,
+        "GET.success": 9.0,
+        "PUT.success": 3.0
+      },
+      "metricDefinitionsExitCode": 0,
+      "nativeReadoutMetrics": {
+        "Availability": {
+          "aggregation": "Average",
+          "allSeriesHaveExpectedDimensions": true,
+          "expectedDimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "interval": "PT1M",
+          "nonzeroPointCount": 12,
+          "numericPointCount": 12,
+          "series": [
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 100.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 100.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 2,
+              "numericPointCount": 2
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:03:00Z",
+                  "value": 100.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 100.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 100.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetContainerProperties"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 4,
+              "numericPointCount": 4
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 100.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 100.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "ListBlobs"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 2,
+              "numericPointCount": 2
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:01:00Z",
+                  "value": 100.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:04:00Z",
+                  "value": 100.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 100.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "PutBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 3,
+              "numericPointCount": 3
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:00:00Z",
+                  "value": 100.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "CreateContainer"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 1
+            }
+          ],
+          "seriesCount": 5,
+          "status": "ok",
+          "unit": "Percent"
+        },
+        "Egress": {
+          "aggregation": "Total",
+          "allSeriesHaveExpectedDimensions": true,
+          "expectedDimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "interval": "PT1M",
+          "nonzeroPointCount": 12,
+          "numericPointCount": 300,
+          "series": [
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 16777792.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 16777792.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 2,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 1343.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "ListBlobs"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 2,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 1160.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetContainerProperties"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 4,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 0.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "PutBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 3,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 0.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "CreateContainer"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 60
+            }
+          ],
+          "seriesCount": 5,
+          "status": "ok",
+          "unit": "Bytes"
+        },
+        "Ingress": {
+          "aggregation": "Total",
+          "allSeriesHaveExpectedDimensions": true,
+          "expectedDimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "interval": "PT1M",
+          "nonzeroPointCount": 12,
+          "numericPointCount": 300,
+          "series": [
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 0.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "PutBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 3,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 1290.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetContainerProperties"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 4,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 676.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "ListBlobs"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 2,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 810.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 643.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 2,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 0.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "CreateContainer"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 60
+            }
+          ],
+          "seriesCount": 5,
+          "status": "ok",
+          "unit": "Bytes"
+        },
+        "SuccessE2ELatency": {
+          "aggregation": "Average",
+          "allSeriesHaveExpectedDimensions": true,
+          "expectedDimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "interval": "PT1M",
+          "nonzeroPointCount": 12,
+          "numericPointCount": 12,
+          "series": [
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 13122.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 88.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 2,
+              "numericPointCount": 2
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:01:00Z",
+                  "value": 108.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:04:00Z",
+                  "value": 144.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 94.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "PutBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 3,
+              "numericPointCount": 3
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:00:00Z",
+                  "value": 13.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "CreateContainer"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 1
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 14.5
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 6.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "ListBlobs"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 2,
+              "numericPointCount": 2
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:03:00Z",
+                  "value": 6.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 5.5
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 6.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetContainerProperties"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 4,
+              "numericPointCount": 4
+            }
+          ],
+          "seriesCount": 5,
+          "status": "ok",
+          "unit": "MilliSeconds"
+        },
+        "SuccessServerLatency": {
+          "aggregation": "Average",
+          "allSeriesHaveExpectedDimensions": true,
+          "expectedDimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "interval": "PT1M",
+          "nonzeroPointCount": 12,
+          "numericPointCount": 12,
+          "series": [
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:01:00Z",
+                  "value": 79.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:04:00Z",
+                  "value": 92.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 73.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "PutBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 3,
+              "numericPointCount": 3
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 24.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 20.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 2,
+              "numericPointCount": 2
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:00:00Z",
+                  "value": 13.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "CreateContainer"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 1
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 7.5
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 6.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "ListBlobs"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 2,
+              "numericPointCount": 2
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:03:00Z",
+                  "value": 6.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 5.5
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 6.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetContainerProperties"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 4,
+              "numericPointCount": 4
+            }
+          ],
+          "seriesCount": 5,
+          "status": "ok",
+          "unit": "MilliSeconds"
+        }
+      },
+      "readoutInterval": "PT1M",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default",
+      "responseTypesObserved": [
+        "ClientOtherError",
+        "Success"
+      ],
+      "series": [
+        {
+          "firstPointUtc": "2026-10-13T04:11:00Z",
+          "lastPointUtc": "2026-10-13T05:10:00Z",
+          "latestPoints": [
+            {
+              "timeStamp": "2026-10-13T05:08:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:09:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:10:00Z",
+              "total": 2.0
+            }
+          ],
+          "nativeDimensions": [
+            {
+              "name": "apiname",
+              "value": "GetContainerProperties"
+            },
+            {
+              "name": "responsetype",
+              "value": "Success"
+            }
+          ],
+          "nativeTotalSumInWindow": 7.0,
+          "nonzeroPointCount": 4,
+          "numericPointCount": 60
+        },
+        {
+          "firstPointUtc": "2026-10-13T04:11:00Z",
+          "lastPointUtc": "2026-10-13T05:10:00Z",
+          "latestPoints": [
+            {
+              "timeStamp": "2026-10-13T05:08:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:09:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:10:00Z",
+              "total": 1.0
+            }
+          ],
+          "nativeDimensions": [
+            {
+              "name": "apiname",
+              "value": "ListBlobs"
+            },
+            {
+              "name": "responsetype",
+              "value": "Success"
+            }
+          ],
+          "nativeTotalSumInWindow": 3.0,
+          "nonzeroPointCount": 2,
+          "numericPointCount": 60
+        },
+        {
+          "firstPointUtc": "2026-10-13T04:11:00Z",
+          "lastPointUtc": "2026-10-13T05:10:00Z",
+          "latestPoints": [
+            {
+              "timeStamp": "2026-10-13T05:08:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:09:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:10:00Z",
+              "total": 0.0
+            }
+          ],
+          "nativeDimensions": [
+            {
+              "name": "apiname",
+              "value": "PutBlob"
+            },
+            {
+              "name": "responsetype",
+              "value": "Success"
+            }
+          ],
+          "nativeTotalSumInWindow": 3.0,
+          "nonzeroPointCount": 3,
+          "numericPointCount": 60
+        },
+        {
+          "firstPointUtc": "2026-10-13T04:11:00Z",
+          "lastPointUtc": "2026-10-13T05:10:00Z",
+          "latestPoints": [
+            {
+              "timeStamp": "2026-10-13T05:08:00Z",
+              "total": 1.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:09:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:10:00Z",
+              "total": 1.0
+            }
+          ],
+          "nativeDimensions": [
+            {
+              "name": "apiname",
+              "value": "GetBlob"
+            },
+            {
+              "name": "responsetype",
+              "value": "Success"
+            }
+          ],
+          "nativeTotalSumInWindow": 2.0,
+          "nonzeroPointCount": 2,
+          "numericPointCount": 60
+        },
+        {
+          "firstPointUtc": "2026-10-13T04:11:00Z",
+          "lastPointUtc": "2026-10-13T05:10:00Z",
+          "latestPoints": [
+            {
+              "timeStamp": "2026-10-13T05:08:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:09:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:10:00Z",
+              "total": 0.0
+            }
+          ],
+          "nativeDimensions": [
+            {
+              "name": "apiname",
+              "value": "CreateContainer"
+            },
+            {
+              "name": "responsetype",
+              "value": "Success"
+            }
+          ],
+          "nativeTotalSumInWindow": 1.0,
+          "nonzeroPointCount": 1,
+          "numericPointCount": 60
+        },
+        {
+          "firstPointUtc": "2026-10-13T04:11:00Z",
+          "lastPointUtc": "2026-10-13T05:10:00Z",
+          "latestPoints": [
+            {
+              "timeStamp": "2026-10-13T05:08:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:09:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:10:00Z",
+              "total": 0.0
+            }
+          ],
+          "nativeDimensions": [
+            {
+              "name": "apiname",
+              "value": "GetContainerProperties"
+            },
+            {
+              "name": "responsetype",
+              "value": "ClientOtherError"
+            }
+          ],
+          "nativeTotalSumInWindow": 1.0,
+          "nonzeroPointCount": 1,
+          "numericPointCount": 60
+        }
+      ],
+      "smokeChecks": {
+        "allThreeHashesMatch": true,
+        "blobDownloadedByAzureCli": true,
+        "cnpgManagerWalRestoreSucceeded": true
+      },
+      "smokeStatus": "complete",
+      "transactionsDefinitionHasApiNameAndResponseType": true,
+      "transactionsNonzeroNativePoints": 13,
+      "transactionsNumericNativePoints": 360,
+      "transactionsReadoutError": null,
+      "transactionsReadoutExitCode": 0,
+      "transactionsReturnedNativeSeries": 6,
+      "transactionsSeriesWithBothIdentityDimensions": 6
+    },
+    "sigterm": {
+      "apiFamiliesObserved": [
+        "GET",
+        "PUT"
+      ],
+      "archiveStatus": "ready",
+      "availableMetricDefinitions": [
+        "Availability",
+        "Egress",
+        "Ingress",
+        "SuccessE2ELatency",
+        "SuccessServerLatency",
+        "Transactions"
+      ],
+      "definitions": [
+        {
+          "dimensions": [
+            "ResponseType",
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "TransactionType",
+            "Tier"
+          ],
+          "metric": "Transactions",
+          "primaryAggregationType": "Total",
+          "supportedAggregationTypes": [
+            "Total"
+          ],
+          "unit": "Count"
+        },
+        {
+          "dimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "metric": "Ingress",
+          "primaryAggregationType": "Total",
+          "supportedAggregationTypes": [
+            "Average",
+            "Maximum",
+            "Minimum",
+            "Total"
+          ],
+          "unit": "Bytes"
+        },
+        {
+          "dimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "metric": "Egress",
+          "primaryAggregationType": "Total",
+          "supportedAggregationTypes": [
+            "Average",
+            "Maximum",
+            "Minimum",
+            "Total"
+          ],
+          "unit": "Bytes"
+        },
+        {
+          "dimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "metric": "SuccessServerLatency",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "Average",
+            "Maximum",
+            "Minimum"
+          ],
+          "unit": "MilliSeconds"
+        },
+        {
+          "dimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "metric": "SuccessE2ELatency",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "Average",
+            "Maximum",
+            "Minimum"
+          ],
+          "unit": "MilliSeconds"
+        },
+        {
+          "dimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "metric": "Availability",
+          "primaryAggregationType": "Average",
+          "supportedAggregationTypes": [
+            "Average",
+            "Maximum",
+            "Minimum"
+          ],
+          "unit": "Percent"
+        }
+      ],
+      "definitionsError": null,
+      "familyOutcomeTotalRequestsInWindow": {
+        "GET.failure": 1.0,
+        "GET.success": 10.0,
+        "PUT.success": 5.0
+      },
+      "metricDefinitionsExitCode": 0,
+      "nativeReadoutMetrics": {
+        "Availability": {
+          "aggregation": "Average",
+          "allSeriesHaveExpectedDimensions": true,
+          "expectedDimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "interval": "PT1M",
+          "nonzeroPointCount": 15,
+          "numericPointCount": 15,
+          "series": [
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 100.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 1
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T04:53:00Z",
+                  "value": 100.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "CreateContainer"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 1
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T04:54:00Z",
+                  "value": 100.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 100.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 100.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "ListBlobs"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 3,
+              "numericPointCount": 3
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:01:00Z",
+                  "value": 100.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:04:00Z",
+                  "value": 100.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 100.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "PutBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 5,
+              "numericPointCount": 5
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:03:00Z",
+                  "value": 100.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 100.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 100.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetContainerProperties"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 5,
+              "numericPointCount": 5
+            }
+          ],
+          "seriesCount": 5,
+          "status": "ok",
+          "unit": "Percent"
+        },
+        "Egress": {
+          "aggregation": "Total",
+          "allSeriesHaveExpectedDimensions": true,
+          "expectedDimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "interval": "PT1M",
+          "nonzeroPointCount": 15,
+          "numericPointCount": 300,
+          "series": [
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 16777792.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 0.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 4408.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 0.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "ListBlobs"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 3,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 1160.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetContainerProperties"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 5,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 0.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "PutBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 5,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 0.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "CreateContainer"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 60
+            }
+          ],
+          "seriesCount": 5,
+          "status": "ok",
+          "unit": "Bytes"
+        },
+        "Ingress": {
+          "aggregation": "Total",
+          "allSeriesHaveExpectedDimensions": true,
+          "expectedDimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "interval": "PT1M",
+          "nonzeroPointCount": 15,
+          "numericPointCount": 300,
+          "series": [
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 0.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "PutBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 5,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 1290.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetContainerProperties"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 5,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 800.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 0.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "ListBlobs"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 3,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 0.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "CreateContainer"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 60
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 810.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:09:00Z",
+                  "value": 0.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 0.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 60
+            }
+          ],
+          "seriesCount": 5,
+          "status": "ok",
+          "unit": "Bytes"
+        },
+        "SuccessE2ELatency": {
+          "aggregation": "Average",
+          "allSeriesHaveExpectedDimensions": true,
+          "expectedDimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "interval": "PT1M",
+          "nonzeroPointCount": 15,
+          "numericPointCount": 15,
+          "series": [
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 13639.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 1
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:01:00Z",
+                  "value": 83.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:04:00Z",
+                  "value": 79.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 83.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "PutBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 5,
+              "numericPointCount": 5
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T04:54:00Z",
+                  "value": 5.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 13.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 12.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "ListBlobs"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 3,
+              "numericPointCount": 3
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T04:53:00Z",
+                  "value": 9.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "CreateContainer"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 1
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:03:00Z",
+                  "value": 5.5
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 5.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 5.5
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetContainerProperties"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 5,
+              "numericPointCount": 5
+            }
+          ],
+          "seriesCount": 5,
+          "status": "ok",
+          "unit": "MilliSeconds"
+        },
+        "SuccessServerLatency": {
+          "aggregation": "Average",
+          "allSeriesHaveExpectedDimensions": true,
+          "expectedDimensions": [
+            "GeoType",
+            "ApiName",
+            "Authentication",
+            "Tier"
+          ],
+          "interval": "PT1M",
+          "nonzeroPointCount": 15,
+          "numericPointCount": 15,
+          "series": [
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:01:00Z",
+                  "value": 67.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:04:00Z",
+                  "value": 63.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 71.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "PutBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 5,
+              "numericPointCount": 5
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 51.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetBlob"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 1
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T04:53:00Z",
+                  "value": 9.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "CreateContainer"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 1,
+              "numericPointCount": 1
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T04:54:00Z",
+                  "value": 5.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 6.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:08:00Z",
+                  "value": 5.0
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "ListBlobs"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 3,
+              "numericPointCount": 3
+            },
+            {
+              "firstPointUtc": "2026-10-13T04:11:00Z",
+              "lastPointUtc": "2026-10-13T05:10:00Z",
+              "latestPoints": [
+                {
+                  "timeStamp": "2026-10-13T05:03:00Z",
+                  "value": 5.5
+                },
+                {
+                  "timeStamp": "2026-10-13T05:07:00Z",
+                  "value": 5.0
+                },
+                {
+                  "timeStamp": "2026-10-13T05:10:00Z",
+                  "value": 5.5
+                }
+              ],
+              "missingExpectedDimensions": [],
+              "nativeDimensions": [
+                {
+                  "name": "apiname",
+                  "value": "GetContainerProperties"
+                },
+                {
+                  "name": "authentication",
+                  "value": "AccountKey"
+                },
+                {
+                  "name": "geotype",
+                  "value": "Primary"
+                },
+                {
+                  "name": "tier",
+                  "value": "Hot"
+                }
+              ],
+              "nonzeroPointCount": 5,
+              "numericPointCount": 5
+            }
+          ],
+          "seriesCount": 5,
+          "status": "ok",
+          "unit": "MilliSeconds"
+        }
+      },
+      "readoutInterval": "PT1M",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-9a66a148e388be98dedc394741b6c9d7/providers/Microsoft.Storage/storageAccounts/cnpgwal9a66a148e388be98d/blobServices/default",
+      "responseTypesObserved": [
+        "ClientOtherError",
+        "Success"
+      ],
+      "series": [
+        {
+          "firstPointUtc": "2026-10-13T04:11:00Z",
+          "lastPointUtc": "2026-10-13T05:10:00Z",
+          "latestPoints": [
+            {
+              "timeStamp": "2026-10-13T05:08:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:09:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:10:00Z",
+              "total": 2.0
+            }
+          ],
+          "nativeDimensions": [
+            {
+              "name": "apiname",
+              "value": "GetContainerProperties"
+            },
+            {
+              "name": "responsetype",
+              "value": "Success"
+            }
+          ],
+          "nativeTotalSumInWindow": 9.0,
+          "nonzeroPointCount": 5,
+          "numericPointCount": 60
+        },
+        {
+          "firstPointUtc": "2026-10-13T04:11:00Z",
+          "lastPointUtc": "2026-10-13T05:10:00Z",
+          "latestPoints": [
+            {
+              "timeStamp": "2026-10-13T05:08:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:09:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:10:00Z",
+              "total": 0.0
+            }
+          ],
+          "nativeDimensions": [
+            {
+              "name": "apiname",
+              "value": "PutBlob"
+            },
+            {
+              "name": "responsetype",
+              "value": "Success"
+            }
+          ],
+          "nativeTotalSumInWindow": 5.0,
+          "nonzeroPointCount": 5,
+          "numericPointCount": 60
+        },
+        {
+          "firstPointUtc": "2026-10-13T04:11:00Z",
+          "lastPointUtc": "2026-10-13T05:10:00Z",
+          "latestPoints": [
+            {
+              "timeStamp": "2026-10-13T05:08:00Z",
+              "total": 1.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:09:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:10:00Z",
+              "total": 0.0
+            }
+          ],
+          "nativeDimensions": [
+            {
+              "name": "apiname",
+              "value": "ListBlobs"
+            },
+            {
+              "name": "responsetype",
+              "value": "Success"
+            }
+          ],
+          "nativeTotalSumInWindow": 3.0,
+          "nonzeroPointCount": 3,
+          "numericPointCount": 60
+        },
+        {
+          "firstPointUtc": "2026-10-13T04:11:00Z",
+          "lastPointUtc": "2026-10-13T05:10:00Z",
+          "latestPoints": [
+            {
+              "timeStamp": "2026-10-13T05:08:00Z",
+              "total": 1.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:09:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:10:00Z",
+              "total": 0.0
+            }
+          ],
+          "nativeDimensions": [
+            {
+              "name": "apiname",
+              "value": "GetBlob"
+            },
+            {
+              "name": "responsetype",
+              "value": "Success"
+            }
+          ],
+          "nativeTotalSumInWindow": 1.0,
+          "nonzeroPointCount": 1,
+          "numericPointCount": 60
+        },
+        {
+          "firstPointUtc": "2026-10-13T04:11:00Z",
+          "lastPointUtc": "2026-10-13T05:10:00Z",
+          "latestPoints": [
+            {
+              "timeStamp": "2026-10-13T05:08:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:09:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:10:00Z",
+              "total": 0.0
+            }
+          ],
+          "nativeDimensions": [
+            {
+              "name": "apiname",
+              "value": "CreateContainer"
+            },
+            {
+              "name": "responsetype",
+              "value": "Success"
+            }
+          ],
+          "nativeTotalSumInWindow": 1.0,
+          "nonzeroPointCount": 1,
+          "numericPointCount": 60
+        },
+        {
+          "firstPointUtc": "2026-10-13T04:11:00Z",
+          "lastPointUtc": "2026-10-13T05:10:00Z",
+          "latestPoints": [
+            {
+              "timeStamp": "2026-10-13T05:08:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:09:00Z",
+              "total": 0.0
+            },
+            {
+              "timeStamp": "2026-10-13T05:10:00Z",
+              "total": 0.0
+            }
+          ],
+          "nativeDimensions": [
+            {
+              "name": "apiname",
+              "value": "GetContainerProperties"
+            },
+            {
+              "name": "responsetype",
+              "value": "ClientOtherError"
+            }
+          ],
+          "nativeTotalSumInWindow": 1.0,
+          "nonzeroPointCount": 1,
+          "numericPointCount": 60
+        }
+      ],
+      "smokeChecks": {
+        "allThreeHashesMatch": true,
+        "blobDownloadedByAzureCli": true,
+        "cnpgManagerWalRestoreSucceeded": true
+      },
+      "smokeStatus": "complete",
+      "transactionsDefinitionHasApiNameAndResponseType": true,
+      "transactionsNonzeroNativePoints": 16,
+      "transactionsNumericNativePoints": 360,
+      "transactionsReadoutError": null,
+      "transactionsReadoutExitCode": 0,
+      "transactionsReturnedNativeSeries": 6,
+      "transactionsSeriesWithBothIdentityDimensions": 6
+    }
+  },
+  "metricWindow": {
+    "endUtc": "2026-10-13T05:11:00Z",
+    "nativeIntervalRequested": "PT1M",
+    "startUtc": "2026-10-13T04:11:00Z"
+  },
+  "provider": "Azure Monitor metrics API via Azure CLI",
+  "readOnly": true
+}

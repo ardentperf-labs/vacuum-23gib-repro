@@ -1,0 +1,55 @@
+{
+  "azureReadOnlyHostCachePurged": false,
+  "errors": [],
+  "finishedAtUtc": "2026-10-13T01:26:31.907Z",
+  "hostCacheNote": "Azure host caching is disabled on verified DATA/WAL disks; this operation clears guest Linux caches after replica seeding.",
+  "nodeResourceGroup": "rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341",
+  "nodeVmSize": "Standard_D2s_v4",
+  "ownerTokenVerified": true,
+  "phase": "complete",
+  "preparationChange": "Cleared Linux guest page cache on both verified PostgreSQL nodes with sync and drop_caches=3.",
+  "roles": {
+    "primary": {
+      "completedAtUtc": "2026-10-13T01:26:20.751Z",
+      "createdAtUtc": "2026-10-13T01:26:16.189Z",
+      "deleted": true,
+      "guestCacheClearTimesUtc": [
+        "2026-10-13T01:26:16.927503286Z",
+        "2026-10-13T01:26:17.087535235Z"
+      ],
+      "guestClearExitCode": 0,
+      "localLog": "<workspace>/experiments/20261012-walreceiver-sigterm/sigterm/results/primary-guest-cache.log",
+      "logsRetrieved": true,
+      "node": "aks-nodepool1-90183240-vmss000001",
+      "pod": "guest-cache-primary-80b39f80",
+      "role": "primary",
+      "sourcePostgresPod": "hdd-pg-1",
+      "sourcePostgresPodUid": "7e963eed-a87b-4f9f-ae5a-e490e4bf5000",
+      "uid": "378d0170-fd81-4928-8d31-6af49e120f24",
+      "vmResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss/virtualMachines/1"
+    },
+    "replica": {
+      "completedAtUtc": "2026-10-13T01:26:30.317Z",
+      "createdAtUtc": "2026-10-13T01:26:23.249Z",
+      "deleted": true,
+      "guestCacheClearTimesUtc": [
+        "2026-10-13T01:26:23.905083649Z",
+        "2026-10-13T01:26:24.061960808Z"
+      ],
+      "guestClearExitCode": 0,
+      "localLog": "<workspace>/experiments/20261012-walreceiver-sigterm/sigterm/results/replica-guest-cache.log",
+      "logsRetrieved": true,
+      "node": "aks-nodepool1-90183240-vmss000000",
+      "pod": "guest-cache-replica-80b39f80",
+      "role": "replica",
+      "sourcePostgresPod": "hdd-pg-2",
+      "sourcePostgresPodUid": "d49e913e-72bd-42a4-9d39-53118f1fd9b4",
+      "uid": "90e00ac0-b485-43b6-9180-c02589c4000e",
+      "vmResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss/virtualMachines/0"
+    }
+  },
+  "runId": "15a5ac9098c541fd",
+  "startedAtUtc": "2026-10-13T01:26:13.520Z",
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "updatedAtUtc": "2026-10-13T01:26:31.907Z"
+}

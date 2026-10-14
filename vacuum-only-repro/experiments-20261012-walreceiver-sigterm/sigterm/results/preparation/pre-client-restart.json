@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "verifiedAtUtc": "2026-10-13T01:21:04Z",
+  "reason": "Both first attempts stopped during client runtime metadata logging, before launching pgbench or VACUUM. The setup fixture created public.pgbench_client_rows, so it was verified unused and removed before retry.",
+  "failure": {
+    "message": "event() got multiple values for argument 'path'",
+    "cleanupErrors": [],
+    "vacuumLeftRunning": false,
+    "pgbenchLaunched": false,
+    "vacuumLaunched": false
+  },
+  "checksBeforeCleanup": {
+    "stackOwnershipVerified": true,
+    "primaryAndReplicaReady": true,
+    "systemIdentifier": "7692518806614212629",
+    "bothStacks": {
+      "sigterm": {
+        "primaryPod": "hdd-pg-1",
+        "replicaPod": "hdd-pg-2",
+        "clientFixture": {"exists": true, "oid": "24584", "owner": "postgres", "rows": 10, "updateCountSum": 0},
+        "primary": {"allAppSessions": 0, "benchSessions": 0, "vacuumSessions": 0, "activeVacuumCommands": 0, "progressVacuumCount": 0},
+        "replica": {"allAppSessions": 0, "benchSessions": 0, "vacuumSessions": 0, "activeVacuumCommands": 0, "progressVacuumCount": 0},
+        "pgbenchProcess": false,
+        "pgpassDirectory": false,
+        "clientProcessArtifact": false,
+        "vacuumProcessArtifact": false
+      },
+      "control": {
+        "primaryPod": "hdd-pg-1",
+        "replicaPod": "hdd-pg-2",
+        "clientFixture": {"exists": true, "oid": "24584", "owner": "postgres", "rows": 10, "updateCountSum": 0},
+        "primary": {"allAppSessions": 0, "benchSessions": 0, "vacuumSessions": 0, "activeVacuumCommands": 0, "progressVacuumCount": 0},
+        "replica": {"allAppSessions": 0, "benchSessions": 0, "vacuumSessions": 0, "activeVacuumCommands": 0, "progressVacuumCount": 0},
+        "pgbenchProcess": false,
+        "pgpassDirectory": false,
+        "clientProcessArtifact": false,
+        "vacuumProcessArtifact": false
+      }
+    }
+  },
+  "cleanup": {
+    "completedAtUtc": "2026-10-13T01:21:04Z",
+    "guardedOperation": "DROP TABLE public.pgbench_client_rows",
+    "conditionsVerifiedInsidePrimaryTransaction": [
+      "connected to the primary",
+      "no app client sessions",
+      "no vacuum-only client sessions",
+      "no pg_stat_progress_vacuum rows",
+      "exactly 10 fixture rows with sum(update_count)=0",
+      "fixture table owner is postgres"
+    ],
+    "sigterm": {"exitCode": 0, "dropped": true},
+    "control": {"exitCode": 0, "dropped": true}
+  },
+  "postCleanup": {
+    "bothPrimariesAndReplicas": {
+      "appSessions": 0,
+      "benchSessions": 0,
+      "vacuumSessions": 0,
+      "activeVacuumCommands": 0,
+      "progressVacuumCount": 0,
+      "pgbenchClientFixtureExists": false,
+      "targetHeapBytes": 24696061952
+    },
+    "targetTableUntouched": true,
+    "sourceSnapshotsUntouched": true
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "afterVacuumStartSeconds": 600,
+  "causalNote": "Control marker records the matched +600-second point; no backend is signaled.",
+  "executedAtUtc": "2026-10-13T05:28:16.431125Z",
+  "mode": "control",
+  "receiverAtControlMarker": {
+    "inRecovery": true,
+    "observedAtUtc": "2026-10-13T05:28:16.431125Z",
+    "receiver": {
+      "flushedLsn": "4F/F97EC308",
+      "latestEndLsn": "4F/F97EC308",
+      "pid": 72,
+      "status": "streaming",
+      "writtenLsn": "4F/F97EC308"
+    }
+  },
+  "receiverSampleError": null,
+  "scheduledAtUtc": "2026-10-13T05:28:14.223251Z",
+  "schedulerDispatchLatenessSeconds": 0.0001468658447265625,
+  "schedulerDispatchStartedAtUtc": "2026-10-13T05:28:14.223Z",
+  "schedulerStartedAtUtc": "2026-10-13T05:18:15.190Z",
+  "signalResult": null,
+  "status": "marked",
+  "vacuumStartMarker": {
+    "flushLsn": "4E/5B024B98",
+    "time": "2026-10-13T05:18:14.223251Z",
+    "walBytes": 320871,
+    "walFpi": 24,
+    "walRecords": 3324
+  }
+}

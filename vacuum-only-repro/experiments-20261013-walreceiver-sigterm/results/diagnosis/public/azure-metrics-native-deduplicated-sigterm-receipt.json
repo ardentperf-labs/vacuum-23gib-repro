@@ -1,0 +1,84 @@
+{
+  "assetAliases": [
+    {
+      "asset": "archive-blob-service",
+      "role": "archive",
+      "targetKind": "blob-service"
+    },
+    {
+      "asset": "primary-data-disk",
+      "role": "primary",
+      "targetKind": "data-disk"
+    },
+    {
+      "asset": "primary-vm",
+      "role": "primary",
+      "targetKind": "vm"
+    },
+    {
+      "asset": "primary-wal-disk",
+      "role": "primary",
+      "targetKind": "wal-disk"
+    },
+    {
+      "asset": "replica-data-disk",
+      "role": "replica",
+      "targetKind": "data-disk"
+    },
+    {
+      "asset": "replica-vm",
+      "role": "replica",
+      "targetKind": "vm"
+    },
+    {
+      "asset": "replica-wal-disk",
+      "role": "replica",
+      "targetKind": "wal-disk"
+    }
+  ],
+  "conflictingDuplicateNumericValues": 6280,
+  "duplicateCopiesCollapsed": 402435,
+  "format": "gzip-compressed JSON Lines; one latest-captured row per native Azure metric identity",
+  "generatedAtUtc": "2026-10-13T10:46:28.721423+00:00",
+  "inputJsonLines": 433949,
+  "lane": "sigterm",
+  "nativeIdentityContract": "role/asset alias + metric + complete case-normalized native dimensions + native timestamp; overlapping polls/windows deduplicated by full native identity, latest capturedAtUtc wins. Azure resource IDs and exact VM names omitted; vmname is replaced by role-node alias.",
+  "numericFieldsSeen": [
+    "average",
+    "total"
+  ],
+  "outputBytes": 189334,
+  "outputPath": "results/diagnosis/public/azure-metrics-native-deduplicated-sigterm.jsonl.gz",
+  "outputSha256": "b98229c3af1e115d97636ff721702e1383a95632302addb20a3fc91db94db796",
+  "rowsWithTimestampButNoNumericValues": 73229,
+  "schemaVersion": 1,
+  "sensitivity": "Public-safe normalized metric values and dimensions; subscription, resource group, account, resource IDs and exact node names omitted.",
+  "sourceFiles": [
+    {
+      "bytes": 273951241,
+      "lineCount": 422730,
+      "sha256": "8af45f652131ff4d9b87c4d93bdaa2af83913037b3834700c30cfe43729915e9",
+      "sourcePath": "sigterm/results/instrumentation/azure/azure-metrics.jsonl"
+    },
+    {
+      "bytes": 8212452,
+      "lineCount": 11187,
+      "sha256": "845175fdf8da704c31a2d478090c131eb2abab0f8da4cd3cb2f45be324bdedab",
+      "sourcePath": "sigterm/results/diagnosis/private/supplemental/azure-metrics-tail-deduplicated-points-20261013T082700Z-to-20261013T102000Z.jsonl"
+    },
+    {
+      "bytes": 123842,
+      "lineCount": 16,
+      "sha256": "4cbb910032dd90383375a86ccb30b40a0407a52583f8deb21b53776c07d998eb",
+      "sourcePath": "sigterm/results/diagnosis/private/supplemental/azure-metrics-final-tail-20261013T101900Z-to-20261013T102400Z.jsonl"
+    },
+    {
+      "bytes": 124061,
+      "lineCount": 16,
+      "sha256": "25cc7fe8362a036966c32e315aa09031f243e340e4a12f086ae7310d4e7153d0",
+      "sourcePath": "sigterm/results/diagnosis/private/supplemental/azure-metrics-final-tail-20261013T102300Z-to-20261013T102900Z.jsonl"
+    }
+  ],
+  "sourceMetricPointRows": 435006,
+  "uniqueNativePoints": 32571
+}

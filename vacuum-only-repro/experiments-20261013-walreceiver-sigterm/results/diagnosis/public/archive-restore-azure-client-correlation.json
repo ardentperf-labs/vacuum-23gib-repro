@@ -1,0 +1,154 @@
+{
+  "archiveRecovery": {
+    "archiveToStreamingBoundary": {
+      "interpretation": "The two not-found lookups were for the next live WAL segment; streaming resumed about 0.12 seconds after the second. The captured evidence contains no failed restore event for the 2,054 preceding archived segments.",
+      "lastSuccessfulRestoreUtc": "2026-10-13T08:31:02.121197419Z",
+      "newStreamingStartedUtc": "2026-10-13T08:31:05.336166710Z",
+      "nextSegmentLookupEvents": [
+        {
+          "classification": "not found during archive lookup",
+          "timestampUtc": "2026-10-13T08:31:04.644258Z",
+          "walSegmentName": "000000020000005700000001"
+        },
+        {
+          "classification": "not found during archive lookup",
+          "timestampUtc": "2026-10-13T08:31:05.216623Z",
+          "walSegmentName": "000000020000005700000001"
+        }
+      ],
+      "secondsFromLastRestoreToStreamStart": 3.214969,
+      "streamingAndQuorumEvents": [
+        {
+          "event": "standby entered synchronous quorum candidate state",
+          "role": "primary",
+          "timestampUtc": "2026-10-13T08:31:05.336065Z"
+        },
+        {
+          "event": "streaming resumed",
+          "role": "replica",
+          "timestampUtc": "2026-10-13T08:31:05.335968Z"
+        }
+      ]
+    },
+    "azureBlobTransactions": {
+      "aggregationCaveat": "Azure reports aggregate requests by native minute; it cannot map each GET to an individual WAL filename.",
+      "controlNativeBuckets": 300,
+      "controlPostInterventionCount": 0.0,
+      "dimensions": {
+        "ApiName": "GetBlob",
+        "ResponseType": "Success"
+      },
+      "nativeDataThroughUtc": "2026-10-13T10:28:00Z",
+      "nativeInterval": "PT1M",
+      "nativeMetric": "Transactions",
+      "treatmentCountEqualsRestoreLogEvents": true,
+      "treatmentNativeBuckets": 300,
+      "treatmentPostInterventionCount": 2054.0
+    },
+    "control": {
+      "restoreEventCount": 0,
+      "restoreWarningOrErrorEvents": 0
+    },
+    "treatment": {
+      "firstRestore": {
+        "timestampUtc": "2026-10-13T05:28:15.755Z",
+        "walSegmentName": "000000020000004E000000FB"
+      },
+      "lastRestore": {
+        "timestampUtc": "2026-10-13T08:31:02.120Z",
+        "walSegmentName": "000000020000005700000000"
+      },
+      "restoreEventCount": 2054,
+      "restoreWarningOrErrorEvents": 0,
+      "safeEventRowsPath": "results/diagnosis/public/archive-restore-events-sigterm.jsonl",
+      "safeEventRowsSha256": "03cb3325797266fc278e7d727c0618615fa94a78e8d3451f784b9d2e43e74345",
+      "uniqueWalSegmentCount": 2054,
+      "walSequenceContiguous": true
+    }
+  },
+  "clientBehavior": {
+    "control": {
+      "completedTransactions": 43670,
+      "failedTransactions": 0,
+      "pgbenchExitCode": 0,
+      "stopAfterGracefulDrain": true
+    },
+    "sigterm": {
+      "aggregatePgbenchZeroTpsEndUtc": "2026-10-13T07:43:32.185000Z",
+      "aggregatePgbenchZeroTpsSpanSeconds": 8109.999,
+      "aggregatePgbenchZeroTpsStartUtc": "2026-10-13T05:28:22.186000Z",
+      "aggregateProgressIsNotPerTransactionLog": true,
+      "firstAllTenBlockedSampleUtc": "2026-10-13T05:28:26.709299Z",
+      "firstResumedWriteCompletionStatus": "unknown; no per-transaction client log or post-08:24:55 client wait samples were recovered",
+      "firstResumedWriteCompletionUtc": null,
+      "fixtureUpdateRowsAtReadOnlyCapture": 4620,
+      "lastAllTenBlockedSampleUtc": "2026-10-13T08:24:55.707409Z",
+      "lastBlockedFixtureUpdates": 4610,
+      "maximumSampleGapSeconds": 1.05,
+      "noClientSessionsAtReadOnlyCapture": true,
+      "qualifyingSamples": 10590,
+      "readOnlyCaptureUtc": "2026-10-13T10:22:52.729741+00:00",
+      "sameTenQueryAndTransactionIdentitiesThroughout": true,
+      "sameTenWritersObservedOnIpcSyncRep": true,
+      "spanSeconds": 10588.998,
+      "updatesAboveLastBlockedSample": 10
+    }
+  },
+  "generatedAtUtc": "2026-10-13T10:44:44.674170+00:00",
+  "interpretation": "The treatment shows a sustained synchronous-replication writer stall while its replica restored a contiguous archived WAL sequence. Successful Azure GetBlob minute aggregates equal the PostgreSQL restore-event count, and streaming resumed after the final restored archived segment. This is strong timing and count correlation; it does not prove which Azure request fetched which WAL segment or establish the first client write completion after streaming resumed.",
+  "intervention": {
+    "control": {
+      "markerExecutedAtUtc": "2026-10-13T05:28:16.431125Z",
+      "mode": "control",
+      "receiverWasStreamingAtMarker": true,
+      "scheduledAfterVacuumStartSeconds": 600,
+      "signalSent": false
+    },
+    "sigterm": {
+      "executedAtUtc": "2026-10-13T05:28:14.076043501Z",
+      "mode": "sigterm",
+      "result": "SIGTERM delivered after identity checks",
+      "scheduledAfterVacuumStartSeconds": 600,
+      "secondsAfterVacuumStart": 601.376,
+      "target": "replica walreceiver process"
+    }
+  },
+  "limitations": [
+    "The exact first completed treatment transaction after the final blocked sample was not recovered.",
+    "The original client runner failed to finalize its run state even though native VACUUM markers and process exit codes confirm both VACUUMs completed.",
+    "Azure Transactions are aggregate per-minute counts, not per-object audit records.",
+    "No claim is made that wal_sender_timeout alone caused the observed multi-hour wait; archive-backed replica catch-up is directly evidenced during the stall."
+  ],
+  "runStatus": {
+    "bothNativeVacuumsCompleted": true,
+    "controllerFinalization": "incomplete",
+    "reason": "The runner did not accept its native VACUUM completion markers as completion; native start/complete marker files and vacuum process exit codes show both VACUUMs exited successfully."
+  },
+  "schemaVersion": 1,
+  "sourceEvidence": {
+    "azureRawPublicControlPath": "results/diagnosis/public/azure-metrics-native-deduplicated-control.jsonl.gz",
+    "azureRawPublicControlSha256": "215e79f96377e074da0bf409efb441c2f3d05a6e0812459253d5ce75be22784e",
+    "azureRawPublicSigtermPath": "results/diagnosis/public/azure-metrics-native-deduplicated-sigterm.jsonl.gz",
+    "azureRawPublicSigtermSha256": "b98229c3af1e115d97636ff721702e1383a95632302addb20a3fc91db94db796",
+    "publicRestoreEventRows": 2054,
+    "publicRestoreEventRowsSha256": "03cb3325797266fc278e7d727c0618615fa94a78e8d3451f784b9d2e43e74345",
+    "treatmentBlockedWriterSummarySha256": "ebe9f77ef43ab15ddb78008117ea6fad07c9d680a223a0f68190c0f2a7f159ae",
+    "treatmentRestoreSummarySha256": "f9332c2fdfe1747de5b952a39ab5428b4deb3ffbb0c49d78a26c2f1f2b5a50ce"
+  },
+  "vacuum": {
+    "control": {
+      "completeUtc": "2026-10-13T06:08:03.497441Z",
+      "durationSeconds": 2989.274,
+      "nativeStartAndCompleteMarkersPresent": true,
+      "remoteExitCode": 0,
+      "startUtc": "2026-10-13T05:18:14.223251Z"
+    },
+    "sigterm": {
+      "completeUtc": "2026-10-13T06:14:43.543859Z",
+      "durationSeconds": 3390.844,
+      "nativeStartAndCompleteMarkersPresent": true,
+      "remoteExitCode": 0,
+      "startUtc": "2026-10-13T05:18:12.699771Z"
+    }
+  }
+}

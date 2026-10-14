@@ -1,0 +1,49 @@
+{
+  "stack": "sigterm",
+  "capturedReadOnly": true,
+  "snapshots": [
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+      "name": "snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+      "location": "eastus",
+      "resourceGroup": "RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775",
+      "diskSizeGb": null,
+      "sku": "Standard_ZRS",
+      "provisioningState": "Succeeded",
+      "creationData": {
+        "createOption": "Copy",
+        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5203346e38bc77fbedc14b472f6e4775/providers/Microsoft.Compute/disks/restore-data-5203346e",
+        "sourceUniqueId": "ce22a251-c662-433d-88ec-4c8c6b72b9c0"
+      },
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "premiumv2-vacuum-backup",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5203346e38bc77fbedc14b472f6e4775/providers/Microsoft.Compute/disks/restore-data-5203346e"
+      },
+      "queryExitCode": 0
+    },
+    {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+      "name": "snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+      "location": "eastus",
+      "resourceGroup": "RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775",
+      "diskSizeGb": null,
+      "sku": "Standard_ZRS",
+      "provisioningState": "Succeeded",
+      "creationData": {
+        "createOption": "Copy",
+        "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5203346e38bc77fbedc14b472f6e4775/providers/Microsoft.Compute/disks/restore-wal-5203346e",
+        "sourceUniqueId": "ccc04050-6721-46cb-a38d-4995952bf00e"
+      },
+      "tags": {
+        "k8s-azure-created-by": "kubernetes-azure-dd",
+        "reproPurpose": "premiumv2-vacuum-backup",
+        "source_volume_id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5203346e38bc77fbedc14b472f6e4775/providers/Microsoft.Compute/disks/restore-wal-5203346e"
+      },
+      "queryExitCode": 0
+    }
+  ],
+  "sourceResourceGroup": "RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775",
+  "region": "eastus",
+  "diskSizeGiB": 512
+}

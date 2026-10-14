@@ -1,0 +1,114 @@
+{
+  "requestedAtUtc": "2026-10-13T03:43:36.361Z",
+  "signal": "SIGALRM",
+  "signalSemantics": "pgbench duration handler stops scheduling and drains active transactions",
+  "requestResult": "graceful_stop_requested",
+  "finishedAtUtc": "2026-10-13T03:43:46.067Z",
+  "status": "0",
+  "exitCode": 0,
+  "waitSeconds": 9.38938370300093,
+  "identityVerification": "verified pgbench pid=9136",
+  "serverActivityBeforeStopRequest": {
+    "observedAtUtc": "2026-10-13T03:43:36.326600Z",
+    "benchSessions": 10,
+    "unrelatedAppSessions": 0,
+    "committedTransactions": 40618,
+    "activeSessions": 0,
+    "waitingSessions": 0,
+    "backends": [
+      {
+        "pid": 9150,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 3.554721
+      },
+      {
+        "pid": 9151,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 0.6237
+      },
+      {
+        "pid": 9152,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 1.799596
+      },
+      {
+        "pid": 9153,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 1.468679
+      },
+      {
+        "pid": 9154,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 1.12192
+      },
+      {
+        "pid": 9155,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 0.403637
+      },
+      {
+        "pid": 9156,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 0.270476
+      },
+      {
+        "pid": 9157,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 0.44278
+      },
+      {
+        "pid": 9158,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 2.738755
+      },
+      {
+        "pid": 9159,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 0.572574
+      }
+    ],
+    "maxActiveXactAgeSeconds": null,
+    "maxActiveQueryAgeSeconds": null
+  },
+  "serverActivityAfterDrain": {
+    "observedAtUtc": "2026-10-13T03:43:46.350742Z",
+    "benchSessions": 0,
+    "unrelatedAppSessions": 0,
+    "committedTransactions": 40622,
+    "activeSessions": 0,
+    "waitingSessions": 0,
+    "backends": [],
+    "maxActiveXactAgeSeconds": null,
+    "maxActiveQueryAgeSeconds": null
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "verifiedAtUtc": "2026-10-13T03:54:46.737328+00:00",
+  "readyForTeardown": true,
+  "diagnosis": "missing archive configuration, not an evidenced object-storage fetch error; SyncRep released when sole sender returned to streaming quorum",
+  "invalidPilot": true,
+  "userStopped": true,
+  "nativeLogsVerified": true,
+  "nativeClientCompletedAndCommitted": 40627,
+  "failedTransactions": 0,
+  "vacuumCompleted": true,
+  "replayCatchupIntentionallySkipped": true,
+  "captureManifestArtifactsVerified": [
+    {
+      "path": "results/diagnosis/private/api-resources.txt",
+      "sha256": "cdc1adab664b56eeedb2945be0b9a281af17e0105866abb1779724100867034d",
+      "bytes": 17464
+    },
+    {
+      "path": "results/diagnosis/private/api-resources.txt.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/barman-objectstores.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/barman-objectstores.json.stderr",
+      "sha256": "d5a41a3a559e4c6cba2ddb75bea1abc70d4823a130dbfca4c9b18a340b607de8",
+      "bytes": 93
+    },
+    {
+      "path": "results/diagnosis/private/cluster.json",
+      "sha256": "08540d3f1b25ea3a52748b99c14b30412ce64754267e2e301cc2e47d172a6b4a",
+      "bytes": 12989
+    },
+    {
+      "path": "results/diagnosis/private/cluster.json.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/cnpg-backups.json",
+      "sha256": "7a779468a2dde976a9b896541df1e4ef805e813093bd5edb40ef1a6eea588edf",
+      "bytes": 119
+    },
+    {
+      "path": "results/diagnosis/private/cnpg-backups.json.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/cnpg-operator-current.log",
+      "sha256": "47a692476da13ef24ce419d5e7131c27fe1826326e2aa2802473507fdbc14b9e",
+      "bytes": 182824
+    },
+    {
+      "path": "results/diagnosis/private/cnpg-operator-current.log.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/cnpg-scheduledbackups.json",
+      "sha256": "7a779468a2dde976a9b896541df1e4ef805e813093bd5edb40ef1a6eea588edf",
+      "bytes": 119
+    },
+    {
+      "path": "results/diagnosis/private/cnpg-scheduledbackups.json.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/deployments.json",
+      "sha256": "49b20cba3fb475ae5cc12672fe002f85b86c0d4f4227082cf1b41887d9130495",
+      "bytes": 88600
+    },
+    {
+      "path": "results/diagnosis/private/deployments.json.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/events.json",
+      "sha256": "7a779468a2dde976a9b896541df1e4ef805e813093bd5edb40ef1a6eea588edf",
+      "bytes": 119
+    },
+    {
+      "path": "results/diagnosis/private/events.json.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/pods.json",
+      "sha256": "3d0596a3c192a68786504670806132f63252e1d22ddffadf2131d28e1eebaefb",
+      "bytes": 97967
+    },
+    {
+      "path": "results/diagnosis/private/pods.json.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/primary-controller-log.tar.gz",
+      "sha256": "2669f47ee867bb504eb23ce5e1c40b7f061950da73ecda771acba28e66e4073b",
+      "bytes": 181
+    },
+    {
+      "path": "results/diagnosis/private/primary-controller-log.tar.gz.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/primary-postgres-current.log",
+      "sha256": "3463b5996d9eade6e10109e48059fb994985f463129174d1f61fe06b4efb0caa",
+      "bytes": 153781
+    },
+    {
+      "path": "results/diagnosis/private/primary-postgres-current.log.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/primary-postgres-diagnostic.json.txt",
+      "sha256": "79a19371494ba156ce15221252c9d27479df0b50b0f6118564c73da20d5acb97",
+      "bytes": 6343
+    },
+    {
+      "path": "results/diagnosis/private/primary-postgres-diagnostic.json.txt.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/primary-wal-filesystem.txt",
+      "sha256": "f0a8b350c9be7391b93c5b953de3598a3b36c261afd932a4cfbf3a0d8fd2d6cc",
+      "bytes": 3550
+    },
+    {
+      "path": "results/diagnosis/private/primary-wal-filesystem.txt.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/pvcs.json",
+      "sha256": "2b1def51afe9d697d9d8b3e4f5eb0037127a605cef82a1f52513aaa50f2b17f0",
+      "bytes": 11944
+    },
+    {
+      "path": "results/diagnosis/private/pvcs.json.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/replica-controller-log.tar.gz",
+      "sha256": "cdc3beedd2ee67e6deea908b9e5d35f97db1efa9e6cf54a10010b36e2df23b05",
+      "bytes": 186
+    },
+    {
+      "path": "results/diagnosis/private/replica-controller-log.tar.gz.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/replica-postgres-current.log",
+      "sha256": "f6bb0959917a8de724c522bfe669efeffc71c231eb7883bf0390c5414d688a8b",
+      "bytes": 94070
+    },
+    {
+      "path": "results/diagnosis/private/replica-postgres-current.log.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/replica-postgres-diagnostic.json.txt",
+      "sha256": "9808180b2d961043f52940bb28e52a4b0774e4c3c9afe65339eeb11a9eacdfd7",
+      "bytes": 6321
+    },
+    {
+      "path": "results/diagnosis/private/replica-postgres-diagnostic.json.txt.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/replica-wal-filesystem.txt",
+      "sha256": "fac885bd62e24d11ab9bcf1b8ed0879577c55f32a83137fda6d39242ffb0e991",
+      "bytes": 58498
+    },
+    {
+      "path": "results/diagnosis/private/replica-wal-filesystem.txt.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/private/volumeattachments.json",
+      "sha256": "431189c5bf5edd2acc3895b03c9250c4c9f3322c09562314ec8e7e3787ffd267",
+      "bytes": 4920
+    },
+    {
+      "path": "results/diagnosis/private/volumeattachments.json.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "results/diagnosis/public/azure-source-snapshot-metadata-redacted.json",
+      "sha256": "ae1856a69a711ccb39c7671dfed3a5a63534af0abec8ba22c7642ba63ab55100",
+      "bytes": 2568
+    },
+    {
+      "path": "results/diagnosis/public/cluster-backup-source-references.json",
+      "sha256": "b6bded28d9d8dd1f7f639e910d5852947650c579ce2dfe54b0cfe42a6d65dd2f",
+      "bytes": 5016
+    },
+    {
+      "path": "results/diagnosis/public/postgres-cnpg-log-events-redacted.jsonl",
+      "sha256": "83f96d1f52846854677c8e5a625e57594c99413e9ede9b032d58bcf56d661962",
+      "bytes": 6581
+    },
+    {
+      "path": "results/diagnosis/public/postgres-runtime-settings-redacted.json",
+      "sha256": "8d4c6f26c2abce72ab4049389ed56c07f1f78f4a2bd7c726c232c93d450bc71d",
+      "bytes": 19771
+    },
+    {
+      "path": "results/diagnosis/public/wal-files-and-archive-status-window.json",
+      "sha256": "1d9580b9e3c08d69e57c93799cac80becb142482771afada1ede0c58f4647742",
+      "bytes": 272324
+    },
+    {
+      "path": "results/diagnosis/public/walreceiver-restore-timeline.json",
+      "sha256": "09281e85c9dd0c633f04dcfb7613296ddc0bccdbc8d2ba66b784b5f457f6b7c7",
+      "bytes": 1096188
+    },
+    {
+      "path": "results/diagnosis/public/archive-backend-diagnosis.json",
+      "sha256": "800c62c28fdc400be9253e327f302d03490dfedc01f607d7855d3211c5cfb5ec",
+      "bytes": 11567
+    }
+  ],
+  "harvestLedgerFilesVerified": 303,
+  "privateLogsRetainedLocally": true,
+  "publicationOmitsPrivateDiagnosticContents": true
+}

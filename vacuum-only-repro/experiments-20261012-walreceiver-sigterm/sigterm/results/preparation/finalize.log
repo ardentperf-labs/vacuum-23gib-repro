@@ -1,0 +1,17 @@
+== finalizer launch ==
+UTC: 2026-10-13T00:35:00Z
+PID: 28813
+exec session: 20213
+mode: apply; preflight was previously dry-run validated
+stdout/stderr: captured from live exec session
+
+== status sample 2026-10-13T00:40:00Z ==
+readyInstances=1 phase=Creating a new replica joinJob=active primary=Running/Ready
+
+== status sample 2026-10-13T00:42:52Z ==
+joinJob=hdd-pg-2-join active=1 succeeded=0 failed=0 startTime=2026-10-13T00:34:07Z; readyInstances=1
+
+== join job log sample 2026-10-13T00:43:02Z ==
+pg_basebackup initiated; checkpoint completed; WAL start 4E/56000028 timeline 2; background WAL receiver started; job active.
+Prepared restored primary and streaming replica; evidence: <workspace>/experiments/20261012-walreceiver-sigterm/sigterm/.state/prepare.json
+== process exited: 0 ==

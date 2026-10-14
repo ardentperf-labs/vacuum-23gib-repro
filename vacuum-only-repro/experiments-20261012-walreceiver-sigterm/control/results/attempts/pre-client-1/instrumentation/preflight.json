@@ -1,0 +1,660 @@
+{
+  "attachmentIdentities": {
+    "cachingMode": "None",
+    "diskSizeGB": 512,
+    "diskSku": "Standard_LRS",
+    "nodeVmSize": "Standard_D2s_v4",
+    "passed": true,
+    "roles": {
+      "primary": {
+        "disks": {
+          "data": {
+            "caching": "None",
+            "claim": "hdd-pg-1",
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-86499588-0083-4353-8e23-baff82667e76",
+            "lun": "1",
+            "mountPath": "/var/lib/postgresql/data",
+            "pv": "pvc-86499588-0083-4353-8e23-baff82667e76",
+            "sizeGB": 512,
+            "sku": "Standard_LRS"
+          },
+          "wal": {
+            "caching": "None",
+            "claim": "hdd-pg-1-wal",
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be",
+            "lun": "0",
+            "mountPath": "/var/lib/postgresql/wal",
+            "pv": "pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be",
+            "sizeGB": 512,
+            "sku": "Standard_LRS"
+          }
+        },
+        "node": "aks-nodepool1-12067992-vmss000001",
+        "pod": "hdd-pg-1",
+        "vmResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss/virtualMachines/1"
+      },
+      "replica": {
+        "disks": {
+          "data": {
+            "caching": "None",
+            "claim": "hdd-pg-2",
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-e72b9d65-b564-4cb2-a7e1-0f2ecbcd78a4",
+            "lun": "1",
+            "mountPath": "/var/lib/postgresql/data",
+            "pv": "pvc-e72b9d65-b564-4cb2-a7e1-0f2ecbcd78a4",
+            "sizeGB": 512,
+            "sku": "Standard_LRS"
+          },
+          "wal": {
+            "caching": "None",
+            "claim": "hdd-pg-2-wal",
+            "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-6649d3d8-d985-45a5-a14b-825c65f9678d",
+            "lun": "0",
+            "mountPath": "/var/lib/postgresql/wal",
+            "pv": "pvc-6649d3d8-d985-45a5-a14b-825c65f9678d",
+            "sizeGB": 512,
+            "sku": "Standard_LRS"
+          }
+        },
+        "node": "aks-nodepool1-12067992-vmss000000",
+        "pod": "hdd-pg-2",
+        "vmResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss/virtualMachines/0"
+      }
+    },
+    "subscriptionId": "00000000-0000-0000-0000-000000000000"
+  },
+  "attachmentManifest": "<workspace>/experiments/20261012-walreceiver-sigterm/control/.state/attachment-verification/verified.json",
+  "azureDefinitionsInventory": {
+    "discoveredAtUtc": "2026-10-13T01:15:47.440Z",
+    "gaps": [],
+    "nativeInterval": "PT1M",
+    "targets": [
+      {
+        "availableMetrics": [
+          "Percentage CPU",
+          "Available Memory Bytes",
+          "VM Uncached IOPS Consumed Percentage",
+          "VM Uncached Bandwidth Consumed Percentage",
+          "VM Cached IOPS Consumed Percentage",
+          "VM Cached Bandwidth Consumed Percentage",
+          "Data Disk Read Bytes/sec",
+          "Data Disk Write Bytes/sec",
+          "Data Disk Read Operations/Sec",
+          "Data Disk Write Operations/Sec",
+          "Data Disk IOPS Consumed Percentage",
+          "Data Disk Bandwidth Consumed Percentage",
+          "Data Disk Queue Depth",
+          "Data Disk Latency",
+          "Data Disk Target IOPS",
+          "Data Disk Target Bandwidth",
+          "Data Disk Max Burst IOPS",
+          "Data Disk Max Burst Bandwidth",
+          "Data Disk Used Burst IO Credits Percentage",
+          "Data Disk Used Burst BPS Credits Percentage"
+        ],
+        "definitionAttempts": [
+          {
+            "availableMetrics": [
+              "Percentage CPU",
+              "Available Memory Bytes",
+              "VM Uncached IOPS Consumed Percentage",
+              "VM Uncached Bandwidth Consumed Percentage",
+              "VM Cached IOPS Consumed Percentage",
+              "VM Cached Bandwidth Consumed Percentage",
+              "Data Disk Read Bytes/sec",
+              "Data Disk Write Bytes/sec",
+              "Data Disk Read Operations/Sec",
+              "Data Disk Write Operations/Sec",
+              "Data Disk IOPS Consumed Percentage",
+              "Data Disk Bandwidth Consumed Percentage",
+              "Data Disk Queue Depth",
+              "Data Disk Latency",
+              "Data Disk Target IOPS",
+              "Data Disk Target Bandwidth",
+              "Data Disk Max Burst IOPS",
+              "Data Disk Max Burst Bandwidth",
+              "Data Disk Used Burst IO Credits Percentage",
+              "Data Disk Used Burst BPS Credits Percentage"
+            ],
+            "definitionsPath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/azure/definitions-eb_providers_Microsoft.Compute_virtualMachineScaleSets_aks-nodepool1-12067992-vmss_virtualMachines_1.json",
+            "dimensionGaps": [],
+            "eligibleMetrics": [
+              "Percentage CPU",
+              "Available Memory Bytes",
+              "VM Uncached IOPS Consumed Percentage",
+              "VM Uncached Bandwidth Consumed Percentage",
+              "VM Cached IOPS Consumed Percentage",
+              "VM Cached Bandwidth Consumed Percentage",
+              "Data Disk Read Bytes/sec",
+              "Data Disk Write Bytes/sec",
+              "Data Disk Read Operations/Sec",
+              "Data Disk Write Operations/Sec",
+              "Data Disk IOPS Consumed Percentage",
+              "Data Disk Bandwidth Consumed Percentage",
+              "Data Disk Queue Depth",
+              "Data Disk Latency",
+              "Data Disk Target IOPS",
+              "Data Disk Target Bandwidth",
+              "Data Disk Max Burst IOPS",
+              "Data Disk Max Burst Bandwidth",
+              "Data Disk Used Burst IO Credits Percentage",
+              "Data Disk Used Burst BPS Credits Percentage"
+            ],
+            "exitCode": 0,
+            "missingMetrics": [],
+            "namespaces": [
+              "Microsoft.Compute/virtualMachineScaleSets/virtualMachines"
+            ],
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss/virtualMachines/1",
+            "scope": "resource"
+          },
+          {
+            "availableMetrics": [
+              "Percentage CPU",
+              "Available Memory Bytes",
+              "VM Uncached IOPS Consumed Percentage",
+              "VM Uncached Bandwidth Consumed Percentage",
+              "VM Cached IOPS Consumed Percentage",
+              "VM Cached Bandwidth Consumed Percentage",
+              "Data Disk Read Bytes/sec",
+              "Data Disk Write Bytes/sec",
+              "Data Disk Read Operations/Sec",
+              "Data Disk Write Operations/Sec",
+              "Data Disk IOPS Consumed Percentage",
+              "Data Disk Bandwidth Consumed Percentage",
+              "Data Disk Queue Depth",
+              "Data Disk Latency",
+              "Data Disk Target IOPS",
+              "Data Disk Target Bandwidth",
+              "Data Disk Max Burst IOPS",
+              "Data Disk Max Burst Bandwidth",
+              "Data Disk Used Burst IO Credits Percentage",
+              "Data Disk Used Burst BPS Credits Percentage"
+            ],
+            "definitionsPath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/azure/definitions-92ad5df9c1b8f50f1eeb_providers_Microsoft.Compute_virtualMachineScaleSets_aks-nodepool1-12067992-vmss.json",
+            "dimensionGaps": [],
+            "eligibleMetrics": [
+              "Percentage CPU",
+              "Available Memory Bytes",
+              "VM Uncached IOPS Consumed Percentage",
+              "VM Uncached Bandwidth Consumed Percentage",
+              "VM Cached IOPS Consumed Percentage",
+              "VM Cached Bandwidth Consumed Percentage",
+              "Data Disk Read Bytes/sec",
+              "Data Disk Write Bytes/sec",
+              "Data Disk Read Operations/Sec",
+              "Data Disk Write Operations/Sec",
+              "Data Disk IOPS Consumed Percentage",
+              "Data Disk Bandwidth Consumed Percentage",
+              "Data Disk Queue Depth",
+              "Data Disk Latency",
+              "Data Disk Target IOPS",
+              "Data Disk Target Bandwidth",
+              "Data Disk Max Burst IOPS",
+              "Data Disk Max Burst Bandwidth",
+              "Data Disk Used Burst IO Credits Percentage",
+              "Data Disk Used Burst BPS Credits Percentage"
+            ],
+            "exitCode": 0,
+            "missingMetrics": [],
+            "namespaces": [
+              "Microsoft.Compute/virtualMachineScaleSets"
+            ],
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss",
+            "scope": "vmss-parent"
+          }
+        ],
+        "expectedVmName": "aks-nodepool1-12067992-vmss_1",
+        "kind": "vm",
+        "lun": null,
+        "missingMetrics": [],
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss/virtualMachines/1",
+        "role": "primary",
+        "selectedResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss/virtualMachines/1",
+        "selectedScope": "resource"
+      },
+      {
+        "availableMetrics": [
+          "Composite Disk Read Operations/sec",
+          "Composite Disk Write Operations/sec",
+          "Composite Disk Read Bytes/sec",
+          "Composite Disk Write Bytes/sec"
+        ],
+        "definitionAttempts": [
+          {
+            "availableMetrics": [
+              "Composite Disk Read Operations/sec",
+              "Composite Disk Write Operations/sec",
+              "Composite Disk Read Bytes/sec",
+              "Composite Disk Write Bytes/sec"
+            ],
+            "definitionsPath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/azure/definitions-4772592ad5df9c1b8f50f1eeb_providers_Microsoft.Compute_disks_pvc-86499588-0083-4353-8e23-baff82667e76.json",
+            "dimensionGaps": [],
+            "eligibleMetrics": [
+              "Composite Disk Read Operations/sec",
+              "Composite Disk Write Operations/sec",
+              "Composite Disk Read Bytes/sec",
+              "Composite Disk Write Bytes/sec"
+            ],
+            "exitCode": 0,
+            "missingMetrics": [],
+            "namespaces": [
+              "Microsoft.Compute/disks"
+            ],
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-86499588-0083-4353-8e23-baff82667e76",
+            "scope": "resource"
+          }
+        ],
+        "expectedVmName": null,
+        "kind": "data-disk",
+        "lun": "1",
+        "missingMetrics": [],
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-86499588-0083-4353-8e23-baff82667e76",
+        "role": "primary",
+        "selectedResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-86499588-0083-4353-8e23-baff82667e76",
+        "selectedScope": "resource"
+      },
+      {
+        "availableMetrics": [
+          "Composite Disk Read Operations/sec",
+          "Composite Disk Write Operations/sec",
+          "Composite Disk Read Bytes/sec",
+          "Composite Disk Write Bytes/sec"
+        ],
+        "definitionAttempts": [
+          {
+            "availableMetrics": [
+              "Composite Disk Read Operations/sec",
+              "Composite Disk Write Operations/sec",
+              "Composite Disk Read Bytes/sec",
+              "Composite Disk Write Bytes/sec"
+            ],
+            "definitionsPath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/azure/definitions-4772592ad5df9c1b8f50f1eeb_providers_Microsoft.Compute_disks_pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be.json",
+            "dimensionGaps": [],
+            "eligibleMetrics": [
+              "Composite Disk Read Operations/sec",
+              "Composite Disk Write Operations/sec",
+              "Composite Disk Read Bytes/sec",
+              "Composite Disk Write Bytes/sec"
+            ],
+            "exitCode": 0,
+            "missingMetrics": [],
+            "namespaces": [
+              "Microsoft.Compute/disks"
+            ],
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be",
+            "scope": "resource"
+          }
+        ],
+        "expectedVmName": null,
+        "kind": "wal-disk",
+        "lun": "0",
+        "missingMetrics": [],
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be",
+        "role": "primary",
+        "selectedResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be",
+        "selectedScope": "resource"
+      },
+      {
+        "availableMetrics": [
+          "Percentage CPU",
+          "Available Memory Bytes",
+          "VM Uncached IOPS Consumed Percentage",
+          "VM Uncached Bandwidth Consumed Percentage",
+          "VM Cached IOPS Consumed Percentage",
+          "VM Cached Bandwidth Consumed Percentage",
+          "Data Disk Read Bytes/sec",
+          "Data Disk Write Bytes/sec",
+          "Data Disk Read Operations/Sec",
+          "Data Disk Write Operations/Sec",
+          "Data Disk IOPS Consumed Percentage",
+          "Data Disk Bandwidth Consumed Percentage",
+          "Data Disk Queue Depth",
+          "Data Disk Latency",
+          "Data Disk Target IOPS",
+          "Data Disk Target Bandwidth",
+          "Data Disk Max Burst IOPS",
+          "Data Disk Max Burst Bandwidth",
+          "Data Disk Used Burst IO Credits Percentage",
+          "Data Disk Used Burst BPS Credits Percentage"
+        ],
+        "definitionAttempts": [
+          {
+            "availableMetrics": [
+              "Percentage CPU",
+              "Available Memory Bytes",
+              "VM Uncached IOPS Consumed Percentage",
+              "VM Uncached Bandwidth Consumed Percentage",
+              "VM Cached IOPS Consumed Percentage",
+              "VM Cached Bandwidth Consumed Percentage",
+              "Data Disk Read Bytes/sec",
+              "Data Disk Write Bytes/sec",
+              "Data Disk Read Operations/Sec",
+              "Data Disk Write Operations/Sec",
+              "Data Disk IOPS Consumed Percentage",
+              "Data Disk Bandwidth Consumed Percentage",
+              "Data Disk Queue Depth",
+              "Data Disk Latency",
+              "Data Disk Target IOPS",
+              "Data Disk Target Bandwidth",
+              "Data Disk Max Burst IOPS",
+              "Data Disk Max Burst Bandwidth",
+              "Data Disk Used Burst IO Credits Percentage",
+              "Data Disk Used Burst BPS Credits Percentage"
+            ],
+            "definitionsPath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/azure/definitions-eb_providers_Microsoft.Compute_virtualMachineScaleSets_aks-nodepool1-12067992-vmss_virtualMachines_0.json",
+            "dimensionGaps": [],
+            "eligibleMetrics": [
+              "Percentage CPU",
+              "Available Memory Bytes",
+              "VM Uncached IOPS Consumed Percentage",
+              "VM Uncached Bandwidth Consumed Percentage",
+              "VM Cached IOPS Consumed Percentage",
+              "VM Cached Bandwidth Consumed Percentage",
+              "Data Disk Read Bytes/sec",
+              "Data Disk Write Bytes/sec",
+              "Data Disk Read Operations/Sec",
+              "Data Disk Write Operations/Sec",
+              "Data Disk IOPS Consumed Percentage",
+              "Data Disk Bandwidth Consumed Percentage",
+              "Data Disk Queue Depth",
+              "Data Disk Latency",
+              "Data Disk Target IOPS",
+              "Data Disk Target Bandwidth",
+              "Data Disk Max Burst IOPS",
+              "Data Disk Max Burst Bandwidth",
+              "Data Disk Used Burst IO Credits Percentage",
+              "Data Disk Used Burst BPS Credits Percentage"
+            ],
+            "exitCode": 0,
+            "missingMetrics": [],
+            "namespaces": [
+              "Microsoft.Compute/virtualMachineScaleSets/virtualMachines"
+            ],
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss/virtualMachines/0",
+            "scope": "resource"
+          },
+          {
+            "availableMetrics": [
+              "Percentage CPU",
+              "Available Memory Bytes",
+              "VM Uncached IOPS Consumed Percentage",
+              "VM Uncached Bandwidth Consumed Percentage",
+              "VM Cached IOPS Consumed Percentage",
+              "VM Cached Bandwidth Consumed Percentage",
+              "Data Disk Read Bytes/sec",
+              "Data Disk Write Bytes/sec",
+              "Data Disk Read Operations/Sec",
+              "Data Disk Write Operations/Sec",
+              "Data Disk IOPS Consumed Percentage",
+              "Data Disk Bandwidth Consumed Percentage",
+              "Data Disk Queue Depth",
+              "Data Disk Latency",
+              "Data Disk Target IOPS",
+              "Data Disk Target Bandwidth",
+              "Data Disk Max Burst IOPS",
+              "Data Disk Max Burst Bandwidth",
+              "Data Disk Used Burst IO Credits Percentage",
+              "Data Disk Used Burst BPS Credits Percentage"
+            ],
+            "definitionsPath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/azure/definitions-92ad5df9c1b8f50f1eeb_providers_Microsoft.Compute_virtualMachineScaleSets_aks-nodepool1-12067992-vmss.json",
+            "dimensionGaps": [],
+            "eligibleMetrics": [
+              "Percentage CPU",
+              "Available Memory Bytes",
+              "VM Uncached IOPS Consumed Percentage",
+              "VM Uncached Bandwidth Consumed Percentage",
+              "VM Cached IOPS Consumed Percentage",
+              "VM Cached Bandwidth Consumed Percentage",
+              "Data Disk Read Bytes/sec",
+              "Data Disk Write Bytes/sec",
+              "Data Disk Read Operations/Sec",
+              "Data Disk Write Operations/Sec",
+              "Data Disk IOPS Consumed Percentage",
+              "Data Disk Bandwidth Consumed Percentage",
+              "Data Disk Queue Depth",
+              "Data Disk Latency",
+              "Data Disk Target IOPS",
+              "Data Disk Target Bandwidth",
+              "Data Disk Max Burst IOPS",
+              "Data Disk Max Burst Bandwidth",
+              "Data Disk Used Burst IO Credits Percentage",
+              "Data Disk Used Burst BPS Credits Percentage"
+            ],
+            "exitCode": 0,
+            "missingMetrics": [],
+            "namespaces": [
+              "Microsoft.Compute/virtualMachineScaleSets"
+            ],
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss",
+            "scope": "vmss-parent"
+          }
+        ],
+        "expectedVmName": "aks-nodepool1-12067992-vmss_0",
+        "kind": "vm",
+        "lun": null,
+        "missingMetrics": [],
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss/virtualMachines/0",
+        "role": "replica",
+        "selectedResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss/virtualMachines/0",
+        "selectedScope": "resource"
+      },
+      {
+        "availableMetrics": [
+          "Composite Disk Read Operations/sec",
+          "Composite Disk Write Operations/sec",
+          "Composite Disk Read Bytes/sec",
+          "Composite Disk Write Bytes/sec"
+        ],
+        "definitionAttempts": [
+          {
+            "availableMetrics": [
+              "Composite Disk Read Operations/sec",
+              "Composite Disk Write Operations/sec",
+              "Composite Disk Read Bytes/sec",
+              "Composite Disk Write Bytes/sec"
+            ],
+            "definitionsPath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/azure/definitions-4772592ad5df9c1b8f50f1eeb_providers_Microsoft.Compute_disks_pvc-e72b9d65-b564-4cb2-a7e1-0f2ecbcd78a4.json",
+            "dimensionGaps": [],
+            "eligibleMetrics": [
+              "Composite Disk Read Operations/sec",
+              "Composite Disk Write Operations/sec",
+              "Composite Disk Read Bytes/sec",
+              "Composite Disk Write Bytes/sec"
+            ],
+            "exitCode": 0,
+            "missingMetrics": [],
+            "namespaces": [
+              "Microsoft.Compute/disks"
+            ],
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-e72b9d65-b564-4cb2-a7e1-0f2ecbcd78a4",
+            "scope": "resource"
+          }
+        ],
+        "expectedVmName": null,
+        "kind": "data-disk",
+        "lun": "1",
+        "missingMetrics": [],
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-e72b9d65-b564-4cb2-a7e1-0f2ecbcd78a4",
+        "role": "replica",
+        "selectedResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-e72b9d65-b564-4cb2-a7e1-0f2ecbcd78a4",
+        "selectedScope": "resource"
+      },
+      {
+        "availableMetrics": [
+          "Composite Disk Read Operations/sec",
+          "Composite Disk Write Operations/sec",
+          "Composite Disk Read Bytes/sec",
+          "Composite Disk Write Bytes/sec"
+        ],
+        "definitionAttempts": [
+          {
+            "availableMetrics": [
+              "Composite Disk Read Operations/sec",
+              "Composite Disk Write Operations/sec",
+              "Composite Disk Read Bytes/sec",
+              "Composite Disk Write Bytes/sec"
+            ],
+            "definitionsPath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/azure/definitions-4772592ad5df9c1b8f50f1eeb_providers_Microsoft.Compute_disks_pvc-6649d3d8-d985-45a5-a14b-825c65f9678d.json",
+            "dimensionGaps": [],
+            "eligibleMetrics": [
+              "Composite Disk Read Operations/sec",
+              "Composite Disk Write Operations/sec",
+              "Composite Disk Read Bytes/sec",
+              "Composite Disk Write Bytes/sec"
+            ],
+            "exitCode": 0,
+            "missingMetrics": [],
+            "namespaces": [
+              "Microsoft.Compute/disks"
+            ],
+            "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-6649d3d8-d985-45a5-a14b-825c65f9678d",
+            "scope": "resource"
+          }
+        ],
+        "expectedVmName": null,
+        "kind": "wal-disk",
+        "lun": "0",
+        "missingMetrics": [],
+        "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-6649d3d8-d985-45a5-a14b-825c65f9678d",
+        "role": "replica",
+        "selectedResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-6649d3d8-d985-45a5-a14b-825c65f9678d",
+        "selectedScope": "resource"
+      }
+    ]
+  },
+  "bcc": {
+    "primary": {
+      "error": "BCC processes did not announce ready within 25 seconds",
+      "gaps": [],
+      "pod": "wal-bcc-pr-c5f08bc1",
+      "ready": true
+    },
+    "replica": {
+      "error": "BCC processes did not announce ready within 25 seconds",
+      "gaps": [],
+      "pod": "wal-bcc-re-403920e0",
+      "ready": true
+    }
+  },
+  "bccHistograms": {
+    "device": "biolatency -mTD -j 1",
+    "rwPerDevice": "biolatency -mTF -j 1 -d DEVICE; flags decode Linux REQ_OP"
+  },
+  "collectingAtUtc": "2026-10-13T01:17:10.822Z",
+  "phase": "collecting",
+  "roles": {
+    "primary": {
+      "devices": {
+        "data": {
+          "controller": {
+            "driver": "hv_storvsc",
+            "driverChain": "1:0:0:1:sd,f8b3781b-1e82-4818-a1c3-63d806ec15bb:hv_storvsc",
+            "name": "hv_storvsc",
+            "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb",
+            "type": "storvsc"
+          },
+          "device": "sdc",
+          "majorMinor": "8:32",
+          "mountMajorMinor": "8:32",
+          "path": "/var/lib/postgresql/data/pgdata",
+          "queue": {
+            "nrRequests": 316,
+            "scheduler": "[none] mq-deadline "
+          },
+          "scsi": {
+            "hctl": "1:0:0:1",
+            "queueDepth": 316
+          }
+        },
+        "wal": {
+          "controller": {
+            "driver": "hv_storvsc",
+            "driverChain": "1:0:0:0:sd,f8b3781b-1e82-4818-a1c3-63d806ec15bb:hv_storvsc",
+            "name": "hv_storvsc",
+            "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb",
+            "type": "storvsc"
+          },
+          "device": "sdb",
+          "majorMinor": "8:16",
+          "mountMajorMinor": "8:16",
+          "path": "/var/lib/postgresql/wal/pg_wal",
+          "queue": {
+            "nrRequests": 316,
+            "scheduler": "[none] mq-deadline "
+          },
+          "scsi": {
+            "hctl": "1:0:0:0",
+            "queueDepth": 316
+          }
+        }
+      },
+      "node": "aks-nodepool1-12067992-vmss000001",
+      "pgStatCheckpointerAvailable": false,
+      "pgStatIOAvailable": true,
+      "podUid": "23bda7b6-3934-429b-8bb3-8658b88a7f5e",
+      "providerId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss/virtualMachines/1",
+      "recoveryPrefetchAvailable": true,
+      "serverVersionNum": 160015
+    },
+    "replica": {
+      "devices": {
+        "data": {
+          "controller": {
+            "driver": "hv_storvsc",
+            "driverChain": "1:0:0:1:sd,f8b3781b-1e82-4818-a1c3-63d806ec15bb:hv_storvsc",
+            "name": "hv_storvsc",
+            "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb",
+            "type": "storvsc"
+          },
+          "device": "sdc",
+          "majorMinor": "8:32",
+          "mountMajorMinor": "8:32",
+          "path": "/var/lib/postgresql/data/pgdata",
+          "queue": {
+            "nrRequests": 316,
+            "scheduler": "[none] mq-deadline "
+          },
+          "scsi": {
+            "hctl": "1:0:0:1",
+            "queueDepth": 316
+          }
+        },
+        "wal": {
+          "controller": {
+            "driver": "hv_storvsc",
+            "driverChain": "1:0:0:0:sd,f8b3781b-1e82-4818-a1c3-63d806ec15bb:hv_storvsc",
+            "name": "hv_storvsc",
+            "path": "/sys/devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/f8b3781b-1e82-4818-a1c3-63d806ec15bb",
+            "type": "storvsc"
+          },
+          "device": "sdb",
+          "majorMinor": "8:16",
+          "mountMajorMinor": "8:16",
+          "path": "/var/lib/postgresql/wal/pg_wal",
+          "queue": {
+            "nrRequests": 316,
+            "scheduler": "[none] mq-deadline "
+          },
+          "scsi": {
+            "hctl": "1:0:0:0",
+            "queueDepth": 316
+          }
+        }
+      },
+      "node": "aks-nodepool1-12067992-vmss000000",
+      "pgStatCheckpointerAvailable": false,
+      "pgStatIOAvailable": true,
+      "podUid": "b687d403-9001-4612-80d6-bce5a5d76927",
+      "providerId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss/virtualMachines/0",
+      "recoveryPrefetchAvailable": true,
+      "serverVersionNum": 160015
+    }
+  },
+  "sampling": {
+    "azureNativeGrain": "PT1M",
+    "diskstatsSeconds": 1,
+    "pgStatSeconds": 1
+  },
+  "startedAtUtc": "2026-10-13T01:15:22.413Z"
+}

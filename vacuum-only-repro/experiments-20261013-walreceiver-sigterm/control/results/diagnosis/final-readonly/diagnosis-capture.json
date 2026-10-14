@@ -1,0 +1,1305 @@
+{
+  "capturedAtUtc": "2026-10-13T10:33:07.156Z",
+  "cluster": "hdd-pg",
+  "namespace": "repro",
+  "operatorLogs": {
+    "error": null,
+    "exitCode": 0,
+    "filteredEventCount": 3,
+    "pod": null,
+    "rawOutputSaved": false,
+    "source": "operator",
+    "stderrSaved": false
+  },
+  "pods": {
+    "captured": true,
+    "count": 2,
+    "items": [
+      {
+        "name": "hdd-pg-1",
+        "node": "aks-nodepool1-32566897-vmss000000",
+        "phase": "Running",
+        "role": "primary",
+        "uid": "c124d2cc-80cd-476a-9295-985a97716810"
+      },
+      {
+        "name": "hdd-pg-2",
+        "node": "aks-nodepool1-32566897-vmss000001",
+        "phase": "Running",
+        "role": "replica",
+        "uid": "0712b3de-29d0-4558-9f39-6423528bcea5"
+      }
+    ]
+  },
+  "roleCaptures": [
+    {
+      "logs": {
+        "error": null,
+        "exitCode": 0,
+        "filteredEventCount": 4643,
+        "pod": "hdd-pg-1",
+        "rawOutputSaved": false,
+        "source": "postgres",
+        "stderrSaved": false
+      },
+      "postgres": {
+        "captured": true,
+        "exitCode": 0,
+        "pod": "hdd-pg-1",
+        "role": "primary",
+        "sample": {
+          "archiver": {
+            "archived_count": 2240,
+            "failed_count": 1,
+            "last_archived_time": "2026-10-13T07:48:05.294808+00:00",
+            "last_archived_wal": "000000020000005700000011",
+            "last_failed_time": "2026-10-13T04:59:58.195658+00:00",
+            "last_failed_wal": "000000020000004E00000056",
+            "stats_reset": "2026-10-13T04:27:39.560269+00:00"
+          },
+          "capturedAtUtc": "2026-10-13T10:33:10.118214+00:00",
+          "inRecovery": false,
+          "receiver": null,
+          "role": "primary",
+          "senders": [
+            {
+              "applicationName": "hdd-pg-2",
+              "flushLsn": "57/12000000",
+              "replayLsn": "57/12000000",
+              "replyTime": "2026-10-13T10:33:09.412618+00:00",
+              "sentLsn": "57/12000000",
+              "state": "streaming",
+              "syncState": "quorum",
+              "writeLsn": "57/12000000"
+            }
+          ],
+          "settings": {
+            "archiveCommand": {
+              "configured": true,
+              "executableBasename": "manager",
+              "mentionsAzure": false,
+              "mentionsBarman": false,
+              "mentionsGcs": false,
+              "mentionsPgBackRest": false,
+              "mentionsS3": false,
+              "pendingRestart": false,
+              "recognizedSubcommand": "wal-archive",
+              "source": "configuration file",
+              "sourceFile": "/var/lib/postgresql/data/pgdata/custom.conf",
+              "sourceLine": 1
+            },
+            "archiveLibrary": {
+              "configured": false,
+              "executableBasename": null,
+              "mentionsAzure": false,
+              "mentionsBarman": false,
+              "mentionsGcs": false,
+              "mentionsPgBackRest": false,
+              "mentionsS3": false,
+              "pendingRestart": false,
+              "recognizedSubcommand": null,
+              "source": "default",
+              "sourceFile": null,
+              "sourceLine": null
+            },
+            "archiveMode": {
+              "pendingRestart": false,
+              "setting": "on",
+              "source": "configuration file",
+              "sourceFile": "/var/lib/postgresql/data/pgdata/custom.conf",
+              "sourceLine": 2
+            },
+            "primarySlotName": {
+              "configured": true,
+              "source": "configuration file",
+              "sourceFile": "/var/lib/postgresql/data/pgdata/override.conf",
+              "sourceLine": 2
+            },
+            "recoveryTargetSettings": {
+              "recovery_target": {
+                "configured": false,
+                "source": "default",
+                "sourceFile": null,
+                "sourceLine": null
+              },
+              "recovery_target_action": {
+                "configured": true,
+                "source": "default",
+                "sourceFile": null,
+                "sourceLine": null
+              },
+              "recovery_target_lsn": {
+                "configured": false,
+                "source": "default",
+                "sourceFile": null,
+                "sourceLine": null
+              },
+              "recovery_target_name": {
+                "configured": false,
+                "source": "default",
+                "sourceFile": null,
+                "sourceLine": null
+              },
+              "recovery_target_time": {
+                "configured": false,
+                "source": "default",
+                "sourceFile": null,
+                "sourceLine": null
+              },
+              "recovery_target_xid": {
+                "configured": false,
+                "source": "default",
+                "sourceFile": null,
+                "sourceLine": null
+              }
+            },
+            "restoreCommand": {
+              "configured": true,
+              "executableBasename": "manager",
+              "mentionsAzure": false,
+              "mentionsBarman": false,
+              "mentionsGcs": false,
+              "mentionsPgBackRest": false,
+              "mentionsS3": false,
+              "pendingRestart": false,
+              "recognizedSubcommand": "wal-restore",
+              "source": "configuration file",
+              "sourceFile": "/var/lib/postgresql/data/pgdata/override.conf",
+              "sourceLine": 4
+            }
+          },
+          "slots": [
+            {
+              "active": true,
+              "confirmedFlushLsn": null,
+              "restartLsn": "57/12000000",
+              "slotName": "_cnpg_hdd_pg_2",
+              "slotType": "physical"
+            }
+          ]
+        }
+      },
+      "previousLogs": null,
+      "walInventory": {
+        "captured": true,
+        "fileCount": 93,
+        "files": [
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:49.0554915010",
+            "name": "0000000200000056000000F1"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:28.6531597020",
+            "name": "000000020000005700000027"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:06:56.1156367380",
+            "name": "000000020000005700000012"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:18:01.3624273580",
+            "name": "0000000200000056000000FF"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:49.9585062290",
+            "name": "0000000200000056000000F2"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:43:02.5699815940",
+            "name": "000000020000005700000004"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:22.2370572940",
+            "name": "000000020000005700000017"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:50.8055200090",
+            "name": "0000000200000056000000F3"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:02.2927363950",
+            "name": "000000020000005700000015"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:19.6470163040",
+            "name": "000000020000005700000014"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:13:01.5425626380",
+            "name": "0000000200000056000000FE"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:27.8271463230",
+            "name": "000000020000005700000026"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:24.0200855120",
+            "name": "000000020000005700000025"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:54.7265836670",
+            "name": "0000000200000056000000F7"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:58:02.8466847570",
+            "name": "000000020000005700000007"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:56.4656119000",
+            "name": "0000000200000056000000F9"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:13.5379179860",
+            "name": "00000002000000570000001C"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:14.4629329430",
+            "name": "000000020000005700000019"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:31.6052075160",
+            "name": "000000020000005700000029"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:08.5688376900",
+            "name": "000000020000005700000020"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:03:02.0695628430",
+            "name": "000000020000005700000008"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:58.9646524890",
+            "name": "0000000200000056000000FC"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:48:02.0557977570",
+            "name": "000000020000005700000005"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:16.9799736420",
+            "name": "00000002000000570000001A"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:23.1870723290",
+            "name": "00000002000000570000001B"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:18:03.6233093630",
+            "name": "00000002000000570000000B"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:07.8078254080",
+            "name": "000000020000005700000016"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:08:01.1376878310",
+            "name": "0000000200000056000000FD"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:28:01.1652554220",
+            "name": "000000020000005700000001"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:49.9605062610",
+            "name": "0000000200000056000000F2.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:33:01.6671970050",
+            "name": "000000020000005700000002.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:08:01.1396878640",
+            "name": "0000000200000056000000FD.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:28:01.3182579610",
+            "name": "000000020000005700000001.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:58.9666525220",
+            "name": "0000000200000056000000FC.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:43:04.2197266890",
+            "name": "000000020000005700000010.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:43:02.6789834010",
+            "name": "000000020000005700000004.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T04:57:53.0730033190",
+            "name": "000000020000004E00000054.00000060.backup.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:23:01.9024229170",
+            "name": "000000020000005700000000.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:49.0574915340",
+            "name": "0000000200000056000000F1.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:13:03.2083540870",
+            "name": "00000002000000570000000A.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:03:02.1965648860",
+            "name": "000000020000005700000008.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:52.4025459370",
+            "name": "0000000200000056000000F5.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:23:03.2801681720",
+            "name": "00000002000000570000000C.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:51.5925327860",
+            "name": "0000000200000056000000F4.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:50.8085200580",
+            "name": "0000000200000056000000F3.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:53:02.5867975100",
+            "name": "000000020000005700000006.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:56.4676119330",
+            "name": "0000000200000056000000F9.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:28:03.6680623110",
+            "name": "00000002000000570000000D.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:48:02.1808003630",
+            "name": "000000020000005700000005.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:54.7295837160",
+            "name": "0000000200000056000000F7.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:33:04.2019885380",
+            "name": "00000002000000570000000E.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:18:03.7603116270",
+            "name": "00000002000000570000000B.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:38:02.0770547710",
+            "name": "000000020000005700000003.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-06T18:05:29.3907624660",
+            "name": "000000010000004B00000022.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:08:02.5974299590",
+            "name": "000000020000005700000009.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:55.6055979380",
+            "name": "0000000200000056000000F8.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:57.2596247910",
+            "name": "0000000200000056000000FA.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:58:02.9866865530",
+            "name": "000000020000005700000007.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-09T05:55:18.3109302880",
+            "name": "00000002.history.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:48:04.5785638160",
+            "name": "000000020000005700000011.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:13:01.5975635000",
+            "name": "0000000200000056000000FE.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:38:04.9158381610",
+            "name": "00000002000000570000000F.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:18:01.5024296220",
+            "name": "0000000200000056000000FF.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:53.2335594280",
+            "name": "0000000200000056000000F6.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:58.1136386560",
+            "name": "0000000200000056000000FB.done"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:13:03.1193526350",
+            "name": "00000002000000570000000A"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:53.2315593960",
+            "name": "0000000200000056000000F6"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:55.6035979050",
+            "name": "0000000200000056000000F8"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:51.5905327540",
+            "name": "0000000200000056000000F4"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:08:02.4834280860",
+            "name": "000000020000005700000009"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:06.9368113500",
+            "name": "00000002000000570000001D"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:03.0957493560",
+            "name": "000000020000005700000021"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:23:01.7654206470",
+            "name": "000000020000005700000000"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:18.5069982630",
+            "name": "00000002000000570000001F"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:29.4391724330",
+            "name": "000000020000005700000028"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:53:02.4547953160",
+            "name": "000000020000005700000006"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:01.3377209880",
+            "name": "000000020000005700000023"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:38:01.9450526160",
+            "name": "000000020000005700000003"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:06.1097980020",
+            "name": "00000002000000570000001E"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:58.1106386070",
+            "name": "0000000200000056000000FB"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:38:04.7558355980",
+            "name": "00000002000000570000000F"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:48:04.4505616740",
+            "name": "000000020000005700000011"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:52.3995458880",
+            "name": "0000000200000056000000F5"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:57.2576247580",
+            "name": "0000000200000056000000FA"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:33:04.0569861510",
+            "name": "00000002000000570000000E"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:15.3479472530",
+            "name": "000000020000005700000018"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:33:01.5451950050",
+            "name": "000000020000005700000002"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:23:03.1471660000",
+            "name": "00000002000000570000000C"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:09.4208514410",
+            "name": "000000020000005700000022"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:06:56.9486501780",
+            "name": "000000020000005700000013"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:28:03.5460602670",
+            "name": "00000002000000570000000D"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:20.5450305160",
+            "name": "000000020000005700000024"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:43:04.0537239530",
+            "name": "000000020000005700000010"
+          }
+        ],
+        "pod": "hdd-pg-1",
+        "role": "primary",
+        "walDirectoryBasename": "pg_wal"
+      }
+    },
+    {
+      "logs": {
+        "error": null,
+        "exitCode": 0,
+        "filteredEventCount": 136,
+        "pod": "hdd-pg-2",
+        "rawOutputSaved": false,
+        "source": "postgres",
+        "stderrSaved": false
+      },
+      "postgres": {
+        "captured": true,
+        "exitCode": 0,
+        "pod": "hdd-pg-2",
+        "role": "replica",
+        "sample": {
+          "archiver": {
+            "archived_count": 0,
+            "failed_count": 0,
+            "last_archived_time": null,
+            "last_archived_wal": null,
+            "last_failed_time": null,
+            "last_failed_wal": null,
+            "stats_reset": "2026-10-13T04:58:06.655308+00:00"
+          },
+          "capturedAtUtc": "2026-10-13T10:33:58.980812+00:00",
+          "inRecovery": true,
+          "receiver": {
+            "flushed_lsn": "57/12000000",
+            "last_msg_receipt_time": "2026-10-13T10:33:56.975647+00:00",
+            "last_msg_send_time": "2026-10-13T10:33:56.975145+00:00",
+            "latest_end_lsn": "57/12000000",
+            "latest_end_time": "2026-10-13T07:48:04.580289+00:00",
+            "pid": 72,
+            "receive_start_lsn": "4E/56000000",
+            "receive_start_tli": 2,
+            "received_tli": 2,
+            "sender_host": "hdd-pg-rw",
+            "sender_port": 5432,
+            "slot_name": "_cnpg_hdd_pg_2",
+            "status": "streaming",
+            "written_lsn": "57/12000000"
+          },
+          "role": "replica",
+          "senders": [],
+          "settings": {
+            "archiveCommand": {
+              "configured": true,
+              "executableBasename": "manager",
+              "mentionsAzure": false,
+              "mentionsBarman": false,
+              "mentionsGcs": false,
+              "mentionsPgBackRest": false,
+              "mentionsS3": false,
+              "pendingRestart": false,
+              "recognizedSubcommand": "wal-archive",
+              "source": "configuration file",
+              "sourceFile": "/var/lib/postgresql/data/pgdata/custom.conf",
+              "sourceLine": 1
+            },
+            "archiveLibrary": {
+              "configured": false,
+              "executableBasename": null,
+              "mentionsAzure": false,
+              "mentionsBarman": false,
+              "mentionsGcs": false,
+              "mentionsPgBackRest": false,
+              "mentionsS3": false,
+              "pendingRestart": false,
+              "recognizedSubcommand": null,
+              "source": "default",
+              "sourceFile": null,
+              "sourceLine": null
+            },
+            "archiveMode": {
+              "pendingRestart": false,
+              "setting": "on",
+              "source": "configuration file",
+              "sourceFile": "/var/lib/postgresql/data/pgdata/custom.conf",
+              "sourceLine": 2
+            },
+            "primarySlotName": {
+              "configured": true,
+              "source": "configuration file",
+              "sourceFile": "/var/lib/postgresql/data/pgdata/override.conf",
+              "sourceLine": 2
+            },
+            "recoveryTargetSettings": {
+              "recovery_target": {
+                "configured": false,
+                "source": "default",
+                "sourceFile": null,
+                "sourceLine": null
+              },
+              "recovery_target_action": {
+                "configured": true,
+                "source": "default",
+                "sourceFile": null,
+                "sourceLine": null
+              },
+              "recovery_target_lsn": {
+                "configured": false,
+                "source": "default",
+                "sourceFile": null,
+                "sourceLine": null
+              },
+              "recovery_target_name": {
+                "configured": false,
+                "source": "default",
+                "sourceFile": null,
+                "sourceLine": null
+              },
+              "recovery_target_time": {
+                "configured": false,
+                "source": "default",
+                "sourceFile": null,
+                "sourceLine": null
+              },
+              "recovery_target_xid": {
+                "configured": false,
+                "source": "default",
+                "sourceFile": null,
+                "sourceLine": null
+              }
+            },
+            "restoreCommand": {
+              "configured": true,
+              "executableBasename": "manager",
+              "mentionsAzure": false,
+              "mentionsBarman": false,
+              "mentionsGcs": false,
+              "mentionsPgBackRest": false,
+              "mentionsS3": false,
+              "pendingRestart": false,
+              "recognizedSubcommand": "wal-restore",
+              "source": "configuration file",
+              "sourceFile": "/var/lib/postgresql/data/pgdata/override.conf",
+              "sourceLine": 4
+            }
+          },
+          "slots": []
+        }
+      },
+      "previousLogs": null,
+      "walInventory": {
+        "captured": true,
+        "fileCount": 97,
+        "files": [
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:35.3165961050",
+            "name": "00000002000000570000001F"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:33.3615706900",
+            "name": "00000002000000570000002A"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:06:36.3938237670",
+            "name": "000000020000005700000014"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:06:53.6690511860",
+            "name": "00000002000000570000001C"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:53.2388301820",
+            "name": "0000000200000056000000F6.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:50.8147983790",
+            "name": "0000000200000056000000F3.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:54.7398498750",
+            "name": "0000000200000056000000F7.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:53:02.7613829510",
+            "name": "000000020000005700000006.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:48:02.3874404490",
+            "name": "000000020000005700000005.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:28:01.4956835430",
+            "name": "000000020000005700000001.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:48:04.7107343410",
+            "name": "000000020000005700000011.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:58.1198942240",
+            "name": "0000000200000056000000FB.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:49.9677872660",
+            "name": "0000000200000056000000F2.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T04:28:52.5508431890",
+            "name": "00000002.history.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:38:02.2515900660",
+            "name": "000000020000005700000003.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:18:01.7177957850",
+            "name": "0000000200000056000000FF.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:52.4078192790",
+            "name": "0000000200000056000000F5.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:33:04.3479237620",
+            "name": "00000002000000570000000E.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:23:02.0997228010",
+            "name": "000000020000005700000000.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:13:03.2801393000",
+            "name": "00000002000000570000000A.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:38:05.0448538930",
+            "name": "00000002000000570000000F.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:08:02.7352017340",
+            "name": "000000020000005700000009.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:56.4728726120",
+            "name": "0000000200000056000000F9.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:18:03.9251019180",
+            "name": "00000002000000570000000B.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:58:03.1273093180",
+            "name": "000000020000005700000007.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:28:03.8319905410",
+            "name": "00000002000000570000000D.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:51.5988086650",
+            "name": "0000000200000056000000F4.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:43:02.8595072030",
+            "name": "000000020000005700000004.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:58.9729054170",
+            "name": "0000000200000056000000FC.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:13:01.7188676220",
+            "name": "0000000200000056000000FE.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:23:03.4290371160",
+            "name": "00000002000000570000000C.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:08:01.1469339450",
+            "name": "0000000200000056000000FD.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:33:01.9776193640",
+            "name": "000000020000005700000002.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:03:02.3322499320",
+            "name": "000000020000005700000008.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:57.2658830180",
+            "name": "0000000200000056000000FA.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T07:43:04.3608063800",
+            "name": "000000020000005700000010.done"
+          },
+          {
+            "bytes": 0,
+            "mtime": "2026-10-13T06:07:55.6118613160",
+            "name": "0000000200000056000000F8.done"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:48.1867639240",
+            "name": "000000020000005700000022"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:44.0927104260",
+            "name": "000000020000005700000024"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:36.1446068690",
+            "name": "000000020000005700000025"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:48:04.7037342500",
+            "name": "000000020000005700000011"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:18:03.9151017880",
+            "name": "00000002000000570000000B"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:57.2628829780",
+            "name": "0000000200000056000000FA"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:18:01.7137957330",
+            "name": "0000000200000056000000FF"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:23.3214401940",
+            "name": "00000002000000570000002D"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:23:02.0967227620",
+            "name": "000000020000005700000000"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:49:17.0746892540",
+            "name": "000000020000005700000012"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:22.2434261670",
+            "name": "000000020000005700000019"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:39.9226559840",
+            "name": "000000020000005700000023"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:06:56.9560944570",
+            "name": "000000020000005700000015"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:58.1168941850",
+            "name": "0000000200000056000000FB"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:43:04.3538062890",
+            "name": "000000020000005700000010"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:13:01.7148675700",
+            "name": "0000000200000056000000FE"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:52.4048192400",
+            "name": "0000000200000056000000F5"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:24.2844527240",
+            "name": "00000002000000570000002E"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:28:01.4926835030",
+            "name": "000000020000005700000001"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:27.8354988750",
+            "name": "00000002000000570000002C"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:28.6585095700",
+            "name": "00000002000000570000002F"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:33:04.3119231940",
+            "name": "00000002000000570000000E"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:15.3573363930",
+            "name": "00000002000000570000001A"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:13:03.2461388540",
+            "name": "00000002000000570000000A"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:28:03.8079902260",
+            "name": "00000002000000570000000D"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:53.2368301560",
+            "name": "0000000200000056000000F6"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:37.8846294900",
+            "name": "000000020000005700000030"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:43.2376992540",
+            "name": "000000020000005700000028"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:31.6175480230",
+            "name": "00000002000000570000001E"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:37.0076180880",
+            "name": "000000020000005700000027"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:03:02.3242498260",
+            "name": "000000020000005700000008"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:02.3021647840",
+            "name": "000000020000005700000016"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:58:03.1203092250",
+            "name": "000000020000005700000007"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:58.9709053910",
+            "name": "0000000200000056000000FC"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:49.9657872400",
+            "name": "0000000200000056000000F2"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:51.5958086260",
+            "name": "0000000200000056000000F4"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:53:02.7553828760",
+            "name": "000000020000005700000006"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:06:42.8059082100",
+            "name": "000000020000005700000017"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:29.4495198500",
+            "name": "000000020000005700000020"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:03.9501864330",
+            "name": "000000020000005700000013"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:55.6088612770",
+            "name": "0000000200000056000000F8"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:49.0607753670",
+            "name": "000000020000005700000026"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:08:01.1439339060",
+            "name": "0000000200000056000000FD"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:06:15.0295426380",
+            "name": "00000002000000570000001B"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:48:02.3834403970",
+            "name": "000000020000005700000005"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:32.5065595760",
+            "name": "00000002000000570000001D"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:40.7736670560",
+            "name": "000000020000005700000021"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:43:02.8525071110",
+            "name": "000000020000005700000004"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:34.3705838070",
+            "name": "000000020000005700000031"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:38:05.0218535910",
+            "name": "00000002000000570000000F"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:33:01.9746193240",
+            "name": "000000020000005700000002"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:54.7378498490",
+            "name": "0000000200000056000000F7"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:06:39.3988633420",
+            "name": "000000020000005700000018"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:42.4186885520",
+            "name": "000000020000005700000029"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:08:02.7282016400",
+            "name": "000000020000005700000009"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:56.4708725860",
+            "name": "0000000200000056000000F9"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:38:02.2195897170",
+            "name": "000000020000005700000003"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T07:23:03.3960366800",
+            "name": "00000002000000570000000C"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:41.5656774050",
+            "name": "00000002000000570000002B"
+          },
+          {
+            "bytes": 16777216,
+            "mtime": "2026-10-13T06:07:50.8117983400",
+            "name": "0000000200000056000000F3"
+          }
+        ],
+        "pod": "hdd-pg-2",
+        "role": "replica",
+        "walDirectoryBasename": "pg_wal"
+      }
+    }
+  ],
+  "safety": {
+    "rawKubectlOutputWritten": false,
+    "rawLogsWritten": false,
+    "rawPostgresSettingsWritten": false,
+    "readOnly": true,
+    "secretValuesQueried": false
+  }
+}

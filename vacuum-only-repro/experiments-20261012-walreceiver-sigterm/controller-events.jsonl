@@ -1,0 +1,34 @@
+{"atUtc": "2026-10-13T00:10:31.369046+00:00", "phase": "waiting_for_provisioning"}
+{"atUtc": "2026-10-13T00:10:31.370631+00:00", "phase": "stack_provisioned", "stack": "sigterm"}
+{"atUtc": "2026-10-13T00:10:31.370778+00:00", "phase": "stack_provisioned", "stack": "control"}
+{"atUtc": "2026-10-13T00:10:31.371382+00:00", "phase": "controller_error", "error": "control: [Errno 2] No such file or directory: '<workspace>/experiments/20261012-walreceiver-sigterm/controller-status.json.tmp' -> '<workspace>/experiments/20261012-walreceiver-sigterm/controller-status.json'"}
+{"atUtc": "2026-10-13T00:10:47.687982+00:00", "phase": "waiting_for_provisioning"}
+{"atUtc": "2026-10-13T00:10:47.688998+00:00", "phase": "stack_provisioned", "stack": "sigterm"}
+{"atUtc": "2026-10-13T00:10:47.689397+00:00", "phase": "stack_provisioned", "stack": "control"}
+{"atUtc": "2026-10-13T00:10:47.692060+00:00", "phase": "preparing_both_stacks"}
+{"atUtc": "2026-10-13T00:10:47.692308+00:00", "phase": "stack_preparing", "stack": "sigterm"}
+{"atUtc": "2026-10-13T00:10:47.692703+00:00", "phase": "stack_preparing", "stack": "control"}
+{"atUtc": "2026-10-13T00:33:59.804983+00:00", "phase": "controller_error", "error": "sigterm: Command '['bash', '<workspace>/experiments/20261012-walreceiver-sigterm/sigterm/02-prepare.sh']' returned non-zero exit status 1.; control: Command '['bash', '<workspace>/experiments/20261012-walreceiver-sigterm/control/02-prepare.sh']' returned non-zero exit status 1."}
+{"atUtc": "2026-10-13T00:55:54.295731+00:00", "phase": "waiting_for_provisioning"}
+{"atUtc": "2026-10-13T00:55:54.297426+00:00", "phase": "stack_provisioned", "stack": "sigterm"}
+{"atUtc": "2026-10-13T00:55:54.297923+00:00", "phase": "stack_provisioned", "stack": "control"}
+{"atUtc": "2026-10-13T00:55:54.304015+00:00", "phase": "preparing_both_stacks"}
+{"atUtc": "2026-10-13T00:55:54.304436+00:00", "phase": "stack_preparing", "stack": "sigterm"}
+{"atUtc": "2026-10-13T00:55:54.304728+00:00", "phase": "stack_preparing", "stack": "control"}
+{"atUtc": "2026-10-13T00:56:25.701269+00:00", "phase": "stack_prepared", "stack": "sigterm"}
+{"atUtc": "2026-10-13T01:15:22.378044+00:00", "phase": "stack_prepared", "stack": "control"}
+{"atUtc": "2026-10-13T01:15:22.378847+00:00", "phase": "starting_collectors"}
+{"atUtc": "2026-10-13T01:17:13.396664+00:00", "phase": "measurement_barrier_released"}
+{"atUtc": "2026-10-13T01:17:33.399111+00:00", "phase": "measurements_finished", "exitCodes": {"sigterm": 2, "control": 2}}
+{"atUtc": "2026-10-13T01:25:53.844239+00:00", "phase": "waiting_for_provisioning"}
+{"atUtc": "2026-10-13T01:25:53.845787+00:00", "phase": "stack_provisioned", "stack": "sigterm"}
+{"atUtc": "2026-10-13T01:25:53.846189+00:00", "phase": "stack_provisioned", "stack": "control"}
+{"atUtc": "2026-10-13T01:25:53.852263+00:00", "phase": "preparing_both_stacks"}
+{"atUtc": "2026-10-13T01:25:53.852693+00:00", "phase": "stack_preparing", "stack": "sigterm"}
+{"atUtc": "2026-10-13T01:25:53.852891+00:00", "phase": "stack_preparing", "stack": "control"}
+{"atUtc": "2026-10-13T01:26:31.913964+00:00", "phase": "stack_prepared", "stack": "sigterm"}
+{"atUtc": "2026-10-13T01:26:32.551179+00:00", "phase": "stack_prepared", "stack": "control"}
+{"atUtc": "2026-10-13T01:26:32.551908+00:00", "phase": "starting_collectors"}
+{"atUtc": "2026-10-13T01:28:14.567251+00:00", "phase": "measurement_barrier_released"}
+{"atUtc": "2026-10-13T03:50:10.665617+00:00", "phase": "invalid_pilot_user_stopped_harvesting", "testComplete": false, "reason": "missing archive configuration; estimated completion more than one hour away; clients drained and native totals reconciled"}
+{"atUtc": "2026-10-13T04:13:20.097819+00:00", "phase": "invalid_pilot_complete_and_cleaned", "testComplete": false, "reason": "missing archive configuration; user-stopped invalid pilot", "diagnosticNativeLogsVerified": true, "ownedStacksRemoved": true, "retainedSnapshotsPreserved": 5, "publication": "local only; no staging, commit or push"}

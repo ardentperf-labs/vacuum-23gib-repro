@@ -1,0 +1,159 @@
+{
+  "clientCreated": false,
+  "cluster": "repro/hdd-pg",
+  "clusterName": "aks-vacuum-only-9a66a148e388",
+  "finalRoles": {
+    "primary": "hdd-pg-1",
+    "replica": "hdd-pg-2"
+  },
+  "fixture": {
+    "adjacentOddIdAbsent": true,
+    "firstLiveId": 4,
+    "heapBytes": 24696061952,
+    "indexName": "vacuum_target_id_idx",
+    "payloadBytes": 1536,
+    "snapshotBeforeVacuum": true,
+    "sourceKind": "reused-prepared-paired-snapshot",
+    "tableAutovacuumDisabled": true,
+    "tableBytes": 25040748544
+  },
+  "fixtureTargetHeapBytes": 24696061952,
+  "fixtureTargetHeapGiB": 23,
+  "heapBytes": 24696061952,
+  "instances": 2,
+  "location": "eastus",
+  "measurementImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+  "noBackupCRCreated": true,
+  "ownerToken": "9a66a148e388be98dedc394741b6c9d7",
+  "preparedDeadTuplesEstimate": 0,
+  "preparedLiveTuplesEstimate": 0,
+  "replicaSeed": {
+    "caughtUp": true,
+    "completedJobs": [],
+    "method": "CNPG streaming join/basebackup from restored primary",
+    "primaryFlushLsn": "4E/56000060",
+    "receiverStatus": "streaming",
+    "replicaReplayLsn": "4E/56000060"
+  },
+  "resourceGroup": "rg-vacuum-only-9a66a148e388be98dedc394741b6c9d7",
+  "resume": {
+    "bootstrapOrDmlRepeated": false,
+    "existingFixtureReused": true,
+    "mode": "restored-primary",
+    "staticBindingEvidence": ".state/direct-restore/binding.json",
+    "volumeRestoreMode": "static-direct-restore"
+  },
+  "settings": {
+    "primary": {
+      "autovacuum": "on",
+      "checkpoint_timeout": "5min",
+      "full_page_writes": "on",
+      "maintenance_io_concurrency": "10",
+      "maintenance_work_mem": "64MB",
+      "max_wal_size": "1GB",
+      "recovery_prefetch": "try",
+      "shared_buffers": "256MB",
+      "synchronous_standby_names": "ANY 1 (\"hdd-pg-2\")",
+      "track_io_timing": "on",
+      "track_wal_io_timing": "on",
+      "vacuum_cost_delay": "0",
+      "wal_level": "logical",
+      "wal_receiver_timeout": "5s",
+      "wal_sender_timeout": "5s"
+    },
+    "replica": {
+      "autovacuum": "on",
+      "checkpoint_timeout": "5min",
+      "full_page_writes": "on",
+      "maintenance_io_concurrency": "10",
+      "maintenance_work_mem": "64MB",
+      "max_wal_size": "1GB",
+      "recovery_prefetch": "try",
+      "shared_buffers": "256MB",
+      "synchronous_standby_names": "ANY 1 (\"hdd-pg-2\")",
+      "track_io_timing": "on",
+      "track_wal_io_timing": "on",
+      "vacuum_cost_delay": "0",
+      "wal_level": "logical",
+      "wal_receiver_timeout": "5s",
+      "wal_sender_timeout": "5s"
+    }
+  },
+  "snapshotDeletionPolicy": "Retain",
+  "sourceKind": "reused-prepared-paired-snapshot",
+  "sourcePair": {
+    "archiveReferencesRemoved": true,
+    "backupName": "vacuum-seed-5203346e",
+    "backupUid": "7f3af879-27f0-4c5c-89a7-bb39a04d247b",
+    "bootstrapMode": "CNPG offline recovery from the retained paired DATA/WAL snapshots, statically bound to owned Standard_LRS disks",
+    "dataSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+    "dataUniqueId": "d0b8cfa4-13de-4cd6-8d4f-f19ed4954f9d",
+    "liveAzureVerification": [
+      {
+        "completionPercent": 100.0,
+        "directLock": {
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24/providers/Microsoft.Authorization/locks/retain-snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+          "level": "CanNotDelete",
+          "name": "retain-snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+          "notes": "Retained by the 2026-10-09 pgbench/VACUUM reproduction until explicit user authorization.",
+          "owners": null,
+          "resourceGroup": "RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775",
+          "type": "Microsoft.Authorization/locks"
+        },
+        "diskSizeGB": 512,
+        "kind": "data",
+        "provisioningState": "Succeeded",
+        "sku": "Standard_ZRS",
+        "snapshotAccessState": "Available",
+        "snapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+        "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5203346e38bc77fbedc14b472f6e4775/providers/Microsoft.Compute/disks/restore-data-5203346e",
+        "uniqueId": "d0b8cfa4-13de-4cd6-8d4f-f19ed4954f9d"
+      },
+      {
+        "completionPercent": 100.0,
+        "directLock": {
+          "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2/providers/Microsoft.Authorization/locks/retain-snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+          "level": "CanNotDelete",
+          "name": "retain-snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+          "notes": "Retained by the 2026-10-09 pgbench/VACUUM reproduction until explicit user authorization.",
+          "owners": null,
+          "resourceGroup": "RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775",
+          "type": "Microsoft.Authorization/locks"
+        },
+        "diskSizeGB": 512,
+        "kind": "wal",
+        "provisioningState": "Succeeded",
+        "sku": "Standard_ZRS",
+        "snapshotAccessState": "Available",
+        "snapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+        "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5203346e38bc77fbedc14b472f6e4775/providers/Microsoft.Compute/disks/restore-wal-5203346e",
+        "uniqueId": "a009a10f-38bd-40e1-b113-0760597cda0d"
+      }
+    ],
+    "manifest": "../shared/source-pair.json",
+    "manifestSha256": "da7455ab25a1f8f413af494de64feb16f5dd3a25740dc74a4b7fa64ed28eec8a",
+    "requiredExternalWalArchive": false,
+    "resourceGroup": "RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775",
+    "sourceSnapshotsCreatedByTestStack": false,
+    "walSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+    "walUniqueId": "a009a10f-38bd-40e1-b113-0760597cda0d"
+  },
+  "sourceSnapshotRoleAssignments": {
+    "aksPrincipalId": "eaffd32f-3fa8-4b28-bf62-59852c8e5f50",
+    "evidence": ".state/direct-restore/source-preflight.json",
+    "exactAssignmentsAbsent": true,
+    "locksModified": false,
+    "mode": "caller-identity-direct-copy",
+    "retentionLockDefinitionsMatch": true,
+    "roleAssignmentsCreated": false,
+    "sourceLocksVerifiedUnmodified": true,
+    "status": "not-created",
+    "verifiedBy": "finalize-restored-primary.py --direct-source-copy"
+  },
+  "status": "complete",
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "systemIdentifier": "7692518806614212629",
+  "tableBytes": 25040748544,
+  "verifiedAtUtc": "2026-10-13T04:49:43.886612+00:00",
+  "version": 1
+}

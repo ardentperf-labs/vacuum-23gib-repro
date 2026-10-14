@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "<workspace>/experiments/20261013-walreceiver-sigterm/control/teardown.py", line 537, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "<workspace>/experiments/20261013-walreceiver-sigterm/control/teardown.py", line 535, in main
+    return teardown(stack)
+           ^^^^^^^^^^^^^^^
+  File "<workspace>/experiments/20261013-walreceiver-sigterm/control/teardown.py", line 469, in teardown
+    verify_archive_account_scope()
+  File "<workspace>/experiments/20261013-walreceiver-sigterm/control/teardown.py", line 427, in verify_archive_account_scope
+    account_rows = az('storage', 'account', 'list', '-g', expected[0])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/experiments/20261013-walreceiver-sigterm/control/teardown.py", line 418, in az
+    if p.returncode: raise RuntimeError(p.stderr[-3000:])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: ERROR: AADSTS7000222: The provided client secret keys for app '990f9eba-a765-495b-abee-52fe382d75e3' are expired. Visit the Azure portal to create new keys for your app: https://aka.ms/NewClientSecret, or consider using certificate credentials for added security: https://aka.ms/certCreds. Trace ID: aa8d5e44-df2b-43fc-b143-e4990eb7a101 Correlation ID: d1df567d-8fa4-4083-a670-a08a868bba0b Timestamp: 2026-10-14 04:56:11Z
+Run the command below to authenticate interactively; additional arguments may be added as needed:
+az logout
+az login
+
+Owned infrastructure removed; all snapshots preserved.

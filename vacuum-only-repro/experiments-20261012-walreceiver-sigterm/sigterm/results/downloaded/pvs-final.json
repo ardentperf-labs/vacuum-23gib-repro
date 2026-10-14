@@ -1,0 +1,275 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolume",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/provisioned-by": "disk.csi.azure.com",
+                    "volume.kubernetes.io/provisioner-deletion-secret-name": "",
+                    "volume.kubernetes.io/provisioner-deletion-secret-namespace": ""
+                },
+                "creationTimestamp": "2026-10-13T00:34:08Z",
+                "finalizers": [
+                    "external-provisioner.volume.kubernetes.io/finalizer",
+                    "kubernetes.io/pv-protection",
+                    "external-attacher/disk-csi-azure-com"
+                ],
+                "name": "pvc-535df437-35f7-4eed-89a4-398c4791b093",
+                "resourceVersion": "12844",
+                "uid": "92f86a0b-1970-44e9-bfe8-73cd8206ad48"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "512Gi"
+                },
+                "claimRef": {
+                    "apiVersion": "v1",
+                    "kind": "PersistentVolumeClaim",
+                    "name": "hdd-pg-2",
+                    "namespace": "repro",
+                    "resourceVersion": "12812",
+                    "uid": "535df437-35f7-4eed-89a4-398c4791b093"
+                },
+                "csi": {
+                    "driver": "disk.csi.azure.com",
+                    "volumeAttributes": {
+                        "cachingMode": "None",
+                        "csi.storage.k8s.io/pv/name": "pvc-535df437-35f7-4eed-89a4-398c4791b093",
+                        "csi.storage.k8s.io/pvc/name": "hdd-pg-2",
+                        "csi.storage.k8s.io/pvc/namespace": "repro",
+                        "kind": "Managed",
+                        "requestedsizegib": "512",
+                        "skuName": "Standard_LRS",
+                        "storage.kubernetes.io/csiProvisionerIdentity": "1791849297639-4609-disk.csi.azure.com"
+                    },
+                    "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/pvc-535df437-35f7-4eed-89a4-398c4791b093"
+                },
+                "nodeAffinity": {
+                    "required": {
+                        "nodeSelectorTerms": [
+                            {
+                                "matchExpressions": [
+                                    {
+                                        "key": "topology.disk.csi.azure.com/zone",
+                                        "operator": "In",
+                                        "values": [
+                                            ""
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "persistentVolumeReclaimPolicy": "Delete",
+                "storageClassName": "azure-standard-hdd",
+                "volumeMode": "Filesystem"
+            },
+            "status": {
+                "lastPhaseTransitionTime": "2026-10-13T00:34:08Z",
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolume",
+            "metadata": {
+                "annotations": {
+                    "pv.kubernetes.io/provisioned-by": "disk.csi.azure.com",
+                    "volume.kubernetes.io/provisioner-deletion-secret-name": "",
+                    "volume.kubernetes.io/provisioner-deletion-secret-namespace": ""
+                },
+                "creationTimestamp": "2026-10-13T00:34:08Z",
+                "finalizers": [
+                    "external-provisioner.volume.kubernetes.io/finalizer",
+                    "kubernetes.io/pv-protection",
+                    "external-attacher/disk-csi-azure-com"
+                ],
+                "name": "pvc-7924f877-ee7d-4da8-aa93-c85f49c13e5d",
+                "resourceVersion": "12845",
+                "uid": "879bdb3b-3c81-4f04-9020-ac269ad4204d"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "512Gi"
+                },
+                "claimRef": {
+                    "apiVersion": "v1",
+                    "kind": "PersistentVolumeClaim",
+                    "name": "hdd-pg-2-wal",
+                    "namespace": "repro",
+                    "resourceVersion": "12816",
+                    "uid": "7924f877-ee7d-4da8-aa93-c85f49c13e5d"
+                },
+                "csi": {
+                    "driver": "disk.csi.azure.com",
+                    "volumeAttributes": {
+                        "cachingMode": "None",
+                        "csi.storage.k8s.io/pv/name": "pvc-7924f877-ee7d-4da8-aa93-c85f49c13e5d",
+                        "csi.storage.k8s.io/pvc/name": "hdd-pg-2-wal",
+                        "csi.storage.k8s.io/pvc/namespace": "repro",
+                        "kind": "Managed",
+                        "requestedsizegib": "512",
+                        "skuName": "Standard_LRS",
+                        "storage.kubernetes.io/csiProvisionerIdentity": "1791849297639-4609-disk.csi.azure.com"
+                    },
+                    "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/pvc-7924f877-ee7d-4da8-aa93-c85f49c13e5d"
+                },
+                "nodeAffinity": {
+                    "required": {
+                        "nodeSelectorTerms": [
+                            {
+                                "matchExpressions": [
+                                    {
+                                        "key": "topology.disk.csi.azure.com/zone",
+                                        "operator": "In",
+                                        "values": [
+                                            ""
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "persistentVolumeReclaimPolicy": "Delete",
+                "storageClassName": "azure-standard-hdd",
+                "volumeMode": "Filesystem"
+            },
+            "status": {
+                "lastPhaseTransitionTime": "2026-10-13T00:34:08Z",
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolume",
+            "metadata": {
+                "annotations": {
+                    "vacuum-only-repro/created-by": "direct-restore-disks.py",
+                    "vacuum-only-repro/owner-token": "80b39f80dbafae1ce086575e67163341",
+                    "vacuum-only-repro/source-pair-sha256": "da7455ab25a1f8f413af494de64feb16f5dd3a25740dc74a4b7fa64ed28eec8a",
+                    "vacuum-only-repro/source-pvc-uid": "4c73e4bc-1b56-4c65-b376-c65dfac7729e",
+                    "vacuum-only-repro/source-snapshot-id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+                    "vacuum-only-repro/source-snapshot-unique-id": "d0b8cfa4-13de-4cd6-8d4f-f19ed4954f9d"
+                },
+                "creationTimestamp": "2026-10-13T00:26:08Z",
+                "finalizers": [
+                    "kubernetes.io/pv-protection",
+                    "external-provisioner.volume.kubernetes.io/finalizer",
+                    "external-attacher/disk-csi-azure-com"
+                ],
+                "labels": {
+                    "app.kubernetes.io/part-of": "walreceiver-sigterm-repro",
+                    "repro.stack.token": "80b39f80dbafae1ce086575e67163341"
+                },
+                "name": "restore-data-80b39f80",
+                "resourceVersion": "10074",
+                "uid": "f54d01fd-1b4d-4537-824d-7546d4e7bc90"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "512Gi"
+                },
+                "claimRef": {
+                    "apiVersion": "v1",
+                    "kind": "PersistentVolumeClaim",
+                    "name": "hdd-pg-1",
+                    "namespace": "repro",
+                    "uid": "4c73e4bc-1b56-4c65-b376-c65dfac7729e"
+                },
+                "csi": {
+                    "driver": "disk.csi.azure.com",
+                    "fsType": "ext4",
+                    "volumeAttributes": {
+                        "cachingMode": "None",
+                        "kind": "Managed",
+                        "skuName": "Standard_LRS"
+                    },
+                    "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/restore-data-80b39f80"
+                },
+                "persistentVolumeReclaimPolicy": "Delete",
+                "storageClassName": "azure-standard-hdd",
+                "volumeMode": "Filesystem"
+            },
+            "status": {
+                "lastPhaseTransitionTime": "2026-10-13T00:26:08Z",
+                "phase": "Bound"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "PersistentVolume",
+            "metadata": {
+                "annotations": {
+                    "vacuum-only-repro/created-by": "direct-restore-disks.py",
+                    "vacuum-only-repro/owner-token": "80b39f80dbafae1ce086575e67163341",
+                    "vacuum-only-repro/source-pair-sha256": "da7455ab25a1f8f413af494de64feb16f5dd3a25740dc74a4b7fa64ed28eec8a",
+                    "vacuum-only-repro/source-pvc-uid": "065ed912-9ca3-4b1b-b84a-c2dd0b057a7e",
+                    "vacuum-only-repro/source-snapshot-id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+                    "vacuum-only-repro/source-snapshot-unique-id": "a009a10f-38bd-40e1-b113-0760597cda0d"
+                },
+                "creationTimestamp": "2026-10-13T00:26:12Z",
+                "finalizers": [
+                    "kubernetes.io/pv-protection",
+                    "external-provisioner.volume.kubernetes.io/finalizer",
+                    "external-attacher/disk-csi-azure-com"
+                ],
+                "labels": {
+                    "app.kubernetes.io/part-of": "walreceiver-sigterm-repro",
+                    "repro.stack.token": "80b39f80dbafae1ce086575e67163341"
+                },
+                "name": "restore-wal-80b39f80",
+                "resourceVersion": "10075",
+                "uid": "318862b0-4a26-40c2-9659-b22f49cc10a8"
+            },
+            "spec": {
+                "accessModes": [
+                    "ReadWriteOnce"
+                ],
+                "capacity": {
+                    "storage": "512Gi"
+                },
+                "claimRef": {
+                    "apiVersion": "v1",
+                    "kind": "PersistentVolumeClaim",
+                    "name": "hdd-pg-1-wal",
+                    "namespace": "repro",
+                    "uid": "065ed912-9ca3-4b1b-b84a-c2dd0b057a7e"
+                },
+                "csi": {
+                    "driver": "disk.csi.azure.com",
+                    "fsType": "ext4",
+                    "volumeAttributes": {
+                        "cachingMode": "None",
+                        "kind": "Managed",
+                        "skuName": "Standard_LRS"
+                    },
+                    "volumeHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/restore-wal-80b39f80"
+                },
+                "persistentVolumeReclaimPolicy": "Delete",
+                "storageClassName": "azure-standard-hdd",
+                "volumeMode": "Filesystem"
+            },
+            "status": {
+                "lastPhaseTransitionTime": "2026-10-13T00:26:12Z",
+                "phase": "Bound"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

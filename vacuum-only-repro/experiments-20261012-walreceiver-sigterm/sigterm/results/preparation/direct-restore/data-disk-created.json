@@ -1,0 +1,34 @@
+{
+  "creationData": {
+    "createOption": "Copy",
+    "sourceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+    "sourceUniqueId": "d0b8cfa4-13de-4cd6-8d4f-f19ed4954f9d"
+  },
+  "diskIOPSReadWrite": 500,
+  "diskMBpsReadWrite": 60,
+  "diskSizeBytes": 549755813888,
+  "diskSizeGB": 512,
+  "diskState": "Unattached",
+  "encryption": {
+    "type": "EncryptionAtRestWithPlatformKey"
+  },
+  "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/restore-data-80b39f80",
+  "location": "eastus",
+  "name": "restore-data-80b39f80",
+  "networkAccessPolicy": "DenyAll",
+  "provisioningState": "Succeeded",
+  "publicNetworkAccess": "Disabled",
+  "resourceGroup": "rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341",
+  "sku": {
+    "name": "Standard_LRS",
+    "tier": "Standard"
+  },
+  "tags": {
+    "reproDiskKind": "data",
+    "reproPurpose": "walreceiver-direct-restore",
+    "reprotoken": "80b39f80dbafae1ce086575e67163341"
+  },
+  "timeCreated": "2026-10-13T00:23:46.7569148+00:00",
+  "type": "Microsoft.Compute/disks",
+  "uniqueId": "c833e907-4904-449d-93c7-c462b3bb86f1"
+}

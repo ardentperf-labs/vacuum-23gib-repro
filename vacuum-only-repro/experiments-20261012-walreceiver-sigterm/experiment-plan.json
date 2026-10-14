@@ -1,0 +1,87 @@
+{
+  "createdAtUtc": "2026-10-12T23:51:10.500101+00:00",
+  "status": "invalid-user-stopped-cleaned",
+  "pairedSourceRegion": "eastus",
+  "sourcePolicy": "Newest usable matched DATA/WAL restore set; shared source preserved",
+  "stacks": [
+    "sigterm",
+    "control"
+  ],
+  "nodesPerStack": 2,
+  "vmSize": "Standard_D2s_v4",
+  "diskSku": "Standard_LRS",
+  "diskSizeGiB": 512,
+  "diskLayout": "separate DATA and WAL per primary/replica",
+  "hostCaching": "None",
+  "heapGiB": 23,
+  "client": {
+    "tool": "pgbench",
+    "targetTps": 5,
+    "persistentConnections": 10,
+    "synchronousCommit": "on",
+    "statementTimeout": 0,
+    "warmupSeconds": 300,
+    "postRecoverySeconds": 300,
+    "randomSeed": 42
+  },
+  "difference": {
+    "sigterm": "One SIGTERM to verified replica walreceiver at actual VACUUM SQL start plus 600 seconds",
+    "control": "Timestamped no-signal observation at the same offset"
+  },
+  "minimumObservationFromVacuumSeconds": 8400,
+  "endCondition": "VACUUM exits successfully, replica replays final target, client recovers, minimum observation completes",
+  "hypothesis": "A receiver disconnect during VACUUM might cause all client writes to hang for more than two hours; outcome is measured, not assumed",
+  "publication": "Copy reviewed anonymized sources/results into local GitHub checkout; do not stage, commit or push",
+  "sources": [
+    "https://www.postgresql.org/docs/16/runtime-config-replication.html",
+    "https://learn.microsoft.com/en-us/azure/virtual-machines/monitor-vm-reference"
+  ],
+  "provisionedStacks": {
+    "sigterm": "aks-vacuum-only-80b39f80dbaf",
+    "control": "aks-vacuum-only-580b7b347725"
+  },
+  "preparationFallback": {
+    "atUtc": "2026-10-13T00:24:48.675398+00:00",
+    "reason": "AKS CSI managed identity still cannot read exact source snapshots after correct scoped grants and >10min propagation wait",
+    "method": "Authenticated CLI creates owned Standard_LRS512 managed disk DATA/WAL pair from same exact retained snapshot IDs; static CSI PV binding to original pending snapshot recovery PVCs",
+    "measurementSettingsUnchanged": true,
+    "sourceSnapshotsModified": false
+  },
+  "restorePaths": {
+    "sigterm": "CLI-created exact-source Copy disks, statically bound to original snapshot recovery PVCs after CSI authorization failure",
+    "control": "CSI-created exact-source Copy disks, dynamically bound; unused CLI-created disks remain owned for cleanup"
+  },
+  "preMeasurementRetry": {
+    "failedAtUtc": "2026-10-13T01:17:33Z",
+    "clientStarted": false,
+    "vacuumStarted": false,
+    "reason": "Event logger path keyword collision",
+    "resetEvidence": "Both client tables had ten rows and zero updates, then were dropped and removal replayed; target heap unchanged",
+    "azureCorrection": "Per-VM endpoint replaced by VMSS parent, with exact VMName and LUN filters verified live"
+  },
+  "preVacuumCorrections": [
+    {
+      "reason": "Auxiliary long kubectl exec streams reset simultaneously at 01:29:57/58 UTC",
+      "action": "Preserve failed segment and restart with stream reconnection",
+      "mainClientMonitorContinued": true
+    },
+    {
+      "reason": "VACUUM launch COPY timestamp used a relative path and failed before VACUUM",
+      "action": "Verify no VACUUM activity; preserve failed launch; correct paths and relaunch same work directory",
+      "timerBasis": "Actual corrected server-side VACUUM_START marker"
+    }
+  ],
+  "actualVacuumStartUtc": {
+    "sigterm": "2026-10-13T01:45:37.839937Z",
+    "control": "2026-10-13T01:45:37.857414Z"
+  },
+  "scheduledInterventionUtc": "2026-10-13T01:55:37.839937Z",
+  "earliestMinimumObservationEndUtc": "2026-10-13T04:05:37.857414Z",
+  "actualInterventionUtc": "2026-10-13T01:56:51.569060767Z",
+  "interventionDelaySeconds": 73.72912383,
+  "actualInterventionAfterVacuumSeconds": 673.72912383,
+  "interventionDeviation": "pg_terminate_backend returned false without signaling the auxiliary walreceiver; verified OS kill -TERM sent once instead",
+  "invalidReason": "missing archive configuration",
+  "twoHourOutcome": "not evaluated",
+  "ownedStacksRemoved": true
+}

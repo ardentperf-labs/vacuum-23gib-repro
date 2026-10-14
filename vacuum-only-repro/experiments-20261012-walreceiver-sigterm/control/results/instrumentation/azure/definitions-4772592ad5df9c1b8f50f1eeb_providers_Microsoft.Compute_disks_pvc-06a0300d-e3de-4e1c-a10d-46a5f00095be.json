@@ -1,0 +1,248 @@
+{
+  "availableMetrics": [
+    "Composite Disk Read Operations/sec",
+    "Composite Disk Write Operations/sec",
+    "Composite Disk Read Bytes/sec",
+    "Composite Disk Write Bytes/sec"
+  ],
+  "capturedAtUtc": "2026-10-13T01:42:44.916Z",
+  "command": [
+    "az",
+    "monitor",
+    "metrics",
+    "list-definitions",
+    "--resource",
+    "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be",
+    "--output",
+    "json",
+    "--only-show-errors",
+    "--subscription",
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "exitCode": 0,
+  "kind": "wal-disk",
+  "metricDefinitions": [
+    {
+      "category": "Disk Performance",
+      "displayDescription": "Number of read IOs performed on a disk during monitoring period, please note, this metric is in preview and is subject to change before becoming generally available",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be/providers/microsoft.insights/metricdefinitions/Composite Disk Read Operations/sec",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Disk Read Operations/sec(Preview)",
+        "value": "Composite Disk Read Operations/sec"
+      },
+      "namespace": "Microsoft.Compute/disks",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be",
+      "supportedAggregationTypes": [
+        "Average"
+      ],
+      "unit": "CountPerSecond"
+    },
+    {
+      "category": "Disk Performance",
+      "displayDescription": "Number of Write IOs performed on a disk during monitoring period, please note, this metric is in preview and is subject to change before becoming generally available",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be/providers/microsoft.insights/metricdefinitions/Composite Disk Write Operations/sec",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Disk Write Operations/sec(Preview)",
+        "value": "Composite Disk Write Operations/sec"
+      },
+      "namespace": "Microsoft.Compute/disks",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be",
+      "supportedAggregationTypes": [
+        "Average"
+      ],
+      "unit": "CountPerSecond"
+    },
+    {
+      "category": "Disk Performance",
+      "displayDescription": "Bytes/sec read from disk during monitoring period, please note, this metric is in preview and is subject to change before becoming generally available",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be/providers/microsoft.insights/metricdefinitions/Composite Disk Read Bytes/sec",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Disk Read Bytes/sec(Preview)",
+        "value": "Composite Disk Read Bytes/sec"
+      },
+      "namespace": "Microsoft.Compute/disks",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be",
+      "supportedAggregationTypes": [
+        "Average"
+      ],
+      "unit": "BytesPerSecond"
+    },
+    {
+      "category": "Disk Performance",
+      "displayDescription": "Bytes/sec written to disk during monitoring period, please note, this metric is in preview and is subject to change before becoming generally available",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be/providers/microsoft.insights/metricdefinitions/Composite Disk Write Bytes/sec",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Disk Write Bytes/sec(Preview)",
+        "value": "Composite Disk Write Bytes/sec"
+      },
+      "namespace": "Microsoft.Compute/disks",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be",
+      "supportedAggregationTypes": [
+        "Average"
+      ],
+      "unit": "BytesPerSecond"
+    }
+  ],
+  "missingMetrics": [],
+  "namespaces": [
+    "Microsoft.Compute/disks"
+  ],
+  "requestedMetrics": [
+    "Composite Disk Read Operations/sec",
+    "Composite Disk Write Operations/sec",
+    "Composite Disk Read Bytes/sec",
+    "Composite Disk Write Bytes/sec"
+  ],
+  "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be",
+  "role": "primary",
+  "stderr": "",
+  "stdoutTail": "   \"value\": \"Composite Disk Write Bytes/sec\"\n    },\n    \"namespace\": \"Microsoft.Compute/disks\",\n    \"primaryAggregationType\": \"Average\",\n    \"resourceGroup\": \"rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb\",\n    \"resourceId\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be\",\n    \"supportedAggregationTypes\": [\n      \"Average\"\n    ],\n    \"unit\": \"BytesPerSecond\"\n  },\n  {\n    \"category\": \"Disk Performance\",\n    \"displayDescription\": \"Number of Write IOs performed on a disk during monitoring period, please note, this metric is in preview and is subject to change before becoming generally available\",\n    \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be/providers/microsoft.insights/metricdefinitions/Composite Disk Write Operations/sec\",\n    \"isDimensionRequired\": false,\n    \"metricAvailabilities\": [\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT1M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT5M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT15M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT30M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT1H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT6H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT12H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"P1D\"\n      }\n    ],\n    \"name\": {\n      \"localizedValue\": \"Disk Write Operations/sec(Preview)\",\n      \"value\": \"Composite Disk Write Operations/sec\"\n    },\n    \"namespace\": \"Microsoft.Compute/disks\",\n    \"primaryAggregationType\": \"Average\",\n    \"resourceGroup\": \"rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb\",\n    \"resourceId\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be\",\n    \"supportedAggregationTypes\": [\n      \"Average\"\n    ],\n    \"unit\": \"CountPerSecond\"\n  },\n  {\n    \"category\": \"Disk Performance\",\n    \"displayDescription\": \"The accumulated operations of burst transactions used for disks with on-demand burst enabled. Emitted on an hour interval\",\n    \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be/providers/microsoft.insights/metricdefinitions/DiskPaidBurstIOPS\",\n    \"isDimensionRequired\": false,\n    \"metricAvailabilities\": [\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT1M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT5M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT15M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT30M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT1H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT6H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT12H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"P1D\"\n      }\n    ],\n    \"name\": {\n      \"localizedValue\": \"Disk On-demand Burst Operations(Preview)\",\n      \"value\": \"DiskPaidBurstIOPS\"\n    },\n    \"namespace\": \"Microsoft.Compute/disks\",\n    \"primaryAggregationType\": \"Average\",\n    \"resourceGroup\": \"rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb\",\n    \"resourceId\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be\",\n    \"supportedAggregationTypes\": [\n      \"Average\"\n    ],\n    \"unit\": \"Count\"\n  }\n]\n"
+}

@@ -1,0 +1,3 @@
+COPY (SELECT 'VACUUM_START|'||to_char(clock_timestamp() AT TIME ZONE 'UTC','YYYY-MM-DD"T"HH24:MI:SS.US"Z"')||'|'||pg_current_wal_flush_lsn()||'|'||wal_bytes||'|'||wal_records||'|'||wal_fpi FROM pg_stat_wal) TO PROGRAM 'cat > vacuum-86347b603d0947b48e88e176ae5c4ce5/vacuum-start.marker';
+VACUUM (VERBOSE, FREEZE) public.vacuum_target;
+COPY (SELECT 'VACUUM_COMPLETE|'||to_char(clock_timestamp() AT TIME ZONE 'UTC','YYYY-MM-DD"T"HH24:MI:SS.US"Z"')||'|'||pg_current_wal_flush_lsn()||'|'||wal_bytes||'|'||wal_records||'|'||wal_fpi FROM pg_stat_wal) TO PROGRAM 'cat > vacuum-86347b603d0947b48e88e176ae5c4ce5/vacuum-complete.marker';

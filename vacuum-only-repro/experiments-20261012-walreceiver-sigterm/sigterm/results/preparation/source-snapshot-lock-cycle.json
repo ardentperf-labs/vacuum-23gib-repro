@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "status": "restored",
+  "startedAtUtc": "2026-10-13T00:28:53Z",
+  "sourcePairSha256": "da7455ab25a1f8f413af494de64feb16f5dd3a25740dc74a4b7fa64ed28eec8a",
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "resourceGroup": "RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775",
+  "snapshotDeletionAttempted": false,
+  "originalLocks": {
+    "resourceGroup": {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-pv2-snap-5203346e38bc77fbedc14b472f6e4775/providers/Microsoft.Authorization/locks/preserve-all-snapshots",
+      "level": "CanNotDelete",
+      "name": "preserve-all-snapshots",
+      "notes": "Owned Premium SSD v2 reproduction snapshots are retained until explicit user authorization.",
+      "owners": null,
+      "resourceGroup": "rg-vacuum-pv2-snap-5203346e38bc77fbedc14b472f6e4775",
+      "type": "Microsoft.Authorization/locks"
+    },
+    "data": {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-pv2-snap-5203346e38bc77fbedc14b472f6e4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24/providers/Microsoft.Authorization/locks/retain-snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+      "level": "CanNotDelete",
+      "name": "retain-snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+      "notes": "Retained by the 2026-10-09 pgbench/VACUUM reproduction until explicit user authorization.",
+      "owners": null,
+      "resourceGroup": "rg-vacuum-pv2-snap-5203346e38bc77fbedc14b472f6e4775",
+      "type": "Microsoft.Authorization/locks"
+    },
+    "wal": {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-vacuum-pv2-snap-5203346e38bc77fbedc14b472f6e4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2/providers/Microsoft.Authorization/locks/retain-snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+      "level": "CanNotDelete",
+      "name": "retain-snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+      "notes": "Retained by the 2026-10-09 pgbench/VACUUM reproduction until explicit user authorization.",
+      "owners": null,
+      "resourceGroup": "rg-vacuum-pv2-snap-5203346e38bc77fbedc14b472f6e4775",
+      "type": "Microsoft.Authorization/locks"
+    }
+  },
+  "removed": {
+    "resourceGroup": false,
+    "data": false,
+    "wal": false
+  },
+  "restoredAtUtc": "2026-10-13T00:29:40Z"
+}

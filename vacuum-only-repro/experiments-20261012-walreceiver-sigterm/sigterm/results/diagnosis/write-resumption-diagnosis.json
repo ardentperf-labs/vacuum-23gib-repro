@@ -1,0 +1,527 @@
+{
+  "conclusion": {
+    "causalConfidence": "strong temporal/mechanistic evidence from a single treatment run and a concurrent control; not a randomized replicated causal estimate",
+    "objectStorageWalRestoreHypothesis": "Not supported by captured evidence. PostgreSQL invoked the generic CNPG manager wal-restore restore_command during replica recovery, but no external archive source was configured in the live Cluster, no backup/externalClusters/plugins or Barman object-store objects were present, the Barman ObjectStore CRD was absent, and no successful object-store fetch or fetch error was logged. The one captured restore log refuses a future timeline history file. A configured generic helper and RestoreCommand wait samples alone do not establish object-storage access.",
+    "primaryFinding": "The treatment write stall is strongly consistent with synchronous-replication quorum gating. With synchronous_commit=on and synchronous_standby_names=ANY 1 (hdd-pg-2), the sole configured synchronous standby was absent, then reconnected as catchup/potential. Client fixture progress resumed within about 0.52 seconds of that sender changing to streaming/quorum.",
+    "restorePathCaveat": "RestoreCommand wait samples establish that the recovery process entered that wait category, not that a remote archive was contacted. The actual wal-restore source was not observed returning a WAL segment during this interval. In CNPG v1.30.1, the no-backup-source wal-restore path reports no configured backup rather than fetching an external object; the no-backup archiver path can also return success without uploading WAL, so pg_stat_archiver counters are not upload proof."
+  },
+  "control": {
+    "fixtureCounter": {
+      "2026-10-13T01:56:52.167637Z": 8529,
+      "2026-10-13T02:23:57.869878Z": 16693,
+      "2026-10-13T02:33:37.242650Z": 19497,
+      "2026-10-13T03:21:37.851178Z": 34041
+    },
+    "interpretation": "The control continued to make write progress while its sender stayed quorum-eligible; its VACUUM_COMPLETE marker was 02:47:54.220460Z.",
+    "receiverAndSender": "The control receiver and its primary sender remained streaming/quorum in the sampled interval; no disconnect intervention was issued.",
+    "vacuumCompleteMarkerUtc": "2026-10-13T02:47:54.220460Z"
+  },
+  "dataThroughUtc": "2026-10-13T03:43:49.565Z",
+  "evidenceFiles": [
+    "results/measurement/walreceiver-os-sigterm-receipt.json",
+    "results/measurement/events.jsonl",
+    "results/measurement/samples.jsonl",
+    "results/measurement/client/sessions.jsonl",
+    "results/instrumentation/primary-pgstat.jsonl",
+    "results/instrumentation/replica-pgstat.jsonl",
+    "results/diagnosis/public/walreceiver-restore-timeline.json",
+    "results/diagnosis/public/postgres-runtime-settings-redacted.json",
+    "results/diagnosis/public/cluster-backup-source-references.json",
+    "results/diagnosis/public/postgres-cnpg-log-events-redacted.jsonl",
+    "results/preparation/prepare.json",
+    "results/diagnosis/native-point-in-time/capture.json",
+    "../control/results/diagnosis/native-point-in-time/capture.json",
+    "results/measurement/client-summary.json",
+    "results/measurement/user-stop.json",
+    "results/measurement/client/raw/pgbench-log.*",
+    "../control/results/measurement/client-summary.json",
+    "../control/results/measurement/user-stop.json",
+    "../control/results/measurement/client/raw/pgbench-log.*"
+  ],
+  "evidenceSha256AtDiagnosisCapture": {
+    "diagnosis/native-point-in-time/capture.json": "c5311bed4a2695a3a0b731fc89800edd2f512178fbcf7370f470cea4a2d1066e",
+    "diagnosis/public/cluster-backup-source-references.json": "b6bded28d9d8dd1f7f639e910d5852947650c579ce2dfe54b0cfe42a6d65dd2f",
+    "diagnosis/public/postgres-cnpg-log-events-redacted.jsonl": "83f96d1f52846854677c8e5a625e57594c99413e9ede9b032d58bcf56d661962",
+    "diagnosis/public/postgres-runtime-settings-redacted.json": "8d4c6f26c2abce72ab4049389ed56c07f1f78f4a2bd7c726c232c93d450bc71d",
+    "diagnosis/public/walreceiver-restore-timeline.json": "09281e85c9dd0c633f04dcfb7613296ddc0bccdbc8d2ba66b784b5f457f6b7c7",
+    "diagnosis/vacuum-completion-marker-readonly-capture.json": "c6d1c13b592604a5afb2841c4f21eb9455f37a87bfcef78c98465bcd8011a8a1",
+    "diagnosis/write-resumption-diagnosis.md": "b647c5b565278df6cadbf3677fad84e74702978b849c790bacf0b0c88fadb74f",
+    "instrumentation/primary-pgstat.jsonl": "cbbcb341e4466826c1f57771845d47787d44e313e679e39655eeb3b17b1f62c8",
+    "instrumentation/replica-pgstat.jsonl": "0dc9660eb354f3c5a5579375a82b9bd839720671958beb986bc7a0919831e877",
+    "measurement/client-summary.json": "bc1b1bb7f6686f90809174df906ef04ac680c5555ecd2d430d4e1e4a741b7830",
+    "measurement/client/sessions.jsonl": "0c269d8e969b3d221d42a639fc3f09766ef4c1366f6f233b8319770ebb3b6c01",
+    "measurement/control-client-summary.json": "5db76d01689331c6b78cc24ca2eff206ac4b41290c975ce695b5b8ae5b0ac45d",
+    "measurement/control-user-stop.json": "2f2eb0606962870c2322083234300ff37f68cda9e21178959834d302bc0e559a",
+    "measurement/corrected-vacuum-relaunch.json": "9a409884ea1534d9e9cfc97c3621b105409577fd2a3916b607f9c654a83f577d",
+    "measurement/events.jsonl": "2e1bc4c2aef9f3ebf2afa973c531db3c71c7281e9f747f7265f45201d70788ca",
+    "measurement/samples.jsonl": "177634b54dd1e675517e8dc5f29e3d759b648fc83a423b6535787a4943e42966",
+    "measurement/user-stop.json": "0824457bf4072f0d8e59b174b93948f96a4f042a6ca05267b09554694e61d46c",
+    "measurement/walreceiver-os-sigterm-receipt.json": "4f6f967f3652ccc9fc72b57448080339b6db149ef018169210d4547d9ffbdbd4",
+    "preparation/prepare.json": "cdd56528498631c3651ba44f0f0c3975241494b8b382166895efe7e55ec06da6"
+  },
+  "generatedAtUtc": "2026-10-13T03:54:00Z",
+  "limitations": [
+    "The experiment is an invalid, user-stopped pilot because inherited preparation removed archive references and there was no archive backend; rerun with the intended backup/archive configuration.",
+    "Both VACUUM commands and both clients completed successfully. Native pgbench logs, pgbench summaries, fixture committed-update counters, and server-side commit reconciliation match exactly: treatment 40627, control 40622, failed 0. Clients were stopped gracefully after the user stop request.",
+    "Both observation windows ended before the required minimum of 8400 seconds after VACUUM start (treatment 7091.411 seconds; control 7091.727 seconds). Replay catch-up and final healthy post-recovery observation were not completed. The >2-hour objective was not evaluated; this is not a negative result from a completed two-hour test.",
+    "The OS SIGTERM was sent to the treatment walreceiver 73.729 seconds after the scheduled +600-second point because the initial pg_terminate_backend attempt returned false and sent no signal. The control did not receive SIGTERM.",
+    "The treatment showed about 36m45s with no native transaction completions and no fixture progress. At user stop the replica still had 9329301776 bytes of recorded replay lag; no fake catch-up inference is made.",
+    "The intervention was an OS SIGTERM simulating receiver disconnection, not a naturally elapsed wal_sender_timeout.",
+    "Point-sampled SyncRep state is not asserted continuously between sampler observations; sampling gaps remain disclosed.",
+    "Archive references were deliberately removed by inherited vacuum-only preparation; the run cannot test an external object-store WAL restore path."
+  ],
+  "measuredTreatmentClient": {
+    "clientSampleErrorsInWindow": 0,
+    "firstIncreaseUtc": "2026-10-13T02:33:38.728117Z",
+    "firstIncreaseValue": 9539,
+    "flatDurationSeconds": 2204.867,
+    "interpretation": "Point samples show the same ten persistent writer backends present, with all ten on SyncRep in 1,979 of 1,986 samples. Sampling gaps mean this is not a claim that wait state was continuously observed between samples. The fixture counter stayed exactly flat across the listed interval.",
+    "lastFlatObservationUtc": "2026-10-13T02:33:37.293761Z",
+    "lastFlatValue": 8530,
+    "maximumAdjacentSampleGapSeconds": 5.844148,
+    "plateauStartUtc": "2026-10-13T01:56:52.426712Z",
+    "plateauStartValue": 8530,
+    "progressCounter": "sum(update_count) from the client fixture, not PostgreSQL xact_commit",
+    "samplesWithAllTenSameWriterPidsPresent": 1986,
+    "samplesWithAllTenWritersOnSyncRep": 1979,
+    "validClientSamplesDuringSignalToResumeWindow": 1986,
+    "writerPids": [
+      6659,
+      6660,
+      6661,
+      6662,
+      6663,
+      6664,
+      6665,
+      6666,
+      6667,
+      6668
+    ]
+  },
+  "nativeCompletionEvidence": {
+    "captureReceipts": [
+      {
+        "capturedAtUtc": "2026-10-13T03:37:36.641689+00:00",
+        "path": "sigterm/results/diagnosis/native-point-in-time/capture.json",
+        "sha256": "c5311bed4a2695a3a0b731fc89800edd2f512178fbcf7370f470cea4a2d1066e"
+      },
+      {
+        "capturedAtUtc": "2026-10-13T03:37:36.659628+00:00",
+        "path": "control/results/diagnosis/native-point-in-time/capture.json",
+        "sha256": "317b7610f66a7b4c502830267d88bfa94dce48c2289ef6d7b8a7a6fb401f8ff9"
+      }
+    ],
+    "captureTimeUtc": "2026-10-13T03:37:36.641689Z",
+    "control": {
+      "completeRowsAcrossCapturedFiles": 38385,
+      "completeRowsInWindow": 11663,
+      "finalNativeClientHarvest": {
+        "clientStoppedGracefully": true,
+        "clientSummarySha256": "5db76d01689331c6b78cc24ca2eff206ac4b41290c975ce695b5b8ae5b0ac45d",
+        "commitLogDifference": 0,
+        "failedTransactions": 0,
+        "finalReplayCaughtUpRecorded": false,
+        "longestGapAcrossFinalNativeLogsSeconds": 2.9850990772247314,
+        "longestGapEndUtc": "2026-10-13T01:47:09.246442Z",
+        "longestGapStartUtc": "2026-10-13T01:47:06.261343Z",
+        "malformedLogRows": [],
+        "minimumObservationSatisfied": false,
+        "minimumObservationSeconds": 8400,
+        "observationEndUtc": "2026-10-13T03:43:49.565542947Z",
+        "pgbenchExitCode": 0,
+        "rawCompletedRows": 40622,
+        "rawLogFiles": [
+          {
+            "bytes": 141271,
+            "path": "results/measurement/client/raw/pgbench-log.9136",
+            "sha256": "01937c64322f3ebd5d311ca55a413dec464156c5f0e13a5097bb896018ff7ccf"
+          },
+          {
+            "bytes": 147759,
+            "path": "results/measurement/client/raw/pgbench-log.9136.1",
+            "sha256": "8035d99f6cbfb294732d235e58de642109bcec90945dafa02c543268adb770d5"
+          },
+          {
+            "bytes": 143853,
+            "path": "results/measurement/client/raw/pgbench-log.9136.2",
+            "sha256": "304abd928c13cd5f82dedb1042d57b720ba26e2564a8c81e90d5dbb05b1d6955"
+          },
+          {
+            "bytes": 145858,
+            "path": "results/measurement/client/raw/pgbench-log.9136.3",
+            "sha256": "3bb73c220a0a1982fb84970e2fbdfd0c23748c9ff30417302de188f35ec96793"
+          },
+          {
+            "bytes": 145687,
+            "path": "results/measurement/client/raw/pgbench-log.9136.4",
+            "sha256": "53f2d07fd92f1ef84bb1182a87838c52e1cd7bb2dfd25cdaa92c72d15c571ea1"
+          },
+          {
+            "bytes": 142882,
+            "path": "results/measurement/client/raw/pgbench-log.9136.5",
+            "sha256": "43a392e282df8e6751fd0077e1142ed9e7aedb0504d3b2270388bc75d21dbad6"
+          },
+          {
+            "bytes": 144922,
+            "path": "results/measurement/client/raw/pgbench-log.9136.6",
+            "sha256": "26f25fecfba797a8411c24bf5db0454ea0e8de11e5da61edbc2858a12e636a79"
+          },
+          {
+            "bytes": 144062,
+            "path": "results/measurement/client/raw/pgbench-log.9136.7",
+            "sha256": "7011a0e76dff3c4447a22c7f8d481479715ee8f27d31dd2140694ea0f5fdb503"
+          },
+          {
+            "bytes": 137711,
+            "path": "results/measurement/client/raw/pgbench-log.9136.8",
+            "sha256": "fa764d1d5b7d12a97e76972dd29fedb99061f9d4ca3f89281a3167532e449339"
+          },
+          {
+            "bytes": 145400,
+            "path": "results/measurement/client/raw/pgbench-log.9136.9",
+            "sha256": "b333093897ed1b53f513b4ff5d4d5c7af1997eb5373ef40d3db15892df0c9d30"
+          }
+        ],
+        "rawLogManifestSha256": "75896b86e7030bc67d785a74d87261723ca871bd86a41f2e4848e545590903cb",
+        "rawSevenFieldRowsMalformed": 0,
+        "replayCaughtUpRecorded": false,
+        "serverCommittedUpdates": 40622,
+        "summaryLoggedCompletedTransactions": 40622,
+        "summaryPgbenchCompletedTransactions": 40622,
+        "totalNativeRowsInCommonDiagnosticWindow_20261013T015600Z_20261013T023500Z": 11663,
+        "transactionExecutionForGapEndSeconds": 2.740395,
+        "userStopReason": "missing archive configuration; user requested finishing only if less than one hour remained",
+        "userStopReceiptSha256": "2f2eb0606962870c2322083234300ff37f68cda9e21178959834d302bc0e559a",
+        "vacuumCompleteUtc": "2026-10-13T02:47:54.220460Z",
+        "vacuumExitCode": 0
+      },
+      "finalTotalsReconciled": true,
+      "gapEndUtc": "2026-10-13T02:25:50.031840+00:00",
+      "gapStartUtc": "2026-10-13T02:25:47.191237+00:00",
+      "incompleteOrTruncatedLinesAcrossCapturedFiles": 10,
+      "latestCompleteCapturedRecordUtc": "2026-10-13T03:37:27.473824Z",
+      "longestClosedAdjacentCompletionGapSeconds": 2.8406031131744385,
+      "maximumExecutionSeconds": 2.302752,
+      "reconciliation": {
+        "difference": 0,
+        "failedTransactions": 0,
+        "malformedRows": 0,
+        "pgbenchCompletedTransactions": 40622,
+        "pgbenchExitCode": 0,
+        "rawNativeCompletedRows": 40622,
+        "serverCommittedUpdates": 40622,
+        "status": "validated_exact_match_after_graceful_client_stop",
+        "summaryLoggedCompletedTransactions": 40622,
+        "validationErrors": []
+      }
+    },
+    "diagnosticWindowUtc": [
+      "2026-10-13T01:56:00Z",
+      "2026-10-13T02:35:00Z"
+    ],
+    "fixtureCounterDistinction": {
+      "firstIncreaseUtc": "2026-10-13T02:33:38.728117Z",
+      "firstIncreaseValue": 9539,
+      "interpretation": "This is the first sampled server-side fixture-counter increase, not the native log completion timestamp.",
+      "secondsAfterFirstCapturedQuorumRow": 0.521117
+    },
+    "quorumTransitionBracket": {
+      "firstStreamingQuorumCollectorCaptureUtc": "2026-10-13T02:33:38.207Z",
+      "firstStreamingQuorumQuerySampleUtc": "2026-10-13T02:33:38.024760Z",
+      "interpretation": "The native completion falls between the last SQL sample reporting catchup/potential and the first SQL sample reporting streaming/quorum. Collector capture timestamps lag the SQL sample timestamps. The sampled order does not establish the exact instant of the state transition or whether that transaction completed immediately before or after it.",
+      "lastCatchupPotentialCollectorCaptureUtc": "2026-10-13T02:33:38.156Z",
+      "lastCatchupPotentialQuerySampleUtc": "2026-10-13T02:33:37.024843Z",
+      "nativeFirstPostGapCompletionUtc": "2026-10-13T02:33:37.474955+00:00"
+    },
+    "reconciliation": {
+      "reason": "both native log sets were captured while pgbench was still writing; final pgbench stdout counts and server committed-update counters are not yet reconciled with complete native rows",
+      "status": "final client harvest validated; full raw pgbench logs, client summaries, and server committed-update counts reconcile exactly in both lanes"
+    },
+    "source": "The fields above describe the 03:37:36 UTC read-only point-in-time copies and their common diagnostic window. finalNativeClientHarvest records the later complete stopped logs and count reconciliation.",
+    "treatment": {
+      "completeRowsAcrossCapturedFiles": 38263,
+      "completeRowsInWindow": 11668,
+      "finalNativeClientHarvest": {
+        "clientStoppedGracefully": true,
+        "clientSummarySha256": "bc1b1bb7f6686f90809174df906ef04ac680c5555ecd2d430d4e1e4a741b7830",
+        "commitLogDifference": 0,
+        "failedTransactions": 0,
+        "finalReplayCaughtUpRecorded": false,
+        "longestGapAcrossFinalNativeLogsSeconds": 2206.0305881500244,
+        "longestGapEndUtc": "2026-10-13T02:33:37.474955Z",
+        "longestGapStartUtc": "2026-10-13T01:56:51.444367Z",
+        "malformedLogRows": [],
+        "minimumObservationSatisfied": false,
+        "minimumObservationSeconds": 8400,
+        "observationEndUtc": "2026-10-13T03:43:49.250736165Z",
+        "pgbenchExitCode": 0,
+        "rawCompletedRows": 40627,
+        "rawLogFiles": [
+          {
+            "bytes": 153129,
+            "path": "results/measurement/client/raw/pgbench-log.6645",
+            "sha256": "e4c3833060a494215422c08ee5854a5b28172cfee7cd0ec68ee8a30c4f111cd7"
+          },
+          {
+            "bytes": 160495,
+            "path": "results/measurement/client/raw/pgbench-log.6645.1",
+            "sha256": "7327d4f4277534cc286e345520bef17573a2889f4dc9de5692574a285806ae5d"
+          },
+          {
+            "bytes": 156415,
+            "path": "results/measurement/client/raw/pgbench-log.6645.2",
+            "sha256": "29629a4f1e61b9fa7bf7ed01f915a00d7988439e383c6259b490a8fb268a5a20"
+          },
+          {
+            "bytes": 158946,
+            "path": "results/measurement/client/raw/pgbench-log.6645.3",
+            "sha256": "0d4c82006f31fdebea3ab25a8690ee8d0704af79c2fc5c1b48564525f23ceb12"
+          },
+          {
+            "bytes": 158950,
+            "path": "results/measurement/client/raw/pgbench-log.6645.4",
+            "sha256": "61d6eba7fc6c07f9f068a758070d8552181deca2ec2dade9533798c1ccf1b9ac"
+          },
+          {
+            "bytes": 155192,
+            "path": "results/measurement/client/raw/pgbench-log.6645.5",
+            "sha256": "9c4ad4ab57a7dea98ab4f8877cfcfa92eb8f01da64afe845cc14707e6a2ab214"
+          },
+          {
+            "bytes": 157516,
+            "path": "results/measurement/client/raw/pgbench-log.6645.6",
+            "sha256": "a58f7477c2ab8f0d0dea1eed073dbbe22e1bfef93237a6d09b22578897c9fc3f"
+          },
+          {
+            "bytes": 156652,
+            "path": "results/measurement/client/raw/pgbench-log.6645.7",
+            "sha256": "e6439b964797fa1214bdf78daa510a4df1e41c678788b4dd272bbf93160bd56c"
+          },
+          {
+            "bytes": 150323,
+            "path": "results/measurement/client/raw/pgbench-log.6645.8",
+            "sha256": "6e9441fcf9e6375bd94d163b7f477865bc35c34ea69d664c049dc8c70e6d4fb8"
+          },
+          {
+            "bytes": 158552,
+            "path": "results/measurement/client/raw/pgbench-log.6645.9",
+            "sha256": "7adf8169312f99c740ac65f3e011795a1effd0e9efbf511c6f139c3c8fc7d6cc"
+          }
+        ],
+        "rawLogManifestSha256": "0f17385fd607f4864075b967014226de6051b8c48cdb9f53983bae9e4ea70264",
+        "rawSevenFieldRowsMalformed": 0,
+        "replayCaughtUpRecorded": false,
+        "serverCommittedUpdates": 40627,
+        "summaryLoggedCompletedTransactions": 40627,
+        "summaryPgbenchCompletedTransactions": 40627,
+        "totalNativeRowsInCommonDiagnosticWindow_20261013T015600Z_20261013T023500Z": 11668,
+        "transactionExecutionForGapEndSeconds": 2205.847976,
+        "userStopReason": "missing archive configuration; user requested finishing only if less than one hour remained",
+        "userStopReceiptSha256": "0824457bf4072f0d8e59b174b93948f96a4f042a6ca05267b09554694e61d46c",
+        "vacuumCompleteUtc": "2026-10-13T02:32:23.150343Z",
+        "vacuumExitCode": 0
+      },
+      "finalTotalsReconciled": true,
+      "firstPostGapCompletionVsFirstCapturedQuorumSeconds": 0.732045,
+      "firstPostGapCompletionVsQuorumQuerySampleSeconds": 0.549805,
+      "firstPostGapTransactionExecutionSeconds": 2205.847976,
+      "firstPostGapTransactionRow": {
+        "fields": "2 837 2205850286 0 1791858817 474955 2310",
+        "file": "pgbench-log.6645.2",
+        "line": 837
+      },
+      "gapEndUtc": "2026-10-13T02:33:37.474955+00:00",
+      "gapStartUtc": "2026-10-13T01:56:51.444367+00:00",
+      "incompleteOrTruncatedLinesAcrossCapturedFiles": 10,
+      "latestCompleteCapturedRecordUtc": "2026-10-13T03:36:48.588243Z",
+      "longestClosedAdjacentCompletionGapSeconds": 2206.0305881500244,
+      "maximumExecutionSeconds": 2205.847976,
+      "reconciliation": {
+        "difference": 0,
+        "failedTransactions": 0,
+        "malformedRows": 0,
+        "pgbenchCompletedTransactions": 40627,
+        "pgbenchExitCode": 0,
+        "rawNativeCompletedRows": 40627,
+        "serverCommittedUpdates": 40627,
+        "status": "validated_exact_match_after_graceful_client_stop",
+        "summaryLoggedCompletedTransactions": 40627,
+        "validationErrors": []
+      },
+      "releaseCatchupBurst": {
+        "bucketEndUtc": "2026-10-13T02:33:47.839937Z",
+        "bucketSeconds": 10,
+        "bucketStartUtc": "2026-10-13T02:33:37.839937Z",
+        "burstBucketExecutionMedianSeconds": 0.008851,
+        "burstBucketScheduleLagMedianSeconds": 1.131936553,
+        "burstBucketScheduleLagP95Seconds": 2.082602749,
+        "clientFixtureCounterObservations": [
+          {
+            "observedAtUtc": "2026-10-13T02:33:37.293761Z",
+            "sumUpdateCount": 8530
+          },
+          {
+            "observedAtUtc": "2026-10-13T02:33:47.790Z",
+            "sumUpdateCount": 19159
+          }
+        ],
+        "completedTransactions": 10565,
+        "interpretation": "Actual completion-time burst as pgbench drained scheduled backlog after the SyncRep stall. This is not the configured offered target rate and must not be presented as sustainable throughput.",
+        "pgbenchRateSchedulingReference": "https://www.postgresql.org/docs/16/pgbench.html#PGBENCH-RATE-LIMIT",
+        "recordedCompletionTps": 1056.5
+      }
+    }
+  },
+  "postgresMechanismReferences": [
+    {
+      "topic": "PostgreSQL 16 synchronous_commit=on waits for remote flush; remote_apply waits for replay",
+      "url": "https://www.postgresql.org/docs/16/runtime-config-wal.html#GUC-SYNCHRONOUS-COMMIT"
+    },
+    {
+      "topic": "PostgreSQL 16 synchronous replication and replay/flush positions",
+      "url": "https://www.postgresql.org/docs/16/warm-standby.html#SYNCHRONOUS-REPLICATION"
+    },
+    {
+      "topic": "PostgreSQL 16 synchronous replication waiter release accepts streaming/stopping senders; catchup is excluded",
+      "url": "https://github.com/postgres/postgres/blob/REL_16_STABLE/src/backend/replication/syncrep.c"
+    },
+    {
+      "topic": "PostgreSQL 16 walsender enters CATCHUP while streaming a standby that is behind",
+      "url": "https://github.com/postgres/postgres/blob/REL_16_STABLE/src/backend/replication/walsender.c"
+    },
+    {
+      "topic": "pgbench --rate schedule is based on initial start; delayed transactions can catch up after lag",
+      "url": "https://www.postgresql.org/docs/16/pgbench.html#PGBENCH-RATE-LIMIT"
+    }
+  ],
+  "promotionAndConfigurationChecks": {
+    "interpretation": "No promotion/role transition or synchronous replication setting change was observed in the measurement samples and primary pgstat settings samples. The point-in-time Cluster capture still names hdd-pg-1 as primary. This is limited to captured coverage; it is not a proof that no unlogged transient occurred.",
+    "primarySettingVariantsInPgstat": 1,
+    "roleTransitionsObserved": false,
+    "sampledRoles": {
+      "primary": [
+        "primary"
+      ],
+      "replica": [
+        "replica"
+      ]
+    }
+  },
+  "schemaVersion": 1,
+  "status": "invalid incomplete pilot: both clients stopped by user before the 8400-second minimum; VACUUM and native client logs completed and reconcile, but the >2-hour outcome was not evaluated",
+  "synchronousReplicationEvidence": {
+    "atQuorumTransition": {
+      "note": "The observed remote flush was nearly caught up at quorum transition. Replay/apply was far behind; with synchronous_commit=on the commit acknowledgement condition is flush, not replay.",
+      "primaryFlushLsn": "57/2461758",
+      "replicaFlushedLsn": "57/24613A0",
+      "replicaReplayLsn": "51/4FC69438",
+      "senderFlushLsn": "57/24613A0"
+    },
+    "sampledSettings": {
+      "synchronous_commit": "on (default)",
+      "synchronous_standby_names": "ANY 1 (\"hdd-pg-2\")",
+      "wal_receiver_timeout_ms": 5000,
+      "wal_sender_timeout_ms": 5000
+    },
+    "senderStates": [
+      {
+        "state": "no sender",
+        "timeUtc": "2026-10-13T01:56:52.089Z"
+      },
+      {
+        "state": "catchup",
+        "syncState": "potential",
+        "timeUtc": "2026-10-13T02:24:02.040Z"
+      },
+      {
+        "state": "streaming",
+        "syncState": "quorum",
+        "timeUtc": "2026-10-13T02:33:38.207Z"
+      }
+    ]
+  },
+  "treatmentTimeline": [
+    {
+      "detail": "The corrected remote launcher wrote this marker immediately before the VACUUM statement. An earlier launcher attempt failed before VACUUM and is excluded from this timeline.",
+      "event": "actual_vacuum_start_marker",
+      "timeUtc": "2026-10-13T01:45:37.839937Z"
+    },
+    {
+      "detail": "The +600 second intervention deadline. The runner's pg_terminate_backend attempt returned false and sent no signal.",
+      "event": "scheduled_receiver_sigterm",
+      "timeUtc": "2026-10-13T01:55:37.839937Z"
+    },
+    {
+      "detail": "SIGTERM sent to replica walreceiver PID 74 after checking process identity. This was 73.729 seconds after the scheduled deadline and 11m13.729s after the VACUUM marker.",
+      "event": "verified_os_sigterm_sent",
+      "timeUtc": "2026-10-13T01:56:51.569061Z"
+    },
+    {
+      "detail": "The primary sender disappeared in the adjacent primary sample at 01:56:52.089Z.",
+      "event": "replica_receiver_absent_first_observed",
+      "timeUtc": "2026-10-13T01:56:52.271Z"
+    },
+    {
+      "detail": "New walreceiver PID 123179 began streaming. The corresponding primary sender sample at 02:24:02.040Z showed state=catchup and sync_state=potential.",
+      "event": "replica_receiver_reconnected",
+      "timeUtc": "2026-10-13T02:24:02.037Z"
+    },
+    {
+      "detail": "The last sampled pg_stat_progress_vacuum row showed phase vacuuming heap; the precise completion is taken from the subsequent VACUUM_COMPLETE marker, not inferred from the sampler.",
+      "event": "last_vacuum_progress_sample",
+      "timeUtc": "2026-10-13T02:32:19.657914Z"
+    },
+    {
+      "detail": "Read-only kubectl exec retrieved the existing VACUUM_COMPLETE marker. This is the recorded completion time; the runner vacuum-process.json was stale and exit-status file was absent.",
+      "event": "vacuum_complete_marker",
+      "timeUtc": "2026-10-13T02:32:23.150343Z"
+    },
+    {
+      "detail": "Primary pg_stat_replication changed from catchup/potential to streaming/quorum. Its flush LSN was 57/24613A0 versus primary flush LSN 57/2461758, about 952 bytes behind. Replica replay LSN was still 51/4FC69438, roughly 22.8 GiB behind primary flush.",
+      "event": "sender_became_quorum",
+      "timeUtc": "2026-10-13T02:33:38.207Z"
+    },
+    {
+      "detail": "The sampled sum(update_count) rose from 8530 to 9539, about 0.521 seconds after the primary sender was observed quorum-eligible.",
+      "event": "first_client_fixture_progress_after_plateau",
+      "timeUtc": "2026-10-13T02:33:38.728117Z"
+    }
+  ],
+  "userStoppedPilot": {
+    "clientsStoppedGracefully": true,
+    "controlObservationEndUtc": "2026-10-13T03:43:49.565542947Z",
+    "controlObservationSeconds": 7091.708128,
+    "controlReplayCaughtUp": false,
+    "durationInterpretation": "Both client/VACUUM lanes were stopped gracefully before the 8400-second minimum; the >2-hour outcome is not evaluated.",
+    "invalidPilot": true,
+    "minimumObservationSatisfied": false,
+    "minimumObservationSeconds": 8400,
+    "outcome": "not_evaluated",
+    "reason": "missing archive configuration; user requested finishing only if less than one hour remained",
+    "requiredMinimumObservationSeconds": 8400,
+    "sigtermObservationSeconds": 7091.410799,
+    "treatmentObservationEndUtc": "2026-10-13T03:43:49.250736165Z",
+    "treatmentReplayCaughtUp": false,
+    "userStopRequestUtc": "2026-10-13T03:43:35.693345+00:00"
+  },
+  "vacuumCompletionMarkerCaptureUtc": "2026-10-13T03:29:53Z",
+  "walRestoreAndSourceEvidence": {
+    "archiverCaveat": "Primary pg_stat_archiver counters increased, but with no configured backup source the CNPG v1.30.1 no-backup archiver path may return success without upload; these counters do not demonstrate an object-store write.",
+    "capturedRestoreLog": {
+      "clusterTimeline": 2,
+      "fileTimeline": 3,
+      "message": "Refusing to restore future timeline history file",
+      "timeUtc": "2026-10-13T01:56:54.263324532Z",
+      "walName": "00000003.history"
+    },
+    "recoveryWaitSamples": {
+      "count": 58,
+      "firstUtc": "2026-10-13T01:57:06.071Z",
+      "lastUtc": "2026-10-13T02:23:41.080Z",
+      "meaning": "Replica startup reported RestoreCommand wait intermittently while receiver was absent. This is evidence of the recovery wait category, not evidence of object-storage traffic."
+    },
+    "runtimeCommandClass": "CNPG /controller/manager wal-restore; raw command intentionally was not persisted",
+    "runtimeEvidence": "The redacted settings capture reports restore_command configured in override.conf:4 and identifies the executable/subcommand without recording the raw command or credentials. Runtime sampled settings stayed at one variant across the observed window. The runtime Cluster capture has no configured backup, externalClusters, or plugins. There were zero Backup and ScheduledBackup objects; the Barman ObjectStore CRD was not installed. CNPG v1.30.1 source: https://github.com/cloudnative-pg/cloudnative-pg/blob/v1.30.1/internal/cmd/manager/walrestore/cmd.go and https://github.com/cloudnative-pg/cloudnative-pg/blob/v1.30.1/pkg/management/postgres/archiver/archiver.go.",
+    "sourcePreparation": "Both runs reused a matched DATA/WAL prepared snapshot pair. Preparation metadata says external WAL archive was not required and archive references were removed. No successful external archive fetch is evidenced by the captured logs or runtime objects. Archive references were deliberately removed by this inherited vacuum-only preparation; this run was not configured to exercise an external object-store WAL restore path."
+  }
+}

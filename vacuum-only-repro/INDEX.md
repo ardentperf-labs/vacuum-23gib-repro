@@ -14,10 +14,12 @@ the distinction between replica WAL flush and replay delays.
 | Original five experiments | [Comparison](experiments-20261005-five/REPORT.md) | Per-run reports, raw measurements and graphs |
 | Premium SSD v2: 23, 50 and 100 GiB | [Comparison](experiments-20261007-premium-v2/REPORT.md) | Three completed runs, graphs, raw measurements and complete UTC timelines |
 | Snapshot-based baseline with tiny pgbench workload | [Report](experiments-20261009-pgbench-baseline/run/results/REPORT.md) | Client and four-disk results, raw logs, graphs, timeline and cleanup verification |
+| Snapshot-based SIGTERM pilot, D2s_v4 / cache None | [Invalid pilot report](experiments-20261012-walreceiver-sigterm/REPORT.md), [diagnosis](experiments-20261012-walreceiver-sigterm/DIAGNOSIS.md) | No archive backend; user-stopped, native logs and metrics retained; hypothesis not evaluated |
+| Archive-enabled SIGTERM and control, D2s_v4 / cache None | [Report](experiments-20261013-walreceiver-sigterm/REPORT.md), [diagnosis](experiments-20261013-walreceiver-sigterm/DIAGNOSIS.md) | Ten measured writers stalled over two hours; 2,054 Azure Blob WAL restores; control completed 43,670 writes; original harness limitations documented |
 | Earlier VACUUM-only runs | [Report](REPORT.md), [23-GiB report](REPORT-23GIB.md) | Archived scripts, reports and `results/` directories |
 
-The latest [client and replication graph](experiments-20261009-pgbench-baseline/run/results/client-replication.png)
-shows client TPS and latency alongside standby flush and replay backlogs.
+The latest [client and replication graph](experiments-20261013-walreceiver-sigterm/recovered-analysis/graphs/comparison-overview.png)
+shows client waits, transaction ages, and replication backlogs for the corrected SIGTERM/control pair.
 
 The historical standalone repository's `.git` directory was excluded. Its
 original experiment-directory paths remain compatibility symlinks so saved

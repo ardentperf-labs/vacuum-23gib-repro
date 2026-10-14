@@ -1,0 +1,249 @@
+{
+  "captureFiles": {
+    "backupConfiguration": "cluster-backup-source-references.json",
+    "operatorLogs": "postgres-cnpg-log-events-redacted.jsonl",
+    "privateFullPostgresAndOperatorLogs": "../private/*-postgres-current.log; ../private/cnpg-operator-current.log",
+    "runtimeSettings": "postgres-runtime-settings-redacted.json",
+    "timelineAndPgstat": "walreceiver-restore-timeline.json"
+  },
+  "capturedAtUtc": "2026-10-13T03:17:11.274359+00:00",
+  "conclusion": {
+    "archiverCounterInterpretation": "CNPG v1.30.1 returns nil after a Debug-level no-backup skip from wal-archive. pg_stat_archiver counts and ContinuousArchiving=True do not demonstrate an upload.",
+    "classification": "CNPG restore helper configured with no CNPG archive source; no evidence of an object-storage fetch or fetch failure.",
+    "commandCaveat": "The captured runtime SQL deliberately redacted the full command string; its safe classifier recorded executable/subcommand and no cloud keywords. The displayed full argv is the source-derived CNPG v1.30.1 template, with `%f` and `%p` placeholders preserved; it was not executed.",
+    "confidence": "High that CNPG Barman restore could not fetch object storage: no backup/external source/plugin is configured, and the observed future-history-file rejection is before archive lookup. Captured logs alone cannot rule out unrelated non-CNPG processes, but none are configured/referenced by the workload.",
+    "futureTimelineHistoryEvent": "CNPG v1.30.1 validates replica history-file timeline before archive lookup; file timeline 3 > cluster timeline 2 returns ErrWALNotFound.",
+    "reason": "The active Cluster has no backup BarmanObjectStore, no externalClusters, and no plugins. In CNPG v1.30.1 the regular replica restore path returns ErrNoBackupConfigured and skips WAL restore before creating a Barman restorer. Manager log level is info, so Trace/Debug skip messages are suppressed."
+  },
+  "diagnosisPreparedAtUtc": "2026-10-13T03:26:59Z",
+  "eventEvidence": {
+    "firstRestoreCommandWaitUtc": "2026-10-13T01:57:06.071Z",
+    "lastRestoreCommandWaitUtc": "2026-10-13T02:23:41.080Z",
+    "replicaRestoreCommandWaitSamples": 58,
+    "sigterm": {
+      "attemptedAtUtc": "2026-10-13T01:56:51.597083+00:00",
+      "mechanism": "OS kill -TERM after verifying process start ticks, ownership and walreceiver command line",
+      "pid": 74,
+      "processStartTicks": 433516,
+      "returnCode": 0,
+      "scheduledAtUtc": "2026-10-13T01:55:37.839937Z",
+      "uid": 26
+    },
+    "walRestoreLogEvents": [
+      {
+        "clusterTimeline": 2,
+        "fileTimeline": 3,
+        "logger": "wal-restore",
+        "logging_pod": "hdd-pg-2",
+        "msg": "Refusing to restore future timeline history file",
+        "role": "replica",
+        "ts": "2026-10-13T00:54:24.685431971Z",
+        "walName": "00000003.history"
+      },
+      {
+        "clusterTimeline": 2,
+        "fileTimeline": 3,
+        "logger": "wal-restore",
+        "logging_pod": "hdd-pg-2",
+        "msg": "Refusing to restore future timeline history file",
+        "role": "replica",
+        "ts": "2026-10-13T01:56:54.263324532Z",
+        "walName": "00000003.history"
+      }
+    ]
+  },
+  "runtimeConfiguration": {
+    "apiResources": {
+      "backupObjects": 0,
+      "barmanObjectStoreCRDInstalled": false,
+      "scheduledBackupObjects": 0
+    },
+    "cluster": "hdd-pg",
+    "clusterSpecBackendPresence": {
+      "backup": false,
+      "bootstrapRecoveryPresent": false,
+      "externalClustersCount": 0,
+      "pluginsCount": 0
+    },
+    "currentPrimary": "hdd-pg-1",
+    "managerLogLevel": "info (from captured PostgreSQL Pod command)",
+    "namespace": "repro",
+    "podMetadata": [
+      {
+        "commandArgs": [
+          "run",
+          "--status-port-tls",
+          "--log-level=info"
+        ],
+        "commandExecutable": "/controller/manager",
+        "commandSubcommand": "instance",
+        "container": "postgres",
+        "envVariableNames": [
+          "PGDATA",
+          "POD_NAME",
+          "NAMESPACE",
+          "CLUSTER_NAME",
+          "PSQL_HISTORY",
+          "PGPORT",
+          "PGHOST",
+          "TMPDIR"
+        ],
+        "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+        "pod": "hdd-pg-1",
+        "secretEnvReferenceCount": 0,
+        "secretVolumeReferenceCount": 0,
+        "serviceAccount": "hdd-pg"
+      },
+      {
+        "commandArgs": [
+          "run",
+          "--status-port-tls",
+          "--log-level=info"
+        ],
+        "commandExecutable": "/controller/manager",
+        "commandSubcommand": "instance",
+        "container": "postgres",
+        "envVariableNames": [
+          "PGDATA",
+          "POD_NAME",
+          "NAMESPACE",
+          "CLUSTER_NAME",
+          "PSQL_HISTORY",
+          "PGPORT",
+          "PGHOST",
+          "TMPDIR"
+        ],
+        "image": "ghcr.io/cloudnative-pg/postgresql:16.15-202609281634-standard-trixie@sha256:1dd42563007500b94b943f2a1620f724efedfc9eea2d07a50c6db4582c2431fd",
+        "pod": "hdd-pg-2",
+        "secretEnvReferenceCount": 0,
+        "secretVolumeReferenceCount": 0,
+        "serviceAccount": "hdd-pg"
+      }
+    ],
+    "postgresCommandSettings": {
+      "primary": {
+        "archiveCommand": {
+          "configured": true,
+          "publicValue": "/controller/manager wal-archive [arguments omitted]",
+          "sourceFile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceLine": 1,
+          "valueRedacted": true
+        },
+        "archiveLibrary": "",
+        "archiverCounters": {
+          "archived_count": 2231,
+          "failed_count": 0,
+          "last_archived_time": "2026-10-13T03:12:23.609622+00:00",
+          "last_archived_wal": "000000020000005700000009",
+          "last_failed_time": null,
+          "last_failed_wal": null,
+          "stats_reset": "2026-10-13T00:27:21.096625+00:00"
+        },
+        "inRecovery": false,
+        "queriedAtUtc": "2026-10-13T03:16:49.326023+00:00",
+        "restoreCommand": {
+          "configured": true,
+          "interpretation": "CNPG restore helper; `%f` is requested WAL filename and `%p` destination path. Runtime value redacted; no command executed.",
+          "publicValue": "/controller/manager wal-restore --log-destination /controller/log/postgres.json %f %p",
+          "publicValueBasis": "CNPG v1.30.1 restore.go source template; captured command classifier independently confirms executable basename `manager` and subcommand `wal-restore`. The raw runtime setting was redacted in saved SQL output.",
+          "sourceFile": "/var/lib/postgresql/data/pgdata/override.conf",
+          "sourceLine": 4,
+          "sourceSelector": "The running-replica source is selected from CNPG Cluster recovery/replica configuration and manager cache, not from a cloud endpoint on the command line. This Cluster has no externalClusters, backup BarmanObjectStore, or plugins.",
+          "valueRedacted": true
+        }
+      },
+      "replica": {
+        "archiveCommand": {
+          "configured": true,
+          "publicValue": "/controller/manager wal-archive [arguments omitted]",
+          "sourceFile": "/var/lib/postgresql/data/pgdata/custom.conf",
+          "sourceLine": 1,
+          "valueRedacted": true
+        },
+        "archiveLibrary": "",
+        "archiverCounters": {
+          "archived_count": 0,
+          "failed_count": 0,
+          "last_archived_time": null,
+          "last_archived_wal": null,
+          "last_failed_time": null,
+          "last_failed_wal": null,
+          "stats_reset": "2026-10-13T00:54:25.077666+00:00"
+        },
+        "inRecovery": true,
+        "queriedAtUtc": "2026-10-13T03:17:04.19201+00:00",
+        "restoreCommand": {
+          "configured": true,
+          "interpretation": "CNPG restore helper; `%f` is requested WAL filename and `%p` destination path. Runtime value redacted; no command executed.",
+          "publicValue": "/controller/manager wal-restore --log-destination /controller/log/postgres.json %f %p",
+          "publicValueBasis": "CNPG v1.30.1 restore.go source template; captured command classifier independently confirms executable basename `manager` and subcommand `wal-restore`. The raw runtime setting was redacted in saved SQL output.",
+          "sourceFile": "/var/lib/postgresql/data/pgdata/override.conf",
+          "sourceLine": 4,
+          "sourceSelector": "The running-replica source is selected from CNPG Cluster recovery/replica configuration and manager cache, not from a cloud endpoint on the command line. This Cluster has no externalClusters, backup BarmanObjectStore, or plugins.",
+          "valueRedacted": true
+        }
+      }
+    },
+    "secretMetadata": {
+      "dataQueried": false,
+      "interpretation": "Only standard app, CA, replication, and server TLS Secret metadata was present; no object-store credential Secret/reference.",
+      "namesAndTypes": [
+        {
+          "name": "hdd-pg-app",
+          "type": "kubernetes.io/basic-auth"
+        },
+        {
+          "name": "hdd-pg-ca",
+          "type": "Opaque"
+        },
+        {
+          "name": "hdd-pg-replication",
+          "type": "kubernetes.io/tls"
+        },
+        {
+          "name": "hdd-pg-server",
+          "type": "kubernetes.io/tls"
+        }
+      ]
+    }
+  },
+  "safety": {
+    "databaseOrKubernetesConfigurationChanged": false,
+    "restoreCommandExecuted": false,
+    "secretValuesQueried": false,
+    "sourceSnapshotsChanged": false
+  },
+  "sourceCodeReferences": {
+    "archiveNoBackupBehavior": "https://github.com/cloudnative-pg/cloudnative-pg/blob/v1.30.1/pkg/management/postgres/archiver/archiver.go",
+    "replicaRestoreCommandAndNoBackupBehavior": "https://github.com/cloudnative-pg/cloudnative-pg/blob/v1.30.1/internal/cmd/manager/walrestore/cmd.go",
+    "restoreCommandTemplate": "https://github.com/cloudnative-pg/cloudnative-pg/blob/v1.30.1/pkg/management/postgres/restore.go",
+    "walArchiveCommand": "https://github.com/cloudnative-pg/cloudnative-pg/blob/v1.30.1/internal/cmd/manager/walarchive/cmd.go"
+  },
+  "sourceReview": {
+    "basis": "Official source pinned to the version of the running CNPG manager image.",
+    "cnpgVersion": "v1.30.1",
+    "relevantSourceLocations": {
+      "futureTimelineGuard": {
+        "location": "future timeline-history guard returns before archive lookup",
+        "source": "https://github.com/cloudnative-pg/cloudnative-pg/blob/v1.30.1/internal/cmd/manager/walrestore/cmd.go"
+      },
+      "generatedRestoreCommand": {
+        "location": "recovery configuration constructs the manager wal-restore command",
+        "source": "https://github.com/cloudnative-pg/cloudnative-pg/blob/v1.30.1/pkg/management/postgres/restore.go"
+      },
+      "restoreSkipNoBackend": {
+        "location": "ErrNoBackupConfigured branch skips WAL restore",
+        "source": "https://github.com/cloudnative-pg/cloudnative-pg/blob/v1.30.1/internal/cmd/manager/walrestore/cmd.go"
+      },
+      "restoreSourceSelection": {
+        "location": "restore source selected from CNPG recovery configuration",
+        "source": "https://github.com/cloudnative-pg/cloudnative-pg/blob/v1.30.1/internal/cmd/manager/walrestore/cmd.go"
+      },
+      "walArchiveNoBackend": {
+        "location": "ErrNoBackupConfigured branch is a no-op archive success",
+        "source": "https://github.com/cloudnative-pg/cloudnative-pg/blob/v1.30.1/pkg/management/postgres/archiver/archiver.go"
+      }
+    }
+  },
+  "stack": "sigterm"
+}

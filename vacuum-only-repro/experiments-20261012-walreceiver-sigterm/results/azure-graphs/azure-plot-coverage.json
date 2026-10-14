@@ -1,0 +1,1710 @@
+{
+  "charts": {
+    "azure-disk-iops": {
+      "chart": "azure-disk-iops",
+      "definitionMissingMetrics": [],
+      "image": "azure-disk-iops.png",
+      "inventoryByRun": {
+        "control": {
+          "advertisedMetrics": [
+            "Composite Disk Read Operations/sec",
+            "Composite Disk Write Operations/sec",
+            "Data Disk Read Operations/Sec",
+            "Data Disk Write Operations/Sec"
+          ],
+          "definitionGaps": []
+        },
+        "sigterm": {
+          "advertisedMetrics": [
+            "Composite Disk Read Operations/sec",
+            "Composite Disk Write Operations/sec",
+            "Data Disk Read Operations/Sec",
+            "Data Disk Write Operations/Sec"
+          ],
+          "definitionGaps": []
+        }
+      },
+      "missingPanels": [],
+      "nativeMetrics": [
+        "Composite Disk Read Operations/sec",
+        "Composite Disk Write Operations/sec",
+        "Data Disk Read Operations/Sec",
+        "Data Disk Write Operations/Sec"
+      ],
+      "plottedLinePoints": 4416,
+      "scale": "linear",
+      "series": [
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Read Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-86499588-0083-4353-8e23-baff82667e76"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Write Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-86499588-0083-4353-8e23-baff82667e76"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Read Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Write Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Read Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Write Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Read Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Write Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Read Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-e72b9d65-b564-4cb2-a7e1-0f2ecbcd78a4"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Write Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-e72b9d65-b564-4cb2-a7e1-0f2ecbcd78a4"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Read Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Write Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Read Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-6649d3d8-d985-45a5-a14b-825c65f9678d"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Write Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-6649d3d8-d985-45a5-a14b-825c65f9678d"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Read Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Write Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Read Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/restore-data-80b39f80"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Write Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/restore-data-80b39f80"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Read Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Write Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Read Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/restore-wal-80b39f80"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Write Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/restore-wal-80b39f80"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Read Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Write Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Read Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/pvc-535df437-35f7-4eed-89a4-398c4791b093"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Write Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/pvc-535df437-35f7-4eed-89a4-398c4791b093"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Read Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Write Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Read Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/pvc-7924f877-ee7d-4da8-aa93-c85f49c13e5d"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Write Operations/sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/pvc-7924f877-ee7d-4da8-aa93-c85f49c13e5d"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Read Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Write Operations/Sec"
+          ],
+          "nativeUnits": [
+            "CountPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "vm-lun"
+        }
+      ],
+      "title": "Azure disk IOPS by role and disk",
+      "vacuumStartMarkers": {
+        "control": "2026-10-13T01:45:37.857414Z",
+        "sigterm": "2026-10-13T01:45:37.839937Z"
+      },
+      "xAxis": "UTC native Azure timestamp"
+    },
+    "azure-disk-latency": {
+      "chart": "azure-disk-latency",
+      "definitionMissingMetrics": [],
+      "image": "azure-disk-latency.png",
+      "inventoryByRun": {
+        "control": {
+          "advertisedMetrics": [
+            "Data Disk Latency"
+          ],
+          "definitionGaps": []
+        },
+        "sigterm": {
+          "advertisedMetrics": [
+            "Data Disk Latency"
+          ],
+          "definitionGaps": []
+        }
+      },
+      "missingPanels": [],
+      "nativeMetrics": [
+        "Data Disk Latency"
+      ],
+      "plottedLinePoints": 1104,
+      "scale": "linear",
+      "series": [
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Latency"
+          ],
+          "nativeUnits": [
+            "MilliSeconds"
+          ],
+          "operation": "latency",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Latency"
+          ],
+          "nativeUnits": [
+            "MilliSeconds"
+          ],
+          "operation": "latency",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Latency"
+          ],
+          "nativeUnits": [
+            "MilliSeconds"
+          ],
+          "operation": "latency",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Latency"
+          ],
+          "nativeUnits": [
+            "MilliSeconds"
+          ],
+          "operation": "latency",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Latency"
+          ],
+          "nativeUnits": [
+            "MilliSeconds"
+          ],
+          "operation": "latency",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Latency"
+          ],
+          "nativeUnits": [
+            "MilliSeconds"
+          ],
+          "operation": "latency",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Latency"
+          ],
+          "nativeUnits": [
+            "MilliSeconds"
+          ],
+          "operation": "latency",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Latency"
+          ],
+          "nativeUnits": [
+            "MilliSeconds"
+          ],
+          "operation": "latency",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "vm-lun"
+        }
+      ],
+      "title": "Azure per-LUN disk latency",
+      "vacuumStartMarkers": {
+        "control": "2026-10-13T01:45:37.857414Z",
+        "sigterm": "2026-10-13T01:45:37.839937Z"
+      },
+      "xAxis": "UTC native Azure timestamp"
+    },
+    "azure-disk-queue-depth": {
+      "chart": "azure-disk-queue-depth",
+      "definitionMissingMetrics": [],
+      "image": "azure-disk-queue-depth.png",
+      "inventoryByRun": {
+        "control": {
+          "advertisedMetrics": [
+            "Data Disk Queue Depth"
+          ],
+          "definitionGaps": []
+        },
+        "sigterm": {
+          "advertisedMetrics": [
+            "Data Disk Queue Depth"
+          ],
+          "definitionGaps": []
+        }
+      },
+      "missingPanels": [],
+      "nativeMetrics": [
+        "Data Disk Queue Depth"
+      ],
+      "plottedLinePoints": 1104,
+      "scale": "linear",
+      "series": [
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Queue Depth"
+          ],
+          "nativeUnits": [
+            "Count"
+          ],
+          "operation": "queue",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Queue Depth"
+          ],
+          "nativeUnits": [
+            "Count"
+          ],
+          "operation": "queue",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Queue Depth"
+          ],
+          "nativeUnits": [
+            "Count"
+          ],
+          "operation": "queue",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Queue Depth"
+          ],
+          "nativeUnits": [
+            "Count"
+          ],
+          "operation": "queue",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Queue Depth"
+          ],
+          "nativeUnits": [
+            "Count"
+          ],
+          "operation": "queue",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Queue Depth"
+          ],
+          "nativeUnits": [
+            "Count"
+          ],
+          "operation": "queue",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Queue Depth"
+          ],
+          "nativeUnits": [
+            "Count"
+          ],
+          "operation": "queue",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Queue Depth"
+          ],
+          "nativeUnits": [
+            "Count"
+          ],
+          "operation": "queue",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "vm-lun"
+        }
+      ],
+      "title": "Azure per-LUN disk queue depth",
+      "vacuumStartMarkers": {
+        "control": "2026-10-13T01:45:37.857414Z",
+        "sigterm": "2026-10-13T01:45:37.839937Z"
+      },
+      "xAxis": "UTC native Azure timestamp"
+    },
+    "azure-disk-throughput": {
+      "chart": "azure-disk-throughput",
+      "definitionMissingMetrics": [],
+      "image": "azure-disk-throughput.png",
+      "inventoryByRun": {
+        "control": {
+          "advertisedMetrics": [
+            "Composite Disk Read Bytes/sec",
+            "Composite Disk Write Bytes/sec",
+            "Data Disk Read Bytes/sec",
+            "Data Disk Write Bytes/sec"
+          ],
+          "definitionGaps": []
+        },
+        "sigterm": {
+          "advertisedMetrics": [
+            "Composite Disk Read Bytes/sec",
+            "Composite Disk Write Bytes/sec",
+            "Data Disk Read Bytes/sec",
+            "Data Disk Write Bytes/sec"
+          ],
+          "definitionGaps": []
+        }
+      },
+      "missingPanels": [],
+      "nativeMetrics": [
+        "Composite Disk Read Bytes/sec",
+        "Composite Disk Write Bytes/sec",
+        "Data Disk Read Bytes/sec",
+        "Data Disk Write Bytes/sec"
+      ],
+      "plottedLinePoints": 4416,
+      "scale": "linear",
+      "series": [
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-86499588-0083-4353-8e23-baff82667e76"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-86499588-0083-4353-8e23-baff82667e76"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-06a0300d-e3de-4e1c-a10d-46a5f00095be"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-e72b9d65-b564-4cb2-a7e1-0f2ecbcd78a4"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-e72b9d65-b564-4cb2-a7e1-0f2ecbcd78a4"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-6649d3d8-d985-45a5-a14b-825c65f9678d"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/disks/pvc-6649d3d8-d985-45a5-a14b-825c65f9678d"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/restore-data-80b39f80"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/restore-data-80b39f80"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/restore-wal-80b39f80"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/restore-wal-80b39f80"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/pvc-535df437-35f7-4eed-89a4-398c4791b093"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Composite Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/pvc-535df437-35f7-4eed-89a4-398c4791b093"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "data",
+          "nativeMetrics": [
+            "Data Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/pvc-7924f877-ee7d-4da8-aa93-c85f49c13e5d"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Composite Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/pvc-7924f877-ee7d-4da8-aa93-c85f49c13e5d"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "managed-disk"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Read Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "read",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "vm-lun"
+        },
+        {
+          "disk": "wal",
+          "nativeMetrics": [
+            "Data Disk Write Bytes/sec"
+          ],
+          "nativeUnits": [
+            "BytesPerSecond"
+          ],
+          "operation": "write",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "vm-lun"
+        }
+      ],
+      "title": "Azure disk throughput by role and disk",
+      "vacuumStartMarkers": {
+        "control": "2026-10-13T01:45:37.857414Z",
+        "sigterm": "2026-10-13T01:45:37.839937Z"
+      },
+      "xAxis": "UTC native Azure timestamp"
+    },
+    "azure-vm-uncached-consumed": {
+      "chart": "azure-vm-uncached-consumed",
+      "definitionMissingMetrics": [],
+      "image": "azure-vm-uncached-consumed.png",
+      "inventoryByRun": {
+        "control": {
+          "advertisedMetrics": [
+            "VM Uncached Bandwidth Consumed Percentage",
+            "VM Uncached IOPS Consumed Percentage"
+          ],
+          "definitionGaps": []
+        },
+        "sigterm": {
+          "advertisedMetrics": [
+            "VM Uncached Bandwidth Consumed Percentage",
+            "VM Uncached IOPS Consumed Percentage"
+          ],
+          "definitionGaps": []
+        }
+      },
+      "missingPanels": [],
+      "nativeMetrics": [
+        "VM Uncached Bandwidth Consumed Percentage",
+        "VM Uncached IOPS Consumed Percentage"
+      ],
+      "plottedLinePoints": 1102,
+      "scale": "linear",
+      "series": [
+        {
+          "disk": "vm",
+          "nativeMetrics": [
+            "VM Uncached IOPS Consumed Percentage"
+          ],
+          "nativeUnits": [
+            "Percent"
+          ],
+          "operation": "IOPS",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "vm"
+        },
+        {
+          "disk": "vm",
+          "nativeMetrics": [
+            "VM Uncached Bandwidth Consumed Percentage"
+          ],
+          "nativeUnits": [
+            "Percent"
+          ],
+          "operation": "bandwidth",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "primary",
+          "run": "control",
+          "source": "vm"
+        },
+        {
+          "disk": "vm",
+          "nativeMetrics": [
+            "VM Uncached IOPS Consumed Percentage"
+          ],
+          "nativeUnits": [
+            "Percent"
+          ],
+          "operation": "IOPS",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "vm"
+        },
+        {
+          "disk": "vm",
+          "nativeMetrics": [
+            "VM Uncached Bandwidth Consumed Percentage"
+          ],
+          "nativeUnits": [
+            "Percent"
+          ],
+          "operation": "bandwidth",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-580b7b34772592ad5df9c1b8f50f1eeb/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-12067992-vmss"
+          ],
+          "role": "replica",
+          "run": "control",
+          "source": "vm"
+        },
+        {
+          "disk": "vm",
+          "nativeMetrics": [
+            "VM Uncached IOPS Consumed Percentage"
+          ],
+          "nativeUnits": [
+            "Percent"
+          ],
+          "operation": "IOPS",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "vm"
+        },
+        {
+          "disk": "vm",
+          "nativeMetrics": [
+            "VM Uncached Bandwidth Consumed Percentage"
+          ],
+          "nativeUnits": [
+            "Percent"
+          ],
+          "operation": "bandwidth",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "primary",
+          "run": "sigterm",
+          "source": "vm"
+        },
+        {
+          "disk": "vm",
+          "nativeMetrics": [
+            "VM Uncached IOPS Consumed Percentage"
+          ],
+          "nativeUnits": [
+            "Percent"
+          ],
+          "operation": "IOPS",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "vm"
+        },
+        {
+          "disk": "vm",
+          "nativeMetrics": [
+            "VM Uncached Bandwidth Consumed Percentage"
+          ],
+          "nativeUnits": [
+            "Percent"
+          ],
+          "operation": "bandwidth",
+          "pointCount": 138,
+          "resourceIds": [
+            "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss"
+          ],
+          "role": "replica",
+          "run": "sigterm",
+          "source": "vm"
+        }
+      ],
+      "title": "Azure VM uncached storage consumed",
+      "vacuumStartMarkers": {
+        "control": "2026-10-13T01:45:37.857414Z",
+        "sigterm": "2026-10-13T01:45:37.839937Z"
+      },
+      "xAxis": "UTC native Azure timestamp"
+    }
+  },
+  "deduplicatedNativePoints": 18768,
+  "generatedAtUtc": "2026-10-13T03:59:05Z",
+  "sources": {
+    "control": {
+      "lunMap": {
+        "0": "wal",
+        "1": "data"
+      },
+      "path": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/azure/azure-metrics.jsonl",
+      "resultsPath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results",
+      "rowsRead": 201254,
+      "vacuumStartUtc": "2026-10-13T01:45:37.857414Z"
+    },
+    "sigterm": {
+      "lunMap": {
+        "0": "data",
+        "1": "wal"
+      },
+      "path": "<workspace>/experiments/20261012-walreceiver-sigterm/sigterm/results/instrumentation/azure/azure-metrics.jsonl",
+      "resultsPath": "<workspace>/experiments/20261012-walreceiver-sigterm/sigterm/results",
+      "rowsRead": 201254,
+      "vacuumStartUtc": "2026-10-13T01:45:37.839937Z"
+    }
+  }
+}

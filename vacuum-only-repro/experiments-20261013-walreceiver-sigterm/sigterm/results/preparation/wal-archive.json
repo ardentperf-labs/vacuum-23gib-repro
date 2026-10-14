@@ -1,0 +1,69 @@
+{
+  "accountId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-9a66a148e388be98dedc394741b6c9d7/providers/Microsoft.Storage/storageAccounts/cnpgwal9a66a148e388be98d",
+  "accountName": "cnpgwal9a66a148e388be98d",
+  "accountOwnerScope": "rg-vacuum-only-9a66a148e388be98dedc394741b6c9d7",
+  "backend": "CNPG 1.30.1 in-tree BarmanObjectStore",
+  "configuredAtUtc": "2026-10-13T04:52:48.417947+00:00",
+  "connectionStringPersistedLocally": false,
+  "connectionStringStoredIn": "repro/azure-barman-credentials:connection-string",
+  "containerName": "wal-9a66a148e388",
+  "containerPublicAccess": null,
+  "destinationPath": "https://cnpgwal9a66a148e388be98d.blob.core.windows.net/wal-9a66a148e388/cnpg-wal-archive/9a66a148e388be98dedc394741b6c9d7/",
+  "location": "eastus",
+  "ownerToken": "9a66a148e388be98dedc394741b6c9d7",
+  "plugin": null,
+  "postgresImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+  "resourceGroup": "rg-vacuum-only-9a66a148e388be98dedc394741b6c9d7",
+  "secretReference": {
+    "key": "connection-string",
+    "name": "azure-barman-credentials",
+    "namespace": "repro"
+  },
+  "serverName": "hdd-pg",
+  "smokeReceipt": ".state/wal-archive-smoke.json",
+  "smokeStatus": "complete",
+  "snapshotLineage": {
+    "data": {
+      "deletionPolicy": "Retain",
+      "snapshotHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+      "volumeSnapshot": "source-data-9a66a148",
+      "volumeSnapshotContent": "source-data-content-9a66a148",
+      "volumeSnapshotContentUid": "6885ac51-8b63-4dfd-bc18-5e05efc9dd2e",
+      "volumeSnapshotUid": "b3c9bd7f-973e-45c2-9326-e0cb2f628bb1"
+    },
+    "wal": {
+      "deletionPolicy": "Retain",
+      "snapshotHandle": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+      "volumeSnapshot": "source-wal-9a66a148",
+      "volumeSnapshotContent": "source-wal-content-9a66a148",
+      "volumeSnapshotContentUid": "b5226b78-9944-4071-8504-9c6a3514a135",
+      "volumeSnapshotUid": "02a59719-11eb-43c6-a157-a727c12c2746"
+    }
+  },
+  "sourceLockVerification": {
+    "data": {
+      "level": "CanNotDelete",
+      "lockId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24/providers/Microsoft.Authorization/locks/retain-snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+      "snapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+      "uniqueId": "d0b8cfa4-13de-4cd6-8d4f-f19ed4954f9d"
+    },
+    "resourceGroup": {
+      "level": "CanNotDelete",
+      "lockId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Authorization/locks/preserve-all-snapshots",
+      "name": "RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775"
+    },
+    "wal": {
+      "level": "CanNotDelete",
+      "lockId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2/providers/Microsoft.Authorization/locks/retain-snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+      "snapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+      "uniqueId": "a009a10f-38bd-40e1-b113-0760597cda0d"
+    }
+  },
+  "sourceSnapshotIds": {
+    "data": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+    "wal": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2"
+  },
+  "status": "ready",
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "version": 1
+}

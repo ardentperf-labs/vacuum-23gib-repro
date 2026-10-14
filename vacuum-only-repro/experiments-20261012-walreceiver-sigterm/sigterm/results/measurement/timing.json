@@ -1,0 +1,392 @@
+{
+  "vacuumStart": "2026-10-13T01:45:37.839937Z",
+  "vacuumStartMarkerObserved": {
+    "time": "2026-10-13T01:45:37.839937Z",
+    "flushLsn": "4E/5F00F150",
+    "walBytes": 923047,
+    "walRecords": 10715,
+    "walFpi": 52
+  },
+  "vacuumComplete": "2026-10-13T02:32:23.150343Z",
+  "observationEnd": "2026-10-13T03:43:49.250736165Z",
+  "remoteVacuumExitCode": 0,
+  "testComplete": false,
+  "intervention": {
+    "afterVacuumStartSeconds": 600,
+    "causalNote": "SIGTERM of the replica walreceiver simulates a stream disconnect; it does not itself cause a primary wal_sender_timeout.",
+    "executedAtUtc": "2026-10-13T01:56:51.569060767Z",
+    "mode": "sigterm",
+    "scheduledAtUtc": "2026-10-13T01:55:37.839937Z",
+    "signalResult": {
+      "signal": "SIGTERM",
+      "signalSent": true,
+      "pid": 74,
+      "mechanism": "OS kill -TERM after verifying process start ticks, ownership and walreceiver command line"
+    },
+    "status": "sent",
+    "vacuumStartMarker": {
+      "flushLsn": "4E/5F00F150",
+      "time": "2026-10-13T01:45:37.839937Z",
+      "walBytes": 923047,
+      "walFpi": 52,
+      "walRecords": 10715
+    },
+    "priorFailedFunctionAttempt": "walreceiver-intervention-pg-function-failed.json",
+    "timingDeviation": "OS SIGTERM sent late after PostgreSQL function returned false without sending a signal"
+  },
+  "interventionMode": "sigterm",
+  "interventionAfterSeconds": 600,
+  "minimumObservationSeconds": 8400,
+  "minimumObservationSatisfied": false,
+  "minimumObservationEndEpoch": 1791864337.839937,
+  "replayCaughtUp": false,
+  "replayEnd": null,
+  "replayTargetLsn": "57/243ED58",
+  "replicaReplayLsnAtObservationEnd": "54/E3EEE510",
+  "primaryFlushLsnAtObservationEnd": "57/1000BE20",
+  "replicaLagBytesAtObservationEnd": 9329301776,
+  "finalReplayCaughtUp": false,
+  "clientStop": {
+    "requestedAtUtc": "2026-10-13T03:43:36.317Z",
+    "signal": "SIGALRM",
+    "signalSemantics": "pgbench duration handler stops scheduling and drains active transactions",
+    "requestResult": "graceful_stop_requested",
+    "finishedAtUtc": "2026-10-13T03:43:46.001Z",
+    "status": "0",
+    "exitCode": 0,
+    "waitSeconds": 9.385119141999894,
+    "identityVerification": "verified pgbench pid=6645",
+    "serverActivityBeforeStopRequest": {
+      "observedAtUtc": "2026-10-13T03:43:36.290428Z",
+      "benchSessions": 10,
+      "unrelatedAppSessions": 0,
+      "committedTransactions": 40623,
+      "activeSessions": 0,
+      "waitingSessions": 0,
+      "backends": [
+        {
+          "pid": 6659,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 1.296732
+        },
+        {
+          "pid": 6660,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 0.779742
+        },
+        {
+          "pid": 6661,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 3.592448
+        },
+        {
+          "pid": 6662,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 1.426199
+        },
+        {
+          "pid": 6663,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 1.975841
+        },
+        {
+          "pid": 6664,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 1.257587
+        },
+        {
+          "pid": 6665,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 0.716247
+        },
+        {
+          "pid": 6666,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 0.726671
+        },
+        {
+          "pid": 6667,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 1.477548
+        },
+        {
+          "pid": 6668,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 0.507401
+        }
+      ],
+      "maxActiveXactAgeSeconds": null,
+      "maxActiveQueryAgeSeconds": null
+    },
+    "serverActivityAfterDrain": {
+      "observedAtUtc": "2026-10-13T03:43:46.291545Z",
+      "benchSessions": 0,
+      "unrelatedAppSessions": 0,
+      "committedTransactions": 40627,
+      "activeSessions": 0,
+      "waitingSessions": 0,
+      "backends": [],
+      "maxActiveXactAgeSeconds": null,
+      "maxActiveQueryAgeSeconds": null
+    }
+  },
+  "clientSummary": {
+    "transactionLogRows": 40627,
+    "completedTransactions": 40627,
+    "latencyMs": {
+      "count": 40627,
+      "mean": 300501.40357690695,
+      "p50": 7.731,
+      "p95": 1798870.33,
+      "p99": 2127872.618,
+      "max": 2205850.286
+    },
+    "scheduleLagMs": {
+      "count": 40627,
+      "mean": 299947.0249103552,
+      "p50": 0.144,
+      "p95": 1797265.883,
+      "p99": 2126145.213,
+      "max": 2205358.837
+    },
+    "executionMs": {
+      "count": 40627,
+      "mean": 554.3786665518005,
+      "p50": 7.436,
+      "p95": 14.26,
+      "p99": 124.291,
+      "max": 2205847.976
+    },
+    "malformedLogRows": [],
+    "latencySource": "pgbench per-transaction completion logs; latency includes Poisson schedule lag",
+    "executionSource": "pgbench logged latency minus schedule_lag; log rows are completion records",
+    "loggedCompletedTransactions": 40627,
+    "reportedFailedTransactions": 0,
+    "failedTransactions": 0,
+    "committedTransactions": 40627,
+    "committedUpdateCountSource": "sum(update_count) from the ten logged client rows after all pgbench sessions drained",
+    "pendingTransactionsAtStopRequest": 0,
+    "inFlightActiveSessionsAtStopRequest": 0,
+    "waitEventsAtStopRequest": [
+      {
+        "pid": 6659,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 1.296732
+      },
+      {
+        "pid": 6660,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 0.779742
+      },
+      {
+        "pid": 6661,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 3.592448
+      },
+      {
+        "pid": 6662,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 1.426199
+      },
+      {
+        "pid": 6663,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 1.975841
+      },
+      {
+        "pid": 6664,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 1.257587
+      },
+      {
+        "pid": 6665,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 0.716247
+      },
+      {
+        "pid": 6666,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 0.726671
+      },
+      {
+        "pid": 6667,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 1.477548
+      },
+      {
+        "pid": 6668,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 0.507401
+      }
+    ],
+    "unfinishedAtStopSemantics": "pgbench transaction logs record completed transactions; one-second pg_stat_activity samples preserve pending states, waits, and ages through graceful stop and session drain",
+    "pgbenchExitCode": 0,
+    "progressOutput": "client/raw/pgbench.out",
+    "rawTransactionLogs": [
+      "client/raw/pgbench-log.6645.9",
+      "client/raw/pgbench-log.6645.3",
+      "client/raw/pgbench-log.6645.8",
+      "client/raw/pgbench-log.6645.1",
+      "client/raw/pgbench-log.6645.5",
+      "client/raw/pgbench-log.6645",
+      "client/raw/pgbench-log.6645.7",
+      "client/raw/pgbench-log.6645.4",
+      "client/raw/pgbench-log.6645.6",
+      "client/raw/pgbench-log.6645.2"
+    ],
+    "commitLogReconciliation": {
+      "serverCommittedUpdates": 40627,
+      "pgbenchCompletedTransactions": 40627,
+      "difference": 0,
+      "possibleInflightAtStopRequest": 0,
+      "explainedByInFlightGracefulDrain": false
+    },
+    "validationErrors": []
+  },
+  "clientWarmup": {
+    "averageTps": 5.228027925208768,
+    "endEpoch": 1791855218.1918557,
+    "healthyWindows": [
+      {
+        "endEpoch": 1791854977.6076994,
+        "seconds": 61.059221029281616,
+        "startEpoch": 1791854916.5484784,
+        "tps": 5.6011196054399415,
+        "transactions": 342
+      },
+      {
+        "endEpoch": 1791855037.8354533,
+        "seconds": 60.22775387763977,
+        "startEpoch": 1791854977.6076994,
+        "tps": 5.196939614183499,
+        "transactions": 313
+      },
+      {
+        "endEpoch": 1791855098.169066,
+        "seconds": 60.33361268043518,
+        "startEpoch": 1791855037.8354533,
+        "tps": 5.154672266142124,
+        "transactions": 311
+      },
+      {
+        "endEpoch": 1791855158.1781623,
+        "seconds": 60.00909638404846,
+        "startEpoch": 1791855098.169066,
+        "tps": 4.999242082901045,
+        "transactions": 300
+      },
+      {
+        "endEpoch": 1791855218.1918557,
+        "seconds": 60.01369333267212,
+        "startEpoch": 1791855158.1781623,
+        "tps": 5.182150651452877,
+        "transactions": 311
+      }
+    ],
+    "persistentSessions": 10,
+    "seconds": 301.64337730407715,
+    "startEpoch": 1791854916.5484784,
+    "targetTps": 5,
+    "transactions": 1577,
+    "unrelatedAppSessions": 0
+  },
+  "clientPostRecoveryHealthy": false,
+  "clientTargetCaughtWithSessions": false,
+  "walAtVacuumStart": {
+    "time": "2026-10-13T01:45:37.839937Z",
+    "flushLsn": "4E/5F00F150",
+    "walBytes": 923047,
+    "walRecords": 10715,
+    "walFpi": 52
+  },
+  "walAtVacuumComplete": {
+    "time": "2026-10-13T02:32:23.150343Z",
+    "flushLsn": "57/243ED58",
+    "walBytes": 36933758844,
+    "walRecords": 15132919,
+    "walFpi": 6071426
+  },
+  "vacuumOptions": [
+    "VERBOSE",
+    "FREEZE"
+  ],
+  "vacuumSql": "VACUUM (VERBOSE, FREEZE) public.vacuum_target;",
+  "errors": [
+    "missing archive configuration; user requested finishing only if less than one hour remained",
+    "No archive backend; experiment objective not tested",
+    "Minimum observation and final replay drain intentionally not completed"
+  ],
+  "userStop": {
+    "stopped": true,
+    "reason": "missing archive configuration; user requested finishing only if less than one hour remained",
+    "requestedAtUtc": "2026-10-13T03:43:35.693345+00:00",
+    "finishedAtUtc": "2026-10-13T03:43:46.001Z",
+    "testComplete": false,
+    "estimatedReplayMinutesAtDecision": 72,
+    "nativeClientTotalsReconciled": true,
+    "replayCatchupSkipped": true,
+    "vacuumCompletedBeforeStop": true,
+    "userInstruction": "If less than an hour from completion let them finish; rerun with correctly configured backups"
+  },
+  "postVacuumObservationError": "missing archive configuration; user requested finishing only if less than one hour remained"
+}

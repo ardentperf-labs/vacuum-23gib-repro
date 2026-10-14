@@ -1,0 +1,73 @@
+{
+  "stack": "control",
+  "watchers": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/watch-recovery.py",
+        "--kind",
+        "cluster",
+        "--kubeconfig",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/.state/kubeconfig",
+        "--out",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/cluster-watch-recovery.jsonl",
+        "--gaps",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/preparation/cluster-watcher-gaps.jsonl"
+      ],
+      "expectedCommand": [
+        "/usr/bin/python3",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/watch-recovery.py",
+        "--kind",
+        "cluster",
+        "--kubeconfig",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/.state/kubeconfig",
+        "--out",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/cluster-watch-recovery.jsonl",
+        "--gaps",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/preparation/cluster-watcher-gaps.jsonl"
+      ],
+      "expectedScriptPath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/watch-recovery.py",
+      "gaps": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/preparation/cluster-watcher-gaps.jsonl",
+      "kind": "cluster",
+      "out": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/cluster-watch-recovery.jsonl",
+      "pid": 109852,
+      "processGroupId": 109852,
+      "stack": "control",
+      "wrapperLog": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/cluster-watch-recovery.wrapper.log"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/watch-recovery.py",
+        "--kind",
+        "operator",
+        "--kubeconfig",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/.state/kubeconfig",
+        "--out",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/cnpg-operator-recovery.log",
+        "--gaps",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/preparation/operator-watcher-gaps.jsonl"
+      ],
+      "expectedCommand": [
+        "/usr/bin/python3",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/watch-recovery.py",
+        "--kind",
+        "operator",
+        "--kubeconfig",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/.state/kubeconfig",
+        "--out",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/cnpg-operator-recovery.log",
+        "--gaps",
+        "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/preparation/operator-watcher-gaps.jsonl"
+      ],
+      "expectedScriptPath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/watch-recovery.py",
+      "gaps": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/preparation/operator-watcher-gaps.jsonl",
+      "kind": "operator",
+      "out": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/cnpg-operator-recovery.log",
+      "pid": 109853,
+      "processGroupId": 109853,
+      "stack": "control",
+      "wrapperLog": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/operator-watch-recovery.wrapper.log"
+    }
+  ]
+}

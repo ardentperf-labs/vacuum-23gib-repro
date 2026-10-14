@@ -1,0 +1,133 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "storage.k8s.io/v1",
+            "kind": "VolumeAttachment",
+            "metadata": {
+                "annotations": {
+                    "csi.alpha.kubernetes.io/node-id": "aks-nodepool1-32566897-vmss000000"
+                },
+                "creationTimestamp": "2026-10-13T04:26:25Z",
+                "finalizers": [
+                    "external-attacher/disk-csi-azure-com"
+                ],
+                "name": "csi-02645593f815bbcf26894e0adcae8c662cdd7b51a426a5d317ab18c26cf59f29",
+                "resourceVersion": "4647",
+                "uid": "444ae9ed-fc0d-455e-a63a-75e9c28ec947"
+            },
+            "spec": {
+                "attacher": "disk.csi.azure.com",
+                "nodeName": "aks-nodepool1-32566897-vmss000000",
+                "source": {
+                    "persistentVolumeName": "restore-data-3a142550"
+                }
+            },
+            "status": {
+                "attached": true,
+                "attachmentMetadata": {
+                    "LUN": "0",
+                    "diskiopsreadwrite": "500",
+                    "diskmbpsreadwrite": "60",
+                    "networkaccesspolicy": "DenyAll",
+                    "skuname": "Standard_LRS"
+                }
+            }
+        },
+        {
+            "apiVersion": "storage.k8s.io/v1",
+            "kind": "VolumeAttachment",
+            "metadata": {
+                "annotations": {
+                    "csi.alpha.kubernetes.io/node-id": "aks-nodepool1-32566897-vmss000001"
+                },
+                "creationTimestamp": "2026-10-13T04:28:06Z",
+                "finalizers": [
+                    "external-attacher/disk-csi-azure-com"
+                ],
+                "name": "csi-05ce7592bb753ffd6266be9042cb7469ae35428a66e8cfbf2b5820cdbce778fc",
+                "resourceVersion": "5427",
+                "uid": "198fd48f-83f4-445d-a5b7-d4b0c20b728a"
+            },
+            "spec": {
+                "attacher": "disk.csi.azure.com",
+                "nodeName": "aks-nodepool1-32566897-vmss000001",
+                "source": {
+                    "persistentVolumeName": "pvc-c6e6f0b6-3b28-4e13-9e04-117224766945"
+                }
+            },
+            "status": {
+                "attached": true,
+                "attachmentMetadata": {
+                    "LUN": "1"
+                }
+            }
+        },
+        {
+            "apiVersion": "storage.k8s.io/v1",
+            "kind": "VolumeAttachment",
+            "metadata": {
+                "annotations": {
+                    "csi.alpha.kubernetes.io/node-id": "aks-nodepool1-32566897-vmss000001"
+                },
+                "creationTimestamp": "2026-10-13T04:28:06Z",
+                "finalizers": [
+                    "external-attacher/disk-csi-azure-com"
+                ],
+                "name": "csi-7df6f892158a4224a007b07f6c94008362aad39163ccb4bae5be82849b502d2e",
+                "resourceVersion": "5428",
+                "uid": "31490fd7-930e-4ab0-ad9e-0afa88b51cd1"
+            },
+            "spec": {
+                "attacher": "disk.csi.azure.com",
+                "nodeName": "aks-nodepool1-32566897-vmss000001",
+                "source": {
+                    "persistentVolumeName": "pvc-e1f29fed-703e-4c74-8775-524ce1858718"
+                }
+            },
+            "status": {
+                "attached": true,
+                "attachmentMetadata": {
+                    "LUN": "0"
+                }
+            }
+        },
+        {
+            "apiVersion": "storage.k8s.io/v1",
+            "kind": "VolumeAttachment",
+            "metadata": {
+                "annotations": {
+                    "csi.alpha.kubernetes.io/node-id": "aks-nodepool1-32566897-vmss000000"
+                },
+                "creationTimestamp": "2026-10-13T04:26:25Z",
+                "finalizers": [
+                    "external-attacher/disk-csi-azure-com"
+                ],
+                "name": "csi-8b50e0cc783fff0711dbc74d2eb012960fa61e8343fd8e03c9fb62ab9b9daa35",
+                "resourceVersion": "4646",
+                "uid": "6f1dbcbe-306d-4287-8e24-7c1861f866d8"
+            },
+            "spec": {
+                "attacher": "disk.csi.azure.com",
+                "nodeName": "aks-nodepool1-32566897-vmss000000",
+                "source": {
+                    "persistentVolumeName": "restore-wal-3a142550"
+                }
+            },
+            "status": {
+                "attached": true,
+                "attachmentMetadata": {
+                    "LUN": "1",
+                    "diskiopsreadwrite": "500",
+                    "diskmbpsreadwrite": "60",
+                    "networkaccesspolicy": "DenyAll",
+                    "skuname": "Standard_LRS"
+                }
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

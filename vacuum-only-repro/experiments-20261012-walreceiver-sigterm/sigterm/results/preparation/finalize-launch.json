@@ -1,0 +1,23 @@
+{
+  "command": [
+    "python3",
+    "experiments/20261012-walreceiver-sigterm/shared/finalize-restored-primary.py",
+    "--stack",
+    "sigterm",
+    "--owner-token",
+    "80b39f80dbafae1ce086575e67163341",
+    "--apply"
+  ],
+  "execSessionId": 20213,
+  "logNote": "Live stdout/stderr chunks from the finalizer exec session are appended to stdoutLog.",
+  "logWriterSessionId": 84280,
+  "ownerToken": "80b39f80dbafae1ce086575e67163341",
+  "pid": 28813,
+  "stack": "sigterm",
+  "startedAtUtc": "2026-10-13T00:35:50.931651+00:00",
+  "status": "complete",
+  "stdoutLog": "<workspace>/experiments/20261012-walreceiver-sigterm/sigterm/.state/finalize.log",
+  "version": 1,
+  "exitCode": 0,
+  "finishedAtUtc": "2026-10-13T00:55:12.504930+00:00"
+}

@@ -1,0 +1,484 @@
+{
+  "availableMetrics": [
+    "Transactions",
+    "SuccessE2ELatency",
+    "SuccessServerLatency",
+    "Availability",
+    "Ingress",
+    "Egress"
+  ],
+  "capturedAtUtc": "2026-10-13T05:11:33.454Z",
+  "command": [
+    "az",
+    "monitor",
+    "metrics",
+    "list-definitions",
+    "--resource",
+    "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default",
+    "--output",
+    "json",
+    "--only-show-errors",
+    "--subscription",
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "exitCode": 0,
+  "kind": "blob-service",
+  "metricDefinitions": [
+    {
+      "category": "Transaction",
+      "dimensions": [
+        {
+          "localizedValue": "Response type",
+          "value": "ResponseType"
+        },
+        {
+          "localizedValue": "Geo type",
+          "value": "GeoType"
+        },
+        {
+          "localizedValue": "API name",
+          "value": "ApiName"
+        },
+        {
+          "localizedValue": "Authentication",
+          "value": "Authentication"
+        },
+        {
+          "localizedValue": "Transaction type",
+          "value": "TransactionType"
+        },
+        {
+          "localizedValue": "Tier",
+          "value": "Tier"
+        }
+      ],
+      "displayDescription": "The number of requests made to a storage service or the specified API operation. This number includes successful and failed requests, as well as requests which produced errors. Use ResponseType dimension for the number of different type of response.",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default/providers/microsoft.insights/metricdefinitions/Transactions",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Transactions",
+        "value": "Transactions"
+      },
+      "namespace": "Microsoft.Storage/storageAccounts/blobServices",
+      "primaryAggregationType": "Total",
+      "resourceGroup": "rg-vacuum-only-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default",
+      "supportedAggregationTypes": [
+        "Total"
+      ],
+      "unit": "Count"
+    },
+    {
+      "category": "Transaction",
+      "dimensions": [
+        {
+          "localizedValue": "Geo type",
+          "value": "GeoType"
+        },
+        {
+          "localizedValue": "API name",
+          "value": "ApiName"
+        },
+        {
+          "localizedValue": "Authentication",
+          "value": "Authentication"
+        },
+        {
+          "localizedValue": "Tier",
+          "value": "Tier"
+        }
+      ],
+      "displayDescription": "The average end-to-end latency of successful requests made to a storage service or the specified API operation, in milliseconds. This value includes the required processing time within Azure Storage to read the request, send the response, and receive acknowledgment of the response.",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default/providers/microsoft.insights/metricdefinitions/SuccessE2ELatency",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Success E2E Latency",
+        "value": "SuccessE2ELatency"
+      },
+      "namespace": "Microsoft.Storage/storageAccounts/blobServices",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-only-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default",
+      "supportedAggregationTypes": [
+        "Average",
+        "Minimum",
+        "Maximum"
+      ],
+      "unit": "MilliSeconds"
+    },
+    {
+      "category": "Transaction",
+      "dimensions": [
+        {
+          "localizedValue": "Geo type",
+          "value": "GeoType"
+        },
+        {
+          "localizedValue": "API name",
+          "value": "ApiName"
+        },
+        {
+          "localizedValue": "Authentication",
+          "value": "Authentication"
+        },
+        {
+          "localizedValue": "Tier",
+          "value": "Tier"
+        }
+      ],
+      "displayDescription": "The average time used to process a successful request by Azure Storage. This value does not include the network latency specified in SuccessE2ELatency.",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default/providers/microsoft.insights/metricdefinitions/SuccessServerLatency",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Success Server Latency",
+        "value": "SuccessServerLatency"
+      },
+      "namespace": "Microsoft.Storage/storageAccounts/blobServices",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-only-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default",
+      "supportedAggregationTypes": [
+        "Average",
+        "Minimum",
+        "Maximum"
+      ],
+      "unit": "MilliSeconds"
+    },
+    {
+      "category": "Transaction",
+      "dimensions": [
+        {
+          "localizedValue": "Geo type",
+          "value": "GeoType"
+        },
+        {
+          "localizedValue": "API name",
+          "value": "ApiName"
+        },
+        {
+          "localizedValue": "Authentication",
+          "value": "Authentication"
+        },
+        {
+          "localizedValue": "Tier",
+          "value": "Tier"
+        }
+      ],
+      "displayDescription": "The percentage of availability for the storage service or the specified API operation. Availability is calculated by taking the TotalBillableRequests value and dividing it by the number of applicable requests, including those that produced unexpected errors. All unexpected errors result in reduced availability for the storage service or the specified API operation.",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default/providers/microsoft.insights/metricdefinitions/Availability",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Availability",
+        "value": "Availability"
+      },
+      "namespace": "Microsoft.Storage/storageAccounts/blobServices",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-only-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default",
+      "supportedAggregationTypes": [
+        "Average",
+        "Minimum",
+        "Maximum"
+      ],
+      "unit": "Percent"
+    },
+    {
+      "category": "Transaction",
+      "dimensions": [
+        {
+          "localizedValue": "Geo type",
+          "value": "GeoType"
+        },
+        {
+          "localizedValue": "API name",
+          "value": "ApiName"
+        },
+        {
+          "localizedValue": "Authentication",
+          "value": "Authentication"
+        },
+        {
+          "localizedValue": "Tier",
+          "value": "Tier"
+        }
+      ],
+      "displayDescription": "The amount of ingress data, in bytes. This number includes ingress from an external client into Azure Storage as well as ingress within Azure.",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default/providers/microsoft.insights/metricdefinitions/Ingress",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Ingress",
+        "value": "Ingress"
+      },
+      "namespace": "Microsoft.Storage/storageAccounts/blobServices",
+      "primaryAggregationType": "Total",
+      "resourceGroup": "rg-vacuum-only-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default",
+      "supportedAggregationTypes": [
+        "Total",
+        "Average",
+        "Minimum",
+        "Maximum"
+      ],
+      "unit": "Bytes"
+    },
+    {
+      "category": "Transaction",
+      "dimensions": [
+        {
+          "localizedValue": "Geo type",
+          "value": "GeoType"
+        },
+        {
+          "localizedValue": "API name",
+          "value": "ApiName"
+        },
+        {
+          "localizedValue": "Authentication",
+          "value": "Authentication"
+        },
+        {
+          "localizedValue": "Tier",
+          "value": "Tier"
+        }
+      ],
+      "displayDescription": "The amount of egress data. This number includes egress to external client from Azure Storage as well as egress within Azure. As a result, this number does not reflect billable egress.",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default/providers/microsoft.insights/metricdefinitions/Egress",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Egress",
+        "value": "Egress"
+      },
+      "namespace": "Microsoft.Storage/storageAccounts/blobServices",
+      "primaryAggregationType": "Total",
+      "resourceGroup": "rg-vacuum-only-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default",
+      "supportedAggregationTypes": [
+        "Total",
+        "Average",
+        "Minimum",
+        "Maximum"
+      ],
+      "unit": "Bytes"
+    }
+  ],
+  "missingMetrics": [],
+  "namespaces": [
+    "Microsoft.Storage/storageAccounts/blobServices"
+  ],
+  "requestedMetrics": [
+    "Transactions",
+    "SuccessE2ELatency",
+    "SuccessServerLatency",
+    "Availability",
+    "Ingress",
+    "Egress"
+  ],
+  "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default",
+  "role": "archive",
+  "stderr": "",
+  "stdoutTail": "st, send the response, and receive acknowledgment of the response.\",\n    \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default/providers/microsoft.insights/metricdefinitions/SuccessE2ELatency\",\n    \"isDimensionRequired\": false,\n    \"metricAvailabilities\": [\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT1M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT5M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT15M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT30M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT1H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT6H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT12H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"P1D\"\n      }\n    ],\n    \"name\": {\n      \"localizedValue\": \"Success E2E Latency\",\n      \"value\": \"SuccessE2ELatency\"\n    },\n    \"namespace\": \"Microsoft.Storage/storageAccounts/blobServices\",\n    \"primaryAggregationType\": \"Average\",\n    \"resourceGroup\": \"rg-vacuum-only-3a1425506c60047d19ef658becad1845\",\n    \"resourceId\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default\",\n    \"supportedAggregationTypes\": [\n      \"Average\",\n      \"Minimum\",\n      \"Maximum\"\n    ],\n    \"unit\": \"MilliSeconds\"\n  },\n  {\n    \"category\": \"Transaction\",\n    \"dimensions\": [\n      {\n        \"localizedValue\": \"Geo type\",\n        \"value\": \"GeoType\"\n      },\n      {\n        \"localizedValue\": \"API name\",\n        \"value\": \"ApiName\"\n      },\n      {\n        \"localizedValue\": \"Authentication\",\n        \"value\": \"Authentication\"\n      },\n      {\n        \"localizedValue\": \"Tier\",\n        \"value\": \"Tier\"\n      }\n    ],\n    \"displayDescription\": \"The percentage of availability for the storage service or the specified API operation. Availability is calculated by taking the TotalBillableRequests value and dividing it by the number of applicable requests, including those that produced unexpected errors. All unexpected errors result in reduced availability for the storage service or the specified API operation.\",\n    \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default/providers/microsoft.insights/metricdefinitions/Availability\",\n    \"isDimensionRequired\": false,\n    \"metricAvailabilities\": [\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT1M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT5M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT15M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT30M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT1H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT6H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT12H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"P1D\"\n      }\n    ],\n    \"name\": {\n      \"localizedValue\": \"Availability\",\n      \"value\": \"Availability\"\n    },\n    \"namespace\": \"Microsoft.Storage/storageAccounts/blobServices\",\n    \"primaryAggregationType\": \"Average\",\n    \"resourceGroup\": \"rg-vacuum-only-3a1425506c60047d19ef658becad1845\",\n    \"resourceId\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-only-3a1425506c60047d19ef658becad1845/providers/Microsoft.Storage/storageAccounts/cnpgwal3a1425506c60047d1/blobServices/default\",\n    \"supportedAggregationTypes\": [\n      \"Average\",\n      \"Minimum\",\n      \"Maximum\"\n    ],\n    \"unit\": \"Percent\"\n  }\n]\n"
+}

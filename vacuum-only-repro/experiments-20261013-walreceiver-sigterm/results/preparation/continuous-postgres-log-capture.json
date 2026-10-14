@@ -1,0 +1,40 @@
+{
+  "startedAtUtc": "2026-10-13T05:25:27.796504+00:00",
+  "verifiedAtUtc": "2026-10-13T05:25:57.615447+00:00",
+  "postgresqlMutations": 0,
+  "streamCount": 4,
+  "streams": [
+    {
+      "lane": "sigterm",
+      "role": "primary",
+      "alive": true,
+      "bytes": 167596,
+      "mode": "0o600"
+    },
+    {
+      "lane": "sigterm",
+      "role": "replica",
+      "alive": true,
+      "bytes": 1644,
+      "mode": "0o600"
+    },
+    {
+      "lane": "control",
+      "role": "primary",
+      "alive": true,
+      "bytes": 169290,
+      "mode": "0o600"
+    },
+    {
+      "lane": "control",
+      "role": "replica",
+      "alive": true,
+      "bytes": 1642,
+      "mode": "0o600"
+    }
+  ],
+  "purpose": "retain native archive recovery events before log rotation",
+  "rawLogsPrivate": true,
+  "runtimeControllerAlreadyLoaded": true,
+  "manualWatcherStopRequiredBeforeTeardown": true
+}

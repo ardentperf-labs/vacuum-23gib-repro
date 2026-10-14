@@ -1,0 +1,1 @@
+This attempt failed before client or VACUUM launch: event() had a path argument collision. Both tiny client tables were removed after verifying zero updates; target fixture unchanged. Instrumentation preflight also exposed missing Azure VM endpoint metrics; corrected before measurement restart.

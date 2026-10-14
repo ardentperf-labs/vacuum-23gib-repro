@@ -1,0 +1,1276 @@
+{
+  "availableMetrics": [
+    "Percentage CPU",
+    "Available Memory Bytes",
+    "VM Uncached IOPS Consumed Percentage",
+    "VM Uncached Bandwidth Consumed Percentage",
+    "VM Cached IOPS Consumed Percentage",
+    "VM Cached Bandwidth Consumed Percentage",
+    "Data Disk Read Bytes/sec",
+    "Data Disk Write Bytes/sec",
+    "Data Disk Read Operations/Sec",
+    "Data Disk Write Operations/Sec",
+    "Data Disk IOPS Consumed Percentage",
+    "Data Disk Bandwidth Consumed Percentage",
+    "Data Disk Queue Depth",
+    "Data Disk Latency",
+    "Data Disk Target IOPS",
+    "Data Disk Target Bandwidth",
+    "Data Disk Max Burst IOPS",
+    "Data Disk Max Burst Bandwidth",
+    "Data Disk Used Burst IO Credits Percentage",
+    "Data Disk Used Burst BPS Credits Percentage"
+  ],
+  "capturedAtUtc": "2026-10-13T05:11:24.936Z",
+  "command": [
+    "az",
+    "monitor",
+    "metrics",
+    "list-definitions",
+    "--resource",
+    "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+    "--output",
+    "json",
+    "--only-show-errors",
+    "--subscription",
+    "00000000-0000-0000-0000-000000000000"
+  ],
+  "exitCode": 0,
+  "kind": "vm",
+  "metricDefinitions": [
+    {
+      "displayDescription": "The percentage of allocated compute units that are currently in use by the Virtual Machine(s)",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Percentage CPU",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Percentage CPU",
+        "value": "Percentage CPU"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Percent"
+    },
+    {
+      "displayDescription": "Amount of physical memory, in bytes, immediately available for allocation to a process or for system use in the Virtual Machine",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Available Memory Bytes",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Available Memory Bytes",
+        "value": "Available Memory Bytes"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Bytes"
+    },
+    {
+      "displayDescription": "Percentage of uncached disk IOPS consumed by the VM. Only available on VM series that support premium storage.",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/VM Uncached IOPS Consumed Percentage",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "VM Uncached IOPS Consumed Percentage",
+        "value": "VM Uncached IOPS Consumed Percentage"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Percent"
+    },
+    {
+      "displayDescription": "Percentage of uncached disk bandwidth consumed by the VM. Only available on VM series that support premium storage.",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/VM Uncached Bandwidth Consumed Percentage",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "VM Uncached Bandwidth Consumed Percentage",
+        "value": "VM Uncached Bandwidth Consumed Percentage"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Percent"
+    },
+    {
+      "displayDescription": "Percentage of cached disk IOPS consumed by the VM. Only available on VM series that support premium storage.",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/VM Cached IOPS Consumed Percentage",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "VM Cached IOPS Consumed Percentage",
+        "value": "VM Cached IOPS Consumed Percentage"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Percent"
+    },
+    {
+      "displayDescription": "Percentage of cached disk bandwidth consumed by the VM. Only available on VM series that support premium storage.",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/VM Cached Bandwidth Consumed Percentage",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "VM Cached Bandwidth Consumed Percentage",
+        "value": "VM Cached Bandwidth Consumed Percentage"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Percent"
+    },
+    {
+      "dimensions": [
+        {
+          "localizedValue": "LUN",
+          "value": "LUN"
+        }
+      ],
+      "displayDescription": "Bytes/Sec read from a single disk during monitoring period",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Data Disk Read Bytes/sec",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Data Disk Read Bytes/Sec",
+        "value": "Data Disk Read Bytes/sec"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "BytesPerSecond"
+    },
+    {
+      "dimensions": [
+        {
+          "localizedValue": "LUN",
+          "value": "LUN"
+        }
+      ],
+      "displayDescription": "Bytes/Sec written to a single disk during monitoring period",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Data Disk Write Bytes/sec",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Data Disk Write Bytes/Sec",
+        "value": "Data Disk Write Bytes/sec"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "BytesPerSecond"
+    },
+    {
+      "dimensions": [
+        {
+          "localizedValue": "LUN",
+          "value": "LUN"
+        }
+      ],
+      "displayDescription": "Read IOPS from a single disk during monitoring period",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Data Disk Read Operations/Sec",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Data Disk Read Operations/Sec",
+        "value": "Data Disk Read Operations/Sec"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "CountPerSecond"
+    },
+    {
+      "dimensions": [
+        {
+          "localizedValue": "LUN",
+          "value": "LUN"
+        }
+      ],
+      "displayDescription": "Write IOPS from a single disk during monitoring period",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Data Disk Write Operations/Sec",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Data Disk Write Operations/Sec",
+        "value": "Data Disk Write Operations/Sec"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "CountPerSecond"
+    },
+    {
+      "dimensions": [
+        {
+          "localizedValue": "LUN",
+          "value": "LUN"
+        }
+      ],
+      "displayDescription": "Percentage of data disk I/Os consumed per minute. Only available on VM series that support premium storage.",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Data Disk IOPS Consumed Percentage",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Data Disk IOPS Consumed Percentage",
+        "value": "Data Disk IOPS Consumed Percentage"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Percent"
+    },
+    {
+      "dimensions": [
+        {
+          "localizedValue": "LUN",
+          "value": "LUN"
+        }
+      ],
+      "displayDescription": "Percentage of data disk bandwidth consumed per minute. Only available on VM series that support premium storage.",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Data Disk Bandwidth Consumed Percentage",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Data Disk Bandwidth Consumed Percentage",
+        "value": "Data Disk Bandwidth Consumed Percentage"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Percent"
+    },
+    {
+      "dimensions": [
+        {
+          "localizedValue": "LUN",
+          "value": "LUN"
+        }
+      ],
+      "displayDescription": "Data Disk Queue Depth(or Queue Length)",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Data Disk Queue Depth",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Data Disk Queue Depth",
+        "value": "Data Disk Queue Depth"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Count"
+    },
+    {
+      "dimensions": [
+        {
+          "localizedValue": "LUN",
+          "value": "LUN"
+        }
+      ],
+      "displayDescription": "Average time to complete each IO during monitoring period for Data Disk. Values are in milliseconds.",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Data Disk Latency",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Data Disk Latency",
+        "value": "Data Disk Latency"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "MilliSeconds"
+    },
+    {
+      "dimensions": [
+        {
+          "localizedValue": "LUN",
+          "value": "LUN"
+        }
+      ],
+      "displayDescription": "Baseline IOPS Data Disk can achieve without bursting",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Data Disk Target IOPS",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Data Disk Target IOPS",
+        "value": "Data Disk Target IOPS"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Count"
+    },
+    {
+      "dimensions": [
+        {
+          "localizedValue": "LUN",
+          "value": "LUN"
+        }
+      ],
+      "displayDescription": "Baseline bytes per second throughput Data Disk can achieve without bursting",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Data Disk Target Bandwidth",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Data Disk Target Bandwidth",
+        "value": "Data Disk Target Bandwidth"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Count"
+    },
+    {
+      "dimensions": [
+        {
+          "localizedValue": "LUN",
+          "value": "LUN"
+        }
+      ],
+      "displayDescription": "Maximum IOPS Data Disk can achieve with bursting",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Data Disk Max Burst IOPS",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Data Disk Max Burst IOPS",
+        "value": "Data Disk Max Burst IOPS"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Count"
+    },
+    {
+      "dimensions": [
+        {
+          "localizedValue": "LUN",
+          "value": "LUN"
+        }
+      ],
+      "displayDescription": "Maximum bytes per second throughput Data Disk can achieve with bursting",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Data Disk Max Burst Bandwidth",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Data Disk Max Burst Bandwidth",
+        "value": "Data Disk Max Burst Bandwidth"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Count"
+    },
+    {
+      "dimensions": [
+        {
+          "localizedValue": "LUN",
+          "value": "LUN"
+        }
+      ],
+      "displayDescription": "Percentage of Data Disk burst I/O credits used so far",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Data Disk Used Burst IO Credits Percentage",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Data Disk Used Burst IO Credits Percentage",
+        "value": "Data Disk Used Burst IO Credits Percentage"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Percent"
+    },
+    {
+      "dimensions": [
+        {
+          "localizedValue": "LUN",
+          "value": "LUN"
+        }
+      ],
+      "displayDescription": "Percentage of Data Disk burst bandwidth credits used so far",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/Data Disk Used Burst BPS Credits Percentage",
+      "isDimensionRequired": false,
+      "metricAvailabilities": [
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT5M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT15M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT30M"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT1H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT6H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "PT12H"
+        },
+        {
+          "retention": "P93D",
+          "timeGrain": "P1D"
+        }
+      ],
+      "name": {
+        "localizedValue": "Data Disk Used Burst BPS Credits Percentage",
+        "value": "Data Disk Used Burst BPS Credits Percentage"
+      },
+      "namespace": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines",
+      "primaryAggregationType": "Average",
+      "resourceGroup": "rg-vacuum-nodes-3a1425506c60047d19ef658becad1845",
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+      "supportedAggregationTypes": [
+        "None",
+        "Average",
+        "Minimum",
+        "Maximum",
+        "Total",
+        "Count"
+      ],
+      "unit": "Percent"
+    }
+  ],
+  "missingMetrics": [],
+  "namespaces": [
+    "Microsoft.Compute/virtualMachineScaleSets/virtualMachines"
+  ],
+  "requestedMetrics": [
+    "Percentage CPU",
+    "Available Memory Bytes",
+    "VM Uncached IOPS Consumed Percentage",
+    "VM Uncached Bandwidth Consumed Percentage",
+    "VM Cached IOPS Consumed Percentage",
+    "VM Cached Bandwidth Consumed Percentage",
+    "Data Disk Read Bytes/sec",
+    "Data Disk Write Bytes/sec",
+    "Data Disk Read Operations/Sec",
+    "Data Disk Write Operations/Sec",
+    "Data Disk IOPS Consumed Percentage",
+    "Data Disk Bandwidth Consumed Percentage",
+    "Data Disk Queue Depth",
+    "Data Disk Latency",
+    "Data Disk Target IOPS",
+    "Data Disk Target Bandwidth",
+    "Data Disk Max Burst IOPS",
+    "Data Disk Max Burst Bandwidth",
+    "Data Disk Used Burst IO Credits Percentage",
+    "Data Disk Used Burst BPS Credits Percentage"
+  ],
+  "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0",
+  "role": "primary",
+  "stderr": "",
+  "stdoutTail": "\n    \"primaryAggregationType\": \"Average\",\n    \"resourceGroup\": \"rg-vacuum-nodes-3a1425506c60047d19ef658becad1845\",\n    \"resourceId\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0\",\n    \"supportedAggregationTypes\": [\n      \"Average\",\n      \"Minimum\",\n      \"Maximum\"\n    ],\n    \"unit\": \"Percent\"\n  },\n  {\n    \"displayDescription\": \"Percentage of Cached Burst IO Credits used by the VM.\",\n    \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/VM Local Used Burst IO Credits Percentage\",\n    \"isDimensionRequired\": false,\n    \"metricAvailabilities\": [\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT1M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT5M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT15M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT30M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT1H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT6H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT12H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"P1D\"\n      }\n    ],\n    \"name\": {\n      \"localizedValue\": \"VM Cached Used Burst IO Credits Percentage\",\n      \"value\": \"VM Local Used Burst IO Credits Percentage\"\n    },\n    \"namespace\": \"Microsoft.Compute/virtualMachineScaleSets/virtualMachines\",\n    \"primaryAggregationType\": \"Average\",\n    \"resourceGroup\": \"rg-vacuum-nodes-3a1425506c60047d19ef658becad1845\",\n    \"resourceId\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0\",\n    \"supportedAggregationTypes\": [\n      \"Average\",\n      \"Minimum\",\n      \"Maximum\"\n    ],\n    \"unit\": \"Percent\"\n  },\n  {\n    \"displayDescription\": \"Percentage of Cached Burst BPS Credits used by the VM.\",\n    \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0/providers/microsoft.insights/metricdefinitions/VM Local Used Burst BPS Credits Percentage\",\n    \"isDimensionRequired\": false,\n    \"metricAvailabilities\": [\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT1M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT5M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT15M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT30M\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT1H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT6H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"PT12H\"\n      },\n      {\n        \"retention\": \"P93D\",\n        \"timeGrain\": \"P1D\"\n      }\n    ],\n    \"name\": {\n      \"localizedValue\": \"VM Cached Used Burst BPS Credits Percentage\",\n      \"value\": \"VM Local Used Burst BPS Credits Percentage\"\n    },\n    \"namespace\": \"Microsoft.Compute/virtualMachineScaleSets/virtualMachines\",\n    \"primaryAggregationType\": \"Average\",\n    \"resourceGroup\": \"rg-vacuum-nodes-3a1425506c60047d19ef658becad1845\",\n    \"resourceId\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-3a1425506c60047d19ef658becad1845/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-32566897-vmss/virtualMachines/0\",\n    \"supportedAggregationTypes\": [\n      \"Average\",\n      \"Minimum\",\n      \"Maximum\"\n    ],\n    \"unit\": \"Percent\"\n  }\n]\n"
+}

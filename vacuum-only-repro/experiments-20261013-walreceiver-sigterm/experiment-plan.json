@@ -1,0 +1,51 @@
+{
+  "createdAtUtc": "2026-10-13T02:13:00.418163+00:00",
+  "status": "provisioning",
+  "pairedSourceRegion": "eastus",
+  "sourcePolicy": "Newest usable matched DATA/WAL restore set; shared source preserved",
+  "stacks": [
+    "sigterm",
+    "control"
+  ],
+  "nodesPerStack": 2,
+  "vmSize": "Standard_D2s_v4",
+  "diskSku": "Standard_LRS",
+  "diskSizeGiB": 512,
+  "diskLayout": "separate DATA and WAL per primary/replica",
+  "hostCaching": "None",
+  "heapGiB": 23,
+  "client": {
+    "tool": "pgbench",
+    "targetTps": 5,
+    "persistentConnections": 10,
+    "synchronousCommit": "on",
+    "statementTimeout": 0,
+    "warmupSeconds": 300,
+    "postRecoverySeconds": 300,
+    "randomSeed": 42
+  },
+  "difference": {
+    "sigterm": "One SIGTERM to verified replica walreceiver at actual VACUUM SQL start plus 600 seconds",
+    "control": "Timestamped no-signal observation at the same offset"
+  },
+  "minimumObservationFromVacuumSeconds": 8400,
+  "endCondition": "VACUUM exits successfully, replica replays final target, client recovers, minimum observation completes",
+  "hypothesis": "A receiver disconnect during VACUUM might cause all client writes to hang for more than two hours; outcome is measured, not assumed",
+  "publication": "Copy reviewed anonymized sources/results into local GitHub checkout; do not stage, commit or push",
+  "sources": [
+    "https://www.postgresql.org/docs/16/runtime-config-replication.html",
+    "https://learn.microsoft.com/en-us/azure/virtual-machines/monitor-vm-reference"
+  ],
+  "previousPilot": "20261012-walreceiver-sigterm",
+  "restoreMethod": "Caller CLI exact-source DATA/WAL disk copy; static PV binding; no source grants or locks changed",
+  "walArchive": {
+    "required": true,
+    "backend": "Azure Blob",
+    "scope": "new owned account/container per lane",
+    "verification": "independent cloud object download and safe temporary-path restore with byte hashes before measurement",
+    "reason": "Pilot prep removed archive references and did not test archive-based recovery"
+  },
+  "measurementImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+  "imageVariantReason": "Barman Cloud binaries required for verified WAL archive/restore; both lanes use the same pinned PG16.15 system image",
+  "startedAtUtc": "2026-10-13T04:12:06.135923+00:00"
+}

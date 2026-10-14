@@ -1,0 +1,143 @@
+{
+  "missingSeries": [],
+  "nativeInterval": "PT1M",
+  "passed": true,
+  "pollId": "189ace96feea",
+  "requiredSeries": [
+    {
+      "exactDimensionMatched": true,
+      "expectedVmName": "aks-nodepool1-90183240-vmss_1",
+      "metric": "Percentage CPU",
+      "pointCount": 10,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss",
+      "role": "primary",
+      "scope": "vmss-parent"
+    },
+    {
+      "exactDimensionMatched": true,
+      "expectedVmName": "aks-nodepool1-90183240-vmss_1",
+      "metric": "VM Uncached IOPS Consumed Percentage",
+      "pointCount": 10,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss",
+      "role": "primary",
+      "scope": "vmss-parent"
+    },
+    {
+      "exactDimensionMatched": true,
+      "expectedVmName": "aks-nodepool1-90183240-vmss_1",
+      "metric": "VM Uncached Bandwidth Consumed Percentage",
+      "pointCount": 10,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss",
+      "role": "primary",
+      "scope": "vmss-parent"
+    },
+    {
+      "exactDimensionsMatched": true,
+      "expectedVmName": "aks-nodepool1-90183240-vmss_1",
+      "lun": "0",
+      "metric": "Data Disk Latency",
+      "pointCount": 10,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss",
+      "role": "primary",
+      "scope": "vmss-parent"
+    },
+    {
+      "exactDimensionsMatched": true,
+      "expectedVmName": "aks-nodepool1-90183240-vmss_1",
+      "lun": "0",
+      "metric": "Data Disk Queue Depth",
+      "pointCount": 10,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss",
+      "role": "primary",
+      "scope": "vmss-parent"
+    },
+    {
+      "exactDimensionsMatched": true,
+      "expectedVmName": "aks-nodepool1-90183240-vmss_1",
+      "lun": "1",
+      "metric": "Data Disk Latency",
+      "pointCount": 10,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss",
+      "role": "primary",
+      "scope": "vmss-parent"
+    },
+    {
+      "exactDimensionsMatched": true,
+      "expectedVmName": "aks-nodepool1-90183240-vmss_1",
+      "lun": "1",
+      "metric": "Data Disk Queue Depth",
+      "pointCount": 10,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss",
+      "role": "primary",
+      "scope": "vmss-parent"
+    },
+    {
+      "exactDimensionMatched": true,
+      "expectedVmName": "aks-nodepool1-90183240-vmss_0",
+      "metric": "Percentage CPU",
+      "pointCount": 10,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss",
+      "role": "replica",
+      "scope": "vmss-parent"
+    },
+    {
+      "exactDimensionMatched": true,
+      "expectedVmName": "aks-nodepool1-90183240-vmss_0",
+      "metric": "VM Uncached IOPS Consumed Percentage",
+      "pointCount": 10,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss",
+      "role": "replica",
+      "scope": "vmss-parent"
+    },
+    {
+      "exactDimensionMatched": true,
+      "expectedVmName": "aks-nodepool1-90183240-vmss_0",
+      "metric": "VM Uncached Bandwidth Consumed Percentage",
+      "pointCount": 10,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss",
+      "role": "replica",
+      "scope": "vmss-parent"
+    },
+    {
+      "exactDimensionsMatched": true,
+      "expectedVmName": "aks-nodepool1-90183240-vmss_0",
+      "lun": "0",
+      "metric": "Data Disk Latency",
+      "pointCount": 10,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss",
+      "role": "replica",
+      "scope": "vmss-parent"
+    },
+    {
+      "exactDimensionsMatched": true,
+      "expectedVmName": "aks-nodepool1-90183240-vmss_0",
+      "lun": "0",
+      "metric": "Data Disk Queue Depth",
+      "pointCount": 10,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss",
+      "role": "replica",
+      "scope": "vmss-parent"
+    },
+    {
+      "exactDimensionsMatched": true,
+      "expectedVmName": "aks-nodepool1-90183240-vmss_0",
+      "lun": "1",
+      "metric": "Data Disk Latency",
+      "pointCount": 10,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss",
+      "role": "replica",
+      "scope": "vmss-parent"
+    },
+    {
+      "exactDimensionsMatched": true,
+      "expectedVmName": "aks-nodepool1-90183240-vmss_0",
+      "lun": "1",
+      "metric": "Data Disk Queue Depth",
+      "pointCount": 10,
+      "resourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/virtualMachineScaleSets/aks-nodepool1-90183240-vmss",
+      "role": "replica",
+      "scope": "vmss-parent"
+    }
+  ],
+  "validatedAtUtc": "2026-10-13T01:43:53.854Z"
+}

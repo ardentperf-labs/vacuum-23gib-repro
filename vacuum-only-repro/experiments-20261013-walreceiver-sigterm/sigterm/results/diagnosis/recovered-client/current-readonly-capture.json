@@ -1,0 +1,18 @@
+{
+  "primary": {
+    "endedAtUtc": "2026-10-13T10:22:52.749405+00:00",
+    "exitCode": 0,
+    "pod": "hdd-pg-1",
+    "startedAtUtc": "2026-10-13T10:22:52.407060+00:00",
+    "stderr": "Defaulted container \"postgres\" out of: postgres, bootstrap-controller (init)",
+    "stdout": "{\"capturedAtUtc\" : \"2026-10-13T10:22:52.729741+00:00\", \"settings\" : {\"synchronous_standby_names\" : \"ANY 1 (\\\"hdd-pg-2\\\")\", \"synchronous_commit\" : \"on\", \"wal_sender_timeout\" : \"5s\"}, \"clientSessions\" : [], \"fixtureRows\" : [{\"clientId\" : 0, \"updateCount\" : 475}, {\"clientId\" : 1, \"updateCount\" : 476}, {\"clientId\" : 2, \"updateCount\" : 465}, {\"clientId\" : 3, \"updateCount\" : 440}, {\"clientId\" : 4, \"updateCount\" : 456}, {\"clientId\" : 5, \"updateCount\" : 487}, {\"clientId\" : 6, \"updateCount\" : 428}, {\"clientId\" : 7, \"updateCount\" : 479}, {\"clientId\" : 8, \"updateCount\" : 441}, {\"clientId\" : 9, \"updateCount\" : 473}], \"databaseStats\" : {\"xactCommit\" : 39649, \"xactRollback\" : 1, \"tupUpdated\" : 4621}, \"replicationSenders\" : [{\"pid\" : 455982, \"applicationName\" : \"hdd-pg-2\", \"state\" : \"streaming\", \"syncState\" : \"quorum\", \"sentLsn\" : \"57/2000110\", \"writeLsn\" : \"57/2000110\", \"flushLsn\" : \"57/2000110\", \"replayLsn\" : \"57/2000110\", \"backendStartUtc\" : \"2026-10-13T08:31:05.326969+00:00\"}]}"
+  },
+  "replica": {
+    "endedAtUtc": "2026-10-13T10:22:53.082853+00:00",
+    "exitCode": 0,
+    "pod": "hdd-pg-2",
+    "startedAtUtc": "2026-10-13T10:22:52.749424+00:00",
+    "stderr": "Defaulted container \"postgres\" out of: postgres, bootstrap-controller (init)",
+    "stdout": "{\"capturedAtUtc\" : \"2026-10-13T10:22:53.057523+00:00\", \"inRecovery\" : true, \"receiveLsn\" : \"57/2000110\", \"replayLsn\" : \"57/2000110\", \"lastXactReplayUtc\" : \"2026-10-13T05:28:26.595558+00:00\", \"walReceiver\" : {\"pid\" : 358139, \"status\" : \"streaming\", \"receiveStartLsn\" : \"57/1000000\", \"writtenLsn\" : \"57/2000110\", \"flushedLsn\" : \"57/2000110\", \"receivedTli\" : 2, \"lastMsgSendUtc\" : \"2026-10-13T10:22:52.524792+00:00\", \"lastMsgReceiptUtc\" : \"2026-10-13T10:22:52.524871+00:00\", \"latestEndLsn\" : \"57/2000110\", \"latestEndUtc\" : \"2026-10-13T10:19:57.351027+00:00\"}}"
+  }
+}

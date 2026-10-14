@@ -1,0 +1,29 @@
+{
+  "archivePath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/attempts/instrumentation-segment1",
+  "argv": [
+    "/usr/bin/python3",
+    "<workspace>/experiments/20261012-walreceiver-sigterm/control/instrumentation/collect.py",
+    "--namespace",
+    "repro",
+    "--database",
+    "repro",
+    "--verified-attachments",
+    "<workspace>/experiments/20261012-walreceiver-sigterm/control/.state/attachment-verification/verified.json",
+    "--out",
+    "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation",
+    "--kubeconfig",
+    "<workspace>/experiments/20261012-walreceiver-sigterm/control/.state/kubeconfig",
+    "--client-app-name",
+    "vacuum-pgbench-",
+    "--metric-drain-seconds",
+    "300"
+  ],
+  "launchLog": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation-recovery.stdout.log",
+  "out": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation",
+  "pid": 102374,
+  "priorGapFromUtc": "2026-10-13T01:30:01Z",
+  "processGroupId": 102374,
+  "stack": "control",
+  "startedAtUtc": "2026-10-13T01:42:37.579Z",
+  "statusPath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/collector-status.json"
+}

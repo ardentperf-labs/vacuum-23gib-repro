@@ -1,0 +1,31 @@
+{
+  "atUtc": "2026-10-13T05:20:54.780618+00:00",
+  "purpose": "Record actual lane source files; active collectors use startup code plus the documented live BCC fallback",
+  "lanes": {
+    "sigterm": {
+      "01-provision.sh": "30980484aa614d65dd386b9cccd722ec6ec229057cc6b3d7b32c3db1ffef13fd",
+      "02-prepare.sh": "2089793388d4ee7e05a19352f8bef584abc00701be8bca8a1ffeab85c4af156d",
+      "03-test.py": "42976a893926b4382e4edb17c3718c8ff1c4f4041cc5827b2acff6bd83daf407",
+      "04-teardown.sh": "4b30101cd8ecd8aae0115acae0d53e253dff7bd7139a0be655e9a3b0d988e342",
+      "setup-wal-archive.py": "b50076acfd715be8338280f001dcba8fa289176322857527ac4ad75b20d87822",
+      "export-wal-archive.py": "d570ca233ddef7e3d50a1b1838807e053d9975e1328ab4bad6e34f4b6b14e440",
+      "capture-recovery-metadata.py": "a85950ab09fdb036609d3af3967b96f45878240f06e21bd372016210b0052f37",
+      "instrumentation/collect.py": "c4c5b33f45b6fadbfe7053da494254bf8d2fea45e3e3cc623a0246072ed7dc09",
+      "instrumentation/bcc_rw_tracepoints.py": "1427a9b0e1ad5b30fb82034bd8d9a2955216dc6c5de68f00ce39945b27e2a224"
+    },
+    "control": {
+      "01-provision.sh": "30980484aa614d65dd386b9cccd722ec6ec229057cc6b3d7b32c3db1ffef13fd",
+      "02-prepare.sh": "2089793388d4ee7e05a19352f8bef584abc00701be8bca8a1ffeab85c4af156d",
+      "03-test.py": "42976a893926b4382e4edb17c3718c8ff1c4f4041cc5827b2acff6bd83daf407",
+      "04-teardown.sh": "4b30101cd8ecd8aae0115acae0d53e253dff7bd7139a0be655e9a3b0d988e342",
+      "setup-wal-archive.py": "b50076acfd715be8338280f001dcba8fa289176322857527ac4ad75b20d87822",
+      "export-wal-archive.py": "d570ca233ddef7e3d50a1b1838807e053d9975e1328ab4bad6e34f4b6b14e440",
+      "capture-recovery-metadata.py": "a85950ab09fdb036609d3af3967b96f45878240f06e21bd372016210b0052f37",
+      "instrumentation/collect.py": "c4c5b33f45b6fadbfe7053da494254bf8d2fea45e3e3cc623a0246072ed7dc09",
+      "instrumentation/bcc_rw_tracepoints.py": "1427a9b0e1ad5b30fb82034bd8d9a2955216dc6c5de68f00ce39945b27e2a224"
+    }
+  },
+  "runnerSourcesIdentical": true,
+  "collectorSourcesIdentical": true,
+  "futureCollectorSourceDiffers": true
+}

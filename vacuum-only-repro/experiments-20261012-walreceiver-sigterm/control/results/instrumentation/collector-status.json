@@ -1,0 +1,37 @@
+{
+  "coveragePath": "<workspace>/experiments/20261012-walreceiver-sigterm/control/results/instrumentation/coverage.json",
+  "fatalErrors": [],
+  "phase": "stopped",
+  "roles": {
+    "primary": {
+      "bccError": null,
+      "bccGaps": [
+        "wal read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F.",
+        "data read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F."
+      ],
+      "bccPod": "wal-bcc-pr-a5c5e12c",
+      "bccReady": true,
+      "bccWarnings": [
+        "BCC processes did not announce ready within 25 seconds"
+      ],
+      "node": "aks-nodepool1-12067992-vmss000001",
+      "pod": "hdd-pg-1"
+    },
+    "replica": {
+      "bccError": null,
+      "bccGaps": [
+        "wal read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F.",
+        "data read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F."
+      ],
+      "bccPod": "wal-bcc-re-71e8212f",
+      "bccReady": true,
+      "bccWarnings": [
+        "BCC processes did not announce ready within 25 seconds"
+      ],
+      "node": "aks-nodepool1-12067992-vmss000000",
+      "pod": "hdd-pg-2"
+    }
+  },
+  "stoppedAtUtc": "2026-10-13T03:44:46.275Z",
+  "updatedAtUtc": "2026-10-13T03:53:02.717Z"
+}

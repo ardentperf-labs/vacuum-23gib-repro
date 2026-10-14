@@ -1,0 +1,133 @@
+{
+  "stack": "control",
+  "capturedAtUtc": "2026-10-13T03:16:47.030862+00:00",
+  "cluster": {
+    "name": "hdd-pg",
+    "namespace": "repro",
+    "uid": "f6547262-be39-43e7-80ec-cb4c0e4f9ff8",
+    "generation": 4,
+    "currentPrimary": "hdd-pg-1",
+    "conditions": [
+      {
+        "type": "Initialized",
+        "status": "True",
+        "reason": "BootstrapCompleted",
+        "lastTransitionTime": "2026-10-13T00:30:12Z",
+        "message": "Cluster has been bootstrapped"
+      },
+      {
+        "type": "ConsistentSystemID",
+        "status": "True",
+        "reason": "Unique",
+        "lastTransitionTime": "2026-10-13T00:32:37Z",
+        "message": "A single, unique system ID was found across reporting instances."
+      },
+      {
+        "type": "Ready",
+        "status": "True",
+        "reason": "ClusterIsReady",
+        "lastTransitionTime": "2026-10-13T01:14:16Z",
+        "message": "Cluster is Ready"
+      },
+      {
+        "type": "ContinuousArchiving",
+        "status": "True",
+        "reason": "ContinuousArchivingSuccess",
+        "lastTransitionTime": "2026-10-13T00:32:03Z",
+        "message": "Continuous archiving is working"
+      }
+    ],
+    "sourceAnnotations": {
+      "vacuum-only-repro/source-backup-uid": "7f3af879-27f0-4c5c-89a7-bb39a04d247b",
+      "vacuum-only-repro/source-data-snapshot-id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+      "vacuum-only-repro/source-wal-snapshot-id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2"
+    },
+    "bootstrapRecovery": null,
+    "configuredBackup": null,
+    "externalClusters": [],
+    "plugins": [],
+    "postgresqlParameters": {
+      "archive_mode": "on",
+      "archive_timeout": "5min",
+      "full_page_writes": "on",
+      "recovery_prefetch": "try",
+      "vacuum_cost_delay": "0",
+      "wal_level": "logical",
+      "wal_receiver_timeout": "5s",
+      "wal_sender_timeout": "5s"
+    },
+    "backupConfigPresent": false,
+    "externalClustersCount": 0,
+    "pluginsCount": 0
+  },
+  "cnpgBackupObjects": {
+    "backupsCount": 0,
+    "scheduledBackupsCount": 0,
+    "barmanObjectStoreCRDInstalled": false,
+    "apiResourceReferences": [
+      "backups                                                 postgresql.cnpg.io/v1                 true         Backup                             delete,deletecollection,get,list,patch,create,update,watch   ",
+      "scheduledbackups                                        postgresql.cnpg.io/v1                 true         ScheduledBackup                    delete,deletecollection,get,list,patch,create,update,watch   "
+    ],
+    "objectStoreQueryExitCode": 1
+  },
+  "configMaps": [
+    {
+      "name": "cnpg-default-monitoring",
+      "dataKeys": [
+        "queries"
+      ],
+      "binaryDataKeys": []
+    },
+    {
+      "name": "kube-root-ca.crt",
+      "dataKeys": [
+        "ca.crt"
+      ],
+      "binaryDataKeys": []
+    }
+  ],
+  "sourceSnapshotPair": {
+    "region": "eastus",
+    "diskSizeGiB": 512,
+    "resourceGroup": "RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775",
+    "data": {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5203346e38bc77fbedc14b472f6e4775/providers/Microsoft.Compute/disks/restore-data-5203346e"
+    },
+    "wal": {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+      "sourceDiskId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-5203346e38bc77fbedc14b472f6e4775/providers/Microsoft.Compute/disks/restore-wal-5203346e"
+    },
+    "backup": {
+      "name": "vacuum-seed-5203346e",
+      "uid": "7f3af879-27f0-4c5c-89a7-bb39a04d247b"
+    },
+    "restoreAuditFlags": {
+      "archiveCredentialReferenceAbsent": true,
+      "archiveWriterAbsent": true,
+      "sourceSnapshotsUntouched": true,
+      "allSnapshotsRetained": true
+    }
+  },
+  "resourceNamesAndTypes": {
+    "description": "Kubernetes Secret metadata only; Secret data was not requested or captured.",
+    "items": [
+      {
+        "name": "hdd-pg-app",
+        "type": "kubernetes.io/basic-auth"
+      },
+      {
+        "name": "hdd-pg-ca",
+        "type": "Opaque"
+      },
+      {
+        "name": "hdd-pg-replication",
+        "type": "kubernetes.io/tls"
+      },
+      {
+        "name": "hdd-pg-server",
+        "type": "kubernetes.io/tls"
+      }
+    ]
+  }
+}

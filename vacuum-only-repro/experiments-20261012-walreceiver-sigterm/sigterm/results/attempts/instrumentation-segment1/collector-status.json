@@ -1,0 +1,43 @@
+{
+  "coveragePath": "<workspace>/experiments/20261012-walreceiver-sigterm/sigterm/results/instrumentation/coverage.json",
+  "fatalErrors": [
+    "replica PostgreSQL watcher exited unexpectedly with 1",
+    "replica diskstats stream exited unexpectedly with 1",
+    "primary diskstats stream exited unexpectedly with 1",
+    "primary PostgreSQL watcher exited unexpectedly with 1",
+    "required collector stopped: replica PostgreSQL watcher exited unexpectedly with 1; replica diskstats stream exited unexpectedly with 1; primary diskstats stream exited unexpectedly with 1; primary PostgreSQL watcher exited unexpectedly with 1"
+  ],
+  "phase": "failed",
+  "roles": {
+    "primary": {
+      "bccError": null,
+      "bccGaps": [
+        "data read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F.",
+        "wal read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F."
+      ],
+      "bccPod": "wal-bcc-pr-3d226dd6",
+      "bccReady": true,
+      "bccWarnings": [
+        "BCC processes did not announce ready within 25 seconds"
+      ],
+      "node": "aks-nodepool1-90183240-vmss000001",
+      "pod": "hdd-pg-1"
+    },
+    "replica": {
+      "bccError": null,
+      "bccGaps": [
+        "data read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F.",
+        "wal read/write BCC latency unavailable: ERROR: blk_account_io_done probe not available. Can't use -F."
+      ],
+      "bccPod": "wal-bcc-re-db11ff13",
+      "bccReady": true,
+      "bccWarnings": [
+        "BCC processes did not announce ready within 25 seconds"
+      ],
+      "node": "aks-nodepool1-90183240-vmss000000",
+      "pod": "hdd-pg-2"
+    }
+  },
+  "stoppedAtUtc": "2026-10-13T01:30:01.434Z",
+  "updatedAtUtc": "2026-10-13T01:35:09.252Z"
+}

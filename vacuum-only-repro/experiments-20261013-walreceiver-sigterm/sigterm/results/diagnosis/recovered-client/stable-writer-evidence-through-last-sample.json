@@ -1,0 +1,70 @@
+{
+  "capturedAtUtc": "2026-10-13T10:27:41.965531+00:00",
+  "firstQualifyingSampleUtc": "2026-10-13T05:28:26.709299Z",
+  "identities": [
+    {
+      "pid": 6119,
+      "queryStartUtc": "2026-10-13T05:28:14.776063+00:00",
+      "xactStartUtc": "2026-10-13T05:28:14.776063+00:00"
+    },
+    {
+      "pid": 6120,
+      "queryStartUtc": "2026-10-13T05:28:16.483865+00:00",
+      "xactStartUtc": "2026-10-13T05:28:16.483865+00:00"
+    },
+    {
+      "pid": 6121,
+      "queryStartUtc": "2026-10-13T05:28:15.569545+00:00",
+      "xactStartUtc": "2026-10-13T05:28:15.569545+00:00"
+    },
+    {
+      "pid": 6122,
+      "queryStartUtc": "2026-10-13T05:28:15.697217+00:00",
+      "xactStartUtc": "2026-10-13T05:28:15.697217+00:00"
+    },
+    {
+      "pid": 6123,
+      "queryStartUtc": "2026-10-13T05:28:14.170077+00:00",
+      "xactStartUtc": "2026-10-13T05:28:14.170077+00:00"
+    },
+    {
+      "pid": 6124,
+      "queryStartUtc": "2026-10-13T05:28:14.410374+00:00",
+      "xactStartUtc": "2026-10-13T05:28:14.410374+00:00"
+    },
+    {
+      "pid": 6125,
+      "queryStartUtc": "2026-10-13T05:28:15.294031+00:00",
+      "xactStartUtc": "2026-10-13T05:28:15.294031+00:00"
+    },
+    {
+      "pid": 6126,
+      "queryStartUtc": "2026-10-13T05:28:16.758857+00:00",
+      "xactStartUtc": "2026-10-13T05:28:16.758857+00:00"
+    },
+    {
+      "pid": 6127,
+      "queryStartUtc": "2026-10-13T05:28:15.5858+00:00",
+      "xactStartUtc": "2026-10-13T05:28:15.5858+00:00"
+    },
+    {
+      "pid": 6128,
+      "queryStartUtc": "2026-10-13T05:28:26.595364+00:00",
+      "xactStartUtc": "2026-10-13T05:28:26.595364+00:00"
+    }
+  ],
+  "interpretation": "The same ten UPDATE query/xact identities remained active with wait_event_type=IPC and wait_event=SyncRep at each recorded successful primary sample through 08:24:55.707409Z. No wait status is inferred across unobserved instants; max sampled interval was 1.049571 seconds.",
+  "interventionExecutedAtUtc": "2026-10-13T05:28:14.076043501Z",
+  "lastQualifyingSampleUtc": "2026-10-13T08:24:55.707409Z",
+  "lastSampleDatabaseTupleUpdates": 4605,
+  "lastSampleDatabaseXactCommit": 39384,
+  "maxGapBetweenQualifyingSamplesSeconds": 1.05,
+  "nonqualifyingSamplesAfterSignal": 12,
+  "parseErrors": 0,
+  "qualifyingAllTenActiveIpcSyncRepSamples": 10590,
+  "same10PidsQueryStartXactStartAcrossEveryQualifyingSample": true,
+  "source": "sigterm/results/instrumentation/primary-pgstat.jsonl",
+  "sourceRows": 11604,
+  "sourceSha256": "103fba62ceaa098919c4249cde62176eea96cc681a3c6ba3ef6617a88220efc4",
+  "spanSeconds": 10588.998
+}

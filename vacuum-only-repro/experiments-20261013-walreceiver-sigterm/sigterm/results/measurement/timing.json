@@ -1,0 +1,196 @@
+{
+  "checkpoint": {
+    "after": {
+      "flushLsn": "4E/5C016200",
+      "statsReset": "2026-10-13T04:19:52.147246+00:00",
+      "walBytes": "103566",
+      "walFpi": 21,
+      "walRecords": 128
+    },
+    "before": {
+      "flushLsn": "4E/5C016150",
+      "statsReset": "2026-10-13T04:19:52.147246+00:00",
+      "walBytes": "103402",
+      "walFpi": 21,
+      "walRecords": 126
+    },
+    "targetLsn": "4E/5C016200"
+  },
+  "clientPostRecoveryHealthy": false,
+  "clientPostRecoveryHealthySeconds": 0,
+  "clientRecoveryHealthRule": ">=4 committed updates/s over rolling 60s, ten sessions remain connected, no unrelated app sessions, and no active query/xact older than 60s",
+  "clientRecoveryHealthSamples": "client-recovery-health.jsonl",
+  "clientSessionAgeAndWaitSource": "primary pg_stat_activity xact/query ages, wait events, and commit counter sampled once per second",
+  "clientSessionSamples": "client/sessions.jsonl",
+  "clientStop": null,
+  "clientSummary": null,
+  "clientTargetCaughtWithSessions": false,
+  "clientWarmup": {
+    "averageTps": 5.224828350910372,
+    "endEpoch": 1791868689.1933968,
+    "healthyWindows": [
+      {
+        "endEpoch": 1791868448.146386,
+        "seconds": 60.01551103591919,
+        "startEpoch": 1791868388.1308749,
+        "tps": 5.6485397549495,
+        "transactions": 339
+      },
+      {
+        "endEpoch": 1791868508.1719735,
+        "seconds": 60.02558755874634,
+        "startEpoch": 1791868448.146386,
+        "tps": 5.131145108718245,
+        "transactions": 308
+      },
+      {
+        "endEpoch": 1791868569.174621,
+        "seconds": 61.00264763832092,
+        "startEpoch": 1791868508.1719735,
+        "tps": 5.196495763257094,
+        "transactions": 317
+      },
+      {
+        "endEpoch": 1791868629.185833,
+        "seconds": 60.01121187210083,
+        "startEpoch": 1791868569.174621,
+        "tps": 4.965738746204857,
+        "transactions": 298
+      },
+      {
+        "endEpoch": 1791868689.1933968,
+        "seconds": 60.007563829422,
+        "startEpoch": 1791868629.185833,
+        "tps": 5.182679984877426,
+        "transactions": 311
+      }
+    ],
+    "persistentSessions": 10,
+    "seconds": 301.0625219345093,
+    "startEpoch": 1791868388.1308749,
+    "targetTps": 5,
+    "transactions": 1573,
+    "unrelatedAppSessions": 0
+  },
+  "finalReplayCaughtUp": false,
+  "finalReplayDrainSeconds": 0,
+  "finalReplayTargetLsn": null,
+  "heapWorkComplete": null,
+  "heapWorkCompleteLowerBound": null,
+  "heapWorkCompleteUpperBound": null,
+  "heapWorkCompletionObservedByProgress": false,
+  "heapWorkFirstProgress": "2026-10-13T05:18:13.175073735Z",
+  "heapWorkLastProgress": "2026-10-13T06:14:43.171015429Z",
+  "heapWorkStart": null,
+  "intervention": {
+    "afterVacuumStartSeconds": 600,
+    "causalNote": "SIGTERM of the replica walreceiver simulates a stream disconnect; it does not itself cause a primary wal_sender_timeout.",
+    "executedAtUtc": "2026-10-13T05:28:14.076043501Z",
+    "mode": "sigterm",
+    "scheduledAtUtc": "2026-10-13T05:28:12.699771Z",
+    "schedulerDispatchLatenessSeconds": 0.0001361370086669922,
+    "schedulerDispatchStartedAtUtc": "2026-10-13T05:28:12.699Z",
+    "schedulerStartedAtUtc": "2026-10-13T05:18:13.630Z",
+    "signalResult": {
+      "inRecovery": true,
+      "mechanism": "kill -TERM after repeated SQL identity checks, stable /proc PID/starttime/UID/executable checks, and two walreceiver command-line type checks",
+      "pid": 71,
+      "processIdentity": {
+        "commandLine": "postgres: hdd-pg: walreceiver streaming 4F/F1DA18A8 ",
+        "commandLineAfter": "postgres: hdd-pg: walreceiver streaming 4F/F1DA18A8 ",
+        "commandLineBefore": "postgres: hdd-pg: walreceiver streaming 4F/F1C24250 ",
+        "commandLineSha256": "4cfc6b2220fbb45c91f7f5989c0bb7e5cb890aeb9b741bc673de5f51d37fc2af",
+        "commandLineSha256After": "4cfc6b2220fbb45c91f7f5989c0bb7e5cb890aeb9b741bc673de5f51d37fc2af",
+        "commandLineSha256Before": "faca106bf3afdcf18c3881ac034d966d0ff73de13f4ac8ecd29a5edd493abce5",
+        "executable": "/usr/lib/postgresql/16/bin/postgres",
+        "pid": 71,
+        "startTicks": 260696,
+        "uid": 26
+      },
+      "receiverCount": 1,
+      "receiverRecheck": {
+        "backendStart": "2026-10-13 04:49:28.886373+00",
+        "backendType": "walreceiver",
+        "count": 1,
+        "inRecovery": true,
+        "pid": 71,
+        "receiveStartLsn": "4E/56000000",
+        "status": "streaming"
+      },
+      "receivers": [
+        {
+          "applicationName": "",
+          "backendStart": "2026-10-13T04:49:28.886373+00:00",
+          "backendType": "walreceiver",
+          "pid": 71,
+          "receiveStartLsn": "4E/56000000",
+          "status": "streaming"
+        }
+      ],
+      "signal": "SIGTERM",
+      "signalAcceptedAtUtc": "2026-10-13T05:28:14.077112213Z",
+      "signalRequestedAtUtc": "2026-10-13T05:28:14.076043501Z",
+      "signalSent": true
+    },
+    "status": "sent",
+    "vacuumStartMarker": {
+      "flushLsn": "4E/5D024630",
+      "time": "2026-10-13T05:18:12.699771Z",
+      "walBytes": 320769,
+      "walFpi": 24,
+      "walRecords": 3324
+    }
+  },
+  "interventionAfterSeconds": 600,
+  "interventionMode": "sigterm",
+  "minimumObservationEndEpoch": 1791877092.699771,
+  "minimumObservationSatisfied": true,
+  "minimumObservationSeconds": 8400.0,
+  "observationEnd": "2026-10-13T07:38:14.222643348Z",
+  "postVacuumObservationError": "pgbench did not drain gracefully within 900s; sessions/queries were left untouched",
+  "primaryFlushLsnAtObservationEnd": null,
+  "remoteVacuumExitCode": 0,
+  "replayCaughtUp": false,
+  "replayDrainSeconds": 0,
+  "replayEnd": null,
+  "replayTargetLsn": null,
+  "replicaLagBytesAtObservationEnd": null,
+  "replicaReplayLsnAtObservationEnd": null,
+  "testComplete": false,
+  "vacuumComplete": null,
+  "vacuumOptions": [
+    "VERBOSE",
+    "FREEZE"
+  ],
+  "vacuumSql": "VACUUM (VERBOSE, FREEZE) public.vacuum_target;",
+  "vacuumStart": null,
+  "vacuumStartMarkerObserved": {
+    "flushLsn": "4E/5D024630",
+    "time": "2026-10-13T05:18:12.699771Z",
+    "walBytes": 320769,
+    "walFpi": 24,
+    "walRecords": 3324
+  },
+  "walAtVacuumComplete": null,
+  "walAtVacuumStart": null,
+  "walBeforeVacuum": {
+    "flushLsn": "4E/5D0245A8",
+    "statsReset": "2026-10-13T04:19:52.147246+00:00",
+    "walBytes": "320719",
+    "walFpi": 24,
+    "walRecords": 3323
+  },
+  "walCounterDeltaFromBeforeVacuum": {
+    "walBytes": 36932791059,
+    "walFpi": 6071368,
+    "walRecords": 15121600
+  },
+  "walCounterDeltaScope": "cluster pg_stat_wal counters; includes background WAL, not physical disk writes",
+  "walCountersAfterBackendExit": {
+    "flushLsn": "57/1000000",
+    "statsReset": "2026-10-13T04:19:52.147246+00:00",
+    "walBytes": "36933111778",
+    "walFpi": 6071392,
+    "walRecords": 15124923
+  }
+}

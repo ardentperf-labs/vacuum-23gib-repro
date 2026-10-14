@@ -1,0 +1,44 @@
+{
+  "capturedAtUtc": "2026-10-13T03:29:53Z",
+  "method": "Read-only kubectl exec to cat the existing run directory's vacuum-complete.marker; no process, database, or cluster mutation was performed.",
+  "captures": [
+    {
+      "lane": "sigterm",
+      "pod": "hdd-pg-1",
+      "namespace": "repro",
+      "workDirectory": "/controller/tmp/vacuum-86347b603d0947b48e88e176ae5c4ce5",
+      "markerPath": "/controller/tmp/vacuum-86347b603d0947b48e88e176ae5c4ce5/vacuum-complete.marker",
+      "markerRaw": "VACUUM_COMPLETE|2026-10-13T02:32:23.150343Z|57/243ED58|36933758844|15132919|6071426",
+      "completedAtUtc": "2026-10-13T02:32:23.150343Z",
+      "completionLsn": "57/243ED58",
+      "walBytes": 36933758844,
+      "walRecords": 15132919,
+      "walFpi": 6071426,
+      "kubectlExitCode": 0,
+      "rawStdout": "Defaulted container \"postgres\" out of: postgres, bootstrap-controller (init)\nMISSING=/controller/tmp/vacuum-86347b603d0947b48e88e176ae5c4ce5/vacuum-complete-utc\nMISSING=/controller/tmp/vacuum-86347b603d0947b48e88e176ae5c4ce5/exit-status\nFILE=/controller/tmp/vacuum-86347b603d0947b48e88e176ae5c4ce5/vacuum-complete.marker\nVACUUM_COMPLETE|2026-10-13T02:32:23.150343Z|57/243ED58|36933758844|15132919|6071426\n",
+      "notes": [
+        "No vacuum-complete-utc or exit-status file existed at the queried paths; the VACUUM_COMPLETE marker was present.",
+        "The runner's local vacuum-process.json still had stale RUNNING status and was not used to determine completion."
+      ]
+    },
+    {
+      "lane": "control",
+      "pod": "hdd-pg-1",
+      "namespace": "repro",
+      "workDirectory": "/controller/tmp/vacuum-d1823c6d73a643f79198977ca995bf4f",
+      "markerPath": "/controller/tmp/vacuum-d1823c6d73a643f79198977ca995bf4f/vacuum-complete.marker",
+      "markerRaw": "VACUUM_COMPLETE|2026-10-13T02:47:54.220460Z|57/6925C0|36935946881|15163673|6071475",
+      "completedAtUtc": "2026-10-13T02:47:54.220460Z",
+      "completionLsn": "57/6925C0",
+      "walBytes": 36935946881,
+      "walRecords": 15163673,
+      "walFpi": 6071475,
+      "kubectlExitCode": 0,
+      "rawStdout": "Defaulted container \"postgres\" out of: postgres, bootstrap-controller (init)\nMISSING=/controller/tmp/vacuum-d1823c6d73a643f79198977ca995bf4f/vacuum-complete-utc\nMISSING=/controller/tmp/vacuum-d1823c6d73a643f79198977ca995bf4f/exit-status\nFILE=/controller/tmp/vacuum-d1823c6d73a643f79198977ca995bf4f/vacuum-complete.marker\nVACUUM_COMPLETE|2026-10-13T02:47:54.220460Z|57/6925C0|36935946881|15163673|6071475\n",
+      "notes": [
+        "No vacuum-complete-utc or exit-status file existed at the queried paths; the VACUUM_COMPLETE marker was present.",
+        "The runner's local vacuum-process.json still had stale RUNNING status and was not used to determine completion."
+      ]
+    }
+  ]
+}

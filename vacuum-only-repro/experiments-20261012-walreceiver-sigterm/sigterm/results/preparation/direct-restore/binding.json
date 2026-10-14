@@ -1,0 +1,87 @@
+{
+  "clusterUid": "34733a21-1c91-4bd7-887b-680337efb2e8",
+  "completedAtUtc": "2026-10-13T00:26:14.785637+00:00",
+  "disks": {
+    "data": {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/restore-data-80b39f80",
+      "sizeGiB": 512,
+      "sku": "Standard_LRS",
+      "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+      "sourceSnapshotUniqueId": "d0b8cfa4-13de-4cd6-8d4f-f19ed4954f9d",
+      "uniqueId": "c833e907-4904-449d-93c7-c462b3bb86f1"
+    },
+    "wal": {
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341/providers/Microsoft.Compute/disks/restore-wal-80b39f80",
+      "sizeGiB": 512,
+      "sku": "Standard_LRS",
+      "sourceSnapshotId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+      "sourceSnapshotUniqueId": "a009a10f-38bd-40e1-b113-0760597cda0d",
+      "uniqueId": "facd8b6c-5d72-4bd4-b96e-a1159e167bc0"
+    }
+  },
+  "nodeAffinity": "omitted for zoneless Standard_LRS disks and the unzoned AKS node pool; exact nominated node recorded per PVC",
+  "ownerToken": "80b39f80dbafae1ce086575e67163341",
+  "pvcs": {
+    "data": {
+      "boundAtUtc": "2026-10-13T00:26:11.462477+00:00",
+      "name": "hdd-pg-1",
+      "pvName": "restore-data-80b39f80",
+      "pvUid": "f54d01fd-1b4d-4537-824d-7546d4e7bc90",
+      "selectedNode": "aks-nodepool1-90183240-vmss000001",
+      "sourceDataSource": {
+        "apiGroup": "snapshot.storage.k8s.io",
+        "kind": "VolumeSnapshot",
+        "name": "source-data-80b39f80"
+      },
+      "sourceDataSourceRef": {
+        "apiGroup": "snapshot.storage.k8s.io",
+        "kind": "VolumeSnapshot",
+        "name": "source-data-80b39f80"
+      },
+      "uid": "4c73e4bc-1b56-4c65-b376-c65dfac7729e"
+    },
+    "wal": {
+      "boundAtUtc": "2026-10-13T00:26:14.784458+00:00",
+      "name": "hdd-pg-1-wal",
+      "pvName": "restore-wal-80b39f80",
+      "pvUid": "318862b0-4a26-40c2-9659-b22f49cc10a8",
+      "selectedNode": "aks-nodepool1-90183240-vmss000001",
+      "sourceDataSource": {
+        "apiGroup": "snapshot.storage.k8s.io",
+        "kind": "VolumeSnapshot",
+        "name": "source-wal-80b39f80"
+      },
+      "sourceDataSourceRef": {
+        "apiGroup": "snapshot.storage.k8s.io",
+        "kind": "VolumeSnapshot",
+        "name": "source-wal-80b39f80"
+      },
+      "uid": "065ed912-9ca3-4b1b-b84a-c2dd0b057a7e"
+    }
+  },
+  "resourceGroup": "rg-vacuum-nodes-80b39f80dbafae1ce086575e67163341",
+  "snapshots": {
+    "data": {
+      "contentName": "source-data-content-80b39f80",
+      "contentUid": "45222450-8d5f-4f50-bcce-0d0cc243fc6c",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-a9f05e13-dcf6-40e7-9e5b-ff5fc0b11f24",
+      "snapshotName": "source-data-80b39f80",
+      "snapshotUid": "4e518da6-a59f-4832-9701-6181ec65f446",
+      "uniqueId": "d0b8cfa4-13de-4cd6-8d4f-f19ed4954f9d"
+    },
+    "wal": {
+      "contentName": "source-wal-content-80b39f80",
+      "contentUid": "07bff0d4-e2f9-49fc-9084-1169c86a9fcf",
+      "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/RG-VACUUM-PV2-SNAP-5203346E38BC77FBEDC14B472F6E4775/providers/Microsoft.Compute/snapshots/snapshot-8ebad2c1-4518-4b11-87ff-f543032663f2",
+      "snapshotName": "source-wal-80b39f80",
+      "snapshotUid": "01f523e8-6c70-4995-9707-ff69256d3d75",
+      "uniqueId": "a009a10f-38bd-40e1-b113-0760597cda0d"
+    }
+  },
+  "sourcePairSha256": "da7455ab25a1f8f413af494de64feb16f5dd3a25740dc74a4b7fa64ed28eec8a",
+  "stack": "sigterm",
+  "startedAtUtc": "2026-10-13T00:26:08.165013+00:00",
+  "status": "bound",
+  "subscriptionId": "00000000-0000-0000-0000-000000000000",
+  "version": 1
+}

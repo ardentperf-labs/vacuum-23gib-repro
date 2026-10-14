@@ -1,0 +1,393 @@
+{
+  "vacuumStart": "2026-10-13T01:45:37.857414Z",
+  "vacuumStartMarkerObserved": {
+    "time": "2026-10-13T01:45:37.857414Z",
+    "flushLsn": "4E/5D014710",
+    "walBytes": 920877,
+    "walRecords": 10694,
+    "walFpi": 52
+  },
+  "vacuumComplete": "2026-10-13T02:47:54.220460Z",
+  "observationEnd": "2026-10-13T03:43:49.565542947Z",
+  "remoteVacuumExitCode": 0,
+  "testComplete": false,
+  "intervention": {
+    "afterVacuumStartSeconds": 600,
+    "causalNote": "Control marker records the matched +600-second point; no backend is signaled.",
+    "executedAtUtc": "2026-10-13T01:55:41.159Z",
+    "mode": "control",
+    "receiverAtControlMarker": {
+      "flushedLsn": "4F/A272C000",
+      "latestEndLsn": "4F/A272C000",
+      "pid": 72,
+      "status": "streaming",
+      "writtenLsn": "4F/A272C000"
+    },
+    "receiverSampleError": null,
+    "scheduledAtUtc": "2026-10-13T01:55:37.857414Z",
+    "signalResult": null,
+    "status": "marked",
+    "vacuumStartMarker": {
+      "flushLsn": "4E/5D014710",
+      "time": "2026-10-13T01:45:37.857414Z",
+      "walBytes": 920877,
+      "walFpi": 52,
+      "walRecords": 10694
+    }
+  },
+  "interventionMode": "control",
+  "interventionAfterSeconds": 600,
+  "minimumObservationSeconds": 8400,
+  "minimumObservationSatisfied": false,
+  "minimumObservationEndEpoch": 1791864337.857414,
+  "replayCaughtUp": false,
+  "replayEnd": null,
+  "replayTargetLsn": "57/6925C0",
+  "replicaReplayLsnAtObservationEnd": "54/E1017E90",
+  "primaryFlushLsnAtObservationEnd": "57/B006A98",
+  "replicaLagBytesAtObservationEnd": 9294507016,
+  "finalReplayCaughtUp": false,
+  "clientStop": {
+    "requestedAtUtc": "2026-10-13T03:43:36.361Z",
+    "signal": "SIGALRM",
+    "signalSemantics": "pgbench duration handler stops scheduling and drains active transactions",
+    "requestResult": "graceful_stop_requested",
+    "finishedAtUtc": "2026-10-13T03:43:46.067Z",
+    "status": "0",
+    "exitCode": 0,
+    "waitSeconds": 9.38938370300093,
+    "identityVerification": "verified pgbench pid=9136",
+    "serverActivityBeforeStopRequest": {
+      "observedAtUtc": "2026-10-13T03:43:36.326600Z",
+      "benchSessions": 10,
+      "unrelatedAppSessions": 0,
+      "committedTransactions": 40618,
+      "activeSessions": 0,
+      "waitingSessions": 0,
+      "backends": [
+        {
+          "pid": 9150,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 3.554721
+        },
+        {
+          "pid": 9151,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 0.6237
+        },
+        {
+          "pid": 9152,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 1.799596
+        },
+        {
+          "pid": 9153,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 1.468679
+        },
+        {
+          "pid": 9154,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 1.12192
+        },
+        {
+          "pid": 9155,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 0.403637
+        },
+        {
+          "pid": 9156,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 0.270476
+        },
+        {
+          "pid": 9157,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 0.44278
+        },
+        {
+          "pid": 9158,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 2.738755
+        },
+        {
+          "pid": 9159,
+          "state": "idle",
+          "waitEventType": "Client",
+          "waitEvent": "ClientRead",
+          "xactAgeSeconds": null,
+          "queryAgeSeconds": 0.572574
+        }
+      ],
+      "maxActiveXactAgeSeconds": null,
+      "maxActiveQueryAgeSeconds": null
+    },
+    "serverActivityAfterDrain": {
+      "observedAtUtc": "2026-10-13T03:43:46.350742Z",
+      "benchSessions": 0,
+      "unrelatedAppSessions": 0,
+      "committedTransactions": 40622,
+      "activeSessions": 0,
+      "waitingSessions": 0,
+      "backends": [],
+      "maxActiveXactAgeSeconds": null,
+      "maxActiveQueryAgeSeconds": null
+    }
+  },
+  "clientSummary": {
+    "transactionLogRows": 40622,
+    "completedTransactions": 40622,
+    "latencyMs": {
+      "count": 40622,
+      "mean": 19.27418681994978,
+      "p50": 8.265,
+      "p95": 57.271,
+      "p99": 187.836,
+      "max": 2740.498
+    },
+    "scheduleLagMs": {
+      "count": 40622,
+      "mean": 1.2161660676480723,
+      "p50": 0.095,
+      "p95": 0.486,
+      "p99": 3.091,
+      "max": 2616.68
+    },
+    "executionMs": {
+      "count": 40622,
+      "mean": 18.058020752301708,
+      "p50": 8.086,
+      "p95": 52.033,
+      "p99": 182.276,
+      "max": 2740.395
+    },
+    "malformedLogRows": [],
+    "latencySource": "pgbench per-transaction completion logs; latency includes Poisson schedule lag",
+    "executionSource": "pgbench logged latency minus schedule_lag; log rows are completion records",
+    "loggedCompletedTransactions": 40622,
+    "reportedFailedTransactions": 0,
+    "failedTransactions": 0,
+    "committedTransactions": 40622,
+    "committedUpdateCountSource": "sum(update_count) from the ten logged client rows after all pgbench sessions drained",
+    "pendingTransactionsAtStopRequest": 0,
+    "inFlightActiveSessionsAtStopRequest": 0,
+    "waitEventsAtStopRequest": [
+      {
+        "pid": 9150,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 3.554721
+      },
+      {
+        "pid": 9151,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 0.6237
+      },
+      {
+        "pid": 9152,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 1.799596
+      },
+      {
+        "pid": 9153,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 1.468679
+      },
+      {
+        "pid": 9154,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 1.12192
+      },
+      {
+        "pid": 9155,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 0.403637
+      },
+      {
+        "pid": 9156,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 0.270476
+      },
+      {
+        "pid": 9157,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 0.44278
+      },
+      {
+        "pid": 9158,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 2.738755
+      },
+      {
+        "pid": 9159,
+        "state": "idle",
+        "waitEventType": "Client",
+        "waitEvent": "ClientRead",
+        "xactAgeSeconds": null,
+        "queryAgeSeconds": 0.572574
+      }
+    ],
+    "unfinishedAtStopSemantics": "pgbench transaction logs record completed transactions; one-second pg_stat_activity samples preserve pending states, waits, and ages through graceful stop and session drain",
+    "pgbenchExitCode": 0,
+    "progressOutput": "client/raw/pgbench.out",
+    "rawTransactionLogs": [
+      "client/raw/pgbench-log.9136.8",
+      "client/raw/pgbench-log.9136.2",
+      "client/raw/pgbench-log.9136.6",
+      "client/raw/pgbench-log.9136.5",
+      "client/raw/pgbench-log.9136.3",
+      "client/raw/pgbench-log.9136.4",
+      "client/raw/pgbench-log.9136",
+      "client/raw/pgbench-log.9136.9",
+      "client/raw/pgbench-log.9136.1",
+      "client/raw/pgbench-log.9136.7"
+    ],
+    "commitLogReconciliation": {
+      "serverCommittedUpdates": 40622,
+      "pgbenchCompletedTransactions": 40622,
+      "difference": 0,
+      "possibleInflightAtStopRequest": 0,
+      "explainedByInFlightGracefulDrain": false
+    },
+    "validationErrors": []
+  },
+  "clientWarmup": {
+    "averageTps": 5.210339845126147,
+    "endEpoch": 1791855217.1581488,
+    "healthyWindows": [
+      {
+        "endEpoch": 1791854976.5577412,
+        "seconds": 60.33965516090393,
+        "startEpoch": 1791854916.218086,
+        "tps": 5.651341544638877,
+        "transactions": 341
+      },
+      {
+        "endEpoch": 1791855036.7299945,
+        "seconds": 60.172253370285034,
+        "startEpoch": 1791854976.5577412,
+        "tps": 5.0687814219471905,
+        "transactions": 305
+      },
+      {
+        "endEpoch": 1791855097.133632,
+        "seconds": 60.403637409210205,
+        "startEpoch": 1791855036.7299945,
+        "tps": 5.165251852075169,
+        "transactions": 312
+      },
+      {
+        "endEpoch": 1791855157.1478271,
+        "seconds": 60.01419520378113,
+        "startEpoch": 1791855097.133632,
+        "tps": 4.982154621664606,
+        "transactions": 299
+      },
+      {
+        "endEpoch": 1791855217.1581488,
+        "seconds": 60.010321617126465,
+        "startEpoch": 1791855157.1478271,
+        "tps": 5.182441813663653,
+        "transactions": 311
+      }
+    ],
+    "persistentSessions": 10,
+    "seconds": 300.94006276130676,
+    "startEpoch": 1791854916.218086,
+    "targetTps": 5,
+    "transactions": 1568,
+    "unrelatedAppSessions": 0
+  },
+  "clientPostRecoveryHealthy": false,
+  "clientTargetCaughtWithSessions": false,
+  "walAtVacuumStart": {
+    "time": "2026-10-13T01:45:37.857414Z",
+    "flushLsn": "4E/5D014710",
+    "walBytes": 920877,
+    "walRecords": 10694,
+    "walFpi": 52
+  },
+  "walAtVacuumComplete": {
+    "time": "2026-10-13T02:47:54.220460Z",
+    "flushLsn": "57/6925C0",
+    "walBytes": 36935946881,
+    "walRecords": 15163673,
+    "walFpi": 6071475
+  },
+  "vacuumOptions": [
+    "VERBOSE",
+    "FREEZE"
+  ],
+  "vacuumSql": "VACUUM (VERBOSE, FREEZE) public.vacuum_target;",
+  "errors": [
+    "missing archive configuration; user requested finishing only if less than one hour remained",
+    "No archive backend; experiment objective not tested",
+    "Minimum observation and final replay drain intentionally not completed"
+  ],
+  "userStop": {
+    "stopped": true,
+    "reason": "missing archive configuration; user requested finishing only if less than one hour remained",
+    "requestedAtUtc": "2026-10-13T03:43:35.693345+00:00",
+    "finishedAtUtc": "2026-10-13T03:43:46.067Z",
+    "testComplete": false,
+    "estimatedReplayMinutesAtDecision": 72,
+    "nativeClientTotalsReconciled": true,
+    "replayCatchupSkipped": true,
+    "vacuumCompletedBeforeStop": true,
+    "userInstruction": "If less than an hour from completion let them finish; rerun with correctly configured backups"
+  },
+  "postVacuumObservationError": "missing archive configuration; user requested finishing only if less than one hour remained"
+}

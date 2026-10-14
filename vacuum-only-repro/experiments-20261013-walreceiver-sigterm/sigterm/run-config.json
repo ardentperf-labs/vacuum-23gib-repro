@@ -1,0 +1,24 @@
+{
+  "name": "sigterm",
+  "targetHeapGiB": 23,
+  "nodeVmSize": "Standard_D2s_v4",
+  "nodeCount": 2,
+  "location": "eastus",
+  "diskSku": "Standard_LRS",
+  "diskSizeGiB": 512,
+  "caching": "None",
+  "client": {
+    "targetTps": 5,
+    "connections": 10,
+    "synchronousCommit": "on",
+    "warmupSeconds": 300,
+    "postRecoverySeconds": 300,
+    "randomSeed": 42
+  },
+  "sigtermWalreceiverAfterSeconds": 600,
+  "snapshotRestore": "caller-identity exact-pair direct copies with static CSI binding",
+  "walArchiveRequired": true,
+  "walArchiveBackend": "CNPG BarmanObjectStore / owned Azure Blob",
+  "postgresImage": "ghcr.io/cloudnative-pg/postgresql:16.15-202609140815-system-trixie@sha256:a30ea813ae1c82fc94743c4e71766688158b58d8ddf1f4e20ff5d3edb569a215",
+  "archiveRestoreSmokeOnReplica": true
+}

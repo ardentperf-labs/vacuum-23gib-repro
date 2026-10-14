@@ -1,0 +1,114 @@
+{
+  "capturedAtUtc": "2026-10-13T02:22:45Z",
+  "purpose": "Bounded BPF compile, verifier, attach, and sample diagnostic for future optional read/write block tracepoint collection.",
+  "authorizationScope": "Read-only kernel instrumentation in an existing owned BCC pod; no PostgreSQL writes, signals, or configuration changes.",
+  "environment": {
+    "sourceStack": "experiments/20261012-walreceiver-sigterm/control",
+    "namespace": "repro",
+    "pod": "wal-bcc-pr-a5c5e12c",
+    "node": "aks-nodepool1-12067992-vmss000001",
+    "kernelRelease": "6.8.0-1067-azure",
+    "dataDevice": {"path": "/dev/sdc", "name": "sdc", "majorMinor": "8:32", "deviceNumber": 8388640},
+    "walDevice": {"path": "/dev/sdb", "name": "sdb", "majorMinor": "8:16", "deviceNumber": 8388624}
+  },
+  "command": [
+    "kubectl exec -i -n repro wal-bcc-pr-a5c5e12c -c bcc --",
+    "timeout --signal=INT --kill-after=1s 8s python3 -",
+    "--data-device /dev/sdc --wal-device /dev/sdb --interval 1 --duration-seconds 3"
+  ],
+  "boundedDurationSeconds": 3,
+  "exitCode": 0,
+  "cleanupVerification": "A read-only process listing in the borrowed BCC pod after exit found no python3 stdin helper or bcc_rw_tracepoints process; only Azure waagent Python processes remained.",
+  "tracepointCheck": {
+    "passed": true,
+    "events": ["block:block_io_start", "block:block_io_done"],
+    "requiredFields": ["dev", "sector", "rwbs"],
+    "kernelRelease": "6.8.0-1067-azure"
+  },
+  "bpfProgram": {
+    "compiledLoadedAndAttached": true,
+    "evidence": "Helper emitted event=ready only after BPF(text=...) returned; subsequent interval records contain live BPF histogram and map-counter values.",
+    "pairingKey": ["dev", "sector"],
+    "pairingLimitations": [
+      "Overlapping starts on the same device and sector replace a pending timestamp.",
+      "Unmatched completions are counted; these histograms remain diagnostic."
+    ]
+  },
+  "intervals": [
+    {
+      "capturedAtUtc": "2026-10-13T02:22:46.862Z",
+      "intervalSeconds": 1.0,
+      "unit": "microseconds",
+      "diagnosticPairCounters": {
+        "starts": 125,
+        "completions": 124,
+        "matchedCompletions": 123,
+        "keyCollisions": 0,
+        "unmatchedCompletions": 1,
+        "mapUpdateFailures": 0
+      },
+      "histograms": [
+        {"diskKind": "wal", "device": "sdb", "operation": "write", "log2Microseconds": 12, "count": 18},
+        {"diskKind": "wal", "device": "sdb", "operation": "write", "log2Microseconds": 14, "count": 1},
+        {"diskKind": "data", "device": "sdc", "operation": "read", "log2Microseconds": 15, "count": 78},
+        {"diskKind": "wal", "device": "sdb", "operation": "write", "log2Microseconds": 13, "count": 26}
+      ]
+    },
+    {
+      "capturedAtUtc": "2026-10-13T02:22:47.861Z",
+      "intervalSeconds": 1.0,
+      "unit": "microseconds",
+      "diagnosticPairCounters": {
+        "starts": 147,
+        "completions": 139,
+        "matchedCompletions": 139,
+        "keyCollisions": 0,
+        "unmatchedCompletions": 0,
+        "mapUpdateFailures": 0
+      },
+      "histograms": [
+        {"diskKind": "wal", "device": "sdb", "operation": "write", "log2Microseconds": 12, "count": 13},
+        {"diskKind": "data", "device": "sdc", "operation": "write", "log2Microseconds": 16, "count": 25},
+        {"diskKind": "data", "device": "sdc", "operation": "write", "log2Microseconds": 13, "count": 8},
+        {"diskKind": "data", "device": "sdc", "operation": "read", "log2Microseconds": 18, "count": 1},
+        {"diskKind": "data", "device": "sdc", "operation": "read", "log2Microseconds": 16, "count": 9},
+        {"diskKind": "data", "device": "sdc", "operation": "read", "log2Microseconds": 17, "count": 2},
+        {"diskKind": "data", "device": "sdc", "operation": "write", "log2Microseconds": 14, "count": 15},
+        {"diskKind": "data", "device": "sdc", "operation": "read", "log2Microseconds": 15, "count": 40},
+        {"diskKind": "data", "device": "sdc", "operation": "write", "log2Microseconds": 15, "count": 5},
+        {"diskKind": "wal", "device": "sdb", "operation": "write", "log2Microseconds": 13, "count": 21}
+      ]
+    },
+    {
+      "capturedAtUtc": "2026-10-13T02:22:48.863Z",
+      "intervalSeconds": 1.0,
+      "unit": "microseconds",
+      "diagnosticPairCounters": {
+        "starts": 129,
+        "completions": 137,
+        "matchedCompletions": 137,
+        "keyCollisions": 0,
+        "unmatchedCompletions": 0,
+        "mapUpdateFailures": 0
+      },
+      "histograms": [
+        {"diskKind": "wal", "device": "sdb", "operation": "write", "log2Microseconds": 12, "count": 12},
+        {"diskKind": "data", "device": "sdc", "operation": "write", "log2Microseconds": 16, "count": 15},
+        {"diskKind": "data", "device": "sdc", "operation": "write", "log2Microseconds": 13, "count": 1},
+        {"diskKind": "data", "device": "sdc", "operation": "read", "log2Microseconds": 18, "count": 2},
+        {"diskKind": "data", "device": "sdc", "operation": "read", "log2Microseconds": 16, "count": 11},
+        {"diskKind": "data", "device": "sdc", "operation": "read", "log2Microseconds": 17, "count": 4},
+        {"diskKind": "data", "device": "sdc", "operation": "write", "log2Microseconds": 14, "count": 7},
+        {"diskKind": "data", "device": "sdc", "operation": "write", "log2Microseconds": 18, "count": 16},
+        {"diskKind": "data", "device": "sdc", "operation": "write", "log2Microseconds": 17, "count": 14},
+        {"diskKind": "data", "device": "sdc", "operation": "read", "log2Microseconds": 15, "count": 33},
+        {"diskKind": "data", "device": "sdc", "operation": "write", "log2Microseconds": 15, "count": 4},
+        {"diskKind": "wal", "device": "sdb", "operation": "write", "log2Microseconds": 13, "count": 18}
+      ]
+    }
+  ],
+  "limitations": [
+    "This brief pilot validates loading and captures a small sample; it does not establish long-run map behavior or replace diskstats/Azure evidence.",
+    "The first interval had one unmatched completion and zero key collisions; later pilot intervals had zero for both counters."
+  ]
+}

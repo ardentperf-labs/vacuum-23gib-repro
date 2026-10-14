@@ -1,0 +1,24 @@
+ERROR: Preparation receipt does not match this stack.
+ERROR: Stack-owned DATA VolumeSnapshot lineage is missing.
+ERROR: PostgreSQL archiver counters did not confirm a successful new archive.
+ERROR: Could not copy the just-closed WAL file from the primary.
+ERROR: Could not copy the exact 16-MiB closed WAL file after three bounded attempts; private copy receipts retained.
+ERROR: Command failed (2): kubectl --kubeconfig <workspace>/experiments/20261013-walreceiver-sigterm/sigterm/.state/kubeconfig exec -n: ion(0x39a2a9adafc0)
+	pkg/mod/github.com/cloudnative-pg/machinery@v0.6.0/pkg/log/flags.go:230 +0x114
+sigs.k8s.io/controller-runtime/pkg/log/zap.NewRaw({0x39a2a9a05bc0, 0x5, 0x39a2a9d7abb0?})
+	pkg/mod/sigs.k8s.io/controller-runtime@v0.25.1/pkg/log/zap/zap.go:232 +0x55
+sigs.k8s.io/controller-runtime/pkg/log/zap.New({0x39a2a9a05bc0?, 0x3fc8dc8?, 0x39a2a9d7aba0?})
+	pkg/mod/sigs.k8s.io/controller-runtime@v0.25.1/pkg/log/zap/zap.go:43 +0x18
+github.com/cloudnative-pg/machinery/pkg/log.(*Flags).ConfigureLogging(0x39a2a9ada7e0, {0x39a2a99f1670, 0x1, 0x39a2a99f1668?})
+	pkg/mod/github.com/cloudnative-pg/machinery@v0.6.0/pkg/log/flags.go:133 +0x199
+main.newRootCmd.func1(0x39a2a99f1668?, {0x39a2a9a05ac0?, 0x4?, 0x2145b0e?})
+	cmd/manager/main.go:60 +0x2f
+github.com/spf13/cobra.(*Command).execute(0x39a2a9f1af08, {0x39a2a9a05a80, 0x4, 0x4})
+	pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:993 +0x96b
+github.com/spf13/cobra.(*Command).ExecuteC(0x39a2a9a47208)
+	pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1148 +0x450
+github.com/spf13/cobra.(*Command).Execute(...)
+	pkg/mod/github.com/spf13/cobra@v1.10.2/command.go:1071
+main.main()
+	cmd/manager/main.go:48 +0x1f
+command terminated with exit code 2

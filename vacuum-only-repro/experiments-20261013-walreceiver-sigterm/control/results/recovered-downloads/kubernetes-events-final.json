@@ -1,0 +1,71 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-13T10:16:50Z",
+            "involvedObject": {
+                "apiVersion": "acn.azure.com/v1alpha",
+                "kind": "NodeNetworkConfig",
+                "name": "aks-nodepool1-32566897-vmss000000",
+                "namespace": "kube-system",
+                "resourceVersion": "882",
+                "uid": "7fc2f24c-5d2b-498b-82e6-63a71816e96f"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-13T10:16:50Z",
+            "message": "Published NC 1dcfb3b3-127f-4eaa-838a-29afce4dcf07",
+            "metadata": {
+                "creationTimestamp": "2026-10-13T10:16:50Z",
+                "name": "aks-nodepool1-32566897-vmss000000.18de0f60e6852385",
+                "namespace": "kube-system",
+                "resourceVersion": "115306",
+                "uid": "4e345b64-1f80-4a01-ba90-7ebc86e02e33"
+            },
+            "reason": "UpdatedNC",
+            "reportingComponent": "dnc-rc/nnc-reconciler",
+            "reportingInstance": "",
+            "source": {
+                "component": "dnc-rc/nnc-reconciler"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-13T10:16:50Z",
+            "involvedObject": {
+                "apiVersion": "acn.azure.com/v1alpha",
+                "kind": "NodeNetworkConfig",
+                "name": "aks-nodepool1-32566897-vmss000001",
+                "namespace": "kube-system",
+                "resourceVersion": "962",
+                "uid": "a3524145-de38-405a-b267-b184beb5fc4e"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-13T10:16:50Z",
+            "message": "Published NC d2cd162b-6d56-44c0-81e7-9d039a702d67",
+            "metadata": {
+                "creationTimestamp": "2026-10-13T10:16:50Z",
+                "name": "aks-nodepool1-32566897-vmss000001.18de0f60e686c70e",
+                "namespace": "kube-system",
+                "resourceVersion": "115307",
+                "uid": "ec6a353f-7f6a-45c1-a748-87b584118023"
+            },
+            "reason": "UpdatedNC",
+            "reportingComponent": "dnc-rc/nnc-reconciler",
+            "reportingInstance": "",
+            "source": {
+                "component": "dnc-rc/nnc-reconciler"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

@@ -1,0 +1,75 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-13T03:44:43Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{bcc}",
+                "kind": "Pod",
+                "name": "wal-bcc-pr-6295dd70",
+                "namespace": "repro",
+                "resourceVersion": "34828",
+                "uid": "7d0875ea-4fb6-4630-92bf-0bc1e1aa2a32"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-13T03:44:43Z",
+            "message": "Stopping container bcc",
+            "metadata": {
+                "creationTimestamp": "2026-10-13T03:44:43Z",
+                "name": "wal-bcc-pr-6295dd70.18ddf9fb056bd628",
+                "namespace": "repro",
+                "resourceVersion": "73280",
+                "uid": "5466dc02-779f-49c4-a33f-3ee758ce1e5f"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-90183240-vmss000001",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-90183240-vmss000001"
+            },
+            "type": "Normal"
+        },
+        {
+            "apiVersion": "v1",
+            "count": 1,
+            "eventTime": null,
+            "firstTimestamp": "2026-10-13T03:44:45Z",
+            "involvedObject": {
+                "apiVersion": "v1",
+                "fieldPath": "spec.containers{bcc}",
+                "kind": "Pod",
+                "name": "wal-bcc-re-bbd42e33",
+                "namespace": "repro",
+                "resourceVersion": "34975",
+                "uid": "8159b587-070d-4e40-b6d7-dc63ae54d512"
+            },
+            "kind": "Event",
+            "lastTimestamp": "2026-10-13T03:44:45Z",
+            "message": "Stopping container bcc",
+            "metadata": {
+                "creationTimestamp": "2026-10-13T03:44:45Z",
+                "name": "wal-bcc-re-bbd42e33.18ddf9fb8f6000c9",
+                "namespace": "repro",
+                "resourceVersion": "73299",
+                "uid": "a4129e67-f026-4206-bdc8-8d2111e65ba8"
+            },
+            "reason": "Killing",
+            "reportingComponent": "kubelet",
+            "reportingInstance": "aks-nodepool1-90183240-vmss000000",
+            "source": {
+                "component": "kubelet",
+                "host": "aks-nodepool1-90183240-vmss000000"
+            },
+            "type": "Normal"
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

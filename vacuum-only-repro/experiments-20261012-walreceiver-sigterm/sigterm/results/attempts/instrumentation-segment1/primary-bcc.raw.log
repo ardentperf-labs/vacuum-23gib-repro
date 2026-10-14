@@ -1,0 +1,586 @@
+2026-10-13T01:27:07.026489856Z Reading package lists...
+2026-10-13T01:27:07.550612093Z Building dependency tree...
+2026-10-13T01:27:07.551082501Z Reading state information...
+2026-10-13T01:27:08.139239494Z The following additional packages will be installed:
+2026-10-13T01:27:08.140111308Z   ieee-data libbpf1 libbpfcc libbsd0 libclang-cpp18 libedit2 libelf1t64
+2026-10-13T01:27:08.140133208Z   libexpat1 libicu74 libllvm18 libpsl5t64 libpython3-stdlib
+2026-10-13T01:27:08.141607533Z   libpython3.12-minimal libpython3.12-stdlib libreadline8t64 libsqlite3-0
+2026-10-13T01:27:08.141637933Z   libxml2 media-types netbase python3 python3-importlib-resources
+2026-10-13T01:27:08.141642333Z   python3-minimal python3-more-itertools python3-netaddr python3-zipp
+2026-10-13T01:27:08.141645733Z   python3.12 python3.12-minimal readline-common tzdata wget
+2026-10-13T01:27:08.144151075Z Suggested packages:
+2026-10-13T01:27:08.144178675Z   python3-doc python3-tk python3-venv ipython3 python-netaddr-docs
+2026-10-13T01:27:08.144182975Z   python3.12-venv python3.12-doc binutils binfmt-support readline-doc
+2026-10-13T01:27:08.144186075Z Recommended packages:
+2026-10-13T01:27:08.144189475Z   publicsuffix ca-certificates
+2026-10-13T01:27:08.340111704Z The following NEW packages will be installed:
+2026-10-13T01:27:08.342472243Z   bpfcc-tools ieee-data libbpf1 libbpfcc libbsd0 libclang-cpp18 libedit2
+2026-10-13T01:27:08.344938583Z   libelf1t64 libexpat1 libicu74 libllvm18 libpsl5t64 libpython3-stdlib
+2026-10-13T01:27:08.345009285Z   libpython3.12-minimal libpython3.12-stdlib libreadline8t64 libsqlite3-0
+2026-10-13T01:27:08.345016985Z   libxml2 media-types netbase python3 python3-bpfcc
+2026-10-13T01:27:08.345019785Z   python3-importlib-resources python3-minimal python3-more-itertools
+2026-10-13T01:27:08.345022385Z   python3-netaddr python3-zipp python3.12 python3.12-minimal readline-common
+2026-10-13T01:27:08.345078186Z   tzdata wget
+2026-10-13T01:27:08.622622660Z 0 upgraded, 32 newly installed, 0 to remove and 3 not upgraded.
+2026-10-13T01:27:08.622674260Z Need to get 64.6 MB of archives.
+2026-10-13T01:27:08.622680061Z After this operation, 278 MB of additional disk space will be used.
+2026-10-13T01:27:08.622683661Z Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-minimal amd64 3.12.3-1ubuntu0.17 [839 kB]
+2026-10-13T01:27:09.335447313Z Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1 amd64 2.6.1-2ubuntu0.6 [98.9 kB]
+2026-10-13T01:27:09.342991238Z Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12-minimal amd64 3.12.3-1ubuntu0.17 [2335 kB]
+2026-10-13T01:27:09.544194160Z Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-minimal amd64 3.12.3-0ubuntu2.1 [27.4 kB]
+2026-10-13T01:27:09.546069291Z Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 media-types all 10.1.0 [27.5 kB]
+2026-10-13T01:27:09.547903921Z Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 netbase all 6.4 [13.1 kB]
+2026-10-13T01:27:09.549295244Z Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 tzdata all 2026c-0ubuntu0.24.04.1 [280 kB]
+2026-10-13T01:27:09.557515880Z Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 readline-common all 8.2-4build1 [56.5 kB]
+2026-10-13T01:27:09.559669615Z Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 libreadline8t64 amd64 8.2-4build1 [153 kB]
+2026-10-13T01:27:09.565513412Z Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsqlite3-0 amd64 3.45.1-1ubuntu2.8 [702 kB]
+2026-10-13T01:27:09.593898080Z Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-stdlib amd64 3.12.3-1ubuntu0.17 [2071 kB]
+2026-10-13T01:27:09.657202726Z Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12 amd64 3.12.3-1ubuntu0.17 [651 kB]
+2026-10-13T01:27:09.670658148Z Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3-stdlib amd64 3.12.3-0ubuntu2.1 [10.1 kB]
+2026-10-13T01:27:09.744169462Z Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3 amd64 3.12.3-0ubuntu2.1 [23.0 kB]
+2026-10-13T01:27:09.747937924Z Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libelf1t64 amd64 0.190-1.1ubuntu0.1 [57.8 kB]
+2026-10-13T01:27:09.748002525Z Get:16 http://archive.ubuntu.com/ubuntu noble/main amd64 libbpf1 amd64 1:1.3.0-2build2 [166 kB]
+2026-10-13T01:27:09.752130193Z Get:17 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libbsd0 amd64 0.12.1-1build1.1 [41.2 kB]
+2026-10-13T01:27:09.752142593Z Get:18 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libicu74 amd64 74.2-1ubuntu3.1 [10.9 MB]
+2026-10-13T01:27:10.040600756Z Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libxml2 amd64 2.9.14+dfsg-1.3ubuntu3.10 [764 kB]
+2026-10-13T01:27:10.049363901Z Get:20 http://archive.ubuntu.com/ubuntu noble/main amd64 libedit2 amd64 3.1-20230828-1build1 [97.6 kB]
+2026-10-13T01:27:10.052512853Z Get:21 http://archive.ubuntu.com/ubuntu noble/main amd64 libpsl5t64 amd64 0.21.2-1.1build1 [57.1 kB]
+2026-10-13T01:27:10.053007861Z Get:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 wget amd64 1.21.4-1ubuntu4.5 [334 kB]
+2026-10-13T01:27:10.057329833Z Get:23 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libllvm18 amd64 1:18.1.3-1ubuntu1 [27.5 MB]
+2026-10-13T01:27:10.732863987Z Get:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libclang-cpp18 amd64 1:18.1.3-1ubuntu1 [13.5 MB]
+2026-10-13T01:27:11.052115258Z Get:25 http://archive.ubuntu.com/ubuntu noble/main amd64 libbpfcc amd64 0.29.1+ds-1ubuntu7 [663 kB]
+2026-10-13T01:27:11.066815401Z Get:26 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-bpfcc all 0.29.1+ds-1ubuntu7 [40.2 kB]
+2026-10-13T01:27:11.068821734Z Get:27 http://archive.ubuntu.com/ubuntu noble/main amd64 ieee-data all 20220827.1 [2113 kB]
+2026-10-13T01:27:11.118224850Z Get:28 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-more-itertools all 10.2.0-1 [52.9 kB]
+2026-10-13T01:27:11.120769092Z Get:29 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-zipp all 1.0.0-6ubuntu0.1 [6774 B]
+2026-10-13T01:27:11.121238599Z Get:30 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-importlib-resources all 6.0.1-1 [22.1 kB]
+2026-10-13T01:27:11.121330301Z Get:31 http://archive.ubuntu.com/ubuntu noble/main amd64 python3-netaddr all 0.8.0-2ubuntu1 [319 kB]
+2026-10-13T01:27:11.129002828Z Get:32 http://archive.ubuntu.com/ubuntu noble/main amd64 bpfcc-tools all 0.29.1+ds-1ubuntu7 [687 kB]
+2026-10-13T01:27:11.436665208Z debconf: delaying package configuration, since apt-utils is not installed
+2026-10-13T01:27:11.480114425Z Fetched 64.6 MB in 3s (23.2 MB/s)
+2026-10-13T01:27:11.575405498Z Selecting previously unselected package libpython3.12-minimal:amd64.
+2026-10-13T01:27:11.608586246Z (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 4381 files and directories currently installed.)
+2026-10-13T01:27:11.608615847Z Preparing to unpack .../libpython3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb ...
+2026-10-13T01:27:11.619988435Z Unpacking libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.17) ...
+2026-10-13T01:27:11.825630330Z Selecting previously unselected package libexpat1:amd64.
+2026-10-13T01:27:11.827815466Z Preparing to unpack .../libexpat1_2.6.1-2ubuntu0.6_amd64.deb ...
+2026-10-13T01:27:11.849603826Z Unpacking libexpat1:amd64 (2.6.1-2ubuntu0.6) ...
+2026-10-13T01:27:11.950886598Z Selecting previously unselected package python3.12-minimal.
+2026-10-13T01:27:11.953140835Z Preparing to unpack .../python3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb ...
+2026-10-13T01:27:11.974457987Z Unpacking python3.12-minimal (3.12.3-1ubuntu0.17) ...
+2026-10-13T01:27:12.109432116Z Setting up libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.17) ...
+2026-10-13T01:27:12.154598262Z Setting up libexpat1:amd64 (2.6.1-2ubuntu0.6) ...
+2026-10-13T01:27:12.190021247Z Setting up python3.12-minimal (3.12.3-1ubuntu0.17) ...
+2026-10-13T01:27:13.956283411Z Selecting previously unselected package python3-minimal.
+2026-10-13T01:27:13.962551214Z (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 4700 files and directories currently installed.)
+2026-10-13T01:27:13.963481329Z Preparing to unpack .../0-python3-minimal_3.12.3-0ubuntu2.1_amd64.deb ...
+2026-10-13T01:27:13.975606430Z Unpacking python3-minimal (3.12.3-0ubuntu2.1) ...
+2026-10-13T01:27:14.051106976Z Selecting previously unselected package media-types.
+2026-10-13T01:27:14.052796404Z Preparing to unpack .../1-media-types_10.1.0_all.deb ...
+2026-10-13T01:27:14.067624149Z Unpacking media-types (10.1.0) ...
+2026-10-13T01:27:14.158176544Z Selecting previously unselected package netbase.
+2026-10-13T01:27:14.160326580Z Preparing to unpack .../2-netbase_6.4_all.deb ...
+2026-10-13T01:27:14.170888154Z Unpacking netbase (6.4) ...
+2026-10-13T01:27:14.268291762Z Selecting previously unselected package tzdata.
+2026-10-13T01:27:14.268321963Z Preparing to unpack .../3-tzdata_2026c-0ubuntu0.24.04.1_all.deb ...
+2026-10-13T01:27:14.278287627Z Unpacking tzdata (2026c-0ubuntu0.24.04.1) ...
+2026-10-13T01:27:14.422887715Z Selecting previously unselected package readline-common.
+2026-10-13T01:27:14.424797446Z Preparing to unpack .../4-readline-common_8.2-4build1_all.deb ...
+2026-10-13T01:27:14.435805628Z Unpacking readline-common (8.2-4build1) ...
+2026-10-13T01:27:14.530327989Z Selecting previously unselected package libreadline8t64:amd64.
+2026-10-13T01:27:14.532447424Z Preparing to unpack .../5-libreadline8t64_8.2-4build1_amd64.deb ...
+2026-10-13T01:27:14.547244568Z Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8 to /lib/x86_64-linux-gnu/libhistory.so.8.usr-is-merged by libreadline8t64'
+2026-10-13T01:27:14.564392651Z Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8.2 to /lib/x86_64-linux-gnu/libhistory.so.8.2.usr-is-merged by libreadline8t64'
+2026-10-13T01:27:14.574473818Z Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8 to /lib/x86_64-linux-gnu/libreadline.so.8.usr-is-merged by libreadline8t64'
+2026-10-13T01:27:14.583678970Z Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8.2 to /lib/x86_64-linux-gnu/libreadline.so.8.2.usr-is-merged by libreadline8t64'
+2026-10-13T01:27:14.592433614Z Unpacking libreadline8t64:amd64 (8.2-4build1) ...
+2026-10-13T01:27:14.680082662Z Selecting previously unselected package libsqlite3-0:amd64.
+2026-10-13T01:27:14.680108362Z Preparing to unpack .../6-libsqlite3-0_3.45.1-1ubuntu2.8_amd64.deb ...
+2026-10-13T01:27:14.692790571Z Unpacking libsqlite3-0:amd64 (3.45.1-1ubuntu2.8) ...
+2026-10-13T01:27:14.785730206Z Selecting previously unselected package libpython3.12-stdlib:amd64.
+2026-10-13T01:27:14.785758907Z Preparing to unpack .../7-libpython3.12-stdlib_3.12.3-1ubuntu0.17_amd64.deb ...
+2026-10-13T01:27:14.796991092Z Unpacking libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.17) ...
+2026-10-13T01:27:15.021529299Z Selecting previously unselected package python3.12.
+2026-10-13T01:27:15.024073741Z Preparing to unpack .../8-python3.12_3.12.3-1ubuntu0.17_amd64.deb ...
+2026-10-13T01:27:15.035778335Z Unpacking python3.12 (3.12.3-1ubuntu0.17) ...
+2026-10-13T01:27:15.113186413Z Selecting previously unselected package libpython3-stdlib:amd64.
+2026-10-13T01:27:15.113207113Z Preparing to unpack .../9-libpython3-stdlib_3.12.3-0ubuntu2.1_amd64.deb ...
+2026-10-13T01:27:15.130705302Z Unpacking libpython3-stdlib:amd64 (3.12.3-0ubuntu2.1) ...
+2026-10-13T01:27:15.201630173Z Setting up python3-minimal (3.12.3-0ubuntu2.1) ...
+2026-10-13T01:27:15.665123426Z Selecting previously unselected package python3.
+2026-10-13T01:27:15.672511448Z (Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 5706 files and directories currently installed.)
+2026-10-13T01:27:15.674130375Z Preparing to unpack .../00-python3_3.12.3-0ubuntu2.1_amd64.deb ...
+2026-10-13T01:27:15.690358043Z Unpacking python3 (3.12.3-0ubuntu2.1) ...
+2026-10-13T01:27:15.776165760Z Selecting previously unselected package libelf1t64:amd64.
+2026-10-13T01:27:15.777847887Z Preparing to unpack .../01-libelf1t64_0.190-1.1ubuntu0.1_amd64.deb ...
+2026-10-13T01:27:15.790425395Z Unpacking libelf1t64:amd64 (0.190-1.1ubuntu0.1) ...
+2026-10-13T01:27:15.882535516Z Selecting previously unselected package libbpf1:amd64.
+2026-10-13T01:27:15.885046658Z Preparing to unpack .../02-libbpf1_1%3a1.3.0-2build2_amd64.deb ...
+2026-10-13T01:27:15.895953138Z Unpacking libbpf1:amd64 (1:1.3.0-2build2) ...
+2026-10-13T01:27:15.996241494Z Selecting previously unselected package libbsd0:amd64.
+2026-10-13T01:27:15.996868504Z Preparing to unpack .../03-libbsd0_0.12.1-1build1.1_amd64.deb ...
+2026-10-13T01:27:16.008122190Z Unpacking libbsd0:amd64 (0.12.1-1build1.1) ...
+2026-10-13T01:27:16.095529433Z Selecting previously unselected package libicu74:amd64.
+2026-10-13T01:27:16.099139393Z Preparing to unpack .../04-libicu74_74.2-1ubuntu3.1_amd64.deb ...
+2026-10-13T01:27:16.111790201Z Unpacking libicu74:amd64 (74.2-1ubuntu3.1) ...
+2026-10-13T01:27:16.711045896Z Selecting previously unselected package libxml2:amd64.
+2026-10-13T01:27:16.711073897Z Preparing to unpack .../05-libxml2_2.9.14+dfsg-1.3ubuntu3.10_amd64.deb ...
+2026-10-13T01:27:16.722474885Z Unpacking libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3.10) ...
+2026-10-13T01:27:16.833121412Z Selecting previously unselected package libedit2:amd64.
+2026-10-13T01:27:16.835249647Z Preparing to unpack .../06-libedit2_3.1-20230828-1build1_amd64.deb ...
+2026-10-13T01:27:16.846153227Z Unpacking libedit2:amd64 (3.1-20230828-1build1) ...
+2026-10-13T01:27:16.929118097Z Selecting previously unselected package libpsl5t64:amd64.
+2026-10-13T01:27:16.930552821Z Preparing to unpack .../07-libpsl5t64_0.21.2-1.1build1_amd64.deb ...
+2026-10-13T01:27:16.942336215Z Unpacking libpsl5t64:amd64 (0.21.2-1.1build1) ...
+2026-10-13T01:27:17.019824595Z Selecting previously unselected package wget.
+2026-10-13T01:27:17.019854895Z Preparing to unpack .../08-wget_1.21.4-1ubuntu4.5_amd64.deb ...
+2026-10-13T01:27:17.032141798Z Unpacking wget (1.21.4-1ubuntu4.5) ...
+2026-10-13T01:27:17.126633058Z Selecting previously unselected package libllvm18:amd64.
+2026-10-13T01:27:17.126655058Z Preparing to unpack .../09-libllvm18_1%3a18.1.3-1ubuntu1_amd64.deb ...
+2026-10-13T01:27:17.159455700Z Unpacking libllvm18:amd64 (1:18.1.3-1ubuntu1) ...
+2026-10-13T01:27:18.856171764Z Selecting previously unselected package libclang-cpp18.
+2026-10-13T01:27:18.856207265Z Preparing to unpack .../10-libclang-cpp18_1%3a18.1.3-1ubuntu1_amd64.deb ...
+2026-10-13T01:27:18.868000360Z Unpacking libclang-cpp18 (1:18.1.3-1ubuntu1) ...
+2026-10-13T01:27:19.810241145Z Selecting previously unselected package libbpfcc:amd64.
+2026-10-13T01:27:19.811351563Z Preparing to unpack .../11-libbpfcc_0.29.1+ds-1ubuntu7_amd64.deb ...
+2026-10-13T01:27:19.821898438Z Unpacking libbpfcc:amd64 (0.29.1+ds-1ubuntu7) ...
+2026-10-13T01:27:19.934370398Z Selecting previously unselected package python3-bpfcc.
+2026-10-13T01:27:19.939909590Z Preparing to unpack .../12-python3-bpfcc_0.29.1+ds-1ubuntu7_all.deb ...
+2026-10-13T01:27:19.948776036Z Unpacking python3-bpfcc (0.29.1+ds-1ubuntu7) ...
+2026-10-13T01:27:20.072842088Z Selecting previously unselected package ieee-data.
+2026-10-13T01:27:20.075471932Z Preparing to unpack .../13-ieee-data_20220827.1_all.deb ...
+2026-10-13T01:27:20.099521830Z Unpacking ieee-data (20220827.1) ...
+2026-10-13T01:27:20.319972576Z Selecting previously unselected package python3-more-itertools.
+2026-10-13T01:27:20.320005077Z Preparing to unpack .../14-python3-more-itertools_10.2.0-1_all.deb ...
+2026-10-13T01:27:20.344983790Z Unpacking python3-more-itertools (10.2.0-1) ...
+2026-10-13T01:27:20.460085794Z Selecting previously unselected package python3-zipp.
+2026-10-13T01:27:20.461783522Z Preparing to unpack .../15-python3-zipp_1.0.0-6ubuntu0.1_all.deb ...
+2026-10-13T01:27:20.471946290Z Unpacking python3-zipp (1.0.0-6ubuntu0.1) ...
+2026-10-13T01:27:20.577495636Z Selecting previously unselected package python3-importlib-resources.
+2026-10-13T01:27:20.579479468Z Preparing to unpack .../16-python3-importlib-resources_6.0.1-1_all.deb ...
+2026-10-13T01:27:20.607788737Z Unpacking python3-importlib-resources (6.0.1-1) ...
+2026-10-13T01:27:20.718877574Z Selecting previously unselected package python3-netaddr.
+2026-10-13T01:27:20.720962709Z Preparing to unpack .../17-python3-netaddr_0.8.0-2ubuntu1_all.deb ...
+2026-10-13T01:27:20.732079492Z Unpacking python3-netaddr (0.8.0-2ubuntu1) ...
+2026-10-13T01:27:20.820369553Z Selecting previously unselected package bpfcc-tools.
+2026-10-13T01:27:20.822117182Z Preparing to unpack .../18-bpfcc-tools_0.29.1+ds-1ubuntu7_all.deb ...
+2026-10-13T01:27:20.839481069Z Unpacking bpfcc-tools (0.29.1+ds-1ubuntu7) ...
+2026-10-13T01:27:21.025621348Z Setting up media-types (10.1.0) ...
+2026-10-13T01:27:21.081543173Z Setting up libsqlite3-0:amd64 (3.45.1-1ubuntu2.8) ...
+2026-10-13T01:27:21.132117209Z Setting up libpsl5t64:amd64 (0.21.2-1.1build1) ...
+2026-10-13T01:27:21.177095553Z Setting up libelf1t64:amd64 (0.190-1.1ubuntu0.1) ...
+2026-10-13T01:27:21.230154931Z Setting up tzdata (2026c-0ubuntu0.24.04.1) ...
+2026-10-13T01:27:21.355401102Z 
+2026-10-13T01:27:21.355437003Z Current default time zone: 'Etc/UTC'
+2026-10-13T01:27:21.360983295Z Local time is now:      Tue Oct 13 01:27:21 UTC 2026.
+2026-10-13T01:27:21.361007695Z Universal Time is now:  Tue Oct 13 01:27:21 UTC 2026.
+2026-10-13T01:27:21.361011995Z Run 'dpkg-reconfigure tzdata' if you wish to change it.
+2026-10-13T01:27:21.361042696Z 
+2026-10-13T01:27:21.416897319Z Setting up libicu74:amd64 (74.2-1ubuntu3.1) ...
+2026-10-13T01:27:21.464568708Z Setting up netbase (6.4) ...
+2026-10-13T01:27:21.566446993Z Setting up libbsd0:amd64 (0.12.1-1build1.1) ...
+2026-10-13T01:27:21.613640974Z Setting up readline-common (8.2-4build1) ...
+2026-10-13T01:27:21.663137492Z Setting up libxml2:amd64 (2.9.14+dfsg-1.3ubuntu3.10) ...
+2026-10-13T01:27:21.708895349Z Setting up libbpf1:amd64 (1:1.3.0-2build2) ...
+2026-10-13T01:27:21.761023111Z Setting up wget (1.21.4-1ubuntu4.5) ...
+2026-10-13T01:27:21.815949820Z Setting up libedit2:amd64 (3.1-20230828-1build1) ...
+2026-10-13T01:27:21.863874713Z Setting up libreadline8t64:amd64 (8.2-4build1) ...
+2026-10-13T01:27:21.904466584Z Setting up ieee-data (20220827.1) ...
+2026-10-13T01:27:21.957758565Z Setting up libllvm18:amd64 (1:18.1.3-1ubuntu1) ...
+2026-10-13T01:27:22.009692524Z Setting up libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.17) ...
+2026-10-13T01:27:22.056104492Z Setting up python3.12 (3.12.3-1ubuntu0.17) ...
+2026-10-13T01:27:24.065618430Z Setting up libclang-cpp18 (1:18.1.3-1ubuntu1) ...
+2026-10-13T01:27:24.115633757Z Setting up libbpfcc:amd64 (0.29.1+ds-1ubuntu7) ...
+2026-10-13T01:27:24.164387264Z Setting up libpython3-stdlib:amd64 (3.12.3-0ubuntu2.1) ...
+2026-10-13T01:27:24.215009201Z Setting up python3 (3.12.3-0ubuntu2.1) ...
+2026-10-13T01:27:24.375271452Z Setting up python3-netaddr (0.8.0-2ubuntu1) ...
+2026-10-13T01:27:24.776484888Z Setting up python3-bpfcc (0.29.1+ds-1ubuntu7) ...
+2026-10-13T01:27:25.170112900Z Setting up python3-more-itertools (10.2.0-1) ...
+2026-10-13T01:27:25.561552122Z Setting up python3-zipp (1.0.0-6ubuntu0.1) ...
+2026-10-13T01:27:25.865361084Z Setting up bpfcc-tools (0.29.1+ds-1ubuntu7) ...
+2026-10-13T01:27:25.927542720Z Setting up python3-importlib-resources (6.0.1-1) ...
+2026-10-13T01:27:26.271568052Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+2026-10-13T01:27:29.625361931Z __BCC_STARTED__
+2026-10-13T01:28:21.838147955Z __BCC_DEVICE__
+2026-10-13T01:28:21.838195556Z __BCC_DEVICE__01:28:20
+2026-10-13T01:28:21.838202956Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:20', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 4}, {'interval-start': 4, 'interval-end': 7, 'count': 2}, {'interval-start': 8, 'interval-end': 15, 'count': 4}, {'interval-start': 16, 'interval-end': 31, 'count': 2}, {'interval-start': 32, 'interval-end': 63, 'count': 4}], 'disk': 'sdb'}
+2026-10-13T01:28:22.845124982Z __BCC_DEVICE__
+2026-10-13T01:28:22.846129199Z __BCC_DEVICE__01:28:21
+2026-10-13T01:28:23.842854656Z __BCC_DEVICE__
+2026-10-13T01:28:23.842916457Z __BCC_DEVICE__01:28:22
+2026-10-13T01:28:23.842925457Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:22', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:28:23.843255562Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:22', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:28:23.843432365Z __BCC_RW_DATA__ERROR: blk_account_io_done probe not available. Can't use -F.
+2026-10-13T01:28:23.845559601Z __BCC_RW_WAL__ERROR: blk_account_io_done probe not available. Can't use -F.
+2026-10-13T01:28:24.843008670Z __BCC_DEVICE__
+2026-10-13T01:28:24.843076271Z __BCC_DEVICE__01:28:23
+2026-10-13T01:28:24.843099671Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:23', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 15}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'sda'}
+2026-10-13T01:28:24.844005686Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:23', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'sdc'}
+2026-10-13T01:28:25.843100882Z __BCC_DEVICE__
+2026-10-13T01:28:25.843132183Z __BCC_DEVICE__01:28:24
+2026-10-13T01:28:26.843370198Z __BCC_DEVICE__
+2026-10-13T01:28:26.843416399Z __BCC_DEVICE__01:28:25
+2026-10-13T01:28:26.843781205Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:25', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 1}], 'disk': 'sdb'}
+2026-10-13T01:28:26.843795105Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:25', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6}], 'disk': 'sda'}
+2026-10-13T01:28:27.843592013Z __BCC_DEVICE__
+2026-10-13T01:28:27.843637314Z __BCC_DEVICE__01:28:26
+2026-10-13T01:28:27.843646114Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:26', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:28:28.843738027Z __BCC_DEVICE__
+2026-10-13T01:28:28.843784527Z __BCC_DEVICE__01:28:27
+2026-10-13T01:28:28.843800228Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:27', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 6}, {'interval-start': 2, 'interval-end': 3, 'count': 7}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:28:29.844125306Z __BCC_DEVICE__
+2026-10-13T01:28:29.844169006Z __BCC_DEVICE__01:28:28
+2026-10-13T01:28:29.844178207Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:28', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 16}], 'disk': 'sda'}
+2026-10-13T01:28:29.844184507Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:28', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'sdc'}
+2026-10-13T01:28:30.843971645Z __BCC_DEVICE__
+2026-10-13T01:28:30.844219449Z __BCC_DEVICE__01:28:29
+2026-10-13T01:28:30.844423753Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:29', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 1}], 'disk': 'sdb'}
+2026-10-13T01:28:31.844355293Z __BCC_DEVICE__
+2026-10-13T01:28:31.844399294Z __BCC_DEVICE__01:28:30
+2026-10-13T01:28:31.844541996Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:30', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 16}], 'disk': 'sdb'}
+2026-10-13T01:28:31.844593697Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:30', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:28:32.844584439Z __BCC_DEVICE__
+2026-10-13T01:28:32.844630940Z __BCC_DEVICE__01:28:31
+2026-10-13T01:28:32.844655340Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:31', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 7}, {'interval-start': 2, 'interval-end': 3, 'count': 27}, {'interval-start': 4, 'interval-end': 7, 'count': 2}, {'interval-start': 8, 'interval-end': 15, 'count': 3}], 'disk': 'sdb'}
+2026-10-13T01:28:32.845942862Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:31', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 13}, {'interval-start': 4, 'interval-end': 7, 'count': 2}, {'interval-start': 8, 'interval-end': 15, 'count': 15}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 2}], 'disk': 'sdc'}
+2026-10-13T01:28:32.846065264Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:31', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2}, {'interval-start': 2, 'interval-end': 3, 'count': 17}], 'disk': 'sda'}
+2026-10-13T01:28:33.844627082Z __BCC_DEVICE__
+2026-10-13T01:28:33.844679983Z __BCC_DEVICE__01:28:32
+2026-10-13T01:28:33.844775784Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:32', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:28:34.844893228Z __BCC_DEVICE__
+2026-10-13T01:28:34.844936629Z __BCC_DEVICE__01:28:33
+2026-10-13T01:28:34.844954329Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:33', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 4}], 'disk': 'sda'}
+2026-10-13T01:28:35.845066473Z __BCC_DEVICE__
+2026-10-13T01:28:35.845108373Z __BCC_DEVICE__01:28:34
+2026-10-13T01:28:35.845249176Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:34', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'sdc'}
+2026-10-13T01:28:36.845170316Z __BCC_DEVICE__
+2026-10-13T01:28:36.845228117Z __BCC_DEVICE__01:28:35
+2026-10-13T01:28:36.845796327Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:35', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 6}, {'interval-start': 16, 'interval-end': 31, 'count': 1}], 'disk': 'sdb'}
+2026-10-13T01:28:36.846050931Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:35', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 4}], 'disk': 'sda'}
+2026-10-13T01:28:36.846209234Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:35', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:28:37.845235238Z __BCC_DEVICE__
+2026-10-13T01:28:37.845279939Z __BCC_DEVICE__01:28:36
+2026-10-13T01:28:37.845431842Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:36', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 9}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 6}], 'disk': 'sdb'}
+2026-10-13T01:28:37.845914250Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:36', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 6}], 'disk': 'sdc'}
+2026-10-13T01:28:38.845662649Z __BCC_DEVICE__
+2026-10-13T01:28:38.845810851Z __BCC_DEVICE__01:28:37
+2026-10-13T01:28:38.845820451Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:37', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:28:38.845825551Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:37', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 8}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:28:39.865088373Z __BCC_DEVICE__
+2026-10-13T01:28:39.865190674Z __BCC_DEVICE__01:28:38
+2026-10-13T01:28:39.865221775Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:38', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:28:39.865226875Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:38', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 6}], 'disk': 'sdc'}
+2026-10-13T01:28:40.845647555Z __BCC_DEVICE__
+2026-10-13T01:28:40.845721256Z __BCC_DEVICE__01:28:39
+2026-10-13T01:28:40.846121663Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:39', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 1}, {'interval-start': 8, 'interval-end': 15, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:28:40.846154063Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:39', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 9}], 'disk': 'sdc'}
+2026-10-13T01:28:41.845812561Z __BCC_DEVICE__
+2026-10-13T01:28:41.845861362Z __BCC_DEVICE__01:28:40
+2026-10-13T01:28:41.845867462Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:40', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 10}], 'disk': 'sdc'}
+2026-10-13T01:28:41.846122966Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:40', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:28:42.845912766Z __BCC_DEVICE__
+2026-10-13T01:28:42.845956667Z __BCC_DEVICE__01:28:41
+2026-10-13T01:28:42.845973967Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:41', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 4}], 'disk': 'sdc'}
+2026-10-13T01:28:43.845918869Z __BCC_DEVICE__
+2026-10-13T01:28:43.845957270Z __BCC_DEVICE__01:28:42
+2026-10-13T01:28:43.846142173Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:42', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 6}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:28:44.846203577Z __BCC_DEVICE__
+2026-10-13T01:28:44.846245978Z __BCC_DEVICE__01:28:43
+2026-10-13T01:28:44.846264178Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:43', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}], 'disk': 'sdc'}
+2026-10-13T01:28:45.846281314Z __BCC_DEVICE__
+2026-10-13T01:28:45.846337115Z __BCC_DEVICE__01:28:44
+2026-10-13T01:28:45.846928225Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:44', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:28:45.846952125Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:44', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 8}], 'disk': 'sdc'}
+2026-10-13T01:28:46.846548808Z __BCC_DEVICE__
+2026-10-13T01:28:46.846604709Z __BCC_DEVICE__01:28:45
+2026-10-13T01:28:46.846612809Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:45', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 4}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:28:46.846882113Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:45', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 8}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:28:47.846570798Z __BCC_DEVICE__
+2026-10-13T01:28:47.846600398Z __BCC_DEVICE__01:28:46
+2026-10-13T01:28:47.846605598Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:46', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 7}], 'disk': 'sdc'}
+2026-10-13T01:28:48.846633788Z __BCC_DEVICE__
+2026-10-13T01:28:48.846665489Z __BCC_DEVICE__01:28:47
+2026-10-13T01:28:48.846782091Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:47', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 13}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:28:49.846825381Z __BCC_DEVICE__
+2026-10-13T01:28:49.846969183Z __BCC_DEVICE__01:28:48
+2026-10-13T01:28:49.846993184Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:48', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}], 'disk': 'sdc'}
+2026-10-13T01:28:50.846858771Z __BCC_DEVICE__
+2026-10-13T01:28:50.846928572Z __BCC_DEVICE__01:28:49
+2026-10-13T01:28:50.847114575Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:49', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 7}], 'disk': 'sdc'}
+2026-10-13T01:28:51.847019363Z __BCC_DEVICE__
+2026-10-13T01:28:51.847079764Z __BCC_DEVICE__01:28:50
+2026-10-13T01:28:51.847100564Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:50', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2}, {'interval-start': 2, 'interval-end': 3, 'count': 34}], 'disk': 'sda'}
+2026-10-13T01:28:51.847534971Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:50', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'sdc'}
+2026-10-13T01:28:52.847153655Z __BCC_DEVICE__
+2026-10-13T01:28:52.847187555Z __BCC_DEVICE__01:28:51
+2026-10-13T01:28:52.847319158Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:51', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 9}], 'disk': 'sdc'}
+2026-10-13T01:28:53.847695900Z __BCC_DEVICE__
+2026-10-13T01:28:53.847994405Z __BCC_DEVICE__01:28:52
+2026-10-13T01:28:53.848178708Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:52', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:28:54.847379765Z __BCC_DEVICE__
+2026-10-13T01:28:54.847429566Z __BCC_DEVICE__01:28:53
+2026-10-13T01:28:54.847891774Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:53', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 8}], 'disk': 'sdc'}
+2026-10-13T01:28:55.847620040Z __BCC_DEVICE__
+2026-10-13T01:28:55.847675140Z __BCC_DEVICE__01:28:54
+2026-10-13T01:28:55.847699041Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:54', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'sdc'}
+2026-10-13T01:28:56.847711011Z __BCC_DEVICE__
+2026-10-13T01:28:56.847750012Z __BCC_DEVICE__01:28:55
+2026-10-13T01:28:56.847934815Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:55', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:28:57.848071387Z __BCC_DEVICE__
+2026-10-13T01:28:57.868281920Z __BCC_DEVICE__01:28:56
+2026-10-13T01:28:57.868448823Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:56', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:28:57.868457323Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:56', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 7}], 'disk': 'sdc'}
+2026-10-13T01:28:58.848119858Z __BCC_DEVICE__
+2026-10-13T01:28:58.848575166Z __BCC_DEVICE__01:28:57
+2026-10-13T01:28:58.848730868Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:57', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}, {'interval-start': 4, 'interval-end': 7, 'count': 1}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:28:58.848743769Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:57', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 4}], 'disk': 'sdc'}
+2026-10-13T01:28:59.848151929Z __BCC_DEVICE__
+2026-10-13T01:28:59.848182329Z __BCC_DEVICE__01:28:58
+2026-10-13T01:28:59.848697738Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:58', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}], 'disk': 'sdc'}
+2026-10-13T01:29:00.848271701Z __BCC_DEVICE__
+2026-10-13T01:29:00.848308402Z __BCC_DEVICE__01:28:59
+2026-10-13T01:29:00.848508105Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:59', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 72}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'sda'}
+2026-10-13T01:29:00.848798110Z __BCC_DEVICE__{'ts': '2026-10-13 01:28:59', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 6}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:29:01.848589499Z __BCC_DEVICE__
+2026-10-13T01:29:01.848648800Z __BCC_DEVICE__01:29:00
+2026-10-13T01:29:01.849332911Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:00', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:01.849381812Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:00', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 4}], 'disk': 'sdc'}
+2026-10-13T01:29:02.848706614Z __BCC_DEVICE__
+2026-10-13T01:29:02.848757815Z __BCC_DEVICE__01:29:01
+2026-10-13T01:29:02.848774115Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:01', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 9}], 'disk': 'sdc'}
+2026-10-13T01:29:03.849020033Z __BCC_DEVICE__
+2026-10-13T01:29:03.849074234Z __BCC_DEVICE__01:29:02
+2026-10-13T01:29:03.849079834Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:02', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:03.849083634Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:02', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'sdc'}
+2026-10-13T01:29:04.849017846Z __BCC_DEVICE__
+2026-10-13T01:29:04.849093947Z __BCC_DEVICE__01:29:03
+2026-10-13T01:29:04.849258250Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:03', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 6}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:29:05.849458267Z __BCC_DEVICE__
+2026-10-13T01:29:05.849528068Z __BCC_DEVICE__01:29:04
+2026-10-13T01:29:05.849534868Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:04', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 11}], 'disk': 'sdc'}
+2026-10-13T01:29:06.849383979Z __BCC_DEVICE__
+2026-10-13T01:29:06.849430780Z __BCC_DEVICE__01:29:05
+2026-10-13T01:29:06.849447680Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:05', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'sda'}
+2026-10-13T01:29:06.849792786Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:05', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'sdc'}
+2026-10-13T01:29:07.849450593Z __BCC_DEVICE__
+2026-10-13T01:29:07.849489694Z __BCC_DEVICE__01:29:06
+2026-10-13T01:29:07.849595596Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:06', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 7}], 'disk': 'sdc'}
+2026-10-13T01:29:08.851137935Z __BCC_DEVICE__
+2026-10-13T01:29:08.853598975Z __BCC_DEVICE__01:29:07
+2026-10-13T01:29:08.853877480Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:07', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 7}], 'disk': 'sdc'}
+2026-10-13T01:29:09.849621937Z __BCC_DEVICE__
+2026-10-13T01:29:09.849658237Z __BCC_DEVICE__01:29:08
+2026-10-13T01:29:09.850276347Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:08', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 7}, {'interval-start': 4, 'interval-end': 7, 'count': 2}, {'interval-start': 8, 'interval-end': 15, 'count': 1}, {'interval-start': 16, 'interval-end': 31, 'count': 6}, {'interval-start': 32, 'interval-end': 63, 'count': 2}, {'interval-start': 64, 'interval-end': 127, 'count': 6}, {'interval-start': 128, 'interval-end': 255, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:29:09.850296948Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:08', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 102}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:10.849804280Z __BCC_DEVICE__
+2026-10-13T01:29:10.849873781Z __BCC_DEVICE__01:29:09
+2026-10-13T01:29:10.849880181Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:09', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 7}], 'disk': 'sdc'}
+2026-10-13T01:29:11.849833920Z __BCC_DEVICE__
+2026-10-13T01:29:11.849889521Z __BCC_DEVICE__01:29:10
+2026-10-13T01:29:11.850133025Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:10', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:12.849927062Z __BCC_DEVICE__
+2026-10-13T01:29:12.849977463Z __BCC_DEVICE__01:29:11
+2026-10-13T01:29:12.850124165Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:11', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 10}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:29:13.850279608Z __BCC_DEVICE__
+2026-10-13T01:29:13.850409810Z __BCC_DEVICE__01:29:12
+2026-10-13T01:29:13.850417510Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:12', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 7}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:29:14.850173246Z __BCC_DEVICE__
+2026-10-13T01:29:14.850204447Z __BCC_DEVICE__01:29:13
+2026-10-13T01:29:14.850276148Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:13', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 14}], 'disk': 'sdc'}
+2026-10-13T01:29:15.850231787Z __BCC_DEVICE__
+2026-10-13T01:29:15.850259788Z __BCC_DEVICE__01:29:14
+2026-10-13T01:29:15.850407790Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:14', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:15.850688295Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:14', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 6}], 'disk': 'sdc'}
+2026-10-13T01:29:16.850332429Z __BCC_DEVICE__
+2026-10-13T01:29:16.850728636Z __BCC_DEVICE__01:29:15
+2026-10-13T01:29:16.850920939Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:15', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 6}], 'disk': 'sdc'}
+2026-10-13T01:29:17.850883250Z __BCC_DEVICE__
+2026-10-13T01:29:17.850909950Z __BCC_DEVICE__01:29:16
+2026-10-13T01:29:17.850915450Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:16', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 4}], 'disk': 'sdc'}
+2026-10-13T01:29:18.850876933Z __BCC_DEVICE__
+2026-10-13T01:29:18.850903833Z __BCC_DEVICE__01:29:17
+2026-10-13T01:29:18.850908133Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:17', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}], 'disk': 'sdc'}
+2026-10-13T01:29:19.851120219Z __BCC_DEVICE__
+2026-10-13T01:29:19.851171120Z __BCC_DEVICE__01:29:18
+2026-10-13T01:29:19.851435825Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:18', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 0}, {'interval-start': 16, 'interval-end': 31, 'count': 0}, {'interval-start': 32, 'interval-end': 63, 'count': 0}, {'interval-start': 64, 'interval-end': 127, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:29:20.851143803Z __BCC_DEVICE__
+2026-10-13T01:29:20.851181103Z __BCC_DEVICE__01:29:19
+2026-10-13T01:29:20.851233404Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:19', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 4}], 'disk': 'sdc'}
+2026-10-13T01:29:21.851460391Z __BCC_DEVICE__
+2026-10-13T01:29:21.851515091Z __BCC_DEVICE__01:29:20
+2026-10-13T01:29:21.851523592Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:20', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:21.851527392Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:20', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 4}], 'disk': 'sdc'}
+2026-10-13T01:29:22.851385972Z __BCC_DEVICE__
+2026-10-13T01:29:22.851456073Z __BCC_DEVICE__01:29:21
+2026-10-13T01:29:22.851466373Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:21', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'sdc'}
+2026-10-13T01:29:23.851726660Z __BCC_DEVICE__
+2026-10-13T01:29:23.852562274Z __BCC_DEVICE__01:29:22
+2026-10-13T01:29:23.852577975Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:22', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'sda'}
+2026-10-13T01:29:23.852582075Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:22', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 8}], 'disk': 'sdc'}
+2026-10-13T01:29:24.851706743Z __BCC_DEVICE__
+2026-10-13T01:29:24.852088849Z __BCC_DEVICE__01:29:23
+2026-10-13T01:29:24.852401254Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:23', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'sda'}
+2026-10-13T01:29:24.852416355Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:23', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'sdc'}
+2026-10-13T01:29:25.851942046Z __BCC_DEVICE__
+2026-10-13T01:29:25.852054248Z __BCC_DEVICE__01:29:24
+2026-10-13T01:29:25.852161549Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:24', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 6}, {'interval-start': 4, 'interval-end': 7, 'count': 1}, {'interval-start': 8, 'interval-end': 15, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:29:26.852072964Z __BCC_DEVICE__
+2026-10-13T01:29:26.852114565Z __BCC_DEVICE__01:29:25
+2026-10-13T01:29:26.852133365Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:25', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 7}], 'disk': 'sdc'}
+2026-10-13T01:29:27.852492087Z __BCC_DEVICE__
+2026-10-13T01:29:27.855400135Z __BCC_DEVICE__01:29:26
+2026-10-13T01:29:27.855418335Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:26', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:27.855422335Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:26', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 8}], 'disk': 'sdc'}
+2026-10-13T01:29:28.852544304Z __BCC_DEVICE__
+2026-10-13T01:29:28.852577305Z __BCC_DEVICE__01:29:27
+2026-10-13T01:29:28.852590705Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:27', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}], 'disk': 'sda'}
+2026-10-13T01:29:28.853684423Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:27', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}], 'disk': 'sdc'}
+2026-10-13T01:29:29.852511320Z __BCC_DEVICE__
+2026-10-13T01:29:29.852556220Z __BCC_DEVICE__01:29:28
+2026-10-13T01:29:29.852746324Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:28', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 27}], 'disk': 'sda'}
+2026-10-13T01:29:29.852759624Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:28', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 4}, {'interval-start': 4, 'interval-end': 7, 'count': 2}], 'disk': 'sdc'}
+2026-10-13T01:29:30.852743040Z __BCC_DEVICE__
+2026-10-13T01:29:30.852788340Z __BCC_DEVICE__01:29:29
+2026-10-13T01:29:30.852846141Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:29', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 6}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:29:31.852913659Z __BCC_DEVICE__
+2026-10-13T01:29:31.852957159Z __BCC_DEVICE__01:29:30
+2026-10-13T01:29:31.853181563Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:30', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 19}, {'interval-start': 2, 'interval-end': 3, 'count': 21}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:31.853284565Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:30', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 7}], 'disk': 'sdc'}
+2026-10-13T01:29:32.853099278Z __BCC_DEVICE__
+2026-10-13T01:29:32.853137378Z __BCC_DEVICE__01:29:31
+2026-10-13T01:29:32.853255080Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:31', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'sdc'}
+2026-10-13T01:29:33.853952527Z __BCC_DEVICE__
+2026-10-13T01:29:33.853988828Z __BCC_DEVICE__01:29:32
+2026-10-13T01:29:33.853993628Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:32', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:33.853997428Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:32', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:29:34.853413875Z __BCC_DEVICE__
+2026-10-13T01:29:34.853467476Z __BCC_DEVICE__01:29:33
+2026-10-13T01:29:34.853598378Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:33', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:34.855570811Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:33', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:29:35.853560734Z __BCC_DEVICE__
+2026-10-13T01:29:35.853611635Z __BCC_DEVICE__01:29:34
+2026-10-13T01:29:35.853726036Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:34', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:29:36.853769894Z __BCC_DEVICE__
+2026-10-13T01:29:36.853814394Z __BCC_DEVICE__01:29:35
+2026-10-13T01:29:36.853830995Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:35', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}], 'disk': 'sdc'}
+2026-10-13T01:29:37.853874552Z __BCC_DEVICE__
+2026-10-13T01:29:37.853925353Z __BCC_DEVICE__01:29:36
+2026-10-13T01:29:37.854007054Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:36', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 2}], 'disk': 'sda'}
+2026-10-13T01:29:37.854448261Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:36', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'sdc'}
+2026-10-13T01:29:38.854021111Z __BCC_DEVICE__
+2026-10-13T01:29:38.854088612Z __BCC_DEVICE__01:29:37
+2026-10-13T01:29:38.854425318Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:37', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:38.854534519Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:37', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'sdc'}
+2026-10-13T01:29:39.854311172Z __BCC_DEVICE__
+2026-10-13T01:29:39.854338973Z __BCC_DEVICE__01:29:38
+2026-10-13T01:29:39.854353273Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:38', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:39.854356773Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:38', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 8}], 'disk': 'sdc'}
+2026-10-13T01:29:40.854347329Z __BCC_DEVICE__
+2026-10-13T01:29:40.854380430Z __BCC_DEVICE__01:29:39
+2026-10-13T01:29:40.854387330Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:39', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 6}], 'disk': 'sdc'}
+2026-10-13T01:29:41.854523649Z __BCC_DEVICE__
+2026-10-13T01:29:41.854567950Z __BCC_DEVICE__01:29:40
+2026-10-13T01:29:41.855347963Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:40', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 0}, {'interval-start': 4, 'interval-end': 7, 'count': 0}, {'interval-start': 8, 'interval-end': 15, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:41.855364463Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:40', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 10}], 'disk': 'sdc'}
+2026-10-13T01:29:42.854692623Z __BCC_DEVICE__
+2026-10-13T01:29:42.854736924Z __BCC_DEVICE__01:29:41
+2026-10-13T01:29:42.854752024Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:41', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 4}], 'disk': 'sdc'}
+2026-10-13T01:29:43.854861797Z __BCC_DEVICE__
+2026-10-13T01:29:43.854926298Z __BCC_DEVICE__01:29:42
+2026-10-13T01:29:43.854971499Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:42', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 7}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:29:44.854979471Z __BCC_DEVICE__
+2026-10-13T01:29:44.855059072Z __BCC_DEVICE__01:29:43
+2026-10-13T01:29:44.855211674Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:43', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 5}], 'disk': 'sdc'}
+2026-10-13T01:29:45.855224046Z __BCC_DEVICE__
+2026-10-13T01:29:45.855274947Z __BCC_DEVICE__01:29:44
+2026-10-13T01:29:45.855541351Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:44', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:45.855556151Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:44', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 1}, {'interval-start': 4, 'interval-end': 7, 'count': 1}], 'disk': 'sdc'}
+2026-10-13T01:29:46.855409720Z __BCC_DEVICE__
+2026-10-13T01:29:46.855450721Z __BCC_DEVICE__01:29:45
+2026-10-13T01:29:46.855485422Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:45', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 11}], 'disk': 'sdc'}
+2026-10-13T01:29:47.855645495Z __BCC_DEVICE__
+2026-10-13T01:29:47.855678196Z __BCC_DEVICE__01:29:46
+2026-10-13T01:29:47.855684696Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:46', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 10}], 'disk': 'sdc'}
+2026-10-13T01:29:48.855741868Z __BCC_DEVICE__
+2026-10-13T01:29:48.855785369Z __BCC_DEVICE__01:29:47
+2026-10-13T01:29:48.855806069Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:47', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'sdc'}
+2026-10-13T01:29:49.855964199Z __BCC_DEVICE__
+2026-10-13T01:29:49.855998999Z __BCC_DEVICE__01:29:48
+2026-10-13T01:29:49.856164402Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:48', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'sdc'}
+2026-10-13T01:29:50.856173475Z __BCC_DEVICE__
+2026-10-13T01:29:50.856210276Z __BCC_DEVICE__01:29:49
+2026-10-13T01:29:50.856216776Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:49', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 6}], 'disk': 'sdc'}
+2026-10-13T01:29:51.856304050Z __BCC_DEVICE__
+2026-10-13T01:29:51.856367651Z __BCC_DEVICE__01:29:50
+2026-10-13T01:29:51.856520754Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:50', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 2}], 'disk': 'sda'}
+2026-10-13T01:29:51.856787258Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:50', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 3}], 'disk': 'sdc'}
+2026-10-13T01:29:52.856484426Z __BCC_DEVICE__
+2026-10-13T01:29:52.856519427Z __BCC_DEVICE__01:29:51
+2026-10-13T01:29:52.856525127Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:51', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 7}], 'disk': 'sdc'}
+2026-10-13T01:29:53.856651502Z __BCC_DEVICE__
+2026-10-13T01:29:53.856697503Z __BCC_DEVICE__01:29:52
+2026-10-13T01:29:53.857606317Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:52', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 1}, {'interval-start': 2, 'interval-end': 3, 'count': 1}], 'disk': 'sda'}
+2026-10-13T01:29:53.857646818Z __BCC_DEVICE__{'ts': '2026-10-13 01:29:52', 'val_type': 'msecs', 'data': [{'interval-start': 0, 'interval-end': 1, 'count': 0}, {'interval-start': 2, 'interval-end': 3, 'count': 6}], 'disk': 'sdc'}

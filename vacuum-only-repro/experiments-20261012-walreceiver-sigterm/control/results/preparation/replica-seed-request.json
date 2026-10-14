@@ -1,0 +1,21 @@
+{
+  "requestedAtUtc": "2026-10-13T00:34:10.793766+00:00",
+  "ownerToken": "580b7b34772592ad5df9c1b8f50f1eeb",
+  "validatedPrimary": {
+    "recovery": false,
+    "heapBytes": 24696061952,
+    "appSessions": 0
+  },
+  "patch": {
+    "spec": {
+      "instances": 2,
+      "postgresql": {
+        "synchronous": {
+          "method": "any",
+          "number": 1,
+          "dataDurability": "preferred"
+        }
+      }
+    }
+  }
+}

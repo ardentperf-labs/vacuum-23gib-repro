@@ -1,0 +1,151 @@
+{
+  "exitCode": 0,
+  "finishedAtUtc": "2026-10-13T07:38:25.350Z",
+  "requestResult": "graceful_stop_requested",
+  "requestedAtUtc": "2026-10-13T07:38:17.775Z",
+  "serverActivityAfterDrain": {
+    "activeSessions": 0,
+    "backends": [],
+    "benchSessions": 0,
+    "committedTransactions": 43670,
+    "maxActiveQueryAgeSeconds": null,
+    "maxActiveXactAgeSeconds": null,
+    "observedAtUtc": "2026-10-13T07:38:24.604092Z",
+    "sampleCommandSeconds": 0.37028490000011516,
+    "sampleEpoch": 1791877104.6202705,
+    "sampleRequestedEpoch": 1791877104.2499852,
+    "sampleStatus": "ok",
+    "unrelatedAppSessions": 0,
+    "waitingSessions": 0
+  },
+  "serverActivityBeforeStopRequest": {
+    "activeSessions": 0,
+    "backends": [
+      {
+        "backendStartUtc": "2026-10-13T05:13:08.229452Z",
+        "pid": 5534,
+        "queryAgeSeconds": 1.139461,
+        "queryStartUtc": "2026-10-13T07:38:16.445211Z",
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null,
+        "xactStartUtc": null
+      },
+      {
+        "backendStartUtc": "2026-10-13T05:13:08.230882Z",
+        "pid": 5535,
+        "queryAgeSeconds": 0.09661,
+        "queryStartUtc": "2026-10-13T07:38:17.488078Z",
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null,
+        "xactStartUtc": null
+      },
+      {
+        "backendStartUtc": "2026-10-13T05:13:08.232065Z",
+        "pid": 5536,
+        "queryAgeSeconds": 2.782193,
+        "queryStartUtc": "2026-10-13T07:38:14.802501Z",
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null,
+        "xactStartUtc": null
+      },
+      {
+        "backendStartUtc": "2026-10-13T05:13:08.232431Z",
+        "pid": 5537,
+        "queryAgeSeconds": 0.943569,
+        "queryStartUtc": "2026-10-13T07:38:16.641130Z",
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null,
+        "xactStartUtc": null
+      },
+      {
+        "backendStartUtc": "2026-10-13T05:13:08.232717Z",
+        "pid": 5538,
+        "queryAgeSeconds": 4.232758,
+        "queryStartUtc": "2026-10-13T07:38:13.351946Z",
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null,
+        "xactStartUtc": null
+      },
+      {
+        "backendStartUtc": "2026-10-13T05:13:08.233546Z",
+        "pid": 5539,
+        "queryAgeSeconds": 7.976906,
+        "queryStartUtc": "2026-10-13T07:38:09.607803Z",
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null,
+        "xactStartUtc": null
+      },
+      {
+        "backendStartUtc": "2026-10-13T05:13:08.239550Z",
+        "pid": 5540,
+        "queryAgeSeconds": 4.284299,
+        "queryStartUtc": "2026-10-13T07:38:13.300416Z",
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null,
+        "xactStartUtc": null
+      },
+      {
+        "backendStartUtc": "2026-10-13T05:13:08.240391Z",
+        "pid": 5541,
+        "queryAgeSeconds": 0.145623,
+        "queryStartUtc": "2026-10-13T07:38:17.439097Z",
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null,
+        "xactStartUtc": null
+      },
+      {
+        "backendStartUtc": "2026-10-13T05:13:08.241272Z",
+        "pid": 5542,
+        "queryAgeSeconds": 1.376993,
+        "queryStartUtc": "2026-10-13T07:38:16.207732Z",
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null,
+        "xactStartUtc": null
+      },
+      {
+        "backendStartUtc": "2026-10-13T05:13:08.246464Z",
+        "pid": 5543,
+        "queryAgeSeconds": 5.644397,
+        "queryStartUtc": "2026-10-13T07:38:11.940333Z",
+        "state": "idle",
+        "waitEvent": "ClientRead",
+        "waitEventType": "Client",
+        "xactAgeSeconds": null,
+        "xactStartUtc": null
+      }
+    ],
+    "benchSessions": 10,
+    "committedTransactions": 43669,
+    "maxActiveQueryAgeSeconds": null,
+    "maxActiveXactAgeSeconds": null,
+    "observedAtUtc": "2026-10-13T07:38:17.584041Z",
+    "sampleCommandSeconds": 0.36094525899898144,
+    "sampleEpoch": 1791877097.6099274,
+    "sampleRequestedEpoch": 1791877097.2489815,
+    "sampleStatus": "ok",
+    "unrelatedAppSessions": 0,
+    "waitingSessions": 0
+  },
+  "signal": "SIGALRM",
+  "signalSemantics": "pgbench duration handler stops scheduling and drains active transactions",
+  "status": "0",
+  "waitSeconds": 7.286435623998841
+}
